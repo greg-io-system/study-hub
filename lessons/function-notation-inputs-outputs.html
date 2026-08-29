@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Functions: Inputs &amp; Outputs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+    --line:#e4dcc8; --grid:#ece3cf;
+    --coral:#e8623d; --coral-soft:#fbe7de;
+    --teal:#178a68; --teal-soft:#d8efe6;
+    --gold:#e0a324; --gold-soft:#f8ecca;
+    --navy:#2f5aa8; --navy-soft:#e0e8f6;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,'Times New Roman',serif;
+    --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    line-height:1.65;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px;background-position:-1px -1px;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{text-align:center;padding:34px 20px 26px;margin-bottom:14px}
+  .eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral)}
+  h1{font-family:var(--disp);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.02;margin:.28em 0 .16em}
+  h1 em{font-style:italic;color:var(--coral)}
+  .sub{font-size:18px;color:var(--ink-soft);max-width:620px;margin:0 auto}
+  section{background:var(--paper2);border:1.5px solid var(--line);border-radius:20px;
+    padding:26px 26px 28px;margin:20px 0;box-shadow:var(--shadow)}
+  .tag{display:inline-block;font-family:var(--disp);font-weight:700;font-size:13px;
+    background:var(--ink);color:var(--paper);border-radius:999px;padding:3px 13px;margin-bottom:6px}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(23px,3.4vw,30px);margin:.1em 0 .3em;line-height:1.1}
+  h3{font-family:var(--body);font-weight:800;font-size:16px;margin:1.2em 0 .3em;color:var(--ink)}
+  p{margin:.55em 0}
+  .lead{font-size:18px}
+  .muted{color:var(--ink-soft)}
+  .mono{font-family:'Nunito',monospace;font-variant-numeric:tabular-nums}
+  .k{color:var(--coral);font-weight:800}
+  .k2{color:var(--teal);font-weight:800}
+  .pill{background:var(--coral-soft);color:#a53716;font-weight:800;border-radius:8px;padding:1px 8px;white-space:nowrap}
+  .pill2{background:var(--teal-soft);color:#0d5c42;font-weight:800;border-radius:8px;padding:1px 8px;white-space:nowrap}
+  .callout{border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .callout b{color:#8a6410}
+  .controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:8px 0 4px}
+  label.ctl{font-weight:700;color:var(--ink-soft);font-size:14px}
+  input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:6px;background:var(--line);outline:none;flex:1;min-width:160px}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--coral);border:3px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.2);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--coral);border:3px solid #fff;cursor:pointer}
+  .readout{font-family:var(--disp);font-weight:700}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
+  .chip{font-family:var(--body);font-weight:800;font-size:15px;border:2px solid var(--line);background:#fff;
+    color:var(--ink);border-radius:12px;padding:7px 15px;cursor:pointer;transition:.15s}
+  .chip:hover{border-color:var(--coral)}
+  .chip.on{background:var(--coral);border-color:var(--coral);color:#fff}
+  canvas{display:block;max-width:100%;background:#fffdf8;border:1.5px solid var(--line);border-radius:14px;touch-action:none}
+  .grid4{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  @media(max-width:640px){.grid4{grid-template-columns:1fr}}
+  .rep{border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;background:#fffdf8}
+  .rep h4{margin:0 0 8px;font-family:var(--disp);font-weight:700;font-size:16px}
+  table.tbl{border-collapse:collapse;width:100%;font-size:16px}
+  table.tbl th,table.tbl td{border:1px solid var(--line);padding:7px 10px;text-align:center;font-weight:700}
+  table.tbl th{background:var(--paper);font-family:var(--disp)}
+  table.tbl tr.hot td{background:var(--coral-soft);color:#a53716}
+  .machine{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:10px 0}
+  .steps{font-family:var(--body);font-weight:700;font-size:17px;line-height:2.1;background:var(--paper);border-radius:12px;padding:14px 18px;margin-top:12px}
+  .steps .s{color:var(--ink-soft)}
+  .steps .final{color:var(--teal);font-size:19px}
+  .try{background:var(--navy-soft);border:1.5px dashed var(--navy);border-radius:12px;padding:12px 16px;margin-top:14px;font-weight:700;color:#274a86}
+  .verdict{font-family:var(--disp);font-weight:700;font-size:18px;margin-top:8px}
+  .footer{text-align:center;color:var(--ink-soft);font-size:14px;margin-top:30px}
+  .foot-src{font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Algebra 2 &middot; WS#1.4</div>
+    <h1>The <em>Input&nbsp;&rarr;&nbsp;Output</em> Machine</h1>
+    <p class="sub">Every function is a little machine: you drop a number <b>in</b>, it does its job, a number comes <b>out</b>. Get that one picture and the whole worksheet is the same idea, over and over.</p>
+  </header>
+
+  <!-- 1. NOTATION -->
+  <section>
+    <span class="tag">Start here</span>
+    <h2>What <span class="mono k">f(3)</span> is really saying</h2>
+    <p class="lead">The notation looks like multiplication, but it isn&rsquo;t. Read it out loud like this:</p>
+    <div class="machine" style="font-family:var(--disp);font-size:clamp(26px,7vw,44px);font-weight:600">
+      <span class="mono">f</span>
+      <span class="mono">(</span>
+      <span class="mono k">3</span>
+      <span class="mono">)</span>
+      <span style="font-size:.6em" class="muted">&nbsp;=&nbsp;</span>
+      <span class="mono k2">?</span>
+    </div>
+    <div class="grid4" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="rep"><h4 class="mono">f</h4><p class="muted" style="margin:0">the <b>name</b> of the machine (just a label, like a nickname).</p></div>
+      <div class="rep"><h4 class="mono k">3</h4><p class="muted" style="margin:0">the <b>input</b> &mdash; the number you drop in.</p></div>
+      <div class="rep"><h4 class="mono k2">?</h4><p class="muted" style="margin:0">the <b>output</b> &mdash; the number that comes out. That&rsquo;s what you&rsquo;re finding.</p></div>
+    </div>
+    <div class="callout"><b>Say it this way:</b> &ldquo;<i>f of 3</i>&rdquo; means &ldquo;put <b>3</b> into machine <b>f</b> &mdash; what comes out?&rdquo; It is <u>not</u> &ldquo;f times 3.&rdquo;</div>
+  </section>
+
+  <!-- 2. FOUR WAYS -->
+  <section>
+    <span class="tag">The big one</span>
+    <h2>One function, four ways to see it</h2>
+    <p class="lead">This is the part that makes everything click. The <b>same</b> function can be shown as a rule, a table, a graph, or a mapping &mdash; they all say the identical thing. Here it&rsquo;s <span class="mono k2">f(x) = 2x + 1</span>. Pick an input and watch it light up in all four at once.</p>
+    <div class="btnrow" id="fw-btns"></div>
+    <div class="grid4">
+      <div class="rep">
+        <h4>1 &middot; The rule</h4>
+        <p class="mono" style="font-size:20px;margin:.2em 0">f(x) = 2x + 1</p>
+        <p class="mono muted" id="fw-rule" style="font-size:17px;margin:.2em 0"></p>
+      </div>
+      <div class="rep">
+        <h4>2 &middot; A table</h4>
+        <table class="tbl" id="fw-table">
+          <tr><th>input x</th><th>output f(x)</th></tr>
+        </table>
+      </div>
+      <div class="rep">
+        <h4>3 &middot; A graph</h4>
+        <canvas id="fw-graph" width="360" height="260"></canvas>
+      </div>
+      <div class="rep">
+        <h4>4 &middot; A mapping</h4>
+        <canvas id="fw-map" width="360" height="260"></canvas>
+      </div>
+    </div>
+    <div class="callout"><b>Why this matters:</b> on the worksheet, some problems give you a <i>graph</i>, some give a <i>rule</i>, some give a <i>mapping</i>. They&rsquo;re not different skills &mdash; they&rsquo;re the same machine wearing different clothes.</div>
+  </section>
+
+  <!-- 3. EVALUATE MACHINE -->
+  <section>
+    <span class="tag">Skill 1</span>
+    <h2>Given the input &rarr; find the output</h2>
+    <p class="lead">This is Problem 3 on her sheet: <span class="mono">f(x) = -2x&sup2; - 4x + 5</span>. The trick that prevents 90% of mistakes: <b>put the input in parentheses</b>, then do it in order. Drag the input and watch every step.</p>
+    <div class="controls">
+      <label class="ctl">input x =</label>
+      <input type="range" id="ev-x" min="-5" max="7" step="1" value="3">
+      <span class="readout k" id="ev-xo" style="font-size:22px;min-width:34px;text-align:center">3</span>
+    </div>
+    <div class="steps mono" id="ev-steps"></div>
+    <div class="try">Now you try, on paper: this same function at <span class="mono">f(0)</span> and <span class="mono">f(7)</span>. Slide to check yourself after.</div>
+    <div class="callout"><b>Sign trap:</b> a negative input must be squared <i>with</i> its parentheses. <span class="mono">(-3)&sup2; = 9</span>, but <span class="mono">-3&sup2; = -9</span>. The parentheses are what keep you safe.</div>
+  </section>
+
+  <!-- 4. READ A GRAPH -->
+  <section>
+    <span class="tag">Skill 2</span>
+    <h2>Reading a value off a graph</h2>
+    <p class="lead">Problems 1 and 2 give you a graph instead of a rule. Same machine. To find <span class="mono">f(x)</span>: start at the input on the bottom, go <b>up</b> to the curve, then <b>across</b> to read the output. Drag the dot.</p>
+    <div class="controls">
+      <label class="ctl">input x =</label>
+      <input type="range" id="rg-x" min="0" max="6" step="0.1" value="1.5">
+      <span class="readout" id="rg-out" style="font-size:18px"></span>
+    </div>
+    <canvas id="rg-graph" width="720" height="380"></canvas>
+    <div class="callout"><b>Backwards version (Problem 1B, &ldquo;when is f(x)=3?&rdquo;):</b> start at <b>3 on the side</b>, go across to the curve, then down to the input. There can be more than one answer &mdash; find them all.</div>
+  </section>
+
+  <!-- 5. SOLVE BACKWARDS -->
+  <section>
+    <span class="tag">Skill 3</span>
+    <h2>Given the output &rarr; find the input</h2>
+    <p class="lead">The other half of Problem 3: you&rsquo;re told what came <b>out</b>, and you find what went <b>in</b>. Run the machine in reverse &mdash; set the rule equal to the output and peel the operations off, last one first.</p>
+    <div class="grid4">
+      <div class="rep">
+        <h4>Forward (Skill 1)</h4>
+        <p class="mono" style="font-size:16px;line-height:2">
+          input <span class="k">5</span> &rarr;<br>
+          6(<span class="k">5</span>) + 12<br>
+          = 30 + 12<br>
+          = <span class="k2">42</span> output
+        </p>
+      </div>
+      <div class="rep">
+        <h4>Backward (Skill 3)</h4>
+        <p class="mono" style="font-size:16px;line-height:2">
+          output <span class="k2">42</span>:<br>
+          6x + 12 = <span class="k2">42</span><br>
+          6x = 30 &nbsp;<span class="muted">(undo +12)</span><br>
+          x = <span class="k">5</span> &nbsp;<span class="muted">(undo &times;6)</span>
+        </p>
+      </div>
+    </div>
+    <div class="try">Your turn: <span class="mono">n(x) = 6x + 12, n(x) = 42</span> and <span class="mono">n(x) = 8x - 3, n(x) = 45</span>. Check by plugging your answer back in &mdash; it should give the target output.</div>
+  </section>
+
+  <!-- 6. DOMAIN / RANGE + VLT -->
+  <section>
+    <span class="tag">Skill 4</span>
+    <h2>Domain, range &amp; &ldquo;is it a function?&rdquo;</h2>
+    <p class="lead"><b class="k">Domain</b> = all the <b>inputs</b> (x, read left&ndash;right). <b class="k2">Range</b> = all the <b>outputs</b> (y, read bottom&ndash;top).</p>
+    <p class="lead">A relation is a <b>function</b> only if every input has <b>exactly one</b> output. Test it with a <b>vertical line</b>: slide it across &mdash; if it ever touches the graph <b>twice at once</b>, it fails. Drag the line on both.</p>
+    <div class="grid4">
+      <div class="rep">
+        <h4>A parabola</h4>
+        <canvas id="vlt-a" width="340" height="300"></canvas>
+        <div class="verdict" id="vlt-a-v"></div>
+      </div>
+      <div class="rep">
+        <h4>A sideways parabola</h4>
+        <canvas id="vlt-b" width="340" height="300"></canvas>
+        <div class="verdict" id="vlt-b-v"></div>
+      </div>
+    </div>
+    <div class="callout"><b>On a mapping diagram</b> (the ovals with arrows in Problem 4): same rule. If any single input arrow splits to <b>two</b> outputs, it&rsquo;s not a function. Two inputs sharing one output is fine.</div>
+  </section>
+
+  <div class="footer">
+    <p><b>The whole sheet in one sentence:</b> ask &ldquo;what&rsquo;s the input, what&rsquo;s the output, and which one am I given?&rdquo;</p>
+    <p class="foot-src muted">Built for Kelly &middot; from WS#1.4 Inputs and Outputs &middot; 2026-08-28</p>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var INK="#233047", SOFT="#8a94a6", CORAL="#e8623d", TEAL="#178a68", GRID="#eadfc6", NAVY="#2f5aa8";
+
+  function ctxOf(id){var c=document.getElementById(id);return c?{c:c,x:c.getContext("2d"),w:c.width,h:c.height}:null;}
+
+  /* ---------- Section 2: four ways, f(x)=2x+1 ---------- */
+  (function(){
+    var inputs=[0,1,2,3], cur=2, f=function(x){return 2*x+1;};
+    var btns=document.getElementById("fw-btns");
+    inputs.forEach(function(v){
+      var b=document.createElement("button");
+      b.className="chip"+(v===cur?" on":""); b.textContent="x = "+v;
+      b.onclick=function(){cur=v;render();};
+      btns.appendChild(b);
+    });
+    var tbl=document.getElementById("fw-table");
+    inputs.forEach(function(v){
+      var tr=document.createElement("tr"); tr.dataset.v=v;
+      tr.innerHTML="<td>"+v+"</td><td>"+f(v)+"</td>";
+      tbl.appendChild(tr);
+    });
+    var G=ctxOf("fw-graph"), M=ctxOf("fw-map");
+    function drawGraph(){
+      var x=G.x,w=G.w,h=G.h; x.clearRect(0,0,w,h);
+      var pad=30, ox=pad, oy=h-pad, sx=(w-2*pad)/3.6, sy=(h-2*pad)/8.5;
+      x.strokeStyle=GRID;x.lineWidth=1;
+      for(var i=0;i<=3;i++){x.beginPath();x.moveTo(ox+i*sx,pad);x.lineTo(ox+i*sx,oy);x.stroke();}
+      x.strokeStyle="#c9bfa6";x.beginPath();x.moveTo(ox,pad);x.lineTo(ox,oy);x.lineTo(w-pad,oy);x.stroke();
+      x.fillStyle=SOFT;x.font="12px Nunito";
+      for(var i=0;i<=3;i++)x.fillText(i,ox+i*sx-3,oy+16);
+      x.fillText("x",w-pad+4,oy+4); x.fillText("f(x)",ox-24,pad+2);
+      // line
+      x.strokeStyle=TEAL;x.lineWidth=3;x.beginPath();
+      x.moveTo(ox, oy-f(0)*sy); x.lineTo(ox+3*sx, oy-f(3)*sy); x.stroke();
+      // points
+      inputs.forEach(function(v){
+        var px=ox+v*sx, py=oy-f(v)*sy, hot=(v===cur);
+        x.fillStyle=hot?CORAL:"#bfc8bf";x.beginPath();x.arc(px,py,hot?7:4,0,7);x.fill();
+        if(hot){
+          x.strokeStyle=CORAL;x.setLineDash([4,4]);x.lineWidth=1.5;
+          x.beginPath();x.moveTo(px,oy);x.lineTo(px,py);x.lineTo(ox,py);x.stroke();x.setLineDash([]);
+          x.fillStyle=CORAL;x.font="bold 13px Nunito";x.fillText("("+v+", "+f(v)+")",px+8,py-8);
+        }
+      });
+    }
+    function drawMap(){
+      var x=M.x,w=M.w,h=M.h; x.clearRect(0,0,w,h);
+      var lx=w*0.30, rx=w*0.70, top=40, gap=(h-70)/3;
+      // ovals
+      x.strokeStyle="#c9bfa6";x.lineWidth=2;
+      x.beginPath();x.ellipse(lx,h/2,42,h/2-18,0,0,7);x.stroke();
+      x.beginPath();x.ellipse(rx,h/2,42,h/2-18,0,0,7);x.stroke();
+      x.fillStyle=SOFT;x.font="bold 12px Nunito";x.textAlign="center";
+      x.fillText("input",lx,20); x.fillText("output",rx,20);
+      x.font="bold 15px Nunito";
+      inputs.forEach(function(v,i){
+        var iy=top+i*gap, oy2=top+i*gap; var hot=(v===cur);
+        // arrow
+        x.strokeStyle=hot?CORAL:"#d8cfb6";x.lineWidth=hot?3:2;
+        x.beginPath();x.moveTo(lx+30,iy);x.lineTo(rx-30,oy2);x.stroke();
+        // arrowhead
+        x.fillStyle=hot?CORAL:"#d8cfb6";
+        x.beginPath();x.moveTo(rx-30,oy2);x.lineTo(rx-38,oy2-4);x.lineTo(rx-38,oy2+4);x.fill();
+        x.fillStyle=hot?CORAL:INK;
+        x.fillText(v,lx,iy+5); x.fillText(f(v),rx,oy2+5);
+      });
+      x.textAlign="left";
+    }
+    function render(){
+      Array.prototype.forEach.call(btns.children,function(b,i){b.classList.toggle("on",inputs[i]===cur);});
+      Array.prototype.forEach.call(tbl.querySelectorAll("tr[data-v]"),function(tr){tr.classList.toggle("hot",+tr.dataset.v===cur);});
+      document.getElementById("fw-rule").innerHTML="f("+cur+") = 2("+cur+") + 1 = "+f(cur);
+      drawGraph(); drawMap();
+    }
+    render();
+  })();
+
+  /* ---------- Section 3: evaluate machine ---------- */
+  (function(){
+    var sl=document.getElementById("ev-x"), out=document.getElementById("ev-xo"), box=document.getElementById("ev-steps");
+    function run(){
+      var v=parseInt(sl.value,10); out.textContent=v;
+      var vp=v<0?"("+v+")":v, sq=v*v, t1=-2*sq, t2=-4*v, res=t1+t2+5;
+      box.innerHTML=
+        '<div>f('+v+') = -2('+v+')&sup2; - 4('+v+') + 5</div>'+
+        '<div class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= -2('+sq+') - 4('+v+') + 5 <span style="opacity:.6">&larr; square first</span></div>'+
+        '<div class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= '+t1+' + ('+t2+') + 5 <span style="opacity:.6">&larr; multiply</span></div>'+
+        '<div class="final">f('+v+') = '+res+'</div>';
+    }
+    sl.oninput=run; run();
+  })();
+
+  /* ---------- Section 4: read a graph, f(x) = -0.5(x-3)^2 + 5 ---------- */
+  (function(){
+    var G=ctxOf("rg-graph"), sl=document.getElementById("rg-x"), out=document.getElementById("rg-out");
+    var f=function(x){return -0.5*(x-3)*(x-3)+5;};
+    var pad=42, xmin=0,xmax=6,ymin=0,ymax=6;
+    function X(x){return pad+(x-xmin)/(xmax-xmin)*(G.w-2*pad);}
+    function Y(y){return (G.h-pad)-(y-ymin)/(ymax-ymin)*(G.h-2*pad);}
+    function draw(){
+      var x=G.x,w=G.w,h=G.h;x.clearRect(0,0,w,h);
+      x.strokeStyle=GRID;x.lineWidth=1;
+      for(var gx=xmin;gx<=xmax;gx++){x.beginPath();x.moveTo(X(gx),pad);x.lineTo(X(gx),h-pad);x.stroke();}
+      for(var gy=ymin;gy<=ymax;gy++){x.beginPath();x.moveTo(pad,Y(gy));x.lineTo(w-pad,Y(gy));x.stroke();}
+      x.strokeStyle="#c3b89d";x.lineWidth=1.5;
+      x.beginPath();x.moveTo(pad,Y(0));x.lineTo(w-pad,Y(0));x.stroke();
+      x.beginPath();x.moveTo(X(0),pad);x.lineTo(X(0),h-pad);x.stroke();
+      x.fillStyle=SOFT;x.font="12px Nunito";
+      for(var gx=xmin;gx<=xmax;gx++)x.fillText(gx,X(gx)-3,Y(0)+16);
+      for(var gy=1;gy<=ymax;gy++)x.fillText(gy,X(0)-16,Y(gy)+4);
+      x.fillStyle=SOFT;x.fillText("input (x)",w-pad-56,Y(0)+30);
+      // curve
+      x.strokeStyle=TEAL;x.lineWidth=3;x.beginPath();
+      var first=true;
+      for(var i=0;i<=240;i++){var xv=xmin+(xmax-xmin)*i/240;var yv=f(xv);if(yv<ymin-1)continue;var pxx=X(xv),pyy=Y(yv);if(first){x.moveTo(pxx,pyy);first=false;}else x.lineTo(pxx,pyy);}
+      x.stroke();
+      // reader
+      var xv=parseFloat(sl.value), yv=f(xv);
+      var px=X(xv),py=Y(yv);
+      x.strokeStyle=CORAL;x.setLineDash([5,5]);x.lineWidth=2;
+      x.beginPath();x.moveTo(px,Y(0));x.lineTo(px,py);x.lineTo(X(0),py);x.stroke();x.setLineDash([]);
+      x.fillStyle=CORAL;x.beginPath();x.arc(px,py,7,0,7);x.fill();
+      x.fillStyle="#fff";x.beginPath();x.arc(px,py,3,0,7);x.fill();
+      out.innerHTML='<span class="k">x = '+xv.toFixed(1)+'</span> &rarr; <span class="k2">f(x) = '+yv.toFixed(1)+'</span>';
+    }
+    sl.oninput=draw;
+    // drag on canvas
+    function fromEvt(e){
+      var r=G.c.getBoundingClientRect();var cx=((e.touches?e.touches[0].clientX:e.clientX)-r.left)*(G.w/r.width);
+      var xv=xmin+(cx-pad)/(G.w-2*pad)*(xmax-xmin); xv=Math.max(xmin,Math.min(xmax,xv));
+      sl.value=xv.toFixed(1); draw();
+    }
+    var down=false;
+    G.c.addEventListener("mousedown",function(e){down=true;fromEvt(e);});
+    window.addEventListener("mousemove",function(e){if(down)fromEvt(e);});
+    window.addEventListener("mouseup",function(){down=false;});
+    G.c.addEventListener("touchstart",function(e){down=true;fromEvt(e);e.preventDefault();});
+    G.c.addEventListener("touchmove",function(e){if(down)fromEvt(e);e.preventDefault();});
+    G.c.addEventListener("touchend",function(){down=false;});
+    draw();
+  })();
+
+  /* ---------- Section 6: vertical line test ---------- */
+  function makeVLT(id,vid,fnDraw,isFunc){
+    var G=ctxOf(id), v=document.getElementById(vid);
+    var pad=30, xmin=-4,xmax=4,ymin=-4,ymax=4, lineX=0.5;
+    function X(x){return pad+(x-xmin)/(xmax-xmin)*(G.w-2*pad);}
+    function Y(y){return (G.h-pad)-(y-ymin)/(ymax-ymin)*(G.h-2*pad);}
+    function draw(){
+      var x=G.x,w=G.w,h=G.h;x.clearRect(0,0,w,h);
+      x.strokeStyle=GRID;x.lineWidth=1;
+      for(var gx=xmin;gx<=xmax;gx++){x.beginPath();x.moveTo(X(gx),pad);x.lineTo(X(gx),h-pad);x.stroke();}
+      for(var gy=ymin;gy<=ymax;gy++){x.beginPath();x.moveTo(pad,Y(gy));x.lineTo(w-pad,Y(gy));x.stroke();}
+      x.strokeStyle="#c3b89d";x.lineWidth=1.5;
+      x.beginPath();x.moveTo(pad,Y(0));x.lineTo(w-pad,Y(0));x.stroke();
+      x.beginPath();x.moveTo(X(0),pad);x.lineTo(X(0),h-pad);x.stroke();
+      // curve (teal)
+      x.strokeStyle=TEAL;x.lineWidth=3; fnDraw(x,X,Y);
+      // vertical test line
+      var vx=X(lineX);
+      x.strokeStyle=CORAL;x.lineWidth=2.5;x.beginPath();x.moveTo(vx,pad);x.lineTo(vx,h-pad);x.stroke();
+      // intersection dots
+      var hits=isFunc? [ [lineX, funcY(lineX)] ] : sidewaysHits(lineX);
+      hits.forEach(function(p){ if(p[1]<ymin||p[1]>ymax)return; x.fillStyle=CORAL;x.beginPath();x.arc(X(p[0]),Y(p[1]),6,0,7);x.fill(); });
+      var n=hits.filter(function(p){return p[1]>=ymin&&p[1]<=ymax;}).length;
+      var vEl=document.getElementById(vid);
+      if(isFunc){vEl.innerHTML='<span style="color:'+TEAL+'">&check; one hit &rarr; function</span>';}
+      else{vEl.innerHTML= n>1 ? '<span style="color:'+CORAL+'">&times; two hits &rarr; NOT a function</span>' : '<span class="muted">slide onto the curve&hellip;</span>';}
+    }
+    function funcY(x){return -0.5*x*x+2;}         // parabola (function)
+    function sidewaysHits(x){ // x = 0.5*y^2 - 2  -> y^2 = 2(x+2)
+      var r=2*(x+2); if(r<0) return []; var s=Math.sqrt(r); return [[x,s],[x,-s]];
+    }
+    // expose the right curve via fnDraw closure
+    function drag(e){
+      var r=G.c.getBoundingClientRect();var cx=((e.touches?e.touches[0].clientX:e.clientX)-r.left)*(G.w/r.width);
+      lineX=xmin+(cx-pad)/(G.w-2*pad)*(xmax-xmin); lineX=Math.max(xmin,Math.min(xmax,lineX)); draw();
+    }
+    var down=false;
+    G.c.addEventListener("mousedown",function(e){down=true;drag(e);});
+    window.addEventListener("mousemove",function(e){if(down)drag(e);});
+    window.addEventListener("mouseup",function(){down=false;});
+    G.c.addEventListener("touchstart",function(e){down=true;drag(e);e.preventDefault();});
+    G.c.addEventListener("touchmove",function(e){if(down)drag(e);e.preventDefault();});
+    G.c.addEventListener("touchend",function(){down=false;});
+    draw();
+  }
+  // parabola (function)
+  makeVLT("vlt-a","vlt-a-v",function(x,X,Y){
+    x.beginPath();var first=true;
+    for(var i=0;i<=200;i++){var xv=-4+8*i/200;var yv=-0.5*xv*xv+2;if(yv<-4)continue;if(first){x.moveTo(X(xv),Y(yv));first=false;}else x.lineTo(X(xv),Y(yv));}
+    x.stroke();
+  },true);
+  // sideways parabola (not a function)
+  makeVLT("vlt-b","vlt-b-v",function(x,X,Y){
+    x.beginPath();var first=true;
+    for(var i=0;i<=200;i++){var yv=-4+8*i/200;var xv=0.5*yv*yv-2;if(xv>4)continue;if(first){x.moveTo(X(xv),Y(yv));first=false;}else x.lineTo(X(xv),Y(yv));}
+    x.stroke();
+  },false);
+
+})();
+</script>
+</body>
+</html>

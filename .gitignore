@@ -1,0 +1,6 @@
+# Static site -- nothing to build, little to ignore.
+.DS_Store
+Thumbs.db
+.vercel
+node_modules
+*.log

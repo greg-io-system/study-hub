@@ -1,0 +1,55 @@
+/* Study Hub -- shell styles. Warm "notebook" identity, phone-first.
+   Matches the lesson aesthetic so hub and lessons feel like one place. */
+:root{
+  --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+  --line:#e4dcc8; --grid:#ece3cf;
+  --coral:#e8623d; --coral-soft:#fbe7de;
+  --teal:#178a68; --teal-soft:#d8efe6;
+  --gold:#e0a324;
+  --shadow:0 10px 30px rgba(60,50,25,.10);
+  --disp:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Nunito','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;background-position:-1px -1px;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:820px;margin:0 auto;padding:26px 18px 70px}
+
+header.top{padding:26px 6px 10px}
+.eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral)}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(30px,7vw,46px);line-height:1.03;margin:.2em 0 .12em;text-wrap:balance}
+h1 em{font-style:italic;color:var(--coral)}
+.tagline{font-size:17px;color:var(--ink-soft);max-width:56ch;margin:.2em 0 0}
+
+.subject{margin-top:30px}
+.subject-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:6px}
+.subject-head h2{font-family:var(--disp);font-weight:600;font-size:clamp(21px,4.5vw,27px);margin:0}
+.count{font-weight:800;font-size:13px;color:var(--ink-soft)}
+.subject-blurb{color:var(--ink-soft);font-size:15px;margin:.4em 0 14px;max-width:60ch}
+
+.cards{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:620px){.cards{grid-template-columns:1fr 1fr}}
+.card{display:block;text-decoration:none;color:inherit;background:var(--paper2);
+  border:1.5px solid var(--line);border-radius:16px;padding:17px 18px 16px;
+  box-shadow:var(--shadow);transition:transform .12s ease,border-color .12s ease}
+.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--coral);outline:none}
+.card:focus-visible{box-shadow:0 0 0 3px var(--coral-soft),var(--shadow)}
+.card .topic{font-weight:800;font-size:12.5px;letter-spacing:.03em;color:var(--coral);text-transform:uppercase}
+.card .title{font-family:var(--disp);font-weight:700;font-size:21px;line-height:1.12;margin:5px 0 6px}
+.card .summary{font-size:14.5px;color:var(--ink-soft);margin:0 0 12px}
+.card .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;font-weight:800;background:var(--teal-soft);color:#0d5c42;border-radius:7px;padding:2px 8px}
+.open{font-weight:800;font-size:14px;color:var(--coral)}
+.date{font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+
+.empty{background:var(--paper2);border:1.5px dashed var(--line);border-radius:14px;padding:18px;color:var(--ink-soft)}
+
+.footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13.5px;text-align:center}
+
+@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover,.card:focus-visible{transform:none}}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelly's Study Hub</title>
+<meta name="description" content="Concept-first lessons you can actually play with.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Study Hub</div>
+    <h1 id="hdr">Your <em>study</em> hub</h1>
+    <p class="tagline">A place for the stuff class goes too fast on. Open a lesson, drag the graphs, poke at it &mdash; no pressure, no login, just here when you want it.</p>
+  </header>
+  <main id="subjects"></main>
+  <div class="footer" id="foot"></div>
+</div>
+
+<script src="data/lessons.js"></script>
+<script>
+(function(){
+  var data = window.STUDY_HUB || {subjects:[]};
+  var name = data.student || "";
+  if(name){ document.getElementById("hdr").innerHTML = name + "&rsquo;s <em>study</em> hub"; document.title = name + "'s Study Hub"; }
+
+  function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function fmtDate(d){ if(!d)return""; var p=d.split("-"); if(p.length!==3)return d;
+    var m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return m[(+p[1])-1]+" "+(+p[2])+", "+p[0]; }
+
+  var root=document.getElementById("subjects"), total=0;
+  (data.subjects||[]).forEach(function(sub){
+    var sec=el("section","subject");
+    var head=el("div","subject-head");
+    head.appendChild(el("h2",null,esc(sub.name)));
+    var n=(sub.lessons||[]).length; total+=n;
+    head.appendChild(el("span","count",n+(n===1?" lesson":" lessons")));
+    sec.appendChild(head);
+    if(sub.blurb) sec.appendChild(el("p","subject-blurb",esc(sub.blurb)));
+
+    if(!n){ sec.appendChild(el("div","empty","More coming soon.")); root.appendChild(sec); return; }
+    var cards=el("div","cards");
+    (sub.lessons||[]).forEach(function(ls){
+      var a=el("a","card"); a.href=ls.file; a.setAttribute("target","_blank"); a.setAttribute("rel","noopener");
+      if(ls.topic) a.appendChild(el("div","topic",esc(ls.topic)));
+      a.appendChild(el("div","title",esc(ls.title||"Lesson")));
+      if(ls.summary) a.appendChild(el("p","summary",esc(ls.summary)));
+      var meta=el("div","meta");
+      var tags=el("div","tags");
+      (ls.tags||[]).forEach(function(t){tags.appendChild(el("span","tag",esc(t)));});
+      meta.appendChild(tags);
+      meta.appendChild(el("span","open","Open &rarr;"));
+      a.appendChild(meta);
+      if(ls.date) a.appendChild(el("div","date",fmtDate(ls.date)));
+      cards.appendChild(a);
+    });
+    sec.appendChild(cards);
+    root.appendChild(sec);
+  });
+
+  if(total===0){ root.appendChild(el("div","empty","Lessons will show up here as they're added.")); }
+  document.getElementById("foot").innerHTML = "Made for you &middot; add-free &middot; bookmark this page";
+})();
+</script>
+</body>
+</html>
