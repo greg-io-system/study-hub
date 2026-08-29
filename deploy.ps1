@@ -70,12 +70,16 @@ try {
     $code = 0
 }
 
+Write-Host "`nRecent deployments:" -ForegroundColor DarkGray
+# 2>$null drops the benign vercel/PowerShell "claude-code-hint" stderr line so it
+# doesn't surface as an error or corrupt the script's exit code.
+vercel ls study-hub 2>$null | Select-Object -First 8 | Out-Host
+
 if ($code -eq 200) {
     Write-Host "`nLIVE (HTTP 200): $alias" -ForegroundColor Green
+    exit 0
 } else {
     Write-Host "`nPushed OK. Deploy may still be finishing (status $code)." -ForegroundColor Yellow
     Write-Host "  Live shortly at: $alias    Check: vercel ls study-hub"
+    exit 0
 }
-
-Write-Host "`nRecent deployments:" -ForegroundColor DarkGray
-vercel ls study-hub 2>&1 | Select-Object -First 8 | Out-Host
