@@ -30,10 +30,18 @@ redeploy. Same production URL; Kelly's bookmark never changes.
 
 NOTE: This project was deployed via the **Vercel CLI** (`vercel --prod`), matching
 how Villa is actually wired (`.vercel/project.json`, no org-level Vercel GitHub App).
-There is NO git-push auto-deploy. To publish a change:
-`cd projects/study-hub && vercel --prod` (also commit + push to keep the repo current).
+There is NO git-push auto-deploy. To publish a change, run the deploy script from
+the study-hub folder in PowerShell:
+
+    .\deploy.ps1                          # commit (auto-dated) + push + deploy
+    .\deploy.ps1 "added factoring lesson" # your own commit message
+    .\deploy.ps1 -NoGit                   # just redeploy current files
+
+It commits + pushes any changes, deploys to Vercel production, and prints the live
+URL. (Under the hood it is just `vercel --prod`; do that directly if you prefer.)
+
 If push-to-deploy is wanted later, connect the repo to the Vercel project in the
-dashboard (Project > Settings > Git) — one-time, then `git push` redeploys.
+dashboard (Project > Settings > Git) -- one-time, then `git push` redeploys.
 
 ## Notes
 - No `cleanUrls` in Vercel config on purpose — lesson links in `data/lessons.js`
