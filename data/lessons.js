@@ -13,14 +13,6 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       lessons: [
         {
-          title: "Deploy Cycle Test",
-          topic: "Pipeline check — safe to delete",
-          file: "lessons/deploy-cycle-test.html",
-          date: "2026-08-28",
-          summary: "Temporary card confirming the CW → CC → Vercel publish cycle. Remove after the live check.",
-          tags: ["test"]
-        },
-        {
           title: "The Function Machine",
           topic: "Function notation — inputs & outputs",
           file: "lessons/function-notation-inputs-outputs.html",
