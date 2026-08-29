@@ -54,10 +54,20 @@ from CC (or a terminal) here.
 - Git push to greg-io-system org is pre-authorized per projects/CLAUDE.md.
 
 ## Production URL
-Live (stable alias — share this / Kelly bookmarks this):
-https://study-hub-virid-iota.vercel.app
+Live (share this / Kelly bookmarks this):
+https://kelly-study-hub.vercel.app
 
-Deployed 2026-08-28 via Vercel CLI. Vercel team: Greg's projects
-(gregs-projects-2828bb2b). Project: study-hub.
-Per-deploy immutable URL of first deploy:
-https://study-2yd6rajhy-gregs-projects-2828bb2b.vercel.app
+`kelly-study-hub.vercel.app` is a registered production domain (added
+2026-08-28 via `vercel domains add kelly-study-hub.vercel.app study-hub`).
+Being a production domain, it is PUBLIC (exempt from the project's
+deployment protection) and AUTO-TRACKS every production deploy -- verified.
+The original auto-generated alias `study-hub-virid-iota.vercel.app` still
+works too; the pretty one is just the canonical bookmark.
+
+Note on protection: this project has Vercel Deployment Protection ON, so the
+raw deployment URLs and the git-branch alias 302 to SSO (team-only). Only
+registered production domains are public. To add another public URL, use
+`vercel domains add <name>.vercel.app study-hub` (NOT `vercel alias set`,
+which lands behind the protection wall).
+
+Vercel team: Greg's projects (gregs-projects-2828bb2b). Project: study-hub.

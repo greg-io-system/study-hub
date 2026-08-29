@@ -13,7 +13,7 @@
 Kelly's Study Hub -- a static HTML study site. A home/landing page lists
 the lessons (a table of contents); each lesson is a self-contained,
 interactive, mobile-first HTML page (concept-first). Content is added
-regularly. Live at https://study-hub-virid-iota.vercel.app.
+regularly. Live at https://kelly-study-hub.vercel.app.
 
 Personal project -- NOT work. It is the PILOT / reference instance of an
 emerging "Content Hub" project shape (static HTML front-end for user
@@ -43,7 +43,7 @@ Its whole protocol is self-contained in this repo.
 - Repo: greg-io-system/study-hub (public; source of truth).
 - Vercel project: study-hub (team gregs-projects-2828bb2b), public, no password.
 - Live URL (stable alias -- Kelly bookmarks this):
-  https://study-hub-virid-iota.vercel.app
+  https://kelly-study-hub.vercel.app
 - Vercel is GIT-CONNECTED: any push to `main` auto-deploys to production and
   reassigns the live alias. The push IS the deploy. (Wired 2026-08-28;
   differs from Villa, which deploys via CLI.)

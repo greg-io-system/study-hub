@@ -26,7 +26,7 @@ $ErrorActionPreference = "Continue"
 
 $repo  = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $repo
-$alias = "https://study-hub-virid-iota.vercel.app"
+$alias = "https://kelly-study-hub.vercel.app"
 
 function Fail($m) { Write-Host $m -ForegroundColor Red; exit 1 }
 
