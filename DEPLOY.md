@@ -26,22 +26,26 @@ Serve the repo root as-is; `index.html` is the entry point.
 
 ## Ongoing (after setup)
 Adding a lesson = new file in `lessons/` + an entry in `data/lessons.js`, then
-redeploy. Same production URL; Kelly's bookmark never changes.
+publish. Same production URL; Kelly's bookmark never changes.
 
-NOTE: This project was deployed via the **Vercel CLI** (`vercel --prod`), matching
-how Villa is actually wired (`.vercel/project.json`, no org-level Vercel GitHub App).
-There is NO git-push auto-deploy. To publish a change, run the deploy script from
-the study-hub folder in PowerShell:
+**Push-to-deploy is LIVE (wired 2026-08-28).** The Vercel project is connected to
+`greg-io-system/study-hub` via the Vercel GitHub App. Any push to `main`
+auto-deploys to production and reassigns the live alias -- verified end-to-end
+(a push produced a `-git-main-` production deployment and the stable alias
+repointed to it). So publishing is just: commit + push.
 
-    .\deploy.ps1                          # commit (auto-dated) + push + deploy
+Easiest path -- the deploy script (from the study-hub folder in PowerShell):
+
+    .\deploy.ps1                          # commit (auto-dated) + push  -> auto-deploys
     .\deploy.ps1 "added factoring lesson" # your own commit message
-    .\deploy.ps1 -NoGit                   # just redeploy current files
+    .\deploy.ps1 -Redeploy                # force a rebuild of current files (no commit)
 
-It commits + pushes any changes, deploys to Vercel production, and prints the live
-URL. (Under the hood it is just `vercel --prod`; do that directly if you prefer.)
+The script commits + pushes and confirms the site is live. You can also just
+`git add -A; git commit -m "..."; git push` by hand -- the push alone deploys.
+From a CC session, `/study-hub-deploy` does the same with a change-preview first.
 
-If push-to-deploy is wanted later, connect the repo to the Vercel project in the
-dashboard (Project > Settings > Git) -- one-time, then `git push` redeploys.
+CW authors content into this repo but cannot push; the push/deploy step is done
+from CC (or a terminal) here.
 
 ## Notes
 - No `cleanUrls` in Vercel config on purpose — lesson links in `data/lessons.js`
