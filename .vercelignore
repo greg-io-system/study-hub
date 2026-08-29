@@ -1,0 +1,10 @@
+# Keep repo config, docs, and notes out of the public deploy -- only the
+# site itself ships (index.html, styles.css, lessons/, data/).
+CLAUDE.md
+DEPLOY.md
+deploy.ps1
+README.md
+HANDOVER.md
+session-notes/
+cw-log/
+.claude/
