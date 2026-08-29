@@ -25,9 +25,15 @@ Serve the repo root as-is; `index.html` is the entry point.
    what gets shared to Kelly's personal Gmail (see algebra-2/SHARING-AND-COMMS.md).
 
 ## Ongoing (after setup)
-Adding a lesson = new file in `lessons/` + an entry in `data/lessons.js` +
-commit + push. Vercel redeploys automatically. Same URL; Kelly's bookmark never
-changes.
+Adding a lesson = new file in `lessons/` + an entry in `data/lessons.js`, then
+redeploy. Same production URL; Kelly's bookmark never changes.
+
+NOTE: This project was deployed via the **Vercel CLI** (`vercel --prod`), matching
+how Villa is actually wired (`.vercel/project.json`, no org-level Vercel GitHub App).
+There is NO git-push auto-deploy. To publish a change:
+`cd projects/study-hub && vercel --prod` (also commit + push to keep the repo current).
+If push-to-deploy is wanted later, connect the repo to the Vercel project in the
+dashboard (Project > Settings > Git) — one-time, then `git push` redeploys.
 
 ## Notes
 - No `cleanUrls` in Vercel config on purpose — lesson links in `data/lessons.js`
@@ -36,4 +42,10 @@ changes.
 - Git push to greg-io-system org is pre-authorized per projects/CLAUDE.md.
 
 ## Production URL
-(fill in after first deploy): ____________________________
+Live (stable alias — share this / Kelly bookmarks this):
+https://study-hub-virid-iota.vercel.app
+
+Deployed 2026-08-28 via Vercel CLI. Vercel team: Greg's projects
+(gregs-projects-2828bb2b). Project: study-hub.
+Per-deploy immutable URL of first deploy:
+https://study-2yd6rajhy-gregs-projects-2828bb2b.vercel.app
