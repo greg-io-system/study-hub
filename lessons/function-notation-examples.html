@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worked Examples: Inputs &amp; Outputs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+  --line:#e4dcc8; --grid:#ece3cf; --coral:#e8623d; --coral-soft:#fbe7de;
+  --teal:#178a68; --teal-soft:#d8efe6; --gold:#e0a324;
+  --shadow:0 10px 30px rgba(60,50,25,.10);
+  --disp:'Fraunces',Georgia,serif; --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  --mono:'Nunito',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box} html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;background-position:-1px -1px;-webkit-text-size-adjust:100%}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px 80px}
+.eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral);text-align:center}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(27px,6vw,42px);line-height:1.05;margin:.18em 0 .1em;text-align:center;text-wrap:balance}
+.lead{font-size:16.5px;color:var(--ink-soft);text-align:center;max-width:58ch;margin:.3em auto 0}
+.card{background:var(--paper2);border:1.5px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px 20px 22px;margin:22px 0}
+.step-label{display:inline-block;background:var(--ink);color:#fff;font-weight:800;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:20px;margin-bottom:10px}
+h2{font-family:var(--disp);font-weight:600;font-size:22px;margin:.1em 0 .3em}
+h3{font-family:var(--disp);font-weight:600;font-size:17px;margin:1em 0 .2em;color:var(--ink)}
+p{margin:.5em 0}
+.ask{font-weight:800;color:var(--teal)}
+ol.method{margin:.4em 0 .6em;padding-left:1.25em} ol.method li{margin:.2em 0}
+.worked{background:#fbf7ee;border:1.5px solid var(--line);border-left:5px solid var(--teal);border-radius:12px;
+  padding:12px 14px;margin:.6em 0;font-family:var(--mono);font-size:15px;white-space:pre-wrap;line-height:1.5}
+.worked .cmt{color:var(--teal);font-weight:700}
+.turn{background:var(--coral-soft);border-radius:12px;padding:11px 14px;margin:.7em 0 0;font-size:14.5px}
+.turn b{color:#a8341a}
+.callout{background:#fff6df;border:1.5px solid var(--gold);border-left-width:5px;border-radius:12px;padding:13px 15px;margin:.7em 0;font-size:14.5px;color:#6a5417}
+.callout b{color:#5a4512}
+.big{background:var(--teal-soft);border:1.5px solid #bfe6d7;border-radius:16px;padding:16px 18px;margin:22px 0}
+.big h2{margin-top:0}
+sup{font-size:.7em}
+.foot{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Algebra 2 · WS#1.4</div>
+  <h1>Worked Examples: <span style="color:var(--coral);font-style:italic">Inputs &amp; Outputs</span></h1>
+  <p class="lead">The method for every problem type on the sheet, worked on a <em>twin</em> problem so you can copy the moves onto your own numbers.</p>
+
+  <div class="big">
+    <h2>The one big idea</h2>
+    <p>A function is an <b>input → output machine</b>. <span style="font-family:var(--mono)">f(20)</span> means: <em>put 20 into machine f, and read what comes out.</em></p>
+    <p style="margin-bottom:0">Every problem here is a version of that. Keep asking yourself two questions: <span class="ask">What's the input? What's the output?</span> Almost every mistake at this level comes from mixing those two up.</p>
+  </div>
+
+  <div class="card">
+    <span class="step-label">Type 1 · read a graph</span>
+    <h2>Given the input → find the output</h2>
+    <p>On a graph (like the dog's distance vs. time), <span class="worked" style="display:inline;border:0;padding:0 4px;border-left:0;background:none">f(20)</span> means input = 20 on the bottom axis.</p>
+    <ol class="method">
+      <li>Find the input (20) on the <b>bottom</b> axis.</li>
+      <li>Go straight <b>up</b> to the curve.</li>
+      <li>Go straight <b>across</b> to the side axis — that height is the output.</li>
+    </ol>
+    <h3>Twin example</h3>
+    <div class="worked">To find f(60): find 60 on the bottom, go up to the curve,
+read across — say it sits at 5.
+<span class="cmt">→ f(60) = 5</span></div>
+    <div class="turn"><b>Your turn:</b> do this for f(20) and f(140) on your graph.</div>
+  </div>
+
+  <div class="card">
+    <span class="step-label">Type 2 · run it backwards</span>
+    <h2>Given the output → find the input</h2>
+    <p>“When is f(x) = 3?” gives you the <b>output</b> (3) and asks for every input that produces it.</p>
+    <ol class="method">
+      <li>Find the output (3) on the <b>side</b> axis.</li>
+      <li>Draw a horizontal line across.</li>
+      <li>Mark <b>every</b> place the curve touches that line; read those inputs off the bottom.</li>
+    </ol>
+    <div class="callout"><b>Expect more than one answer.</b> Running the machine backwards can land on several inputs — list all of them.</div>
+    <div class="turn"><b>Your turn:</b> find every time where f(x) = 3.</div>
+  </div>
+
+  <div class="card">
+    <span class="step-label">Type 3 · evaluate with algebra</span>
+    <h2>Plug the input into a formula</h2>
+    <p>Same “input → output,” but with a rule instead of a graph. Wherever you see <span style="font-family:var(--mono)">x</span>, substitute the input <b>in parentheses</b>, then do order of operations: exponent first, then multiply, then add.</p>
+    <h3>Twin example — f(x) = −2x<sup>2</sup> − 4x + 5, find f(3)</h3>
+    <div class="worked">f(3) = −2(3)<sup>2</sup> − 4(3) + 5
+     = −2(9) − 12 + 5      <span class="cmt">← square first: 3<sup>2</sup> = 9</span>
+     = −18 − 12 + 5
+<span class="cmt">→ f(3) = −25</span></div>
+    <div class="callout"><b>The parentheses protect you.</b> A negative input must be squared inside its parentheses: (−3)<sup>2</sup> = 9, but −3<sup>2</sup> = −9. Different answers.</div>
+    <div class="turn"><b>Your turn:</b> do f(0) and f(7) the same way. Watch the signs — negatives are where points get lost. (There's a draggable version of this in your lesson.)</div>
+  </div>
+
+  <div class="card">
+    <span class="step-label">Type 3b · solve for the input</span>
+    <h2>Output given → undo it step by step</h2>
+    <p>e.g. <span style="font-family:var(--mono)">n(x) = 6x + 12</span> and <span style="font-family:var(--mono)">n(x) = 42</span>. The output (42) is given; find the input. Set the rule equal to the output and peel operations off — last one first.</p>
+    <h3>Twin example — m(x) = 4x + 5, when m(x) = 25</h3>
+    <div class="worked">4x + 5 = 25
+4x = 20        <span class="cmt">← undo + 5 (subtract 5 both sides)</span>
+x = 5          <span class="cmt">← undo × 4 (divide both sides by 4)</span></div>
+    <div class="turn"><b>Your turn:</b> solve 6x + 12 = 42 and 8x − 3 = 45. Check by plugging your x back in — it should give the target output.</div>
+  </div>
+
+  <div class="card">
+    <span class="step-label">Type 4 · domain, range, is-it-a-function</span>
+    <h2>Inputs, outputs, and the one-output rule</h2>
+    <p><b>Domain</b> = all the inputs (x-values, read left→right). <b>Range</b> = all the outputs (y-values, read bottom→top).</p>
+    <p>It's a function only if <b>each input has exactly one output.</b></p>
+    <ol class="method">
+      <li><b>On a graph:</b> the vertical-line test — if any vertical line hits the curve more than once, it's not a function.</li>
+      <li><b>On a mapping diagram</b> (ovals with arrows): follow each input arrow. If one input points to two outputs, it's not a function.</li>
+    </ol>
+    <h3>Twin example</h3>
+    <div class="worked">Inputs {1, 2, 3}, and 2 has arrows to BOTH 5 and 8
+<span class="cmt">→ not a function (input 2 gives two outputs)</span></div>
+    <div class="callout">Two inputs sharing one output is fine. One input with two outputs is not.</div>
+    <div class="turn"><b>Your turn:</b> for each graph and the oval diagram — state the domain, state the range, then apply the one-output test.</div>
+  </div>
+
+  <div class="card">
+    <span class="step-label">Type 5 · solve equations</span>
+    <h2>Simplify, then undo</h2>
+    <p>Same skill as “solve for the input,” just longer. Only two moves: <b>(1) simplify each side</b> (distribute, combine like terms), then <b>(2) undo</b> to isolate the variable, doing the same to both sides.</p>
+    <h3>Twin example</h3>
+    <div class="worked">30 = 5(d − 2) − 5
+30 = 5d − 10 − 5     <span class="cmt">← distribute the 5</span>
+30 = 5d − 15         <span class="cmt">← combine −10 and −5</span>
+45 = 5d              <span class="cmt">← undo − 15 (add 15)</span>
+<span class="cmt">→ d = 9</span></div>
+    <h3>Another — combine like terms first</h3>
+    <div class="worked">2n − 5n + 3 = −3
+−3n + 3 = −3         <span class="cmt">← combine 2n and −5n</span>
+−3n = −6             <span class="cmt">← undo + 3</span>
+<span class="cmt">→ n = 2</span></div>
+    <div class="turn"><b>Your turn:</b> for each equation, first ask “what's cluttering this side?” — distribute and combine before you undo. Then undo in reverse order of operations.</div>
+  </div>
+
+  <div class="callout"><b>Stuck? Ask yourself:</b> What's the input, what's the output? Am I given the input and finding the output, or the other way round? What can I simplify first? Did I put the input in parentheses before squaring?</div>
+
+  <div class="foot">Built for Kelly · WS#1.4 Inputs and Outputs · worked examples</div>
+</div>
+
+<script>
+/* Guarded hub back-link (see WORKING-APPROACH.md §3). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
+    a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

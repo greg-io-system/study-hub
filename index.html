@@ -36,19 +36,51 @@
   function homeTitle(){ return (student? student+"'s " : "") + "Study Hub"; }
 
   /* ---------- lesson card (shared) ---------- */
+  function withBack(file,backId){ return (file||"#")+(backId&&file?"?back="+encodeURIComponent(backId):""); }
+
   function lessonCard(ls,backId){
-    var a=el("a","card"); a.href=(ls.file||"#")+(backId?"?back="+encodeURIComponent(backId):"");
-    if(ls.topic) a.appendChild(el("div","topic",esc(ls.topic)));
-    a.appendChild(el("div","title",esc(ls.title||"Lesson")));
-    if(ls.summary) a.appendChild(el("p","summary",esc(ls.summary)));
-    var meta=el("div","meta");
-    var tags=el("div","tags");
-    (ls.tags||[]).forEach(function(t){tags.appendChild(el("span","tag",esc(t)));});
-    meta.appendChild(tags);
-    meta.appendChild(el("span","open","Open &rarr;"));
-    a.appendChild(meta);
-    if(ls.date) a.appendChild(el("div","date",fmtDate(ls.date)));
-    return a;
+    var mats = (ls.materials && ls.materials.length) ? ls.materials : null;
+
+    // No materials: the whole card is a single link to the lesson.
+    if(!mats){
+      var a=el("a","card"); a.href=withBack(ls.file,backId);
+      if(ls.topic) a.appendChild(el("div","topic",esc(ls.topic)));
+      a.appendChild(el("div","title",esc(ls.title||"Lesson")));
+      if(ls.summary) a.appendChild(el("p","summary",esc(ls.summary)));
+      var meta=el("div","meta");
+      var tags=el("div","tags");
+      (ls.tags||[]).forEach(function(t){tags.appendChild(el("span","tag",esc(t)));});
+      meta.appendChild(tags);
+      meta.appendChild(el("span","open","Open &rarr;"));
+      a.appendChild(meta);
+      if(ls.date) a.appendChild(el("div","date",fmtDate(ls.date)));
+      return a;
+    }
+
+    // Materials: card is a container; each material is its own link (can't nest <a>).
+    var c=el("div","card");
+    if(ls.topic) c.appendChild(el("div","topic",esc(ls.topic)));
+    c.appendChild(el("div","title",esc(ls.title||"Lesson")));
+    if(ls.summary) c.appendChild(el("p","summary",esc(ls.summary)));
+    if(ls.tags && ls.tags.length){
+      var t2=el("div","tags"); t2.style.marginBottom="4px";
+      ls.tags.forEach(function(t){ t2.appendChild(el("span","tag",esc(t))); });
+      c.appendChild(t2);
+    }
+    var m=el("div","materials");
+    m.appendChild(el("div","mlabel","Materials for this topic"));
+    var row=el("div","mrow");
+    mats.forEach(function(mat){
+      var link=el("a","mlink"+(mat.kind==="lesson"?" primary":""));
+      link.href=withBack(mat.file,backId);
+      link.appendChild(el("span","dot d-"+esc(mat.kind||"lesson")));
+      link.appendChild(document.createTextNode(mat.label||mat.kind||"Open"));
+      row.appendChild(link);
+    });
+    m.appendChild(row);
+    c.appendChild(m);
+    if(ls.date) c.appendChild(el("div","date",fmtDate(ls.date)));
+    return c;
   }
 
   /* ---------- landing: the class grid ---------- */

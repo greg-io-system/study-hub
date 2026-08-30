@@ -84,6 +84,18 @@ h1 em{font-style:italic;color:var(--coral)}
 .week-theme{font-family:var(--disp);font-weight:600;font-size:17px;color:var(--ink)}
 .week-line{flex:1;min-width:40px;height:1px;background:var(--line)}
 
+/* ---- topic materials row (lesson + examples/practice/answers) ---- */
+.materials{border-top:1px dashed var(--line);margin-top:4px;padding-top:11px}
+.materials .mlabel{font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px}
+.mrow{display:flex;flex-wrap:wrap;gap:8px}
+.mlink{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700;font-size:13px;color:var(--ink);
+  background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:6px 11px;transition:border-color .12s ease,color .12s ease}
+.mlink:hover,.mlink:focus-visible{border-color:var(--coral);color:var(--coral);outline:none}
+.mlink.primary{border-color:var(--coral);background:var(--coral-soft)}
+.mlink .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+.d-lesson{background:var(--coral)} .d-examples{background:var(--teal)}
+.d-practice{background:#3f6fb0} .d-answers{background:#8256b8}
+
 .footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13.5px;text-align:center}
 
 @media(prefers-reduced-motion:reduce){

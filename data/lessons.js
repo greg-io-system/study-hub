@@ -49,7 +49,13 @@ window.STUDY_HUB = {
               file: "lessons/function-notation-inputs-outputs.html",
               date: "2026-08-28",
               summary: "What f(x) really means, one function shown four ways, evaluating step by step, reading values off a graph, and the vertical-line test.",
-              tags: ["functions", "graphs", "domain & range"]
+              tags: ["functions", "graphs", "domain & range"],
+              materials: [
+                { kind: "lesson",   label: "Interactive lesson", file: "lessons/function-notation-inputs-outputs.html" },
+                { kind: "examples", label: "Worked examples",    file: "lessons/function-notation-examples.html" },
+                { kind: "practice", label: "Practice",           file: "lessons/function-notation-practice.html" },
+                { kind: "answers",  label: "Check answers",      file: "lessons/function-notation-answers.html" }
+              ]
             }
           ]
         }

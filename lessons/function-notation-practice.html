@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice: Functions — Inputs &amp; Outputs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+  --line:#e4dcc8; --grid:#ece3cf; --coral:#e8623d; --coral-soft:#fbe7de;
+  --teal:#178a68; --teal-soft:#d8efe6; --gold:#e0a324;
+  --shadow:0 10px 30px rgba(60,50,25,.10);
+  --disp:'Fraunces',Georgia,serif; --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  --mono:'Nunito',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box} html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;background-position:-1px -1px;-webkit-text-size-adjust:100%}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px 80px}
+.eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral);text-align:center}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(27px,6vw,42px);line-height:1.05;margin:.18em 0 .1em;text-align:center}
+.lead{font-size:16.5px;color:var(--ink-soft);text-align:center;max-width:58ch;margin:.3em auto 0}
+.reminder{background:var(--teal-soft);border:1.5px solid #bfe6d7;border-radius:14px;padding:12px 15px;margin:20px 0;font-size:14.5px;text-align:center}
+.reminder b{color:#0d5c42}
+.sec{background:var(--paper2);border:1.5px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:18px 20px 20px;margin:18px 0}
+.sec h2{font-family:var(--disp);font-weight:600;font-size:20px;margin:.1em 0 .1em}
+.sec .rule{font-family:var(--mono);font-size:15px;color:var(--ink);background:#fbf7ee;border:1.5px solid var(--line);border-radius:10px;padding:7px 11px;display:inline-block;margin:.3em 0 .6em}
+ol.q{margin:.2em 0 0;padding-left:1.5em} ol.q li{margin:.55em 0;font-size:16px}
+.q .blank{display:inline-block;min-width:80px;border-bottom:2px dotted var(--line);margin-left:6px}
+.prompt{font-size:15px;color:var(--ink-soft)}
+sup{font-size:.7em}
+.check{background:var(--coral-soft);border-radius:14px;padding:14px 16px;margin:24px 0 0;font-size:15px;text-align:center}
+.check b{color:#a8341a}
+.controls{text-align:center;margin:16px 0 0}
+.btn{display:inline-block;border:1.5px solid var(--line);background:var(--paper);border-radius:10px;padding:8px 14px;font-weight:800;font-size:13.5px;color:var(--ink-soft);text-decoration:none;cursor:pointer}
+.btn:hover{border-color:var(--coral);color:var(--coral)}
+.foot{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13px;text-align:center}
+@media print{ body{background:#fff} .btn,.controls{display:none} .sec{box-shadow:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Algebra 2 · WS#1.4 companion</div>
+  <h1>Practice: <span style="color:var(--coral);font-style:italic">Functions</span></h1>
+  <p class="lead">Fresh problems in the same shapes as your sheet. Do them yourself, show each step — then check with the answer key.</p>
+  <div class="reminder"><b>f(input) = output.</b> Show each step. Put the input in parentheses before you square.</div>
+
+  <div class="sec">
+    <h2>A · Evaluate the function</h2>
+    <span class="rule">g(x) = x<sup>2</sup> − 3x + 4</span>
+    <ol class="q">
+      <li>g(0) =</li>
+      <li>g(2) =</li>
+      <li>g(−1) =</li>
+      <li>g(5) =</li>
+    </ol>
+  </div>
+
+  <div class="sec">
+    <h2>B · Evaluate — watch the negatives</h2>
+    <span class="rule">h(x) = −2x<sup>2</sup> + 5x − 1</span>
+    <ol class="q">
+      <li>h(1) =</li>
+      <li>h(−2) =</li>
+      <li>h(3) =</li>
+    </ol>
+  </div>
+
+  <div class="sec">
+    <h2>C · Solve for the input</h2>
+    <p class="prompt">You're given the output — run the machine backwards.</p>
+    <ol class="q">
+      <li>p(x) = 4x + 7 and p(x) = 31.  Find x.</li>
+      <li>q(x) = 6x − 5 and q(x) = 43.  Find x.</li>
+      <li>r(x) = −3x + 2 and r(x) = 20.  Find x.</li>
+    </ol>
+  </div>
+
+  <div class="sec">
+    <h2>D · Solve the equations</h2>
+    <p class="prompt">Simplify each side first, then undo.</p>
+    <ol class="q">
+      <li>24 = 4(x − 3) + 8</li>
+      <li>5n − 8n + 6 = −9</li>
+      <li>2(3x − 1) = 28</li>
+    </ol>
+  </div>
+
+  <div class="sec">
+    <h2>E · Is it a function?</h2>
+    <ol class="q">
+      <li>The set of points (1, 4), (2, 7), (3, 4). Is this a function? What is the domain? What is the range?</li>
+    </ol>
+  </div>
+
+  <div class="check"><b>Done?</b> Now open <em>Check answers</em> from the topic on the Study Hub and see how you did — one worked step at a time, not just the final number.</div>
+
+  <div class="controls"><a class="btn" href="#" onclick="window.print();return false;">Print / save as PDF</a></div>
+
+  <div class="foot">Built for Kelly · WS#1.4 Inputs and Outputs · practice</div>
+</div>
+
+<script>
+/* Guarded hub back-link (see WORKING-APPROACH.md §3). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
+    a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
