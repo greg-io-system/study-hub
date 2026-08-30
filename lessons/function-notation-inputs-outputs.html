@@ -427,5 +427,24 @@
 
 })();
 </script>
+<script>
+/* Guarded hub back-link. Shows a "Back to Study Hub" bar ONLY when the lesson
+   was opened from the hub, which passes ?back=<classId>. When the file is
+   opened standalone (Drive, email, direct), no param -> nothing renders, so the
+   lesson stays fully portable. */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
+    a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
 </body>
 </html>

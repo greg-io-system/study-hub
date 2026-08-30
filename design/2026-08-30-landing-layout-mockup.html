@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study Hub — design mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+  --line:#e4dcc8; --grid:#ece3cf;
+  --coral:#e8623d; --coral-soft:#fbe7de;
+  --teal:#178a68; --teal-soft:#d8efe6;
+  --gold:#e0a324;
+  --shadow:0 10px 30px rgba(60,50,25,.10);
+  --disp:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Nunito','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;background-position:-1px -1px;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:860px;margin:0 auto;padding:26px 18px 90px}
+
+/* --- mockup scaffolding (not part of the real hub) --- */
+.note{background:#fff6df;border:1.5px solid var(--gold);border-left-width:5px;border-radius:12px;padding:14px 16px;font-size:14.5px;color:#6a5417;margin:8px 0 34px}
+.note b{color:#5a4512}
+.panel{margin:40px 0;padding:22px 20px 26px;background:rgba(255,253,247,.55);border:1.5px dashed var(--line);border-radius:20px;position:relative}
+.panel-label{position:absolute;top:-13px;left:20px;background:var(--ink);color:#fff;font-weight:800;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.panel-note{font-size:13.5px;color:var(--ink-soft);margin:4px 0 20px;max-width:64ch}
+.verdict{font-weight:800;color:var(--teal)}
+.caution{font-weight:800;color:var(--coral)}
+
+/* --- shared hub identity --- */
+.eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral)}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(28px,6vw,42px);line-height:1.03;margin:.2em 0 .12em;text-wrap:balance}
+h1 em{font-style:italic;color:var(--coral)}
+.tagline{font-size:16px;color:var(--ink-soft);max-width:56ch;margin:.2em 0 0}
+
+/* subject section (Option B / class page) */
+.subject{margin-top:26px}
+.subject-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:6px}
+.subject-head h2{font-family:var(--disp);font-weight:600;font-size:clamp(20px,4.5vw,26px);margin:0}
+.count{font-weight:800;font-size:13px;color:var(--ink-soft)}
+.subject-blurb{color:var(--ink-soft);font-size:15px;margin:.4em 0 14px;max-width:60ch}
+
+/* week group */
+.week{margin:22px 0 6px}
+.week-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.week-range{font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;color:var(--coral);background:var(--coral-soft);padding:3px 10px;border-radius:20px}
+.week-theme{font-family:var(--disp);font-weight:600;font-size:17px;color:var(--ink)}
+.week-line{flex:1;min-width:40px;height:1px;background:var(--line)}
+
+/* lesson cards */
+.cards{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:620px){.cards{grid-template-columns:1fr 1fr}}
+.card{display:block;text-decoration:none;color:inherit;background:var(--paper2);
+  border:1.5px solid var(--line);border-radius:16px;padding:17px 18px 16px;
+  box-shadow:var(--shadow);transition:transform .12s ease,border-color .12s ease}
+.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--coral);outline:none}
+.card .topic{font-weight:800;font-size:12.5px;letter-spacing:.03em;color:var(--coral);text-transform:uppercase}
+.card .title{font-family:var(--disp);font-weight:700;font-size:20px;line-height:1.12;margin:5px 0 6px}
+.card .summary{font-size:14px;color:var(--ink-soft);margin:0 0 12px}
+.card .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;font-weight:800;background:var(--teal-soft);color:#0d5c42;border-radius:7px;padding:2px 8px}
+.open{font-weight:800;font-size:14px;color:var(--coral)}
+.date{font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.empty{background:var(--paper2);border:1.5px dashed var(--line);border-radius:14px;padding:16px;color:var(--ink-soft);font-size:14px}
+
+/* --- Option A: class grid --- */
+.classgrid{display:grid;grid-template-columns:1fr;gap:15px;margin-top:22px}
+@media(min-width:560px){.classgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:820px){.classgrid{grid-template-columns:1fr 1fr 1fr}}
+.classcard{display:block;text-decoration:none;color:inherit;background:var(--paper2);
+  border:1.5px solid var(--line);border-radius:18px;padding:0;overflow:hidden;
+  box-shadow:var(--shadow);transition:transform .12s ease,border-color .12s ease}
+.classcard:hover{transform:translateY(-3px);border-color:var(--accent,var(--coral))}
+.classcard .bar{height:7px;background:var(--accent,var(--coral))}
+.classcard .body{padding:15px 16px 16px}
+.classcard .cname{font-family:var(--disp);font-weight:700;font-size:21px;line-height:1.1;margin:2px 0 2px}
+.classcard .csub{font-size:13px;color:var(--ink-soft);margin:0 0 12px}
+.classcard .cthis{font-size:13.5px;color:var(--ink);font-weight:700}
+.classcard .cthis span{color:var(--accent,var(--coral))}
+.classcard .cfoot{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.classcard .ccount{font-size:12.5px;font-weight:800;color:var(--ink-soft)}
+.classcard .cgo{font-weight:800;font-size:13.5px;color:var(--accent,var(--coral))}
+.classcard.soon{opacity:.72;border-style:dashed}
+.classcard.soon .bar{background:var(--line)}
+.classcard.soon .cgo{color:var(--ink-soft)}
+
+.footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13.5px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Study Hub · design mockup</div>
+  <h1>Scaling the hub to <em>6 classes</em></h1>
+  <p class="tagline">Same look and feel — three ways to organize it once there's more than one class. Real Algebra&nbsp;2 lesson; sample World&nbsp;History record.</p>
+  <div class="note"><b>This is a mockup, not the live site.</b> Nothing here is deployed. Links go nowhere. The question: how should the landing page look with several classes, and how do we group lessons within a class (by <b>week</b>).</div>
+
+  <!-- ============ OPTION A ============ -->
+  <section class="panel">
+    <div class="panel-label">Option A · Class grid</div>
+    <p class="panel-note">Landing is a tile per class. Kelly taps her class, lands on that class's page (Option&nbsp;C below). <span class="verdict">Scales best for 6 classes</span> — the front page stays short no matter how many lessons pile up. Costs one extra tap and a per-class page.</p>
+
+    <div class="classgrid">
+      <a class="classcard" href="#" style="--accent:#e8623d">
+        <div class="bar"></div>
+        <div class="body">
+          <div class="cname">Algebra 2</div>
+          <div class="csub">Concept-first, poke-at-it lessons</div>
+          <div class="cthis">This week: <span>Unit 0 · Functions</span></div>
+          <div class="cfoot"><span class="ccount">1 lesson</span><span class="cgo">Open →</span></div>
+        </div>
+      </a>
+      <a class="classcard" href="#" style="--accent:#178a68">
+        <div class="bar"></div>
+        <div class="body">
+          <div class="cname">World History</div>
+          <div class="csub">Chapter-by-chapter, the big picture</div>
+          <div class="cthis">This week: <span>Ch. 2 · River Civilizations</span></div>
+          <div class="cfoot"><span class="ccount">1 lesson</span><span class="cgo">Open →</span></div>
+        </div>
+      </a>
+      <a class="classcard soon" href="#" style="--accent:#3f6fb0">
+        <div class="bar"></div>
+        <div class="body">
+          <div class="cname">AP French</div>
+          <div class="csub">Not added yet</div>
+          <div class="cthis" style="color:var(--ink-soft);font-weight:600">Add when you want it here</div>
+          <div class="cfoot"><span class="ccount">—</span><span class="cgo">Soon</span></div>
+        </div>
+      </a>
+      <a class="classcard soon" href="#" style="--accent:#8256b8">
+        <div class="bar"></div>
+        <div class="body">
+          <div class="cname">AP Psychology</div>
+          <div class="csub">Not added yet</div>
+          <div class="cthis" style="color:var(--ink-soft);font-weight:600">Add when you want it here</div>
+          <div class="cfoot"><span class="ccount">—</span><span class="cgo">Soon</span></div>
+        </div>
+      </a>
+      <a class="classcard soon" href="#" style="--accent:#c0518a">
+        <div class="bar"></div>
+        <div class="body">
+          <div class="cname">Human Anatomy</div>
+          <div class="csub">Not added yet</div>
+          <div class="cthis" style="color:var(--ink-soft);font-weight:600">Add when you want it here</div>
+          <div class="cfoot"><span class="ccount">—</span><span class="cgo">Soon</span></div>
+        </div>
+      </a>
+      <a class="classcard soon" href="#" style="--accent:#c98a1f">
+        <div class="bar"></div>
+        <div class="body">
+          <div class="cname">AP English</div>
+          <div class="csub">Not added yet</div>
+          <div class="cthis" style="color:var(--ink-soft);font-weight:600">Add when you want it here</div>
+          <div class="cfoot"><span class="ccount">—</span><span class="cgo">Soon</span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ OPTION B ============ -->
+  <section class="panel">
+    <div class="panel-label">Option B · One page, sections + weeks</div>
+    <p class="panel-note">Everything on the landing page: each class is a section header, lessons grouped under a <b>week</b> band. Today's layout, extended with weeks. <span class="caution">Gets long</span> once several classes each have several weeks — but nothing is ever more than a scroll away, no extra tap.</p>
+
+    <!-- Algebra 2 section -->
+    <div class="subject">
+      <div class="subject-head">
+        <h2>Algebra 2</h2><span class="count">1 lesson</span>
+      </div>
+      <p class="subject-blurb">Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.</p>
+
+      <div class="week">
+        <div class="week-head">
+          <span class="week-range">Week of Aug 29 – Sep 4</span>
+          <span class="week-theme">Unit 0 · Functions</span>
+          <span class="week-line"></span>
+        </div>
+        <div class="cards">
+          <a class="card" href="#">
+            <div class="topic">Function notation — inputs &amp; outputs</div>
+            <div class="title">The Function Machine</div>
+            <p class="summary">What f(x) really means, one function shown four ways, evaluating step by step, reading values off a graph, and the vertical-line test.</p>
+            <div class="meta">
+              <div class="tags"><span class="tag">functions</span><span class="tag">graphs</span><span class="tag">domain &amp; range</span></div>
+              <span class="open">Open →</span>
+            </div>
+            <div class="date">Aug 28, 2026</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- World History section -->
+    <div class="subject">
+      <div class="subject-head">
+        <h2>World History</h2><span class="count">1 lesson</span>
+      </div>
+      <p class="subject-blurb">The story behind the chapters — causes, people, and why it mattered, not just dates to memorize.</p>
+
+      <div class="week">
+        <div class="week-head">
+          <span class="week-range">Week of Aug 29 – Sep 4</span>
+          <span class="week-theme">Ch. 2 · The First River Civilizations</span>
+          <span class="week-line"></span>
+        </div>
+        <div class="cards">
+          <a class="card" href="#">
+            <div class="topic">Mesopotamia &amp; Egypt</div>
+            <div class="title">Why Rivers Built the First Cities</div>
+            <p class="summary">How the Tigris, Euphrates, and Nile turned farming into surplus, surplus into cities, and cities into writing, law, and kings — a map you can scrub through.</p>
+            <div class="meta">
+              <div class="tags"><span class="tag">Mesopotamia</span><span class="tag">Egypt</span><span class="tag">Ch. 2</span></div>
+              <span class="open">Open →</span>
+            </div>
+            <div class="date">Sample</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty" style="margin-top:22px">…and four more class sections stack below (AP English, AP French, AP Psychology, Human Anatomy) as they're added.</div>
+  </section>
+
+  <!-- ============ OPTION C ============ -->
+  <section class="panel">
+    <div class="panel-label">Option C · A class page (the drill-in)</div>
+    <p class="panel-note">What Kelly sees after tapping <b>Algebra&nbsp;2</b> in Option&nbsp;A. Just this one class, weeks newest-first. This is the natural partner to the class grid — and it's where "by week" really pays off.</p>
+
+    <div class="eyebrow" style="margin-top:8px">Algebra 2</div>
+    <h1 style="font-size:clamp(24px,5vw,34px)">This <em>term</em>, week by week</h1>
+
+    <div class="subject" style="margin-top:14px">
+      <div class="week">
+        <div class="week-head">
+          <span class="week-range">Week of Aug 29 – Sep 4</span>
+          <span class="week-theme">Unit 0 · Functions</span>
+          <span class="week-line"></span>
+        </div>
+        <div class="cards">
+          <a class="card" href="#">
+            <div class="topic">Function notation — inputs &amp; outputs</div>
+            <div class="title">The Function Machine</div>
+            <p class="summary">What f(x) really means, one function shown four ways, evaluating step by step, reading values off a graph, and the vertical-line test.</p>
+            <div class="meta">
+              <div class="tags"><span class="tag">functions</span><span class="tag">graphs</span></div>
+              <span class="open">Open →</span>
+            </div>
+            <div class="date">Aug 28, 2026</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-head">
+          <span class="week-range">Week of Aug 22 – 28</span>
+          <span class="week-theme">Unit 1 · Equations &amp; inequalities</span>
+          <span class="week-line"></span>
+        </div>
+        <div class="empty">Nothing here yet — this is how an empty or upcoming week reads.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">Mockup for Greg · pick a direction and I'll wire it into the real manifest</div>
+</div>
+</body>
+</html>

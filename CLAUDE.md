@@ -1,6 +1,9 @@
 # Study Hub -- CLAUDE.md
-# Version: 0.1
+# Version: 0.2
 # Created: 2026-08-28
+# Updated: 2026-08-30 (v0.2 -- documented the multi-class workshop model:
+#   the hub is the shared delivery surface for N per-class projects, and
+#   each lesson's source of truth is its workshop repo, not this one.)
 # Owner: Greg Stockdale
 # Location: projects/study-hub/CLAUDE.md
 # Loads in: CC (traversal) and CW (harness injection). Self-contained --
@@ -22,6 +25,46 @@ push-to-deploy automation). That shape is routed to Claude Ops
 Architecture for formalization -- see claude-ops/register/routing-notes/
 2026-08-28-architecture-routing-content-hub-project-shape.md. Until it is
 ruled on, this project's protocol lives entirely in this file.
+
+---
+
+## Where Content Comes From (the workshops)
+
+The hub is a SUBJECT-AGNOSTIC STOREFRONT. It does not author lessons -- it
+publishes them. The authoring happens in separate PER-CLASS "workshop"
+projects, one git repo per class, each living beside this one under
+projects/:
+
+  projects/algebra-2/     -- first workshop (live). Tutoring production for
+                             Kelly's Algebra 2: concept briefs, answer keys,
+                             practice sheets, and the interactive lesson.
+  projects/world-history/ -- presumed next; same shape, different subject.
+  projects/<class>/       -- the pattern generalizes to every class.
+
+The presumption: there will be a folder per class, and THIS ONE HUB serves
+all of them. Each workshop is the SOURCE OF TRUTH for its own lessons; the
+copy that lands here is DERIVED. Edit a lesson in its workshop, then
+re-publish to the hub -- never the reverse.
+
+Mapping: one workshop folder == one `subject` object in data/lessons.js.
+  projects/algebra-2/     -> subjects[] entry { id:"algebra-2",    name:"Algebra 2" }
+  projects/world-history/ -> subjects[] entry { id:"world-history", name:"World History" }
+
+Publish path (a workshop lesson -> the live hub):
+  1. Workshop authors a self-contained lesson .html (portability rule below).
+  2. Copy it into lessons/ here. Convention: drop the workshop's date prefix,
+     keep the topic slug -- e.g. workshop's
+     2026-08-28-function-notation-inputs-outputs.html becomes hub's
+     lessons/function-notation-inputs-outputs.html.
+  3. Prepend its entry to the matching subject's `lessons` array in
+     data/lessons.js (newest-first). Add the subject object first if the
+     class is new to the hub.
+  4. Parse-check + deploy (see Deployment). CW copies + edits the manifest;
+     CC deploys.
+
+Workshop-side detail (inputs, output stack, cadence) lives in each workshop's
+own docs -- for Algebra 2, projects/algebra-2/WORKING-APPROACH.md and
+CLAUDE.md. This file owns only the hub side.
 
 ---
 

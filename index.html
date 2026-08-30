@@ -11,61 +11,158 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <div class="eyebrow">Study Hub</div>
-    <h1 id="hdr">Your <em>study</em> hub</h1>
-    <p class="tagline">A place for the stuff class goes too fast on. Open a lesson, drag the graphs, poke at it &mdash; no pressure, no login, just here when you want it.</p>
-  </header>
-  <main id="subjects"></main>
-  <div class="footer" id="foot"></div>
-</div>
+<div class="wrap" id="app"></div>
 
 <script src="data/lessons.js"></script>
 <script>
 (function(){
   var data = window.STUDY_HUB || {subjects:[]};
-  var name = data.student || "";
-  if(name){ document.getElementById("hdr").innerHTML = name + "&rsquo;s <em>study</em> hub"; document.title = name + "'s Study Hub"; }
+  var student = data.student || "";
+  var subjects = data.subjects || [];
+  var app = document.getElementById("app");
 
+  /* ---------- helpers ---------- */
   function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
   function fmtDate(d){ if(!d)return""; var p=d.split("-"); if(p.length!==3)return d;
     var m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     return m[(+p[1])-1]+" "+(+p[2])+", "+p[0]; }
+  function isPlanned(sub){ return sub.status === "planned"; }
+  function weeksOf(sub){ return sub.weeks || []; }
+  function lessonCount(sub){ return weeksOf(sub).reduce(function(n,w){return n+((w.lessons||[]).length);},0); }
+  function newestWeek(sub){ var w=weeksOf(sub); return w.length ? w[0] : null; }
+  function findSubject(id){ for(var i=0;i<subjects.length;i++){ if(subjects[i].id===id) return subjects[i]; } return null; }
+  function setTitle(t){ document.title = t; }
+  function homeTitle(){ return (student? student+"'s " : "") + "Study Hub"; }
 
-  var root=document.getElementById("subjects"), total=0;
-  (data.subjects||[]).forEach(function(sub){
-    var sec=el("section","subject");
-    var head=el("div","subject-head");
-    head.appendChild(el("h2",null,esc(sub.name)));
-    var n=(sub.lessons||[]).length; total+=n;
-    head.appendChild(el("span","count",n+(n===1?" lesson":" lessons")));
-    sec.appendChild(head);
-    if(sub.blurb) sec.appendChild(el("p","subject-blurb",esc(sub.blurb)));
+  /* ---------- lesson card (shared) ---------- */
+  function lessonCard(ls,backId){
+    var a=el("a","card"); a.href=(ls.file||"#")+(backId?"?back="+encodeURIComponent(backId):"");
+    if(ls.topic) a.appendChild(el("div","topic",esc(ls.topic)));
+    a.appendChild(el("div","title",esc(ls.title||"Lesson")));
+    if(ls.summary) a.appendChild(el("p","summary",esc(ls.summary)));
+    var meta=el("div","meta");
+    var tags=el("div","tags");
+    (ls.tags||[]).forEach(function(t){tags.appendChild(el("span","tag",esc(t)));});
+    meta.appendChild(tags);
+    meta.appendChild(el("span","open","Open &rarr;"));
+    a.appendChild(meta);
+    if(ls.date) a.appendChild(el("div","date",fmtDate(ls.date)));
+    return a;
+  }
 
-    if(!n){ sec.appendChild(el("div","empty","More coming soon.")); root.appendChild(sec); return; }
-    var cards=el("div","cards");
-    (sub.lessons||[]).forEach(function(ls){
-      var a=el("a","card"); a.href=ls.file; a.setAttribute("target","_blank"); a.setAttribute("rel","noopener");
-      if(ls.topic) a.appendChild(el("div","topic",esc(ls.topic)));
-      a.appendChild(el("div","title",esc(ls.title||"Lesson")));
-      if(ls.summary) a.appendChild(el("p","summary",esc(ls.summary)));
-      var meta=el("div","meta");
-      var tags=el("div","tags");
-      (ls.tags||[]).forEach(function(t){tags.appendChild(el("span","tag",esc(t)));});
-      meta.appendChild(tags);
-      meta.appendChild(el("span","open","Open &rarr;"));
-      a.appendChild(meta);
-      if(ls.date) a.appendChild(el("div","date",fmtDate(ls.date)));
-      cards.appendChild(a);
+  /* ---------- landing: the class grid ---------- */
+  function renderLanding(){
+    app.innerHTML="";
+    setTitle(homeTitle());
+
+    var head=el("header","top");
+    head.appendChild(el("div","eyebrow","Study Hub"));
+    head.appendChild(el("h1",null,(student? esc(student)+"&rsquo;s " : "")+"<em>study</em> hub"));
+    head.appendChild(el("p","tagline","A place for the stuff class goes too fast on. Pick a class, open a lesson, poke at it &mdash; no pressure, no login, just here when you want it."));
+    app.appendChild(head);
+
+    var grid=el("div","classgrid");
+    subjects.forEach(function(sub){
+      var accent=sub.accent||"#e8623d";
+      if(isPlanned(sub)){
+        var d=el("div","classcard soon"); d.style.setProperty("--accent",accent);
+        d.appendChild(el("div","bar"));
+        var body=el("div","body");
+        body.appendChild(el("div","cname",esc(sub.name||"Class")));
+        body.appendChild(el("div","csub","Not added yet"));
+        body.appendChild(el("div","cthis","<span style='color:var(--ink-soft);font-weight:700'>Coming when you want it here</span>"));
+        var foot=el("div","cfoot");
+        foot.appendChild(el("span","ccount","—"));
+        foot.appendChild(el("span","cgo","Soon"));
+        body.appendChild(foot);
+        d.appendChild(body);
+        grid.appendChild(d);
+        return;
+      }
+      var a=el("a","classcard"); a.href="#"+encodeURIComponent(sub.id); a.style.setProperty("--accent",accent);
+      a.appendChild(el("div","bar"));
+      var body=el("div","body");
+      body.appendChild(el("div","cname",esc(sub.name||"Class")));
+      if(sub.blurb) body.appendChild(el("div","csub",esc(sub.blurb)));
+      var nw=newestWeek(sub);
+      body.appendChild(el("div","cthis", nw && nw.theme ? "This week: <span>"+esc(nw.theme)+"</span>" : "<span style='color:var(--ink-soft);font-weight:700'>Lessons on the way</span>"));
+      var n=lessonCount(sub);
+      var foot=el("div","cfoot");
+      foot.appendChild(el("span","ccount", n+(n===1?" lesson":" lessons")));
+      foot.appendChild(el("span","cgo","Open &rarr;"));
+      body.appendChild(foot);
+      a.appendChild(body);
+      grid.appendChild(a);
     });
-    sec.appendChild(cards);
-    root.appendChild(sec);
-  });
+    app.appendChild(grid);
 
-  if(total===0){ root.appendChild(el("div","empty","Lessons will show up here as they're added.")); }
-  document.getElementById("foot").innerHTML = "Made for you &middot; add-free &middot; bookmark this page";
+    if(!subjects.length){ app.appendChild(el("div","empty","Classes will show up here as they're added.")); }
+
+    var foot=el("div","footer"); foot.innerHTML="Made for you &middot; ad-free &middot; bookmark this page";
+    app.appendChild(foot);
+  }
+
+  /* ---------- class page: weeks + lessons ---------- */
+  function renderClass(sub){
+    app.innerHTML="";
+    var accent=sub.accent||"#e8623d";
+    setTitle((sub.name||"Class")+" &middot; "+homeTitle());
+
+    var back=el("a","backlink","&larr; All classes"); back.href="#";
+    app.appendChild(back);
+
+    var head=el("header","top");
+    head.appendChild(el("div","eyebrow","Study Hub"));
+    var h1=el("h1",null,esc(sub.name||"Class")); app.appendChild(head);
+    head.appendChild(h1);
+    if(sub.blurb) head.appendChild(el("p","tagline",esc(sub.blurb)));
+
+    var weeks=weeksOf(sub);
+    var hasAny=lessonCount(sub)>0;
+    if(!weeks.length || !hasAny){
+      app.appendChild(el("div","empty","Lessons are on the way for this class. Check back soon."));
+    } else {
+      var body=el("div","subject");
+      weeks.forEach(function(w){
+        var wrap=el("div","week");
+        var wh=el("div","week-head");
+        if(w.range) wh.appendChild(el("span","week-range",esc(w.range)));
+        if(w.theme) wh.appendChild(el("span","week-theme",esc(w.theme)));
+        wh.appendChild(el("span","week-line"));
+        wrap.appendChild(wh);
+        var lessons=w.lessons||[];
+        if(!lessons.length){
+          wrap.appendChild(el("div","empty","Nothing here yet — coming up."));
+        } else {
+          var cards=el("div","cards");
+          lessons.forEach(function(ls){ cards.appendChild(lessonCard(ls,sub.id)); });
+          wrap.appendChild(cards);
+        }
+        body.appendChild(wrap);
+      });
+      app.appendChild(body);
+    }
+
+    var foot=el("div","footer"); foot.innerHTML="Made for you &middot; ad-free &middot; bookmark this page";
+    app.appendChild(foot);
+    // tint the week bands + back link to this class's accent
+    app.style.setProperty("--accent",accent);
+  }
+
+  /* ---------- router ---------- */
+  function route(){
+    var id="";
+    try{ id=decodeURIComponent((location.hash||"").replace(/^#/,"")); }catch(e){ id=""; }
+    var sub = id ? findSubject(id) : null;
+    if(sub && !isPlanned(sub)){ renderClass(sub); }
+    else { renderLanding(); }
+    window.scrollTo(0,0);
+  }
+
+  window.addEventListener("hashchange", route);
+  if(document.readyState==="loading"){ document.addEventListener("DOMContentLoaded", route); }
+  else { route(); }
 })();
 </script>
 </body>

@@ -50,6 +50,43 @@ h1 em{font-style:italic;color:var(--coral)}
 
 .empty{background:var(--paper2);border:1.5px dashed var(--line);border-radius:14px;padding:18px;color:var(--ink-soft)}
 
+/* ---- class grid (landing / Option A) ---- */
+.classgrid{display:grid;grid-template-columns:1fr;gap:15px;margin-top:22px}
+@media(min-width:560px){.classgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:820px){.classgrid{grid-template-columns:1fr 1fr 1fr}}
+.classcard{display:block;text-decoration:none;color:inherit;background:var(--paper2);
+  border:1.5px solid var(--line);border-radius:18px;padding:0;overflow:hidden;
+  box-shadow:var(--shadow);transition:transform .12s ease,border-color .12s ease}
+.classcard:hover,.classcard:focus-visible{transform:translateY(-3px);border-color:var(--accent,var(--coral));outline:none}
+.classcard:focus-visible{box-shadow:0 0 0 3px var(--coral-soft),var(--shadow)}
+.classcard .bar{height:7px;background:var(--accent,var(--coral))}
+.classcard .body{padding:15px 16px 16px}
+.classcard .cname{font-family:var(--disp);font-weight:700;font-size:21px;line-height:1.1;margin:2px 0 2px}
+.classcard .csub{font-size:13px;color:var(--ink-soft);margin:0 0 12px}
+.classcard .cthis{font-size:13.5px;color:var(--ink);font-weight:700}
+.classcard .cthis span{color:var(--accent,var(--coral))}
+.classcard .cfoot{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.classcard .ccount{font-size:12.5px;font-weight:800;color:var(--ink-soft)}
+.classcard .cgo{font-weight:800;font-size:13.5px;color:var(--accent,var(--coral))}
+.classcard.soon{opacity:.72;border-style:dashed;cursor:default}
+.classcard.soon .bar{background:var(--line)}
+.classcard.soon .cgo{color:var(--ink-soft)}
+
+/* ---- week groups (class page / Option C) ---- */
+.backlink{display:inline-block;text-decoration:none;font-weight:800;font-size:13.5px;color:var(--ink-soft);margin:2px 0 4px}
+.backlink:hover,.backlink:focus-visible{color:var(--accent,var(--coral));outline:none}
+.week{margin:22px 0 6px}
+.week-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.week-range{font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;
+  color:var(--accent,var(--coral));background:var(--coral-soft);
+  background:color-mix(in srgb,var(--accent,var(--coral)) 14%,transparent);
+  padding:3px 10px;border-radius:20px}
+.week-theme{font-family:var(--disp);font-weight:600;font-size:17px;color:var(--ink)}
+.week-line{flex:1;min-width:40px;height:1px;background:var(--line)}
+
 .footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13.5px;text-align:center}
 
-@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover,.card:focus-visible{transform:none}}
+@media(prefers-reduced-motion:reduce){
+  .card,.classcard{transition:none}
+  .card:hover,.card:focus-visible,.classcard:hover,.classcard:focus-visible{transform:none}
+}
