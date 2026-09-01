@@ -35,7 +35,9 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-09-01",
       subject: "world-history", subjectName: "World History",
-      what: "Quiz on Chapters 1 & 2"
+      what: "Quiz on Chapters 1 & 2",
+      help: "Study guides + practice quizzes (Ch. 1 & 2)",
+      helpFile: "lessons/early-humans-study-quiz.html"
     },
     {
       day: "Tue", date: "2026-09-01",

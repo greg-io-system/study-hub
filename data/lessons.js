@@ -66,7 +66,36 @@ window.STUDY_HUB = {
       name: "World History",
       accent: "#178a68",
       blurb: "The story behind the chapters — causes, people, and why it mattered, not just dates to memorize.",
-      weeks: []
+      weeks: [
+        {
+          range: "Aug 31 – Sep 4",
+          theme: "Ch. 2 · Early Humans",
+          lessons: [
+            {
+              title: "Early Humans — Study Guide & Practice Quiz",
+              topic: "Evolution, migration, Paleolithic life, the Neolithic Revolution",
+              file: "lessons/early-humans-study-quiz.html",
+              date: "2026-08-31",
+              summary: "The ancestor timeline, why humans moved, hunter-gatherer life, and the farming trade-off — then a 20-question quiz with click-to-reveal answers.",
+              tags: ["study guide", "practice quiz"]
+            }
+          ]
+        },
+        {
+          range: "Aug 31 – Sep 4",
+          theme: "Ch. 1 · Understanding the Past",
+          lessons: [
+            {
+              title: "Understanding the Past — Study Guide & Practice Quiz",
+              topic: "How historians work: sources, causation, interpretation",
+              file: "lessons/understanding-the-past-study-quiz.html",
+              date: "2026-08-31",
+              summary: "Primary vs. secondary sources, levels of causation, and how interpretation works — then a 20-question quiz with click-to-reveal answers.",
+              tags: ["study guide", "practice quiz"]
+            }
+          ]
+        }
+      ]
     }
   ]
 };
