@@ -14,6 +14,7 @@
 <div class="wrap" id="app"></div>
 
 <script src="data/lessons.js"></script>
+<script src="data/week.js"></script>
 <script>
 (function(){
   var data = window.STUDY_HUB || {subjects:[]};
@@ -83,6 +84,58 @@
     return c;
   }
 
+  /* ---------- "This Week" panel (data/week.js; hides if stale) ---------- */
+  function renderWeek(){
+    var wk = window.STUDY_WEEK;
+    if(!wk || !wk.updated || !(wk.items||[]).length) return;
+    // staleness guard: a wrong week is worse than none
+    var age = (Date.now() - new Date(wk.updated+"T12:00:00").getTime())/86400000;
+    if(isNaN(age) || age > 7) return;
+
+    function accentOf(id){ var s=id?findSubject(id):null; return (s&&s.accent)||"var(--ink-soft)"; }
+
+    var panel=el("section","week-panel");
+    var wh=el("div","wp-head");
+    wh.appendChild(el("span","wp-title","This week"));
+    if(wk.label) wh.appendChild(el("span","wp-range",esc(wk.label)));
+    panel.appendChild(wh);
+
+    var list=el("div","wp-list");
+    var lastDay="";
+    wk.items.forEach(function(it){
+      var row=el("div","wp-row");
+      var d=el("span","wp-day", it.day===lastDay ? "" : esc(it.day||""));
+      lastDay=it.day;
+      row.appendChild(d);
+      var dot=el("span","wp-dot"); dot.style.background=accentOf(it.subject);
+      row.appendChild(dot);
+      var body=el("div","wp-body");
+      var line=el("div","wp-what");
+      line.innerHTML="<b>"+esc(it.subjectName||"")+"</b> &middot; "+esc(it.what||"");
+      body.appendChild(line);
+      if(it.helpFile){
+        var a=el("a","wp-help"); a.href=withBack(it.helpFile, it.subject||"");
+        a.innerHTML=esc(it.help||"Open the materials")+" &rarr;";
+        body.appendChild(a);
+      } else if(it.help){
+        body.appendChild(el("div","wp-help-plain",esc(it.help)));
+      }
+      row.appendChild(body);
+      list.appendChild(row);
+    });
+    panel.appendChild(list);
+
+    if((wk.ahead||[]).length){
+      var ah=el("div","wp-ahead");
+      var bits=wk.ahead.map(function(a){
+        return "<b>"+esc(a.subjectName||"")+"</b> "+esc(a.what||"")+" ("+esc(fmtDate(a.date).replace(/,\s*\d{4}$/,""))+")";
+      });
+      ah.innerHTML="Coming up: "+bits.join(" &middot; ");
+      panel.appendChild(ah);
+    }
+    app.appendChild(panel);
+  }
+
   /* ---------- landing: the class grid ---------- */
   function renderLanding(){
     app.innerHTML="";
@@ -93,6 +146,8 @@
     head.appendChild(el("h1",null,(student? esc(student)+"&rsquo;s " : "")+"<em>study</em> hub"));
     head.appendChild(el("p","tagline","A place for the stuff class goes too fast on. Pick a class, open a lesson, poke at it &mdash; no pressure, no login, just here when you want it."));
     app.appendChild(head);
+
+    renderWeek();
 
     var grid=el("div","classgrid");
     subjects.forEach(function(sub){

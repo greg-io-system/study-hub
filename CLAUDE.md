@@ -32,23 +32,27 @@ ruled on, this project's protocol lives entirely in this file.
 
 The hub is a SUBJECT-AGNOSTIC STOREFRONT. It does not author lessons -- it
 publishes them. The authoring happens in separate PER-CLASS "workshop"
-projects, one git repo per class, each living beside this one under
-projects/:
+projects, one git repo per class, all living together under a Golden High
+School container -- projects/GHS/ (mirrors the Drive "Golden High School"
+folder). study-hub stays a top-level sibling of GHS, not inside it:
 
-  projects/algebra-2/     -- first workshop (live). Tutoring production for
-                             Kelly's Algebra 2: concept briefs, answer keys,
-                             practice sheets, and the interactive lesson.
-  projects/world-history/ -- presumed next; same shape, different subject.
-  projects/<class>/       -- the pattern generalizes to every class.
+  projects/GHS/algebra-2/      -- first workshop (live). Tutoring production
+                                  for Kelly's Algebra 2: concept briefs,
+                                  answer keys, practice sheets, lessons.
+  projects/GHS/world-history/  -- AP World History workshop (scaffolded;
+                                  OpenStax Vol. 1 course map seeded).
+  projects/GHS/<class>/        -- the 6 courses: algebra-2, world-history,
+                                  ap-english, ap-french, ap-psychology,
+                                  human-anatomy. Pattern generalizes.
 
-The presumption: there will be a folder per class, and THIS ONE HUB serves
-all of them. Each workshop is the SOURCE OF TRUTH for its own lessons; the
-copy that lands here is DERIVED. Edit a lesson in its workshop, then
-re-publish to the hub -- never the reverse.
+The model: one GHS folder per class, and THIS ONE HUB serves all of them.
+Each workshop is the SOURCE OF TRUTH for its own lessons; the copy that lands
+here is DERIVED. Edit a lesson in its workshop, then re-publish to the hub --
+never the reverse.
 
 Mapping: one workshop folder == one `subject` object in data/lessons.js.
-  projects/algebra-2/     -> subjects[] entry { id:"algebra-2",    name:"Algebra 2" }
-  projects/world-history/ -> subjects[] entry { id:"world-history", name:"World History" }
+  projects/GHS/algebra-2/     -> subjects[] { id:"algebra-2",    name:"Algebra 2" }
+  projects/GHS/world-history/ -> subjects[] { id:"world-history", name:"World History" }
 
 Publish path (a workshop lesson -> the live hub):
   1. Workshop authors a self-contained lesson .html (portability rule below).
@@ -63,7 +67,7 @@ Publish path (a workshop lesson -> the live hub):
      CC deploys.
 
 Workshop-side detail (inputs, output stack, cadence) lives in each workshop's
-own docs -- for Algebra 2, projects/algebra-2/WORKING-APPROACH.md and
+own docs -- for Algebra 2, projects/GHS/algebra-2/WORKING-APPROACH.md and
 CLAUDE.md. This file owns only the hub side.
 
 ---
