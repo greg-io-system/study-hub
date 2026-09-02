@@ -12,37 +12,25 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-08-31",
+  updated: "2026-09-02",
   label: "Week of Aug 31 – Sep 4",
   items: [
     {
-      day: "Mon", date: "2026-08-31",
-      subject: null, subjectName: "AP Psychology",
-      what: "AMSCO reading pp. 31–51 & 65–68 — due tonight 11:59pm"
+      day: "Wed", date: "2026-09-02",
+      subject: "world-history", subjectName: "World History",
+      what: "First Civilizations assignment — due tonight 11:59pm"
     },
     {
-      day: "Mon", date: "2026-08-31",
+      day: "Wed", date: "2026-09-02",
       subject: "algebra-2", subjectName: "Algebra 2",
-      what: "WS 1.4 — due tonight 11:59pm",
+      what: "WS 1.2 Evaluating Functions & Domain/Range + 1.2 Practice — due tonight 11:59pm",
       help: "Function Machine lesson + practice",
       helpFile: "lessons/function-notation-inputs-outputs.html"
     },
     {
-      day: "Tue", date: "2026-09-01",
-      subject: "world-history", subjectName: "World History",
-      what: "OpenStax 2.1 & 2.2 written work — due at start of class"
-    },
-    {
-      day: "Tue", date: "2026-09-01",
-      subject: "world-history", subjectName: "World History",
-      what: "Quiz on Chapters 1 & 2",
-      help: "Study guides + practice quizzes (Ch. 1 & 2)",
-      helpFile: "lessons/early-humans-study-quiz.html"
-    },
-    {
-      day: "Tue", date: "2026-09-01",
-      subject: null, subjectName: "AP Psychology",
-      what: "Quiz on the AMSCO reading (pp. 31–51, 65–68)"
+      day: "Wed", date: "2026-09-02",
+      subject: null, subjectName: "Human Anatomy",
+      what: "Terminology Quiz — due tonight 11:59pm"
     }
   ],
   ahead: [
