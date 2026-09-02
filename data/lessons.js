@@ -96,6 +96,20 @@ window.STUDY_HUB = {
           ]
         }
       ]
+    },
+    {
+      id: "human-anatomy",
+      name: "Human Anatomy",
+      accent: "#b5445a",
+      blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
+      status: "planned"
+    },
+    {
+      id: "ap-psychology",
+      name: "AP Psychology",
+      accent: "#6d5ab5",
+      blurb: "Why people think and act the way they do — the approaches, the research methods, and the big ideas behind them.",
+      status: "planned"
     }
   ]
 };
