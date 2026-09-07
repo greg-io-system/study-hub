@@ -102,7 +102,22 @@ window.STUDY_HUB = {
       name: "Human Anatomy",
       accent: "#b5445a",
       blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
-      status: "planned"
+      weeks: [
+        {
+          range: "Sep 7 – Sep 11",
+          theme: "Unit 1 · Intro & Tissues",
+          lessons: [
+            {
+              title: "Unit 1 Exam Prep — Study Guide & Practice Quiz",
+              topic: "Anatomy vs. physiology, homeostasis & feedback, directional terms, cells, the four tissues",
+              file: "lessons/hap-unit-1-intro-tissues-study-quiz.html",
+              date: "2026-09-07",
+              summary: "Everything on the Unit 1 review sheet in one page — the big ideas explained plainly, the common traps, then a 28-question quiz with click-to-reveal answers (including the directional-terms drill from class).",
+              tags: ["exam prep", "study guide", "practice quiz"]
+            }
+          ]
+        }
+      ]
     },
     {
       id: "ap-psychology",

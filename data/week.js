@@ -27,8 +27,10 @@ window.STUDY_WEEK = {
     },
     {
       day: "Fri", date: "2026-09-11",
-      subject: null, subjectName: "Human Anatomy",
-      what: "Unit 1 Exam (Intro & Tissues) — Friday. The Unit 1 Exam Review doc in Classroom is the study source"
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Unit 1 Exam (Intro & Tissues) — Friday",
+      help: "Exam-prep study guide + practice quiz",
+      helpFile: "lessons/hap-unit-1-intro-tissues-study-quiz.html"
     }
   ],
   ahead: [
