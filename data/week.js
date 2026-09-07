@@ -22,8 +22,10 @@ window.STUDY_WEEK = {
     },
     {
       day: "Wed", date: "2026-09-09",
-      subject: null, subjectName: "Human Anatomy",
-      what: "Tissue Box Project — due Wednesday 8:00am"
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Tissue Box Project — due Wednesday 8:00am",
+      help: "Project guide — rubric decoded + slide map",
+      helpFile: "lessons/hap-tissue-box-project-guide.html"
     },
     {
       day: "Fri", date: "2026-09-11",

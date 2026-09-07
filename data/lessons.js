@@ -119,6 +119,19 @@ window.STUDY_HUB = {
                 { kind: "link", label: "Class slides (opens in Google)", url: "https://docs.google.com/presentation/d/16BiH9YlzvMtYfgOBeMjjxFQO1n1g1IslkwMUuIwOxBE/" },
                 { kind: "link", label: "Mrs. Kalec's exam review", url: "https://docs.google.com/document/d/1VbZ3psGS1S5t801TrilsQqm_CreC99YOYIF_HmIpjts/" }
               ]
+            },
+            {
+              title: "Tissue Box Project — Guide",
+              topic: "The rubric decoded, where everything is in the slides, and a finish-line check",
+              file: "lessons/hap-tissue-box-project-guide.html",
+              date: "2026-09-07",
+              summary: "Due Wednesday 8am. What each rubric row actually asks for (structures vs. subtypes vs. characteristics), slide numbers for every answer, picture tips, and a final check before you turn it in.",
+              tags: ["project", "assignment help"],
+              materials: [
+                { kind: "lesson", label: "Project guide", file: "lessons/hap-tissue-box-project-guide.html" },
+                { kind: "link", label: "The assignment in Classroom", url: "https://classroom.google.com/c/ODcyMDk2OTg5Nzk4/a/ODcyNDkzNTE5NzUz/details" },
+                { kind: "link", label: "Class slides (opens in Google)", url: "https://docs.google.com/presentation/d/16BiH9YlzvMtYfgOBeMjjxFQO1n1g1IslkwMUuIwOxBE/" }
+              ]
             }
           ]
         }
