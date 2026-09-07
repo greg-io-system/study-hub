@@ -12,31 +12,29 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-09-02",
-  label: "Week of Aug 31 – Sep 4",
+  updated: "2026-09-07",
+  label: "Week of Sep 7 – Sep 11",
   items: [
     {
-      day: "Wed", date: "2026-09-02",
-      subject: "world-history", subjectName: "World History",
-      what: "First Civilizations assignment — due tonight 11:59pm"
+      day: "Tue", date: "2026-09-08",
+      subject: null, subjectName: "AP Psychology",
+      what: "AMSCO reading pp. 53–58 & 71–98 — due Tuesday"
     },
     {
-      day: "Wed", date: "2026-09-02",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "WS 1.2 Evaluating Functions & Domain/Range + 1.2 Practice — due tonight 11:59pm",
-      help: "Function Machine lesson + practice",
-      helpFile: "lessons/function-notation-inputs-outputs.html"
-    },
-    {
-      day: "Wed", date: "2026-09-02",
+      day: "Wed", date: "2026-09-09",
       subject: null, subjectName: "Human Anatomy",
-      what: "Terminology Quiz — due tonight 11:59pm"
+      what: "Tissue Box Project — due Wednesday 8:00am"
+    },
+    {
+      day: "Fri", date: "2026-09-11",
+      subject: null, subjectName: "Human Anatomy",
+      what: "Unit 1 Exam (Intro & Tissues) — Friday. The Unit 1 Exam Review doc in Classroom is the study source"
     }
   ],
   ahead: [
-    { date: "2026-09-08", subjectName: "AP Psychology",
-      what: "AMSCO reading pp. 55–58 & 71–98 due" },
-    { date: "2026-09-09", subjectName: "Human Anatomy",
-      what: "Tissue Box Project due 8:00am" }
+    { date: "2026-09-17", subjectName: "French",
+      what: "Optional Passé Composé practice due Thu Sep 17" },
+    { date: "2026-09-18", subjectName: "French",
+      what: "Four items due Fri Sep 18, 10:00am — reflexive verbs, reflexives in the passé composé, passé composé with être, futur proche" }
   ]
 };
