@@ -116,6 +116,13 @@ Full detail: DEPLOY.md.
   only allowed remote).
 - To add a lesson: drop the self-contained .html into lessons/, then prepend
   its entry to the matching subject's `lessons` array in data/lessons.js.
+- EXTERNAL CLASS MATERIALS (added 2026-09-07): a lesson's `materials` entry
+  may carry `url` instead of `file` (with `kind:"link"`). It renders as a
+  material chip that opens the ORIGINAL Google Doc/Slides/Drive-PDF in a new
+  tab, behind its own permissions (Kelly's school login). This is the ONLY
+  sanctioned way to surface teacher-authored material on the hub -- never
+  copy teacher files into this public repo (copyright + the personal-data
+  rule both forbid it). Nothing external is hosted here.
 
 BEFORE ANY DEPLOY: run `node --check data/lessons.js`. A broken manifest
 renders the hub blank (it is the JS source of truth). /study-hub-deploy does

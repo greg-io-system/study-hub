@@ -73,7 +73,13 @@
     var row=el("div","mrow");
     mats.forEach(function(mat){
       var link=el("a","mlink"+(mat.kind==="lesson"?" primary":""));
-      link.href=withBack(mat.file,backId);
+      if(mat.url){
+        // External class material (Google Doc/Slides/Drive PDF etc.):
+        // opens the original behind its own permissions; nothing hosted here.
+        link.href=mat.url; link.target="_blank"; link.rel="noopener";
+      }else{
+        link.href=withBack(mat.file,backId);
+      }
       link.appendChild(el("span","dot d-"+esc(mat.kind||"lesson")));
       link.appendChild(document.createTextNode(mat.label||mat.kind||"Open"));
       row.appendChild(link);

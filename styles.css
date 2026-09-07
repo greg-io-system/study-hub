@@ -95,6 +95,7 @@ h1 em{font-style:italic;color:var(--coral)}
 .mlink .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
 .d-lesson{background:var(--coral)} .d-examples{background:var(--teal)}
 .d-practice{background:#3f6fb0} .d-answers{background:#8256b8}
+.d-link{background:#c9a227}
 
 .footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:13.5px;text-align:center}
 
