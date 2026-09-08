@@ -138,6 +138,32 @@ window.STUDY_HUB = {
       ]
     },
     {
+      id: "ap-english",
+      name: "AP English",
+      accent: "#2f6fa8",
+      blurb: "Reading like a writer — what an author is doing, how they're doing it, and how to say so on paper.",
+      weeks: [
+        {
+          range: "Sep 7 – Sep 11",
+          theme: "Rhetorical analysis",
+          lessons: [
+            {
+              title: "Rhetorical Précis — the 4-sentence formula",
+              topic: "For the smartphone article — what each sentence has to do, with a worked example",
+              file: "lessons/english-rhetorical-precis-guide.html",
+              date: "2026-09-07",
+              summary: "Each of the four sentences decoded (claim, support, purpose, audience) with sentence frames and a verb bank, a full example précis on a different Atlantic essay, and questions to find each piece in your article.",
+              tags: ["assignment help", "rhetorical précis"],
+              materials: [
+                { kind: "lesson", label: "Précis guide", file: "lessons/english-rhetorical-precis-guide.html" },
+                { kind: "link", label: "The article (opens in Google)", url: "https://docs.google.com/document/d/16CGhArEF1lb9_qwDiq0h4-DFLilRN4uBjoeaKdscq3M/" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       id: "ap-psychology",
       name: "AP Psychology",
       accent: "#6d5ab5",
