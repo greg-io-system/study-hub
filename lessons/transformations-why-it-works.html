@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformations — Why It Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+    --line:#e4dcc8; --grid:#ece3cf;
+    --coral:#e8623d; --coral-soft:#fbe7de;
+    --teal:#178a68; --teal-soft:#d8efe6;
+    --gold:#e0a324; --gold-soft:#f8ecca;
+    --navy:#2f5aa8; --navy-soft:#e0e8f6;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,'Times New Roman',serif;
+    --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.68;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px;background-position:-1px -1px;}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{text-align:center;padding:30px 20px 18px}
+  .eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral)}
+  h1{font-family:var(--disp);font-weight:600;font-size:clamp(30px,6vw,48px);line-height:1.04;margin:.26em 0 .16em}
+  h1 em{font-style:italic;color:var(--coral)}
+  .sub{font-size:17px;color:var(--ink-soft);max-width:600px;margin:0 auto}
+  section{background:var(--paper2);border:1.5px solid var(--line);border-radius:20px;padding:24px 26px 26px;margin:18px 0;box-shadow:var(--shadow)}
+  .tag{display:inline-block;font-family:var(--disp);font-weight:700;font-size:13px;background:var(--ink);color:var(--paper);border-radius:999px;padding:3px 13px;margin-bottom:8px}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(22px,3.6vw,30px);margin:.1em 0 .35em;line-height:1.12}
+  h2 .emoji{font-style:normal}
+  p{margin:.7em 0}
+  .lead{font-size:18px}
+  .big{font-size:19px;font-weight:700}
+  .muted{color:var(--ink-soft)}
+  .k{color:var(--coral);font-weight:800}.k2{color:var(--teal);font-weight:800}.k3{color:var(--navy);font-weight:800}
+  code{background:#f1ead8;border-radius:5px;padding:1px 6px;font-variant-numeric:tabular-nums}
+  .meta{border-left:4px solid var(--teal);background:var(--teal-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .meta b{color:#0d5c42}
+  .aha{border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .aha b{color:#8a6410}
+  .pull{font-family:var(--disp);font-weight:600;font-size:clamp(20px,4vw,25px);text-align:center;color:var(--coral);margin:14px 0;line-height:1.25}
+  .footer{margin-top:38px;color:var(--ink-soft);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Algebra 2 · Transformations</div>
+    <h1>Why It <em>Works</em></h1>
+    <p class="sub">Not more formulas — the picture behind them. Read this once and the worksheet stops being memorization and starts being obvious.</p>
+  </header>
+
+  <section>
+    <span class="tag">The one idea</span>
+    <h2><span class="emoji">📌</span> A function is a rubber stamp</h2>
+    <p class="lead">Here's the whole secret: <b>transformations never invent a new shape.</b> A parabola is always a parabola; a V is always a V. You already own the shape. All the equation is doing is telling you <b>where to press the stamp and how hard</b>.</p>
+    <p>The parent function — plain <code>x²</code>, <code>|x|</code>, <code>√x</code>, <code>x</code> — is the stamp itself, pressed dead-center at the origin. Then three knobs move and resize that stamp:</p>
+    <p class="pull"><span class="k3">k</span> slides it up/down · <span class="k2">h</span> slides it left/right · <span class="k">a</span> stretches or flips it</p>
+    <p>That's it. The rest of this page is just <em>why each knob does what it does</em> — so you never have to memorize the rules, you can rebuild them.</p>
+  </section>
+
+  <section>
+    <span class="tag">The easy knob</span>
+    <h2><span class="emoji">↕️</span> k is an elevator</h2>
+    <p><code>+ k</code> at the very end runs the machine first, then lifts <b>every single output</b> by k. The whole graph rides an elevator up (if k is positive) or down (if k is negative).</p>
+    <p>Nothing subtle here — this is the honest knob. <code>+3</code> means up 3. It means what it says <b>because it happens last, to the answer</b>. Hold that thought: <em>things that happen to the answer are vertical and honest.</em> We'll use it in a second.</p>
+  </section>
+
+  <section>
+    <span class="tag">The loud knob</span>
+    <h2><span class="emoji">🔊</span> a is a volume knob — and a mirror</h2>
+    <p>Multiplying the output by <span class="k">a</span> exaggerates it. Turn it past 1 and every height gets <b>louder</b> — the parabola shoots up steeper, the V gets sharper. Turn it below 1 (like <code>0.5</code>) and everything gets <b>quieter</b> — the shape flattens out.</p>
+    <p>And a <b>negative a</b> is a mirror laid on the x-axis. Every point that was above flips to the same distance below. An upside-down parabola isn't a new rule — it's the same parabola with <code>−1</code> flipping it over the water line.</p>
+    <p class="muted">Notice: a multiplies the <em>output</em> too, so like the elevator it's a <b>vertical</b> effect. It changes how tall and which way up — never left or right.</p>
+  </section>
+
+  <section>
+    <span class="tag">The famous mystery</span>
+    <h2><span class="emoji">🏃</span> Why does (x − 3) move RIGHT?</h2>
+    <p class="big">This is the one that makes everybody feel like math is lying to them. It isn't. Here's the honest reason.</p>
+    <p>Every one of these shapes has a <b>landmark</b> — the vertex of a parabola, the tip of a V, the start of a square root. The parent hits its landmark when the <b>inside equals zero</b>. Plain <code>x²</code> hits bottom at x = 0, because that's when the inside (just <code>x</code>) is 0.</p>
+    <p>Now feed the machine <code>(x − 3)</code>. It <em>still</em> wants its inside to be zero to hit the landmark. But now the inside is only zero when <b>x = 3</b>. So the landmark doesn't happen until you've walked out to x = 3 — three steps to the <b>right</b>.</p>
+    <div class="aha"><b>The runner picture:</b> imagine the graph is a runner who started 3 meters <em>behind</em> the start line. To watch them cross the line, you look further down the track — to the right. <code>x − 3</code> is a runner who's running late, so the whole picture shifts right to catch up with them.</div>
+    <p>So the sign isn't backwards at all. You're solving <code>inside = 0</code>, and <code>x − 3 = 0</code> gives <code>x = 3</code>. The <b>minus makes a plus</b> when you solve it. <code>x + 4 = 0</code> gives <code>x = −4</code> → left 4. Same logic every time.</p>
+    <div class="meta"><b>The pattern under all of it:</b> anything <b>inside</b> the parentheses acts on your <em>input</em> — it happens <b>before</b> the machine runs, it's <b>horizontal</b>, and it feels backwards because you have to undo it (solve for x). Anything <b>outside</b> acts on your <em>output</em> — it happens <b>after</b>, it's <b>vertical</b>, and it's honest. Inside vs outside. Before vs after. That single split explains every transformation you'll ever see.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Domain &amp; range, felt not memorized</span>
+    <h2><span class="emoji">🧱</span> Where the graph is allowed to live</h2>
+    <p><b>Why a square root has a wall.</b> You <em>cannot</em> take the square root of a negative number — the machine literally jams. So <code>√(x − 3)</code> refuses to produce anything until the inside stops being negative, i.e. until x reaches 3. That's not a domain rule to memorize; it's the machine breaking to the left of its start point. The wall is at <b>x = h</b> for the same reason the landmark was.</p>
+    <p><b>Why range flips with a.</b> The landmark is the shape's <b>resting floor</b>. A right-side-up parabola or V sits on its vertex and has nowhere to go but up → the outputs start at k and climb. Flip it with a negative a and that floor becomes a <b>ceiling</b> — now it hangs down from k. So "opens up → <code>[k, ∞)</code>, opens down → <code>(−∞, k]</code>" isn't two rules; it's one picture and which way it faces.</p>
+  </section>
+
+  <section>
+    <span class="tag">So what</span>
+    <h2>The worksheet, re-read</h2>
+    <p>When a problem says <code>f(x) = −2(x − 1)² + 3</code>, you're not decoding a formula. You're reading a sentence: <em>"take the parabola stamp, press it at (1, 3), turn the volume up to 2, and flip it upside-down."</em></p>
+    <p>Every blank on the sheet is just describing that press:</p>
+    <ul>
+      <li><b>Parent</b> = which stamp.</li>
+      <li><b>Vertex / start</b> = where you pressed it → (h, k).</li>
+      <li><b>Transformations</b> = louder? flipped? which way slid?</li>
+      <li><b>Domain / range</b> = where the shape is allowed to live.</li>
+    </ul>
+    <p class="pull">Read the sentence. Press the stamp. Fill the blanks.</p>
+    <div class="aha"><b>Now go play:</b> open the <b>Explorer</b> lesson and drag the knobs while you keep this page's pictures in mind. When the graph moves the way the story says it should, it's yours for good.</div>
+  </section>
+
+  <div class="footer">Made for you · Algebra 2 workshop · ad-free</div>
+</div>
+
+<script>
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
+    a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

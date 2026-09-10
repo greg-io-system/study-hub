@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformations — Worked Examples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+    --line:#e4dcc8; --grid:#ece3cf;
+    --coral:#e8623d; --coral-soft:#fbe7de;
+    --teal:#178a68; --teal-soft:#d8efe6;
+    --gold:#e0a324; --gold-soft:#f8ecca;
+    --navy:#2f5aa8; --navy-soft:#e0e8f6;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,'Times New Roman',serif;
+    --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.65;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px;background-position:-1px -1px;}
+  .wrap{max-width:820px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{text-align:center;padding:30px 20px 20px}
+  .eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral)}
+  h1{font-family:var(--disp);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.05;margin:.26em 0 .16em}
+  h1 em{font-style:italic;color:var(--coral)}
+  .sub{font-size:17px;color:var(--ink-soft);max-width:600px;margin:0 auto}
+  section{background:var(--paper2);border:1.5px solid var(--line);border-radius:20px;padding:22px 24px 24px;margin:18px 0;box-shadow:var(--shadow)}
+  .tag{display:inline-block;font-family:var(--disp);font-weight:700;font-size:13px;background:var(--ink);color:var(--paper);border-radius:999px;padding:3px 13px;margin-bottom:6px}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(21px,3.4vw,28px);margin:.1em 0 .3em;line-height:1.12}
+  h3{font-weight:800;font-size:16px;margin:1.1em 0 .3em}
+  p{margin:.55em 0}
+  .lead{font-size:18px}
+  .muted{color:var(--ink-soft)}
+  .tmpl{text-align:center;font-family:var(--disp);font-weight:700;font-size:clamp(22px,5vw,30px);margin:6px 0 2px}
+  .tmpl .a{color:var(--coral)} .tmpl .h{color:var(--teal)} .tmpl .kk{color:var(--navy)}
+  .k{color:var(--coral);font-weight:800}.k2{color:var(--teal);font-weight:800}.k3{color:var(--navy);font-weight:800}
+  code{background:#f1ead8;border-radius:5px;padding:1px 6px;font-variant-numeric:tabular-nums}
+  table{border-collapse:collapse;width:100%;font-size:15px;margin:.5em 0}
+  th,td{border:1.5px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:#f6e9ec}
+  .callout{border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .callout b{color:#8a6410}
+  .ex{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0}
+  .ex .fn{font-family:var(--disp);font-weight:700;font-size:20px;text-align:center;margin:.1em 0 .5em}
+  ol.steps{margin:.4em 0;padding-left:22px}
+  ol.steps li{margin:.3em 0}
+  .frame{background:var(--navy-soft);border-radius:12px;padding:14px 16px;margin:.6em 0;font-variant-numeric:tabular-nums}
+  .footer{margin-top:38px;color:var(--ink-soft);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Algebra 2 · Transformations</div>
+    <h1>Worked <em>Examples</em></h1>
+    <p class="sub">One example fully solved for each parent family — copy the <b>method</b>, not the answers. Then a blank frame to run your own worksheet through.</p>
+  </header>
+
+  <section>
+    <span class="tag">The template</span>
+    <h2>Everything fits this</h2>
+    <p class="tmpl">f(x) = <span class="a">a</span>·P(x − <span class="h">h</span>) + <span class="kk">k</span></p>
+    <table>
+      <tr><th>Knob</th><th>Does</th><th>Catch</th></tr>
+      <tr><td><span class="k">a</span></td><td>stretch (|a|&gt;1) / squish (|a|&lt;1) / <b>flip if negative</b></td><td>never moves left/right</td></tr>
+      <tr><td><span class="k2">h</span></td><td>left / right</td><td><b>backwards:</b> <code>(x−3)</code> → right 3; <code>(x+4)</code> → left 4</td></tr>
+      <tr><td><span class="k3">k</span></td><td>up / down</td><td>honest — sign means what it says</td></tr>
+    </table>
+    <h3>Reading the blanks off</h3>
+    <table>
+      <tr><td>Parent</td><td>the plain shape inside: <code>x²</code>, <code>|x|</code>, <code>√x</code>, <code>x</code></td></tr>
+      <tr><td>Vertex / start</td><td><b>(h, k)</b> — remember h's sign flips. Lines: "none".</td></tr>
+      <tr><td>Domain</td><td>parabola / V / line → <code>(−∞, ∞)</code>. <b>√ → [h, ∞)</b> (can't root a negative).</td></tr>
+      <tr><td>Range</td><td>anchor height is k. <b>a&gt;0</b> opens up → <code>[k, ∞)</code>. <b>a&lt;0</b> opens down → <code>(−∞, k]</code>. Line → all reals.</td></tr>
+      <tr><td>y-int</td><td>plug in <code>x = 0</code>.</td></tr>
+      <tr><td>x-int</td><td>set <code>f(x)=0</code> and solve (or read where it crosses the x-axis).</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <span class="tag">Twin 1 · Quadratic</span>
+    <h2>g(x) = −2(x − 1)² + 3</h2>
+    <p class="muted">A stand-in — not one of your eight. Watch the method.</p>
+    <div class="ex">
+      <ol class="steps">
+        <li><b>Parent:</b> there's an <code>x²</code> → <b>quadratic</b>.</li>
+        <li><b>Knobs:</b> <span class="k">a = −2</span>, <span class="k2">h = 1</span> (the −1 flips to <b>right 1</b>), <span class="k3">k = 3</span>.</li>
+        <li><b>Transformations:</b> stretch ×2, <b>reflected</b> (a&lt;0 → opens down), right 1, up 3.</li>
+        <li><b>Vertex:</b> (h, k) = <b>(1, 3)</b>.</li>
+        <li><b>Domain:</b> parabola → <b>(−∞, ∞)</b>.</li>
+        <li><b>Range:</b> opens down from 3 → <b>(−∞, 3]</b>.</li>
+        <li><b>y-int:</b> −2(0−1)² + 3 = −2(1) + 3 = <b>1</b>.</li>
+        <li><b>Graph:</b> plot (1, 3); from the vertex the stretch gives the next points — right 1 / down 2, right 2 / down 8 (that's a·1² and a·2²). Mirror on the left.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Twin 2 · Absolute value</span>
+    <h2>g(x) = |x + 2| − 1</h2>
+    <div class="ex">
+      <ol class="steps">
+        <li><b>Parent:</b> <code>|x|</code> → absolute value (V-shape).</li>
+        <li><b>Knobs:</b> a = 1, <span class="k2">h = −2</span> (left 2), <span class="k3">k = −1</span> (down 1).</li>
+        <li><b>Transformations:</b> left 2, down 1 (a = 1, so no stretch or flip).</li>
+        <li><b>Vertex:</b> (−2, −1).</li>
+        <li><b>Domain:</b> (−∞, ∞).</li>
+        <li><b>Range:</b> a&gt;0 → V opens up → <b>[−1, ∞)</b>.</li>
+        <li><b>y-int:</b> |0 + 2| − 1 = 2 − 1 = <b>1</b>.</li>
+        <li><b>Graph:</b> plot (−2, −1); the arms go up 1 / right 1 and up 1 / left 1 (slope ±1).</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Twin 3 · Square root</span>
+    <h2>g(x) = √(x − 2) + 1</h2>
+    <div class="ex">
+      <ol class="steps">
+        <li><b>Parent:</b> <code>√x</code> → square root (half-curve).</li>
+        <li><b>Knobs:</b> a = 1, <span class="k2">h = 2</span> (right 2), <span class="k3">k = 1</span> (up 1).</li>
+        <li><b>Transformations:</b> right 2, up 1.</li>
+        <li><b>Start point:</b> (2, 1).</li>
+        <li><b>Domain:</b> <b>[2, ∞)</b> — the inside <code>x − 2</code> can't be negative, so x starts at 2.</li>
+        <li><b>Range:</b> a&gt;0 → <b>[1, ∞)</b>.</li>
+        <li><b>y-int:</b> none — x = 0 isn't allowed (the curve starts at x = 2).</li>
+        <li><b>Graph:</b> start at (2, 1); the curve rises to the right, flattening as it goes.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Twin 4 · Linear</span>
+    <h2>g(x) = 2x − 5</h2>
+    <div class="ex">
+      <ol class="steps">
+        <li><b>Parent:</b> <code>x</code> → line.</li>
+        <li><b>Read it:</b> slope 2, y-int −5. No vertex.</li>
+        <li><b>Domain &amp; Range:</b> both <b>(−∞, ∞)</b>.</li>
+        <li><b>Graph:</b> from (0, −5) go up 2 / right 1, repeat.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Now you</span>
+    <h2>Run your eight through this frame</h2>
+    <p>Use the same eight lines on every problem. Do them on paper, then have your dad check against the key — <b>don't peek first</b>, that's where the learning is.</p>
+    <div class="frame">
+      <b>Problem: f(x) = ______________</b><br>
+      Parent: ____ &nbsp; a = __, h = __, k = __<br>
+      Transformations: ____________<br>
+      Vertex / start: ____ &nbsp; Domain: ____ &nbsp; Range: ____<br>
+      y-int: ____ &nbsp; x-int: ____ &nbsp; → graph from the anchor.
+    </div>
+    <div class="callout"><b>Check yourself:</b> after you write vertex / domain / range, open the <b>Explorer</b> lesson, set a / h / k to match, and confirm the panel agrees. If it doesn't, find which knob you read wrong. That's the whole skill.</div>
+  </section>
+
+  <div class="footer">Made for you · Algebra 2 workshop · ad-free</div>
+</div>
+
+<script>
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
+    a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

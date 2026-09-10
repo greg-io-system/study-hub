@@ -40,6 +40,25 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       weeks: [
         {
+          range: "Sep 7 – Sep 11",
+          theme: "Unit 1 · Transformations",
+          lessons: [
+            {
+              title: "Transformations Explorer",
+              topic: "Shifting, stretching & flipping parent functions",
+              file: "lessons/transformations-of-functions.html",
+              date: "2026-09-10",
+              summary: "Drag a, h, and k and watch any parent shape slide, stretch, or flip — vertex, domain, range and intercepts update live. Plus the story behind the math (the rubber-stamp picture) and a worked example for each parent family.",
+              tags: ["functions", "graphs", "transformations"],
+              materials: [
+                { kind: "lesson",   label: "Interactive lesson", file: "lessons/transformations-of-functions.html" },
+                { kind: "examples", label: "Why it works",       file: "lessons/transformations-why-it-works.html" },
+                { kind: "examples", label: "Worked examples",    file: "lessons/transformations-worked-examples.html" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Aug 29 – Sep 4",
           theme: "Unit 0 · Functions",
           lessons: [

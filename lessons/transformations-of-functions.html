@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformations of Functions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+    --line:#e4dcc8; --grid:#ece3cf;
+    --coral:#e8623d; --coral-soft:#fbe7de;
+    --teal:#178a68; --teal-soft:#d8efe6;
+    --gold:#e0a324; --gold-soft:#f8ecca;
+    --navy:#2f5aa8; --navy-soft:#e0e8f6;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,'Times New Roman',serif;
+    --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    line-height:1.65;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px;background-position:-1px -1px;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{text-align:center;padding:34px 20px 22px}
+  .eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral)}
+  h1{font-family:var(--disp);font-weight:600;font-size:clamp(32px,6vw,50px);line-height:1.04;margin:.26em 0 .16em}
+  h1 em{font-style:italic;color:var(--coral)}
+  .sub{font-size:18px;color:var(--ink-soft);max-width:640px;margin:0 auto}
+  section{background:var(--paper2);border:1.5px solid var(--line);border-radius:20px;
+    padding:24px 26px 26px;margin:20px 0;box-shadow:var(--shadow)}
+  .tag{display:inline-block;font-family:var(--disp);font-weight:700;font-size:13px;
+    background:var(--ink);color:var(--paper);border-radius:999px;padding:3px 13px;margin-bottom:6px}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(22px,3.4vw,29px);margin:.1em 0 .3em;line-height:1.1}
+  h3{font-family:var(--body);font-weight:800;font-size:16px;margin:1.2em 0 .3em}
+  p{margin:.55em 0}
+  .lead{font-size:18px}
+  .muted{color:var(--ink-soft)}
+  .k{color:var(--coral);font-weight:800}
+  .k2{color:var(--teal);font-weight:800}
+  .k3{color:var(--navy);font-weight:800}
+  .mono{font-variant-numeric:tabular-nums}
+  .callout{border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .callout b{color:#8a6410}
+  .tmpl{text-align:center;font-family:var(--disp);font-weight:700;font-size:clamp(24px,5vw,34px);margin:6px 0 2px}
+  .tmpl .a{color:var(--coral)} .tmpl .h{color:var(--teal)} .tmpl .kk{color:var(--navy)}
+  .legendrow{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:14px;font-weight:700;color:var(--ink-soft);margin-top:4px}
+  .swatch{display:inline-block;width:16px;height:4px;border-radius:3px;vertical-align:middle;margin-right:6px}
+  /* explorer */
+  .explorer{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:760px){.explorer{grid-template-columns:minmax(0,1fr) 300px}}
+  canvas{display:block;width:100%;height:auto;background:#fffdf8;border:1.5px solid var(--line);border-radius:14px;touch-action:none}
+  .panel{display:flex;flex-direction:column;gap:12px}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--body);font-weight:800;font-size:14px;border:2px solid var(--line);background:#fff;
+    color:var(--ink);border-radius:11px;padding:7px 13px;cursor:pointer;transition:.15s}
+  .chip:hover{border-color:var(--coral)}
+  .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .ctl{display:flex;align-items:center;gap:10px}
+  .ctl label{font-weight:800;width:128px;font-size:14px}
+  .ctl label small{display:block;font-weight:600;color:var(--ink-soft);font-size:11.5px}
+  input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:6px;background:var(--line);outline:none;flex:1;min-width:90px}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--coral);border:3px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.2);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--coral);border:3px solid #fff;cursor:pointer}
+  .val{font-weight:800;width:34px;text-align:right;font-variant-numeric:tabular-nums;color:var(--coral)}
+  .reset{align-self:flex-start;background:var(--coral-soft);color:#a53716;border:none;font-weight:800;border-radius:10px;padding:7px 14px;cursor:pointer;font-family:var(--body)}
+  .eqbox{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center}
+  .eqbox .eq{font-family:var(--disp);font-weight:700;font-size:22px}
+  .facts{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .facts li{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 10px}
+  .facts .lab{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+  .facts .fig{font-weight:800;font-size:16px;font-variant-numeric:tabular-nums}
+  .transf{background:var(--teal-soft);border-radius:10px;padding:9px 12px;font-size:14px;font-weight:600}
+  .transf b{color:#0d5c42}
+  table{border-collapse:collapse;width:100%;font-size:15px;margin:.4em 0}
+  th,td{border:1.5px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:#f6e9ec}
+  code{background:#f1ead8;border-radius:5px;padding:1px 6px;font-variant-numeric:tabular-nums}
+  details{margin-top:10px;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:4px 14px}
+  summary{cursor:pointer;font-weight:800;color:var(--coral);padding:8px 0}
+  .footer{margin-top:38px;color:var(--ink-soft);font-size:13px;text-align:center}
+  .grid2{display:grid;gap:14px}@media(min-width:680px){.grid2{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Algebra 2 &middot; Functions</div>
+    <h1>Transformations of <em>Functions</em></h1>
+    <p class="sub">Every function on your worksheet is a familiar shape that's been <b>slid, stretched, or flipped</b>. Learn to read those moves straight off the equation &mdash; then the graph, vertex, domain and range fall out for free.</p>
+  </header>
+
+  <!-- ONE BIG IDEA -->
+  <section>
+    <span class="tag">The one template</span>
+    <h2>Everything fits this pattern</h2>
+    <p class="lead">Take a <b>parent function</b> <span class="mono">P(x)</span> &mdash; the plainest version of its shape &mdash; and dress it up:</p>
+    <p class="tmpl">f(x) = <span class="a">a</span>&middot;P(x &minus; <span class="h">h</span>) + <span class="kk">k</span></p>
+    <p class="muted" style="text-align:center;margin-top:0">Three knobs. That's the whole unit.</p>
+    <table>
+      <tr><th>Knob</th><th>What it does</th><th>The catch</th></tr>
+      <tr><td><span class="k">a</span> &mdash; stretch / flip</td><td>|a| &gt; 1 stretches taller; |a| &lt; 1 squishes flatter. A <b>negative a flips it upside-down</b> (over the x-axis).</td><td>a changes steepness &amp; direction, never left/right.</td></tr>
+      <tr><td><span class="k2">h</span> &mdash; left / right</td><td>Moves the graph horizontally.</td><td><b>Backwards!</b> <code>(x&minus;3)</code> moves <b>right</b> 3; <code>(x+4)</code> moves <b>left</b> 4. The sign lies &mdash; flip it.</td></tr>
+      <tr><td><span class="k3">k</span> &mdash; up / down</td><td>Moves the graph vertically. <code>+k</code> up, <code>&minus;k</code> down.</td><td>This one is honest &mdash; the sign means what it says.</td></tr>
+    </table>
+    <div class="callout"><b>The whole trick:</b> the point that "anchors" the shape (the <b>vertex</b> of a parabola or V, the <b>start point</b> of a square root) simply moves to <b>(h, k)</b>. Find (h, k) and you've basically graphed it.</div>
+  </section>
+
+  <!-- EXPLORER -->
+  <section>
+    <span class="tag">Play with it</span>
+    <h2>Move the knobs, watch the shape</h2>
+    <p>Pick a parent shape, then drag <span class="k">a</span>, <span class="k2">h</span>, <span class="k3">k</span>. The faint line is the parent; the bold coral curve is your transformed function. Everything on the right updates live.</p>
+    <div class="btnrow" id="parentBtns" style="margin:10px 0 4px"></div>
+    <div class="explorer">
+      <div>
+        <canvas id="cv" width="560" height="560" aria-label="coordinate plane"></canvas>
+        <div class="legendrow">
+          <span><span class="swatch" style="background:#c9bfa6"></span>parent P(x)</span>
+          <span><span class="swatch" style="background:var(--coral)"></span>your f(x)</span>
+          <span><span class="swatch" style="background:var(--navy);width:10px;height:10px;border-radius:50%"></span>anchor (h, k)</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="eqbox"><div class="lab" style="font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)">Your function</div><div class="eq" id="eq"></div></div>
+        <div class="ctl"><label><span class="k">a</span><small>stretch / flip</small></label><input id="sa" type="range" min="-3" max="3" step="0.5" value="1"><span class="val" id="va">1</span></div>
+        <div class="ctl"><label><span class="k2">h</span><small>left / right</small></label><input id="sh" type="range" min="-8" max="8" step="1" value="0"><span class="val" id="vh">0</span></div>
+        <div class="ctl"><label><span class="k3">k</span><small>up / down</small></label><input id="sk" type="range" min="-10" max="10" step="1" value="0"><span class="val" id="vk">0</span></div>
+        <button class="reset" id="reset">Reset to parent</button>
+        <div class="transf" id="transf"></div>
+        <ul class="facts">
+          <li><span class="lab" id="anchLab">Vertex</span><span class="fig" id="anchor">(0, 0)</span></li>
+          <li><span class="lab">Domain</span><span class="fig" id="domain">all reals</span></li>
+          <li><span class="lab">y-int</span><span class="fig" id="yint">0</span></li>
+          <li><span class="lab">Range</span><span class="fig" id="range">all reals</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout"><b>Try this:</b> set the quadratic to <span class="mono">a=1, h=&minus;4, k=&minus;9</span>. That's problem&nbsp;1 on your sheet, <span class="mono">(x+4)²&minus;9</span>. Watch where the vertex lands and read the range off the panel. Now do the rest of your problems the same way &mdash; on paper.</div>
+  </section>
+
+  <!-- HOW TO READ FEATURES -->
+  <section>
+    <span class="tag">Reading the answers off</span>
+    <h2>Filling in the worksheet blanks</h2>
+    <div class="grid2">
+      <div>
+        <h3>Parent function</h3>
+        <p>Name the plain shape hiding inside:</p>
+        <table>
+          <tr><td><code>x²</code></td><td>quadratic (parabola)</td></tr>
+          <tr><td><code>|x|</code></td><td>absolute value (V-shape)</td></tr>
+          <tr><td><code>&radic;x</code></td><td>square root (half-curve)</td></tr>
+          <tr><td><code>x</code></td><td>linear (straight line)</td></tr>
+        </table>
+        <h3>Vertex / start point</h3>
+        <p>It's just <b>(h, k)</b> &mdash; remembering h flips its sign. Lines don't have a vertex; write "none."</p>
+      </div>
+      <div>
+        <h3>Domain (allowed x's)</h3>
+        <p><b>Parabola, V, line:</b> every x works &rarr; <span class="mono">(&minus;&infin;, &infin;)</span>.<br>
+        <b>Square root:</b> you can't root a negative, so x must start at h &rarr; <span class="mono">[h, &infin;)</span>.</p>
+        <h3>Range (reachable y's)</h3>
+        <p><b>Parabola &amp; V &amp; &radic;:</b> they stop at the anchor's height <b>k</b>. If <span class="k">a</span> is <b>positive</b> the graph opens up &rarr; <span class="mono">[k, &infin;)</span>. If <span class="k">a</span> is <b>negative</b> it opens down &rarr; <span class="mono">(&minus;&infin;, k]</span>.<br>
+        <b>Line:</b> range is all reals.</p>
+        <h3>Intercepts</h3>
+        <p><b>y-int:</b> plug in <code>x = 0</code>. <b>x-int:</b> set <code>f(x)=0</code> and solve (or read where the curve crosses the x-axis).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKED TWIN -->
+  <section>
+    <span class="tag">Watch one all the way through</span>
+    <h2>A twin problem, start to finish</h2>
+    <p class="muted">This is <b>not</b> one of your eight &mdash; it's a stand-in so you can copy the method, not the answer.</p>
+    <p class="lead" style="text-align:center"><b>g(x) = &minus;2(x &minus; 1)² + 3</b></p>
+    <ol>
+      <li><b>Parent:</b> there's an <code>x²</code> inside &rarr; <b>quadratic</b>.</li>
+      <li><b>Read the knobs:</b> <span class="k">a = &minus;2</span>, <span class="k2">h = 1</span> (the <code>&minus;1</code> flips to <b>right 1</b>), <span class="k3">k = 3</span>.</li>
+      <li><b>Transformations:</b> vertical stretch by 2, <b>reflected</b> over the x-axis (a is negative &rarr; opens down), right 1, up 3.</li>
+      <li><b>Vertex:</b> (h, k) = <b>(1, 3)</b>.</li>
+      <li><b>Domain:</b> parabola &rarr; <b>(&minus;&infin;, &infin;)</b>.</li>
+      <li><b>Range:</b> opens down from height 3 &rarr; <b>(&minus;&infin;, 3]</b>.</li>
+      <li><b>y-int:</b> x=0 &rarr; &minus;2(0&minus;1)²+3 = &minus;2(1)+3 = <b>1</b>.</li>
+      <li><b>Graph:</b> plot the vertex (1,3), then the stretch factor tells you the next points: from the vertex go right 1 / down 2, right 2 / down 8 (that's a&middot;1² and a&middot;2²). Mirror on the left.</li>
+    </ol>
+    <details>
+      <summary>One of each other family (tap)</summary>
+      <p><b>Absolute value &mdash; g(x) = |x + 2| &minus; 1:</b> parent |x|; h = &minus;2 (left 2), k = &minus;1 (down 1); vertex (&minus;2, &minus;1); domain all reals; a is positive so V opens up &rarr; range [&minus;1, &infin;).</p>
+      <p><b>Square root &mdash; g(x) = &radic;(x &minus; 2) + 1:</b> parent &radic;x; h = 2 (right 2), k = 1 (up 1); start point (2, 1); domain <b>[2, &infin;)</b> (can't root a negative); range [1, &infin;).</p>
+      <p><b>Line &mdash; g(x) = 2x &minus; 5:</b> parent x; slope 2, y-int &minus;5; no vertex; domain and range both all reals.</p>
+    </details>
+    <div class="callout"><b>Now you:</b> take problem 1 on your sheet, write those same 8 lines, then graph from the vertex. When you've done all eight, have your dad check them against the answer key &mdash; don't peek first, that's where the learning is.</div>
+  </section>
+
+  <div class="footer">Made for you &middot; Algebra 2 workshop &middot; ad-free</div>
+</div>
+
+<script>
+"use strict";
+(function(){
+  var COR="#e8623d", COR2="rgba(232,98,61,.14)", PAR="#c9bfa6", AX="#b6ab8e", GRID="#eee3ca", NAVY="#2f5aa8", INK="#233047", SOFT="#8a94a6";
+  var cv=document.getElementById("cv"), ctx=cv.getContext("2d");
+  // logical coordinate window
+  var XMIN=-10, XMAX=10, YMIN=-10, YMAX=10;
+
+  var parents={
+    quad:{name:"Quadratic  x²", P:function(x){return x*x;}, sym:"x²", anchor:"Vertex", bounded:true, dom:"all"},
+    abs:{name:"Absolute value  |x|", P:function(x){return Math.abs(x);}, sym:"|x|", anchor:"Vertex", bounded:true, dom:"all"},
+    sqrt:{name:"Square root  √x", P:function(x){return x>=0?Math.sqrt(x):NaN;}, sym:"√x", anchor:"Start point", bounded:true, dom:"sqrt"},
+    lin:{name:"Linear  x", P:function(x){return x;}, sym:"x", anchor:"Vertex", bounded:false, dom:"all"}
+  };
+  var order=["quad","abs","sqrt","lin"];
+  var cur="quad", a=1, h=0, k=0;
+
+  // DPR crispness
+  function fit(){
+    var dpr=window.devicePixelRatio||1;
+    var cssw=cv.clientWidth||560;
+    cv.width=cssw*dpr; cv.height=cssw*dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    W=cssw; H=cssw;
+  }
+  var W=560,H=560;
+  function toX(x){return (x-XMIN)/(XMAX-XMIN)*W;}
+  function toY(y){return H-(y-YMIN)/(YMAX-YMIN)*H;}
+
+  function f(x){
+    var inner=x-h;
+    var p=parents[cur].P(inner);
+    if(isNaN(p)) return NaN;
+    return a*p+k;
+  }
+
+  function drawGrid(){
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle=GRID; ctx.lineWidth=1;
+    var i;
+    for(i=XMIN;i<=XMAX;i++){ctx.beginPath();ctx.moveTo(toX(i),0);ctx.lineTo(toX(i),H);ctx.stroke();}
+    for(i=YMIN;i<=YMAX;i++){ctx.beginPath();ctx.moveTo(0,toY(i));ctx.lineTo(W,toY(i));ctx.stroke();}
+    // axes
+    ctx.strokeStyle=AX; ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(0,toY(0));ctx.lineTo(W,toY(0));ctx.stroke();
+    ctx.beginPath();ctx.moveTo(toX(0),0);ctx.lineTo(toX(0),H);ctx.stroke();
+    // ticks labels (every 2)
+    ctx.fillStyle=SOFT; ctx.font="11px Nunito"; ctx.textAlign="center";
+    for(i=XMIN;i<=XMAX;i+=2){ if(i!==0) ctx.fillText(i, toX(i), toY(0)+14); }
+    ctx.textAlign="right";
+    for(i=YMIN;i<=YMAX;i+=2){ if(i!==0) ctx.fillText(i, toX(0)-6, toY(i)+4); }
+    ctx.textAlign="start";
+    ctx.fillStyle=INK;ctx.font="italic 13px Fraunces,serif";
+    ctx.fillText("x",W-14,toY(0)-8); ctx.fillText("y",toX(0)+8,14);
+  }
+
+  function plot(fn,color,width,dashed){
+    ctx.strokeStyle=color; ctx.lineWidth=width;
+    if(dashed) ctx.setLineDash([5,5]); else ctx.setLineDash([]);
+    ctx.beginPath();
+    var started=false, px, N=480;
+    for(var i=0;i<=N;i++){
+      var x=XMIN+(XMAX-XMIN)*i/N;
+      var y=fn(x);
+      if(isNaN(y)||!isFinite(y)){started=false;continue;}
+      var cx=toX(x), cy=toY(y);
+      if(cy<-40||cy>H+40){ // clip long tails but keep pen continuity sane
+        if(started){ctx.lineTo(cx,cy);} started=true; px=cx;
+        continue;
+      }
+      if(!started){ctx.moveTo(cx,cy);started=true;} else ctx.lineTo(cx,cy);
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  function render(){
+    drawGrid();
+    // parent faint
+    plot(function(x){var p=parents[cur].P(x);return isNaN(p)?NaN:p;}, PAR, 2, true);
+    // transformed
+    plot(f, COR, 3.5, false);
+    // anchor point
+    if(cur!=="lin"){
+      var ax=toX(h), ay=toY(k);
+      ctx.fillStyle=NAVY;ctx.beginPath();ctx.arc(ax,ay,6,0,7);ctx.fill();
+      ctx.strokeStyle="#fff";ctx.lineWidth=2;ctx.stroke();
+    }
+    updatePanel();
+  }
+
+  function fmt(n){ return (n%1===0)? n.toFixed(0) : n.toString(); }
+  function signPart(coef, inner){ // build (x - h) text
+    if(h===0) return "x";
+    return "(x "+(h>0?"− "+h:"+ "+(-h))+")";
+  }
+
+  function updatePanel(){
+    var P=parents[cur];
+    // equation string
+    var aStr = a===1?"":(a===-1?"−":fmt(a));
+    var body;
+    if(cur==="quad") body=aStr+signPart()+"²";
+    else if(cur==="abs") body=aStr+"|"+ (h===0?"x":("x "+(h>0?"− "+h:"+ "+(-h)))) +"|";
+    else if(cur==="sqrt") body=aStr+"√"+signPart();
+    else body=(a===1?"x":(a===-1?"−x":fmt(a)+"x")) + (h!==0? " ... " : "");
+    // linear special: a*(x-h)+k -> slope a, y-int k - a*h
+    var kStr = k===0?"":(k>0?" + "+k:" − "+(-k));
+    document.getElementById("eq").innerHTML = "f(x) = "+body+kStr;
+
+    // transformations text
+    var t=[];
+    if(Math.abs(a)>1) t.push("vertical stretch ×"+Math.abs(a));
+    else if(Math.abs(a)<1 && a!==0) t.push("vertical compression ×"+Math.abs(a));
+    if(a<0) t.push("<b>reflected</b> over x-axis");
+    if(h>0) t.push("right "+h); else if(h<0) t.push("left "+(-h));
+    if(k>0) t.push("up "+k); else if(k<0) t.push("down "+(-k));
+    document.getElementById("transf").innerHTML = t.length? ("<b>Transformations:</b> "+t.join(", ")) : "<b>Transformations:</b> none — this is the parent.";
+
+    // anchor label + value
+    document.getElementById("anchLab").textContent = P.anchor;
+    document.getElementById("anchor").textContent = (cur==="lin")? "none (line)" : "("+fmt(h)+", "+fmt(k)+")";
+
+    // domain
+    var dom = (P.dom==="sqrt")? "[ "+fmt(h)+", ∞ )" : "( −∞, ∞ )";
+    document.getElementById("domain").textContent = dom;
+
+    // range
+    var rng;
+    if(cur==="lin") rng="( −∞, ∞ )";
+    else if(a===0) rng=fmt(k)+" only";
+    else rng = (a>0)? "[ "+fmt(k)+", ∞ )" : "( −∞, "+fmt(k)+" ]";
+    document.getElementById("range").textContent = rng;
+
+    // y-intercept: f(0) if defined
+    var y0=f(0);
+    document.getElementById("yint").textContent = (isNaN(y0)||!isFinite(y0))? "none" : fmt(Math.round(y0*100)/100);
+  }
+
+  // build parent buttons
+  var pb=document.getElementById("parentBtns");
+  order.forEach(function(key){
+    var b=document.createElement("button");
+    b.className="chip"+(key===cur?" on":"");
+    b.textContent=parents[key].name;
+    b.onclick=function(){
+      cur=key;
+      Array.prototype.forEach.call(pb.children,function(c){c.classList.remove("on");});
+      b.classList.add("on");
+      render();
+    };
+    pb.appendChild(b);
+  });
+
+  function bind(id,setter,label){
+    var s=document.getElementById(id), v=document.getElementById(label);
+    s.addEventListener("input",function(){setter(parseFloat(s.value));v.textContent=s.value;render();});
+  }
+  bind("sa",function(x){a=x;},"va");
+  bind("sh",function(x){h=x;},"vh");
+  bind("sk",function(x){k=x;},"vk");
+  document.getElementById("reset").onclick=function(){
+    a=1;h=0;k=0;
+    document.getElementById("sa").value=1;document.getElementById("va").textContent="1";
+    document.getElementById("sh").value=0;document.getElementById("vh").textContent="0";
+    document.getElementById("sk").value=0;document.getElementById("vk").textContent="0";
+    render();
+  };
+
+  window.addEventListener("resize",function(){fit();render();});
+  fit(); render();
+})();
+</script>
+
+<script>
+/* Guarded hub back-link. Shows a "Back to Study Hub" bar ONLY when the lesson
+   was opened from the hub, which passes ?back=<classId>. Standalone -> nothing
+   renders, so the lesson stays fully portable. */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
+    a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
