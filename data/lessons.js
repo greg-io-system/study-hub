@@ -188,7 +188,25 @@ window.STUDY_HUB = {
       name: "AP Psychology",
       accent: "#6d5ab5",
       blurb: "Why people think and act the way they do — the approaches, the research methods, and the big ideas behind them.",
-      status: "planned"
+      weeks: [
+        {
+          range: "Sep 8 – Sep 14",
+          theme: "Unit 1 · Research Methods & Statistics",
+          lessons: [
+            {
+              title: "Statistics, Made Intuitive",
+              topic: "Central tendency, spread, the normal curve & correlation",
+              file: "lessons/research-methods-statistics.html",
+              date: "2026-09-10",
+              summary: "For the Unit 1 test. Drag data points and watch the mean/median/SD move (and see an outlier drag the mean), the 68–95–99.7 normal curve, skew, a correlation slider with a live scatterplot, and why correlation isn't causation — then a 6-question self-check.",
+              tags: ["research methods", "statistics", "test prep"],
+              materials: [
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/research-methods-statistics.html" }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 };

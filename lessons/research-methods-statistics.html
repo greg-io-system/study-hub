@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistics in Psychology — Concept Lesson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --soft:#5a6b83;
+    --line:#e4dcc8; --grid:#ece3cf;
+    --accent:#6d5ab5; --accent-soft:#e9e4f6;
+    --coral:#e8623d; --teal:#178a68; --gold:#e0a324;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,serif; --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.65;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px;background-position:-1px -1px;}
+  .wrap{max-width:860px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{text-align:center;padding:30px 18px 18px}
+  .eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--accent)}
+  h1{font-family:var(--disp);font-weight:600;font-size:clamp(30px,6vw,48px);line-height:1.04;margin:.24em 0 .16em}
+  h1 em{font-style:italic;color:var(--accent)}
+  .sub{font-size:18px;color:var(--soft);max-width:640px;margin:0 auto}
+  section{background:var(--paper2);border:1.5px solid var(--line);border-radius:20px;padding:24px 26px 26px;margin:20px 0;box-shadow:var(--shadow)}
+  .tag{display:inline-block;font-family:var(--disp);font-weight:700;font-size:13px;background:var(--ink);color:var(--paper);border-radius:999px;padding:3px 13px;margin-bottom:8px}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(22px,3.6vw,30px);margin:.1em 0 .35em;line-height:1.12}
+  h3{font-weight:800;font-size:16px;margin:1.15em 0 .3em}
+  p{margin:.6em 0}
+  .lead{font-size:18px}
+  .muted{color:var(--soft)}
+  code{background:#efe9dc;border-radius:5px;padding:1px 6px;font-variant-numeric:tabular-nums}
+  b.term{color:var(--accent)}
+  .callout{border-left:4px solid var(--gold);background:#f8ecca;border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .callout b{color:#8a6410}
+  .big-idea{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .big-idea b{color:#4a3a86}
+  canvas{display:block;width:100%;height:auto;background:#fffdf8;border:1.5px solid var(--line);border-radius:14px;touch-action:none}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:8px;margin:12px 0 4px}
+  .stat{background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:9px 10px;text-align:center}
+  .stat .lab{display:block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--soft)}
+  .stat .fig{font-weight:800;font-size:19px;font-variant-numeric:tabular-nums}
+  .stat.mean .fig{color:var(--coral)} .stat.median .fig{color:var(--teal)} .stat.sd .fig{color:var(--accent)}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+  .chip{font-family:var(--body);font-weight:800;font-size:14px;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:11px;padding:7px 13px;cursor:pointer;transition:.15s}
+  .chip:hover{border-color:var(--accent)}
+  .hint{font-size:13.5px;color:var(--soft);text-align:center;margin-top:4px}
+  .ctl{display:flex;align-items:center;gap:12px;margin:12px 0 4px}
+  .ctl label{font-weight:800;font-size:14px;min-width:120px}
+  input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:6px;background:var(--line);outline:none;flex:1;min-width:120px}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.2);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--accent);border:3px solid #fff;cursor:pointer}
+  .rval{font-weight:800;font-variant-numeric:tabular-nums;color:var(--accent);min-width:52px;text-align:right}
+  table{border-collapse:collapse;width:100%;font-size:15px;margin:.5em 0}
+  th,td{border:1.5px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:var(--accent-soft)}
+  details{margin-top:9px;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:4px 14px}
+  summary{cursor:pointer;font-weight:800;color:var(--accent);padding:8px 0}
+  .grid2{display:grid;gap:14px}@media(min-width:680px){.grid2{grid-template-columns:1fr 1fr}}
+  .footer{margin-top:38px;color:var(--soft);font-size:13px;text-align:center}
+  svg{display:block;max-width:100%;height:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">AP Psychology · Research Methods</div>
+    <h1>Statistics, <em>made intuitive</em></h1>
+    <p class="sub">For Monday's test. Psychologists collect data, so they need a few tools to <b>describe</b> it. Every one of them answers a plain question — play with the pictures and the formulas stop being scary.</p>
+  </header>
+
+  <section>
+    <span class="tag">The big picture</span>
+    <h2>Three questions, that's all statistics is here</h2>
+    <p class="lead">When a psychologist has a pile of numbers (reaction times, test scores, hours of sleep), descriptive statistics answer three questions:</p>
+    <table>
+      <tr><th>Question</th><th>Tool</th></tr>
+      <tr><td>Where's the <b>center</b>? (the "typical" score)</td><td><b class="term">mean, median, mode</b></td></tr>
+      <tr><td>How <b>spread out</b> is it?</td><td><b class="term">range, standard deviation</b></td></tr>
+      <tr><td>Do two things <b>go together</b>?</td><td><b class="term">correlation</b></td></tr>
+    </table>
+    <div class="big-idea"><b>Keep this frame.</b> Center → spread → relationship. If you know which question a term answers, you already half-understand it.</div>
+  </section>
+
+  <!-- WIDGET 1: central tendency + variability -->
+  <section>
+    <span class="tag">Play with it · center &amp; spread</span>
+    <h2>Drag the dots — watch the center move</h2>
+    <p>Each dot is one person's score. Drag any dot left/right. The <b style="color:var(--coral)">mean</b> (red line) and <b style="color:var(--teal)">median</b> (green line) update live.</p>
+    <canvas id="dotcv" width="800" height="230" aria-label="draggable dot plot"></canvas>
+    <div class="stats">
+      <div class="stat mean"><span class="lab">Mean (average)</span><span class="fig" id="s-mean">–</span></div>
+      <div class="stat median"><span class="lab">Median (middle)</span><span class="fig" id="s-median">–</span></div>
+      <div class="stat"><span class="lab">Mode (most common)</span><span class="fig" id="s-mode">–</span></div>
+      <div class="stat"><span class="lab">Range</span><span class="fig" id="s-range">–</span></div>
+      <div class="stat sd"><span class="lab">Std. deviation</span><span class="fig" id="s-sd">–</span></div>
+    </div>
+    <div class="btnrow">
+      <button class="chip" id="d-sym">Symmetric set</button>
+      <button class="chip" id="d-out">Add an outlier</button>
+      <button class="chip" id="d-reset">Reset</button>
+    </div>
+    <p class="hint" id="dothint">Tip: drag one dot far to the right and watch the mean chase it while the median barely moves.</p>
+
+    <h3>What each one means (in plain words)</h3>
+    <ul>
+      <li><b style="color:var(--coral)">Mean</b> — add them all up, divide by how many. The everyday "average." <b>It gets dragged by extreme scores.</b></li>
+      <li><b style="color:var(--teal)">Median</b> — line the scores up in order; the <b>middle</b> one. Half are below, half above. <b>It ignores how extreme the outliers are</b> — that's why it's the honest "typical" when data is lopsided (like income).</li>
+      <li><b>Mode</b> — the score that appears <b>most often</b>. The only one you can use for non-number categories (favorite color).</li>
+    </ul>
+    <div class="callout"><b>Classic test question:</b> "A billionaire walks into a room of 10 teachers — which measure of center changes the most?" The <b>mean</b> (it chases the outlier); the <b>median</b> barely budges. Drag a dot to the far right above and see it happen.</div>
+  </section>
+
+  <!-- Variability explainer -->
+  <section>
+    <span class="tag">Spread</span>
+    <h2>Range vs. standard deviation</h2>
+    <div class="grid2">
+      <div>
+        <h3>Range</h3>
+        <p>The crudest spread measure: <code>highest − lowest</code>. Fast, but <b>one weird score wrecks it</b> — it only looks at the two extremes.</p>
+      </div>
+      <div>
+        <h3>Standard deviation (SD)</h3>
+        <p>The good one: roughly the <b>typical distance of a score from the mean</b>. Small SD = everyone's bunched near the average; big SD = scores are all over the place.</p>
+      </div>
+    </div>
+    <p class="muted">You won't compute SD by hand on the test as much as <b>interpret</b> it: "Class A had the same mean as Class B but a smaller SD" → Class A's scores were more consistent. Drag the dots above together (SD shrinks) or spread them apart (SD grows) to feel it.</p>
+  </section>
+
+  <!-- Normal curve -->
+  <section>
+    <span class="tag">The shape data loves</span>
+    <h2>The normal curve &amp; the 68–95–99.7 rule</h2>
+    <p>Lots of natural measurements (height, IQ, reaction time) pile up in a symmetric <b class="term">bell curve</b>. In a perfect one, <b>mean = median = mode</b>, all dead center.</p>
+    <svg viewBox="0 0 700 300" role="img" aria-label="normal curve with 68-95-99.7 bands">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#e9e4f6"/><stop offset="1" stop-color="#cabfe9"/>
+        </linearGradient>
+      </defs>
+      <!-- bands -->
+      <g font-family="Nunito" font-size="13" font-weight="700">
+        <!-- vertical guide lines at -3..3 SD; center x=350, 80px per SD -->
+        <line x1="350" y1="40" x2="350" y2="250" stroke="#6d5ab5" stroke-width="2"/>
+        <path d="M110,250 C 200,250 250,60 350,60 C 450,60 500,250 590,250 Z" fill="url(#g1)" stroke="#6d5ab5" stroke-width="2.5"/>
+        <!-- SD ticks -->
+        <g stroke="#9c8fce" stroke-dasharray="4 4" stroke-width="1.5">
+          <line x1="270" y1="120" x2="270" y2="250"/><line x1="430" y1="120" x2="430" y2="250"/>
+          <line x1="190" y1="205" x2="190" y2="250"/><line x1="510" y1="205" x2="510" y2="250"/>
+        </g>
+        <g fill="#4a3a86" text-anchor="middle">
+          <text x="350" y="270">mean</text>
+          <text x="270" y="270">−1 SD</text><text x="430" y="270">+1 SD</text>
+          <text x="190" y="270">−2 SD</text><text x="510" y="270">+2 SD</text>
+        </g>
+        <!-- percentages -->
+        <g fill="#4a3a86" text-anchor="middle" font-size="14">
+          <text x="350" y="175">68%</text>
+          <text x="230" y="150">13.5%</text><text x="470" y="150">13.5%</text>
+          <text x="160" y="235">2.35%</text><text x="540" y="235">2.35%</text>
+        </g>
+      </g>
+    </svg>
+    <div class="big-idea"><b>Memorize the rule:</b> about <b>68%</b> of scores fall within 1 SD of the mean, <b>95%</b> within 2 SD, <b>99.7%</b> within 3 SD. Example: IQ has mean 100, SD 15 → about 68% of people score between 85 and 115.</div>
+  </section>
+
+  <!-- Skew -->
+  <section>
+    <span class="tag">When the bell tips over</span>
+    <h2>Skew — and where the mean runs off to</h2>
+    <p>Real data isn't always symmetric. A <b class="term">skew</b> is a tail pulled out to one side. The name comes from where the <b>tail</b> points, and the one rule that matters:</p>
+    <p class="lead" style="text-align:center;color:var(--accent)"><b>the mean gets pulled toward the tail.</b></p>
+    <div class="grid2">
+      <div style="text-align:center">
+        <svg viewBox="0 0 320 170" aria-label="positive skew">
+          <path d="M20,150 C 60,150 70,40 110,40 C 160,40 230,150 300,150 Z" fill="#e9e4f6" stroke="#6d5ab5" stroke-width="2"/>
+          <line x1="95" y1="35" x2="95" y2="150" stroke="#178a68" stroke-width="2.5"/>
+          <line x1="140" y1="35" x2="140" y2="150" stroke="#e8623d" stroke-width="2.5"/>
+          <text x="160" y="168" font-family="Nunito" font-size="12" font-weight="800" fill="#4a3a86" text-anchor="middle">POSITIVE (right) skew — tail points right →</text>
+        </svg>
+        <p class="muted" style="font-size:14px"><b style="color:var(--teal)">median</b> left of <b style="color:var(--coral)">mean</b>. Ex: income (a few billionaires pull the mean up).</p>
+      </div>
+      <div style="text-align:center">
+        <svg viewBox="0 0 320 170" aria-label="negative skew">
+          <path d="M20,150 C 90,150 160,40 210,40 C 250,40 260,150 300,150 Z" fill="#e9e4f6" stroke="#6d5ab5" stroke-width="2"/>
+          <line x1="225" y1="35" x2="225" y2="150" stroke="#178a68" stroke-width="2.5"/>
+          <line x1="180" y1="35" x2="180" y2="150" stroke="#e8623d" stroke-width="2.5"/>
+          <text x="160" y="168" font-family="Nunito" font-size="12" font-weight="800" fill="#4a3a86" text-anchor="middle">← NEGATIVE (left) skew — tail points left</text>
+        </svg>
+        <p class="muted" style="font-size:14px"><b style="color:var(--coral)">mean</b> left of <b style="color:var(--teal)">median</b>. Ex: an easy exam (most score high, a few low scores pull the mean down).</p>
+      </div>
+    </div>
+    <div class="callout"><b>Memory hook:</b> the skew is named for the tail, and <b>the mean chases the tail</b>. Positive skew → tail &amp; mean to the right. This is the same outlier effect you dragged in the dot plot.</div>
+  </section>
+
+  <!-- Correlation -->
+  <section>
+    <span class="tag">Do two things go together?</span>
+    <h2>Correlation</h2>
+    <p>A <b class="term">correlation coefficient (r)</b> is one number from <code>−1</code> to <code>+1</code> that measures how tightly two variables move together. Drag the slider and watch the cloud of points tighten and tilt.</p>
+    <div class="ctl">
+      <label>correlation (r)</label>
+      <input id="rslider" type="range" min="-1" max="1" step="0.05" value="0.6">
+      <span class="rval" id="rval">+0.60</span>
+    </div>
+    <canvas id="scatcv" width="800" height="360" aria-label="scatterplot"></canvas>
+    <p class="hint" id="scathint"></p>
+    <h3>Reading r — two parts</h3>
+    <table>
+      <tr><th>Sign (direction)</th><th>Size (strength)</th></tr>
+      <tr><td><b>+</b> both rise together (more sleep, better mood)<br><b>−</b> one rises as the other falls (more stress, less sleep)</td><td><b>near ±1</b> = tight, points hug the line<br><b>near 0</b> = no relationship, random cloud</td></tr>
+    </table>
+    <div class="callout"><b>The one they'll test hardest — correlation ≠ causation.</b> Ice cream sales and drowning deaths rise together (r &gt; 0), but ice cream doesn't cause drowning — <b>summer heat</b> drives both (a "third variable"). A correlation shows two things move together; it <b>cannot</b> prove one causes the other. Only a controlled <b>experiment</b> (with random assignment) can support cause.</div>
+  </section>
+
+  <!-- Self-test -->
+  <section>
+    <span class="tag">Test yourself</span>
+    <h2>Quick check (answer, then reveal)</h2>
+    <div style="display:grid;gap:10px">
+      <details><summary>1. Which measure of center is most affected by an outlier?</summary><p>The <b>mean</b> — it's calculated from every value, so an extreme score drags it. The median (position-based) barely moves.</p></details>
+      <details><summary>2. Scores: 4, 4, 5, 6, 100. Mean vs. median?</summary><p>Mean = 119/5 = <b>23.8</b>; median = <b>5</b>. The 100 is an outlier — the median is the honest "typical" score here.</p></details>
+      <details><summary>3. IQ has mean 100, SD 15. Roughly what % score between 85 and 115?</summary><p>85–115 is ±1 SD → about <b>68%</b> (the 68–95–99.7 rule).</p></details>
+      <details><summary>4. A test's scores are negatively (left) skewed. Where's the mean vs. the median?</summary><p>The tail points left (a few low scores), so the <b>mean is pulled left, below the median</b>. Most students did well; a few low scores dragged the average down.</p></details>
+      <details><summary>5. r = −0.85 means…</summary><p>A <b>strong, negative</b> relationship — as one variable goes up the other goes down, and the points hug the line tightly. (Sign = direction, size = strength.)</p></details>
+      <details><summary>6. Hours of TV and grades correlate negatively. Does TV cause bad grades?</summary><p><b>Not necessarily</b> — correlation ≠ causation. A third variable (less studying, home environment) could drive both. Only an experiment can show cause.</p></details>
+    </div>
+  </section>
+
+  <div class="footer">Made for you · AP Psychology workshop · ad-free</div>
+</div>
+
+<script>
+"use strict";
+(function(){
+  var INK="#233047", SOFT="#8a94a6", CORAL="#e8623d", TEAL="#178a68", ACC="#6d5ab5", GRID="#eadfc6";
+
+  /* ---------------- Widget 1: draggable dot plot ---------------- */
+  (function(){
+    var cv=document.getElementById("dotcv"), ctx=cv.getContext("2d");
+    var XMIN=0, XMAX=20, W=800, H=230, PAD=44;
+    var DEF=[4,6,7,7,9,11,13];
+    var data=DEF.slice();
+    var dragging=-1;
+
+    function fit(){ var dpr=window.devicePixelRatio||1, cssw=cv.clientWidth||800;
+      cv.width=cssw*dpr; cv.height=(cssw*H/W)*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+      W=cssw; H=cssw*230/800; }
+    function toX(v){ return PAD + (v-XMIN)/(XMAX-XMIN)*(W-2*PAD); }
+    function fromX(px){ return XMIN + (px-PAD)/(W-2*PAD)*(XMAX-XMIN); }
+
+    function mean(a){ return a.reduce(function(s,v){return s+v;},0)/a.length; }
+    function median(a){ var b=a.slice().sort(function(x,y){return x-y;}), n=b.length, m=Math.floor(n/2);
+      return n%2? b[m] : (b[m-1]+b[m])/2; }
+    function mode(a){ var f={},best=[],mx=0; a.forEach(function(v){ f[v]=(f[v]||0)+1; if(f[v]>mx)mx=f[v]; });
+      if(mx<=1) return "none"; for(var k in f){ if(f[k]===mx) best.push(+k); } return best.join(", "); }
+    function sd(a){ var m=mean(a); return Math.sqrt(a.reduce(function(s,v){return s+(v-m)*(v-m);},0)/a.length); }
+    function fmt(n){ return (Math.round(n*100)/100).toString(); }
+
+    function stacks(){ // map value -> array index count for vertical stacking
+      var seen={}, out=[];
+      data.forEach(function(v,i){ var key=Math.round(v*2)/2; seen[key]=(seen[key]||0); out.push({i:i,v:v,level:seen[key]}); seen[key]++; });
+      return out;
+    }
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      var axisY=H-46;
+      // axis
+      ctx.strokeStyle="#c9bfa6"; ctx.lineWidth=2;
+      ctx.beginPath(); ctx.moveTo(PAD,axisY); ctx.lineTo(W-PAD,axisY); ctx.stroke();
+      ctx.fillStyle=SOFT; ctx.font="12px Nunito"; ctx.textAlign="center";
+      for(var v=XMIN; v<=XMAX; v+=2){ var x=toX(v);
+        ctx.strokeStyle=GRID; ctx.beginPath(); ctx.moveTo(x,axisY); ctx.lineTo(x,axisY+5); ctx.stroke();
+        ctx.fillText(v, x, axisY+19); }
+      // mean & median lines
+      var mn=mean(data), md=median(data);
+      ctx.setLineDash([5,4]); ctx.lineWidth=2.5;
+      ctx.strokeStyle=CORAL; ctx.beginPath(); ctx.moveTo(toX(mn),14); ctx.lineTo(toX(mn),axisY); ctx.stroke();
+      ctx.strokeStyle=TEAL; ctx.beginPath(); ctx.moveTo(toX(md),22); ctx.lineTo(toX(md),axisY); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.font="bold 12px Nunito";
+      ctx.fillStyle=CORAL; ctx.fillText("mean", toX(mn), 11);
+      ctx.fillStyle=TEAL; ctx.fillText("median", toX(md), (Math.abs(toX(mn)-toX(md))<34?34:22));
+      // dots
+      var st=stacks();
+      st.forEach(function(d){ var x=toX(d.v), y=axisY-14-d.level*20;
+        ctx.beginPath(); ctx.arc(x,y,8,0,7); ctx.fillStyle=(d.i===dragging)?ACC:"#b9a9e0";
+        ctx.fill(); ctx.strokeStyle="#fff"; ctx.lineWidth=2; ctx.stroke(); });
+      // readouts
+      document.getElementById("s-mean").textContent=fmt(mn);
+      document.getElementById("s-median").textContent=fmt(md);
+      document.getElementById("s-mode").textContent=mode(data);
+      document.getElementById("s-range").textContent=fmt(Math.max.apply(null,data)-Math.min.apply(null,data));
+      document.getElementById("s-sd").textContent=fmt(sd(data));
+    }
+    function evt(e){ var r=cv.getBoundingClientRect(); var cx=(e.touches?e.touches[0]:e).clientX;
+      return { x:(cx-r.left) }; }
+    function nearest(px){ var best=-1, bd=1e9;
+      var st=stacks();
+      st.forEach(function(d){ var dx=Math.abs(toX(d.v)-px); if(dx<bd){bd=dx;best=d.i;} });
+      return bd<22? best : -1; }
+    function down(e){ e.preventDefault(); var p=evt(e); dragging=nearest(p.x); if(dragging>=0){ set(p.x); } }
+    function moveH(e){ if(dragging<0) return; e.preventDefault(); set(evt(e).x); }
+    function up(){ dragging=-1; draw(); }
+    function set(px){ var v=fromX(px); v=Math.max(XMIN,Math.min(XMAX,Math.round(v))); data[dragging]=v; draw(); }
+
+    cv.addEventListener("mousedown",down); window.addEventListener("mousemove",moveH); window.addEventListener("mouseup",up);
+    cv.addEventListener("touchstart",down,{passive:false}); cv.addEventListener("touchmove",moveH,{passive:false}); cv.addEventListener("touchend",up);
+
+    document.getElementById("d-reset").onclick=function(){ data=DEF.slice(); draw(); };
+    document.getElementById("d-sym").onclick=function(){ data=[6,8,9,10,10,10,11,12,14]; draw(); };
+    document.getElementById("d-out").onclick=function(){ data=DEF.slice(); data[data.length-1]=20; draw(); };
+    window.addEventListener("resize",function(){ fit(); draw(); });
+    fit(); draw();
+  })();
+
+  /* ---------------- Widget 2: correlation scatter ---------------- */
+  (function(){
+    var cv=document.getElementById("scatcv"), ctx=cv.getContext("2d");
+    var W=800,H=360,PAD=40, N=40;
+    // fixed standard-normal x and noise so points morph smoothly with r
+    function randn(){ var u=0,v=0; while(u===0)u=Math.random(); while(v===0)v=Math.random();
+      return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); }
+    var xs=[], es=[]; for(var i=0;i<N;i++){ xs.push(randn()); es.push(randn()); }
+
+    function fit(){ var dpr=window.devicePixelRatio||1, cssw=cv.clientWidth||800;
+      cv.width=cssw*dpr; cv.height=(cssw*H/W)*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+      W=cssw; H=cssw*360/800; }
+    function px(z){ return PAD + (z+3)/6*(W-2*PAD); }   // z in [-3,3] -> plot
+    function py(z){ return (H-PAD) - (z+3)/6*(H-2*PAD); }
+
+    function draw(r){
+      ctx.clearRect(0,0,W,H);
+      // frame + axes
+      ctx.strokeStyle=GRID; ctx.lineWidth=1;
+      for(var g=-3;g<=3;g++){ ctx.beginPath(); ctx.moveTo(px(g),PAD); ctx.lineTo(px(g),H-PAD); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(PAD,py(g)); ctx.lineTo(W-PAD,py(g)); ctx.stroke(); }
+      ctx.strokeStyle="#c9bfa6"; ctx.lineWidth=2;
+      ctx.strokeRect(PAD,PAD,W-2*PAD,H-2*PAD);
+      ctx.fillStyle=SOFT; ctx.font="italic 13px Fraunces,serif"; ctx.textAlign="center";
+      ctx.fillText("variable X", W/2, H-10);
+      ctx.save(); ctx.translate(14,H/2); ctx.rotate(-Math.PI/2); ctx.fillText("variable Y",0,0); ctx.restore();
+      // trend line y = r*x
+      ctx.strokeStyle=ACC; ctx.lineWidth=2.5; ctx.setLineDash([6,5]);
+      ctx.beginPath(); ctx.moveTo(px(-3),py(-3*r)); ctx.lineTo(px(3),py(3*r)); ctx.stroke(); ctx.setLineDash([]);
+      // points  y = r*x + sqrt(1-r^2)*e
+      var k=Math.sqrt(Math.max(0,1-r*r));
+      for(var i=0;i<N;i++){ var x=xs[i], y=r*x+k*es[i];
+        ctx.beginPath(); ctx.arc(px(x),py(y),5,0,7); ctx.fillStyle="#8f7fc6"; ctx.fill();
+        ctx.strokeStyle="#fff"; ctx.lineWidth=1.5; ctx.stroke(); }
+    }
+    function label(r){
+      var mag=Math.abs(r), dir=r>0.02?"positive":(r<-0.02?"negative":"no");
+      var strength = mag<0.1?"basically none":mag<0.35?"weak":mag<0.7?"moderate":"strong";
+      var s = document.getElementById("rval");
+      s.textContent=(r>=0?"+":"−")+Math.abs(r).toFixed(2);
+      var h=document.getElementById("scathint");
+      if(dir==="no"){ h.innerHTML="A shapeless cloud — <b>no relationship</b>. Knowing X tells you nothing about Y."; }
+      else { h.innerHTML="A <b>"+strength+" "+dir+"</b> correlation — the points "+(mag>0.7?"hug":"loosely follow")+" the line, tilting "+(r>0?"up":"down")+"."; }
+    }
+    var slider=document.getElementById("rslider");
+    function update(){ var r=parseFloat(slider.value); draw(r); label(r); }
+    slider.addEventListener("input",update);
+    window.addEventListener("resize",function(){ fit(); update(); });
+    fit(); update();
+  })();
+})();
+</script>
+
+<script>
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
