@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AP Lang TERMS Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --soft:#5a6b83;
+    --line:#e4dcc8; --accent:#2f6fa8; --accent-soft:#e2edf6;
+    --gold:#e0a324; --gold-soft:#f8ecca;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,serif; --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6}
+  .wrap{max-width:780px;margin:0 auto;padding:28px 18px 70px}
+  .eyebrow{font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  h1{font-family:var(--disp);font-weight:700;font-size:32px;margin:.15em 0 .1em}
+  .tagline{color:var(--soft);margin:.2em 0 0;max-width:600px}
+  .controls{position:sticky;top:0;background:var(--paper);padding:14px 0 8px;z-index:5;border-bottom:1px solid var(--line);margin-top:14px}
+  input[type=search]{width:100%;font-family:var(--body);font-size:16px;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);outline:none}
+  input[type=search]:focus{border-color:var(--accent)}
+  .cats{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+  .cat{font-weight:800;font-size:13px;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer;transition:.15s}
+  .cat:hover{border-color:var(--accent)}
+  .cat.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .count{color:var(--soft);font-size:13px;font-weight:700;margin:12px 2px 2px}
+  .term{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;margin:11px 0}
+  .term h2{font-family:var(--disp);font-weight:600;font-size:20px;margin:0 0 .1em;color:var(--ink)}
+  .term .grp{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 7px;margin-left:8px;vertical-align:middle}
+  .term .def{margin:.4em 0 .3em}
+  .term .eg{font-size:14.5px;color:var(--soft);border-left:3px solid var(--accent-soft);padding-left:12px;margin-top:8px}
+  .term .eg b{color:var(--accent)}
+  .empty{text-align:center;color:var(--soft);padding:30px;font-weight:700}
+  .footer{margin-top:36px;color:var(--soft);font-size:13px;text-align:center}
+  mark{background:#fbe7bf;color:inherit;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">AP English · Mr. Evans</div>
+  <h1>TERMS Library</h1>
+  <p class="tagline">The rhetorical vocabulary of the class in one place — search it, and add your own as you go. Each term has a plain meaning and how it actually shows up in Mr. Evans's world. This is the "library" he keeps asking about.</p>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search a term, e.g. exigence, cause, anaphora…" autocomplete="off">
+    <div class="cats" id="cats"></div>
+  </div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+
+  <div class="footer">Made for you · ad-free · add terms as the class grows</div>
+</div>
+
+<script>
+"use strict";
+(function(){
+  /* Add a term: {t: name, g: group, d: definition, e: how it shows up in class (HTML ok)}.
+     Groups: "Evans" (his framework) | "Rhetoric" (AP terms) | "Moves" (stems & moves). */
+  var TERMS = [
+    // --- Mr. Evans's framework ---
+    {t:"Argument Continuum", g:"Evans", d:"Mr. Evans's map of where a position sits in a conversation. The extremes and the wishy-washy middle (his \"100s\" and \"50\") are the spots that \"don't demand thinking.\" The goal is a nuanced position between the poles.", e:"\"Any conversation hovering over the 100 or the 50 should be challenged.\" Depth lives in the space between."},
+    {t:"Group Interactivity (GI)", g:"Evans", d:"The quality of your contribution to class conversation — adding depth and asking the next question instead of making \"lateral moves.\" It's graded.", e:"\"Major GI Day.\" Being additive, not just present."},
+    {t:"The Constitution / Constituent", g:"Evans", d:"The class treated as a deliberative body. Each student is a \"Constituent\" who challenges shallow contributions and helps everyone figure out what they really think.", e:"\"The Constitution can provide an opportunity to figure out what you really think, and even what you think about what you think.\""},
+    {t:"Library (of sources)", g:"Evans", d:"Your personal collection of the texts and voices from class, kept so you can \"surround YOUR positions\" with evidence. He keeps asking how you're tracking it.", e:"\"Your Library of Sources: How are you keeping track?\" (This page is part of that library.)"},
+    {t:"TERMS / Thinking notes", g:"Evans", d:"His note-taking system: a dedicated place for rhetorical terms and for your own thinking. He asks where you keep them.", e:"\"There will be a TERMS moment later… Where are you putting TERMS? Library? Thinking notes?\""},
+    {t:"Voice (not opinion)", g:"Evans", d:"An AP Lang student is expected to have a VOICE — the position you arrive at after weighing other viewpoints — rather than a gut opinion. A voice is earned by listening.", e:"\"An AP Lang student is expected to have a voice (not an opinion)… the position in which you find yourself after evaluating the other points of view.\""},
+    {t:"\"Answered question\" (the trap)", g:"Evans", d:"A passive, surface-level response that closes a question off instead of opening the next one. The opposite of development.", e:"\"A passive and superficial 'answered question' would do a disservice to the conversation.\""},
+    {t:"Enter the conversation", g:"Evans", d:"His reframe of the AP prompt: you're not asked to \"answer\" a topic that has no decisive answer — you're asked to enter an ongoing conversation with your own position that accounts for other voices.", e:"\"They are not asking you to decisively answer the topic; they are asking you to enter the conversation.\""},
+
+    // --- Rhetorical terms (AP) ---
+    {t:"Exigence", g:"Rhetoric", d:"The urgent reason a writer feels compelled to speak — the spark that makes this argument necessary now. Strong writing has it; so should you.", e:"\"Note: Scott Galloway has EXIGENCE. This is an early opportunity to find your own EXIGENCE within someone else's.\""},
+    {t:"Audience", g:"Rhetoric", d:"Who a text is actually addressing — often more than one group at once. Naming the audience explains many of a writer's choices.", e:"\"As you watch, create notes that track his exigence and, as always, his audience(s).\""},
+    {t:"Line of reasoning", g:"Rhetoric", d:"The connected chain of claims and evidence that carries an argument to its point — each step earning the next.", e:"Galloway \"created a line of reasoning through each of the 'If you's\" so the ending lands."},
+    {t:"Anaphora", g:"Rhetoric", d:"Repeating the same words at the start of successive sentences or clauses, for rhythm and emphasis.", e:"Galloway's closing four \"If you…\" statements. \"This ending only works because he has done the work.\""},
+    {t:"Framing device", g:"Rhetoric", d:"Opening and closing a piece with the same idea or question, so the whole argument sits inside a frame.", e:"Galloway starts AND ends with \"Do we love our children?\""},
+    {t:"Rhetorical question", g:"Rhetoric", d:"A question asked for effect rather than a literal answer — often to make the audience feel they already agree.", e:"Flagged as a \"danger\" earlier in the course (\"Does Truth Matter?\") because it can smuggle in an assumption."},
+    {t:"Hypophora", g:"Rhetoric", d:"Raising a question and then answering it yourself — often to set up the expected answer and then dismantle it.", e:"Galloway's framing question invites \"yes, we love our kids,\" then his talk answers \"maybe not,\" exposing the gap between morality and economics."},
+    {t:"Conventional wisdom", g:"Rhetoric", d:"The widely assumed \"obvious\" belief — which strong writers often set up precisely so they can challenge or complicate it.", e:"\"The rhetorical question leads to a Conventional Wisdom ('yes we love our kids'), and then he… dismantles that.\""},
+    {t:"Cause & effect", g:"Rhetoric", d:"An argument structure that traces what leads to what. Watch which thing is the cause and which is the effect — and whether the writer proves the link or just asserts it.", e:"The 9/10 prompt: \"Let's call your generation… the EFFECT. What do YOU think about the potential CAUSES?\""},
+    {t:"Correlation vs. causation", g:"Rhetoric", d:"A correlation means two things move together; it does NOT prove one causes the other. It could be X→Y, Y→X, or a hidden third factor Z causing both. The knot at the center of the cause/effect assignment.", e:"Freakonomics (quoted in class): \"It's possible that X causes Y; it's also possible that Y causes X; and it may be that X and Y are both being caused by some other factor, Z.\" Galloway hunts the overlooked \"Z's.\""},
+    {t:"Rhetorical précis", g:"Rhetoric", d:"A compact four-sentence summary that names a text's claim, how the author supports it, the author's purpose, and the intended audience. (There's a separate lesson on it.)", e:"A student asked whether it's OK to use \"the Rhetorical Precis to introduce the two arguments.\" It's a tool for setting up a source cleanly."},
+    {t:"Rogerian structure", g:"Rhetoric", d:"An argument built on listening: you fairly present the opposing view and its merits, find common ground, and only then advance your own position. \"A philosophy of listening.\"", e:"\"The Rogerian Model… takes a willingness to consider, and perhaps admit, the potential weaknesses of your\" own view."},
+    {t:"Risk = hazard + outrage", g:"Rhetoric", d:"Peter Sandman's framework: how risky something feels equals the real hazard PLUS how outraged people are. It explains why perceived danger and actual danger often don't match.", e:"The 9/3 class (\"Risk, Hazard, Outrage\"). \"When hazard is high and outrage is low, people…\""},
+
+    // --- Stems & moves ---
+    {t:"\"____ ; however, ____\"", g:"Moves", d:"Mr. Evans's signature pivot: state an idea, then turn to the complicating counter-idea. The basic engine of developing a thought instead of leaving it flat.", e:"He models it constantly: \"every time I watch the talk… HOWEVER, I wonder what 'love' will mean.\""},
+    {t:"\"Ostensibly…\"", g:"Moves", d:"A hedge that flags the apparent, surface reading of something — so you can then complicate it or show what's really going on underneath.", e:"Listed among the \"tools within your writerly tool box.\""},
+    {t:"They Say / I Say stems", g:"Moves", d:"Templates for entering a conversation: first summarize what others say, then position your own view in response. Keeps you in dialogue instead of monologue.", e:"\"…or your notes or the AP They Say I Say stems.\" Pairs with \"enter the conversation.\""},
+    {t:"A source \"as a voice in the room\"", g:"Moves", d:"Synthesis: bring an author into your own argument as a participant, not just a citation — let them speak alongside your position.", e:"\"Within your response, please use Galloway's talk as a voice in the room,\" plus one other: \"Marano asserts that the cause… is ____.\""},
+    {t:"\"Do we love you enough to ___?\"", g:"Moves", d:"His current recurring lens (borrowed from Galloway's \"Do we love our children?\") for pushing on the generation/AI conversation from the inside.", e:"\"Use the stem 'Do we love you enough to ______?' as an entry point into YOUR generation's position within the AI conversation.\""}
+  ];
+
+  var GROUPS = {Evans:"Mr. Evans's framework", Rhetoric:"Rhetorical terms", Moves:"Stems & moves"};
+  var filter="All", query="";
+  var $=function(id){return document.getElementById(id);};
+
+  function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  function hi(s){ if(!query) return s; try{ return s.replace(new RegExp('('+query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark>$1</mark>'); }catch(e){ return s; } }
+
+  function cats(){
+    var c=$("cats"); c.innerHTML="";
+    ["All","Evans","Rhetoric","Moves"].forEach(function(k){
+      var b=document.createElement("button");
+      b.className="cat"+(filter===k?" on":"");
+      b.textContent = k==="All" ? "All" : GROUPS[k];
+      b.onclick=function(){ filter=k; render(); };
+      c.appendChild(b);
+    });
+  }
+  function render(){
+    cats();
+    var ql=query.toLowerCase();
+    var shown = TERMS.filter(function(x){
+      if(filter!=="All" && x.g!==filter) return false;
+      if(!ql) return true;
+      return (x.t+" "+x.d+" "+x.e).toLowerCase().indexOf(ql)>=0;
+    });
+    $("count").textContent = shown.length + (shown.length===1?" term":" terms");
+    var L=$("list");
+    if(!shown.length){ L.innerHTML='<div class="empty">No term matches that. Try a shorter search.</div>'; return; }
+    L.innerHTML = shown.map(function(x){
+      return '<div class="term"><h2>'+hi(esc(x.t))+'<span class="grp">'+esc(GROUPS[x.g])+'</span></h2>'
+        + '<div class="def">'+hi(x.d)+'</div>'
+        + '<div class="eg"><b>In class:</b> '+hi(x.e)+'</div></div>';
+    }).join("");
+  }
+  $("q").addEventListener("input",function(e){ query=e.target.value.trim(); render(); });
+  render();
+})();
+</script>
+
+<script>
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
