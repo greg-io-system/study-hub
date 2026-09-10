@@ -51,6 +51,10 @@
   .done{text-align:center;padding:30px 18px}
   .done h2{font-family:var(--disp);font-size:26px;margin:.2em 0}
   .note{color:var(--soft);font-size:13px;text-align:center;margin-top:18px}
+  .howto{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:2px 16px;margin:12px 0 2px}
+  .howto summary{cursor:pointer;font-weight:800;color:var(--accent);padding:9px 0;font-size:14px}
+  .howto ul{margin:.2em 0 .7em;padding-left:20px;font-size:14px}
+  .howto li{margin:.3em 0}
   .footer{margin-top:34px;color:var(--soft);font-size:13px;text-align:center}
 </style>
 </head>
@@ -58,7 +62,19 @@
 <div class="wrap">
   <div class="eyebrow">Human Anatomy</div>
   <h1>Unit 1 Flashcards</h1>
-  <p class="tagline">Tap a card to flip. Mark <b>Got it</b> or <b>Review</b> — then drill just the ones you missed. Exam Friday.</p>
+  <p class="tagline">Tap a card to flip, then grade yourself. Your progress saves on this device. Exam Friday.</p>
+
+  <details class="howto" open>
+    <summary>How to use</summary>
+    <ul>
+      <li><b>Flip</b> — tap the card (or press Space) to see the answer.</li>
+      <li><b>✓ Got it / ↺ Review</b> — grade yourself. The tally on the right tracks both.</li>
+      <li><b>Drill review only</b> — study just the cards you marked Review; as you get them right they drop out, counting down to none left.</li>
+      <li><b>Groups</b> — tap a topic (Directional, Cells…) to focus on one area.</li>
+      <li><b>Progress saves automatically</b> on this device — refresh or come back later and your marks are still here.</li>
+      <li><b>Reset</b> — clear all your marks and start fresh.</li>
+    </ul>
+  </details>
 
   <div class="groups" id="groups"></div>
   <div class="meta">
@@ -83,7 +99,7 @@
       <button class="small" id="prev">← Prev</button>
       <button class="small" id="shuffle">Shuffle</button>
       <button class="small" id="drill">Drill review only</button>
-      <button class="small" id="restart">Restart</button>
+      <button class="small" id="restart">Reset</button>
       <button class="small" id="next">Next →</button>
     </div>
    </div>
@@ -161,9 +177,15 @@ var CARDS = [
 ];
 
 /* ---- Component ---- */
+/* Bump STORAGE_KEY (or change it per deck) so different decks don't share saved
+   progress. Progress persists per-browser via localStorage. */
+var STORAGE_KEY = "flashcards:hap-unit-1:v1";
 var cats = ["All"].concat(CARDS.map(function(c){return c.c;}).filter(function(v,i,a){return a.indexOf(v)===i;}));
 var filter="All", deck=[], pos=0, flipped=false, cardStatus={}, reviewOnly=false;
 var $=function(id){return document.getElementById(id);};
+
+function loadStatus(){ try{ var s=localStorage.getItem(STORAGE_KEY); if(s) cardStatus=JSON.parse(s)||{}; }catch(e){} }
+function saveStatus(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(cardStatus)); }catch(e){} }
 
 function baseIndices(){
   var arr=[];
@@ -212,7 +234,16 @@ function render(){
   $("prev").disabled=(pos===0); $("next").disabled=(pos===deck.length-1);
 }
 function flip(){ flipped=!flipped; render(); }
-function mark(s){ cardStatus[deck[pos]]=s; if(pos<deck.length-1){pos++;flipped=false;} else {flipped=false;} render(); }
+function mark(s){
+  cardStatus[deck[pos]]=s; saveStatus();
+  if(reviewOnly && s==="got"){
+    // live-shrink the drill set: the just-cleared card leaves the pool now
+    deck=baseIndices();
+    if(pos>=deck.length) pos=Math.max(0,deck.length-1);
+    flipped=false; render(); return;
+  }
+  if(pos<deck.length-1){pos++;} flipped=false; render();
+}
 function move(d){ var n=pos+d; if(n>=0&&n<deck.length){pos=n;flipped=false;render();} }
 
 document.addEventListener("DOMContentLoaded",function(){
@@ -225,7 +256,7 @@ $("rev").onclick=function(){mark("review");};
 $("prev").onclick=function(){move(-1);};
 $("next").onclick=function(){move(1);};
 $("shuffle").onclick=function(){shuffle(deck);pos=0;flipped=false;render();};
-$("restart").onclick=function(){cardStatus={};reviewOnly=false;rebuild();};
+$("restart").onclick=function(){cardStatus={};saveStatus();reviewOnly=false;rebuild();};
 $("drill").onclick=function(){reviewOnly=true;rebuild();};
 document.addEventListener("keydown",function(e){
   if(e.code==="Space"){e.preventDefault();flip();}
@@ -234,6 +265,7 @@ document.addEventListener("keydown",function(e){
   else if(e.key==="g"||e.key==="G"){mark("got");}
   else if(e.key==="r"||e.key==="R"){mark("review");}
 });
+loadStatus();
 rebuild();
 </script>
 
