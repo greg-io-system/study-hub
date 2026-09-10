@@ -87,6 +87,20 @@ window.STUDY_HUB = {
       blurb: "The story behind the chapters — causes, people, and why it mattered, not just dates to memorize.",
       weeks: [
         {
+          range: "Sep 7 – Sep 11",
+          theme: "Ch. 3 · Early Civilizations",
+          lessons: [
+            {
+              title: "Early Civilizations & Urban Societies — Study Guide & Practice Quiz",
+              topic: "Mesopotamia, Egypt, and the Indus Valley — the first cities, writing, and empires",
+              file: "lessons/ch03-early-civilizations-study-quiz.html",
+              date: "2026-09-10",
+              summary: "What makes a 'civilization,' then a walk through Sumer & the first empire, Egypt's pharaohs and kingdoms, and the Indus valley cities — plus a compare-the-three table and a 22-question quiz with click-to-reveal answers.",
+              tags: ["study guide", "practice quiz"]
+            }
+          ]
+        },
+        {
           range: "Aug 31 – Sep 4",
           theme: "Ch. 2 · Early Humans",
           lessons: [
