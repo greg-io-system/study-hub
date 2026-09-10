@@ -135,6 +135,7 @@ window.STUDY_HUB = {
               tags: ["exam prep", "study guide", "practice quiz"],
               materials: [
                 { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/hap-unit-1-intro-tissues-study-quiz.html" },
+                { kind: "practice", label: "Flashcards", file: "lessons/hap-unit-1-flashcards.html" },
                 { kind: "link", label: "Class slides (opens in Google)", url: "https://docs.google.com/presentation/d/16BiH9YlzvMtYfgOBeMjjxFQO1n1g1IslkwMUuIwOxBE/" },
                 { kind: "link", label: "Mrs. Kalec's exam review", url: "https://docs.google.com/document/d/1VbZ3psGS1S5t801TrilsQqm_CreC99YOYIF_HmIpjts/" }
               ]

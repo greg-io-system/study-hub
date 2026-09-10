@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 1 Flashcards · Human Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --soft:#5a6b83;
+    --line:#e4dcc8; --accent:#b5445a; --accent-soft:#f8e7ec;
+    --good:#178a68; --good-soft:#d8efe6; --warn:#d98324; --warn-soft:#f8ecd6;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,serif; --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6}
+  .wrap{max-width:640px;margin:0 auto;padding:26px 18px 60px}
+  .eyebrow{font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  h1{font-family:var(--disp);font-weight:700;font-size:30px;margin:.15em 0 .1em}
+  .tagline{color:var(--soft);margin:.2em 0 0}
+  .groups{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
+  .gchip{font-weight:800;font-size:13px;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer;transition:.15s}
+  .gchip:hover{border-color:var(--accent)}
+  .gchip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .meta{display:flex;justify-content:space-between;align-items:center;color:var(--soft);font-size:13.5px;font-weight:700;margin:10px 2px 6px}
+  .tallies span{margin-left:12px}
+  .tallies .g{color:var(--good)} .tallies .r{color:var(--warn)}
+  .card{position:relative;background:var(--paper2);border:1.5px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:28px 26px;cursor:pointer;user-select:none;transition:border-color .15s}
+  .card:hover{border-color:var(--accent)}
+  .side-label{position:absolute;top:12px;left:16px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+  .cat-label{position:absolute;top:12px;right:16px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--soft)}
+  .front-txt{font-family:var(--disp);font-weight:600;font-size:24px;line-height:1.25}
+  .back-txt{font-size:20px;font-weight:700}
+  .back-txt .hint{display:block;font-size:14.5px;font-weight:600;color:var(--soft);margin-top:10px}
+  .tap{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:12.5px;font-weight:700;color:var(--soft)}
+  .row{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+  button.act{font-family:var(--body);font-weight:800;font-size:15px;border:none;border-radius:12px;padding:11px 18px;cursor:pointer;transition:.12s;flex:1;min-width:120px}
+  .b-flip{background:var(--accent);color:#fff}
+  .b-got{background:var(--good-soft);color:#0d5c42}
+  .b-rev{background:var(--warn-soft);color:#8a5210}
+  button.act:active{transform:translateY(1px)}
+  .nav{display:flex;gap:9px;margin-top:9px;justify-content:center;flex-wrap:wrap}
+  button.small{font-weight:800;font-size:13.5px;border:2px solid var(--line);background:#fff;color:var(--soft);border-radius:10px;padding:8px 14px;cursor:pointer}
+  button.small:hover{border-color:var(--accent);color:var(--ink)}
+  button.small:disabled{opacity:.4;cursor:default}
+  .done{text-align:center;padding:30px 18px}
+  .done h2{font-family:var(--disp);font-size:26px;margin:.2em 0}
+  .note{color:var(--soft);font-size:13px;text-align:center;margin-top:18px}
+  .footer{margin-top:34px;color:var(--soft);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Human Anatomy</div>
+  <h1>Unit 1 Flashcards</h1>
+  <p class="tagline">Tap a card to flip. Mark <b>Got it</b> or <b>Review</b> — then drill just the ones you missed. Exam Friday.</p>
+
+  <div class="groups" id="groups"></div>
+  <div class="meta">
+    <span id="counter">–</span>
+    <span class="tallies"><span class="g" id="tg">✓ 0</span><span class="r" id="tr">↺ 0</span></span>
+  </div>
+
+  <div id="stage">
+   <div id="play">
+    <div class="card" id="card">
+      <span class="side-label" id="side">Prompt</span>
+      <span class="cat-label" id="cat"></span>
+      <div id="face" class="front-txt"></div>
+      <div class="tap" id="tap">tap to flip · or press Space</div>
+    </div>
+    <div class="row">
+      <button class="act b-flip" id="flip">Flip</button>
+      <button class="act b-got" id="got">✓ Got it</button>
+      <button class="act b-rev" id="rev">↺ Review</button>
+    </div>
+    <div class="nav">
+      <button class="small" id="prev">← Prev</button>
+      <button class="small" id="shuffle">Shuffle</button>
+      <button class="small" id="drill">Drill review only</button>
+      <button class="small" id="restart">Restart</button>
+      <button class="small" id="next">Next →</button>
+    </div>
+   </div>
+   <div class="done" id="done" hidden></div>
+  </div>
+
+  <p class="note">Keyboard: <b>Space</b> flip · <b>→ / ←</b> move · <b>G</b> got it · <b>R</b> review</p>
+  <div class="footer">Made for you · ad-free</div>
+</div>
+
+<script>
+"use strict";
+/* ---- The deck: swap this array to reuse the component for any unit ---- */
+var CARDS = [
+  // Directional terms
+  {c:"Directional", f:"The wrist is ___ to the hand.", b:"Proximal", h:"nearer the limb's attachment"},
+  {c:"Directional", f:"The elbow is ___ to the wrist.", b:"Proximal"},
+  {c:"Directional", f:"The brain is ___ to the spinal cord.", b:"Superior"},
+  {c:"Directional", f:"The sternum is ___ to the spine.", b:"Anterior (ventral)"},
+  {c:"Directional", f:"The thumb is ___ to the fingers. (careful!)", b:"Lateral", h:"palms face forward in anatomical position"},
+  {c:"Directional", f:"The nose is ___ to the mouth.", b:"Superior"},
+  {c:"Directional", f:"The navel is ___ to the sternum.", b:"Inferior"},
+  {c:"Directional", f:"The skin is ___ compared to the skeleton.", b:"Superficial"},
+  {c:"Directional", f:"The lungs are ___ compared to the rib cage.", b:"Deep"},
+  {c:"Directional", f:"superior / inferior mean…", b:"toward the head / away from the head"},
+  {c:"Directional", f:"medial / lateral mean…", b:"toward the midline / away from the midline"},
+  {c:"Directional", f:"anterior = ___ ; posterior = ___", b:"ventral (front) ; dorsal (back)"},
+  {c:"Directional", f:"proximal / distal are used only on…", b:"limbs", h:"use superior/inferior on the trunk & head"},
+  // Cavities & planes
+  {c:"Cavities & planes", f:"The heart and lungs sit in the ___ cavity.", b:"Thoracic"},
+  {c:"Cavities & planes", f:"The bladder sits in the ___ cavity.", b:"Pelvic", h:"lower part of the abdominopelvic cavity"},
+  {c:"Cavities & planes", f:"The brain sits in the ___ cavity.", b:"Cranial", h:"a dorsal cavity"},
+  {c:"Cavities & planes", f:"The two DORSAL cavities are…", b:"cranial (brain) + vertebral/spinal (spinal cord)"},
+  {c:"Cavities & planes", f:"The two VENTRAL cavities are…", b:"thoracic + abdominopelvic"},
+  {c:"Cavities & planes", f:"Sagittal plane divides the body into…", b:"left & right"},
+  {c:"Cavities & planes", f:"Frontal (coronal) plane divides into…", b:"anterior & posterior (front/back)"},
+  {c:"Cavities & planes", f:"Transverse plane divides into…", b:"superior & inferior (top/bottom)"},
+  // Intro & homeostasis
+  {c:"Intro & homeostasis", f:"Anatomy vs. physiology?", b:"structure vs. function"},
+  {c:"Intro & homeostasis", f:"Levels of organization, small → big", b:"chemical → cell → tissue → organ → organ system → organism"},
+  {c:"Intro & homeostasis", f:"Homeostasis is…", b:"keeping internal conditions constant"},
+  {c:"Intro & homeostasis", f:"The homeostatic loop, in order", b:"stimulus → receptor → control center → effector"},
+  {c:"Intro & homeostasis", f:"Negative feedback does what to a change?", b:"reverses it → maintains homeostasis", h:"body temp, blood glucose, blood pressure"},
+  {c:"Intro & homeostasis", f:"Positive feedback does what to a change?", b:"amplifies it (not homeostatic)", h:"childbirth, blood clotting, sneezing"},
+  {c:"Intro & homeostasis", f:"Fast control vs. slow control", b:"nervous system (fast) vs. endocrine (slow)"},
+  {c:"Intro & homeostasis", f:"Which life function is NOT needed for an individual to survive?", b:"reproduction", h:"needed for the species, not the individual"},
+  {c:"Intro & homeostasis", f:"Four survival needs", b:"nutrients, oxygen, water, + normal temp/pressure"},
+  // Cells
+  {c:"Cells", f:"Mitochondria do…", b:"make ATP (energy)"},
+  {c:"Cells", f:"Ribosomes do…", b:"build proteins"},
+  {c:"Cells", f:"The nucleus is…", b:"the control center — holds DNA"},
+  {c:"Cells", f:"The cell membrane is ___ permeable.", b:"selectively", h:"structure controls what passes → function"},
+  {c:"Cells", f:"ATP is…", b:"the usable energy currency of the cell"},
+  {c:"Cells", f:"Order of mitosis phases", b:"Prophase → Metaphase → Anaphase → Telophase (PMAT)"},
+  {c:"Cells", f:"Mitosis vs. meiosis", b:"body cells (growth/repair) vs. sex cells"},
+  {c:"Cells", f:"Cancer is…", b:"loss of control over cell growth/division"},
+  {c:"Cells", f:'"Genetic information" means…', b:"the DNA code that determines a cell's proteins & identity"},
+  // Tissues
+  {c:"Tissues", f:"The four tissue types", b:"epithelial · connective · muscle · nervous"},
+  {c:"Tissues", f:"Epithelial tissue: blood supply?", b:"avascular (no vessels); ~90% of cancers start here"},
+  {c:"Tissues", f:"Blood is which tissue type?", b:"connective", h:"the classic trick question"},
+  {c:"Tissues", f:"Examples of connective tissue", b:"bone, blood, adipose (fat), cartilage, tendons"},
+  {c:"Tissues", f:"The three muscle types", b:"skeletal (voluntary) · cardiac (heart) · smooth (hollow organs)"},
+  {c:"Tissues", f:"Cardiac & smooth muscle are…", b:"involuntary", h:"skeletal is voluntary"},
+  {c:"Tissues", f:"Nervous tissue is made of…", b:"neurons + glial (support) cells"},
+  {c:"Tissues", f:"Epithelium is named by…", b:"shape (squamous/cuboidal/columnar) × layers (simple/stratified)"},
+  {c:"Tissues", f:'"Stratified squamous" means…', b:"many layers of flat cells", h:"like your skin surface"},
+  {c:"Tissues", f:"The three germ layers → what they form", b:"endoderm→digestive lining · mesoderm→muscle/bone/vessels · ectoderm→skin+nervous"},
+  // Systems
+  {c:"Systems", f:"Integumentary system: main job?", b:"protect, regulate temp, make vitamin D (skin/hair/nails)"},
+  {c:"Systems", f:"Which system makes blood cells & stores minerals?", b:"skeletal"},
+  {c:"Systems", f:"Cardiovascular system: main job?", b:"transport O₂, nutrients, wastes (heart/blood/vessels)"},
+  {c:"Systems", f:"Endocrine system: main job?", b:"regulate the body with hormones (slow control)"},
+  {c:"Systems", f:"Nervous system: main job?", b:"detect & control — fast (brain, spinal cord, nerves)"}
+];
+
+/* ---- Component ---- */
+var cats = ["All"].concat(CARDS.map(function(c){return c.c;}).filter(function(v,i,a){return a.indexOf(v)===i;}));
+var filter="All", deck=[], pos=0, flipped=false, cardStatus={}, reviewOnly=false;
+var $=function(id){return document.getElementById(id);};
+
+function baseIndices(){
+  var arr=[];
+  CARDS.forEach(function(c,i){ if(filter==="All"||c.c===filter){ if(!reviewOnly||cardStatus[i]==="review") arr.push(i); }});
+  return arr;
+}
+function buildGroups(){
+  var g=$("groups"); g.innerHTML="";
+  cats.forEach(function(cat){
+    var b=document.createElement("button");
+    b.className="gchip"+(cat===filter?" on":""); b.textContent=cat;
+    b.onclick=function(){ filter=cat; reviewOnly=false; rebuild(); };
+    g.appendChild(b);
+  });
+}
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function rebuild(){ deck=baseIndices(); pos=0; flipped=false; buildGroups(); render(); }
+
+function tallies(){
+  var scope=baseIndicesAll(), g=0,r=0;
+  scope.forEach(function(i){ if(cardStatus[i]==="got")g++; else if(cardStatus[i]==="review")r++; });
+  $("tg").textContent="✓ "+g; $("tr").textContent="↺ "+r;
+}
+function baseIndicesAll(){ // ignores reviewOnly, for tallies within current filter
+  var arr=[]; CARDS.forEach(function(c,i){ if(filter==="All"||c.c===filter) arr.push(i); }); return arr;
+}
+
+function render(){
+  tallies();
+  if(deck.length===0){
+    $("play").hidden=true;
+    var d=$("done"); d.hidden=false;
+    d.innerHTML='<h2>'+(reviewOnly?"Nothing left to review — nice.":"No cards in this set.")+'</h2>'
+      +'<p class="note">'+(reviewOnly?"Every card here is marked ✓. Pick a group above or hit Restart.":"")+'</p>';
+    $("counter").textContent="0 / 0";
+    return;
+  }
+  $("done").hidden=true; $("play").hidden=false;
+  var i=deck[pos], card=CARDS[i];
+  $("counter").textContent=(pos+1)+" / "+deck.length;
+  $("cat").textContent=card.c;
+  $("side").textContent=flipped?"Answer":"Prompt";
+  $("face").className=flipped?"back-txt":"front-txt";
+  $("face").innerHTML=flipped ? (card.b + (card.h?'<span class="hint">'+card.h+'</span>':'')) : card.f;
+  $("tap").textContent=flipped?"tap to flip back":"tap to flip · or press Space";
+  $("prev").disabled=(pos===0); $("next").disabled=(pos===deck.length-1);
+}
+function flip(){ flipped=!flipped; render(); }
+function mark(s){ cardStatus[deck[pos]]=s; if(pos<deck.length-1){pos++;flipped=false;} else {flipped=false;} render(); }
+function move(d){ var n=pos+d; if(n>=0&&n<deck.length){pos=n;flipped=false;render();} }
+
+document.addEventListener("DOMContentLoaded",function(){
+  // (elements are static; wire directly)
+});
+$("card").onclick=flip;
+$("flip").onclick=flip;
+$("got").onclick=function(){mark("got");};
+$("rev").onclick=function(){mark("review");};
+$("prev").onclick=function(){move(-1);};
+$("next").onclick=function(){move(1);};
+$("shuffle").onclick=function(){shuffle(deck);pos=0;flipped=false;render();};
+$("restart").onclick=function(){cardStatus={};reviewOnly=false;rebuild();};
+$("drill").onclick=function(){reviewOnly=true;rebuild();};
+document.addEventListener("keydown",function(e){
+  if(e.code==="Space"){e.preventDefault();flip();}
+  else if(e.key==="ArrowRight"){move(1);}
+  else if(e.key==="ArrowLeft"){move(-1);}
+  else if(e.key==="g"||e.key==="G"){mark("got");}
+  else if(e.key==="r"||e.key==="R"){mark("review");}
+});
+rebuild();
+</script>
+
+<script>
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
