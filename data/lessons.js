@@ -92,10 +92,10 @@ window.STUDY_HUB = {
           lessons: [
             {
               title: "Early Civilizations & Urban Societies — Study Guide & Practice Quiz",
-              topic: "Mesopotamia, Egypt, and the Indus Valley — the first cities, writing, and empires",
+              topic: "Mesopotamia, Egypt & the Indus Valley — plus Hammurabi, Shang China, and the Olmec & Chavín",
               file: "lessons/ch03-early-civilizations-study-quiz.html",
-              date: "2026-09-10",
-              summary: "What makes a 'civilization,' then a walk through Sumer & the first empire, Egypt's pharaohs and kingdoms, and the Indus valley cities — plus a compare-the-three table and a 22-question quiz with click-to-reveal answers.",
+              date: "2026-09-12",
+              summary: "What makes a 'civilization,' then Sumer & the first empire, Egypt's pharaohs, and the Indus cities — now extended to Hammurabi's law code, Shang China (oracle bones), and the Americas' Olmec & Chavín, with compare tables and a 25-question quiz (click-to-reveal answers).",
               tags: ["study guide", "practice quiz"]
             }
           ]
