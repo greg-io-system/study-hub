@@ -12,33 +12,25 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-09-07",
-  label: "Week of Sep 7 – Sep 11",
+  updated: "2026-09-12",
+  label: "Week of Sep 14 – Sep 18",
   items: [
     {
-      day: "Tue", date: "2026-09-08",
-      subject: null, subjectName: "AP Psychology",
-      what: "AMSCO reading pp. 53–58 & 71–98 — due Tuesday"
+      day: "Mon", date: "2026-09-14",
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "Parent Functions & Transformations (optional) — due Monday 11:59pm",
+      help: "Transformations Explorer — drag a, h, k and watch the graph",
+      helpFile: "lessons/transformations-of-functions.html"
     },
     {
-      day: "Wed", date: "2026-09-09",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Tissue Box Project — due Wednesday 8:00am",
-      help: "Project guide — rubric decoded + slide map",
-      helpFile: "lessons/hap-tissue-box-project-guide.html"
+      day: "Thu", date: "2026-09-17",
+      subject: null, subjectName: "French",
+      what: "Optional Passé Composé practice — due Thursday 12:00pm"
     },
     {
-      day: "Fri", date: "2026-09-11",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Unit 1 Exam (Intro & Tissues) — Friday",
-      help: "Exam-prep study guide + practice quiz",
-      helpFile: "lessons/hap-unit-1-intro-tissues-study-quiz.html"
+      day: "Fri", date: "2026-09-18",
+      subject: null, subjectName: "French",
+      what: "Four items due Friday 10:00am — reflexive verbs, reflexives in the passé composé, passé composé with être, futur proche"
     }
-  ],
-  ahead: [
-    { date: "2026-09-17", subjectName: "French",
-      what: "Optional Passé Composé practice due Thu Sep 17" },
-    { date: "2026-09-18", subjectName: "French",
-      what: "Four items due Fri Sep 18, 10:00am — reflexive verbs, reflexives in the passé composé, passé composé with être, futur proche" }
   ]
 };
