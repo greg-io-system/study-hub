@@ -98,6 +98,11 @@
     // staleness guard: a wrong week is worse than none
     var age = (Date.now() - new Date(wk.updated+"T12:00:00").getTime())/86400000;
     if(isNaN(age) || age > 7) return;
+    // elapsed-week guard: hide once the last dated item has fully passed, even
+    // if the file is <7 days old (a finished week is as wrong as a stale one).
+    var lastDay=0;
+    wk.items.forEach(function(it){ if(it.date){ var t=new Date(it.date+"T23:59:59").getTime(); if(t>lastDay) lastDay=t; } });
+    if(lastDay && Date.now() > lastDay) return;
 
     function accentOf(id){ var s=id?findSubject(id):null; return (s&&s.accent)||"var(--ink-soft)"; }
 

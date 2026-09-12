@@ -151,7 +151,7 @@ window.STUDY_HUB = {
                 { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/hap-unit-1-intro-tissues-study-quiz.html" },
                 { kind: "practice", label: "Flashcards", file: "lessons/hap-unit-1-flashcards.html" },
                 { kind: "link", label: "Class slides (opens in Google)", url: "https://docs.google.com/presentation/d/16BiH9YlzvMtYfgOBeMjjxFQO1n1g1IslkwMUuIwOxBE/" },
-                { kind: "link", label: "Mrs. Kalec's exam review", url: "https://docs.google.com/document/d/1VbZ3psGS1S5t801TrilsQqm_CreC99YOYIF_HmIpjts/" }
+                { kind: "link", label: "Mrs. K's exam review", url: "https://docs.google.com/document/d/1VbZ3psGS1S5t801TrilsQqm_CreC99YOYIF_HmIpjts/" }
               ]
             },
             {
@@ -186,7 +186,7 @@ window.STUDY_HUB = {
               topic: "The class's rhetorical vocabulary, in one searchable place",
               file: "lessons/ap-lang-terms-library.html",
               date: "2026-09-10",
-              summary: "Every term Mr. Evans uses — his framework (argument continuum, GI, the Constitution, voice-not-opinion), the rhetorical terms (exigence, anaphora, framing device, hypophora, cause & effect, correlation vs. causation), and his stems & moves — each with a plain meaning and how it shows up in class. Search it; it grows as the class does.",
+              summary: "Every term Mr. E uses — his framework (argument continuum, GI, the Constitution, voice-not-opinion), the rhetorical terms (exigence, anaphora, framing device, hypophora, cause & effect, correlation vs. causation), and his stems & moves — each with a plain meaning and how it shows up in class. Search it; it grows as the class does.",
               tags: ["reference", "vocabulary"]
             }
           ]

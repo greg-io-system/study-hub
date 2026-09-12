@@ -1,6 +1,9 @@
 # Study Hub -- CLAUDE.md
-# Version: 0.2
+# Version: 0.3
 # Created: 2026-08-28
+# Updated: 2026-09-12 (v0.3 -- corrected the lessons/*.html line: lessons are
+#   fully self-contained with inline CSS and do NOT link ../styles.css; that
+#   stylesheet is the hub shell only. Doc had claimed otherwise.)
 # Updated: 2026-08-30 (v0.2 -- documented the multi-class workshop model:
 #   the hub is the shared delivery surface for N per-class projects, and
 #   each lesson's source of truth is its workshop repo, not this one.)
@@ -111,9 +114,10 @@ Full detail: DEPLOY.md.
   blurb, lessons:[...] }] }. Lessons are listed NEWEST-FIRST. The hub
   renders the TOC from this manifest client-side (loaded via <script src>),
   so it works on the live site and when opened locally.
-- lessons/*.html -- one self-contained page per lesson. Links ../styles.css.
-  No build step, no framework, no external dependencies (Google Fonts is the
-  only allowed remote).
+- lessons/*.html -- one FULLY self-contained page per lesson (inline CSS).
+  Lessons do NOT link ../styles.css -- that stylesheet is the hub shell
+  (index.html) only. No build step, no framework, no external dependencies
+  (Google Fonts is the only allowed remote).
 - To add a lesson: drop the self-contained .html into lessons/, then prepend
   its entry to the matching subject's `lessons` array in data/lessons.js.
 - EXTERNAL CLASS MATERIALS (added 2026-09-07): a lesson's `materials` entry

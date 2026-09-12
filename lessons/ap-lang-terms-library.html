@@ -42,9 +42,9 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow">AP English · Mr. Evans</div>
+  <div class="eyebrow">AP English · Mr. E</div>
   <h1>TERMS Library</h1>
-  <p class="tagline">The rhetorical vocabulary of the class in one place — search it, and add your own as you go. Each term has a plain meaning and how it actually shows up in Mr. Evans's world. This is the "library" he keeps asking about.</p>
+  <p class="tagline">The rhetorical vocabulary of the class in one place — search it, and add your own as you go. Each term has a plain meaning and how it actually shows up in Mr. E's world. This is the "library" he keeps asking about.</p>
 
   <div class="controls">
     <input type="search" id="q" placeholder="Search a term, e.g. exigence, cause, anaphora…" autocomplete="off">
@@ -60,17 +60,17 @@
 "use strict";
 (function(){
   /* Add a term: {t: name, g: group, d: definition, e: how it shows up in class (HTML ok)}.
-     Groups: "Evans" (his framework) | "Rhetoric" (AP terms) | "Moves" (stems & moves). */
+     Groups: "Class" (his framework) | "Rhetoric" (AP terms) | "Moves" (stems & moves). */
   var TERMS = [
-    // --- Mr. Evans's framework ---
-    {t:"Argument Continuum", g:"Evans", d:"Mr. Evans's map of where a position sits in a conversation. The extremes and the wishy-washy middle (his \"100s\" and \"50\") are the spots that \"don't demand thinking.\" The goal is a nuanced position between the poles.", e:"\"Any conversation hovering over the 100 or the 50 should be challenged.\" Depth lives in the space between."},
-    {t:"Group Interactivity (GI)", g:"Evans", d:"The quality of your contribution to class conversation — adding depth and asking the next question instead of making \"lateral moves.\" It's graded.", e:"\"Major GI Day.\" Being additive, not just present."},
-    {t:"The Constitution / Constituent", g:"Evans", d:"The class treated as a deliberative body. Each student is a \"Constituent\" who challenges shallow contributions and helps everyone figure out what they really think.", e:"\"The Constitution can provide an opportunity to figure out what you really think, and even what you think about what you think.\""},
-    {t:"Library (of sources)", g:"Evans", d:"Your personal collection of the texts and voices from class, kept so you can \"surround YOUR positions\" with evidence. He keeps asking how you're tracking it.", e:"\"Your Library of Sources: How are you keeping track?\" (This page is part of that library.)"},
-    {t:"TERMS / Thinking notes", g:"Evans", d:"His note-taking system: a dedicated place for rhetorical terms and for your own thinking. He asks where you keep them.", e:"\"There will be a TERMS moment later… Where are you putting TERMS? Library? Thinking notes?\""},
-    {t:"Voice (not opinion)", g:"Evans", d:"An AP Lang student is expected to have a VOICE — the position you arrive at after weighing other viewpoints — rather than a gut opinion. A voice is earned by listening.", e:"\"An AP Lang student is expected to have a voice (not an opinion)… the position in which you find yourself after evaluating the other points of view.\""},
-    {t:"\"Answered question\" (the trap)", g:"Evans", d:"A passive, surface-level response that closes a question off instead of opening the next one. The opposite of development.", e:"\"A passive and superficial 'answered question' would do a disservice to the conversation.\""},
-    {t:"Enter the conversation", g:"Evans", d:"His reframe of the AP prompt: you're not asked to \"answer\" a topic that has no decisive answer — you're asked to enter an ongoing conversation with your own position that accounts for other voices.", e:"\"They are not asking you to decisively answer the topic; they are asking you to enter the conversation.\""},
+    // --- Mr. E's framework ---
+    {t:"Argument Continuum", g:"Class", d:"Mr. E's map of where a position sits in a conversation. The extremes and the wishy-washy middle (his \"100s\" and \"50\") are the spots that \"don't demand thinking.\" The goal is a nuanced position between the poles.", e:"\"Any conversation hovering over the 100 or the 50 should be challenged.\" Depth lives in the space between."},
+    {t:"Group Interactivity (GI)", g:"Class", d:"The quality of your contribution to class conversation — adding depth and asking the next question instead of making \"lateral moves.\" It's graded.", e:"\"Major GI Day.\" Being additive, not just present."},
+    {t:"The Constitution / Constituent", g:"Class", d:"The class treated as a deliberative body. Each student is a \"Constituent\" who challenges shallow contributions and helps everyone figure out what they really think.", e:"\"The Constitution can provide an opportunity to figure out what you really think, and even what you think about what you think.\""},
+    {t:"Library (of sources)", g:"Class", d:"Your personal collection of the texts and voices from class, kept so you can \"surround YOUR positions\" with evidence. He keeps asking how you're tracking it.", e:"\"Your Library of Sources: How are you keeping track?\" (This page is part of that library.)"},
+    {t:"TERMS / Thinking notes", g:"Class", d:"His note-taking system: a dedicated place for rhetorical terms and for your own thinking. He asks where you keep them.", e:"\"There will be a TERMS moment later… Where are you putting TERMS? Library? Thinking notes?\""},
+    {t:"Voice (not opinion)", g:"Class", d:"An AP Lang student is expected to have a VOICE — the position you arrive at after weighing other viewpoints — rather than a gut opinion. A voice is earned by listening.", e:"\"An AP Lang student is expected to have a voice (not an opinion)… the position in which you find yourself after evaluating the other points of view.\""},
+    {t:"\"Answered question\" (the trap)", g:"Class", d:"A passive, surface-level response that closes a question off instead of opening the next one. The opposite of development.", e:"\"A passive and superficial 'answered question' would do a disservice to the conversation.\""},
+    {t:"Enter the conversation", g:"Class", d:"His reframe of the AP prompt: you're not asked to \"answer\" a topic that has no decisive answer — you're asked to enter an ongoing conversation with your own position that accounts for other voices.", e:"\"They are not asking you to decisively answer the topic; they are asking you to enter the conversation.\""},
 
     // --- Rhetorical terms (AP) ---
     {t:"Exigence", g:"Rhetoric", d:"The urgent reason a writer feels compelled to speak — the spark that makes this argument necessary now. Strong writing has it; so should you.", e:"\"Note: Scott Galloway has EXIGENCE. This is an early opportunity to find your own EXIGENCE within someone else's.\""},
@@ -88,14 +88,14 @@
     {t:"Risk = hazard + outrage", g:"Rhetoric", d:"Peter Sandman's framework: how risky something feels equals the real hazard PLUS how outraged people are. It explains why perceived danger and actual danger often don't match.", e:"The 9/3 class (\"Risk, Hazard, Outrage\"). \"When hazard is high and outrage is low, people…\""},
 
     // --- Stems & moves ---
-    {t:"\"____ ; however, ____\"", g:"Moves", d:"Mr. Evans's signature pivot: state an idea, then turn to the complicating counter-idea. The basic engine of developing a thought instead of leaving it flat.", e:"He models it constantly: \"every time I watch the talk… HOWEVER, I wonder what 'love' will mean.\""},
+    {t:"\"____ ; however, ____\"", g:"Moves", d:"Mr. E's signature pivot: state an idea, then turn to the complicating counter-idea. The basic engine of developing a thought instead of leaving it flat.", e:"He models it constantly: \"every time I watch the talk… HOWEVER, I wonder what 'love' will mean.\""},
     {t:"\"Ostensibly…\"", g:"Moves", d:"A hedge that flags the apparent, surface reading of something — so you can then complicate it or show what's really going on underneath.", e:"Listed among the \"tools within your writerly tool box.\""},
     {t:"They Say / I Say stems", g:"Moves", d:"Templates for entering a conversation: first summarize what others say, then position your own view in response. Keeps you in dialogue instead of monologue.", e:"\"…or your notes or the AP They Say I Say stems.\" Pairs with \"enter the conversation.\""},
     {t:"A source \"as a voice in the room\"", g:"Moves", d:"Synthesis: bring an author into your own argument as a participant, not just a citation — let them speak alongside your position.", e:"\"Within your response, please use Galloway's talk as a voice in the room,\" plus one other: \"Marano asserts that the cause… is ____.\""},
     {t:"\"Do we love you enough to ___?\"", g:"Moves", d:"His current recurring lens (borrowed from Galloway's \"Do we love our children?\") for pushing on the generation/AI conversation from the inside.", e:"\"Use the stem 'Do we love you enough to ______?' as an entry point into YOUR generation's position within the AI conversation.\""}
   ];
 
-  var GROUPS = {Evans:"Mr. Evans's framework", Rhetoric:"Rhetorical terms", Moves:"Stems & moves"};
+  var GROUPS = {Class:"Mr. E's framework", Rhetoric:"Rhetorical terms", Moves:"Stems & moves"};
   var filter="All", query="";
   var $=function(id){return document.getElementById(id);};
 
@@ -104,7 +104,7 @@
 
   function cats(){
     var c=$("cats"); c.innerHTML="";
-    ["All","Evans","Rhetoric","Moves"].forEach(function(k){
+    ["All","Class","Rhetoric","Moves"].forEach(function(k){
       var b=document.createElement("button");
       b.className="cat"+(filter===k?" on":"");
       b.textContent = k==="All" ? "All" : GROUPS[k];
