@@ -260,6 +260,31 @@ window.STUDY_HUB = {
           ]
         }
       ]
+    },
+    {
+      id: "ap-french",
+      name: "French",
+      accent: "#0d8f86",
+      blurb: "Grammar that actually sticks — build the conjugations, watch the endings agree, and get a feel for which tense to use when.",
+      weeks: [
+        {
+          range: "Sep 14 – Sep 18",
+          theme: "Passé composé · être & reflexive verbs",
+          lessons: [
+            {
+              title: "Passé composé with être & reflexive verbs",
+              topic: "When the helper is être, past-participle agreement, and reflexive verbs — plus futur proche",
+              file: "lessons/passe-compose-etre-reflexive.html",
+              date: "2026-09-14",
+              summary: "For this week's Friday cluster. Build a passé composé and watch the ending agree with the subject, see the être-verb list (DR & MRS VANDERTRAMP), work the reflexive-verb pattern, and get quick futur-proche and imparfait-vs-passé-composé refreshers — then a 5-question self-check.",
+              tags: ["passé composé", "reflexive verbs", "interactive"],
+              materials: [
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/passe-compose-etre-reflexive.html" }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 };

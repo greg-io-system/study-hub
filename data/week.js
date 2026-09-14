@@ -50,13 +50,17 @@ window.STUDY_WEEK = {
     },
     {
       day: "Thu", date: "2026-09-17",
-      subject: null, subjectName: "French",
-      what: "Optional Passé Composé practice — due Thursday 12:00pm"
+      subject: "ap-french", subjectName: "French",
+      what: "Optional Passé Composé practice — due Thursday 12:00pm",
+      help: "Passé composé with être & reflexive verbs — build one and watch it agree",
+      helpFile: "lessons/passe-compose-etre-reflexive.html"
     },
     {
       day: "Fri", date: "2026-09-18",
-      subject: null, subjectName: "French",
-      what: "Four items due Friday 10:00am — reflexive verbs, reflexives in the passé composé, passé composé with être, futur proche"
+      subject: "ap-french", subjectName: "French",
+      what: "Four items due Friday 10:00am — reflexive verbs, reflexives in the passé composé, passé composé with être, futur proche",
+      help: "Passé composé with être & reflexive verbs (covers the whole cluster)",
+      helpFile: "lessons/passe-compose-etre-reflexive.html"
     }
   ]
 };
