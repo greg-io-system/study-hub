@@ -107,7 +107,8 @@ window.STUDY_HUB = {
               tags: ["study guide", "practice quiz"],
               materials: [
                 { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/ch03-early-civilizations-study-quiz.html" },
-                { kind: "link", label: "Class: First Civilizations notes (slides)", url: "https://docs.google.com/presentation/d/1zjUHpZa47P0AoXCpFyZNFjG5Oc3_Peh5Y-2G0UU3mbU/" }
+                { kind: "link", label: "Class: First Civilizations notes (slides)", url: "https://docs.google.com/presentation/d/1zjUHpZa47P0AoXCpFyZNFjG5Oc3_Peh5Y-2G0UU3mbU/" },
+                { kind: "link", label: "Class: Daily slides — the running class deck", url: "https://docs.google.com/presentation/d/1xwwDRYKpPQ0cdo8ZWSX5k72opJkU3DhrrJKyLT7n8IQ/" }
               ]
             }
           ]
