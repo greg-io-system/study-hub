@@ -12,7 +12,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-09-12",
+  updated: "2026-09-14",
   label: "Week of Sep 14 – Sep 18",
   items: [
     {
@@ -21,6 +21,32 @@ window.STUDY_WEEK = {
       what: "Parent Functions & Transformations (optional) — due Monday 11:59pm",
       help: "Transformations Explorer — drag a, h, k and watch the graph",
       helpFile: "lessons/transformations-of-functions.html"
+    },
+    {
+      day: "Mon", date: "2026-09-14",
+      subject: "world-history", subjectName: "World History",
+      what: "Belief Systems + Early Civilizations Quiz — due Monday 11:59pm",
+      help: "Hammurabi's Code — order, kingship & the gods (the religion-and-government idea)",
+      helpFile: "lessons/hammurabi-law-kingship-gods.html"
+    },
+    {
+      day: "Mon", date: "2026-09-14",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Unit 2 (Integumentary) begins — skin layers; Lab 7",
+      help: "The Layers of Skin — tap the cross-section, ride the epidermis 'escalator'",
+      helpFile: "lessons/integumentary-skin-layers.html"
+    },
+    {
+      day: "Mon", date: "2026-09-14",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "Unit 1 Test — Approaches & Research Methods — due Monday",
+      help: "Statistics, Made Intuitive — the stats half of the test",
+      helpFile: "lessons/research-methods-statistics.html"
+    },
+    {
+      day: "Tue", date: "2026-09-15",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "ASMCO Topics 1.1 and 1.2 — due Tuesday"
     },
     {
       day: "Thu", date: "2026-09-17",
