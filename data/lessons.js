@@ -104,7 +104,11 @@ window.STUDY_HUB = {
               file: "lessons/ch03-early-civilizations-study-quiz.html",
               date: "2026-09-12",
               summary: "What makes a 'civilization,' then Sumer & the first empire, Egypt's pharaohs, and the Indus cities — now extended to Hammurabi's law code, Shang China (oracle bones), and the Americas' Olmec & Chavín, with compare tables and a 25-question quiz (click-to-reveal answers).",
-              tags: ["study guide", "practice quiz"]
+              tags: ["study guide", "practice quiz"],
+              materials: [
+                { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/ch03-early-civilizations-study-quiz.html" },
+                { kind: "link", label: "Class: First Civilizations notes (slides)", url: "https://docs.google.com/presentation/d/1zjUHpZa47P0AoXCpFyZNFjG5Oc3_Peh5Y-2G0UU3mbU/" }
+              ]
             }
           ]
         },
