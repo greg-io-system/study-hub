@@ -156,7 +156,8 @@ window.STUDY_HUB = {
               summary: "Tap a cross-section to explore each skin layer, then ride the 'cell escalator' up through the five epidermal strata — with a mnemonic and an epidermis-metaphor starter for that assignment. Ends with a 5-question self-check.",
               tags: ["integumentary", "skin", "interactive"],
               materials: [
-                { kind: "lesson", label: "Interactive lesson", file: "lessons/integumentary-skin-layers.html" }
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/integumentary-skin-layers.html" },
+                { kind: "link", label: "Class: Integumentary System notes (slides)", url: "https://docs.google.com/presentation/d/1ErS-CL_g6taB8OuPBTb9NtQDA7Hoo3PQUC8P9kxW8hQ/" }
               ]
             }
           ]
