@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Layers of Skin &middot; Human Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#b5445a;--accent-soft:#f6e3e7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.6em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.2em 0 .3em}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul{padding-left:22px;margin:.4em 0}
+li{margin:.25em 0}
+.big{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:14px;padding:16px 20px;margin:16px 0}
+.big b{color:var(--accent)}
+.note{color:var(--soft);font-size:14px}
+.explorer{display:grid;grid-template-columns:300px 1fr;gap:18px;margin:16px 0;align-items:start}
+@media(max-width:620px){.explorer{grid-template-columns:1fr}}
+.diagram{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:12px}
+.band{cursor:pointer;transition:filter .12s}
+.band:hover{filter:brightness(1.06)}
+.band text{pointer-events:none;font:700 12px Nunito,sans-serif;fill:#fff}
+.band.dim{opacity:.45}
+.panel{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;min-height:150px}
+.panel h3{margin-top:0;color:var(--accent)}
+.chip{display:inline-block;font-weight:800;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 8px;margin-bottom:6px}
+.strata{list-style:none;padding:0;margin:12px 0}
+.strata li{border:1.5px solid var(--line);border-radius:10px;margin:7px 0;padding:0;overflow:hidden;background:var(--paper2)}
+.strata button{width:100%;text-align:left;border:0;background:transparent;font:800 15px Nunito,sans-serif;color:var(--ink);padding:11px 14px;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.strata button:hover{background:var(--accent-soft)}
+.strata .lvl{font-weight:800;font-size:12px;color:var(--soft)}
+.strata .body{padding:0 14px;max-height:0;overflow:hidden;transition:max-height .2s ease;font-size:15px}
+.strata li.open .body{max-height:260px;padding:0 14px 12px}
+.mnem{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:12px;padding:12px 16px;margin:14px 0;font-size:15px}
+.mnem b{color:var(--accent)}
+.q{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.qn{font-weight:800;color:var(--accent);margin-right:6px}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user-select:none}
+summary:hover{text-decoration:underline}
+.ans{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:10px;padding:10px 14px;margin-top:8px;font-size:15px}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Human Anatomy &middot; Unit 2: Integumentary</div>
+  <h1>The Layers of Skin</h1>
+  <p class="tagline">Skin isn't one thing &mdash; it's a stack. Tap a layer in the diagram to see what it does, then ride the "escalator" up through the epidermis.</p>
+
+  <div class="big">
+    <b>The three main layers, top to bottom:</b>
+    <ul style="margin:.4em 0 0">
+      <li><b>Epidermis</b> &mdash; the thin, tough outer sheet you can see and touch. No blood vessels.</li>
+      <li><b>Dermis</b> &mdash; the thick living layer underneath: blood vessels, nerves, glands, hair roots.</li>
+      <li><b>Hypodermis</b> (subcutaneous) &mdash; fat that cushions, insulates, and anchors skin to the body.</li>
+    </ul>
+  </div>
+
+  <h2>Tap the skin &mdash; explore the layers</h2>
+  <div class="explorer">
+    <div class="diagram">
+      <svg viewBox="0 0 300 360" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Cross-section of skin">
+        <g class="band" data-layer="epidermis">
+          <rect x="10" y="10" width="280" height="70" rx="4" fill="#c9788a"/>
+          <text x="150" y="50" text-anchor="middle">EPIDERMIS</text>
+        </g>
+        <g class="band" data-layer="dermis">
+          <rect x="10" y="84" width="280" height="150" rx="4" fill="#a94258"/>
+          <text x="150" y="163" text-anchor="middle">DERMIS</text>
+        </g>
+        <g class="band" data-layer="hypodermis">
+          <rect x="10" y="238" width="280" height="110" rx="4" fill="#e0b15e"/>
+          <text x="150" y="297" text-anchor="middle" fill="#5a3d12">HYPODERMIS (fat)</text>
+        </g>
+        <!-- little structures, decorative -->
+        <circle cx="60" cy="150" r="7" fill="#7a2b3c"/><circle cx="60" cy="150" r="3" fill="#e0b15e"/>
+        <rect x="200" y="96" width="8" height="130" rx="4" fill="#7a2b3c"/>
+        <path d="M120 100 q6 60 -4 120" stroke="#f0c0cb" stroke-width="4" fill="none"/>
+      </svg>
+      <p class="note" style="margin:.4em 6px 0">Not to scale &mdash; the epidermis is really the thinnest layer.</p>
+    </div>
+    <div class="panel" id="panel">
+      <span class="chip">Start here</span>
+      <h3>Pick a layer &rarr;</h3>
+      <p>Tap <b>Epidermis</b>, <b>Dermis</b>, or <b>Hypodermis</b> in the diagram to see what each layer is made of and what job it does.</p>
+    </div>
+  </div>
+
+  <h2>Inside the epidermis: the cell escalator</h2>
+  <p>Here's the single most useful idea for this unit. The epidermis is built from <b>keratinocytes</b>
+  &mdash; cells that make the tough protein <b>keratin</b>. New cells are born at the <b>bottom</b>, and as
+  more are made they get <b>pushed up</b>. On the way up they fill with keratin, flatten, and <b>die</b>,
+  so the surface of your skin is actually a layer of <b>dead, hardened cells</b> that constantly flake
+  off and get replaced.</p>
+
+  <div class="mnem">
+    <b>The escalator metaphor:</b> think of a factory in the basement making cells, an escalator carrying
+    them up, and the cells "hardening into bricks" as they ride &mdash; by the top they're a dead, waterproof
+    <b>brick wall</b> that slowly crumbles off the surface. <span class="note">(Your class has an "Epidermis
+    Metaphor" assignment &mdash; this is one example. Yours can be totally different: an assembly line, a
+    conveyor of bread going stale, a snake shedding&hellip; the point is to capture <em>born&nbsp;&rarr;&nbsp;rise&nbsp;&rarr;&nbsp;harden&nbsp;&rarr;&nbsp;die&nbsp;&rarr;&nbsp;shed</em>.)</span>
+  </div>
+
+  <p class="note">Tap each layer &mdash; deepest (bottom of the escalator) to surface (top):</p>
+  <ul class="strata" id="strata"></ul>
+
+  <div class="mnem">
+    <b>Memory trick (deep&nbsp;&rarr;&nbsp;surface):</b> <b>B</b>asale &middot; <b>S</b>pinosum &middot;
+    <b>G</b>ranulosum &middot; <b>L</b>ucidum &middot; <b>C</b>orneum &rarr;
+    &ldquo;<b>B</b>ig <b>S</b>ophia <b>G</b>ave <b>L</b>uke <b>C</b>orn.&rdquo;
+    <br><span class="note">Stratum <b>lucidum</b> only appears in <b>thick skin</b> (palms &amp; soles).</span>
+  </div>
+
+  <h2>Two quick jobs to remember</h2>
+  <ul>
+    <li><b>Melanocytes</b> sit down in the <b>stratum basale</b> and make <b>melanin</b>, the pigment that
+    colors skin and shields the deeper cells from UV.</li>
+    <li>The <b>dermis</b> holds the <b>dermal papillae</b> &mdash; the ridges that push up into the epidermis
+    and give you <b>fingerprints</b> (that's next week).</li>
+  </ul>
+
+  <h2>Check yourself</h2>
+  <div class="q"><p><span class="qn">1</span>Which is the correct order from the body's <b>surface inward</b>?</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Epidermis &rarr; dermis &rarr; hypodermis.</b> Outer sheet, then the thick living layer, then the fat.</div></details></div>
+  <div class="q"><p><span class="qn">2</span>Why does the very surface of your skin feel dry/tough and flake off?</p>
+    <details><summary>Show answer</summary><div class="ans">The surface is the <b>stratum corneum</b> &mdash; layers of <b>dead, keratin-filled cells</b> that have ridden up the "escalator," died, and are shedding. New cells from the basale replace them.</div></details></div>
+  <div class="q"><p><span class="qn">3</span>New epidermal cells are made in which layer &mdash; and what pigment cell also lives there?</p>
+    <details><summary>Show answer</summary><div class="ans">The <b>stratum basale</b> (deepest). <b>Melanocytes</b> live there and make <b>melanin</b>.</div></details></div>
+  <div class="q"><p><span class="qn">4</span>The epidermis has no blood vessels. Which layer delivers its nutrients?</p>
+    <details><summary>Show answer</summary><div class="ans">The <b>dermis</b> &mdash; its blood vessels feed the living cells at the bottom of the epidermis by diffusion.</div></details></div>
+  <div class="q"><p><span class="qn">5</span>Put the five epidermal strata in order, deep to surface.</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Basale &rarr; Spinosum &rarr; Granulosum &rarr; Lucidum (thick skin only) &rarr; Corneum.</b> ("Big Sophia Gave Luke Corn.")</div></details></div>
+
+  <p class="note" style="margin-top:22px">Original study explainer for Unit 2 (Integumentary). General anatomy of the skin; no class handout text is reproduced &mdash; use it alongside your teacher's notes.</p>
+
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+"use strict";
+(function(){
+  var LAYERS={
+    epidermis:{t:"Epidermis",b:"The thin, tough outer sheet — the part you see and touch. Made of dead-and-dying keratinocytes stacked in layers. <b>No blood vessels</b> up here. Its job: a waterproof, germ-proof <b>barrier</b>, and it makes the pigment that colors and UV-protects your skin."},
+    dermis:{t:"Dermis",b:"The thick <b>living</b> layer beneath the epidermis. Packed with <b>collagen &amp; elastin</b> (strength + stretch), <b>blood vessels</b>, <b>nerve endings</b> (touch, pain, temperature), <b>hair follicles</b>, and <b>sweat &amp; oil glands</b>. This is where most of the action is."},
+    hypodermis:{t:"Hypodermis (subcutaneous layer)",b:"Mostly <b>fat</b>. It <b>cushions</b> against bumps, <b>insulates</b> to keep heat in, stores energy, and <b>anchors</b> the skin to the muscle and bone underneath. Technically below the skin proper, but always studied with it."}
+  };
+  var STRATA=[
+    {t:"Stratum corneum",lvl:"surface (top)",b:"20–30 layers of flat, <b>dead</b>, keratin-filled cells. This is the actual barrier: waterproof and constantly <b>flaking off</b> and being replaced (a full turnover takes weeks)."},
+    {t:"Stratum lucidum",lvl:"thick skin only",b:"A thin, clear band found <b>only in thick skin</b> — palms of the hands and soles of the feet. Extra dead, flattened cells for extra wear."},
+    {t:"Stratum granulosum",lvl:"middle",b:"Cells start to <b>die here</b> and fill with granules of keratin. This is where skin becomes waterproof — the cells release a lipid \"glue\" that seals the barrier."},
+    {t:"Stratum spinosum",lvl:"upper-middle",b:"Several layers of cells held tightly together by strong junctions (they look spiny under a microscope). Gives the epidermis its <b>strength and flexibility</b>."},
+    {t:"Stratum basale",lvl:"deepest (bottom)",b:"The <b>factory floor</b>. New keratinocytes are made here by cell division and pushed upward. <b>Melanocytes</b> live here too, making the pigment <b>melanin</b>. Everything above starts here."}
+  ];
+
+  var panel=document.getElementById("panel");
+  var bands=Array.prototype.slice.call(document.querySelectorAll(".band"));
+  function pick(k){
+    var d=LAYERS[k];if(!d)return;
+    panel.innerHTML='<span class="chip">'+k+'</span><h3>'+d.t+'</h3><p>'+d.b+'</p>';
+    bands.forEach(function(b){b.classList.toggle("dim",b.getAttribute("data-layer")!==k);});
+  }
+  bands.forEach(function(b){
+    b.addEventListener("click",function(){pick(b.getAttribute("data-layer"));});
+  });
+
+  var ul=document.getElementById("strata");
+  STRATA.forEach(function(s){
+    var li=document.createElement("li");
+    var btn=document.createElement("button");
+    btn.innerHTML='<span>'+s.t+'</span><span class="lvl">'+s.lvl+'</span>';
+    var body=document.createElement("div");
+    body.className="body";body.innerHTML="<p>"+s.b+"</p>";
+    btn.addEventListener("click",function(){li.classList.toggle("open");});
+    li.appendChild(btn);li.appendChild(body);ul.appendChild(li);
+  });
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>

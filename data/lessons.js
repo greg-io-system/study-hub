@@ -40,7 +40,7 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       weeks: [
         {
-          range: "Sep 7 – Sep 11",
+          range: "Sep 14 – Sep 18",
           theme: "Unit 1 · Transformations",
           lessons: [
             {
@@ -87,9 +87,17 @@ window.STUDY_HUB = {
       blurb: "The story behind the chapters — causes, people, and why it mattered, not just dates to memorize.",
       weeks: [
         {
-          range: "Sep 7 – Sep 11",
-          theme: "Ch. 3 · Early Civilizations",
+          range: "Sep 14 – Sep 18",
+          theme: "Ch. 3 · Early Civilizations → Belief Systems",
           lessons: [
+            {
+              title: "Hammurabi's Code — Order, Kingship & the Gods",
+              topic: "What the law code was for, and why a king said his power came from the gods",
+              file: "lessons/hammurabi-law-kingship-gods.html",
+              date: "2026-09-14",
+              summary: "For the Belief Systems thread: the Code's real purpose (a stable, orderly society), how punishment differed by social class, and Hammurabi's claim that Marduk and the gods gave him the law — the religion-and-government link — plus a 5-question self-check.",
+              tags: ["belief systems", "mesopotamia", "study guide"]
+            },
             {
               title: "Early Civilizations & Urban Societies — Study Guide & Practice Quiz",
               topic: "Mesopotamia, Egypt & the Indus Valley — plus Hammurabi, Shang China, and the Olmec & Chavín",
@@ -136,6 +144,23 @@ window.STUDY_HUB = {
       accent: "#b5445a",
       blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
       weeks: [
+        {
+          range: "Sep 14 – Sep 18",
+          theme: "Unit 2 · Integumentary System",
+          lessons: [
+            {
+              title: "The Layers of Skin",
+              topic: "Epidermis, dermis & hypodermis — plus the five epidermal strata",
+              file: "lessons/integumentary-skin-layers.html",
+              date: "2026-09-14",
+              summary: "Tap a cross-section to explore each skin layer, then ride the 'cell escalator' up through the five epidermal strata — with a mnemonic and an epidermis-metaphor starter for that assignment. Ends with a 5-question self-check.",
+              tags: ["integumentary", "skin", "interactive"],
+              materials: [
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/integumentary-skin-layers.html" }
+              ]
+            }
+          ]
+        },
         {
           range: "Sep 7 – Sep 11",
           theme: "Unit 1 · Intro & Tissues",
@@ -218,7 +243,7 @@ window.STUDY_HUB = {
       blurb: "Why people think and act the way they do — the approaches, the research methods, and the big ideas behind them.",
       weeks: [
         {
-          range: "Sep 8 – Sep 14",
+          range: "Sep 14 – Sep 18",
           theme: "Unit 1 · Research Methods & Statistics",
           lessons: [
             {
