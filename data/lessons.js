@@ -254,7 +254,15 @@ window.STUDY_HUB = {
               summary: "For the Unit 1 test. Drag data points and watch the mean/median/SD move (and see an outlier drag the mean), the 68–95–99.7 normal curve, skew, a correlation slider with a live scatterplot, and why correlation isn't causation — then a 6-question self-check.",
               tags: ["research methods", "statistics", "test prep"],
               materials: [
-                { kind: "lesson", label: "Interactive lesson", file: "lessons/research-methods-statistics.html" }
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/research-methods-statistics.html" },
+                { kind: "link", label: "Class: Research Methods study guide (slides)", url: "https://docs.google.com/presentation/d/1oNTs3M5kA-1Mj9P7En_OzxwKF61PjA8KS4Xh7No0b2o/" },
+                { kind: "link", label: "Class: Research Methods in Psychology, Unit 0 (slides)", url: "https://docs.google.com/presentation/d/1vr12A7S_1sQdSy1cbGFGW0O2I53fi9hQYRDW0zGhMHk/" },
+                { kind: "link", label: "Class: Practice test — Research Methods (slides)", url: "https://docs.google.com/presentation/d/1ZrzKAiROmLYjQYFwzsv5bVdiG7-s0bXzu3AB0Rab3es/" },
+                { kind: "link", label: "Video: Unit 0 full review — everything you need (35m)", url: "https://www.youtube.com/watch?v=P2o6rQgoZzY" },
+                { kind: "link", label: "Video: Research methods & design — Topic 2 (18m)", url: "https://www.youtube.com/watch?v=GjthAOIJuJg" },
+                { kind: "link", label: "Video: Psychological perspectives — Topic 1A (8m)", url: "https://www.youtube.com/watch?v=fbfhRKENScw" },
+                { kind: "link", label: "Video: Cognitive biases & culture — Topic 1B (9m)", url: "https://www.youtube.com/watch?v=sUAGsWEA8TQ" },
+                { kind: "link", label: "Quizlet flashcards (AP Psych 26/27)", url: "https://quizlet.com/join/EGfSAhshw?i=49t07x&x=1bqt" }
               ]
             }
           ]
