@@ -113,10 +113,10 @@ sup{font-size:.7em}
     var a=document.createElement('a');
     a.href='../index.html#'+encodeURIComponent(id);
     a.textContent='← Back to Study Hub';
-    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
     a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
     a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
-    document.body.insertBefore(a,document.body.firstChild);
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
   }catch(e){}
 })();
 </script>
