@@ -160,6 +160,13 @@ this automatically; if publishing by hand, do it yourself.
 - Static only. No build step, no framework, no node dependencies.
 - Personal data: the student's first name ("Kelly") only. No email, phone,
   last name, or other personal data in the repo (it is public).
+- Teacher names: use FULL SURNAMES on the hub and in lessons -- "Mr. Evans",
+  "Mrs. Kalec", etc. (NOT abbreviated "Mr. E" / "Mrs. K"). A 2026-09-12 pass
+  abbreviated them as a privacy measure; that was a MISPLACED privacy concern
+  and Greg reverted it 2026-09-14 -- a teacher's surname is public (staff
+  directory) and the hub is noindexed; it is a style/consistency matter, not a
+  privacy gate. Only the STUDENT's data is the privacy line (above). Do not
+  re-abbreviate teacher names.
 - Commit prefixes: `cc:` (CC), `cw:` (CW), per the system-wide convention.
 - CC-Git standing rule: pull at session start, commit + push at close.
 - Non-site files (this CLAUDE.md, DEPLOY.md, deploy.ps1, session-notes/) are
