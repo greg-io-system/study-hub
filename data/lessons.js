@@ -227,8 +227,8 @@ window.STUDY_HUB = {
           ]
         },
         {
-          range: "Ongoing",
-          theme: "Class reference",
+          range: "Always on",
+          theme: "The Toolkit — skills & how the class works",
           lessons: [
             {
               title: "How Mr. Evans's assignments work",
@@ -236,7 +236,7 @@ window.STUDY_HUB = {
               file: "lessons/how-mr-e-assignments-work.html",
               date: "2026-09-14",
               summary: "His emails all follow the same shape: the conversation continues, a tool check, 'developed not summary,' the lettered task, then reflect. What each move is doing (with his own quotes), the signals to watch for, and a playbook that works for any of his assignments.",
-              tags: ["reference", "how his class works"]
+              tags: ["toolkit", "how his class works"]
             },
             {
               title: "TERMS Library",
@@ -244,25 +244,32 @@ window.STUDY_HUB = {
               file: "lessons/ap-lang-terms-library.html",
               date: "2026-09-10",
               summary: "Every term Mr. Evans uses — his framework (argument continuum, GI, the Constitution, voice-not-opinion), the rhetorical terms (exigence, anaphora, framing device, hypophora, cause & effect, correlation vs. causation), and his stems & moves — each with a plain meaning and how it shows up in class. Search it; it grows as the class does.",
-              tags: ["reference", "vocabulary"]
+              tags: ["toolkit", "vocabulary"]
+            },
+            {
+              title: "Rhetorical Précis — the 4-sentence formula",
+              topic: "A reusable way to set up any source cleanly — the four sentences, with a worked example",
+              file: "lessons/english-rhetorical-precis-guide.html",
+              date: "2026-09-07",
+              summary: "Each of the four sentences decoded (claim, support, purpose, audience) with sentence frames and a verb bank, plus a full worked example — a reusable method for introducing any reading, not just one assignment.",
+              tags: ["toolkit", "rhetorical précis"],
+              materials: [
+                { kind: "lesson", label: "Précis method", file: "lessons/english-rhetorical-precis-guide.html" }
+              ]
             }
           ]
         },
         {
-          range: "Sep 7 – Sep 11",
-          theme: "Rhetorical analysis",
+          range: "Grows all semester",
+          theme: "The Library of sources",
           lessons: [
             {
-              title: "Rhetorical Précis — the 4-sentence formula",
-              topic: "For the smartphone article — what each sentence has to do, with a worked example",
-              file: "lessons/english-rhetorical-precis-guide.html",
-              date: "2026-09-07",
-              summary: "Each of the four sentences decoded (claim, support, purpose, audience) with sentence frames and a verb bank, a full example précis on a different Atlantic essay, and questions to find each piece in your article.",
-              tags: ["assignment help", "rhetorical précis"],
-              materials: [
-                { kind: "lesson", label: "Précis guide", file: "lessons/english-rhetorical-precis-guide.html" },
-                { kind: "link", label: "The article (opens in Google)", url: "https://docs.google.com/document/d/16CGhArEF1lb9_qwDiq0h4-DFLilRN4uBjoeaKdscq3M/" }
-              ]
+              title: "Your Library of Sources",
+              topic: "Every voice you've studied — what each argues and how to use it in synthesis",
+              file: "lessons/library-of-sources.html",
+              date: "2026-09-14",
+              summary: "The shelf Mr. Evans keeps telling you to build. Search or browse every reading by thread (Your Generation, Failure & the Arena, Education) — each with its core claim and a 'use it for' line, so when a prompt says 'bring in another reading' you have somewhere to reach. Grows as the class reads more.",
+              tags: ["library", "synthesis", "sources"]
             }
           ]
         }

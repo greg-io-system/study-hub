@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library of Sources &middot; AP English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#2f6fa8;--accent-soft:#e2edf6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 70px}
+.eyebrow{font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:32px;margin:.15em 0 .1em}
+.tagline{color:var(--soft);margin:.2em 0 0;max-width:620px}
+.controls{position:sticky;top:0;background:var(--paper);padding:14px 0 8px;z-index:5;border-bottom:1px solid var(--line);margin-top:14px}
+input[type=search]{width:100%;font-family:inherit;font-size:16px;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);outline:none}
+input[type=search]:focus{border-color:var(--accent)}
+.cats{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.cat{font-weight:800;font-size:13px;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer}
+.cat:hover{border-color:var(--accent)}.cat.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.count{color:var(--soft);font-size:13px;font-weight:700;margin:12px 2px 2px}
+.src{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:15px 18px;margin:11px 0}
+.src h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:19px;margin:0 0 .1em}
+.src .by{color:var(--soft);font-size:13.5px;font-weight:700}
+.src .thread{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 7px;margin-left:8px;vertical-align:middle}
+.src .claim{margin:.5em 0 .3em}
+.src .use{font-size:14.5px;color:var(--soft);border-left:3px solid var(--accent-soft);padding-left:12px;margin-top:8px}
+.src .use b{color:var(--accent)}
+.empty{text-align:center;color:var(--soft);padding:30px;font-weight:700}
+.intro{background:var(--accent-soft);border:1.5px solid #c4dcef;border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.intro b{color:var(--accent)}
+.footer{margin-top:36px;color:var(--soft);font-size:13px;text-align:center}
+mark{background:#d7e8f6;color:inherit;border-radius:3px}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">AP English &middot; Class library</div>
+  <h1>Your Library of Sources</h1>
+  <p class="tagline">Every voice you've studied, in one place &mdash; what each one argues and how you might <b>use</b>
+  it. This is the shelf Mr. Evans keeps telling you to build; reach for it when you need a source to bring into a paragraph.</p>
+
+  <div class="intro">
+    <b>How to use this for synthesis (e.g. the Loser Edit C3):</b> when a prompt says "bring in another reading,"
+    scan for a source whose <em>claim</em> collides or agrees with the text you're on, then use the <b>"Use it for"</b>
+    line as your way in. You're not summarizing it &mdash; you're putting it in conversation and adding <b>your</b> read.
+  </div>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search a source, author, or idea — e.g. failure, phones, vulnerability…" autocomplete="off">
+    <div class="cats" id="cats"></div>
+  </div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+
+  <div class="footer">Made for you &middot; ad-free &middot; grows as the class reads more</div>
+</div>
+<script>
+"use strict";
+(function(){
+  /* Add a source: {t:title, a:author, g:thread, claim:one-line argument, use:how to bring it in}.
+     Threads: "Your Generation" | "Failure & the Arena" | "Education" | "Argument Fundamentals". */
+  var SRC=[
+    // --- Your Generation: causes ---
+    {t:"Have Smartphones Destroyed a Generation?", a:"Jean Twenge", g:"Your Generation",
+      claim:"Smartphones and social media reshaped your generation — and Twenge ties them to rising anxiety, depression, and less real-world independence.",
+      use:"The 'phones did it' cause. Bring it in when you argue technology is the driver — or as the position another source (Galloway, Marano) is pushing against."},
+    {t:"A Nation of Wimps", a:"Hara Estroff Marano", g:"Your Generation",
+      claim:"Overprotective, hovering parenting — not phones — made kids fragile and risk-averse.",
+      use:"The 'parenting did it' cause. Use it to complicate a phones-only argument, or to explain fragility."},
+    {t:"(on letting kids take risks)", a:"Gever Tulley", g:"Your Generation",
+      claim:"Kids need real risk and even danger to grow capable and confident.",
+      use:"The counter to safetyism. Pair with Marano: if over-protection is the problem, risk is the antidote."},
+    {t:"How the US Is Destroying Young People's Future (TED)", a:"Scott Galloway", g:"Your Generation",
+      claim:"Young people have been economically undercut by a transfer of wealth and opportunity from young to old — the causes are structural, not just personal.",
+      use:"The 'it's structural/economic' cause. Bring it in to widen a conversation past phones and parenting to money and systems. His frame: 'Do we love our children?'"},
+    {t:"Freakonomics (correlation vs. causation)", a:"Dubner & Levitt", g:"Your Generation",
+      claim:"Two things moving together doesn't prove one causes the other — there may be a hidden third factor.",
+      use:"A discipline, not a position. Drop it in whenever a source claims X caused Y, to ask whether the link is really causal."},
+
+    // --- Failure, vulnerability & the arena ---
+    {t:"(on failure & risk in medicine, TED Radio)", a:"Brian Goldman", g:"Failure & the Arena",
+      claim:"A culture that hides mistakes is dangerous; we should share our faults so we can learn from them.",
+      use:"Failure as something to face openly. Pair with Brown (vulnerability) or Leak (chasing failure)."},
+    {t:"(on vulnerability, TED Radio)", a:"Brené Brown", g:"Failure & the Arena",
+      claim:"Vulnerability isn't weakness — it's 'our most accurate measurement of courage,' and the birthplace of creativity and change; shame is its enemy.",
+      use:"The value of exposure and honesty. Strong for any argument about the arena, risk, or why comfort stalls growth."},
+    {t:"(on disconfirmation — Alice Stewart & George Neal, TED Radio)", a:"Margaret Heffernan", g:"Failure & the Arena",
+      claim:"Seek out the person who will prove you wrong; conflict, handled well, is thinking — the opposite of an echo chamber.",
+      use:"Intellectual honesty and echo chambers. Use it against any 'stay comfortable / surround yourself with agreement' idea."},
+    {t:"Chasing Failure", a:"Ryan Leak", g:"Failure & the Arena",
+      claim:"Pursue failure on purpose — defeat has shaped many of the most successful people. (Cite his book/philosophy, not the video.)",
+      use:"Failure as opportunity you chase, not just survive. Watch for the bumper-sticker trap — say what it really costs."},
+    {t:"The Man in the Arena (Sorbonne speech, 1910)", a:"Theodore Roosevelt", g:"Failure & the Arena",
+      claim:"Credit belongs to the one in the arena who dares and fails, not to the critic on the sidelines.",
+      use:"The arena image itself. Use it to argue that risking and being wrong beats safe criticism."},
+    {t:"A Nation of Wimps (Elkind quote)", a:"David Elkind", g:"Failure & the Arena",
+      claim:"'Kids need to feel badly sometimes… through failure we learn how to cope.'",
+      use:"A crisp anchor quote for learning-through-failure. Short and quotable."},
+
+    // --- Education & incentives ---
+    {t:"The Radical, 18th-Century Scottish System for Paying for College", a:"Shannon Chamberlain (on Adam Smith)", g:"Education",
+      claim:"When Scottish students paid professors directly, incentives aligned and teaching improved; bundled tuition hides what you're paying for.",
+      use:"Incentives and the value of education. Bring it in for any argument about what school is worth or 'what are you paying for?'"},
+    {t:"A Talk to Teachers", a:"James Baldwin", g:"Education",
+      claim:"The purpose of education is to teach a person to question the world for themselves — though 'no society is really anxious to have that kind of person around.'",
+      use:"The purpose of education, and the tension between real thinking and obedience."},
+    {t:"(on listening)", a:"Rick Rubin", g:"Education",
+      claim:"'Listening is suspending disbelief' — real listening means receiving fully before you judge or reply.",
+      use:"Listening as a skill (pairs with the Rogerian model). Use it in any argument about conversation, collaboration, or 'entering' a discussion."},
+
+    // --- Current text ---
+    {t:"The Loser Edit", a:"Colson Whitehead", g:"Your Generation",
+      claim:"Reality-TV editors cut a 'loser edit' to make a loss look inevitable — and we all do it, editing our own footage online (par. 16).",
+      use:"This week's text. Self-curation and the story of inevitability. Its par. 16 is the bridge straight to Twenge."}
+  ];
+
+  var GROUPS=["Your Generation","Failure & the Arena","Education"];
+  var filter="All", query="";
+  var $=function(id){return document.getElementById(id);};
+  function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  function hi(s){ if(!query) return esc(s); try{ return esc(s).replace(new RegExp('('+query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark>$1</mark>'); }catch(e){ return esc(s); } }
+
+  function cats(){
+    var c=$("cats"); c.innerHTML="";
+    ["All"].concat(GROUPS).forEach(function(k){
+      var b=document.createElement("button");
+      b.className="cat"+(filter===k?" on":""); b.textContent=k;
+      b.addEventListener("click",function(){filter=k;render();});
+      c.appendChild(b);
+    });
+  }
+  function render(){
+    cats();
+    var list=$("list"); list.innerHTML="";
+    var q=query.toLowerCase(), n=0;
+    SRC.forEach(function(s){
+      if(filter!=="All" && s.g!==filter) return;
+      var hay=(s.t+" "+s.a+" "+s.g+" "+s.claim+" "+s.use).toLowerCase();
+      if(q && hay.indexOf(q)<0) return;
+      n++;
+      var d=document.createElement("div"); d.className="src";
+      d.innerHTML='<h2>'+hi(s.t)+'<span class="thread">'+esc(s.g)+'</span></h2>'+
+        '<div class="by">'+hi(s.a)+'</div>'+
+        '<p class="claim">'+hi(s.claim)+'</p>'+
+        '<div class="use"><b>Use it for:</b> '+hi(s.use)+'</div>';
+      list.appendChild(d);
+    });
+    $("count").textContent=n+(n===1?" source":" sources");
+    if(!n){ list.appendChild((function(){var e=document.createElement("div");e.className="empty";e.textContent="No source matches that. Try a different word.";return e;})()); }
+  }
+  $("q").addEventListener("input",function(e){query=e.target.value.trim();render();});
+  render();
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='\u2190 Back to Study Hub';
+    a.style.cssText='display:block;padding:11px 18px;background:#faf6ec;border-bottom:1px solid #e4dcc8;font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none;position:sticky;top:0;z-index:50';
+    document.body.insertBefore(a,document.body.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>
