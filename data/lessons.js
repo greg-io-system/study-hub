@@ -209,6 +209,24 @@ window.STUDY_HUB = {
       blurb: "Reading like a writer — what an author is doing, how they're doing it, and how to say so on paper.",
       weeks: [
         {
+          range: "Sep 14 – Sep 18",
+          theme: "Synthesis & rhetorical analysis",
+          lessons: [
+            {
+              title: "The Loser Edit — a method guide",
+              topic: "The 'have a view, don't summarize' method — synthesis + rhetorical analysis for the Whitehead essay",
+              file: "lessons/loser-edit-method-guide.html",
+              date: "2026-09-14",
+              summary: "For Tuesday's Loser Edit paragraphs. The one rule (a view, not a summary), the synthesis move modeled on a parallel made-up example, the rhetorical-analysis formula with a build-it box, and a check before you reply to Mr. E's email. Your Whitehead & Twenge paragraphs stay yours.",
+              tags: ["assignment help", "synthesis", "rhetorical analysis"],
+              materials: [
+                { kind: "lesson", label: "Method guide", file: "lessons/loser-edit-method-guide.html" },
+                { kind: "link", label: "The smartphone article — Twenge (opens in Google)", url: "https://docs.google.com/document/d/16CGhArEF1lb9_qwDiq0h4-DFLilRN4uBjoeaKdscq3M/" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Ongoing",
           theme: "Class reference",
           lessons: [
