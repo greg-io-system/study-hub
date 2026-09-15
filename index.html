@@ -16,6 +16,7 @@
 
 <script src="data/lessons.js"></script>
 <script src="data/week.js"></script>
+<script src="data/daily.js"></script>
 <script>
 (function(){
   var data = window.STUDY_HUB || {subjects:[]};
@@ -91,6 +92,28 @@
     return c;
   }
 
+  /* ---------- "Daily pick" sticky note (data/daily.js) ---------- */
+  function renderDaily(){
+    var d = window.STUDY_DAILY;
+    var pool = (d && d.quotes) || [];
+    if(!pool.length) return;
+    var now = new Date();
+    // deterministic per LOCAL day: cycle the pool by day number
+    var epochDays = Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/86400000);
+    var q = pool[((epochDays % pool.length)+pool.length)%pool.length];
+    if(!q || !q.text) return;
+    var mth=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var sec=el("section","daily");
+    var note=el("div","daily-note");
+    note.appendChild(el("span","daily-tape"));
+    note.appendChild(el("div","daily-stamp","Today &middot; "+mth[now.getMonth()]+" "+now.getDate()));
+    note.appendChild(el("p","daily-text",esc(q.text)));
+    if(q.trans) note.appendChild(el("div","daily-trans",esc(q.trans)));
+    if(q.by) note.appendChild(el("div","daily-by","&mdash; "+esc(q.by)));
+    sec.appendChild(note);
+    app.appendChild(sec);
+  }
+
   /* ---------- "This Week" panel (data/week.js; hides if stale) ---------- */
   function renderWeek(){
     var wk = window.STUDY_WEEK;
@@ -156,9 +179,9 @@
     var head=el("header","top");
     head.appendChild(el("div","eyebrow","Study Hub"));
     head.appendChild(el("h1",null,(student? esc(student)+"&rsquo;s " : "")+"<em>study</em> hub"));
-    head.appendChild(el("p","tagline","A place for the stuff class goes too fast on. Pick a class, open a lesson, poke at it &mdash; no pressure, no login, just here when you want it."));
     app.appendChild(head);
 
+    renderDaily();
     renderWeek();
 
     var grid=el("div","classgrid");
