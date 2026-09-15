@@ -231,6 +231,14 @@ window.STUDY_HUB = {
           theme: "Class reference",
           lessons: [
             {
+              title: "How Mr. E's assignments work",
+              topic: "The five-move pattern behind every one of his homework emails — read it once, it helps every time",
+              file: "lessons/how-mr-e-assignments-work.html",
+              date: "2026-09-14",
+              summary: "His emails all follow the same shape: the conversation continues, a tool check, 'developed not summary,' the lettered task, then reflect. What each move is doing (with his own quotes), the signals to watch for, and a playbook that works for any of his assignments.",
+              tags: ["reference", "how his class works"]
+            },
+            {
               title: "TERMS Library",
               topic: "The class's rhetorical vocabulary, in one searchable place",
               file: "lessons/ap-lang-terms-library.html",
