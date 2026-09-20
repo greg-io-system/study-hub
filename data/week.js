@@ -42,11 +42,24 @@ window.STUDY_WEEK = {
       helpFile: "lessons/unit-1-test-review.html"
     },
     {
+      day: "Wed", date: "2026-09-23",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Fingerprint Lab — due Wednesday (block day)"
+    },
+    {
+      day: "Fri", date: "2026-09-25",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Tattoo Activity — due Friday"
+    },
+    {
       day: "Fri", date: "2026-09-25",
       subject: "algebra-2", subjectName: "Algebra 2",
       what: "Unit 1 TEST + the Unit 1 Review — Friday",
       help: "Transformations Explorer — drag a, h, k; the Unit 1 functions & transformations material",
       helpFile: "lessons/transformations-of-functions.html"
     }
+  ],
+  ahead: [
+    { subjectName: "Human Anatomy", what: "Unit 2 Exam", date: "2026-09-29" }
   ]
 };
