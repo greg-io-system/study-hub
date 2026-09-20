@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'imparfait &middot; Français</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#0d8f86;--accent-soft:#d9f0ed}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.7em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.2em 0 .3em}
+h3.part{color:var(--accent)}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul{padding-left:22px;margin:.4em 0}li{margin:.25em 0}
+.fr{font-family:"Fraunces",Georgia,serif;font-style:italic}
+.big{background:var(--accent-soft);border:1.5px solid #a9ddd6;border-radius:14px;padding:15px 19px;margin:16px 0}
+.big b{color:var(--accent)}
+.note{color:var(--soft);font-size:14px}
+.card{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:14px}
+table{border-collapse:collapse;margin:.6em 0;font-size:15px;width:100%}
+th,td{border:1.5px solid var(--line);padding:7px 10px;text-align:left}
+th{background:var(--accent-soft);color:var(--ink)}
+td.end{font-weight:800;color:var(--accent);font-family:"Fraunces",Georgia,serif}
+.two .col .h{font-weight:800}
+/* builder */
+.build{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0}
+.build .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.build label{font-weight:800;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--soft);width:100%}
+.vb{font:800 14px Nunito,sans-serif;padding:7px 12px;border:1.5px solid var(--accent);border-radius:999px;background:#fff;color:var(--accent);cursor:pointer}
+.vb.on{background:var(--accent);color:#fff}
+.stemline{margin-top:12px;font-size:15px}
+.stemline b{color:var(--accent)}
+.conj{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media(max-width:520px){.conj{grid-template-columns:1fr}}
+.conj div{background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:8px 12px;font-size:15px}
+.conj .end{font-weight:800;color:var(--accent)}
+/* which tense */
+.q{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;margin:10px 0}
+.q .s{font-size:16px}
+.q .opts{display:flex;gap:8px;margin:8px 0 0}
+.q .opts button{font:800 14px Nunito,sans-serif;padding:7px 13px;border:1.5px solid var(--accent);border-radius:9px;background:#fff;color:var(--accent);cursor:pointer}
+.q .opts button:hover{background:var(--accent-soft)}
+.q .fb{margin-top:9px;font-size:15px;display:none;background:var(--accent-soft);border:1.5px solid #a9ddd6;border-radius:9px;padding:9px 13px}
+.q.answered .fb{display:block}
+.q .fb.wrong{background:#fbe9e3;border-color:#f0c7b8}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Français &middot; M. Keirns</div>
+  <h1>L'imparfait</h1>
+  <p class="tagline">The tense for <b>"was happening"</b> and <b>"used to happen"</b> &mdash; childhood, weather, descriptions, background. <span class="fr">Quand j'étais petit(e)&hellip;</span></p>
+
+  <div class="big">
+    <b>What the imparfait is for:</b> things that happened <b>over a long time</b> in the past, or <b>habitually</b> &mdash;
+    something that <b>"was happening"</b> or <b>"used to happen."</b> If a sentence sets a scene, describes, or says
+    "used to," it's the imparfait. If it's a single completed action, that's the <b>passé composé</b> instead.
+  </div>
+
+  <h2>1 &middot; How to build it (one easy rule)</h2>
+  <div class="card">
+    <p><b>Step 1 &mdash; get the stem:</b> take the <b><span class="fr">nous</span></b> form of the present tense and drop the <span class="fr">-ons</span>.</p>
+    <ul>
+      <li><span class="fr">parler &rarr; nous <b>parl</b>ons &rarr; parl-</span></li>
+      <li><span class="fr">finir &rarr; nous <b>finiss</b>ons &rarr; finiss-</span></li>
+      <li><span class="fr">faire &rarr; nous <b>fais</b>ons &rarr; fais-</span> &nbsp;<span class="note">(that's why it's <span class="fr">je faisais</span>)</span></li>
+    </ul>
+    <p><b>Step 2 &mdash; add the endings</b> (they're the same for every verb):</p>
+    <table>
+      <tr><th>Subject</th><th>Ending</th><th>Example (<span class="fr">parler</span>)</th></tr>
+      <tr><td>je</td><td class="end">-ais</td><td class="fr">je parlais</td></tr>
+      <tr><td>tu</td><td class="end">-ais</td><td class="fr">tu parlais</td></tr>
+      <tr><td>il / elle / on</td><td class="end">-ait</td><td class="fr">il parlait</td></tr>
+      <tr><td>nous</td><td class="end">-ions</td><td class="fr">nous parlions</td></tr>
+      <tr><td>vous</td><td class="end">-iez</td><td class="fr">vous parliez</td></tr>
+      <tr><td>ils / elles</td><td class="end">-aient</td><td class="fr">ils parlaient</td></tr>
+    </table>
+    <p class="note">The only irregular stem is <b><span class="fr">être &rarr; ét-</span></b> (<span class="fr">j'étais, tu étais, il était&hellip;</span>). Endings are still the same. Spelling note: verbs like <span class="fr">manger</span> keep the e before -ais/-ait: <span class="fr">je mangeais</span>.</p>
+  </div>
+
+  <h3 class="part">Try it &mdash; conjugate any verb</h3>
+  <div class="build">
+    <label>Pick a verb</label>
+    <div class="row" id="verbs"></div>
+    <div class="stemline" id="stem"></div>
+    <div class="conj" id="conj"></div>
+  </div>
+
+  <h2>2 &middot; Imparfait vs. passé composé (the real test)</h2>
+  <p>Same past, two jobs. The imparfait is the <b>background</b>; the passé composé is what <b>happened</b>.</p>
+  <div class="card">
+    <table>
+      <tr><th>Présent</th><th>Passé composé (completed)</th><th>Imparfait (ongoing / used to)</th></tr>
+      <tr><td class="fr">je joue</td><td class="fr">j'ai joué</td><td class="fr">je jouais</td></tr>
+      <tr><td class="fr">je mange</td><td class="fr">j'ai mangé</td><td class="fr">je mangeais</td></tr>
+      <tr><td class="fr">je fais mes devoirs</td><td class="fr">j'ai fait mes devoirs</td><td class="fr">je faisais mes devoirs</td></tr>
+    </table>
+  </div>
+  <p>Reach for the <b>imparfait</b> when the sentence is:</p>
+  <ul>
+    <li><b>A description or scene:</b> <span class="fr">il faisait beau, il y avait du soleil, elle était grande</span>.</li>
+    <li><b>Age, feelings, states:</b> <span class="fr">j'avais cinq ans, j'étais content(e), je voulais&hellip;</span></li>
+    <li><b>A habit / "used to":</b> <span class="fr">quand j'étais petit, je jouais à la poupée, je faisais des châteaux de sable, j'habitais au Colorado</span>.</li>
+  </ul>
+  <p>Reach for the <b>passé composé</b> when one specific thing <b>happened once</b> and finished: <span class="fr">je suis allé(e) au Texas, j'ai vu une tarentule, ma femme a donné une fête</span>.</p>
+  <div class="big"><b>The quick test:</b> could you say <b>"used to"</b> or <b>"was ___ing"</b> in English? &rarr; imparfait. Is it a single "and then this happened"? &rarr; passé composé.</div>
+
+  <h2>3 &middot; Which tense? (quick self-check)</h2>
+  <p class="note">Read each sentence, decide, then tap your choice.</p>
+  <div id="drill"></div>
+
+  <p class="note" style="margin-top:22px">Built to match M. Keirns's imparfait notes ("was happening / used to happen," passé composé vs imparfait) and the <span class="fr">souvenirs d'enfance</span> theme. Practice with your own memories &mdash; <span class="fr">quand tu étais petit(e)&hellip;</span></p>
+
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+"use strict";
+(function(){
+  /* --- conjugation builder --- */
+  var VERBS=[
+    {inf:"parler", stem:"parl", gloss:"to speak"},
+    {inf:"manger", stem:"mange", gloss:"to eat"},
+    {inf:"finir", stem:"finiss", gloss:"to finish"},
+    {inf:"faire", stem:"fais", gloss:"to do/make"},
+    {inf:"avoir", stem:"av", gloss:"to have"},
+    {inf:"habiter", stem:"habit", gloss:"to live"},
+    {inf:"être", stem:"ét", gloss:"to be (irregular stem)"}
+  ];
+  var subs=[["je","ais"],["tu","ais"],["il/elle/on","ait"],["nous","ions"],["vous","iez"],["ils/elles","aient"]];
+  var cur=0;
+  var vrow=document.getElementById("verbs"), stem=document.getElementById("stem"), conj=document.getElementById("conj");
+  function elide(sub,form){ // je + vowel -> j'
+    if(sub==="je" && /^[aéeiîou]/i.test(form)) return "j'"+form;
+    return sub+" "+form;
+  }
+  function renderVerb(){
+    var v=VERBS[cur];
+    stem.innerHTML="Present <b>nous</b> form → drop <b>-ons</b> → stem <b>"+v.stem+"-</b> &middot; <span class='note'>"+v.gloss+"</span>";
+    conj.innerHTML=subs.map(function(s){
+      var form=v.stem+s[1];
+      return "<div>"+elide(s[0], form).replace(s[1],"<span class='end'>"+s[1]+"</span>")+"</div>";
+    }).join("");
+  }
+  VERBS.forEach(function(v,i){
+    var b=document.createElement("button"); b.className="vb"+(i===0?" on":""); b.textContent=v.inf;
+    b.onclick=function(){ cur=i; Array.prototype.forEach.call(vrow.children,function(c,j){c.classList.toggle("on",j===i);}); renderVerb(); };
+    vrow.appendChild(b);
+  });
+  renderVerb();
+
+  /* --- which-tense drill --- */
+  var Q=[
+    {s:"Quand j'étais petit, je ___ souvent au parc. (jouer)", a:"imparfait", why:"\"Used to play\" — a childhood habit. <b>Je jouais.</b>"},
+    {s:"Hier, je ___ un nouveau film au cinéma. (voir)", a:"passe", why:"One finished action, \"yesterday.\" <b>J'ai vu.</b>"},
+    {s:"Il ___ beau et il y ___ du soleil. (faire / avoir)", a:"imparfait", why:"Weather = description/background. <b>Il faisait beau, il y avait du soleil.</b>"},
+    {s:"Ce matin, elle ___ à l'école à 8h. (arriver)", a:"passe", why:"A single completed arrival at a set time. <b>Elle est arrivée.</b>"},
+    {s:"Quand nous ___ jeunes, nous ___ à la campagne. (être / habiter)", a:"imparfait", why:"Ongoing past states/habits. <b>Nous étions jeunes, nous habitions.</b>"},
+    {s:"Soudain, le téléphone ___. (sonner)", a:"passe", why:"\"Suddenly\" = one thing that happened. <b>Le téléphone a sonné.</b>"}
+  ];
+  var drill=document.getElementById("drill");
+  Q.forEach(function(q){
+    var d=document.createElement("div"); d.className="q";
+    d.innerHTML='<div class="s">'+q.s+'</div><div class="opts"><button data-v="imparfait">Imparfait</button><button data-v="passe">Passé composé</button></div><div class="fb"></div>';
+    var fb=d.querySelector(".fb");
+    Array.prototype.forEach.call(d.querySelectorAll(".opts button"),function(btn){
+      btn.onclick=function(){
+        var ok=btn.getAttribute("data-v")===q.a;
+        fb.innerHTML=(ok?"✓ Correct. ":"✗ Not quite. ")+q.why;
+        fb.classList.toggle("wrong",!ok);
+        d.classList.add("answered");
+      };
+    });
+    drill.appendChild(d);
+  });
+})();
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>

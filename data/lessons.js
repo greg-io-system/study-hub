@@ -371,6 +371,20 @@ window.STUDY_HUB = {
       blurb: "Grammar that actually sticks — build the conjugations, watch the endings agree, and get a feel for which tense to use when.",
       weeks: [
         {
+          range: "Sep 21 – Sep 25",
+          theme: "L'imparfait",
+          lessons: [
+            {
+              title: "L'imparfait",
+              topic: "The 'was happening / used to happen' past — and imparfait vs passé composé",
+              file: "lessons/imparfait.html",
+              date: "2026-09-20",
+              summary: "The current topic — quand j'étais petit… How to build the imparfait (nous-stem + -ais/-ait endings, être → ét-), an interactive conjugator for any verb, then the real test: imparfait (background, descriptions, 'used to') vs passé composé (one completed action), with a 'which tense?' self-check. Matches M. Keirns's notes and the souvenirs d'enfance theme.",
+              tags: ["imparfait", "passé composé", "interactive"]
+            }
+          ]
+        },
+        {
           range: "Sep 14 – Sep 18",
           theme: "Passé composé · être & reflexive verbs",
           lessons: [
