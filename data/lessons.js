@@ -257,7 +257,7 @@ window.STUDY_HUB = {
               topic: "The class's rhetorical vocabulary, in one searchable place",
               file: "lessons/ap-lang-terms-library.html",
               date: "2026-09-10",
-              summary: "Every term Mr. Evans uses — his framework (argument continuum, GI, the Constitution, voice-not-opinion), the rhetorical terms (exigence, anaphora, framing device, hypophora, cause & effect, correlation vs. causation), and his stems & moves — each with a plain meaning and how it shows up in class. Search it; it grows as the class does.",
+              summary: "Every term Mr. Evans uses — his framework (argument continuum, voice-not-opinion, Path 1 vs Path 2, sophistication, the thesis point), the rhetorical terms (exigence, ethos/pathos/logos, synthesis, juxtaposition, central claim, cause & effect, correlation vs. causation), and his stems & moves ('in order to', annotation, to what extent) — each with a plain meaning and how it shows up in class. Search it; it grows as the class does.",
               tags: ["toolkit", "vocabulary"]
             },
             {
