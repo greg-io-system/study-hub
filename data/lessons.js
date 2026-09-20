@@ -209,6 +209,20 @@ window.STUDY_HUB = {
       blurb: "Reading like a writer — what an author is doing, how they're doing it, and how to say so on paper.",
       weeks: [
         {
+          range: "Sep 21 – Sep 25",
+          theme: "Synthesis — the failure capstone",
+          lessons: [
+            {
+              title: "Failure Synthesis — a method guide",
+              topic: "Argue YOUR position on Ryan Leak's claim about failure — synthesizing Fratto, Gladwell & Whitehead",
+              file: "lessons/failure-synthesis-method-guide.html",
+              date: "2026-09-21",
+              summary: "For Monday's Failure Synthesis reply — the capstone of the whole failure unit. The prompt decoded (not agree/disagree), Path 1 vs Path 2, each source's position in one line, the synthesis move modeled on a made-up parallel example, a They Say / I Say sentence builder, the thesis-point reminder, and a check before you reply to Mr. Evans's email. Your Leak, Fratto, Gladwell & Whitehead paragraphs stay yours.",
+              tags: ["assignment help", "synthesis", "failure"]
+            }
+          ]
+        },
+        {
           range: "Sep 14 – Sep 18",
           theme: "Synthesis & rhetorical analysis",
           lessons: [
