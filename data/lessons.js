@@ -40,6 +40,20 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       weeks: [
         {
+          range: "Sep 21 – Sep 25",
+          theme: "Unit 1 Test review",
+          lessons: [
+            {
+              title: "Unit 1 Test — Review",
+              topic: "Functions + sequences, for the test Friday",
+              file: "lessons/algebra-2-unit-1-test-review.html",
+              date: "2026-09-20",
+              summary: "For Friday's Unit 1 test. The functions half links your Function Machine & Transformations lessons; the sequences half is taught fresh — arithmetic vs geometric, the two explicit formulas, an interactive sequence builder (toggle +/× and watch the terms, formula and dot-graph), the word-problem 4-step, and a parallel-example self-check. Your actual review sheet stays yours.",
+              tags: ["test prep", "unit 1", "sequences", "interactive"]
+            }
+          ]
+        },
+        {
           range: "Sep 14 – Sep 18",
           theme: "Unit 1 · Transformations",
           lessons: [

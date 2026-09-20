@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 1 Test - Review &middot; Algebra 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#e8623d;--accent-soft:#fbe3d8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.7em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.2em 0 .3em}
+h3.part{color:var(--accent);margin-top:1.4em}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul{padding-left:22px;margin:.4em 0}li{margin:.25em 0}
+.big{background:var(--accent-soft);border:1.5px solid #f2c3b0;border-radius:14px;padding:15px 19px;margin:16px 0}
+.big b{color:var(--accent)}
+.card{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:14px}
+.note{color:var(--soft);font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.links a{font-weight:800;font-size:14px;text-decoration:none;color:var(--accent);border:1.5px solid #f2c3b0;background:#fff;border-radius:999px;padding:7px 14px}
+.links a:hover{background:var(--accent-soft)}
+.fx{font-family:"Fraunces",Georgia,serif;font-style:italic}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.two .col{border:1.5px solid var(--line);border-radius:12px;padding:12px 15px;background:var(--paper2)}
+.two .col .h{font-weight:800;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:5px;color:var(--accent)}
+.formula{background:#fff;border:1.5px solid #f2c3b0;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:17px;text-align:center}
+.formula b{color:var(--accent)}
+.worked{background:var(--accent-soft);border:1.5px solid #f2c3b0;border-radius:10px;padding:11px 15px;margin:10px 0;font-size:15px}
+/* interactive */
+.build{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0}
+.build .row{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+.build .fld{display:flex;flex-direction:column;gap:3px}
+.build label{font-weight:800;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--soft)}
+.build input{width:90px;font:16px Nunito,sans-serif;padding:7px 10px;border:1.5px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}
+.build input:focus{outline:none;border-color:var(--accent)}
+.seg{display:inline-flex;border:1.5px solid var(--accent);border-radius:9px;overflow:hidden}
+.seg button{font:800 14px Nunito,sans-serif;padding:7px 14px;border:0;background:#fff;color:var(--accent);cursor:pointer}
+.seg button.on{background:var(--accent);color:#fff}
+.out{margin-top:14px;background:#fff;border:1.5px solid #f2c3b0;border-radius:10px;padding:14px 16px}
+.terms{font-size:16px;font-weight:700}
+.terms b{color:var(--accent)}
+.efm{margin-top:8px;font-size:16px}
+.efm b{color:var(--accent)}
+svg{display:block;margin-top:12px;max-width:100%;height:auto}
+.q{display:grid;grid-template-columns:34px 1fr;gap:8px;background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.qn{font-weight:800;color:var(--accent)}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user-select:none}
+summary:hover{text-decoration:underline}
+.ans{background:var(--accent-soft);border:1.5px solid #f2c3b0;border-radius:10px;padding:10px 14px;margin-top:8px;font-size:15px}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Algebra 2 &middot; Mr. Howard</div>
+  <h1>Unit 1 Test &mdash; Review</h1>
+  <p class="tagline">For the <b>Unit 1 test on Friday</b>. Two halves: <b>Functions</b> (you have lessons for this) and <b>Sequences</b> (taught right here). Work the real review sheet yourself &mdash; the examples below use different numbers on purpose.</p>
+
+  <div class="big"><b>What's on it</b> (7 problems): reading a function off a graph &middot; evaluating &amp; solving function rules &middot; graphing transformations &middot; and <b>sequences</b> &mdash; arithmetic vs geometric, explicit formulas, and word problems. If you can do the two halves below, you're ready.</div>
+
+  <!-- ============ FUNCTIONS HALF ============ -->
+  <h2>Half 1 &middot; Functions (you've got lessons for this)</h2>
+  <p>Three skills, all in the lessons you've already used &mdash; open them if any feel shaky:</p>
+  <div class="links">
+    <a href="function-notation-inputs-outputs.html">The Function Machine (notation, domain &amp; range)</a>
+    <a href="transformations-of-functions.html">Transformations Explorer</a>
+  </div>
+  <div class="card">
+    <h3 class="part">Quick reminders</h3>
+    <ul>
+      <li><b>Evaluate</b> <span class="fx">f(number)</span>: plug the number in for x. <span class="fx">f(3)</span> for <span class="fx">f(x)=(x&minus;1)&sup2;&minus;9</span> &rarr; <span class="fx">(3&minus;1)&sup2;&minus;9 = 4&minus;9 = &minus;5</span>.</li>
+      <li><b>Solve for x</b> (given the output): set the rule equal to the value and undo. <span class="fx">g(x)=&minus;8x+13</span>, solve <span class="fx">g(x)=19</span> &rarr; <span class="fx">&minus;8x+13=19 &rarr; &minus;8x=6 &rarr; x=&minus;0.75</span>.</li>
+      <li><b>Read a graph:</b> <span class="fx">f(10)</span> = the y-value at x=10; "find x when <span class="fx">f(x)=90</span>" = the x where the height is 90. <b>Domain</b> = the x-values covered; <b>range</b> = the y-values reached. Say each in a sentence about the situation.</li>
+      <li><b>Transformations:</b> in <span class="fx">a&middot;f(x&minus;h)+k</span>, h shifts left/right (opposite sign), k shifts up/down, a stretches/flips. Plot &ge;5 points, then read domain &amp; range off your graph.</li>
+    </ul>
+  </div>
+
+  <!-- ============ SEQUENCES HALF ============ -->
+  <h2>Half 2 &middot; Sequences (the part with no lesson yet)</h2>
+  <p>A <b>sequence</b> is an ordered list of numbers (terms): <span class="fx">a&#8321;, a&#8322;, a&#8323;, &hellip;</span> The subscript is the term number <span class="fx">n</span>. Everything on the test comes down to <b>one question first</b>:</p>
+
+  <h3 class="part">Step 1 &mdash; Arithmetic or geometric? (add or multiply?)</h3>
+  <div class="two">
+    <div class="col"><div class="h">Arithmetic = you ADD</div>
+      Same number <b>added</b> each step. That number is the <b>common difference d</b>.<br>
+      <span class="fx">3, 7, 11, 15, &hellip;</span> &rarr; +4 each time, <b>d = 4</b>.<br>
+      <span class="note">Check: subtract neighbors. 7&minus;3=4, 11&minus;7=4. Same &rarr; arithmetic.</span></div>
+    <div class="col"><div class="h">Geometric = you MULTIPLY</div>
+      Same number <b>multiplied</b> each step. That number is the <b>common ratio r</b>.<br>
+      <span class="fx">2, 6, 18, 54, &hellip;</span> &rarr; &times;3 each time, <b>r = 3</b>.<br>
+      <span class="note">Check: divide neighbors. 6&divide;2=3, 18&divide;6=3. Same &rarr; geometric.</span></div>
+  </div>
+  <p class="note">If neither adding nor multiplying by a fixed number works, it's <b>neither</b>. (A decreasing one still counts: &minus;3 each step is arithmetic with d=&minus;3; &times;&frac34; each step is geometric with r=&frac34;.)</p>
+
+  <h3 class="part">Step 2 &mdash; The explicit formula (jump straight to any term)</h3>
+  <p>An <b>explicit</b> formula gives <span class="fx">a&#8345;</span> from <span class="fx">n</span> directly &mdash; no counting up. Memorize these two:</p>
+  <div class="formula"><b>Arithmetic:</b> &nbsp; a&#8345; = a&#8321; + (n &minus; 1)&middot;d</div>
+  <div class="formula"><b>Geometric:</b> &nbsp; a&#8345; = a&#8321; &middot; r<sup>(n &minus; 1)</sup></div>
+  <div class="worked">
+    <b>Worked (arithmetic):</b> 3, 7, 11, 15&hellip; has a&#8321;=3, d=4, so
+    <span class="fx">a&#8345; = 3 + (n&minus;1)&middot;4 = 4n &minus; 1</span>. Check the 10th term: <span class="fx">a&#8321;&#8320; = 4(10)&minus;1 = 39</span>.<br>
+    <b>Worked (geometric):</b> 2, 6, 18, 54&hellip; has a&#8321;=2, r=3, so
+    <span class="fx">a&#8345; = 2&middot;3<sup>(n&minus;1)</sup></span>. Check the 5th term: <span class="fx">a&#8325; = 2&middot;3&#8308; = 2&middot;81 = 162</span>.
+  </div>
+  <p class="note">"Fully simplify" (like the test asks) means clean up the arithmetic one: 3+(n&minus;1)&middot;4 &rarr; 3+4n&minus;4 &rarr; <b>4n&minus;1</b>.</p>
+
+  <h3 class="part">Try it &mdash; build a sequence</h3>
+  <div class="build">
+    <div class="row">
+      <div class="seg"><button id="bA" class="on">Arithmetic (+)</button><button id="bG">Geometric (&times;)</button></div>
+      <div class="fld"><label>First term a&#8321;</label><input id="a1" type="number" value="3"></div>
+      <div class="fld"><label id="stepLbl">Common difference d</label><input id="step" type="number" value="4"></div>
+    </div>
+    <div class="out">
+      <div class="terms" id="terms"></div>
+      <div class="efm" id="efm"></div>
+      <svg id="plot" viewBox="0 0 320 160" width="320" height="160" role="img" aria-label="Sequence plotted as dots"></svg>
+      <div class="note">Notice the points are <b>dots, not a line</b> &mdash; n only takes whole numbers (1, 2, 3&hellip;). There is no a&#8322;.&#8325;.</div>
+    </div>
+  </div>
+
+  <h3 class="part">Step 3 &mdash; Word problems (the 4-step move)</h3>
+  <p>Tables, cups, seats, populations &mdash; all the same four steps:</p>
+  <ol>
+    <li><b>Make a table</b> of n (1, 2, 3&hellip;) and <span class="fx">a&#8345;</span>. Fill in what the story gives you.</li>
+    <li><b>Add or multiply?</b> Find <b>d</b> (arithmetic) or <b>r</b> (geometric) between terms.</li>
+    <li><b>Write the explicit rule</b> with the right formula, and simplify.</li>
+    <li><b>Use it</b> &mdash; plug in the n they ask for.</li>
+  </ol>
+  <div class="worked">
+    <b>Parallel example:</b> A plumber charges a $50 call-out, then $40 per hour.
+    Cost after n hours: table 90, 130, 170&hellip; (n=1,2,3). Adds $40 &rarr; arithmetic, a&#8321;=90, d=40.
+    Rule: <span class="fx">a&#8345; = 90 + (n&minus;1)&middot;40 = 40n + 50</span>. After 6 hours: <span class="fx">40(6)+50 = $290</span>.<br>
+    <b>Why a&#8322;.&#8325; makes no sense:</b> n counts whole hours/tables/cups &mdash; you can't have table number 3.2. The domain is whole numbers, so only dot-points exist.
+  </div>
+
+  <!-- ============ SELF-CHECK ============ -->
+  <h2>Self-check (parallel problems &mdash; answer first, then reveal)</h2>
+  <p class="note">These mirror the test's problem types with different numbers, so your real review sheet stays yours.</p>
+
+  <div class="q"><div class="qn">1</div><div class="qb"><p>Classify, then write the explicit formula: <span class="fx">5, 8, 11, 14, &hellip;</span> and find the 20th term.</p><details><summary>Show answer</summary><div class="ans"><p><b>Arithmetic</b> (+3), a&#8321;=5, d=3. <span class="fx">a&#8345; = 5+(n&minus;1)&middot;3 = 3n+2</span>. 20th: <span class="fx">3(20)+2 = 62</span>.</p></div></details></div></div>
+
+  <div class="q"><div class="qn">2</div><div class="qb"><p>Classify, then write the explicit formula: <span class="fx">4, 12, 36, 108, &hellip;</span> and find the 6th term.</p><details><summary>Show answer</summary><div class="ans"><p><b>Geometric</b> (&times;3), a&#8321;=4, r=3. <span class="fx">a&#8345; = 4&middot;3<sup>(n&minus;1)</sup></span>. 6th: <span class="fx">4&middot;3&#8309; = 4&middot;243 = 972</span>.</p></div></details></div></div>
+
+  <div class="q"><div class="qn">3</div><div class="qb"><p>A sequence starts at 100 and drops by &frac14; of the current value each week (100, 75, &hellip;). Arithmetic or geometric? Write the formula.</p><details><summary>Show answer</summary><div class="ans"><p>Dropping by &frac14; means keeping &frac34; &mdash; you <b>multiply by 0.75</b>, so <b>geometric</b>, a&#8321;=100, r=&frac34;. <span class="fx">a&#8345; = 100&middot;(0.75)<sup>(n&minus;1)</sup></span>. (If the story said "drops by 25 each week," that fixed subtraction would be arithmetic instead.)</p></div></details></div></div>
+
+  <div class="q"><div class="qn">4</div><div class="qb"><p>Evaluate for <span class="fx">f(x)=(x+2)&sup2;&minus;4</span>: find <span class="fx">f(1)</span>. Then solve <span class="fx">f(x)=&minus;4</span>.</p><details><summary>Show answer</summary><div class="ans"><p><span class="fx">f(1)=(1+2)&sup2;&minus;4 = 9&minus;4 = 5</span>. Solve <span class="fx">(x+2)&sup2;&minus;4=&minus;4 &rarr; (x+2)&sup2;=0 &rarr; x=&minus;2</span>.</p></div></details></div></div>
+
+  <div class="q"><div class="qn">5</div><div class="qb"><p>Chairs around square tables in a row: 1 table seats 4, each added table adds 2 seats (4, 6, 8&hellip;). Write the rule and find seats at 12 tables. Why doesn't a&#8322;.&#8325; make sense?</p><details><summary>Show answer</summary><div class="ans"><p><b>Arithmetic</b>, a&#8321;=4, d=2. <span class="fx">a&#8345; = 4+(n&minus;1)&middot;2 = 2n+2</span>. 12 tables: <span class="fx">2(12)+2 = 26</span> seats. <b>a&#8322;.&#8325;:</b> n counts whole tables &mdash; there's no "2.5 tables," so only whole-number terms exist (dots, not a line).</p></div></details></div></div>
+
+  <div class="q"><div class="qn">6</div><div class="qb"><p>From a graph, <span class="fx">f(8)=120</span> and the curve covers x from 0 to 30 reaching y from 60 to 150. State f(8) in a sentence, and the domain and range.</p><details><summary>Show answer</summary><div class="ans"><p><b>f(8)=120:</b> "At 8 minutes, the value was 120." <b>Domain:</b> 0 &le; x &le; 30 (the times shown). <b>Range:</b> 60 &le; y &le; 150 (the values reached). Always tie it back to what x and y mean in the story.</p></div></details></div></div>
+
+  <p class="note" style="margin-top:22px">Review built from Mr. Howard's Unit 1 Review &mdash; our own explanations and different-number examples. Do the actual review sheet yourself; it's the graded assignment.</p>
+
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+"use strict";
+(function(){
+  var type="A"; // A arithmetic, G geometric
+  var bA=document.getElementById("bA"), bG=document.getElementById("bG");
+  var a1=document.getElementById("a1"), step=document.getElementById("step"), stepLbl=document.getElementById("stepLbl");
+  var terms=document.getElementById("terms"), efm=document.getElementById("efm"), plot=document.getElementById("plot");
+  function setType(t){ type=t; bA.classList.toggle("on",t==="A"); bG.classList.toggle("on",t==="G");
+    stepLbl.textContent = t==="A" ? "Common difference d" : "Common ratio r";
+    if(t==="G" && (+step.value===0)) step.value=2;
+    render(); }
+  bA.onclick=function(){setType("A");}; bG.onclick=function(){setType("G");};
+  function round(x){ return Math.round(x*1000)/1000; }
+  function render(){
+    var A=parseFloat(a1.value), s=parseFloat(step.value);
+    if(isNaN(A)) A=0; if(isNaN(s)) s=(type==="A"?1:2);
+    var seq=[]; for(var n=1;n<=6;n++){ seq.push( type==="A" ? A+(n-1)*s : A*Math.pow(s,n-1) ); }
+    terms.innerHTML = "Terms: " + seq.map(function(v,i){return (i===0?"<b>":"")+round(v)+(i===0?"</b>":"");}).join(", ") + ", &hellip;";
+    if(type==="A"){
+      var b=round(A-s); // simplified a1 + (n-1)d = d*n + (a1-d)
+      efm.innerHTML = "Explicit: <b>a&#8345; = "+round(A)+" + (n&minus;1)&middot;("+round(s)+")</b> = "+round(s)+"n "+(b>=0?"+ "+b:"&minus; "+Math.abs(b));
+    } else {
+      efm.innerHTML = "Explicit: <b>a&#8345; = "+round(A)+" &middot; ("+round(s)+")<sup>(n&minus;1)</sup></b>";
+    }
+    // plot dots
+    var W=320,H=160,pl=30,pr=12,pt=12,pb=22, mn=Math.min.apply(null,seq.concat([0])), mx=Math.max.apply(null,seq);
+    if(mx===mn) mx=mn+1;
+    function X(n){ return pl + (n-1)/(6-1)*(W-pl-pr); }
+    function Y(v){ return H-pb - (v-mn)/(mx-mn)*(H-pt-pb); }
+    var svg="";
+    svg+='<line x1="'+pl+'" y1="'+(H-pb)+'" x2="'+(W-pr)+'" y2="'+(H-pb)+'" stroke="#e4dcc8" stroke-width="1.5"/>';
+    svg+='<line x1="'+pl+'" y1="'+pt+'" x2="'+pl+'" y2="'+(H-pb)+'" stroke="#e4dcc8" stroke-width="1.5"/>';
+    for(var i=0;i<seq.length;i++){
+      var cx=X(i+1), cy=Y(seq[i]);
+      svg+='<circle cx="'+cx.toFixed(1)+'" cy="'+cy.toFixed(1)+'" r="4.5" fill="#e8623d"/>';
+      svg+='<text x="'+cx.toFixed(1)+'" y="'+(H-pb+15)+'" font-size="10" fill="#5a6b83" text-anchor="middle" font-family="Nunito,sans-serif">'+(i+1)+'</text>';
+    }
+    svg+='<text x="'+(pl-6)+'" y="'+(pt+8)+'" font-size="10" fill="#5a6b83" text-anchor="end" font-family="Nunito,sans-serif">a&#8345;</text>';
+    plot.innerHTML=svg;
+  }
+  a1.addEventListener("input",render); step.addEventListener("input",render);
+  render();
+})();
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>

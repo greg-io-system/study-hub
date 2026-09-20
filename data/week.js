@@ -55,8 +55,8 @@ window.STUDY_WEEK = {
       day: "Fri", date: "2026-09-25",
       subject: "algebra-2", subjectName: "Algebra 2",
       what: "Unit 1 TEST + the Unit 1 Review — Friday",
-      help: "Transformations Explorer — drag a, h, k; the Unit 1 functions & transformations material",
-      helpFile: "lessons/transformations-of-functions.html"
+      help: "Unit 1 Test — Review (functions + sequences, with an interactive sequence builder)",
+      helpFile: "lessons/algebra-2-unit-1-test-review.html"
     }
   ],
   ahead: [
