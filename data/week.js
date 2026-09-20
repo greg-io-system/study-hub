@@ -35,6 +35,13 @@ window.STUDY_WEEK = {
       what: "AMSCO Topic 1.3 (pgs 144–162) reading — due Monday"
     },
     {
+      day: "Tue", date: "2026-09-23",
+      subject: "world-history", subjectName: "World History",
+      what: "Unit 1 TEST (in-class) — all of Unit 1",
+      help: "Unit 1 Test — Review (the unit in four blocks + 12 self-check questions)",
+      helpFile: "lessons/unit-1-test-review.html"
+    },
+    {
       day: "Fri", date: "2026-09-25",
       subject: "algebra-2", subjectName: "Algebra 2",
       what: "Unit 1 TEST + the Unit 1 Review — Friday",

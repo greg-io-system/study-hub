@@ -87,6 +87,20 @@ window.STUDY_HUB = {
       blurb: "The story behind the chapters — causes, people, and why it mattered, not just dates to memorize.",
       weeks: [
         {
+          range: "Sep 21 – Sep 25",
+          theme: "Unit 1 Test review",
+          lessons: [
+            {
+              title: "Unit 1 Test — Review",
+              topic: "The whole unit in one place, for the in-class test Tuesday",
+              file: "lessons/unit-1-test-review.html",
+              date: "2026-09-20",
+              summary: "For the in-class Unit 1 test Tuesday: the unit in four blocks (how historians think, human origins & migration, the Agricultural Revolution, the first civilizations & how rulers and law codes used power), then 12 self-check questions with click-to-reveal model answers, plus links to the full lessons for each part.",
+              tags: ["test prep", "unit 1", "review"]
+            }
+          ]
+        },
+        {
           range: "Sep 14 – Sep 18",
           theme: "Ch. 3 · Early Civilizations → Belief Systems",
           lessons: [
