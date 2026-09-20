@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Neuron &amp; Neural Firing (1.3) &middot; AP Psychology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#6d5ab5;--accent-soft:#e9e4f5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:800px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:29px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.7em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul{padding-left:22px;margin:.4em 0}li{margin:.25em 0}
+.big{background:var(--accent-soft);border:1.5px solid #cfc4ec;border-radius:14px;padding:14px 18px;margin:14px 0}
+.big b{color:var(--accent)}
+.note{color:var(--soft);font-size:14px}
+.diagram{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px;margin:14px 0}
+svg{display:block;width:100%;height:auto}
+.part{cursor:pointer}
+.part text{font:800 12px Nunito,sans-serif;fill:var(--soft)}
+.part.on text{fill:var(--accent)}
+.shape{transition:.15s}
+.info{margin-top:10px;background:var(--accent-soft);border:1.5px solid #cfc4ec;border-radius:10px;padding:11px 15px;min-height:52px}
+.info b{color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font:800 12.5px Nunito,sans-serif;border:1.5px solid #cfc4ec;background:#fff;color:var(--accent);border-radius:999px;padding:5px 11px;cursor:pointer}
+.chip.on{background:var(--accent);color:#fff}
+.steps{counter-reset:s;padding:0;list-style:none}
+.steps li{position:relative;background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px 12px 46px;margin:9px 0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.steps b{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:.4em 0}
+th,td{border:1.5px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+td.nt{font-weight:800;color:var(--accent);white-space:nowrap}
+.q{display:grid;grid-template-columns:30px 1fr;gap:8px;background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin:9px 0}
+.qn{font-weight:800;color:var(--accent)}
+details{margin-top:6px}summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent)}
+.ans{background:var(--accent-soft);border:1.5px solid #cfc4ec;border-radius:10px;padding:9px 13px;margin-top:7px;font-size:15px}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">AP Psychology &middot; Topic 1.3</div>
+  <h1>The Neuron &amp; Neural Firing</h1>
+  <p class="tagline">For Monday's quiz. Three things to own: the <b>parts of a neuron</b>, the <b>order a neuron fires in</b>, and the <b>major neurotransmitters</b>. Tap around, then test yourself.</p>
+
+  <h2>1 &middot; The neuron &mdash; tap each part</h2>
+  <div class="diagram">
+    <svg viewBox="0 0 660 250" role="img" aria-label="Diagram of a neuron">
+      <!-- axon line -->
+      <line x1="200" y1="125" x2="560" y2="125" stroke="#c9bfa6" stroke-width="6"/>
+      <!-- myelin segments -->
+      <g class="part" data-k="myelin">
+        <rect class="shape" x="250" y="112" width="70" height="26" rx="13" fill="#f3d9a6" stroke="#d9b56b" stroke-width="2"/>
+        <rect class="shape" x="345" y="112" width="70" height="26" rx="13" fill="#f3d9a6" stroke="#d9b56b" stroke-width="2"/>
+        <rect class="shape" x="440" y="112" width="70" height="26" rx="13" fill="#f3d9a6" stroke="#d9b56b" stroke-width="2"/>
+        <text x="380" y="160" text-anchor="middle">myelin sheath</text>
+      </g>
+      <!-- nodes of ranvier (gaps) -->
+      <g class="part" data-k="node">
+        <circle class="shape" cx="332" cy="125" r="6" fill="#b98cff"/>
+        <circle class="shape" cx="427" cy="125" r="6" fill="#b98cff"/>
+        <text x="332" y="102" text-anchor="middle">nodes</text>
+      </g>
+      <!-- soma -->
+      <g class="part" data-k="soma">
+        <circle class="shape" cx="165" cy="125" r="38" fill="#e9e4f5" stroke="#8f7dcf" stroke-width="2.5"/>
+        <circle cx="165" cy="125" r="13" fill="#8f7dcf"/>
+        <text x="165" y="182" text-anchor="middle">soma (cell body)</text>
+      </g>
+      <!-- dendrites -->
+      <g class="part" data-k="dendrite">
+        <path class="shape" d="M138 100 L95 60 M138 108 L80 92 M140 150 L92 175 M138 142 L84 120 M150 92 L120 45" stroke="#8f7dcf" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <text x="86" y="45" text-anchor="middle">dendrites</text>
+      </g>
+      <!-- axon terminals -->
+      <g class="part" data-k="terminal">
+        <path class="shape" d="M560 125 L610 95 M560 125 L618 122 M560 125 L610 155 M600 100 L625 88 M600 150 L625 162" stroke="#8f7dcf" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle cx="612" cy="93" r="5" fill="#8f7dcf"/><circle cx="620" cy="122" r="5" fill="#8f7dcf"/><circle cx="612" cy="157" r="5" fill="#8f7dcf"/>
+        <text x="600" y="200" text-anchor="middle">axon terminals</text>
+      </g>
+      <!-- axon label (clickable via the line region) -->
+      <g class="part" data-k="axon">
+        <rect class="shape" x="205" y="118" width="40" height="14" rx="4" fill="#c9bfa6" opacity="0"/>
+        <text x="222" y="108" text-anchor="middle">axon</text>
+      </g>
+    </svg>
+    <div class="info" id="info"><b>Tap a part</b> of the neuron to see what it does. The message travels: <b>dendrites &rarr; soma &rarr; axon &rarr; axon terminals</b>.</div>
+  </div>
+  <p class="note">Also know: <b>glial cells (glia)</b> support, feed and protect neurons; <b>Schwann cells</b> build the myelin. Neuron types by job: <b>sensory</b> (in), <b>motor</b> (out), <b>interneurons</b> (in between); the <b>reflex arc</b> skips the brain for speed.</p>
+
+  <h2>2 &middot; How a neuron fires (in order)</h2>
+  <p>The one thing graders love: <b>the sequence</b>. Walk it top to bottom.</p>
+  <ol class="steps">
+    <li><b>Resting potential</b> &mdash; at rest the inside of the neuron is slightly <b>negative</b> (~&minus;70mV), charged up and ready.</li>
+    <li><b>Threshold</b> &mdash; incoming signals add up; if they pass the threshold level, the neuron fires.</li>
+    <li><b>Action potential</b> &mdash; the electrical impulse fires and shoots down the axon. <b>Depolarization</b>: positive ions rush in and flip the charge.</li>
+    <li><b>All-or-nothing principle</b> &mdash; it fires <b>fully or not at all</b>. A stronger stimulus makes it fire <em>more often</em>, not "harder."</li>
+    <li>The signal jumps node to node down the myelin (faster), reaching the <b>axon terminals</b>.</li>
+    <li><b>Neurotransmitters</b> are released across the <b>synapse (synaptic cleft)</b> to the next neuron's dendrites &mdash; <b>excitatory</b> (go) or <b>inhibitory</b> (stop).</li>
+    <li><b>Refractory period</b> &mdash; a brief pause before it can fire again. Leftover neurotransmitters are pulled back in by <b>reuptake</b>.</li>
+  </ol>
+
+  <h2>3 &middot; Neurotransmitters (function &amp; malfunction)</h2>
+  <p class="note">The classic quiz table. Learn the pair: what it does, and what happens when it's off.</p>
+  <table>
+    <tr><th>Neurotransmitter</th><th>Does</th><th>When it's off</th></tr>
+    <tr><td class="nt">Acetylcholine (ACh)</td><td>Muscle movement, memory</td><td>Loss &rarr; Alzheimer's; blocked &rarr; myasthenia gravis</td></tr>
+    <tr><td class="nt">Dopamine</td><td>Reward, pleasure, movement</td><td>Too little &rarr; Parkinson's; too much &rarr; schizophrenia</td></tr>
+    <tr><td class="nt">Serotonin</td><td>Mood, sleep, appetite</td><td>Low &rarr; depression</td></tr>
+    <tr><td class="nt">Norepinephrine</td><td>Alertness, arousal</td><td>Low &rarr; depression; high &rarr; anxiety</td></tr>
+    <tr><td class="nt">GABA</td><td>Main <b>inhibitory</b> &mdash; calms</td><td>Low &rarr; anxiety, seizures</td></tr>
+    <tr><td class="nt">Glutamate</td><td>Main <b>excitatory</b> &mdash; learning &amp; memory</td><td>Too much &rarr; overstimulation, migraines, seizures</td></tr>
+    <tr><td class="nt">Endorphins</td><td>Pain relief, pleasure ("natural high")</td><td>&mdash;</td></tr>
+    <tr><td class="nt">Substance P</td><td>Transmits pain signals</td><td>&mdash;</td></tr>
+  </table>
+  <div class="big"><b>Drugs at the synapse:</b> an <b>agonist</b> mimics/boosts a neurotransmitter; an <b>antagonist</b> blocks it; a <b>reuptake inhibitor</b> (like many antidepressants) stops reabsorption so more stays in the synapse.</div>
+  <p class="note">Also on 1.3: the <b>endocrine system</b> (hormones via the bloodstream &mdash; slower, longer-lasting than neurotransmitters: adrenaline, melatonin, oxytocin, leptin, ghrelin), the <b>fight-flight-freeze</b> response, and <b>psychoactive drugs</b> (tolerance, addiction, withdrawal; stimulants / depressants / hallucinogens / opioids).</p>
+
+  <h2>4 &middot; Quick self-check</h2>
+  <div class="q"><div class="qn">1</div><div><p>Put the neuron parts in the order a message travels.</p><details><summary>Show answer</summary><div class="ans"><b>Dendrites</b> (receive) &rarr; <b>soma</b> (integrate) &rarr; <b>axon</b> (carry) &rarr; <b>axon terminals</b> (release neurotransmitters).</div></details></div></div>
+  <div class="q"><div class="qn">2</div><div><p>What does the "all-or-nothing principle" mean?</p><details><summary>Show answer</summary><div class="ans">A neuron either fires <b>completely or not at all</b> once threshold is reached &mdash; intensity is coded by how <b>often</b> it fires, not how strongly.</div></details></div></div>
+  <div class="q"><div class="qn">3</div><div><p>What's the job of the myelin sheath, and what are the nodes of Ranvier?</p><details><summary>Show answer</summary><div class="ans">Myelin is fatty <b>insulation that speeds the signal</b>; the <b>nodes</b> are gaps where the impulse jumps, speeding it further. (Damaged myelin &rarr; multiple sclerosis.)</div></details></div></div>
+  <div class="q"><div class="qn">4</div><div><p>Match: Parkinson's, depression, Alzheimer's &mdash; to a neurotransmitter.</p><details><summary>Show answer</summary><div class="ans">Parkinson's &rarr; low <b>dopamine</b>; depression &rarr; low <b>serotonin</b> (and norepinephrine); Alzheimer's &rarr; loss of <b>acetylcholine</b>.</div></details></div></div>
+  <div class="q"><div class="qn">5</div><div><p>Agonist vs. antagonist?</p><details><summary>Show answer</summary><div class="ans"><b>Agonist</b> = mimics or boosts a neurotransmitter's effect; <b>antagonist</b> = blocks it.</div></details></div></div>
+  <div class="q"><div class="qn">6</div><div><p>Which is the main <em>excitatory</em> vs. main <em>inhibitory</em> neurotransmitter?</p><details><summary>Show answer</summary><div class="ans">Excitatory (go) = <b>glutamate</b>; inhibitory (calm) = <b>GABA</b>.</div></details></div></div>
+
+  <p class="note" style="margin-top:22px">Built from the 1.3 key terms in Kelly's AMSCO companion workbook &mdash; our own summary for studying, not a copy of the workbook.</p>
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+"use strict";
+(function(){
+  var FN={
+    dendrite:["Dendrites","Receive incoming messages from other neurons and carry them toward the cell body. The message starts here."],
+    soma:["Soma (cell body)","Holds the nucleus, keeps the cell alive, and adds up incoming signals to decide whether to fire."],
+    axon:["Axon","Carries the message (the action potential) away from the soma, down toward the axon terminals."],
+    myelin:["Myelin sheath","Fatty insulation wrapped around the axon that speeds the signal up. (Built by Schwann cells; damage → multiple sclerosis.)"],
+    node:["Nodes of Ranvier","The gaps between myelin segments. The impulse jumps node to node, which makes it travel even faster."],
+    terminal:["Axon terminals (terminal buttons)","The end branches that release neurotransmitters into the synapse, passing the message to the next neuron."]
+  };
+  var info=document.getElementById("info");
+  var parts=Array.prototype.slice.call(document.querySelectorAll(".part"));
+  function select(k,g){
+    parts.forEach(function(p){ p.classList.toggle("on", p===g);
+      var s=p.querySelectorAll(".shape"); Array.prototype.forEach.call(s,function(e){ e.style.filter = (p===g)?"drop-shadow(0 0 5px #8f7dcf)":""; e.style.strokeWidth = ""; });
+    });
+    info.innerHTML="<b>"+FN[k][0]+"</b> &mdash; "+FN[k][1];
+  }
+  parts.forEach(function(g){
+    var k=g.getAttribute("data-k");
+    g.addEventListener("click",function(){ select(k,g); });
+  });
+})();
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>

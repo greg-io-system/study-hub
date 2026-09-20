@@ -324,6 +324,20 @@ window.STUDY_HUB = {
       blurb: "Why people think and act the way they do — the approaches, the research methods, and the big ideas behind them.",
       weeks: [
         {
+          range: "Sep 21 – Sep 25",
+          theme: "Topic 1.3 · The Neuron & Neural Firing",
+          lessons: [
+            {
+              title: "The Neuron & Neural Firing",
+              topic: "Topic 1.3 — for Monday's quiz",
+              file: "lessons/neuron-neural-firing.html",
+              date: "2026-09-20",
+              summary: "For the Monday 1.3 quiz. Tap-to-explore neuron diagram (dendrites → soma → axon → terminals), the neural-firing sequence in order (resting potential → threshold → action potential → all-or-nothing → reuptake), the neurotransmitter chart with function + malfunction (dopamine/Parkinson's, ACh/Alzheimer's, GABA, glutamate…), agonist vs antagonist, and a quick self-check.",
+              tags: ["topic 1.3", "biology", "interactive"]
+            }
+          ]
+        },
+        {
           range: "Sep 14 – Sep 18",
           theme: "Unit 1 · Research Methods & Statistics",
           lessons: [
