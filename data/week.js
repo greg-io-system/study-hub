@@ -32,6 +32,11 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-09-21",
       subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "Quiz (in-class) — Monday"
+    },
+    {
+      day: "Mon", date: "2026-09-21",
+      subject: "ap-psychology", subjectName: "AP Psychology",
       what: "AMSCO Topic 1.3 (pgs 144–162) reading — due Monday"
     },
     {
