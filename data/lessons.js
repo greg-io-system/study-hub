@@ -273,6 +273,14 @@ window.STUDY_HUB = {
           theme: "The Toolkit — skills & how the class works",
           lessons: [
             {
+              title: "Form Is a Choice",
+              topic: "Classifying a text (memoir vs argument…) and finding its central claim",
+              file: "lessons/form-is-a-choice.html",
+              date: "2026-09-20",
+              summary: "For any 'is this X or Y, and what's the claim?' question. The key idea — form is a choice, not a category (a memoir can BE an argument) — plus the 3-move answer pattern (classify + because + 'in order to'), the Rogerian 'While…; However' scaffold, a worked example on a made-up text, and how to find an unstated central claim. Pairs with the Loser Edit device guide.",
+              tags: ["toolkit", "rhetorical analysis", "central claim"]
+            },
+            {
               title: "How Mr. Evans's assignments work",
               topic: "The five-move pattern behind every one of his homework emails — read it once, it helps every time",
               file: "lessons/how-mr-e-assignments-work.html",
