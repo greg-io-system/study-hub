@@ -347,6 +347,20 @@ window.STUDY_HUB = {
               ]
             }
           ]
+        },
+        {
+          range: "Always on",
+          theme: "The Toolkit — free-response skills",
+          lessons: [
+            {
+              title: "How to Nail an AAQ",
+              topic: "The Article Analysis Question — the same six moves every time",
+              file: "lessons/how-to-nail-an-aaq.html",
+              date: "2026-09-20",
+              summary: "The reusable method for every AAQ: what it is, the one rule that wins each part (apply, don't just define), and parts A–F walked one at a time (research method, operational definition, interpreting a result, ethics, generalizability, support/refute a claim) — each with how to nail it, the trap, and a worked answer on a made-up study. Grounded in the AP 2025 scoring guidelines.",
+              tags: ["toolkit", "AAQ", "free response"]
+            }
+          ]
         }
       ]
     },
