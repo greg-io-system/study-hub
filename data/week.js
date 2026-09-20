@@ -12,55 +12,34 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-09-14",
-  label: "Week of Sep 14 – Sep 18",
+  updated: "2026-09-20",
+  label: "Week of Sep 21 – Sep 25",
   items: [
     {
-      day: "Mon", date: "2026-09-14",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "Parent Functions & Transformations (optional) — due Monday 11:59pm",
-      help: "Transformations Explorer — drag a, h, k and watch the graph",
-      helpFile: "lessons/transformations-of-functions.html"
-    },
-    {
-      day: "Mon", date: "2026-09-14",
-      subject: "world-history", subjectName: "World History",
-      what: "Belief Systems + Early Civilizations Quiz — due Monday 11:59pm",
-      help: "Hammurabi's Code — order, kingship & the gods (the religion-and-government idea)",
-      helpFile: "lessons/hammurabi-law-kingship-gods.html"
-    },
-    {
-      day: "Mon", date: "2026-09-14",
+      day: "Mon", date: "2026-09-21",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Unit 2 (Integumentary) begins — skin layers; Lab 7",
-      help: "The Layers of Skin — tap the cross-section, ride the epidermis 'escalator'",
+      what: "Epidermis Metaphor — due Monday 8:00am",
+      help: "The Layers of Skin — the epidermis metaphor starter is in here",
       helpFile: "lessons/integumentary-skin-layers.html"
     },
     {
-      day: "Mon", date: "2026-09-14",
+      day: "Mon", date: "2026-09-21",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Failure Synthesis reply — before Monday's class",
+      help: "Failure Synthesis — the method guide (understand Leak, then argue your position)",
+      helpFile: "lessons/failure-synthesis-method-guide.html"
+    },
+    {
+      day: "Mon", date: "2026-09-21",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Unit 1 Test — Approaches & Research Methods — due Monday",
-      help: "Statistics, Made Intuitive — the stats half of the test",
-      helpFile: "lessons/research-methods-statistics.html"
+      what: "AMSCO Topic 1.3 (pgs 144–162) reading — due Monday"
     },
     {
-      day: "Tue", date: "2026-09-15",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "ASMCO Topics 1.1 and 1.2 — due Tuesday"
-    },
-    {
-      day: "Thu", date: "2026-09-17",
-      subject: "ap-french", subjectName: "French",
-      what: "Optional Passé Composé practice — due Thursday 12:00pm",
-      help: "Passé composé with être & reflexive verbs — build one and watch it agree",
-      helpFile: "lessons/passe-compose-etre-reflexive.html"
-    },
-    {
-      day: "Fri", date: "2026-09-18",
-      subject: "ap-french", subjectName: "French",
-      what: "Four items due Friday 10:00am — reflexive verbs, reflexives in the passé composé, passé composé with être, futur proche",
-      help: "Passé composé with être & reflexive verbs (covers the whole cluster)",
-      helpFile: "lessons/passe-compose-etre-reflexive.html"
+      day: "Fri", date: "2026-09-25",
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "Unit 1 TEST + the Unit 1 Review — Friday",
+      help: "Transformations Explorer — drag a, h, k; the Unit 1 functions & transformations material",
+      helpFile: "lessons/transformations-of-functions.html"
     }
   ]
 };
