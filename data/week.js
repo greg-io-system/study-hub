@@ -25,7 +25,9 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-09-22",
       subject: "ap-english", subjectName: "AP English",
-      what: "Annotate Carr's \"Is Google Making Us Stupid?\" (¶1–18) — rhetorical situation + appeals; reply before Tuesday's class"
+      what: "Annotate Carr's \"Is Google Making Us Stupid?\" (¶1–18) — rhetorical situation + appeals; reply before Tuesday's class",
+      help: "Is Google Making Us Stupid? — an annotation guide (the rhetorical situation + ethos & pathos, with tap-to-reveal hints on the real ¶1–18)",
+      helpFile: "lessons/carr-annotation-guide.html"
     },
     {
       day: "Mon", date: "2026-09-21",

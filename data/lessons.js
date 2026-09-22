@@ -239,8 +239,19 @@ window.STUDY_HUB = {
       weeks: [
         {
           range: "Sep 21 – Sep 25",
-          theme: "Synthesis — the failure capstone",
+          theme: "Synthesis capstone → reading in a digital age",
           lessons: [
+            {
+              title: "Is Google Making Us Stupid? — an annotation guide",
+              topic: "Annotate Carr's ¶1–18 to the rubric: the rhetorical situation + the appeals (ethos & pathos)",
+              file: "lessons/carr-annotation-guide.html",
+              date: "2026-09-22",
+              summary: "For Tuesday's Carr annotation. Annotation as choice + purpose (not highlighting), the rhetorical-situation wheel, and the appeals written as 'appeals to ___ by ___ in order to ___'. Ethos and pathos worked in depth on a made-up parallel passage, then tap-to-reveal method hints on Carr's real ¶1–18 — the kind of appeal to look for, never the filled-in note. Know 'implication' cold. Your annotations stay yours; the essay is link-only.",
+              tags: ["assignment help", "rhetorical analysis", "annotation", "ethos & pathos"],
+              materials: [
+                { kind: "lesson", label: "Annotation guide", file: "lessons/carr-annotation-guide.html" }
+              ]
+            },
             {
               title: "Failure Synthesis — a method guide",
               topic: "Argue YOUR position on Ryan Leak's claim about failure — synthesizing Fratto, Gladwell & Whitehead",
