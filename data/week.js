@@ -12,7 +12,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-09-20",
+  updated: "2026-09-21",
   label: "Week of Sep 21 – Sep 25",
   items: [
     {
@@ -23,11 +23,9 @@ window.STUDY_WEEK = {
       helpFile: "lessons/integumentary-skin-layers.html"
     },
     {
-      day: "Mon", date: "2026-09-21",
+      day: "Tue", date: "2026-09-22",
       subject: "ap-english", subjectName: "AP English",
-      what: "Failure Synthesis reply — before Monday's class",
-      help: "Failure Synthesis — the method guide (understand Leak, then argue your position)",
-      helpFile: "lessons/failure-synthesis-method-guide.html"
+      what: "Annotate Carr's \"Is Google Making Us Stupid?\" (¶1–18) — rhetorical situation + appeals; reply before Tuesday's class"
     },
     {
       day: "Mon", date: "2026-09-21",
