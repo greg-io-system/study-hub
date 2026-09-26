@@ -12,32 +12,41 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-09-23",
-  label: "Week of Sep 21 – Sep 25",
+  updated: "2026-09-26",
+  label: "Week of Sep 28 – Oct 2",
   items: [
     {
-      day: "Thu", date: "2026-09-24",
+      day: "Sun", date: "2026-09-27",
+      subject: "world-history", subjectName: "World History",
+      what: "Classical Civilizations (500 BCE to 500 CE) — the reading activity from class, due Sunday 11:59 PM. Missed the reading? Get it from Mr. Angelopulos."
+    },
+    {
+      day: "Mon", date: "2026-09-28",
       subject: "ap-english", subjectName: "AP English",
-      what: "Carr \"Round 2\" — annotate the whole essay for the rhetorical situation, then reply with notes on Exigence/Purpose/Convincing + a developed paragraph on Audience & Ethos. Before Thursday's class.",
-      help: "Is Google Making Us Stupid? — an annotation guide (the rhetorical situation + ethos & pathos, with tap-to-reveal hints)",
-      helpFile: "lessons/carr-annotation-guide.html"
+      what: "Your position on AI in the classroom — read \"I'm a High Schooler. AI Is Demolishing My Education,\" then reply with linked paragraphs: \"I'm a high schooler. AI has ___,\" 2–3 Bogost quotes, and a \"While ___ ; however ___.\" Before Monday's class.",
+      help: "AP Lang TERMS Library (exigence, Rogerian, position vs. opinion)",
+      helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
-      day: "Fri", date: "2026-09-25",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "Unit 1 TEST + the Unit 1 Review — Friday",
-      help: "Unit 1 Test — Review (functions + sequences, incl. the square-root graph, with an interactive sequence builder)",
-      helpFile: "lessons/algebra-2-unit-1-test-review.html"
+      day: "Mon", date: "2026-09-28",
+      subject: "ap-french", subjectName: "French",
+      what: "Reflexives in the passé composé — due Monday 7:59 AM"
     },
     {
-      day: "Fri", date: "2026-09-25",
+      day: "Mon", date: "2026-09-28",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "AMSCO pgs 168–188 & 192–204 (Unit 2, Biological Bases) — due Monday 11:59 PM"
+    },
+    {
+      day: "Tue", date: "2026-09-29",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Two assignments due Friday: Burn Victim Case Study + Fingerprint Identification"
+      what: "Unit 2 EXAM (Integumentary) — Monday is the review day",
+      help: "Unit 2 exam prep — study guide + practice quiz",
+      helpFile: "lessons/hap-unit-2-integumentary-study-quiz.html"
     }
   ],
   ahead: [
-    { subjectName: "French", what: "reflexives in the passé composé — due Mon", date: "2026-09-28" },
-    { subjectName: "AP Psychology", what: "AMSCO pgs 168–188 & 192–204 — due Mon", date: "2026-09-28" },
-    { subjectName: "Human Anatomy", what: "Unit 2 Exam", date: "2026-09-29" }
+    { subjectName: "AP English", what: "Position Paper #1 (\"nation of wimps\") — rough-draft conversation in class", date: "2026-10-08" },
+    { subjectName: "AP English", what: "Position Paper #1 — final due before class", date: "2026-10-15" }
   ]
 };
