@@ -178,6 +178,34 @@ window.STUDY_HUB = {
       blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
       weeks: [
         {
+          range: "Sep 21 – Sep 25",
+          theme: "Unit 2 · Integumentary System",
+          lessons: [
+            {
+              title: "Burns: How Deep, and Why It Matters",
+              topic: "The 4 types of burns, what each destroys, how each heals — and burn shock, infection & skin grafts",
+              file: "lessons/hap-burns.html",
+              date: "2026-09-25",
+              summary: "Tap through 1st to 4th degree on a skin cross-section to see how deep each burn reaches, then why a big burn is a whole-body emergency (fluid loss and shock, infection, hypermetabolism, bedsores), how a skin graft takes, and what scar tissue can’t do. Supports the Burn Victim Case Study; 9-question self-check.",
+              tags: ["integumentary", "burns", "interactive", "exam prep"],
+              materials: [
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/hap-burns.html" }
+              ]
+            },
+            {
+              title: "Fingerprints: Arches, Loops & Whorls",
+              topic: "Where ridges come from, the 3 pattern types, and the ridge characteristics (minutiae) that make a print unique",
+              file: "lessons/hap-fingerprints.html",
+              date: "2026-09-25",
+              summary: "How dermal papillae build friction ridges, the three pattern types with the count-the-deltas trick, a name-that-pattern drill, and a picture guide to ridge characteristics (fork, dot, lake, hook, delta, core). Tips for the Fingerprint Identification lab; 7-question self-check.",
+              tags: ["integumentary", "fingerprints", "interactive", "exam prep"],
+              materials: [
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/hap-fingerprints.html" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 14 – Sep 18",
           theme: "Unit 2 · Integumentary System",
           lessons: [

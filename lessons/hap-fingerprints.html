@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fingerprints &middot; Human Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#b5445a;--accent-soft:#f6e3e7;--ridge:#4a3a5c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.6em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.2em 0 .3em}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul,ol{padding-left:22px;margin:.4em 0}
+li{margin:.25em 0}
+.big{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:14px;padding:16px 20px;margin:16px 0}
+.big b{color:var(--accent)}
+.note{color:var(--soft);font-size:14px}
+.diagram{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:12px}
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+@media (max-width:620px){.types{grid-template-columns:1fr}}
+.type{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
+.type h3{margin:.2em 0 .1em;color:var(--accent)}
+.type .pct{font-size:12.5px;font-weight:800;color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
+.type p{margin:.35em 0 0;font-size:14.5px}
+.type svg{display:block;width:100%;height:auto;background:#fff;border-radius:8px;border:1px solid var(--line)}
+.minu{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0}
+.m{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
+.m svg{display:block;width:100%;height:auto;background:#fff;border-radius:8px;border:1px solid var(--line)}
+.m b{display:block;margin-top:6px;color:var(--accent)}
+.m .aka{font-size:12.5px;color:var(--soft);font-weight:700}
+.m p{margin:.2em 0 0;font-size:14px}
+.game{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px;margin:12px 0;text-align:center}
+.game svg{width:100%;max-width:300px;height:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
+.game .btns{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:10px 0}
+.game button{font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer}
+.game button:hover{background:var(--accent-soft)}
+.game button.next{background:var(--accent);border-color:var(--accent);color:#fff}
+.fb{min-height:48px;font-size:15px;margin-top:4px}
+.fb.ok b{color:#2f7a4f}.fb.no b{color:var(--accent)}
+.score{font-size:13px;font-weight:800;color:var(--soft)}
+.mnem{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:12px;padding:12px 16px;margin:14px 0;font-size:15px}
+.mnem b{color:var(--accent)}
+.q{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.q p{margin:0}
+.qn{font-weight:800;color:var(--accent);margin-right:6px}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user-select:none}
+summary:hover{text-decoration:underline}
+.ans{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:10px;padding:10px 14px;margin-top:8px;font-size:15px}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Human Anatomy &middot; Unit 2: Integumentary</div>
+  <h1>Fingerprints: Arches, Loops &amp; Whorls</h1>
+  <p class="tagline">Where fingerprint ridges come from, the three pattern types, and the tiny ridge details (minutiae) that make every print one-of-a-kind &mdash; plus a pattern-ID drill.</p>
+
+  <div class="big">
+    <b>Where the ridges come from:</b> the top of the <b>dermis</b> isn't flat &mdash; it's pushed up into bumps called
+    <b>dermal papillae</b>. On your fingertips, palms and soles they line up in rows and push the epidermis above them
+    into raised <b>friction ridges</b>. They form <b>before birth</b> and are anchored in the dermis, so they stay the same
+    all your life: a shallow cut or burn heals back into the <b>same</b> pattern. Only damage deep enough to scar the dermis changes it.
+    <br><br>
+    <b>Why you leave a print:</b> sweat pores open along the tops of the ridges, so sweat and skin oil coat the ridges &mdash; touch a surface and they leave a copy.
+    <b>Why ridges exist at all:</b> <b>grip</b> (like tire tread) and a sharper sense of <b>touch</b>.
+  </div>
+
+  <p class="note"><b>Ridgeology</b> = the study of how friction ridges are shaped and why that shape can identify a person. Identification uses two levels: the overall <b>pattern type</b> (arch, loop, whorl) and the small <b>ridge characteristics</b> (minutiae) inside it. Even identical twins, who share DNA, have different minutiae.</p>
+
+  <h2>The three pattern types</h2>
+  <div class="types">
+    <div class="type">
+      <svg id="t-arch" viewBox="0 0 300 220" aria-label="Arch pattern"></svg>
+      <h3>Arch</h3><div class="pct">rarest &middot; ~5%</div>
+      <p>Ridges enter on one side, <b>rise in a hill</b> in the middle, and exit the other side. No loop-back, no circle.</p>
+      <p><b>Deltas: 0.</b> <span class="note">A "tented" arch has a sharp spike in the middle.</span></p>
+    </div>
+    <div class="type">
+      <svg id="t-loop" viewBox="0 0 300 220" aria-label="Loop pattern"></svg>
+      <h3>Loop</h3><div class="pct">most common &middot; ~60&ndash;65%</div>
+      <p>Ridges enter on one side, <b>curve around like a hairpin</b>, and go back out the <b>same side</b> they came in.</p>
+      <p><b>Deltas: 1.</b> <span class="note">Opens toward the thumb = radial loop; toward the pinky = ulnar loop.</span></p>
+    </div>
+    <div class="type">
+      <svg id="t-whorl" viewBox="0 0 300 220" aria-label="Whorl pattern"></svg>
+      <h3>Whorl</h3><div class="pct">~30&ndash;35%</div>
+      <p>Ridges make <b>circles, ovals or a spiral</b> around a center point.</p>
+      <p><b>Deltas: 2.</b> <span class="note">A double-loop whorl has two loops curling around each other.</span></p>
+    </div>
+  </div>
+
+  <div class="mnem">
+    <b>Count the deltas &mdash; it's the fastest ID:</b> a <b>delta</b> is a little triangle where ridges split and flow in three directions.
+    <b>Arch = 0 &middot; Loop = 1 &middot; Whorl = 2.</b><br>
+    Then check the center: a <b>hill</b> (arch), a <b>hairpin</b> that exits where it came in (loop), or a <b>circle / spiral</b> (whorl).
+  </div>
+
+  <h2>Try it: name the pattern</h2>
+  <div class="game">
+    <svg id="g-svg" viewBox="0 0 300 220" aria-label="Mystery fingerprint pattern"></svg>
+    <div class="btns">
+      <button data-a="arch">Arch</button><button data-a="loop">Loop</button><button data-a="whorl">Whorl</button>
+    </div>
+    <div class="fb" id="g-fb">Look at the center and count the deltas (marked with a ▲).</div>
+    <div class="btns"><button class="next" id="g-next">Next print &rarr;</button></div>
+    <div class="score" id="g-score">0 / 0</div>
+  </div>
+
+  <h2>Ridge characteristics (minutiae)</h2>
+  <p>Two people can both have loops &mdash; so the pattern type narrows it down but doesn't identify anyone. What makes a print unique is <b>where individual ridges do something</b>: end, split, form a dot, and so on. Examiners match prints by finding the <b>same minutiae in the same positions</b>. The red circle marks each one:</p>
+  <div class="minu" id="minu"></div>
+
+  <h3>Tips for the lab</h3>
+  <ul>
+    <li><b>Rolling a print:</b> ink only the ridges, lightly &mdash; too much ink fills the valleys and the print turns into a blob. Roll <b>once</b>, edge to edge; rolling back and forth smears it.</li>
+    <li><b>Labeling your pattern:</b> find the center, then find the delta(s). Zero deltas = arch, one = loop, two = whorl. Most people have mostly loops, so if you're unsure, check for a hairpin first.</li>
+    <li><b>Why the balloon:</b> blowing it up <b>stretches the print</b>, so ridges that were a hair apart spread out and the minutiae get big enough to spot and label. Scan one ridge at a time, following it with a pen tip until it ends, splits, or does something odd.</li>
+    <li>Your two hands aren't mirror images of each other &mdash; every finger can be a different type.</li>
+  </ul>
+
+  <h2>Check yourself</h2>
+  <div class="q"><p><span class="qn">1</span>Which skin layer creates fingerprint ridges, and what structures do it?</p>
+    <details><summary>Show answer</summary><div class="ans">The <b>dermis</b> &mdash; its upper bumps, the <b>dermal papillae</b>, push the epidermis up into friction ridges.</div></details></div>
+  <div class="q"><p><span class="qn">2</span>Why does a fingerprint grow back the same after a paper cut but not after a deep burn?</p>
+    <details><summary>Show answer</summary><div class="ans">The pattern is set in the <b>dermis</b>. A shallow cut only damages the epidermis, which regrows over the same papillae. A burn deep enough to destroy the dermis heals as <b>scar</b>, which has no ridges.</div></details></div>
+  <div class="q"><p><span class="qn">3</span>Name the three pattern types from most to least common.</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Loop</b> (~60&ndash;65%) &rarr; <b>whorl</b> (~30&ndash;35%) &rarr; <b>arch</b> (~5%).</div></details></div>
+  <div class="q"><p><span class="qn">4</span>A print has two deltas and circular ridges in the middle. What is it?</p>
+    <details><summary>Show answer</summary><div class="ans">A <b>whorl</b>. (Loop = 1 delta, arch = 0.)</div></details></div>
+  <div class="q"><p><span class="qn">5</span>What's the difference between a pattern type and a ridge characteristic?</p>
+    <details><summary>Show answer</summary><div class="ans">The <b>pattern type</b> is the overall shape (arch, loop, whorl) &mdash; shared by millions of people. <b>Ridge characteristics (minutiae)</b> are the small details &mdash; ridge endings, forks, dots, lakes &mdash; and their <b>positions</b> are what make a print unique to one person.</div></details></div>
+  <div class="q"><p><span class="qn">6</span>A ridge splits into two. What's that called?</p>
+    <details><summary>Show answer</summary><div class="ans">A <b>bifurcation</b> (fork). If the two branches rejoin a little later, making an eye shape, that's an <b>enclosure</b> (lake).</div></details></div>
+  <div class="q"><p><span class="qn">7</span>Why do fingers leave prints on glass at all?</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Sweat pores</b> open along the ridge tops, so sweat (plus oil picked up from touching your face and hair) coats the ridges and transfers to the surface in the ridge pattern.</div></details></div>
+
+  <p class="note" style="margin-top:22px">Original study explainer for Unit 2 (Integumentary), keyed to the Unit 2 review goal "identify three types of fingerprints and ridge characteristics that make them unique." Pattern drawings are simplified diagrams, not real prints. Percentages are typical population figures and vary by source.</p>
+
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg',RC='#4a3a5c',DC='#b5445a';
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+  function clear(s){while(s.firstChild)s.removeChild(s.firstChild)}
+  function ridge(s,d,w){return el('path',{d:d,fill:'none',stroke:RC,'stroke-width':w||2.2,'stroke-linecap':'round'},s)}
+  function delta(s,x,y){el('path',{d:'M'+x+' '+(y-9)+' L'+(x+8)+' '+(y+6)+' L'+(x-8)+' '+(y+6)+' Z',fill:DC,opacity:.9},s)}
+  // clip to a fingertip-ish oval
+  function frame(s,id){clear(s);var defs=el('defs',{},s);var cp=el('clipPath',{id:id},defs);el('ellipse',{cx:150,cy:115,rx:118,ry:100},cp);var g=el('g',{'clip-path':'url(#'+id+')'},s);el('ellipse',{cx:150,cy:115,rx:118,ry:100,fill:'none',stroke:'#d8cfe0','stroke-width':2},s);return g}
+
+  function drawArch(s,id,tented){
+    var g=frame(s,id);
+    for(var i=0;i<17;i++){var y=30+i*12,h=Math.max(0,60-i*3.2);
+      if(tented&&i<9){ridge(g,'M20 '+(y+h*.2)+' L150 '+(y-h)+' L280 '+(y+h*.2))}
+      else ridge(g,'M20 '+y+' Q150 '+(y-h*1.6)+' 280 '+y)}
+  }
+  function drawLoop(s,id,mirror){
+    var g=frame(s,id); if(mirror) g.setAttribute('transform','translate(300 0) scale(-1 1)');
+    var cx=160,cy=98;
+    // hairpins: enter from the left, turn, exit back out the left
+    for(var k=1;k<=5;k++){var r=k*10;ridge(g,'M10 '+(cy-r)+' L'+cx+' '+(cy-r)+' A'+r+' '+r+' 0 0 1 '+cx+' '+(cy+r)+' L10 '+(cy+r))}
+    ridge(g,'M115 '+cy+' L'+cx+' '+cy);
+    // outer ridges wrap over the top and sweep down-right, past the delta
+    for(var j=1;j<=6;j++){var R=50+j*13,ex=cx+R*.766,ey=cy+R*.643;
+      ridge(g,'M10 '+(cy-R)+' L'+cx+' '+(cy-R)+' A'+R+' '+R+' 0 0 1 '+ex+' '+ey+' L'+(ex+70)+' '+(ey+58))}
+    // lower ridges run underneath, flowing out the bottom-right
+    for(var n=0;n<5;n++){var yb=cy+62+n*12;ridge(g,'M10 '+yb+' L'+(cx+30)+' '+yb+' Q'+(cx+70)+' '+yb+' 300 '+(yb+30))}
+    var dx=mirror?300-(cx+50):cx+50; delta(s,dx,cy+52);
+  }
+  function drawWhorl(s,id){
+    var g=frame(s,id);
+    for(var k=1;k<=7;k++){el('ellipse',{cx:150,cy:108,rx:k*11,ry:k*9,fill:'none',stroke:RC,'stroke-width':2.2},g)}
+    for(var j=0;j<5;j++){var y=22-j*10;ridge(g,'M10 '+(y+60)+' Q150 '+(y-20)+' 290 '+(y+60))}
+    for(var n=0;n<5;n++){var yb=190+n*11;ridge(g,'M10 '+(yb-10)+' Q150 '+(yb+8)+' 290 '+(yb-10))}
+    delta(s,62,172);delta(s,238,172);
+  }
+  drawArch(document.getElementById('t-arch'),'c1');
+  drawLoop(document.getElementById('t-loop'),'c2');
+  drawWhorl(document.getElementById('t-whorl'),'c3');
+
+  // minutiae
+  var M=[
+    ['Ridge ending','','A ridge simply stops.',function(s){ridge(s,'M8 18 H152');ridge(s,'M8 62 H152');ridge(s,'M8 40 H84');return [84,40]}],
+    ['Bifurcation','fork','One ridge splits into two.',function(s){ridge(s,'M8 12 H152');ridge(s,'M8 68 H152');ridge(s,'M8 40 H66 Q84 40 96 28 H152');ridge(s,'M66 40 Q84 40 96 52 H152');return [68,40]}],
+    ['Dot','','A ridge so short it\'s just a speck.',function(s){ridge(s,'M8 18 H152');ridge(s,'M8 62 H152');el('circle',{cx:80,cy:40,r:3.2,fill:RC},s);return [80,40]}],
+    ['Short ridge','island','A short stand-alone ridge segment.',function(s){ridge(s,'M8 18 H152');ridge(s,'M8 62 H152');ridge(s,'M58 40 H104');return [81,40]}],
+    ['Enclosure','lake','A ridge splits and rejoins, making an eye shape.',function(s){ridge(s,'M8 14 H152');ridge(s,'M8 66 H152');ridge(s,'M8 40 H50 Q64 40 70 32 Q80 24 94 32 Q100 40 114 40 H152');ridge(s,'M50 40 Q64 40 70 48 Q80 56 94 48 Q100 40 114 40');return [82,40]}],
+    ['Hook','spur','A ridge with a short branch sticking off it.',function(s){ridge(s,'M8 16 H152');ridge(s,'M8 64 H152');ridge(s,'M8 44 H152');ridge(s,'M70 44 Q82 44 94 32');return [84,36]}],
+    ['Crossover','bridge','A short ridge connecting two parallel ridges.',function(s){ridge(s,'M8 26 H152');ridge(s,'M8 54 H152');ridge(s,'M70 26 L90 54');ridge(s,'M8 8 H152');ridge(s,'M8 72 H152');return [80,40]}],
+    ['Delta','','A triangle where ridges flow off in three directions.',function(s){ridge(s,'M8 20 Q80 22 152 8');ridge(s,'M8 60 Q60 50 80 30');ridge(s,'M152 64 Q100 52 82 30');ridge(s,'M8 74 Q80 66 152 76');return [80,34]}],
+    ['Core','','The innermost point of a loop or whorl — its center.',function(s){ridge(s,'M8 20 H96 A20 20 0 0 1 96 60 H8');ridge(s,'M8 8 H96 A32 32 0 0 1 96 72 H8');ridge(s,'M8 34 H96 A6 6 0 0 1 96 46 H8');return [100,40]}]
+  ];
+  var box=document.getElementById('minu');
+  M.forEach(function(m){
+    var d=document.createElement('div');d.className='m';
+    var s=el('svg',{viewBox:'0 0 160 80'},null);d.appendChild(s);
+    var p=m[3](s);el('circle',{cx:p[0],cy:p[1],r:13,fill:'none',stroke:DC,'stroke-width':2.4},s);
+    var b=document.createElement('b');b.textContent=m[0];d.appendChild(b);
+    if(m[1]){var a=document.createElement('span');a.className='aka';a.textContent='a.k.a. '+m[1];d.appendChild(a)}
+    var t=document.createElement('p');t.textContent=m[2];d.appendChild(t);
+    box.appendChild(d);
+  });
+
+  // game
+  var gs=document.getElementById('g-svg'),fb=document.getElementById('g-fb'),sc=document.getElementById('g-score');
+  var cur=null,answered=false,right=0,total=0,last=null;
+  var WHY={arch:'no deltas, ridges rise in a hill and pass straight through',loop:'one delta, ridges hairpin back out the side they entered',whorl:'two deltas, ridges circle the center'};
+  function next(){
+    var opts=['arch','arch-t','loop','loop-m','whorl'],pick;
+    do{pick=opts[Math.floor(Math.random()*opts.length)]}while(pick===last);last=pick;
+    cur=pick.split('-')[0];answered=false;
+    if(pick==='arch')drawArch(gs,'cg');else if(pick==='arch-t')drawArch(gs,'cg',true);
+    else if(pick==='loop')drawLoop(gs,'cg');else if(pick==='loop-m')drawLoop(gs,'cg',true);else drawWhorl(gs,'cg');
+    fb.className='fb';fb.innerHTML='Look at the center and count the deltas (marked with a ▲).';
+  }
+  document.querySelectorAll('.game button[data-a]').forEach(function(b){b.addEventListener('click',function(){
+    if(answered)return;answered=true;total++;var a=b.getAttribute('data-a');
+    if(a===cur){right++;fb.className='fb ok';fb.innerHTML='<b>Yes &mdash; '+cur+'.</b> '+WHY[cur]+'.'}
+    else{fb.className='fb no';fb.innerHTML='<b>Not quite &mdash; it\'s a '+cur+'.</b> '+WHY[cur]+'.'}
+    sc.textContent=right+' / '+total;
+  })});
+  document.getElementById('g-next').addEventListener('click',next);
+  next();
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>
