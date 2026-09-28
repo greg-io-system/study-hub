@@ -16,9 +16,16 @@ window.STUDY_WEEK = {
   label: "Week of Sep 28 – Oct 2",
   items: [
     {
-      day: "Sun", date: "2026-09-27",
+      day: "Mon", date: "2026-09-28",
       subject: "world-history", subjectName: "World History",
-      what: "Classical Civilizations (500 BCE to 500 CE) — the reading activity from class, due Sunday 11:59 PM. Missed the reading? Get it from Mr. Angelopulos."
+      what: "Classical Civilizations (500 BCE to 500 CE) reading activity — make-up Monday (Friday was an excused absence for volunteering). Get the in-class reading from Mr. Angelopulos."
+    },
+    {
+      day: "Mon", date: "2026-09-28",
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "Unit 1 TEST make-up (Functions & Sequences) — Monday or Tuesday; confirm the time with Ms. Howard",
+      help: "Unit 1 test review",
+      helpFile: "lessons/algebra-2-unit-1-test-review.html"
     },
     {
       day: "Mon", date: "2026-09-28",
