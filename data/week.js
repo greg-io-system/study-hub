@@ -48,7 +48,9 @@ window.STUDY_WEEK = {
     }
   ],
   ahead: [
+    { subjectName: "Human Anatomy", what: "Optional: CU Anschutz healthcare career panel, 10–11 AM (Mrs. Kalec posted it)", date: "2026-10-06" },
     { subjectName: "AP English", what: "Position Paper #1 (\"nation of wimps\") — rough-draft conversation in class", date: "2026-10-08" },
-    { subjectName: "AP English", what: "Position Paper #1 — final due before class", date: "2026-10-15" }
+    { subjectName: "AP English", what: "Position Paper #1 — final due before class", date: "2026-10-15" },
+    { subjectName: "World History", what: "Read OpenStax 8.2 (Early Cultures and Civilizations in the Americas) + 9.2 (Emergence of Farming and the Bantu Migrations) — they'll be on the Unit 2 test", date: "by end of Unit 2" }
   ]
 };
