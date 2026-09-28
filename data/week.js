@@ -12,7 +12,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-09-26",
+  updated: "2026-09-27",
   label: "Week of Sep 28 – Oct 2",
   items: [
     {
@@ -30,7 +30,9 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-09-28",
       subject: "ap-french", subjectName: "French",
-      what: "Reflexives in the passé composé — due Monday 7:59 AM"
+      what: "Optional: reflexives review in the passé composé — due Monday 7:59 AM",
+      help: "Passé composé with être & reflexive verbs",
+      helpFile: "lessons/passe-compose-etre-reflexive.html"
     },
     {
       day: "Mon", date: "2026-09-28",
