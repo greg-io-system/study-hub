@@ -2,47 +2,67 @@
    Source: projects/GHS/week-view.md (CC regenerates on each Classroom pull).
    Do not hand-edit; do not fold into lessons.js (different lifecycles).
 
-   Shape:
+   Shape (two weeks at a glance, then further out):
      window.STUDY_WEEK = {
        updated: "YYYY-MM-DD",        // panel hides itself if > 7 days old
-       label: "Week of ...",
-       items: [ { day, date:"YYYY-MM-DD", subject:<id from lessons.js or null>,
-                  subjectName, what, help?, helpFile? } ]
+       label: "Sep 28 – Oct 2",      // THIS WEEK range
+       items: [ ROW ],               // this week
+       nextLabel: "Oct 5 – Oct 9",   // NEXT WEEK range
+       next:  [ ROW ],               // next week
+       ahead: [ { date:"YYYY-MM-DD" or free text, subject?, subjectName, what } ]
      }
+     ROW = { day, date:"YYYY-MM-DD", subject:<id from lessons.js or null>,
+             subjectName, what, help?, helpFile? }
+   Rows/ahead items whose date has fully passed drop out on the page by
+   themselves. Keep ahead to ~4-5 short lines (one line each).
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-09-30",
-  label: "Oct 1 – Oct 9",
+  label: "Sep 28 – Oct 2",
   items: [
     {
       day: "Thu", date: "2026-10-01",
       subject: "ap-english", subjectName: "AP English",
-      what: "Two things for Thursday's class: (1) READ \"The Coddling of the American Mind\" — no notes, just read and think; you'll discuss it in class. (2) Bring a framework for Position Paper #1: Marano's claim in your words, your position in one sentence, the sources you'd put around it, and your \"While ___ ; however ___\".",
-      help: "AP Lang TERMS Library (exigence, Rogerian, a mind at work)",
-      helpFile: "lessons/ap-lang-terms-library.html"
+      what: "READ \"The Coddling of the American Mind\" (no notes) and bring a framework for Position Paper #1 to your Constitution.",
+      help: "Position Paper #1 guide (framework builder, section 7)",
+      helpFile: "lessons/position-paper-1-guide.html"
     },
     {
-      day: "Thu", date: "2026-10-01",
+      day: "Fri", date: "2026-10-02",
       subject: "world-history", subjectName: "World History",
-      what: "This week is Persia — Mr. Angelopulos posted Persia notes and Herodotus's \"Customs of the Persians\" reading."
-    },
+      what: "Persia this week: Mr. Angelopulos's Persia notes and Herodotus's \"Customs of the Persians\"."
+    }
+  ],
+  nextLabel: "Oct 5 – Oct 9",
+  next: [
     {
       day: "Mon", date: "2026-10-05",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Unit 3 (Skeletal): Lab 8 and the Bone Diagram are both due Monday."
+      what: "Lab 8 and the Bone Diagram due (Unit 3, Skeletal)."
+    },
+    {
+      day: "Tue", date: "2026-10-06",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Optional: CU Anschutz healthcare career panel, 10–11 AM."
+    },
+    {
+      day: "Wed", date: "2026-10-07",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Finish a real rough draft of Position Paper #1 for Thursday.",
+      help: "Position Paper #1 guide (draft shape, section 8)",
+      helpFile: "lessons/position-paper-1-guide.html"
     },
     {
       day: "Thu", date: "2026-10-08",
       subject: "ap-english", subjectName: "AP English",
-      what: "Position Paper #1 (\"nation of wimps\") — rough-draft conversation in class. Your AI and Greenfeld paragraphs count as raw material."
+      what: "Rough-draft conversation in class."
     }
   ],
   ahead: [
-    { subjectName: "Human Anatomy", what: "Optional: CU Anschutz healthcare career panel, 10–11 AM (Mrs. Kalec posted it)", date: "2026-10-06" },
-    { subjectName: "Human Anatomy", what: "Lab 9 + Lab 10 due", date: "2026-10-14" },
-    { subjectName: "AP English", what: "Position Paper #1 — final due before class", date: "2026-10-15" },
-    { subjectName: "Human Anatomy", what: "Fracture Investigation due (Oct 19), Lab 11 (Oct 20), Broken Leg case study (Oct 23); Skeletal exam that week", date: "2026-10-19" },
-    { subjectName: "World History", what: "Read OpenStax 8.2 (Early Cultures and Civilizations in the Americas) + 9.2 (Emergence of Farming and the Bantu Migrations) — they'll be on the Unit 2 test", date: "by end of Unit 2" }
+    { date: "2026-10-14", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Labs 9 + 10 due" },
+    { date: "2026-10-15", subject: "ap-english", subjectName: "AP English", what: "Position Paper #1 final, before class" },
+    { date: "2026-10-19", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Fracture Investigation due; Skeletal exam later that week" },
+    { date: "by end of Unit 2", subject: "world-history", subjectName: "World History", what: "Read OpenStax 8.2 + 9.2 (on the Unit 2 test)" }
   ]
 };

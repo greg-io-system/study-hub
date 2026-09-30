@@ -114,58 +114,82 @@
     app.appendChild(sec);
   }
 
-  /* ---------- "This Week" panel (data/week.js; hides if stale) ---------- */
+  /* ---------- "This Week" panel (data/week.js; hides if stale) ----------
+     Three blocks: THIS WEEK (items), NEXT WEEK (next), COMING UP (ahead).
+     Dated rows whose day has fully passed drop out on their own, so the
+     panel stays right between sweeps. */
   function renderWeek(){
     var wk = window.STUDY_WEEK;
-    if(!wk || !wk.updated || !(wk.items||[]).length) return;
+    if(!wk || !wk.updated) return;
     // staleness guard: a wrong week is worse than none
     var age = (Date.now() - new Date(wk.updated+"T12:00:00").getTime())/86400000;
     if(isNaN(age) || age > 7) return;
-    // elapsed-week guard: hide once the last dated item has fully passed, even
-    // if the file is <7 days old (a finished week is as wrong as a stale one).
-    var lastDay=0;
-    wk.items.forEach(function(it){ if(it.date){ var t=new Date(it.date+"T23:59:59").getTime(); if(t>lastDay) lastDay=t; } });
-    if(lastDay && Date.now() > lastDay) return;
+
+    var now=Date.now();
+    function live(it){ return !it.date || new Date(it.date+"T23:59:59").getTime() >= now; }
+    var thisItems=(wk.items||[]).filter(live);
+    var nextItems=(wk.next||[]).filter(live);
+    var ahead=(wk.ahead||[]).filter(function(a){ return !/^\d{4}-\d{2}-\d{2}$/.test(a.date||"") || live(a); });
+    // elapsed guard: nothing left to show means the data is finished
+    if(!thisItems.length && !nextItems.length) return;
 
     function accentOf(id){ var s=id?findSubject(id):null; return (s&&s.accent)||"var(--ink-soft)"; }
+    function shortDate(d){ return fmtDate(d).replace(/,\s*\d{4}$/,""); }
+
+    function rowList(items){
+      var list=el("div","wp-list");
+      var prevDay="";
+      items.forEach(function(it){
+        var row=el("div","wp-row");
+        row.appendChild(el("span","wp-day", it.day===prevDay ? "" : esc(it.day||"")));
+        prevDay=it.day;
+        var dot=el("span","wp-dot"); dot.style.background=accentOf(it.subject);
+        row.appendChild(dot);
+        var body=el("div","wp-body");
+        var line=el("div","wp-what");
+        line.innerHTML="<b>"+esc(it.subjectName||"")+"</b> &middot; "+esc(it.what||"");
+        body.appendChild(line);
+        if(it.helpFile){
+          var a=el("a","wp-help"); a.href=withBack(it.helpFile, it.subject||"");
+          a.innerHTML=esc(it.help||"Open the materials")+" &rarr;";
+          body.appendChild(a);
+        } else if(it.help){
+          body.appendChild(el("div","wp-help-plain",esc(it.help)));
+        }
+        row.appendChild(body);
+        list.appendChild(row);
+      });
+      return list;
+    }
+    function head(cls,title,range){
+      var h=el("div",cls);
+      h.appendChild(el("span","wp-title",title));
+      if(range) h.appendChild(el("span","wp-range",esc(range)));
+      return h;
+    }
 
     var panel=el("section","week-panel");
-    var wh=el("div","wp-head");
-    wh.appendChild(el("span","wp-title","This week"));
-    if(wk.label) wh.appendChild(el("span","wp-range",esc(wk.label)));
-    panel.appendChild(wh);
+    panel.appendChild(head("wp-head","This week",wk.label));
+    if(thisItems.length) panel.appendChild(rowList(thisItems));
+    else panel.appendChild(el("div","wp-empty","Nothing else due this week."));
 
-    var list=el("div","wp-list");
-    var lastDay="";
-    wk.items.forEach(function(it){
-      var row=el("div","wp-row");
-      var d=el("span","wp-day", it.day===lastDay ? "" : esc(it.day||""));
-      lastDay=it.day;
-      row.appendChild(d);
-      var dot=el("span","wp-dot"); dot.style.background=accentOf(it.subject);
-      row.appendChild(dot);
-      var body=el("div","wp-body");
-      var line=el("div","wp-what");
-      line.innerHTML="<b>"+esc(it.subjectName||"")+"</b> &middot; "+esc(it.what||"");
-      body.appendChild(line);
-      if(it.helpFile){
-        var a=el("a","wp-help"); a.href=withBack(it.helpFile, it.subject||"");
-        a.innerHTML=esc(it.help||"Open the materials")+" &rarr;";
-        body.appendChild(a);
-      } else if(it.help){
-        body.appendChild(el("div","wp-help-plain",esc(it.help)));
-      }
-      row.appendChild(body);
-      list.appendChild(row);
-    });
-    panel.appendChild(list);
+    if(nextItems.length){
+      panel.appendChild(head("wp-head wp-sub","Next week",wk.nextLabel));
+      panel.appendChild(rowList(nextItems));
+    }
 
-    if((wk.ahead||[]).length){
+    if(ahead.length){
       var ah=el("div","wp-ahead");
-      var bits=wk.ahead.map(function(a){
-        return "<b>"+esc(a.subjectName||"")+"</b> "+esc(a.what||"")+" ("+esc(fmtDate(a.date).replace(/,\s*\d{4}$/,""))+")";
+      ah.appendChild(el("div","wp-ahead-title","Coming up"));
+      ahead.forEach(function(a){
+        var r=el("div","wp-arow");
+        var isDate=/^\d{4}-\d{2}-\d{2}$/.test(a.date||"");
+        r.appendChild(el("span","wp-adate", esc(isDate ? shortDate(a.date) : "")));
+        var dot=el("span","wp-dot"); dot.style.background=accentOf(a.subject);
+        r.appendChild(dot);
+        r.appendChild(el("div","wp-atext","<b>"+esc(a.subjectName||"")+"</b> &middot; "+esc(a.what||"")+(isDate||!a.date ? "" : " <span class='wp-awhen'>("+esc(a.date)+")</span>")));
+        ah.appendChild(r);
       });
-      ah.innerHTML="Coming up: "+bits.join(" &middot; ");
       panel.appendChild(ah);
     }
     app.appendChild(panel);
