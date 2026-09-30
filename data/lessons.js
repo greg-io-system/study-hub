@@ -279,6 +279,25 @@ window.STUDY_HUB = {
       blurb: "Reading like a writer — what an author is doing, how they're doing it, and how to say so on paper.",
       weeks: [
         {
+          range: "Sep 28 – Oct 2",
+          theme: "Position Paper #1 build-up",
+          lessons: [
+            {
+              title: "Position Paper #1 — Nation of Wimps?",
+              topic: "Take a position on Marano's claim: find it, frame it, draft it (draft talk Oct 8, final Oct 15)",
+              file: "lessons/position-paper-1-guide.html",
+              date: "2026-09-30",
+              summary: "Your guide for the first full position paper. Marano's claim split into three causes and one effect, defining 'wimp', sliders to place yourself on each part, your source shelf (now with Greenfeld and Coddling), the position move modeled on a made-up twin, a working-thesis builder, and a framework builder for Thursday's Constitution talk that you can copy and bring. Then a suggested shape for the Oct 7 draft. Your position and your answers stay yours and stay in your browser.",
+              tags: ["assignment help", "position paper", "argument", "synthesis"],
+              materials: [
+                { kind: "lesson", label: "Position Paper guide", file: "lessons/position-paper-1-guide.html" },
+                { kind: "link", label: "Reading: The Coddling of the American Mind", url: "https://docs.google.com/document/d/1UsUeDEGbFIf9oX9xA1p9eLkfJPYzSE3PFjKWYB4GOb0/" },
+                { kind: "link", label: "Reading: A Nation of Wimps (Marano)", url: "http://www.psychologytoday.com/articles/200411/nation-wimps" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 21 – Sep 25",
           theme: "Synthesis capstone → reading in a digital age",
           lessons: [

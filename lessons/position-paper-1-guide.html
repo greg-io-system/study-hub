@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Position Paper #1 — Nation of Wimps &middot; AP English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#2f6fa8;--accent-soft:#e2edf6;--warm:#a8552f;--warm-soft:#f6e6dc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.8em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.2em 0 .3em}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul{padding-left:22px;margin:.4em 0}li{margin:.3em 0}
+.big{background:var(--accent-soft);border:1.5px solid #c4dcef;border-radius:14px;padding:16px 20px;margin:16px 0}
+.big b{color:var(--accent)}
+.note{color:var(--soft);font-size:14px}
+.dates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+@media(max-width:560px){.dates{grid-template-columns:1fr}}
+.date{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px}
+.date .d{font-weight:800;color:var(--accent);font-size:13px;letter-spacing:.03em;text-transform:uppercase}
+.date .w{font-size:14.5px}
+.date.key{border-color:var(--accent)}
+.claim{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin:14px 0}
+@media(max-width:560px){.claim{grid-template-columns:1fr}.claim .arrow{transform:rotate(90deg);justify-self:center}}
+.claim .causes{display:grid;gap:8px}
+.claim .c{background:var(--paper2);border:1.5px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:8px 12px;font-weight:700;font-size:15px}
+.claim .arrow{font-size:26px;color:var(--soft)}
+.claim .effect{background:var(--warm-soft);border:1.5px solid #e9c9b5;border-radius:12px;padding:14px;text-align:center;font-family:Fraunces,Georgia,serif;font-size:20px;color:var(--warm)}
+.twin{background:var(--paper2);border:1.5px dashed #c4dcef;border-radius:12px;padding:14px 18px;margin:12px 0;font-size:15px}
+.twin .lbl{font-weight:800;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.lvl{border:1.5px solid var(--line);border-radius:12px;background:var(--paper2);padding:11px 15px;margin:9px 0}
+.lvl .h{font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:3px}
+.lvl.l0 .h{color:var(--warm)}.lvl.l1 .h{color:#8a7a2e}.lvl.l2 .h{color:var(--accent)}
+.lvl.l2{border-color:var(--accent)}
+.strand{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px 18px;margin:14px 0}
+.strand .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.strand .name{font-weight:800;font-size:16.5px}
+.strand .val{font-weight:800;color:var(--accent);font-size:13.5px}
+.strand input[type=range]{width:100%;margin:10px 0 2px;accent-color:var(--accent)}
+.scale{display:flex;justify-content:space-between;font-size:12px;color:var(--soft);font-weight:700}
+.strand textarea,.builder input,.define textarea{width:100%;font:15px Nunito,sans-serif;padding:8px 11px;border:1.5px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);resize:vertical}
+.strand textarea:focus,.builder input:focus,.define textarea:focus{outline:none;border-color:var(--accent)}
+.strand .q{font-size:14.5px;color:var(--soft);margin:6px 0}
+.define{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px 18px;margin:14px 0}
+.lab{display:block;font-weight:800;font-size:12px;letter-spacing:.03em;text-transform:uppercase;color:var(--soft);margin:8px 0 3px}
+.shelf{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+@media(max-width:620px){.shelf{grid-template-columns:1fr}}
+.src{background:var(--paper2);border:1.5px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:11px 15px}
+.src .who{font-weight:800;font-size:15px}
+.src .who span{font-weight:700;color:var(--soft);font-size:13px}
+.src .gives{margin:.25em 0 0;font-size:14.5px}
+.src .ask{margin:.35em 0 0;font-size:14px;color:var(--soft)}
+.src.later{border-left-color:#c9bfa6;opacity:.8}
+.pill{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:2px;background:var(--accent-soft);color:var(--accent)}
+.pill.w{background:var(--warm-soft);color:var(--warm)}
+.builder{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0}
+.builder .out{margin-top:14px;background:var(--accent-soft);border:1.5px solid #c4dcef;border-radius:10px;padding:14px 16px;font-size:16px;line-height:1.7}
+.builder .out b{color:var(--accent)}
+.road{list-style:none;padding:0;margin:10px 0;border-left:3px solid var(--line)}
+.road li{position:relative;padding:4px 0 12px 20px;margin:0}
+.road li::before{content:"";position:absolute;left:-8px;top:10px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:3px solid var(--accent)}
+.road li.soon::before{border-color:#c9bfa6}
+.road .when{font-weight:800;color:var(--accent);font-size:13px;letter-spacing:.03em;text-transform:uppercase}
+.road li.soon .when{color:var(--soft)}
+.chk{list-style:none;padding:0}
+.chk li{border:1.5px solid var(--line);border-radius:9px;background:var(--paper2);padding:9px 13px;margin:7px 0}
+.saved{font-size:12.5px;color:var(--soft);text-align:right;min-height:1em}
+.btn{font:800 13px Nunito,sans-serif;border:1.5px solid var(--line);background:var(--paper2);color:var(--soft);border-radius:8px;padding:5px 11px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">AP English &middot; Mr. Evans &middot; Position Paper #1</div>
+  <h1>Nation of Wimps? &mdash; building your position</h1>
+  <p class="tagline">Your first full position paper. Everything Mr. Evans has assigned since late August, from Marano and Tulley through Carr, Bogost, the AI pieces, Greenfeld and now Coddling, has been building your shelf for this paper. This page helps you turn that shelf into <b>your</b> position. It grows in rounds as the paper does.</p>
+
+  <div class="dates">
+    <div class="date key"><div class="d">Thu Oct 1</div><div class="w">Bring your <b>framework</b> to your Constitution (section 7).</div></div>
+    <div class="date key"><div class="d">Thu Oct 8</div><div class="w">Rough-draft conversation in class. Bring a real draft.</div></div>
+    <div class="date key"><div class="d">Thu Oct 15</div><div class="w">Final paper due <b>before</b> class.</div></div>
+  </div>
+
+  <h2>1 &middot; The prompt, plainly</h2>
+  <div class="big">
+    <b>Take a position on Marano's claim</b> that, through over-parenting, the use of technology, and various "safety nets" from institutions, we are creating "a nation of wimps."
+  </div>
+  <p>Read it twice. It is <b>not</b> "do you agree with Marano?" Mr. Evans calls plain agree/disagree an elementary view. Her claim is really <b>three causes and one effect</b>, and you can stand in a different place on each part:</p>
+  <div class="claim">
+    <div class="causes">
+      <div class="c">Over-parenting</div>
+      <div class="c">Technology</div>
+      <div class="c">Institutional "safety nets"</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="effect">"a nation of wimps"</div>
+  </div>
+  <p>That split is where a position lives. You might think one cause is real and another overblown. You might accept every cause and reject the effect: the thing is real, but "wimp" is the wrong word for it. Or you might think the effect is real and blame a cause Marano never names. Each of those is a position. "She's right" and "she's wrong" are not.</p>
+  <p class="note">Two things Mr. Evans said about her early on (Sep 1): Marano sits "closer to the 100 than she is to the 50" on the Argument Continuum, but "she leaves room for a conversation IN HER LANGUAGE." And he warned against "easy solutions to complex questions." Your job is to find that room.</p>
+  <div class="big" style="background:var(--warm-soft);border-color:#e9c9b5"><b style="color:var(--warm)">It's about a trend, not about you.</b> Mr. Evans (9/29): it's easy to answer these pieces emotionally ("I am not a wimp!"). But the prompt asks about "a trend and a generation and a slow progression." Zoom out to Adam Smith's third-person view: look at the culture around you, and be open to the idea that you might be an outlier. Your own experience still counts as evidence. It just can't be the whole argument.</div>
+
+  <h2>2 &middot; Define your terms first</h2>
+  <p>"Strong writing and thinking frequently comes down to defining your terms." (Mr. Evans, 9/8.) The whole argument turns on one word. On Aug 31 he asked the class: <i>what if to be fragile, according to your generation, is to be ______?</i> Answer it for yourself before you argue anything.</p>
+  <div class="define">
+    <label class="lab" for="defWimp">In Marano's sense, a "wimp" is someone who&hellip;</label>
+    <textarea id="defWimp" rows="2" placeholder="Her definition, in your words"></textarea>
+    <label class="lab" for="defMine">In MY sense, being "fragile" (or "sturdy") actually means&hellip;</label>
+    <textarea id="defMine" rows="2" placeholder="Yours. If it differs from hers, that difference might be your thesis."></textarea>
+  </div>
+
+  <h2>3 &middot; Place yourself on each part of the claim</h2>
+  <p>Drag each slider to where <b>you</b> stand today. This is a first gut check, not your final answer. Positions move as you read, and that's expected. Under each slider, write one line on <i>why</i>. The why is where your evidence comes from.</p>
+  <div id="strands"></div>
+  <div class="saved" id="saved"></div>
+  <p class="note">Notice where your sliders disagree with each other. A gap between strands (say 80 on parenting and 30 on technology) is usually the most interesting paper you can write.</p>
+
+  <h2>4 &middot; Your shelf: the essential readings</h2>
+  <p>Mr. Evans named these as the sources your evidence comes from. Other class articles are allowed too. They're grouped here by which part of the claim they speak to. Each card says what the source gives you, then asks a question. <b>The answers are yours.</b></p>
+
+  <h3>The claim itself</h3>
+  <div class="shelf">
+    <div class="src"><div class="who">Hara Estroff Marano <span>&middot; "A Nation of Wimps" (Psychology Today, 2004)</span></div>
+      <p class="gives">The anchor. Every other source gets pulled toward or pushed against her.</p>
+      <p class="ask">From your Sep 1 notes: what was sticking in her craw, and what might she be leaving out to make her case stronger?</p></div>
+  </div>
+
+  <h3>Over-parenting &amp; risk</h3>
+  <div class="shelf">
+    <div class="src"><div class="who">Gever Tulley <span>&middot; "5 Dangerous Things You Should Let Your Kids Do" (TED)</span></div>
+      <p class="gives">Real risk as a teacher. Kids learn capability by doing the dangerous thing.</p>
+      <p class="ask">Is Tulley Marano's solution, or does he quietly argue something different, like that risk builds skill rather than toughness?</p></div>
+    <div class="src"><div class="who">The adventure-playground article <span>&middot; "The Land" (first five paragraphs)</span></div>
+      <p class="gives">A playground built around risk, framed as "an act of defiance."</p>
+      <p class="ask">Defiance against whom: parents, or the rules and liability of institutions? Which of Marano's causes does it really hit?</p></div>
+    <div class="src"><div class="who">"47 dangerous old playgrounds&hellip;" <span>&middot; visual list</span></div>
+      <p class="gives">A visual argument: the playgrounds older generations "somehow survived."</p>
+      <p class="ask">What is the "somehow survived" framing assuming? Is surviving the same as being stronger for it? (Freakonomics would ask about the ones who didn't.)</p></div>
+  </div>
+
+  <h3>Technology</h3>
+  <div class="shelf">
+    <div class="src"><div class="who">Jean Twenge <span>&middot; "Have Smartphones Destroyed a Generation?"</span></div>
+      <p class="gives">The "phones did it" cause, backed by generational data.</p>
+      <p class="ask">If Twenge is right, is your generation <i>weaker</i>, or more anxious and more isolated? Are those the same thing as "wimpy"?</p></div>
+    <div class="src"><div class="who">Nicholas Carr <span>&middot; "Is Google Making Us Stupid?" (50 Essays)</span></div>
+      <p class="gives">The internet retrains how we read and think, toward skimming and away from deep focus.</p>
+      <p class="ask">Mr. Evans's blank: "If Google is making us ___, then AI is making us ___." Does "stupid" or "distracted" fit Marano's "wimps," or is it a different claim?</p></div>
+    <div class="src"><div class="who">The AI pieces <span>&middot; Bogost, "Why College Students Are Booing AI"; "I'm a High Schooler. AI Is Demolishing My Education"</span></div>
+      <p class="gives">Counted as "other classroom articles." Your Monday AI paragraphs are already evidence for this paper.</p>
+      <p class="ask">Is AI one more safety net that spares students the hard part, or something Marano couldn't have imagined in 2004?</p></div>
+    <div class="src"><div class="who">Karl Taro Greenfeld <span>&middot; "Faking Cultural Literacy" (2014)</span></div>
+      <p class="gives">Skimming and scrolling let us perform knowledge we don't have. Pretending to know becomes the norm. Your Tuesday paragraphs already argue with him.</p>
+      <p class="ask">Is faking it a sign of fragility (afraid to admit you don't know), or just a new kind of social skill? Which of Marano's causes does it belong to, if any?</p></div>
+  </div>
+
+  <h3>Institutions &amp; school</h3>
+  <div class="shelf">
+    <div class="src"><div class="who">Mike Rose <span>&middot; "I Just Wanna Be Average" (50 Essays)</span></div>
+      <p class="gives">What school expects of a student shapes what that student becomes.</p>
+      <p class="ask">Is low expectation a "safety net"? Does Rose's story support Marano, or show that institutions fail kids in the opposite direction?</p></div>
+    <div class="src"><div class="who">Freakonomics <span>&middot; various chapters (Dubner &amp; Levitt)</span></div>
+      <p class="gives">A discipline more than a position: correlation vs. causation, incentives, hidden third factors.</p>
+      <p class="ask">Marano says X causes Y. Where could a hidden Z be doing the work? This is your strongest tool for complicating her.</p></div>
+    <div class="src"><div class="who">Colson Whitehead <span>&middot; "The Loser Edit"</span></div>
+      <p class="gives">How we edit the story of our own failures, and curate them online.</p>
+      <p class="ask">Is a generation that curates its failures fragile, or just careful about who's watching?</p></div>
+    <div class="src"><div class="who">Greg Lukianoff &amp; Jonathan Haidt <span>&middot; "The Coddling of the American Mind" (The Atlantic)</span></div>
+      <p class="gives">College students increasingly ask to be protected from upsetting words and ideas. The authors argue that this protection makes people more fragile, not safer. This is the "safety nets" strand, set at college.</p>
+      <p class="ask">Read it for Thursday with no notes. Then ask: is this Marano's argument, ten years later and one level up? Or does it name a different cause, one that comes from institutions rather than parents?</p></div>
+  </div>
+
+  <h3>On the list, not read in class yet</h3>
+  <div class="shelf">
+    <div class="src later"><div class="who">Deborah Tannen <span>&middot; "The Triumph of the Yell"</span><span class="pill w">coming</span></div>
+      <p class="gives">This page adds a card once you've read it in class.</p></div>
+  </div>
+  <p class="note">You don't need every source. A strong paper uses a handful well, each one pulled in because it helps <b>your</b> claim. That's Path 2 from the Failure Synthesis: sources as support, not a tour of the sources.</p>
+
+  <h2>5 &middot; The move, on a made-up twin</h2>
+  <p>Here's the whole position move on an invented claim with the same shape as Marano's: three causes and one effect. Your real sources stay yours.</p>
+  <div class="twin">
+    <div class="lbl">Made-up claim</div>
+    Coach Dana Pryor, "The Bubble-Wrap League" (2019): overinvolved sideline parents, stats apps that post every game, and leagues that won't cut players are raising "a league of quitters."
+    <div class="lbl" style="margin-top:9px">Made-up sources</div>
+    Dr. Lena Ortiz, "Let Them Lose": kids who lose regularly learn to cope, so protection robs them of that. (Pulls <i>toward</i> Pryor.)<br>
+    Sam Whitfield, "The Scoreboard in Your Pocket": players aren't quitting because life is too soft; they quit because every game is now a public, permanent verdict. (Pushes <i>against</i> Pryor.)
+  </div>
+  <p>Three thesis levels on that twin. Remember: on the AP essays a real thesis is the one guaranteed point, the difference between the 0 and the 1.</p>
+  <div class="lvl l0"><div class="h">Summary &mdash; scores the 0</div>Pryor, Ortiz and Whitfield all discuss why kids quit youth sports.</div>
+  <div class="lvl l1"><div class="h">Agree / disagree &mdash; a position, but elementary</div>Pryor is right that youth sports are raising a league of quitters.</div>
+  <div class="lvl l2"><div class="h">A real position &mdash; defines, splits the claim, names a cause</div>While Pryor is right that kids are walking away from sports, "quitter" is the wrong word: the players Whitfield describes aren't too protected to lose, they're too <i>watched</i> to risk losing. That makes the problem pressure, not softness, and it means one of Pryor's three causes (the stats app) is working against the other two.</div>
+  <p>Look at what the third one does. It <b>concedes</b> the part of the claim it accepts ("While Pryor is right&hellip;"). It <b>redefines</b> the key word ("quitter"). It <b>splits</b> the causes instead of taking them as a bundle. And its last sentence is clearly the writer's own. You can see sections 1&ndash;3 of this page inside it.</p>
+
+  <h2>6 &middot; Build your working thesis</h2>
+  <p>Use the sliders and definitions above. It's a <i>working</i> thesis. It's meant to change before Oct 8, and again before Oct 15.</p>
+  <div class="builder">
+    <label class="lab" for="tWhile">While Marano argues / is right that&hellip; (the part you concede)</label>
+    <input id="tWhile" placeholder="the part of her claim you accept">
+    <label class="lab" for="tHowever">however, I think&hellip; (your position)</label>
+    <input id="tHowever" placeholder="where you actually land, in your own words">
+    <label class="lab" for="tBecause">because&hellip; (what informs it: a source, a term, your experience)</label>
+    <input id="tBecause" placeholder="the reason, which is where your evidence will come from">
+    <div class="out" id="tOut">Fill the blanks and your working thesis builds here.</div>
+  </div>
+  <p class="note">Check it against the three levels above. Does it concede something? Does it define or complicate "wimp"? Does it treat the three causes separately, or as one bundle?</p>
+
+  <h2>7 &middot; Your framework for Thursday (Oct 1)</h2>
+  <p>Mr. Evans's second assignment for Thursday: bring a <b>framework</b> for your position to discuss with your Constitution. His warning is that without Marano's claim and your position at the center, the paper "will lack a position" and slide into summary. His three starting questions: <i>What is your position at present? What sources can you surround it with? How can you build a Rogerian that honestly addresses the complexity?</i> Fill these in; the working thesis from section 6 carries over.</p>
+  <div class="builder">
+    <label class="lab" for="fClaim">Marano's claim, in one sentence, in my own words</label>
+    <input id="fClaim" placeholder="all three causes + the effect">
+    <label class="lab" for="fSources">The sources I'd surround my position with (and what each does for me)</label>
+    <textarea id="fSources" rows="4" style="width:100%;font:15px Nunito,sans-serif;padding:8px 11px;border:1.5px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);resize:vertical" placeholder="e.g. Source &mdash; pulls toward / pushes against my position because&hellip;"></textarea>
+    <label class="lab" for="fComplex">The complexity: where my position is honestly hard to hold</label>
+    <input id="fComplex" placeholder="the strongest point against you, and what you'd say back">
+    <div class="out" id="fOut">Your framework assembles here as you type.</div>
+    <p style="text-align:right;margin:10px 0 0"><button class="btn" id="fCopy" type="button">Copy my framework</button> <span class="saved" id="fCopied"></span></p>
+  </div>
+  <p class="note">Don't aim for the minimum. Mr. Evans: "anything that you can do at this time will be of benefit to the process and your time." A real framework now means your Constitution can push on something real.</p>
+
+  <h2>8 &middot; From framework to draft (for Oct 7)</h2>
+  <p>Mr. Evans hasn't given a set format for this paper, so treat this as <b>one common shape</b>, not a rule. What he <i>has</i> said is the test: a source-based position that you place "in conversation with other voices along the Argument Continuum," with his framework's first level at the center: your exigence, your audience, your purpose.</p>
+  <ul class="road">
+    <li><div class="when">Opening</div>Why this question matters now: your exigence. Marano's claim, fairly stated. Your working thesis (section 6), which concedes before it argues.</li>
+    <li><div class="when">Body sections</div>One section per strand or idea you're actually arguing, not one per source. In each: your point, then a source <i>in conversation</i> with it ("Twenge argues ___; however, ___"), then what <b>you</b> make of it. The source supports your claim. It isn't the claim.</li>
+    <li><div class="when">The Rogerian move</div>Somewhere the strongest opposing voice gets its fair say (your "complexity" from section 7), and you show why your position still stands, or how it bends.</li>
+    <li><div class="when">Closing</div>Not a summary. What changes if you're right? Where does this leave your generation, or the adults deciding things for it?</li>
+  </ul>
+  <p class="note">Paragraph test, borrowed from the AP readers Mr. Evans quoted on 9/29: they want "a mind at work." If a paragraph would read the same no matter what source you dropped into it, it's a script, and it needs rewriting.</p>
+
+  <h2>9 &middot; Save your usable writing</h2>
+  <p>Mr. Evans on 9/25: "Did you write something usable? SAVE YOUR USABLE WRITING IN A FOLDER." You've already written a lot of this paper without knowing it. Pull these into one place:</p>
+  <ul>
+    <li>Your Sep 1 "Nation of Wimps" answers (exigence, audience, what she omits, purpose, convincing?).</li>
+    <li>Your Sep 3 notes on Tulley, the adventure playground and the biases (value attribution, diagnosis bias).</li>
+    <li>Your Twenge précis and your Galloway cause-and-effect response.</li>
+    <li>Your Carr Round 2 audience paragraph and your Bogost quote responses.</li>
+    <li>Monday's "I'm a high schooler. AI has ___" paragraphs (9/28).</li>
+    <li>Tuesday's Greenfeld "Faking Cultural Literacy" paragraphs (9/29).</li>
+  </ul>
+  <p>Mr. Evans (9/29): using your previous writing "is NOT plagiarism; instead, it is just reasonable and the sign of an engaged mind." His advice: which conversations did you enjoy most? Write about <i>that</i>.</p>
+  <p class="note">He keeps saying it: the earlier you start jotting down positions, the more developed your final thinking will be. Reward your past self.</p>
+
+  <h2>10 &middot; The road to Oct 15</h2>
+  <ul class="road">
+    <li><div class="when">Thu Oct 1 (block day)</div>Read "The Coddling of the American Mind" (no notes). Bring your framework (section 7) to your Constitution.</li>
+    <li><div class="when">Oct 2 &ndash; Oct 6</div>Tighten the working thesis after Thursday's conversation. Pick the 4&ndash;6 sources that actually help <i>your</i> claim. Draft section by section (section 8).</li>
+    <li><div class="when">By Wed Oct 7</div>A real rough draft to bring to the conversation.</li>
+    <li class="soon"><div class="when">Thu Oct 8</div>Rough-draft conversation in class. <span class="pill">page adds: how to use the feedback</span></li>
+    <li class="soon"><div class="when">Thu Oct 15</div>Final due <b>before</b> class. If you're taking the PSAT that morning, submit it Wednesday night. <span class="pill">page adds: final check</span></li>
+  </ul>
+
+  <h2>Before Thursday &mdash; the check</h2>
+  <ul class="chk">
+    <li>Can I state Marano's claim in one sentence, in my own words, with all three causes in it?</li>
+    <li>Have I defined "wimp" (hers) and "fragile / sturdy" (mine)?</li>
+    <li>Do my sliders differ across the three strands? If they don't, have I thought about each cause separately?</li>
+    <li>Does my working thesis concede something before it argues?</li>
+    <li>Am I arguing about a trend in my generation, not just defending myself?</li>
+    <li>Is my framework (section 7) written down, with sources and a real complexity?</li>
+    <li>Have I read Coddling, all the way through?</li>
+    <li>Is my usable writing in one folder?</li>
+  </ul>
+  <p style="text-align:right"><button class="btn" id="clear" type="button">Clear my answers on this page</button></p>
+
+  <div class="footer">Method guide only. The Pryor / Ortiz / Whitfield example is made up, so the position move is modeled without touching your sources. Your position and your paper are yours. Your answers stay in this browser only. Round 2 &middot; updated Sep 30.<br>Made for you &middot; ad-free</div>
+</div>
+<script>
+"use strict";
+(function(){
+  var KEY="pp1-nation-of-wimps-v1";
+  var STRANDS=[
+    {id:"par", name:"Over-parenting", q:"Did protective parenting (yours, your friends', the culture's) make kids less able to handle hard things?"},
+    {id:"tech", name:"Technology", q:"Phones, social media, Google, now AI. Is technology making your generation softer, or doing something else to it?"},
+    {id:"inst", name:"Institutional “safety nets”", q:"Retakes, rubber-matted playgrounds, grade inflation, rules and liability. Do the institutions around you protect too much?"},
+    {id:"eff", name:"The effect: “a nation of wimps”", q:"Even if the causes are real, is “wimps” the right word for what they produce?"}
+  ];
+  var LABELS=[[0,"Not true at all"],[20,"Mostly not"],[41,"It's complicated"],[60,"Mostly true"],[81,"Completely true"]];
+  function lbl(v){var o=LABELS[0][1];LABELS.forEach(function(p){if(v>=p[0])o=p[1];});return o;}
+  var state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}; }catch(e){ state={}; }
+  var savedEl=document.getElementById("saved"), t;
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); savedEl.textContent="Saved in this browser"; clearTimeout(t); t=setTimeout(function(){savedEl.textContent="";},1500);}catch(e){} }
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  var host=document.getElementById("strands");
+  STRANDS.forEach(function(s){
+    var v=(state["s_"+s.id]!=null)?state["s_"+s.id]:50;
+    var d=document.createElement("div"); d.className="strand";
+    d.innerHTML='<div class="top"><span class="name">'+esc(s.name)+'</span><span class="val" id="v_'+s.id+'"></span></div>'+
+      '<div class="q">'+esc(s.q)+'</div>'+
+      '<input type="range" min="0" max="100" step="1" id="r_'+s.id+'" value="'+v+'" aria-label="'+esc(s.name)+'">'+
+      '<div class="scale"><span>Marano is wrong</span><span>50</span><span>Marano is right</span></div>'+
+      '<label class="lab" for="w_'+s.id+'">Why, in one line</label>'+
+      '<textarea id="w_'+s.id+'" rows="2" placeholder="What informs this? A source, an experience, a term."></textarea>';
+    host.appendChild(d);
+    var r=document.getElementById("r_"+s.id), vv=document.getElementById("v_"+s.id), w=document.getElementById("w_"+s.id);
+    function show(){ vv.textContent=r.value+" · "+lbl(+r.value); }
+    show(); w.value=state["w_"+s.id]||"";
+    r.addEventListener("input",function(){ state["s_"+s.id]=+r.value; show(); save(); });
+    w.addEventListener("input",function(){ state["w_"+s.id]=w.value; save(); });
+  });
+
+  ["defWimp","defMine","tWhile","tHowever","tBecause","fClaim","fSources","fComplex"].forEach(function(id){
+    var el=document.getElementById(id); el.value=state[id]||"";
+    el.addEventListener("input",function(){ state[id]=el.value; save(); if(id.charAt(0)==="t") build(); frame(); });
+  });
+  var fOut=document.getElementById("fOut");
+  function frameText(){
+    var th=(state.tWhile||state.tHowever||state.tBecause)?("While Marano "+(state.tWhile||"[concede]").trim()+"; however, I think "+(state.tHowever||"[position]").trim()+" because "+(state.tBecause||"[reason]").trim()+"."):"";
+    var parts=[
+      ["Marano's claim", (state.fClaim||"").trim()],
+      ["My working thesis", th],
+      ["Sources around it", (state.fSources||"").trim()],
+      ["The complexity", (state.fComplex||"").trim()]
+    ];
+    return parts.filter(function(p){return p[1];});
+  }
+  function frame(){
+    var p=frameText();
+    if(!p.length){ fOut.textContent="Your framework assembles here as you type."; return; }
+    fOut.innerHTML=p.map(function(x){return '<b>'+esc(x[0])+':</b> '+esc(x[1]).replace(/\n/g,'<br>');}).join('<br><br>');
+  }
+  frame();
+  document.getElementById("fCopy").addEventListener("click",function(){
+    var txt="Position Paper #1 framework\n\n"+frameText().map(function(x){return x[0]+": "+x[1];}).join("\n\n");
+    var done=function(){ var c=document.getElementById("fCopied"); c.textContent="Copied"; setTimeout(function(){c.textContent="";},1500); };
+    try{ navigator.clipboard.writeText(txt).then(done,function(){ window.prompt("Copy your framework:",txt); }); }
+    catch(e){ window.prompt("Copy your framework:",txt); }
+  });
+  var out=document.getElementById("tOut");
+  function build(){
+    var a=(state.tWhile||"").trim(), b=(state.tHowever||"").trim(), c=(state.tBecause||"").trim();
+    if(!a&&!b&&!c){ out.textContent="Fill the blanks and your working thesis builds here."; return; }
+    out.innerHTML='<b>While</b> Marano '+esc(a||"[the part you concede]")+'<b>; however,</b> I think '+esc(b||"[your position]")+' <b>because</b> '+esc(c||"[what informs it]")+'.';
+  }
+  build();
+
+  document.getElementById("clear").addEventListener("click",function(){
+    if(!confirm("Clear everything you've typed and slid on this page?")) return;
+    state={}; try{ localStorage.removeItem(KEY); }catch(e){}
+    location.reload();
+  });
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>
