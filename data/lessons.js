@@ -287,7 +287,7 @@ window.STUDY_HUB = {
               topic: "Take a position on Marano's claim: find it, frame it, draft it (draft talk Oct 8, final Oct 15)",
               file: "lessons/position-paper-1-guide.html",
               date: "2026-09-30",
-              summary: "Your guide for the first full position paper. Marano's claim split into three causes and one effect, defining 'wimp', sliders to place yourself on each part, your source shelf (now with Greenfeld and Coddling), the position move modeled on a made-up twin, a working-thesis builder, and a framework builder for Thursday's Constitution talk that you can copy and bring. Then a suggested shape for the Oct 7 draft. Your position and your answers stay yours and stay in your browser.",
+              summary: "Your guide for the first full position paper. Marano's claim split into three causes and one effect, defining 'wimp', sliders to place yourself on each part, your source shelf (now with Greenfeld and Coddling), the position move modeled on a made-up twin, Mr. Evans's 'AI is making us ___' blank worked through (the word you pick is your position), a working-thesis builder, and a framework builder for Thursday's Constitution talk that you can copy and bring. Then a suggested shape for the Oct 7 draft. Your position and your answers stay yours and stay in your browser.",
               tags: ["assignment help", "position paper", "argument", "synthesis"],
               materials: [
                 { kind: "lesson", label: "Position Paper guide", file: "lessons/position-paper-1-guide.html" },

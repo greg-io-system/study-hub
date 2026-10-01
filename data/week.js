@@ -25,7 +25,7 @@ window.STUDY_WEEK = {
       day: "Thu", date: "2026-10-01",
       subject: "ap-english", subjectName: "AP English",
       what: "READ \"The Coddling of the American Mind\" (no notes) and bring a framework for Position Paper #1 to your Constitution.",
-      help: "Position Paper #1 guide (framework builder, section 7)",
+      help: "Position Paper #1 guide (framework builder, section 8)",
       helpFile: "lessons/position-paper-1-guide.html"
     },
     {
@@ -50,7 +50,7 @@ window.STUDY_WEEK = {
       day: "Wed", date: "2026-10-07",
       subject: "ap-english", subjectName: "AP English",
       what: "Finish a real rough draft of Position Paper #1 for Thursday.",
-      help: "Position Paper #1 guide (draft shape, section 8)",
+      help: "Position Paper #1 guide (draft shape, section 9)",
       helpFile: "lessons/position-paper-1-guide.html"
     },
     {
