@@ -44,19 +44,6 @@ window.STUDY_HUB = {
           theme: "Unit 1 Test review",
           lessons: [
             {
-              title: "Unit 2 Exam Prep — Study Guide & Practice Quiz",
-              topic: "Every Unit 2 review bullet: skin structure, functions & glands, homeostasis, burns, skin disorders, skin cancer & ABCDE, tattoos",
-              file: "lessons/hap-unit-2-integumentary-study-quiz.html",
-              date: "2026-09-25",
-              summary: "The whole Unit 2 review sheet on one page, in order — quick recaps with links for layers, fingerprints and burns; full sections on gland types, temperature control, the four epidermal cells, scabies / candidiasis / psoriasis / vitiligo, skin cancer and ABCDE (with pictures), and why tattoos last. Ends with a 31-question practice quiz. Exam Tue Sep 29.",
-              tags: ["exam prep", "study guide", "practice quiz"],
-              materials: [
-                { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/hap-unit-2-integumentary-study-quiz.html" },
-                { kind: "link", label: "Mrs. Kalec's exam review", url: "https://docs.google.com/document/d/102JL-pHa4IuLgsjeRuCNcpBOxyp9WrmtQr6W3GfnbuM/" },
-                { kind: "link", label: "Class: Integumentary System notes (slides)", url: "https://docs.google.com/presentation/d/1ErS-CL_g6taB8OuPBTb9NtQDA7Hoo3PQUC8P9kxW8hQ/" }
-              ]
-            },
-            {
               title: "Unit 1 Test — Review",
               topic: "Functions + sequences, for the test Friday",
               file: "lessons/algebra-2-unit-1-test-review.html",
@@ -191,9 +178,42 @@ window.STUDY_HUB = {
       blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
       weeks: [
         {
+          range: "Sep 28 – Oct 2",
+          theme: "Unit 3 · Skeletal System",
+          lessons: [
+            {
+              title: "Unit 3 Exam Prep — Study Guide & Practice Quiz",
+              topic: "Every Unit 3 review bullet: bones by region, bone tissue & types, the long bone, bone cells, joints, the 5 functions, growth & maintenance, fracture healing, fractures & disorders",
+              file: "lessons/hap-unit-3-skeletal-study-quiz.html",
+              date: "2026-10-02",
+              summary: "The whole Unit 3 review sheet on one page, in order. Tap-to-highlight long-bone diagram, a compare table for every joint type with real-life examples, the 4 healing stages on a timeline, x-ray-style drawings of each fracture pattern with a name-that-fracture drill (the exam has a practical), and the six disorders side by side. Ends with a 47-question practice quiz. Skeletal exam Wed Oct 21.",
+              tags: ["exam prep", "study guide", "practice quiz", "interactive"],
+              materials: [
+                { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/hap-unit-3-skeletal-study-quiz.html" },
+                { kind: "practice", label: "Flashcards", file: "lessons/hap-unit-3-flashcards.html" },
+                { kind: "link", label: "Mrs. Kalec's exam review", url: "https://docs.google.com/document/d/1hF61o4r7E6ihwxqsB-x_1Y-gbPT4mXQNNwjJvQHYFSw/" },
+                { kind: "link", label: "Class: Skeletal System notes (slides)", url: "https://docs.google.com/presentation/d/1In1l4_vVA-QaCy_sOHq5Ky8JHbZdVQjGhsc9uJXWyeo/" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 21 – Sep 25",
           theme: "Unit 2 · Integumentary System",
           lessons: [
+            {
+              title: "Unit 2 Exam Prep — Study Guide & Practice Quiz",
+              topic: "Every Unit 2 review bullet: skin structure, functions & glands, homeostasis, burns, skin disorders, skin cancer & ABCDE, tattoos",
+              file: "lessons/hap-unit-2-integumentary-study-quiz.html",
+              date: "2026-09-25",
+              summary: "The whole Unit 2 review sheet on one page, in order — quick recaps with links for layers, fingerprints and burns; full sections on gland types, temperature control, the four epidermal cells, scabies / candidiasis / psoriasis / vitiligo, skin cancer and ABCDE (with pictures), and why tattoos last. Ends with a 31-question practice quiz. Exam Tue Sep 29.",
+              tags: ["exam prep", "study guide", "practice quiz"],
+              materials: [
+                { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/hap-unit-2-integumentary-study-quiz.html" },
+                { kind: "link", label: "Mrs. Kalec's exam review", url: "https://docs.google.com/document/d/102JL-pHa4IuLgsjeRuCNcpBOxyp9WrmtQr6W3GfnbuM/" },
+                { kind: "link", label: "Class: Integumentary System notes (slides)", url: "https://docs.google.com/presentation/d/1ErS-CL_g6taB8OuPBTb9NtQDA7Hoo3PQUC8P9kxW8hQ/" }
+              ]
+            },
             {
               title: "Burns: How Deep, and Why It Matters",
               topic: "The 4 types of burns, what each destroys, how each heals — and burn shock, infection & skin grafts",

@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 3 Exam Prep &middot; Human Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#b5445a;--accent-soft:#f6e3e7;--bone:#f1e6cc;--bone-edge:#9a8763;--good:#2f7d5b;--good-soft:#e2f2ea}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.8em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.3em 0 .3em}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul,ol{padding-left:22px;margin:.4em 0}
+li{margin:.25em 0}
+a{color:var(--accent);font-weight:700}
+.big{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:14px;padding:14px 18px;margin:16px 0}
+.big b{color:var(--accent)}
+.note{color:var(--soft);font-size:14px}
+.toc{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:12px 16px;margin:16px 0;font-size:15px}
+.toc ol{margin:.3em 0 0}
+.see{display:inline-block;margin-top:6px;font-size:14px;font-weight:800;background:var(--paper2);border:1.5px solid var(--line);border-radius:999px;padding:4px 12px;text-decoration:none}
+.see:hover{background:var(--accent-soft)}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0;background:var(--paper2)}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);font-weight:800}
+.mnem{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:12px;padding:12px 16px;margin:14px 0;font-size:15px}
+.mnem b{color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+.two>div{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;font-size:15px}
+.two h4{margin:0 0 .3em;font-size:15.5px;color:var(--accent)}
+/* long bone diagram */
+.bonefig{display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:start;background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+@media (max-width:560px){.bonefig{grid-template-columns:1fr}.bonefig svg{max-width:220px;margin:0 auto;display:block}}
+.bonefig svg{width:100%;height:auto}
+.parts{display:grid;gap:6px}
+.part{border:1.5px solid var(--line);border-radius:10px;padding:7px 10px;font-size:14.5px;cursor:pointer;background:#fff}
+.part b{color:var(--accent)}
+.part.on{border-color:var(--accent);background:var(--accent-soft)}
+.hl{transition:opacity .2s}
+.dim .hl{opacity:.25}
+.dim .hl.on{opacity:1}
+/* timeline */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0;counter-reset:s}
+@media (max-width:600px){.steps{grid-template-columns:1fr 1fr}}
+.step{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px;position:relative}
+.step .n{font-family:Fraunces,Georgia,serif;font-size:24px;color:var(--accent);line-height:1}
+.step .w{font-size:12px;font-weight:800;color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
+.step b{display:block;margin:2px 0}
+/* fracture drill */
+.drill{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.drill svg{width:100%;max-width:420px;display:block;margin:4px auto 10px;background:#22272e;border-radius:10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.opts button{font:800 14px Nunito,"Segoe UI",system-ui,sans-serif;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.opts button:hover{background:var(--accent-soft)}
+.opts button.right{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.opts button.wrong{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.fb{min-height:24px;text-align:center;font-size:14.5px;margin-top:8px}
+.score{font-size:13px;color:var(--soft);text-align:center;margin-top:4px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+@media (max-width:560px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.gallery div{background:var(--paper2);border:1.5px solid var(--line);border-radius:10px;padding:6px;font-size:13px;text-align:center}
+.gallery svg{width:100%;background:#22272e;border-radius:8px}
+.gallery b{display:block;color:var(--accent)}
+.q{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.q p{margin:0}
+.qn{font-weight:800;color:var(--accent);margin-right:6px}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user-select:none}
+summary:hover{text-decoration:underline}
+.ans{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:10px;padding:10px 14px;margin-top:8px;font-size:15px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tools button{font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;border:1.5px solid var(--line);background:var(--paper2);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.sec{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:18px 0 4px}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Human Anatomy &middot; Unit 3: Skeletal System &middot; Exam Wed Oct 21</div>
+  <h1>Unit 3 Exam Prep &mdash; Study Guide &amp; Practice Quiz</h1>
+  <p class="tagline">Every bullet on Mrs. Kalec's Unit 3 Exam Review, in order: structure, function, then disorders &amp; injuries. There's a name-that-fracture drill in the middle and a practice quiz at the end. The exam is multiple choice <b>plus a practical</b>, so practise naming things from pictures, not just definitions.</p>
+
+  <div class="toc"><b>On this page</b>
+    <ol>
+      <li><a href="#structure">Structure</a> &mdash; the bones by region, axial vs. appendicular, bone tissue, 4 bone types, the long bone, bone cells, joints</li>
+      <li><a href="#function">Function</a> &mdash; the 5 jobs, resorption vs. reformation, ossification, origin &amp; insertion, joint movement, fracture healing</li>
+      <li><a href="#disorders">Disorders &amp; injuries</a> &mdash; fracture types (with drill), 6 disorders, osteoporosis</li>
+      <li><a href="#quiz">Practice quiz</a></li>
+    </ol>
+  </div>
+
+  <div class="big"><b>Unit 3 dates:</b> Lab 8 + Bone Diagram due Mon 10/5 &middot; Labs 9 &amp; 10 due Wed 10/14 &middot; Fracture Investigation due Mon 10/19 &middot; Lab 11 due Tue 10/20 (exam review in class) &middot; <b>Exam Wed 10/21</b> &middot; Case Study: Broken Leg due Fri 10/23.<br><span class="note">Some topics here (fractures, joints, disorders) are taught after this page went up. Use it to preview, then come back to review.</span></div>
+
+  <!-- ================= STRUCTURE ================= -->
+  <h2 id="structure">1. Structure</h2>
+
+  <h3>The major bones, by region</h3>
+  <p class="note">The class notes point to a diagram for this rather than listing bones, so this is the standard set. Check it against your Bone Diagram and the bones at your table. The practical will probably ask you to name real bones.</p>
+  <div class="tbl"><table>
+    <tr><th>Region</th><th>Bones</th></tr>
+    <tr><td><b>Skull</b></td><td><b>Cranium</b> (the brain case: frontal, parietal, temporal, occipital) &middot; facial bones &middot; <b>mandible</b> (lower jaw, the only skull bone that moves)</td></tr>
+    <tr><td><b>Neck</b></td><td><b>Hyoid</b> (under the jaw; anchors the tongue; the only bone that doesn't touch another bone)</td></tr>
+    <tr><td><b>Spine</b> (vertebral column)</td><td><b>Cervical</b> vertebrae (7, neck) &middot; <b>thoracic</b> (12, attach to ribs) &middot; <b>lumbar</b> (5, lower back) &middot; <b>sacrum</b> &middot; <b>coccyx</b> (tailbone)</td></tr>
+    <tr><td><b>Thorax</b> (chest)</td><td><b>Sternum</b> (breastbone) &middot; <b>ribs</b> (12 pairs)</td></tr>
+    <tr><td><b>Pectoral girdle</b></td><td><b>Clavicle</b> (collarbone) &middot; <b>scapula</b> (shoulder blade)</td></tr>
+    <tr><td><b>Arm &amp; hand</b></td><td><b>Humerus</b> (upper arm) &middot; <b>radius</b> (thumb side) &amp; <b>ulna</b> (pinky side) &middot; <b>carpals</b> (wrist) &middot; <b>metacarpals</b> (palm) &middot; <b>phalanges</b> (fingers)</td></tr>
+    <tr><td><b>Pelvic girdle</b></td><td><b>Coxal (hip) bones</b> &mdash; together with the sacrum they form the <b>pelvis</b></td></tr>
+    <tr><td><b>Leg &amp; foot</b></td><td><b>Femur</b> (thigh; the longest bone) &middot; <b>patella</b> (kneecap) &middot; <b>tibia</b> (shin, the big one) &amp; <b>fibula</b> (thin, outer side) &middot; <b>tarsals</b> (ankle) &middot; <b>metatarsals</b> (foot) &middot; <b>phalanges</b> (toes)</td></tr>
+  </table></div>
+  <div class="mnem"><b>Hand vs. foot:</b> the names match, but a <b>C</b> means hand (<b>c</b>arpals, meta<b>c</b>arpals) and a <b>T</b> means foot (<b>t</b>arsals, meta<b>t</b>arsals). Fingers and toes are <b>phalanges</b> either way.</div>
+
+  <h3>Axial vs. appendicular skeleton</h3>
+  <div class="two">
+    <div><h4>Axial = the central column</h4>Skull, hyoid, vertebral column, thorax (sternum + ribs).<br><span class="note">Job: hold you upright and <b>protect</b> the brain, spinal cord, heart and lungs.</span></div>
+    <div><h4>Appendicular = what hangs off it</h4>Pectoral girdle, arms and hands, pelvic girdle, legs and feet.<br><span class="note">Job: <b>movement</b>: reaching, walking, grabbing.</span></div>
+  </div>
+  <p class="note"><b>Trap:</b> the girdles (clavicle, scapula, coxal bones) are <b>appendicular</b> even though they sit close to the trunk. They're the anchors the limbs attach to.</p>
+
+  <h3>Compact vs. spongy bone</h3>
+  <div class="tbl"><table>
+    <tr><th></th><th>Compact bone</th><th>Spongy bone</th></tr>
+    <tr><td><b>Looks like</b></td><td>Solid and dense</td><td>Light, porous, like a honeycomb of struts</td></tr>
+    <tr><td><b>Where</b></td><td>The hard outer wall of every bone; the thick shaft of long bones</td><td>Inside the ends of long bones, and inside flat and irregular bones</td></tr>
+    <tr><td><b>Job</b></td><td>Strength; resists bending</td><td><b>Absorbs impact</b>, keeps bones light, and holds <b>red marrow</b> in its spaces</td></tr>
+  </table></div>
+  <p class="note">Bone tissue is called <b>osseous tissue</b>. Blood vessels reach the bone cells through tiny tunnels: <b>Haversian canals</b> run along the bone and <b>Volkmann canals</b> cross between them.</p>
+
+  <h3>The 4 bone types</h3>
+  <div class="tbl"><table>
+    <tr><th>Type</th><th>Rule</th><th>Examples</th></tr>
+    <tr><td><b>Long</b></td><td>Longer than it is wide</td><td>Femur, humerus, tibia, phalanges</td></tr>
+    <tr><td><b>Short</b></td><td>About as wide as it is long, like a cube</td><td>Carpals, tarsals</td></tr>
+    <tr><td><b>Flat</b></td><td>Thin and plate-like: no ends, many edges</td><td>Skull bones, sternum, ribs, scapula</td></tr>
+    <tr><td><b>Irregular</b></td><td>Fits none of the above</td><td>Vertebrae, facial bones, hyoid</td></tr>
+  </table></div>
+  <p class="note"><b>Phalanges are long bones</b> even though they're small. "Long" is about shape (longer than wide), not size.</p>
+
+  <h3>The parts of a long bone (tap a part)</h3>
+  <div class="bonefig" id="bonefig">
+    <svg viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg" aria-label="Long bone cross-section">
+      <!-- periosteum outline -->
+      <path class="hl" data-k="peri" d="M58 18 Q100 -4 142 18 Q160 40 150 78 Q138 100 128 112 L128 288 Q138 300 150 322 Q160 360 142 382 Q100 404 58 382 Q40 360 50 322 Q62 300 72 288 L72 112 Q62 100 50 78 Q40 40 58 18Z" fill="none" stroke="#c98a3d" stroke-width="6"/>
+      <!-- compact bone body -->
+      <path d="M60 22 Q100 2 140 22 Q156 42 147 78 Q136 98 124 112 L124 288 Q136 302 147 322 Q156 358 140 378 Q100 398 60 378 Q44 358 53 322 Q64 302 76 288 L76 112 Q64 98 53 78 Q44 42 60 22Z" fill="var(--bone)" stroke="var(--bone-edge)" stroke-width="2"/>
+      <!-- spongy ends -->
+      <g class="hl" data-k="spongy" fill="#e3cfa2" stroke="#b79a62" stroke-width="1">
+        <path d="M66 32 Q100 16 134 32 Q146 48 139 76 Q128 94 116 106 L84 106 Q72 94 61 76 Q54 48 66 32Z"/>
+        <path d="M66 368 Q100 384 134 368 Q146 352 139 324 Q128 306 116 294 L84 294 Q72 306 61 324 Q54 352 66 368Z"/>
+      </g>
+      <g class="hl" data-k="spongy" stroke="#b79a62" stroke-width="1.2" fill="none">
+        <path d="M74 46 L92 70 L110 50 L126 72 M80 84 L100 62 M96 90 L118 80 M70 66 L86 96"/>
+        <path d="M74 354 L92 330 L110 350 L126 328 M80 316 L100 338 M96 310 L118 320 M70 334 L86 304"/>
+      </g>
+      <!-- epiphyseal lines -->
+      <g class="hl" data-k="plate" stroke="#6b8fb5" stroke-width="3" stroke-dasharray="5 3">
+        <line x1="70" y1="104" x2="130" y2="104"/><line x1="70" y1="296" x2="130" y2="296"/>
+      </g>
+      <!-- medullary cavity -->
+      <rect class="hl" data-k="med" x="88" y="112" width="24" height="176" rx="10" fill="#f2d16b" stroke="#c9a53a" stroke-width="1.5"/>
+      <!-- compact label region (shaft walls) -->
+      <g class="hl" data-k="compact"><rect x="77" y="114" width="10" height="172" fill="#d9c49a"/><rect x="113" y="114" width="10" height="172" fill="#d9c49a"/></g>
+      <!-- articular cartilage -->
+      <g class="hl" data-k="cart" fill="#bfe0f2" stroke="#6aa7c9" stroke-width="1.5">
+        <path d="M62 24 Q100 4 138 24 Q130 16 100 12 Q70 16 62 24Z"/>
+        <path d="M62 376 Q100 396 138 376 Q130 384 100 388 Q70 384 62 376Z"/>
+      </g>
+      <!-- brackets for epiphysis / diaphysis -->
+      <g class="hl" data-k="epi" stroke="var(--accent)" stroke-width="2" fill="none"><path d="M168 12 L176 12 L176 104 L168 104"/><path d="M168 296 L176 296 L176 388 L168 388"/></g>
+      <g class="hl" data-k="dia" stroke="var(--accent)" stroke-width="2" fill="none"><path d="M24 112 L16 112 L16 288 L24 288"/></g>
+      <text x="186" y="62" font-size="11" fill="var(--soft)" font-family="Nunito" transform="rotate(90 186 62)">epiphysis</text>
+      <text x="8" y="230" font-size="11" fill="var(--soft)" font-family="Nunito" transform="rotate(-90 8 230)">diaphysis</text>
+    </svg>
+    <div class="parts" id="parts"></div>
+  </div>
+
+  <h3>The three bone cells</h3>
+  <div class="mnem"><b>Memory hook:</b> osteo<b>B</b>lasts <b>B</b>uild &middot; osteo<b>C</b>lasts <b>C</b>hew (break down) &middot; osteo<b>CYTES</b> <b>sit</b> in the bone and maintain it (a "-cyte" is a settled, mature cell).</div>
+  <div class="tbl"><table>
+    <tr><th>Cell</th><th>Job</th><th>Process</th></tr>
+    <tr><td><b>Osteoblast</b></td><td>Lays down new bone matrix</td><td><b>Reformation</b> and <b>ossification</b> (growth)</td></tr>
+    <tr><td><b>Osteocyte</b></td><td>Mature bone cell, trapped in the matrix it built; <b>maintains</b> the bone around it</td><td>Upkeep</td></tr>
+    <tr><td><b>Osteoclast</b></td><td>Dissolves bone and releases its minerals (calcium, phosphorus) into the blood</td><td><b>Resorption</b></td></tr>
+  </table></div>
+
+  <h3>The 3 joint types</h3>
+  <div class="tbl"><table>
+    <tr><th>Type</th><th>Held together by</th><th>Movement</th><th>Where</th></tr>
+    <tr><td><b>Fibrous</b></td><td>Tough fibers; the bones fit tightly</td><td><b>None</b> (immovable)</td><td>Between the flat bones of the skull (sutures)</td></tr>
+    <tr><td><b>Cartilaginous</b></td><td>A pad of cartilage (hyaline or fibrocartilage)</td><td><b>A little</b>: bending and twisting; absorbs shock</td><td>Between vertebrae; first rib to the sternum</td></tr>
+    <tr><td><b>Synovial</b></td><td>A <b>capsule</b> of ligaments lined with a <b>synovial membrane</b> (makes slippery fluid); bone ends capped with cartilage; some have menisci and bursae</td><td><b>Free</b> movement</td><td>Most joints: shoulder, hip, knee, elbow, fingers</td></tr>
+  </table></div>
+
+  <h3>The 6 kinds of synovial joint</h3>
+  <div class="tbl"><table>
+    <tr><th>Joint</th><th>Shape</th><th>Movement</th><th>Where</th><th>Real-life example</th></tr>
+    <tr><td><b>Ball &amp; socket</b></td><td>Round head in a cup</td><td><b>Widest range</b>, every direction plus rotation</td><td>Shoulder, hip</td><td>Throwing a ball overhand; swinging a leg in a circle</td></tr>
+    <tr><td><b>Hinge</b></td><td>Convex fits into concave</td><td><b>One plane</b>, like a door</td><td>Elbow, knee, finger and toe joints</td><td>Bending your elbow to lift a cup</td></tr>
+    <tr><td><b>Pivot</b></td><td>A rounded bone turns inside a ring</td><td><b>Rotation</b> around one axis</td><td>Top of the radius and ulna (near the elbow); top of the neck</td><td>Turning a doorknob (palm up to palm down); shaking your head "no"</td></tr>
+    <tr><td><b>Condyloid</b> (ellipsoid)</td><td>An oval bump in an oval dip</td><td>Many directions, but <b>no rotation</b></td><td>Base of the fingers (knuckles); jaw</td><td>Waving your fingers side to side and up and down</td></tr>
+    <tr><td><b>Saddle</b></td><td>Two saddle shapes, each concave + convex</td><td>Lots of movement, including across</td><td>Base of the thumb</td><td>Touching your thumb to your pinky</td></tr>
+    <tr><td><b>Plane</b> (gliding)</td><td>Flat or slightly curved surfaces</td><td><b>Sliding</b> and slight twisting</td><td>Between wrist bones and between ankle bones</td><td>Flexing your wrist; rolling your ankle a little on uneven ground</td></tr>
+  </table></div>
+  <div class="mnem"><b>To name a joint from a question:</b> first ask <b>how much it moves</b> (none = fibrous, a little = cartilaginous, freely = synovial). If it's synovial, ask <b>which way it moves</b>: everywhere = ball &amp; socket, one way = hinge, twisting = pivot.</div>
+
+  <!-- ================= FUNCTION ================= -->
+  <h2 id="function">2. Function</h2>
+
+  <h3>The 5 jobs of bones, and the structure behind each</h3>
+  <div class="tbl"><table>
+    <tr><th>Job</th><th>What bones do</th><th>Which structure makes it possible</th></tr>
+    <tr><td><b>Support</b></td><td>Frame that gives the body its shape, holds posture, and carries body weight</td><td>Hard <b>compact bone</b> in the long bones of the legs and spine</td></tr>
+    <tr><td><b>Protection</b></td><td>Skull &rarr; brain, eyes, ears &middot; rib cage &rarr; heart, lungs &middot; vertebrae &rarr; spinal cord &middot; pelvis &rarr; lower abdominal and reproductive organs</td><td><b>Flat bones</b> and <b>irregular bones</b> that form shields and rings</td></tr>
+    <tr><td><b>Movement</b></td><td>Muscles pull on bones; joints let bones swing; bones act as <b>levers</b> to multiply force</td><td><b>Tendons</b> join muscle to bone; <b>ligaments</b> join bone to bone and steady the joint; the <b>periosteum</b> is where they anchor</td></tr>
+    <tr><td><b>Blood cell formation</b> (hemopoiesis)</td><td><b>Red marrow</b> makes red blood cells, white blood cells and platelets</td><td>The spaces in <b>spongy bone</b> (skull, ribs, sternum, clavicles, vertebrae, pelvis)</td></tr>
+    <tr><td><b>Storage</b></td><td>Stores <b>calcium and phosphorus</b> and releases them into the blood when nerves and muscles need them; <b>yellow marrow</b> stores fat</td><td>The mineral matrix (calcium phosphate); the medullary cavity</td></tr>
+  </table></div>
+  <p class="note"><b>Hemo</b> = blood, <b>poiesis</b> = making. A downside of storage: bones can also soak up harmful metals such as lead.</p>
+
+  <h3>Bone maintenance: resorption vs. reformation</h3>
+  <p>Bone is alive and is constantly being <b>torn down and rebuilt</b>. That's why exercise strengthens it, and why your whole skeleton turns over about every 10 years.</p>
+  <div class="two">
+    <div><h4>Resorption (tear down)</h4><b>Osteoclasts</b> dissolve bone and release its minerals into the blood.</div>
+    <div><h4>Reformation (build up)</h4><b>Osteoblasts</b> lay down new bone matrix.</div>
+  </div>
+  <div class="big"><b>The imbalance that causes osteoporosis:</b> if resorption runs <b>faster</b> than reformation, more bone is removed than is put back. Bone density drops, bones become porous and brittle, and they break more easily.</div>
+
+  <h3>Ossification: how bones grow</h3>
+  <ul>
+    <li><b>Ossification</b> = making new bone. In a fetus and in children, much of the skeleton starts as <b>cartilage</b> and is gradually <b>replaced by bone</b>. Osteoblasts do the building; osteocytes maintain the result.</li>
+    <li><b>Growth plates</b> are bands of cartilage near the ends of long bones. New cartilage keeps forming at the plate and gets turned into bone, which pushes the ends apart, so the bone gets <b>longer</b>.</li>
+    <li>When growth finishes, the plate is fully converted to bone and <b>closes</b>. That's why you stop getting taller.</li>
+  </ul>
+
+  <h3>How bones and muscles work together: origin &amp; insertion</h3>
+  <ul>
+    <li>A muscle has to attach to <b>at least two bones</b>, crossing a joint, to move anything. Think of pushing a box: you need your feet on the floor (the still bone) and your hands on the box (the bone that moves).</li>
+    <li><b>Origin</b> = the end attached to the bone that <b>stays still</b>. <b>Insertion</b> = the end attached to the bone that <b>moves</b>.</li>
+    <li>When the muscle contracts it pulls the <b>insertion toward the origin</b>.</li>
+  </ul>
+  <p class="note"><b>Example:</b> the biceps has its origin on the scapula and its insertion on the radius. When it contracts, the forearm comes up toward the shoulder, and the elbow (a hinge) bends.</p>
+
+  <h3>The 4 stages of fracture healing</h3>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div class="w">0&ndash;2 weeks</div><b>Hematoma</b>Blood from torn vessels clots around the break. <b>Inflammation</b> brings in immune cells to clean up.</div>
+    <div class="step"><div class="n">2</div><div class="w">2&ndash;3 weeks</div><b>Soft callus</b>Collagen fibers and <b>cartilage</b> bridge the gap, a soft splint that steadies the break.</div>
+    <div class="step"><div class="n">3</div><div class="w">3&ndash;6 weeks</div><b>Hard callus</b>The cartilage is replaced by real <b>bone</b>. Now it's firm, but lumpy.</div>
+    <div class="step"><div class="n">4</div><div class="w">8 weeks &rarr; months</div><b>Remodeling</b>Osteoclasts trim the extra bone and osteoblasts reinforce what's needed, back toward the original shape.</div>
+  </div>
+  <div class="mnem"><b>Order hook:</b> <b>Clot &rarr; Cartilage &rarr; Bone &rarr; Reshape.</b> The callus goes soft before it goes hard.</div>
+
+  <h3>What speeds up or slows down healing</h3>
+  <div class="tbl"><table>
+    <tr><th>Factor</th><th>Effect</th></tr>
+    <tr><td><b>Age</b></td><td>Younger people heal <b>faster</b>: more active bone cells and a better blood supply.</td></tr>
+    <tr><td><b>Nutrition</b></td><td>Needs <b>calcium</b>, <b>vitamin D</b> (to absorb that calcium) and <b>protein</b> (for collagen). A poor diet slows healing.</td></tr>
+    <tr><td><b>Overall health</b></td><td>Chronic conditions (e.g. diabetes, poor circulation) slow it.</td></tr>
+    <tr><td><b>Immobilization</b></td><td>A cast or splint keeps the pieces lined up and still, so the callus can form. Moving a fresh break disrupts it.</td></tr>
+    <tr><td><b>Smoking</b></td><td>Slows healing by reducing blood flow (less oxygen reaching the break).</td></tr>
+    <tr><td><b>Medications</b></td><td>Some medicines (e.g. long-term steroids) slow bone repair.</td></tr>
+  </table></div>
+
+  <!-- ================= DISORDERS ================= -->
+  <h2 id="disorders">3. Disorders &amp; injuries</h2>
+
+  <h3>Fractures: the big split</h3>
+  <div class="two">
+    <div><h4>Closed fracture</h4>Bone breaks, <b>skin stays intact</b>.
+      <ul><li><b>Stress:</b> hairline cracks from repeated force (runners, dancers)</li>
+      <li><b>Avulsion:</b> a tendon or ligament <b>yanks off a chip</b> of bone where it attaches</li>
+      <li><b>Displaced:</b> broken all the way through and the ends have shifted out of line; often needs pins, plates or screws</li></ul></div>
+    <div><h4>Open (compound) fracture</h4>Bone breaks <b>and pierces the skin</b>.
+      <ul><li>Needs <b>surgery right away</b>: the wound lets bacteria reach the bone (infection risk), and the bone has to be realigned.</li></ul></div>
+  </div>
+
+  <h3>Fracture patterns, as they look on an x-ray</h3>
+  <div class="gallery" id="gallery"></div>
+
+  <h3>Drill: name that fracture</h3>
+  <div class="drill">
+    <svg id="dsvg" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="opts" id="dopts"></div>
+    <div class="fb" id="dfb"></div>
+    <div class="score" id="dscore"></div>
+  </div>
+
+  <h3>Six disorders: compare &amp; contrast</h3>
+  <div class="mnem"><b>Sort by what's damaged first:</b> <b>ligaments/tendons</b> &rarr; sprain &middot; <b>bursae</b> &rarr; bursitis &middot; <b>joint cartilage</b> &rarr; arthritis &middot; <b>bone density</b> &rarr; osteoporosis &middot; <b>bone cells</b> &rarr; cancer &middot; <b>joint position</b> &rarr; dislocation.</div>
+  <div class="tbl"><table>
+    <tr><th>Disorder</th><th>What it is</th><th>Cause</th><th>Effects / treatment</th></tr>
+    <tr><td><b>Sprain</b></td><td>Ligaments (and/or tendons) stretched or torn</td><td>Twisting a joint past its limit (rolled ankle)</td><td>Pain, swelling. <b>Heals slowly</b>, because ligaments have little direct blood supply. Rest, ice, support.</td></tr>
+    <tr><td><b>Bursitis</b></td><td>Inflamed <b>bursae</b> (fluid sacs that cushion a joint) swell with fluid</td><td>Repetitive motion or constant pressure (kneeling, throwing)</td><td>Pain and swelling at the joint; rest and anti-inflammatories</td></tr>
+    <tr><td><b>Arthritis</b></td><td>Painful breakdown of movable (synovial) joints</td><td>Either the <b>immune system attacks</b> the joint lining and cartilage, with bone laid down in its place, or the cartilage is <b>worn down</b> by repeated damage</td><td>Pain, stiffness, less range of motion; managed with medication, exercise, sometimes joint replacement</td></tr>
+    <tr><td><b>Osteoporosis</b></td><td>Loss of bone <b>density</b>: porous, brittle bones</td><td>Resorption outpaces reformation; linked to the drop in sex hormones with age</td><td>Easy fractures (hip, spine, wrist). <b>Prevent</b> with weight-bearing exercise and calcium in your teens and twenties.</td></tr>
+    <tr><td><b>Bone cancer</b></td><td>Cancer in bone. Usually it <b>spread there from another cancer</b> (metastasized); cancer that starts in bone is rare</td><td>Spread from elsewhere; primary type is rare</td><td>Main symptom: <b>pain</b>. Surgery, amputation, chemotherapy, radiation.</td></tr>
+    <tr><td><b>Dislocation</b></td><td>Bone ends <b>forced out</b> of their place in a joint</td><td>A hard blow or fall; most often <b>shoulders and fingers</b></td><td>Painful and deformed; the joint can't move. Must be put back <b>promptly</b> to avoid cutting off blood flow.</td></tr>
+  </table></div>
+
+  <h3>Osteoporosis up close</h3>
+  <ul>
+    <li><b>The imbalance:</b> osteoclasts remove bone faster than osteoblasts replace it, so density falls year after year.</li>
+    <li><b>Why women are at higher risk:</b> smaller bones to start with (less to lose); calcium lost over menstrual cycles; a sharp drop in sex hormones (estrogen) at <b>menopause</b>, and those hormones help protect bone.</li>
+    <li><b>Prevention works early:</b> you build most of your peak bone mass in your <b>teens and twenties</b>. Weight-bearing exercise plus a calcium-rich diet now means more bone in the bank later.</li>
+  </ul>
+
+  <!-- ================= QUIZ ================= -->
+  <h2 id="quiz">4. Practice quiz</h2>
+  <p>Answer in your head (or on paper) before you reveal. If you miss one, reread that section above. Flashcards for the vocabulary are linked from the hub.</p>
+  <div class="tools"><button id="openAll">Show all answers</button><button id="closeAll">Hide all answers</button></div>
+  <div id="quizbox"></div>
+
+  <p class="note" style="margin-top:22px">Original study guide for Unit 3 (Skeletal System), keyed bullet-by-bullet to Mrs. Kalec's Unit 3 Exam Review. Written in our own words from class topics; no slide or handout text is reproduced. The bone-by-region table, the joint examples and the healing-factor examples go beyond the class slides, so check them against class handouts and your Bone Diagram.</p>
+
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+(function(){
+  /* ---------- long bone parts ---------- */
+  var PARTS=[
+    ['epi','Epiphysis','The rounded <b>ends</b> of the bone; they form the joints. Filled with spongy bone.'],
+    ['dia','Diaphysis','The <b>shaft</b>: a thick tube of compact bone around a hollow centre.'],
+    ['med','Medullary cavity','The hollow inside the shaft, lined with <b>endosteum</b> and filled with <b>marrow</b> (yellow in adults).'],
+    ['compact','Compact bone','The dense, hard wall; gives strength.'],
+    ['spongy','Spongy bone','Porous struts inside the ends; absorbs shock; holds <b>red marrow</b>.'],
+    ['cart','Articular cartilage','Smooth <b>hyaline cartilage</b> capping the ends, so joints glide without bone grinding on bone.'],
+    ['peri','Periosteum','Tough membrane wrapping the outside, full of blood vessels; <b>tendons and ligaments anchor</b> here.'],
+    ['plate','Growth plate / line','Cartilage band where a growing bone lengthens; becomes a thin bony line once growth stops.']
+  ];
+  var fig=document.getElementById('bonefig'),pl=document.getElementById('parts');
+  PARTS.forEach(function(p){
+    var d=document.createElement('div');d.className='part';d.innerHTML='<b>'+p[1]+'</b> &mdash; '+p[2];
+    d.onclick=function(){
+      var was=d.classList.contains('on');
+      pl.querySelectorAll('.part').forEach(function(x){x.classList.remove('on')});
+      fig.querySelectorAll('.hl').forEach(function(x){x.classList.remove('on')});
+      if(was){fig.classList.remove('dim');return}
+      d.classList.add('on');fig.classList.add('dim');
+      fig.querySelectorAll('.hl[data-k="'+p[0]+'"]').forEach(function(x){x.classList.add('on')});
+    };
+    pl.appendChild(d);
+  });
+
+  /* ---------- fracture x-ray drawings ---------- */
+  var BONE='<path d="M30 28 Q14 22 12 32 Q10 40 18 42 Q10 46 14 54 Q18 60 30 52 L170 52 Q182 60 186 54 Q190 46 182 42 Q190 40 188 32 Q186 22 170 28 Z" fill="#dfe6ee" opacity=".9"/><rect x="34" y="34" width="132" height="12" fill="#9aa8b8" opacity=".55"/>';
+  var R='stroke="#ff6b6b" stroke-width="2.6" fill="none" stroke-linecap="round"';
+  var BG='#22272e';
+  var FX={
+    'Transverse':{d:'Straight across the bone, at a right angle to its length.',s:'<line x1="100" y1="26" x2="100" y2="54" '+R+'/>'},
+    'Oblique':{d:'A slanted, diagonal break across the bone.',s:'<line x1="84" y1="26" x2="116" y2="54" '+R+'/>'},
+    'Spiral':{d:'Twists around the bone, usually from a twisting force (e.g. a skiing fall).',s:'<path d="M70 27 C88 30 92 50 104 53" '+R+'/><path d="M104 27 C118 30 122 50 134 53" '+R+' stroke-dasharray="4 3" opacity=".7"/>'},
+    'Linear':{d:'Runs along the length of the bone, parallel to its long axis.',s:'<line x1="58" y1="40" x2="142" y2="40" '+R+'/>'},
+    'Greenstick':{d:'Bends and cracks on one side but doesn\'t break through. Most common in kids, whose bones are more flexible.',s:'<path d="M96 27 L100 33 L97 38 L101 43" '+R+'/>',bend:1},
+    'Comminuted':{d:'Shattered into three or more pieces.',s:'<path d="M86 26 L94 38 L88 54 M94 38 L110 34 L106 54 M110 34 L116 26 M100 26 L104 34" '+R+'/>'}
+  };
+  function draw(name){
+    var f=FX[name];var b=BONE;
+    if(f.bend){b='<g transform="rotate(-4 100 40)">'+BONE+'</g>'}
+    return '<rect width="200" height="80" fill="'+BG+'"/>'+b+f.s;
+  }
+  var gal=document.getElementById('gallery');
+  Object.keys(FX).forEach(function(k){
+    var d=document.createElement('div');
+    d.innerHTML='<svg viewBox="0 0 200 80">'+draw(k)+'</svg><b>'+k+'</b>'+FX[k].d;
+    gal.appendChild(d);
+  });
+
+  /* ---------- drill ---------- */
+  var names=Object.keys(FX),cur=null,right=0,tries=0,locked=false;
+  var dsvg=document.getElementById('dsvg'),dopts=document.getElementById('dopts'),dfb=document.getElementById('dfb'),dsc=document.getElementById('dscore');
+  function next(){
+    var n;do{n=names[Math.floor(Math.random()*names.length)]}while(n===cur&&names.length>1);
+    cur=n;locked=false;dsvg.innerHTML=draw(n);dfb.textContent='Which fracture is this?';
+    dopts.querySelectorAll('button').forEach(function(b){b.className=''});
+  }
+  names.forEach(function(k){
+    var b=document.createElement('button');b.textContent=k;
+    b.onclick=function(){
+      if(locked)return;tries++;
+      if(k===cur){right++;b.className='right';locked=true;dfb.innerHTML='<b>Yes &mdash; '+k+'.</b> '+FX[k].d;setTimeout(next,1800)}
+      else{b.className='wrong';dfb.innerHTML='Not '+k+'. Look at which way the line runs.'}
+      dsc.textContent=right+' right out of '+tries+' tries';
+    };
+    dopts.appendChild(b);
+  });
+  next();
+
+  /* ---------- quiz ---------- */
+  var Q=[
+    ['Structure'],
+    ['Name the bones of the axial skeleton (4 groups).','<b>Skull, hyoid, vertebral column, thorax</b> (sternum + ribs).'],
+    ['Is the scapula axial or appendicular? Why?','<b>Appendicular</b>. It\'s part of the <b>pectoral girdle</b>, which anchors the arm.'],
+    ['Compact vs. spongy bone: where is each, and what does each do?','<b>Compact:</b> dense outer wall and long-bone shafts; <b>strength</b>. <b>Spongy:</b> porous, inside the ends and in flat bones; <b>absorbs impact</b> and holds <b>red marrow</b>.'],
+    ['Classify: femur, carpal, sternum, vertebra.','Femur = <b>long</b>; carpal = <b>short</b>; sternum = <b>flat</b>; vertebra = <b>irregular</b>.'],
+    ['A phalanx is tiny. Why is it a long bone?','Long bone means <b>longer than it is wide</b>. It\'s about shape, not size.'],
+    ['What is the difference between the epiphysis and the diaphysis?','<b>Epiphysis</b> = the ends (form joints, spongy inside). <b>Diaphysis</b> = the shaft (compact wall around the medullary cavity).'],
+    ['What fills the medullary cavity, and what lines it?','<b>Marrow</b> (yellow, fat-storing, in adults), lined by the <b>endosteum</b>.'],
+    ['Which structure covers the outside of a bone and gives tendons and ligaments something to attach to?','The <b>periosteum</b>.'],
+    ['What is articular cartilage for?','A smooth cap of <b>hyaline cartilage</b> on the ends of bones, so joints move without bone rubbing on bone.'],
+    ['Match: osteoblast, osteocyte, osteoclast &rarr; build, maintain, break down.','Osteo<b>blast</b> = <b>build</b>; osteo<b>cyte</b> = <b>maintain</b> (mature cell); osteo<b>clast</b> = <b>break down</b> (resorption).'],
+    ['Which joint type allows no movement, and where is it found?','<b>Fibrous</b>: between the flat bones of the <b>skull</b>.'],
+    ['Where are cartilaginous joints, and what do they do?','Between <b>vertebrae</b> and where the <b>first rib meets the sternum</b>; they allow a little bending and <b>absorb shock</b>.'],
+    ['What makes a synovial joint different from the other two types?','A <b>joint capsule</b> (ligaments + synovial membrane) with fluid inside, and cartilage-capped bone ends: it moves <b>freely</b>.'],
+    ['Name the joint: allows the widest range of motion; found in the shoulder and hip.','<b>Ball &amp; socket.</b>'],
+    ['Name the joint: moves in one plane, like a door; elbow and knee.','<b>Hinge.</b>'],
+    ['Name the joint: lets you rotate your forearm to turn a doorknob.','<b>Pivot</b> (where the radius turns against the ulna).'],
+    ['Name the joint: base of the thumb, lets the thumb cross the palm.','<b>Saddle.</b>'],
+    ['Name the joint: between the wrist bones; small sliding movements.','<b>Plane (gliding).</b>'],
+    ['Name the joint: the knuckles at the base of the fingers; many directions but no rotation.','<b>Condyloid (ellipsoid).</b>'],
+    ['Function'],
+    ['List the five functions of bones.','<b>Support, protection, movement</b> (muscle attachment, levers), <b>blood cell formation</b> (hemopoiesis), <b>storage</b> of minerals (calcium, phosphorus) and fat.'],
+    ['Where does blood cell formation happen, and what does red marrow make?','In the <b>red marrow</b> inside <b>spongy bone</b> (skull, ribs, sternum, clavicles, vertebrae, pelvis). It makes <b>red blood cells, white blood cells and platelets</b>.'],
+    ['Red vs. yellow marrow?','<b>Red</b> makes blood cells. <b>Yellow</b> stores <b>fat</b>.'],
+    ['Tendon vs. ligament?','<b>Tendon</b>: muscle to bone (moves it). <b>Ligament</b>: bone to bone (stabilizes the joint).'],
+    ['Which organs does each protect: skull, rib cage, vertebrae, pelvis?','Skull: <b>brain</b>, eyes, ears. Rib cage: <b>heart, lungs</b>. Vertebrae: <b>spinal cord</b>. Pelvis: lower abdominal and <b>reproductive</b> organs.'],
+    ['Explain resorption and reformation, and name the cell for each.','<b>Resorption</b>: <b>osteoclasts</b> break bone down and release minerals into the blood. <b>Reformation</b>: <b>osteoblasts</b> build new bone.'],
+    ['How do long bones get longer?','At the <b>growth plates</b>: new cartilage forms and is turned into bone (<b>ossification</b>), pushing the ends apart. The plate closes when growth stops.'],
+    ['A muscle\'s origin vs. insertion: which moves?','The <b>insertion</b> is on the bone that moves; the <b>origin</b> is on the bone that stays still. Contraction pulls the insertion <b>toward</b> the origin.'],
+    ['Why must a muscle attach to at least two bones?','It has to pull <b>across a joint</b>: one bone is the anchor (origin), the other moves (insertion). With one attachment there\'s nothing to pull against.'],
+    ['Put the fracture-healing stages in order: hard callus, remodeling, hematoma, soft callus.','<b>Hematoma &rarr; soft callus &rarr; hard callus &rarr; remodeling.</b>'],
+    ['What happens in the soft callus stage?','<b>Collagen and cartilage</b> bridge and stabilize the break (about weeks 2&ndash;3).'],
+    ['Name four factors that affect how fast a bone heals.','Any four: <b>age</b>, <b>nutrition</b> (calcium, vitamin D, protein), overall <b>health</b>, <b>immobilization</b>/proper treatment, <b>smoking</b>, certain <b>medications</b>.'],
+    ['Why does immobilizing a break (cast) help it heal?','It keeps the pieces <b>lined up and still</b>, so the callus can form instead of being torn apart.'],
+    ['Disorders & injuries'],
+    ['Open vs. closed fracture?','<b>Open (compound)</b>: the bone breaks <b>through the skin</b>; needs immediate surgery (infection risk). <b>Closed</b>: skin stays intact.'],
+    ['A runner develops tiny hairline cracks in the shin from training. Type?','<b>Stress fracture.</b>'],
+    ['A tendon pulls a chip of bone off where it attaches. Type?','<b>Avulsion fracture.</b>'],
+    ['A child\'s arm bone bends and cracks on one side but isn\'t broken through. Type?','<b>Greenstick.</b>'],
+    ['The x-ray shows the bone in four pieces. Type?','<b>Comminuted</b> (three or more pieces).'],
+    ['Transverse vs. oblique vs. linear: which way does each line run?','<b>Transverse</b>: straight across. <b>Oblique</b>: diagonal. <b>Linear</b>: along the length of the bone.'],
+    ['A skier\'s leg is twisted in a fall; the break winds around the bone. Type?','<b>Spiral.</b>'],
+    ['Sprain vs. dislocation?','<b>Sprain</b>: ligaments stretched or torn by a twist; the joint stays in place. <b>Dislocation</b>: the bone ends are <b>forced out</b> of the joint.'],
+    ['Why do sprains heal slowly?','Ligaments and tendons have <b>little direct blood supply</b>.'],
+    ['What is bursitis, and what usually causes it?','Inflamed, fluid-swollen <b>bursae</b> (cushioning sacs in a joint), usually from <b>repetitive motion or pressure</b>.'],
+    ['Give the two causes of arthritis covered in class.','The <b>immune system attacking</b> the joint lining and cartilage, or <b>repeated damage</b> wearing the cartilage down.'],
+    ['Most bone cancer didn\'t start in bone. Explain.','It <b>metastasized</b> (spread) from a cancer somewhere else; cancer that starts in bone is rare. The main symptom is <b>pain</b>.'],
+    ['Which joints dislocate most often, and why treat quickly?','<b>Shoulders and fingers.</b> Resetting promptly protects <b>blood flow</b> to the area.'],
+    ['Explain how an imbalance in bone maintenance leads to osteoporosis.','<b>Osteoclast resorption outpaces osteoblast reformation</b>, so more bone is removed than rebuilt. Density drops and bones become brittle.'],
+    ['Give two reasons women are at higher risk of osteoporosis, and one way to prevent it.','Smaller bones; calcium loss; the <b>drop in sex hormones at menopause</b>. Prevent with <b>weight-bearing exercise</b> and a <b>calcium-rich diet</b> in the teens and twenties.']
+  ];
+  var qb=document.getElementById('quizbox'),n=0;
+  Q.forEach(function(q){
+    if(q.length===1){var h=document.createElement('div');h.className='sec';h.textContent=q[0];qb.appendChild(h);return}
+    n++;var d=document.createElement('div');d.className='q';
+    d.innerHTML='<p><span class="qn">'+n+'</span>'+q[0]+'</p><details><summary>Show answer</summary><div class="ans">'+q[1]+'</div></details>';
+    qb.appendChild(d);
+  });
+  document.getElementById('openAll').onclick=function(){document.querySelectorAll('#quizbox details').forEach(function(d){d.open=true})};
+  document.getElementById('closeAll').onclick=function(){document.querySelectorAll('#quizbox details').forEach(function(d){d.open=false})};
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>
