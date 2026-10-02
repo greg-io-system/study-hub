@@ -48,8 +48,8 @@ window.STUDY_HUB = {
               topic: "Where two lines cross — one, none, or infinitely many solutions — and how to solve by graphing, substitution and elimination",
               file: "lessons/systems-of-equations.html",
               date: "2026-10-02",
-              summary: "Drag two lines and watch the solution move: one crossing, parallel (no solution), or the same line (infinitely many). Then a worked twin for every kind of problem on the System of Two Equations worksheet: graphing (including standard form and vertical lines), substitution, elimination (multiply one, multiply both, out-of-order equations, fractions), and writing your own system. Ends with 8 practice systems. Worksheet due Mon Oct 5.",
-              tags: ["systems", "interactive", "worked examples", "practice"],
+              summary: "Drag two lines and watch the solution move: one crossing, parallel (no solution), or the same line (infinitely many). Then a worked twin for every kind of problem on the System of Two Equations worksheet: graphing (including standard form and vertical lines), substitution, elimination (multiply one, multiply both, out-of-order equations, fractions), writing your own system, and word problems (ticket prices, fee-plus-rate, counts, and the “is there enough information?” trap). Ends with 8 practice systems. Worksheet due Mon Oct 5.",
+              tags: ["systems", "interactive", "worked examples", "word problems", "practice"],
               materials: [
                 { kind: "lesson", label: "Interactive lesson", file: "lessons/systems-of-equations.html" }
               ]
