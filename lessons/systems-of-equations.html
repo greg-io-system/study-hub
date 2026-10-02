@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Systems of Two Equations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --ink-soft:#5a6b83;
+    --line:#e4dcc8; --grid:#ece3cf;
+    --coral:#e8623d; --coral-soft:#fbe7de;
+    --teal:#178a68; --teal-soft:#d8efe6;
+    --gold:#e0a324; --gold-soft:#f8ecca;
+    --navy:#2f5aa8; --navy-soft:#e0e8f6;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,'Times New Roman',serif;
+    --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    line-height:1.65;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:26px 26px;background-position:-1px -1px;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{text-align:center;padding:34px 20px 22px}
+  .eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--coral)}
+  h1{font-family:var(--disp);font-weight:600;font-size:clamp(32px,6vw,50px);line-height:1.04;margin:.26em 0 .16em}
+  h1 em{font-style:italic;color:var(--coral)}
+  .sub{font-size:18px;color:var(--ink-soft);max-width:640px;margin:0 auto}
+  section{background:var(--paper2);border:1.5px solid var(--line);border-radius:20px;
+    padding:24px 26px 26px;margin:20px 0;box-shadow:var(--shadow)}
+  @media(max-width:520px){section{padding:18px 16px 20px}}
+  .tag{display:inline-block;font-family:var(--disp);font-weight:700;font-size:13px;
+    background:var(--ink);color:var(--paper);border-radius:999px;padding:3px 13px;margin-bottom:6px}
+  h2{font-family:var(--disp);font-weight:600;font-size:clamp(22px,3.4vw,29px);margin:.1em 0 .3em;line-height:1.1}
+  h3{font-family:var(--body);font-weight:800;font-size:16px;margin:1.2em 0 .3em}
+  p{margin:.55em 0}
+  .lead{font-size:18px}
+  .muted{color:var(--ink-soft)}
+  .k{color:var(--coral);font-weight:800}
+  .k2{color:var(--navy);font-weight:800}
+  .k3{color:var(--teal);font-weight:800}
+  .mono{font-variant-numeric:tabular-nums}
+  .callout{border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+  .callout b{color:#8a6410}
+  .sys{display:inline-block;text-align:left;font-family:var(--disp);font-weight:700;font-size:clamp(20px,4.4vw,28px);border-left:3px solid var(--ink);padding:2px 0 2px 14px;margin:8px 0;line-height:1.35}
+  .center{text-align:center}
+  .legendrow{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:14px;font-weight:700;color:var(--ink-soft);margin-top:6px}
+  .swatch{display:inline-block;width:16px;height:4px;border-radius:3px;vertical-align:middle;margin-right:6px}
+  /* explorer */
+  .explorer{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:760px){.explorer{grid-template-columns:minmax(0,1fr) 300px}}
+  canvas{display:block;width:100%;height:auto;background:#fffdf8;border:1.5px solid var(--line);border-radius:14px;touch-action:none}
+  .panel{display:flex;flex-direction:column;gap:10px}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--body);font-weight:800;font-size:14px;border:2px solid var(--line);background:#fff;
+    color:var(--ink);border-radius:11px;padding:7px 13px;cursor:pointer;transition:.15s}
+  .chip:hover{border-color:var(--coral)}
+  .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .lineblock{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px}
+  .lineblock .eq{font-family:var(--disp);font-weight:700;font-size:19px;margin-bottom:4px}
+  .ctl{display:flex;align-items:center;gap:10px}
+  .ctl label{font-weight:800;width:92px;font-size:13.5px}
+  .ctl label small{display:block;font-weight:600;color:var(--ink-soft);font-size:11px}
+  input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:6px;background:var(--line);outline:none;flex:1;min-width:80px}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--thumb,#e8623d);border:3px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.2);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--thumb,#e8623d);border:3px solid #fff;cursor:pointer}
+  .val{font-weight:800;width:36px;text-align:right;font-variant-numeric:tabular-nums}
+  .verdict{border-radius:12px;padding:10px 12px;font-size:14.5px;font-weight:600}
+  .verdict b{font-size:16px}
+  .v-one{background:var(--teal-soft)} .v-one b{color:#0d5c42}
+  .v-none{background:var(--coral-soft)} .v-none b{color:#a53716}
+  .v-inf{background:var(--navy-soft)} .v-inf b{color:#1f3f7a}
+  .check{font-size:13.5px;background:#fff;border:1.5px dashed var(--line);border-radius:10px;padding:8px 10px;font-variant-numeric:tabular-nums}
+  table{border-collapse:collapse;width:100%;font-size:15px;margin:.4em 0}
+  th,td{border:1.5px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:#fbe7de}
+  .tbl{overflow-x:auto}
+  code{background:#f1ead8;border-radius:5px;padding:1px 6px;font-variant-numeric:tabular-nums}
+  .mini{display:inline-block;vertical-align:middle;width:70px;height:52px;background:#fffdf8;border:1px solid var(--line);border-radius:6px}
+  .q{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+  .q .qs{font-family:var(--disp);font-weight:700;font-size:18px;border-left:3px solid var(--ink);padding-left:10px;margin:6px 0;line-height:1.35}
+  .qn{font-weight:800;color:var(--coral);margin-right:6px}
+  details{margin-top:6px}
+  summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--coral);user-select:none}
+  .ans{background:var(--teal-soft);border-radius:10px;padding:9px 12px;margin-top:8px;font-size:15px}
+  .footer{margin-top:38px;color:var(--ink-soft);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Algebra 2 &middot; Unit 2 &middot; Systems</div>
+    <h1>Systems of <em>Two Equations</em></h1>
+    <p class="sub">Two equations, one question: <b>which point makes both of them true at the same time?</b> On a graph, that's just <b>where the two lines cross</b>. Once you can picture it, the algebra makes sense.</p>
+  </header>
+
+  <!-- BIG IDEA -->
+  <section>
+    <span class="tag">The one idea</span>
+    <h2>A solution has to work in <em>both</em></h2>
+    <p class="lead">A <b>system</b> is two (or more) equations that have to be true together:</p>
+    <p class="center"><span class="sys"><span class="k">y = 2x &minus; 1</span><br><span class="k2">y = &minus;x + 5</span></span></p>
+    <p>Each equation on its own has <b>infinitely many</b> solutions: every point on its line. The system's solution is the point that's on <b>both</b> lines, which is where they <b>cross</b>.</p>
+    <div class="callout"><b>Test it:</b> try the point <span class="mono">(2, 3)</span>.
+      In the first equation: <span class="mono">2(2) &minus; 1 = 3</span> &#10003;. In the second: <span class="mono">&minus;2 + 5 = 3</span> &#10003;. It works in both, so <b>(2, 3) is the solution</b>.
+      Now try <span class="mono">(0, &minus;1)</span>: it works in the first (it's the y-intercept) but in the second <span class="mono">&minus;0 + 5 = 5 &ne; &minus;1</span> &#10007;. On one line but not the other, so it's <b>not</b> a solution.</div>
+    <p class="muted">You always write the answer as an <b>ordered pair</b> <span class="mono">(x, y)</span>. That ordered pair is the crossing point.</p>
+  </section>
+
+  <!-- EXPLORER -->
+  <section>
+    <span class="tag">Play with it</span>
+    <h2>Move the lines, watch the crossing</h2>
+    <p>Each line is in slope-intercept form, <span class="mono">y = mx + b</span>: <b>m</b> tilts it (slope), <b>b</b> slides it up and down (where it crosses the y-axis). Drag the sliders and watch what happens to the solution.</p>
+    <div class="btnrow" id="presets" style="margin:10px 0 4px"></div>
+    <div class="explorer">
+      <div>
+        <canvas id="cv" width="560" height="560" aria-label="two lines on a coordinate plane"></canvas>
+        <div class="legendrow">
+          <span><span class="swatch" style="background:var(--coral)"></span>line 1</span>
+          <span><span class="swatch" style="background:var(--navy)"></span>line 2</span>
+          <span><span class="swatch" style="background:var(--teal);width:10px;height:10px;border-radius:50%"></span>solution</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="lineblock">
+          <div class="eq k" id="eq1"></div>
+          <div class="ctl"><label>m&#8321;<small>slope</small></label><input id="m1" type="range" min="-4" max="4" step="0.5" value="2" style="--thumb:#e8623d"><span class="val k" id="vm1">2</span></div>
+          <div class="ctl"><label>b&#8321;<small>y-intercept</small></label><input id="b1" type="range" min="-8" max="8" step="1" value="-1" style="--thumb:#e8623d"><span class="val k" id="vb1">-1</span></div>
+        </div>
+        <div class="lineblock">
+          <div class="eq k2" id="eq2"></div>
+          <div class="ctl"><label>m&#8322;<small>slope</small></label><input id="m2" type="range" min="-4" max="4" step="0.5" value="-1" style="--thumb:#2f5aa8"><span class="val k2" id="vm2">-1</span></div>
+          <div class="ctl"><label>b&#8322;<small>y-intercept</small></label><input id="b2" type="range" min="-8" max="8" step="1" value="5" style="--thumb:#2f5aa8"><span class="val k2" id="vb2">5</span></div>
+        </div>
+        <div class="verdict" id="verdict"></div>
+        <div class="check" id="check"></div>
+      </div>
+    </div>
+    <div class="callout"><b>Try these three things:</b> (1) Make the two slopes <b>equal</b> but keep the intercepts different. What happens to the crossing? (2) Now make the intercepts equal too. (3) Set up a crossing that lands <b>between</b> grid lines, and notice the answer isn't a nice whole number. That last one is why the algebra methods exist.</div>
+  </section>
+
+  <!-- THREE CASES -->
+  <section>
+    <span class="tag">Only three things can happen</span>
+    <h2>One, none, or infinitely many</h2>
+    <p>Two straight lines can only do three things, so a system of two linear equations has only three possible answers:</p>
+    <div class="tbl"><table>
+      <tr><th>The lines&hellip;</th><th>Picture</th><th>How many solutions</th><th>How to spot it from the equations</th></tr>
+      <tr><td><b>cross once</b></td><td><svg class="mini" viewBox="0 0 70 52"><line x1="6" y1="46" x2="64" y2="6" stroke="#e8623d" stroke-width="3"/><line x1="6" y1="10" x2="64" y2="44" stroke="#2f5aa8" stroke-width="3"/><circle cx="35" cy="26" r="4" fill="#178a68"/></svg></td><td><b>Exactly one</b>, the crossing point</td><td><b>Different slopes</b></td></tr>
+      <tr><td><b>are parallel</b></td><td><svg class="mini" viewBox="0 0 70 52"><line x1="6" y1="38" x2="64" y2="6" stroke="#e8623d" stroke-width="3"/><line x1="6" y1="50" x2="64" y2="18" stroke="#2f5aa8" stroke-width="3"/></svg></td><td><b>No solution</b>: they never meet</td><td><b>Same slope, different y-intercepts</b></td></tr>
+      <tr><td><b>are the same line</b></td><td><svg class="mini" viewBox="0 0 70 52"><line x1="6" y1="44" x2="64" y2="8" stroke="#e8623d" stroke-width="6"/><line x1="6" y1="44" x2="64" y2="8" stroke="#2f5aa8" stroke-width="2.5" stroke-dasharray="5 4"/></svg></td><td><b>Infinitely many</b>: every point on the line</td><td><b>Same slope and same y-intercept</b> (one equation is just the other in disguise)</td></tr>
+    </table></div>
+    <div class="callout"><b>When you're solving with algebra</b>, the variables can all cancel out. If what's left is something false like <span class="mono">0 = 7</span>, the lines are parallel: <b>no solution</b>. If it's something always true like <span class="mono">0 = 0</span>, it's the same line: <b>infinitely many</b>. Don't panic when the x's disappear. That disappearance <i>is</i> the answer.</div>
+  </section>
+
+  <!-- GRAPHING TWIN -->
+  <section>
+    <span class="tag">Method 1</span>
+    <h2>Solving by graphing</h2>
+    <p class="muted">A twin problem, not one from your worksheet, so you can copy the method rather than the answer.</p>
+    <p class="center"><span class="sys"><span class="k">y = x + 1</span><br><span class="k2">y = &minus;2x + 7</span></span></p>
+    <ol>
+      <li><b>Get both into <span class="mono">y = mx + b</span></b>. These already are. (If one looks like <span class="mono">2x + y = 7</span>, solve it for y first.)</li>
+      <li><b>Graph line 1:</b> start at the y-intercept <span class="mono">(0, 1)</span>, then use the slope 1 = "up 1, right 1" to get more points.</li>
+      <li><b>Graph line 2:</b> start at <span class="mono">(0, 7)</span>, slope &minus;2 = "down 2, right 1."</li>
+      <li><b>Read the crossing:</b> they meet at <span class="mono">(2, 3)</span>.</li>
+      <li><b>Check it in both:</b> <span class="mono">2 + 1 = 3</span> &#10003; and <span class="mono">&minus;2(2) + 7 = 3</span> &#10003;. Done: <b>(2, 3)</b>.</li>
+    </ol>
+    <h3>Two curveballs your worksheet throws</h3>
+    <p><b>1. An equation in standard form</b>, like <span class="mono">2x + y = 5</span>. You can't graph it from slope and intercept until you <b>solve it for y</b>:</p>
+    <p class="center mono"><span class="mono">2x + y = 5</span> &nbsp;&rarr;&nbsp; subtract 2x from both sides &nbsp;&rarr;&nbsp; <b>y = &minus;2x + 5</b></p>
+    <p class="muted">If there's a number in front of y, divide everything by it at the end: <span class="mono">3x + 2y = 8 &rarr; 2y = &minus;3x + 8 &rarr; y = &minus;1.5x + 4</span>.</p>
+    <p><b>2. An equation with only one letter</b>, like <span class="mono">x = 1</span> or <span class="mono">y = &minus;2</span>.</p>
+    <ul>
+      <li><span class="mono">x = 1</span> is a <b>vertical</b> line: every point on it has x equal to 1. Draw it straight up and down through 1 on the x-axis.</li>
+      <li><span class="mono">y = &minus;2</span> is a <b>horizontal</b> line through &minus;2 on the y-axis.</li>
+    </ul>
+    <p class="muted">Twin: <span class="mono">2x + y = 5</span> and <span class="mono">x = 1</span>. The first becomes <span class="mono">y = &minus;2x + 5</span>; the second is the vertical line through x = 1. They cross where x = 1, so y = &minus;2(1) + 5 = 3, which gives <b>(1, 3)</b>.</p>
+    <div class="callout"><b>The catch with graphing:</b> it's only as accurate as your drawing. If the lines cross at something like <span class="mono">(1.4, 2.6)</span> you can't read that off graph paper. That's when you switch to an algebra method, which gives you the exact answer.</div>
+  </section>
+
+  <!-- SUBSTITUTION -->
+  <section>
+    <span class="tag">Method 2</span>
+    <h2>Substitution: swap one in for the other</h2>
+    <p class="lead">If one equation tells you what <b>y equals</b> (or what x equals), you can <b>replace</b> that letter in the other equation. Now there's only one letter left, and you can solve it.</p>
+    <div class="callout"><b>The recipe:</b> (1) get one letter alone in one equation &rarr; (2) substitute that expression into the <b>other</b> equation &rarr; (3) solve for the one letter left &rarr; (4) plug that number back in to get the other letter &rarr; (5) check in both.</div>
+
+    <h3>Twin A: one is already "y = &hellip;"</h3>
+    <p class="center"><span class="sys"><span class="k">y = 3x &minus; 5</span><br><span class="k2">y = x + 1</span></span></p>
+    <ol>
+      <li>Both say what y is, so they must equal each other: <span class="mono">3x &minus; 5 = x + 1</span>.</li>
+      <li>Subtract x from both sides: <span class="mono">2x &minus; 5 = 1</span>. Add 5: <span class="mono">2x = 6</span>. So <b>x = 3</b>.</li>
+      <li>Plug back in (either equation): <span class="mono">y = 3 + 1 = 4</span>.</li>
+      <li>Check the other one: <span class="mono">3(3) &minus; 5 = 4</span> &#10003;. Answer: <b>(3, 4)</b>.</li>
+    </ol>
+
+    <h3>Twin B: one equation is just "y = a number"</h3>
+    <p class="center"><span class="sys"><span class="k">y = 4</span><br><span class="k2">2x + 3y = 6</span></span></p>
+    <ol>
+      <li>Put 4 in for y in the second: <span class="mono">2x + 3(4) = 6</span> &rarr; <span class="mono">2x + 12 = 6</span>.</li>
+      <li><span class="mono">2x = &minus;6</span>, so <b>x = &minus;3</b>. Answer: <b>(&minus;3, 4)</b>.</li>
+    </ol>
+    <p class="muted">Use parentheses when you substitute: <span class="mono">3(4)</span>, not <span class="mono">34</span>. They matter even more when you're putting a whole expression in.</p>
+
+    <h3>Twin C: nothing is alone yet</h3>
+    <p class="center"><span class="sys"><span class="k">3x + 2y = 4</span><br><span class="k2">x &minus; y = 3</span></span></p>
+    <ol>
+      <li><b>Pick the easiest letter to get alone.</b> Look for one with no number in front (really a 1 or &minus;1). In <span class="mono">x &minus; y = 3</span>, x is easy: add y to both sides &rarr; <b>x = y + 3</b>.</li>
+      <li>Substitute into the <b>other</b> equation, in parentheses: <span class="mono">3(y + 3) + 2y = 4</span>.</li>
+      <li>Distribute: <span class="mono">3y + 9 + 2y = 4</span> &rarr; <span class="mono">5y + 9 = 4</span> &rarr; <span class="mono">5y = &minus;5</span> &rarr; <b>y = &minus;1</b>.</li>
+      <li>Back into <span class="mono">x = y + 3</span>: <span class="mono">x = &minus;1 + 3 = 2</span>.</li>
+      <li>Check in the first: <span class="mono">3(2) + 2(&minus;1) = 6 &minus; 2 = 4</span> &#10003;. Answer: <b>(2, &minus;1)</b>.</li>
+    </ol>
+    <div class="callout"><b>Most common slip:</b> substituting back into the <b>same</b> equation you just rearranged. That just gives you <span class="mono">3 = 3</span> and tells you nothing. Always substitute into the <b>other</b> one.</div>
+  </section>
+
+  <!-- ELIMINATION -->
+  <section>
+    <span class="tag">Method 3</span>
+    <h2>Elimination: add the equations to make a letter vanish</h2>
+    <p class="lead">Line the two equations up and <b>add them together</b>, left side plus left side, right side plus right side. If one letter has <b>opposite</b> numbers in front (like <span class="mono">+2x</span> and <span class="mono">&minus;2x</span>), it cancels to zero and disappears.</p>
+    <p class="muted">Why is adding allowed? Each equation says two things are equal. Adding equal things to equal things keeps them equal: it's the same as doing the same thing to both sides.</p>
+
+    <h3>Twin A: already opposite</h3>
+    <p class="center"><span class="sys"><span class="k">2x + 3y = 12</span><br><span class="k2">&minus;2x + y = &minus;4</span></span></p>
+    <ol>
+      <li><span class="mono">2x</span> and <span class="mono">&minus;2x</span> are opposites. Add straight down: <span class="mono">0x + 4y = 8</span>.</li>
+      <li><b>y = 2</b>. Plug into the first: <span class="mono">2x + 6 = 12</span> &rarr; <span class="mono">2x = 6</span> &rarr; <b>x = 3</b>.</li>
+      <li>Check in the second: <span class="mono">&minus;2(3) + 2 = &minus;4</span> &#10003;. Answer: <b>(3, 2)</b>.</li>
+    </ol>
+
+    <h3>Twin B: multiply ONE equation first</h3>
+    <p class="center"><span class="sys"><span class="k">3x &minus; 4y = 10</span><br><span class="k2">6x + 5y = 7</span></span></p>
+    <ol>
+      <li>Nothing cancels yet. But 3x and 6x are close: multiply the <b>whole</b> first equation by <b>&minus;2</b> and it becomes <span class="mono">&minus;6x + 8y = &minus;20</span>.</li>
+      <li>Add to the second: <span class="mono">(&minus;6x + 6x) + (8y + 5y) = &minus;20 + 7</span> &rarr; <span class="mono">13y = &minus;13</span> &rarr; <b>y = &minus;1</b>.</li>
+      <li>Into the original first: <span class="mono">3x + 4 = 10</span> &rarr; <span class="mono">3x = 6</span> &rarr; <b>x = 2</b>.</li>
+      <li>Check in the second: <span class="mono">12 &minus; 5 = 7</span> &#10003;. Answer: <b>(2, &minus;1)</b>.</li>
+    </ol>
+    <div class="callout"><b>Multiply EVERY term</b>, including the number on the right side. Forgetting the right side is the number-one elimination mistake.</div>
+
+    <h3>Twin C: multiply BOTH equations</h3>
+    <p class="center"><span class="sys"><span class="k">2x + 3y = 5</span><br><span class="k2">5x &minus; 2y = &minus;16</span></span></p>
+    <ol>
+      <li>No easy match. Look at the y's: <span class="mono">+3y</span> and <span class="mono">&minus;2y</span> already have opposite signs. Make both into <b>6</b>: multiply the first by 2 and the second by 3.</li>
+      <li><span class="mono">4x + 6y = 10</span> and <span class="mono">15x &minus; 6y = &minus;48</span>. Add: <span class="mono">19x = &minus;38</span> &rarr; <b>x = &minus;2</b>.</li>
+      <li>Into the first: <span class="mono">2(&minus;2) + 3y = 5</span> &rarr; <span class="mono">3y = 9</span> &rarr; <b>y = 3</b>. Answer: <b>(&minus;2, 3)</b>.</li>
+    </ol>
+
+    <h3>Twin D: the equations are written out of order</h3>
+    <p class="center"><span class="sys"><span class="k">&minus;6 + 3x = 2y</span><br><span class="k2">10 = x + 2y</span></span></p>
+    <ol>
+      <li><b>Tidy up first:</b> get every equation into <span class="mono">Ax + By = C</span> (letters on the left, x first, plain number on the right).
+        <br>First: subtract 2y and add 6 to both sides &rarr; <span class="mono">3x &minus; 2y = 6</span>.
+        <br>Second: just flip the sides &rarr; <span class="mono">x + 2y = 10</span>.</li>
+      <li>Now <span class="mono">&minus;2y</span> and <span class="mono">+2y</span> cancel. Add: <span class="mono">4x = 16</span> &rarr; <b>x = 4</b>.</li>
+      <li><span class="mono">4 + 2y = 10</span> &rarr; <b>y = 3</b>. Check in the original first: <span class="mono">&minus;6 + 12 = 6 = 2(3)</span> &#10003;. Answer: <b>(4, 3)</b>.</li>
+    </ol>
+
+    <h3>Twin E: fractions</h3>
+    <p class="center"><span class="sys"><span class="k">&frac12;x + &#8531;y = 4</span><br><span class="k2">x &minus; y = 3</span></span></p>
+    <ol>
+      <li><b>Clear the fractions first.</b> Multiply every term by a number both denominators go into (here 6): <span class="mono">3x + 2y = 24</span>. No more fractions.</li>
+      <li>Now solve as usual. Multiply the second by 2 &rarr; <span class="mono">2x &minus; 2y = 6</span>, then add: <span class="mono">5x = 30</span> &rarr; <b>x = 6</b>.</li>
+      <li><span class="mono">6 &minus; y = 3</span> &rarr; <b>y = 3</b>. Check: <span class="mono">&frac12;(6) + &#8531;(3) = 3 + 1 = 4</span> &#10003;. Answer: <b>(6, 3)</b>.</li>
+    </ol>
+  </section>
+
+  <!-- WHICH METHOD / WRITE YOUR OWN -->
+  <section>
+    <span class="tag">Putting it together</span>
+    <h2>Which method when?</h2>
+    <div class="tbl"><table>
+      <tr><th>If the system looks like&hellip;</th><th>Use</th></tr>
+      <tr><td>The question says "by graphing," or you just need a picture</td><td><b>Graphing</b> (exact only if the crossing is on grid lines)</td></tr>
+      <tr><td>One equation already says <span class="mono">y = &hellip;</span> or <span class="mono">x = &hellip;</span>, or a letter has no number in front</td><td><b>Substitution</b></td></tr>
+      <tr><td>Both are in <span class="mono">Ax + By = C</span> form, especially with matching or opposite numbers</td><td><b>Elimination</b></td></tr>
+    </table></div>
+    <p class="muted">Every method gives the <b>same answer</b>. Your worksheet tells you which one to use for each section, so show that method's steps.</p>
+
+    <h3>Making up a system with a given answer</h3>
+    <p>Twin: <i>write a system whose solution is (2, 5).</i> Pick any x and y combination and work out what it equals at that point:</p>
+    <ul>
+      <li><span class="mono">x + y</span> at (2, 5) is <span class="mono">2 + 5 = 7</span>, so one equation is <b>x + y = 7</b>.</li>
+      <li><span class="mono">2x &minus; y</span> at (2, 5) is <span class="mono">4 &minus; 5 = &minus;1</span>, so another is <b>2x &minus; y = &minus;1</b>.</li>
+    </ul>
+    <p class="muted">Both are true at (2, 5), so (2, 5) is where they cross. Just make sure the two equations aren't multiples of each other, or you'd get the same line twice.</p>
+  </section>
+
+  <!-- SELF-CHECK -->
+  <section>
+    <span class="tag">Check yourself</span>
+    <h2>Eight practice systems</h2>
+    <p>Different numbers from your worksheet. Solve each on paper, then reveal. Use any method unless one is named.</p>
+    <div id="quiz"></div>
+  </section>
+
+  <div class="footer">Made for you &middot; Algebra 2 workshop &middot; ad-free</div>
+</div>
+
+<script>
+"use strict";
+(function(){
+  var C1="#e8623d", C2="#2f5aa8", TEAL="#178a68", AX="#b6ab8e", GRID="#eee3ca", INK="#233047", SOFT="#8a94a6";
+  var cv=document.getElementById("cv"), ctx=cv.getContext("2d");
+  var XMIN=-10, XMAX=10, YMIN=-10, YMAX=10, W=560, H=560;
+  var m1=2,b1=-1,m2=-1,b2=5;
+
+  function fit(){
+    var dpr=window.devicePixelRatio||1, cssw=cv.clientWidth||560;
+    cv.width=cssw*dpr; cv.height=cssw*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); W=cssw; H=cssw;
+  }
+  function toX(x){return (x-XMIN)/(XMAX-XMIN)*W;}
+  function toY(y){return H-(y-YMIN)/(YMAX-YMIN)*H;}
+
+  function drawGrid(){
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle=GRID; ctx.lineWidth=1; var i;
+    for(i=XMIN;i<=XMAX;i++){ctx.beginPath();ctx.moveTo(toX(i),0);ctx.lineTo(toX(i),H);ctx.stroke();}
+    for(i=YMIN;i<=YMAX;i++){ctx.beginPath();ctx.moveTo(0,toY(i));ctx.lineTo(W,toY(i));ctx.stroke();}
+    ctx.strokeStyle=AX; ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(0,toY(0));ctx.lineTo(W,toY(0));ctx.stroke();
+    ctx.beginPath();ctx.moveTo(toX(0),0);ctx.lineTo(toX(0),H);ctx.stroke();
+    ctx.fillStyle=SOFT; ctx.font="11px Nunito"; ctx.textAlign="center";
+    for(i=XMIN;i<=XMAX;i+=2){ if(i!==0) ctx.fillText(i, toX(i), toY(0)+14); }
+    ctx.textAlign="right";
+    for(i=YMIN;i<=YMAX;i+=2){ if(i!==0) ctx.fillText(i, toX(0)-6, toY(i)+4); }
+    ctx.textAlign="start"; ctx.fillStyle=INK; ctx.font="italic 13px Fraunces,serif";
+    ctx.fillText("x",W-14,toY(0)-8); ctx.fillText("y",toX(0)+8,14);
+  }
+  function line(m,b,color,width,dash){
+    ctx.strokeStyle=color; ctx.lineWidth=width; ctx.setLineDash(dash||[]);
+    ctx.beginPath(); ctx.moveTo(toX(XMIN),toY(m*XMIN+b)); ctx.lineTo(toX(XMAX),toY(m*XMAX+b)); ctx.stroke(); ctx.setLineDash([]);
+  }
+  function fmt(n){ n=Math.round(n*100)/100; return (n<0?"−":"")+Math.abs(n); }
+  function eqStr(m,b,n){
+    var ms = m===0?"":(m===1?"x":(m===-1?"−x":fmt(m)+"x"));
+    var bs = b===0?(m===0?"0":""):(m===0?fmt(b):(b>0?" + "+b:" − "+(-b)));
+    return "Line "+n+":  y = "+ms+bs;
+  }
+  function nice(n){ return Math.abs(n-Math.round(n))<1e-9; }
+
+  function render(){
+    drawGrid();
+    var same = (m1===m2 && b1===b2), parallel=(m1===m2 && b1!==b2);
+    if(same){ line(m1,b1,C1,7); line(m2,b2,C2,2.5,[8,6]); }
+    else { line(m1,b1,C1,3.5); line(m2,b2,C2,3.5); }
+    var v=document.getElementById("verdict"), c=document.getElementById("check");
+    document.getElementById("eq1").textContent=eqStr(m1,b1,1);
+    document.getElementById("eq2").textContent=eqStr(m2,b2,2);
+    if(same){
+      v.className="verdict v-inf"; v.innerHTML="<b>Infinitely many solutions.</b> Same slope <i>and</i> same intercept: it's one line drawn twice, so every point on it works.";
+      c.innerHTML="Algebra would end in something always true, like <b>0 = 0</b>.";
+    } else if(parallel){
+      v.className="verdict v-none"; v.innerHTML="<b>No solution.</b> Same slope ("+fmt(m1)+"), different intercepts: the lines are parallel and never meet.";
+      c.innerHTML="Algebra would end in something false, like <b>0 = "+fmt(b2-b1)+"</b>.";
+    } else {
+      var x=(b2-b1)/(m1-m2), y=m1*x+b1;
+      if(Math.abs(x)<=10 && Math.abs(y)<=10){
+        ctx.fillStyle=TEAL; ctx.beginPath(); ctx.arc(toX(x),toY(y),7,0,7); ctx.fill();
+        ctx.strokeStyle="#fff"; ctx.lineWidth=2.5; ctx.stroke();
+      }
+      var exact = nice(x)&&nice(y);
+      v.className="verdict v-one"; v.innerHTML="<b>One solution: ("+fmt(x)+", "+fmt(y)+")</b>"+(exact?"":"<br><span style='font-weight:600'>Not a whole number, so you couldn't read this off a graph exactly. Use substitution or elimination.</span>")+(Math.abs(x)>10||Math.abs(y)>10?"<br>(The crossing is off this screen.)":"");
+      c.innerHTML="Check in line 1: "+fmt(m1)+"("+fmt(x)+") + ("+fmt(b1)+") = "+fmt(m1*x+b1)+"<br>Check in line 2: "+fmt(m2)+"("+fmt(x)+") + ("+fmt(b2)+") = "+fmt(m2*x+b2)+" &#10003; same y";
+    }
+  }
+
+  var ids=[["m1","vm1",function(v){m1=v;}],["b1","vb1",function(v){b1=v;}],["m2","vm2",function(v){m2=v;}],["b2","vb2",function(v){b2=v;}]];
+  ids.forEach(function(t){
+    var s=document.getElementById(t[0]), o=document.getElementById(t[1]);
+    s.addEventListener("input",function(){t[2](parseFloat(s.value)); o.textContent=s.value; render();});
+  });
+  function setAll(a,b,c,d){
+    var vals=[a,b,c,d];
+    ids.forEach(function(t,i){ document.getElementById(t[0]).value=vals[i]; document.getElementById(t[1]).textContent=vals[i]; t[2](vals[i]); });
+    render();
+  }
+  var P=[["One solution",2,-1,-1,5],["No solution",0.5,3,0.5,-2],["Infinitely many",-1,4,-1,4],["Messy crossing",1,1,-2,6]];
+  var pr=document.getElementById("presets");
+  P.forEach(function(p,i){
+    var b=document.createElement("button"); b.className="chip"+(i===0?" on":""); b.textContent=p[0];
+    b.onclick=function(){ Array.prototype.forEach.call(pr.children,function(c){c.classList.remove("on");}); b.classList.add("on"); setAll(p[1],p[2],p[3],p[4]); };
+    pr.appendChild(b);
+  });
+  window.addEventListener("resize",function(){fit();render();});
+  fit(); render();
+
+  /* ---------- self-check ---------- */
+  var Q=[
+    ["Substitution","y = 2x + 1<br>y = &minus;x + 7","Set them equal: 2x + 1 = &minus;x + 7 &rarr; 3x = 6 &rarr; x = 2; y = 2(2) + 1 = 5. <b>(2, 5)</b>"],
+    ["Substitution","x + 3y = 7<br>x = 1","Put 1 in for x: 1 + 3y = 7 &rarr; 3y = 6 &rarr; y = 2. <b>(1, 2)</b>"],
+    ["Elimination","5x + 2y = 1<br>&minus;5x + 3y = 14","The x's are opposites. Add: 5y = 15 &rarr; y = 3; 5x + 6 = 1 &rarr; 5x = &minus;5 &rarr; x = &minus;1. <b>(&minus;1, 3)</b>"],
+    ["Elimination","2x + 5y = 1<br>3x &minus; 2y = 11","Multiply the first by 2 and the second by 5: 4x + 10y = 2 and 15x &minus; 10y = 55. Add: 19x = 57 &rarr; x = 3; 6 + 5y = 1 &rarr; y = &minus;1. <b>(3, &minus;1)</b>"],
+    ["Any method","8 = 2x &minus; y<br>x + y = 7","Tidy the first: 2x &minus; y = 8. Add to the second: 3x = 15 &rarr; x = 5; 5 + y = 7 &rarr; y = 2. <b>(5, 2)</b>"],
+    ["Any method","&frac14;x + &frac12;y = 2<br>x &minus; y = 2","Multiply the first by 4: x + 2y = 8. Subtract the second: 3y = 6 &rarr; y = 2; x &minus; 2 = 2 &rarr; x = 4. <b>(4, 2)</b>"],
+    ["Any method","y = 3x &minus; 2<br>6x &minus; 2y = 4","Substitute: 6x &minus; 2(3x &minus; 2) = 4 &rarr; 6x &minus; 6x + 4 = 4 &rarr; <b>4 = 4</b>, always true. Same line: <b>infinitely many solutions</b>."],
+    ["Any method","2x &minus; y = 5<br>4x &minus; 2y = 3","Multiply the first by &minus;2: &minus;4x + 2y = &minus;10. Add: <b>0 = &minus;7</b>, which is false. Parallel lines: <b>no solution</b>."]
+  ];
+  var qz=document.getElementById("quiz");
+  Q.forEach(function(q,i){
+    var d=document.createElement("div"); d.className="q";
+    d.innerHTML='<div><span class="qn">'+(i+1)+'</span><span class="muted" style="font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em">'+q[0]+'</span></div><div class="qs">'+q[1]+'</div><details><summary>Show answer</summary><div class="ans">'+q[2]+'</div></details>';
+    qz.appendChild(d);
+  });
+})();
+</script>
+
+<script>
+/* Guarded hub back-link. Shows a "Back to Study Hub" bar ONLY when the lesson
+   was opened from the hub, which passes ?back=<classId>. Standalone -> nothing
+   renders, so the lesson stays fully portable. */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    a.addEventListener('mouseover',function(){a.style.color='#e8623d';});
+    a.addEventListener('mouseout',function(){a.style.color='#5a6b83';});
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

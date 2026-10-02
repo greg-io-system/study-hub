@@ -56,7 +56,9 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-10-05",
       subject: "algebra-2", subjectName: "Algebra 2",
-      what: "Unit 2 (Systems & Piece-wise) has started: System of Two Equations worksheet due."
+      what: "Unit 2 (Systems & Piece-wise) has started: System of Two Equations worksheet due.",
+      help: "Systems of Two Equations lesson",
+      helpFile: "lessons/systems-of-equations.html"
     },
     {
       day: "Tue", date: "2026-10-06",

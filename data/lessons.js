@@ -40,6 +40,23 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       weeks: [
         {
+          range: "Sep 28 – Oct 2",
+          theme: "Unit 2 · Systems & Piece-wise Functions",
+          lessons: [
+            {
+              title: "Systems of Two Equations",
+              topic: "Where two lines cross — one, none, or infinitely many solutions — and how to solve by graphing, substitution and elimination",
+              file: "lessons/systems-of-equations.html",
+              date: "2026-10-02",
+              summary: "Drag two lines and watch the solution move: one crossing, parallel (no solution), or the same line (infinitely many). Then a worked twin for every kind of problem on the System of Two Equations worksheet: graphing (including standard form and vertical lines), substitution, elimination (multiply one, multiply both, out-of-order equations, fractions), and writing your own system. Ends with 8 practice systems. Worksheet due Mon Oct 5.",
+              tags: ["systems", "interactive", "worked examples", "practice"],
+              materials: [
+                { kind: "lesson", label: "Interactive lesson", file: "lessons/systems-of-equations.html" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 21 – Sep 25",
           theme: "Unit 1 Test review",
           lessons: [
