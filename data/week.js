@@ -36,7 +36,9 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-10-02",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Mrs. Kalec posted the Unit 3 Exam Review checklist. The skeletal exam is Wed Oct 21."
+      what: "Mrs. Kalec posted the Unit 3 Exam Review checklist. The skeletal exam is Wed Oct 21.",
+      help: "Unit 3 exam prep + flashcards",
+      helpFile: "lessons/hap-unit-3-skeletal-study-quiz.html"
     },
     {
       day: "Fri", date: "2026-10-02",
