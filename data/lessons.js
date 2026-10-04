@@ -122,6 +122,19 @@ window.STUDY_HUB = {
           theme: "Ch. 6 · Ancient Greece",
           lessons: [
             {
+              title: "Unit 2 Reading — OpenStax 8.2 (Americas) + 9.2 (Africa)",
+              topic: "The two sections Mr. Angelopulos said will be on the Unit 2 test",
+              file: "lessons/unit-2-reading-americas-africa-study-quiz.html",
+              date: "2026-10-04",
+              summary: "Study guide for the assigned reading: the Olmec 'mother culture', Teotihuacán and the Maya city-states, Chavín and the Andes, the mound builders, then farming, iron and the Bantu migrations in Africa, with an easy-mix-ups list. Then 18 OpenStax review questions with click-to-reveal answers.",
+              tags: ["study guide", "practice quiz", "unit 2 test"],
+              materials: [
+                { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/unit-2-reading-americas-africa-study-quiz.html" },
+                { kind: "link", label: "Textbook: 8.2 Early Cultures in the Americas", url: "https://openstax.org/books/world-history-volume-1/pages/8-2-early-cultures-and-civilizations-in-the-americas" },
+                { kind: "link", label: "Textbook: 9.2 Farming and the Bantu Migrations", url: "https://openstax.org/books/world-history-volume-1/pages/9-2-the-emergence-of-farming-and-the-bantu-migrations" }
+              ]
+            },
+            {
               title: "Ancient Greece — Choose Your Own Adventure Starter",
               topic: "A head start on all 11 topics: what each is, questions to chase, words to search",
               file: "lessons/ancient-greece-starter.html",
