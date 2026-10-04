@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Name That Bone &middot; Skeletal Practical Drill &middot; Human Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#b5445a;--accent-soft:#f6e1e5;--accent-line:#e8bcc5;--bone:#efe6cf;--boneline:#a8987a;--ok:#2e8b57;--okbg:#e3f3ea}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:29px;margin:.2em 0 .1em;line-height:1.2}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.6em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+.big{background:var(--accent-soft);border:1.5px solid var(--accent-line);border-radius:14px;padding:13px 17px;margin:14px 0}
+.note{color:var(--soft);font-size:14px}
+.modes{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.mode{font:800 14px Nunito,sans-serif;border:1.5px solid var(--accent-line);background:#fff;color:var(--accent);border-radius:999px;padding:7px 15px;cursor:pointer}
+.mode.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.panel{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:12px 16px;margin:10px 0;min-height:74px}
+.panel h3{margin:0 0 2px;font-family:Fraunces,Georgia,serif;font-size:20px;color:var(--accent)}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
+.pill{font-size:12.5px;font-weight:800;background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 8px}
+.prompt{font-size:18px;font-weight:800}
+.prompt span{color:var(--accent)}
+.score{float:right;font-weight:800;color:var(--soft);font-size:14px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.opt{font:800 15px Nunito,sans-serif;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:9px;cursor:pointer;color:var(--ink)}
+.opt.right{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.opt.wrong{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.fb{margin-top:8px;font-weight:800}
+.fb.good{color:var(--ok)}.fb.bad{color:var(--accent)}
+button.next{font:800 14px Nunito,sans-serif;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:7px 15px;cursor:pointer;margin-top:8px}
+.figs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.figs{grid-template-columns:1fr 1fr;gap:6px}}
+.fig{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:8px 6px 4px}
+.fig .cap{text-align:center;font-weight:800;font-size:13px;color:var(--soft)}
+svg{display:block;width:100%;height:auto;touch-action:manipulation}
+.b{cursor:pointer;transition:fill .12s, stroke .12s}
+.f{fill:var(--bone);stroke:var(--boneline);stroke-width:1.4}
+.l{fill:none;stroke:var(--bone);stroke-linecap:round}
+.lo{fill:none;stroke:var(--boneline);stroke-linecap:round}
+.f.hl{fill:var(--accent);stroke:#7a2a3a}
+.l.hl{stroke:var(--accent)}
+.f.good{fill:var(--ok);stroke:#1d5e3a}.l.good{stroke:var(--ok)}
+.f.bad{fill:#e0a324}.l.bad{stroke:#e0a324}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:.4em 0}
+th,td{border:1.5px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+ul{padding-left:22px}li{margin:.25em 0}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Human Anatomy &middot; Unit 3 &middot; Skeletal exam Wed Oct 21</div>
+  <h1>Name That Bone: Practical Drill</h1>
+  <p class="tagline">The skeletal exam has a <b>practical</b>, which means pointing at bones and naming them. This drill uses the same bones as Mrs. Kalec's Bone Diagram (front and back views). Pairs with the <b>Unit 3 Exam Prep</b> page, which covers everything else.</p>
+
+  <div class="big"><b>How to use it:</b> start in <b>Explore</b> and tap around. Then do <b>Find it</b> until you can find all of them without thinking, then <b>Name it</b>. Bones you miss come back more often.</div>
+
+  <div class="modes" role="group" aria-label="Mode">
+    <button class="mode on" data-m="explore">Explore</button>
+    <button class="mode" data-m="find">Find it</button>
+    <button class="mode" data-m="name">Name it</button>
+  </div>
+  <div class="panel" id="panel"></div>
+
+  <div class="figs">
+    <div class="fig"><div class="cap">Front (anterior)</div><svg id="front" viewBox="0 0 300 668" aria-label="Skeleton, front view"></svg></div>
+    <div class="fig"><div class="cap">Back (posterior)</div><svg id="back" viewBox="0 0 300 668" aria-label="Skeleton, back view"></svg></div>
+  </div>
+  <p class="note">A simplified drawing, not to scale. It's shown in <b>anatomical position</b>: standing, palms facing forward. In the front view, the skeleton's right side is on <b>your left</b>.</p>
+
+  <h2>Tips that trip people up</h2>
+  <ul>
+    <li><b>Radius vs. ulna:</b> the <b>radius</b> is on the <b>thumb</b> side. ("Radius rides with the thumb.") The <b>ulna</b> is on the pinky side and forms the point of your elbow.</li>
+    <li><b>Tibia vs. fibula:</b> the <b>tibia</b> is the big shin bone on the inside (it carries your weight). The <b>fibula</b> is the thin one on the outside. ("The fibula is a fib: it's the little one.")</li>
+    <li><b>Carpals / metacarpals / phalanges</b> (wrist, palm, fingers) mirror <b>tarsals / metatarsals / phalanges</b> (ankle, foot, toes). "Meta" = the middle one. <b>Phalanges</b> is the answer for both fingers and toes.</li>
+    <li><b>Sacrum vs. coccyx:</b> the sacrum is the big triangle between the hip bones. The coccyx is the tiny tailbone below it.</li>
+    <li><b>Spelling counts on a practical:</b> it's <b>humerus</b> (not "humorous"), <b>phalanges</b>, <b>coccyx</b>, <b>clavicle</b>.</li>
+  </ul>
+
+  <h2>All the bones, by region</h2>
+  <table id="tbl"><tr><th>Bone</th><th>Everyday name</th><th>Skeleton</th><th>Bone type</th></tr></table>
+  <p class="note">Bone types use the class's four categories (long, short, flat, irregular). The patella doesn't fit neatly into those four: it's a <b>sesamoid</b> bone that sits inside a tendon.</p>
+
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+(function(){
+  var BONES={
+    skull:{n:'Skull (cranium)',c:'head',r:'Axial',t:'Flat',f:'Protects the brain. Its bones are locked together by fibrous joints (sutures) that don\'t move.'},
+    mandible:{n:'Mandible',c:'lower jaw',r:'Axial',t:'Irregular',f:'The only skull bone that moves: it\'s how you chew and talk.'},
+    clavicle:{n:'Clavicle',c:'collarbone',r:'Appendicular (shoulder girdle)',t:'Long',f:'A strut connecting the sternum to the shoulder. One of the most commonly broken bones.'},
+    scapula:{n:'Scapula',c:'shoulder blade',r:'Appendicular (shoulder girdle)',t:'Flat',f:'A flat triangle on the upper back. The humerus fits into its socket at the shoulder.'},
+    sternum:{n:'Sternum',c:'breastbone',r:'Axial',t:'Flat',f:'The ribs attach to it by cartilage. It contains red marrow, which makes blood cells.'},
+    rib:{n:'Rib',c:'ribs (12 pairs)',r:'Axial',t:'Flat',f:'The rib cage protects the heart and lungs.'},
+    vertebra:{n:'Vertebra (vertebrae)',c:'backbone',r:'Axial',t:'Irregular',f:'Stacked to form the spine around the spinal cord: cervical (7), thoracic (12), lumbar (5). Cartilage discs between them absorb shock.'},
+    sacrum:{n:'Sacrum',c:'base of the spine',r:'Axial',t:'Irregular',f:'Fused vertebrae forming the back of the pelvis, between the two hip bones.'},
+    coccyx:{n:'Coccyx',c:'tailbone',r:'Axial',t:'Irregular',f:'A few tiny fused vertebrae at the very bottom of the spine.'},
+    hip:{n:'Hip bone (coxal bone)',c:'hip / pelvis',r:'Appendicular (pelvic girdle)',t:'Irregular',f:'Two hip bones plus the sacrum form the pelvis, which protects lower abdominal and reproductive organs.'},
+    humerus:{n:'Humerus',c:'upper arm bone',r:'Appendicular',t:'Long',f:'Ball-and-socket joint at the shoulder, hinge joint at the elbow.'},
+    radius:{n:'Radius',c:'forearm, thumb side',r:'Appendicular',t:'Long',f:'Rotates around the ulna (a pivot joint), which is how you turn your palm up and down.'},
+    ulna:{n:'Ulna',c:'forearm, pinky side',r:'Appendicular',t:'Long',f:'Forms the point of the elbow and the elbow\'s hinge joint with the humerus.'},
+    carpals:{n:'Carpals',c:'wrist bones (8)',r:'Appendicular',t:'Short',f:'Small blocky bones that slide past each other (gliding joints).'},
+    metacarpals:{n:'Metacarpals',c:'palm bones (5)',r:'Appendicular',t:'Long',f:'Between the wrist and fingers. The thumb\'s joint here is the saddle joint.'},
+    phalanges:{n:'Phalanges',c:'finger and toe bones',r:'Appendicular',t:'Long',f:'Same name for fingers AND toes. Hinge joints let them bend.'},
+    femur:{n:'Femur',c:'thigh bone',r:'Appendicular',t:'Long',f:'The longest, strongest bone in the body. Ball-and-socket joint at the hip.'},
+    patella:{n:'Patella',c:'kneecap',r:'Appendicular',t:'Sesamoid (see note)',f:'Sits inside the tendon in front of the knee and protects the joint.'},
+    tibia:{n:'Tibia',c:'shin bone',r:'Appendicular',t:'Long',f:'The big, weight-bearing bone on the inner side of the lower leg.'},
+    fibula:{n:'Fibula',c:'thin outer leg bone',r:'Appendicular',t:'Long',f:'Thin bone on the outer side of the lower leg. Mostly for muscle attachment, not weight.'},
+    tarsals:{n:'Tarsals',c:'ankle bones (7)',r:'Appendicular',t:'Short',f:'Includes the heel bone. They glide against each other.'},
+    metatarsals:{n:'Metatarsals',c:'foot bones (5)',r:'Appendicular',t:'Long',f:'The long bones of the foot, between the ankle and toes.'}
+  };
+  var ORDER=['skull','mandible','vertebra','sternum','rib','sacrum','coccyx','clavicle','scapula','humerus','radius','ulna','carpals','metacarpals','phalanges','hip','femur','patella','tibia','fibula','tarsals','metatarsals'];
+
+  /* ---- drawing specs: [bone, kind, data, width] ; kind: L=line, E=ellipse, P=path, C=circle. M = mirror too ---- */
+  function S(b,k,d,w,m){return {b:b,k:k,d:d,w:w||0,m:!!m};}
+  var FRONT=[], BACK=[], i, y;
+  // ---- FRONT ----
+  FRONT.push(S('skull','E',[150,48,33,38]));
+  FRONT.push(S('mandible','P','M121 70 Q122 106 150 110 Q178 106 179 70 L169 76 Q166 98 150 100 Q134 98 131 76 Z'));
+  [113,122,131].forEach(function(y){FRONT.push(S('vertebra','P','M144 '+y+' h12 v7 h-12 Z'));});
+  for(i=0;i<7;i++){ y=150+i*11; FRONT.push(S('rib','Q','M146 '+y+' C 112 '+(y-8)+', 94 '+(y+4)+', '+(102+i*2)+' '+(y+24),4,1)); }
+  FRONT.push(S('sternum','P','M143 140 L157 140 L156 204 L150 214 L144 204 Z'));
+  [228,239,250,261,272].forEach(function(y){FRONT.push(S('vertebra','P','M142 '+y+' h16 v9 h-16 Z'));});
+  FRONT.push(S('clavicle','L',[146,141,98,135],7,1));
+  FRONT.push(S('hip','P','M146 292 C 120 278, 96 284, 99 302 C 103 324, 118 340, 140 344 L 146 332 Z',0,1));
+  FRONT.push(S('humerus','L',[97,146,85,262],11,1));
+  FRONT.push(S('radius','L',[77,274,63,380],6,1));
+  FRONT.push(S('ulna','L',[89,272,80,382],6,1));
+  [[66,390],[74,388],[82,392],[70,398],[79,399]].forEach(function(p){FRONT.push(S('carpals','C',[p[0],p[1],4],0,1));});
+  [[66,405,62,430],[72,406,70,434],[78,406,78,435],[84,404,86,431],[60,401,52,420]].forEach(function(p){FRONT.push(S('metacarpals','L',p,3.5,1));});
+  [[62,434,60,460],[70,438,69,468],[78,439,79,470],[86,435,89,461],[51,424,46,441]].forEach(function(p){FRONT.push(S('phalanges','L',p,3,1));});
+  FRONT.push(S('femur','L',[129,340,124,468],13,1));
+  FRONT.push(S('patella','E',[124,481,8,9],0,1));
+  FRONT.push(S('tibia','L',[129,494,131,598],10,1));
+  FRONT.push(S('fibula','L',[112,496,114,596],5,1));
+  [[118,608],[126,606],[134,609],[121,616],[131,617]].forEach(function(p){FRONT.push(S('tarsals','C',[p[0],p[1],5],0,1));});
+  [[114,623,108,643],[121,624,118,647],[128,624,128,648],[135,623,138,646]].forEach(function(p){FRONT.push(S('metatarsals','L',p,3.5,1));});
+  [[107,647,104,658],[117,651,116,662],[128,652,128,663],[139,650,141,660]].forEach(function(p){FRONT.push(S('phalanges','L',p,3,1));});
+  // ---- BACK ----
+  BACK.push(S('skull','E',[150,52,34,40]));
+  for(i=0;i<8;i++){ y=146+i*11; BACK.push(S('rib','Q','M146 '+y+' C 114 '+(y-4)+', 96 '+(y+8)+', '+(104+i)+' '+(y+24),3,1)); }
+  for(y=96;y<=286;y+=10){ BACK.push(S('vertebra','P','M144 '+y+' h12 v8 h-12 Z')); }
+  BACK.push(S('scapula','P','M137 132 L99 126 L113 200 Z',0,1));
+  BACK.push(S('hip','P','M144 298 C 118 284, 95 290, 98 308 C 102 330, 118 346, 138 350 L 140 334 Z',0,1));
+  BACK.push(S('sacrum','P','M137 298 L163 298 L157 338 L143 338 Z'));
+  BACK.push(S('coccyx','P','M145 342 L155 342 L150 358 Z'));
+  BACK.push(S('humerus','L',[99,140,86,258],11,1));
+  BACK.push(S('ulna','L',[78,270,65,378],6,1));
+  BACK.push(S('radius','L',[90,272,82,380],6,1));
+  BACK.push(S('femur','L',[129,352,124,470],13,1));
+  BACK.push(S('fibula','L',[112,494,114,596],5,1));
+  BACK.push(S('tibia','L',[129,494,131,598],10,1));
+
+  var NS='http://www.w3.org/2000/svg';
+  function mk(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e;}
+  function mx(x){return 300-x;}
+  function mirrorPath(d){ // mirror x coordinates in an absolute-command path (M,L,C,Q) ; h,v relative only in vertebra (not mirrored)
+    return d.replace(/([MLCQ])\s*([^MLCQZhvz]+)/g,function(_,c,nums){
+      var a=nums.trim().split(/[\s,]+/).map(Number), out=[];
+      for(var j=0;j<a.length;j+=2) out.push(mx(a[j])+' '+a[j+1]);
+      return c+' '+out.join(', ')+' ';
+    });
+  }
+  function draw(svg,spec){
+    spec.forEach(function(s){
+      [false,true].forEach(function(flip){
+        if(flip && !s.m) return;
+        var el, d=s.d;
+        if(s.k==='E') el=mk('ellipse',{cx:flip?mx(d[0]):d[0],cy:d[1],rx:d[2],ry:d[3],'class':'b f'});
+        else if(s.k==='C') el=mk('circle',{cx:flip?mx(d[0]):d[0],cy:d[1],r:d[2],'class':'b f'});
+        else if(s.k==='P') el=mk('path',{d:flip?mirrorPath(d):d,'class':'b f'});
+        else if(s.k==='Q'){ var pd=flip?mirrorPath(d):d;
+          svg.appendChild(mk('path',{d:pd,'class':'lo','stroke-width':s.w+2.4}));
+          el=mk('path',{d:pd,'class':'b l','stroke-width':s.w}); }
+        else { var x1=flip?mx(d[0]):d[0], x2=flip?mx(d[2]):d[2];
+          svg.appendChild(mk('line',{x1:x1,y1:d[1],x2:x2,y2:d[3],'class':'lo','stroke-width':s.w+2.4}));
+          el=mk('line',{x1:x1,y1:d[1],x2:x2,y2:d[3],'class':'b l','stroke-width':s.w}); }
+        el.setAttribute('data-b',s.b);
+        var t=mk('title',{}); t.textContent='bone'; el.appendChild(t);
+        svg.appendChild(el);
+      });
+    });
+  }
+  var front=document.getElementById('front'), back=document.getElementById('back');
+  draw(front,FRONT); draw(back,BACK);
+  var ALL=[].slice.call(document.querySelectorAll('.b'));
+  function inView(b){ return {front:!!front.querySelector('[data-b="'+b+'"]'), back:!!back.querySelector('[data-b="'+b+'"]')}; }
+  function clear(){ ALL.forEach(function(e){e.classList.remove('hl','good','bad');}); }
+  function mark(b,cls){ ALL.forEach(function(e){ if(e.getAttribute('data-b')===b) e.classList.add(cls); }); }
+
+  /* table */
+  var tbl=document.getElementById('tbl');
+  ['Axial','Appendicular'].forEach(function(reg){
+    ORDER.filter(function(b){return BONES[b].r.indexOf(reg)===0;}).forEach(function(b){
+      var B=BONES[b], tr=document.createElement('tr');
+      tr.innerHTML='<td><b>'+B.n+'</b></td><td>'+B.c+'</td><td>'+B.r+'</td><td>'+B.t+'</td>'; tbl.appendChild(tr);
+    });
+  });
+
+  /* modes */
+  var panel=document.getElementById('panel'), mode='explore', target=null, score=0, tries=0, weight={}, answered=false;
+  ORDER.forEach(function(b){weight[b]=1;});
+  function pick(){ // weighted random, avoid repeat
+    var pool=[]; ORDER.forEach(function(b){ if(b!==target) for(var k=0;k<weight[b];k++) pool.push(b); });
+    return pool[Math.floor(Math.random()*pool.length)];
+  }
+  function sc(){ return '<span class="score">'+score+' / '+tries+'</span>'; }
+  function explorePanel(b){
+    if(!b){ panel.innerHTML='<b>Tap any bone</b> on either view to see its name, everyday name, and one fact.'; return; }
+    var B=BONES[b], v=inView(b);
+    panel.innerHTML='<h3>'+B.n+'</h3><div class="facts"><span class="pill">'+B.c+'</span><span class="pill">'+B.r+'</span><span class="pill">'+B.t+'</span>'+(!v.front?'<span class="pill">back view</span>':'')+'</div>'+B.f;
+  }
+  function newFind(){ answered=false; clear(); target=pick();
+    var v=inView(target);
+    panel.innerHTML=sc()+'<div class="prompt">Tap the <span>'+BONES[target].n.replace(/ \(.*\)/,'')+'</span></div><div class="note">'+(v.front&&v.back?'Either view works.':(v.front?'It\'s on the front view.':'It\'s on the back view.'))+'</div><div class="fb" id="fb"></div>';
+  }
+  function newName(){ answered=false; clear(); target=pick(); mark(target,'hl');
+    var opts=[target]; while(opts.length<4){ var o=ORDER[Math.floor(Math.random()*ORDER.length)]; if(opts.indexOf(o)<0) opts.push(o); }
+    opts.sort(function(){return Math.random()-.5;});
+    panel.innerHTML=sc()+'<div class="prompt">Name the <span>highlighted</span> bone</div><div class="opts">'+opts.map(function(o){return '<button class="opt" data-o="'+o+'">'+BONES[o].n.replace(/ \(.*\)/,'')+'</button>';}).join('')+'</div><div class="fb" id="fb"></div>';
+    [].slice.call(panel.querySelectorAll('.opt')).forEach(function(btn){ btn.onclick=function(){
+      if(answered) return; answered=true; tries++; var o=btn.getAttribute('data-o');
+      var ok=o===target; if(ok){score++; weight[target]=Math.max(1,weight[target]-1);} else weight[target]+=2;
+      btn.classList.add(ok?'right':'wrong');
+      [].slice.call(panel.querySelectorAll('.opt')).forEach(function(x){ if(x.getAttribute('data-o')===target) x.classList.add('right'); });
+      clear(); mark(target, ok?'good':'bad');
+      finish(ok);
+    };});
+  }
+  function finish(ok){
+    var fb=document.getElementById('fb'), B=BONES[target];
+    fb.className='fb '+(ok?'good':'bad');
+    fb.innerHTML=(ok?'Yes! ':'Not quite. That\'s the ')+B.n+' ('+B.c+'). <span style="font-weight:600;color:#5a6b83">'+B.f+'</span>';
+    var s=panel.querySelector('.score'); if(s) s.textContent=score+' / '+tries;
+    var n=document.createElement('button'); n.className='next'; n.textContent='Next →'; n.onclick=function(){ mode==='find'?newFind():newName(); }; panel.appendChild(n);
+  }
+  ALL.forEach(function(e){ e.addEventListener('click',function(){
+    var b=e.getAttribute('data-b');
+    if(mode==='explore'){ clear(); mark(b,'hl'); explorePanel(b); return; }
+    if(mode==='find' && !answered){
+      answered=true; tries++; var ok=b===target;
+      if(ok){score++; weight[target]=Math.max(1,weight[target]-1);} else weight[target]+=2;
+      clear(); if(!ok) mark(b,'bad'); mark(target,'good'); finish(ok);
+    }
+  });});
+  [].slice.call(document.querySelectorAll('.mode')).forEach(function(btn){ btn.onclick=function(){
+    [].slice.call(document.querySelectorAll('.mode')).forEach(function(x){x.classList.toggle('on',x===btn);});
+    mode=btn.getAttribute('data-m'); clear(); target=null;
+    if(mode==='explore') explorePanel(null); else if(mode==='find') newFind(); else newName();
+  };});
+  explorePanel(null);
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>

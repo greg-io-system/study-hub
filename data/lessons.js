@@ -235,6 +235,7 @@ window.STUDY_HUB = {
               materials: [
                 { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/hap-unit-3-skeletal-study-quiz.html" },
                 { kind: "practice", label: "Flashcards", file: "lessons/hap-unit-3-flashcards.html" },
+                { kind: "practice", label: "Name That Bone (practical drill)", file: "lessons/hap-name-that-bone.html" },
                 { kind: "link", label: "Mrs. Kalec's exam review", url: "https://docs.google.com/document/d/1hF61o4r7E6ihwxqsB-x_1Y-gbPT4mXQNNwjJvQHYFSw/" },
                 { kind: "link", label: "Class: Skeletal System notes (slides)", url: "https://docs.google.com/presentation/d/1In1l4_vVA-QaCy_sOHq5Ky8JHbZdVQjGhsc9uJXWyeo/" }
               ]
