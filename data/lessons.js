@@ -468,6 +468,20 @@ window.STUDY_HUB = {
       blurb: "Why people think and act the way they do — the approaches, the research methods, and the big ideas behind them.",
       weeks: [
         {
+          range: "Oct 5 – Oct 9",
+          theme: "Topics 1.6 + 2.1 · Sensation & Perception",
+          lessons: [
+            {
+              title: "Sensation & Perception",
+              topic: "For the AMSCO 1.6 + 2.1 reading (pp. 208–228, 245–257)",
+              file: "lessons/sensation-perception.html",
+              date: "2026-10-04",
+              summary: "Thresholds and Weber's law (with a slider), a tap-through signal-detection grid, the path of light and the path of sound step by step, color vision with a live afterimage test, hearing theories, smell, taste, touch and pain, then perception: top-down vs. bottom-up, Gestalt, attention, depth cues, constancy and motion. 16 scenario self-check questions.",
+              tags: ["topic 1.6", "topic 2.1", "interactive"]
+            }
+          ]
+        },
+        {
           range: "Sep 21 – Sep 25",
           theme: "Topic 1.3 · The Neuron & Neural Firing",
           lessons: [
