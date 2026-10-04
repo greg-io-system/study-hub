@@ -70,6 +70,11 @@ window.STUDY_WEEK = {
     },
     {
       day: "Fri", date: "2026-10-09",
+      subject: null, subjectName: "School",
+      what: "AP exam registration deadline (AP English Lang + AP Psychology). Make sure you're signed up."
+    },
+    {
+      day: "Fri", date: "2026-10-09",
       subject: "ap-french", subjectName: "French",
       what: "Weekly Reflection and Engagement Form. Then fall break!"
     }
@@ -80,6 +85,11 @@ window.STUDY_WEEK = {
       day: "Wed", date: "2026-10-14",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Lab 9 and Lab 10 due."
+    },
+    {
+      day: "Thu", date: "2026-10-15",
+      subject: null, subjectName: "School",
+      what: "PSAT/NMSQT for juniors, 8:15–11:45 AM. Your English paper is due the same morning, so submit it Wednesday night."
     },
     {
       day: "Thu", date: "2026-10-15",
@@ -96,9 +106,9 @@ window.STUDY_WEEK = {
   ],
   ahead: [
     { date: "2026-10-19", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Fracture Investigation due" },
-    { date: "2026-10-20", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Lab 11 due; exam review" },
     { date: "2026-10-21", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Skeletal exam (multiple choice + practical)" },
     { date: "2026-10-23", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Case Study: Broken Leg due" },
+    { date: "2026-10-30", subjectName: "School", what: "End of the 2nd six weeks: grades close" },
     { date: "by end of Unit 2", subject: "world-history", subjectName: "World History", what: "Read OpenStax 8.2 + 9.2 (on the Unit 2 test); study guide + quiz on the hub" }
   ]
 };
