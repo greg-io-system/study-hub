@@ -118,6 +118,20 @@ window.STUDY_HUB = {
       blurb: "The story behind the chapters — causes, people, and why it mattered, not just dates to memorize.",
       weeks: [
         {
+          range: "Sep 28 – Oct 9",
+          theme: "Ch. 6 · Ancient Greece",
+          lessons: [
+            {
+              title: "Ancient Greece — Choose Your Own Adventure Starter",
+              topic: "A head start on all 11 topics: what each is, questions to chase, words to search",
+              file: "lessons/ancient-greece-starter.html",
+              date: "2026-10-04",
+              summary: "For the Choose Your Own Adventure chart: a Greek timeline, then a card per topic (city-states, Olympics, philosophy, the Persian Wars, myth, architecture, theater, science and math, medicine, Alexander, epic heroes) with the basics, questions to research, and search terms. Marks which topics are in the textbook (OpenStax 6.2/6.3). Tick your three picks.",
+              tags: ["assignment help", "ancient greece", "ch. 6"]
+            }
+          ]
+        },
+        {
           range: "Sep 21 – Sep 25",
           theme: "Unit 1 Test review",
           lessons: [

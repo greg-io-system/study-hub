@@ -24,7 +24,9 @@ window.STUDY_WEEK = {
     {
       day: "Sun", date: "2026-10-04",
       subject: "world-history", subjectName: "World History",
-      what: "Ancient Greece Choose Your Own Adventure due tonight, 11:59 PM (your Google Doc is on the assignment)."
+      what: "Ancient Greece Choose Your Own Adventure due tonight, 11:59 PM (your Google Doc is on the assignment).",
+      help: "Ancient Greece starter (all 11 topics)",
+      helpFile: "lessons/ancient-greece-starter.html"
     },
     {
       day: "Mon", date: "2026-10-05",
