@@ -18,29 +18,29 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-04",
+  updated: "2026-10-05",
   label: "Oct 5 – Oct 9",
   items: [
     {
-      day: "Sun", date: "2026-10-04",
+      day: "Mon", date: "2026-10-05",
       subject: "world-history", subjectName: "World History",
-      what: "Ancient Greece Choose Your Own Adventure due tonight, 11:59 PM (your Google Doc is on the assignment).",
-      help: "Ancient Greece starter (all 11 topics)",
+      what: "NEW: Alexander of Macedon Worksheet due tonight, 11:59 PM.",
+      help: "Ancient Greece starter",
       helpFile: "lessons/ancient-greece-starter.html"
     },
     {
       day: "Mon", date: "2026-10-05",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Read \"The New Chilling Effect\" with Tannen and Seo noted in, then reply to Mr. Evans with your notes and ONE paragraph: your exigence and thesis on the value of civil debate.",
-      help: "Position Paper #1 guide",
-      helpFile: "lessons/position-paper-1-guide.html"
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "AMSCO 1.6 and 2.1 reading due tonight: pages 208–228 and 245–257.",
+      help: "Sensation & Perception study page",
+      helpFile: "lessons/sensation-perception.html"
     },
     {
       day: "Mon", date: "2026-10-05",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "AMSCO 1.6 and 2.1 reading: pages 208–228 and 245–257.",
-      help: "Sensation & Perception study page",
-      helpFile: "lessons/sensation-perception.html"
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "System of Two Equations worksheet due tonight, 11:59 PM.",
+      help: "Systems of Two Equations lesson",
+      helpFile: "lessons/systems-of-equations.html"
     },
     {
       day: "Mon", date: "2026-10-05",
@@ -50,21 +50,21 @@ window.STUDY_WEEK = {
       helpFile: "lessons/hap-unit-3-skeletal-study-quiz.html"
     },
     {
-      day: "Mon", date: "2026-10-05",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "System of Two Equations worksheet due.",
-      help: "Systems of Two Equations lesson",
-      helpFile: "lessons/systems-of-equations.html"
+      day: "Tue", date: "2026-10-06",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Read \"The Death of the Three-pronged Thesis\" (short). Set up your paper in MLA with Mr. Evans's template, and keep drafting Position Paper #1.",
+      help: "Position Paper #1 guide",
+      helpFile: "lessons/position-paper-1-guide.html"
     },
     {
       day: "Tue", date: "2026-10-06",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Optional: CU Anschutz healthcare career panel, 10–11 AM."
+      what: "Optional: CU Anschutz healthcare career panel, 3rd period."
     },
     {
       day: "Thu", date: "2026-10-08",
       subject: "ap-english", subjectName: "AP English",
-      what: "Position Paper #1 rough-draft conversation in class. Bring a real draft.",
+      what: "Position Paper #1 rough draft due BEFORE class, then the draft conversation. Aim to finish it Wednesday night.",
       help: "Position Paper #1 guide (draft shape, section 9)",
       helpFile: "lessons/position-paper-1-guide.html"
     },
@@ -100,12 +100,17 @@ window.STUDY_WEEK = {
     },
     {
       day: "Fri", date: "2026-10-16",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Fracture Investigation due."
+    },
+    {
+      day: "Fri", date: "2026-10-16",
       subject: "ap-french", subjectName: "French",
       what: "Weekly Reflection and Engagement Form."
     }
   ],
   ahead: [
-    { date: "2026-10-19", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Fracture Investigation due" },
+    { date: "2026-10-18", subject: "ap-psychology", subjectName: "AP Psychology", what: "Unit 1 Progress Check on AP Classroom (Biological Bases)" },
     { date: "2026-10-21", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Skeletal exam (multiple choice + practical)" },
     { date: "2026-10-23", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Case Study: Broken Leg due" },
     { date: "2026-10-30", subjectName: "School", what: "End of the 2nd six weeks: grades close" },
