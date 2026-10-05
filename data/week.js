@@ -31,7 +31,7 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-10-05",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "AMSCO 1.6 and 2.1 reading due tonight: pages 208–228 and 245–257.",
+      what: "AMSCO 1.6 and 2.1 reading due tonight (pages 208–228 and 245–257), plus the Topic 1.6 and 2.1 Quiz.",
       help: "Sensation & Perception study page",
       helpFile: "lessons/sensation-perception.html"
     },
