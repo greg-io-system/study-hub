@@ -18,55 +18,25 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-05",
+  updated: "2026-10-07",
   label: "Oct 5 – Oct 9",
   items: [
     {
-      day: "Mon", date: "2026-10-05",
-      subject: "world-history", subjectName: "World History",
-      what: "NEW: Alexander of Macedon Worksheet due tonight, 11:59 PM.",
-      help: "Ancient Greece starter",
-      helpFile: "lessons/ancient-greece-starter.html"
-    },
-    {
-      day: "Mon", date: "2026-10-05",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "AMSCO 1.6 and 2.1 reading due tonight (pages 208–228 and 245–257), plus the Topic 1.6 and 2.1 Quiz.",
-      help: "Sensation & Perception study page",
-      helpFile: "lessons/sensation-perception.html"
-    },
-    {
-      day: "Mon", date: "2026-10-05",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "System of Two Equations worksheet due tonight, 11:59 PM.",
-      help: "Systems of Two Equations lesson",
-      helpFile: "lessons/systems-of-equations.html"
-    },
-    {
-      day: "Mon", date: "2026-10-05",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 8 and the Bone Diagram due (Bone Diagram by 11:59 PM).",
-      help: "Unit 3 exam prep + flashcards",
-      helpFile: "lessons/hap-unit-3-skeletal-study-quiz.html"
-    },
-    {
-      day: "Tue", date: "2026-10-06",
+      day: "Thu", date: "2026-10-08",
       subject: "ap-english", subjectName: "AP English",
-      what: "Read \"The Death of the Three-pronged Thesis\" (short). Set up your paper in MLA with Mr. Evans's template, and keep drafting Position Paper #1.",
-      help: "Position Paper #1 guide",
+      what: "Position Paper #1 rough draft in a Google Doc, ready BEFORE class. Bring real writing, not a plan: class is a draft workshop. Finish it tonight.",
+      help: "Position Paper #1 guide (draft shape, section 9)",
       helpFile: "lessons/position-paper-1-guide.html"
-    },
-    {
-      day: "Tue", date: "2026-10-06",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Optional: CU Anschutz healthcare career panel, 3rd period."
     },
     {
       day: "Thu", date: "2026-10-08",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Position Paper #1 rough draft due BEFORE class, then the draft conversation. Aim to finish it Wednesday night.",
-      help: "Position Paper #1 guide (draft shape, section 9)",
-      helpFile: "lessons/position-paper-1-guide.html"
+      subject: "ap-french", subjectName: "French",
+      what: "NEW: \"Ma Vie jusqu'à maintenant\" (your life so far, from Mr. Keirns's template), 40 points. Classroom has it due Thursday by 11:59 PM, even though there's no French class Thursday. Turn it in online Thursday night, before Friday's class."
+    },
+    {
+      day: "Thu", date: "2026-10-08",
+      subject: "world-history", subjectName: "World History",
+      what: "NEW: Han Dynasty Golden Age due 11:59 PM. Mr. Angelopulos also posted a Blooket review game, so a test may be close. Ask in class."
     },
     {
       day: "Fri", date: "2026-10-09",
@@ -76,7 +46,7 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-10-09",
       subject: "ap-french", subjectName: "French",
-      what: "Weekly Reflection and Engagement Form. Then fall break!"
+      what: "Weekly Reflection and Engagement Form. Then the long weekend!"
     }
   ],
   nextLabel: "Oct 12 – Oct 16 (no school Mon–Tue)",
@@ -85,6 +55,11 @@ window.STUDY_WEEK = {
       day: "Wed", date: "2026-10-14",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Lab 9 and Lab 10 due."
+    },
+    {
+      day: "Thu", date: "2026-10-15",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "NEW: Sleep Journal due (Google Doc in Classwork, Week 8). If it's a nightly log, fill it in over the long weekend."
     },
     {
       day: "Thu", date: "2026-10-15",
