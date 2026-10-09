@@ -18,7 +18,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-07",
+  updated: "2026-10-08",
   label: "Oct 5 – Oct 9",
   items: [
     {
@@ -36,12 +36,24 @@ window.STUDY_WEEK = {
     {
       day: "Thu", date: "2026-10-08",
       subject: "world-history", subjectName: "World History",
-      what: "NEW: Han Dynasty Golden Age due 11:59 PM. Mr. Angelopulos also posted a Blooket review game, so a test may be close. Ask in class."
+      what: "Han Dynasty Golden Age due 11:59 PM."
+    },
+    {
+      day: "Thu", date: "2026-10-08",
+      subject: "ap-english", subjectName: "AP English",
+      what: "For Friday: watch the antifragility video (7 min) and read \"What if Gen Z Was the Happy Generation,\" take notes linking both to YOUR position on Marano, and REPLY to Mr. Evans's email with them before class. Also mark the places your draft appeals to ethos in blue."
     },
     {
       day: "Fri", date: "2026-10-09",
       subject: null, subjectName: "School",
       what: "AP exam registration deadline (AP English Lang + AP Psychology). Make sure you're signed up."
+    },
+    {
+      day: "Fri", date: "2026-10-09",
+      subject: "world-history", subjectName: "World History",
+      what: "QUIZ: Classical Civilizations, Persia and Greece (from class notes and work, not the textbook). Play Mr. Angelopulos's Blooket review tonight: it's the closest thing to the quiz.",
+      help: "Quiz review: Classical Civ, Persia & Greece",
+      helpFile: "lessons/classical-persia-greece-quiz-review.html"
     },
     {
       day: "Fri", date: "2026-10-09",
@@ -60,6 +72,11 @@ window.STUDY_WEEK = {
       day: "Thu", date: "2026-10-15",
       subject: "ap-psychology", subjectName: "AP Psychology",
       what: "NEW: Sleep Journal due (Google Doc in Classwork, Week 8). If it's a nightly log, fill it in over the long weekend."
+    },
+    {
+      day: "Thu", date: "2026-10-15",
+      subject: "world-history", subjectName: "World History",
+      what: "Blooket homework \"Classical Civ, Persia, Greece HW\" due 10:32 AM: goal 300 correct answers. Games you play for Friday's quiz count toward it."
     },
     {
       day: "Thu", date: "2026-10-15",

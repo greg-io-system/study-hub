@@ -122,6 +122,14 @@ window.STUDY_HUB = {
           theme: "Ch. 6 · Ancient Greece",
           lessons: [
             {
+              title: "Classical Civ, Persia & Greece — Quiz Review",
+              topic: "For Friday's quiz, built from the class notes and work",
+              file: "lessons/classical-persia-greece-quiz-review.html",
+              date: "2026-10-08",
+              summary: "For the Friday Oct 9 quiz: the unit in four blocks (the classical era big picture, Persia under Cyrus and Darius, Ancient Greece from the polis to the Peloponnesian War, and Alexander), built from Mr. Angelopulos's notes, the Herodotus analysis and the class presentations. Then 18 self-check questions with click-to-reveal answers. Pair it with his Blooket review.",
+              tags: ["quiz prep", "persia", "ancient greece"]
+            },
+            {
               title: "Unit 2 Reading — OpenStax 8.2 (Americas) + 9.2 (Africa)",
               topic: "The two sections Mr. Angelopulos said will be on the Unit 2 test",
               file: "lessons/unit-2-reading-americas-africa-study-quiz.html",
