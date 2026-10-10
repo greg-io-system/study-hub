@@ -18,77 +18,40 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-08",
-  label: "Oct 5 – Oct 9",
+  updated: "2026-10-10",
+  label: "Oct 12 – Oct 16 (no school Mon–Tue)",
   items: [
-    {
-      day: "Thu", date: "2026-10-08",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Position Paper #1 rough draft in a Google Doc, ready BEFORE class. Bring real writing, not a plan: class is a draft workshop. Finish it tonight.",
-      help: "Position Paper #1 guide (draft shape, section 9)",
-      helpFile: "lessons/position-paper-1-guide.html"
-    },
-    {
-      day: "Thu", date: "2026-10-08",
-      subject: "ap-french", subjectName: "French",
-      what: "NEW: \"Ma Vie jusqu'à maintenant\" (your life so far, from Mr. Keirns's template), 40 points. Classroom has it due Thursday by 11:59 PM, even though there's no French class Thursday. Turn it in online Thursday night, before Friday's class."
-    },
-    {
-      day: "Thu", date: "2026-10-08",
-      subject: "world-history", subjectName: "World History",
-      what: "Han Dynasty Golden Age due 11:59 PM."
-    },
-    {
-      day: "Thu", date: "2026-10-08",
-      subject: "ap-english", subjectName: "AP English",
-      what: "For Friday: watch the antifragility video (7 min) and read \"What if Gen Z Was the Happy Generation,\" take notes linking both to YOUR position on Marano, and REPLY to Mr. Evans's email with them before class. Also mark the places your draft appeals to ethos in blue."
-    },
-    {
-      day: "Fri", date: "2026-10-09",
-      subject: null, subjectName: "School",
-      what: "AP exam registration deadline (AP English Lang + AP Psychology). Make sure you're signed up."
-    },
-    {
-      day: "Fri", date: "2026-10-09",
-      subject: "world-history", subjectName: "World History",
-      what: "QUIZ: Classical Civilizations, Persia and Greece (from class notes and work, not the textbook). Play Mr. Angelopulos's Blooket review tonight: it's the closest thing to the quiz.",
-      help: "Quiz review: Classical Civ, Persia & Greece",
-      helpFile: "lessons/classical-persia-greece-quiz-review.html"
-    },
-    {
-      day: "Fri", date: "2026-10-09",
-      subject: "ap-french", subjectName: "French",
-      what: "Weekly Reflection and Engagement Form. Then the long weekend!"
-    }
-  ],
-  nextLabel: "Oct 12 – Oct 16 (no school Mon–Tue)",
-  next: [
     {
       day: "Wed", date: "2026-10-14",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Lab 9 and Lab 10 due."
     },
     {
-      day: "Thu", date: "2026-10-15",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "NEW: Sleep Journal due (Google Doc in Classwork, Week 8). If it's a nightly log, fill it in over the long weekend."
-    },
-    {
-      day: "Thu", date: "2026-10-15",
-      subject: "world-history", subjectName: "World History",
-      what: "Blooket homework \"Classical Civ, Persia, Greece HW\" due 10:32 AM: goal 300 correct answers. Games you play for Friday's quiz count toward it."
+      day: "Wed", date: "2026-10-14",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Submit Position Paper #1 FINAL tonight: REPLY to Mr. Evans's \"For Thursday (10/15) - Nation of Wimps Position Paper\" email with your Google Doc, and give him EDITING access. It's due before class Thursday, but the PSAT is Thursday morning.",
+      help: "Position Paper #1 guide",
+      helpFile: "lessons/position-paper-1-guide.html"
     },
     {
       day: "Thu", date: "2026-10-15",
       subject: null, subjectName: "School",
-      what: "PSAT/NMSQT for juniors, 8:15–11:45 AM. Your English paper is due the same morning, so submit it Wednesday night."
+      what: "PSAT/NMSQT for juniors, 8:15–11:45 AM."
     },
     {
       day: "Thu", date: "2026-10-15",
       subject: "ap-english", subjectName: "AP English",
-      what: "Position Paper #1 final, before class (PSAT is that morning, so aim to submit Wednesday night).",
-      help: "Position Paper #1 guide",
-      helpFile: "lessons/position-paper-1-guide.html"
+      what: "Bring your copy of Freakonomics to class."
+    },
+    {
+      day: "Thu", date: "2026-10-15",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "Sleep Journal due (Google Doc in Classwork, Week 8). If it's a nightly log, fill it in over the long weekend."
+    },
+    {
+      day: "Thu", date: "2026-10-15",
+      subject: "world-history", subjectName: "World History",
+      what: "Blooket homework \"Classical Civ, Persia, Greece HW\" due 10:32 AM: goal 300 correct answers."
     },
     {
       day: "Fri", date: "2026-10-16",
@@ -101,10 +64,37 @@ window.STUDY_WEEK = {
       what: "Weekly Reflection and Engagement Form."
     }
   ],
+  nextLabel: "Oct 19 – Oct 23",
+  next: [
+    {
+      day: "Sun", date: "2026-10-18",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "Unit 1 Progress Check on AP Classroom (Biological Bases)."
+    },
+    {
+      day: "Tue", date: "2026-10-20",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Lab 11 due; exam review in class."
+    },
+    {
+      day: "Wed", date: "2026-10-21",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "SKELETAL EXAM: multiple choice + practical. Start reviewing over the break."
+    },
+    {
+      day: "Fri", date: "2026-10-23",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Case Study: Broken Leg due."
+    },
+    {
+      day: "Fri", date: "2026-10-23",
+      subject: "ap-french", subjectName: "French",
+      what: "Weekly Reflection and Engagement Form."
+    }
+  ],
   ahead: [
-    { date: "2026-10-18", subject: "ap-psychology", subjectName: "AP Psychology", what: "Unit 1 Progress Check on AP Classroom (Biological Bases)" },
-    { date: "2026-10-21", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Skeletal exam (multiple choice + practical)" },
-    { date: "2026-10-23", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Case Study: Broken Leg due" },
+    { date: "~Oct 26", subject: "world-history", subjectName: "World History", what: "Unit 2 exam expected around here (date not posted yet)" },
+    { date: "2026-10-30", subjectName: "School", what: "AP exam PAYMENT deadline" },
     { date: "2026-10-30", subjectName: "School", what: "End of the 2nd six weeks: grades close" },
     { date: "by end of Unit 2", subject: "world-history", subjectName: "World History", what: "Read OpenStax 8.2 + 9.2 (on the Unit 2 test); study guide + quiz on the hub" }
   ]
