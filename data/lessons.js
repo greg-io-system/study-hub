@@ -44,6 +44,17 @@ window.STUDY_HUB = {
           theme: "Unit 2 Test review",
           lessons: [
             {
+              title: "Unit 2 Homework Walkthrough",
+              topic: "Step-by-step teaching for the Unit 2 Review and Practice B 6-3, in the same order as the sheets",
+              file: "lessons/algebra-2-unit-2-walkthrough.html",
+              date: "2026-10-10",
+              summary: "Start here for the homework. Eight sections that follow your two sheets in order: checking a solution, substitution, elimination, graphing, word problems, then piecewise evaluating, graphing and writing one from a story. Each section has the idea in plain words, a worked example you reveal one step at a time (with why each step works), a Your-turn problem to check, and a box to tick when you've done that part of your sheet.",
+              tags: ["homework help", "unit 2", "systems", "piecewise", "step by step"],
+              materials: [
+                { kind: "lesson", label: "Walkthrough", file: "lessons/algebra-2-unit-2-walkthrough.html" }
+              ]
+            },
+            {
               title: "Unit 2 Test — Review",
               topic: "Systems + piecewise functions, for the Unit 2 test (date not posted yet)",
               file: "lessons/algebra-2-unit-2-test-review.html",

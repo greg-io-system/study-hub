@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 2 Homework Walkthrough &middot; Algebra 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- Teaching walkthrough for Kelly's two Unit 2 handouts (Unit 2 Review pp.1-2,
+     Holt Practice B 6-3). Sections follow the sheets in order. Every example and
+     "your turn" uses PARALLEL numbers -- none of her assigned problems are solved.
+     Companion to lessons/2026-10-10-unit-2-test-review.html. -->
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#e8623d;--accent-soft:#fbe3d8;--blue:#2f6db5;--green:#2e8b57;--green-soft:#e2f2e8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 70px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em;line-height:1.2}
+h2{font-family:Fraunces,Georgia,serif;font-size:23px;margin:0 0 .2em;line-height:1.25}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+.fx{font-family:Fraunces,Georgia,serif;font-style:italic;white-space:nowrap}
+.big{background:var(--accent-soft);border:1.5px solid #f2c3b0;border-radius:14px;padding:14px 18px;margin:16px 0}
+.toc{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:12px 16px;margin:14px 0}
+.toc a{display:flex;gap:6px;padding:6px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:700}
+.toc a:last-child{border-bottom:0}
+.toc a span{margin-left:auto;padding-left:10px;color:var(--soft);font-weight:600;font-size:14px;text-align:right}
+.toc a.done{color:var(--green)}
+.toc a.done::before{content:"\2713"}
+section{background:var(--paper2);border:1.5px solid var(--line);border-radius:16px;padding:18px 20px;margin:22px 0;scroll-margin-top:12px}
+.sheet{display:inline-block;font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:999px;padding:3px 11px;margin-bottom:6px}
+.lbl{font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;margin:16px 0 4px}
+.lbl.idea{color:var(--accent)}.lbl.ex{color:var(--blue)}.lbl.you{color:var(--green)}
+.idea-box{font-size:16.5px}
+.idea-box p{margin:.35em 0}
+.prob{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 14px;font-weight:700}
+ol.walk{list-style:none;padding:0;margin:8px 0 0;counter-reset:w}
+ol.walk li{counter-increment:w;position:relative;padding:8px 10px 8px 42px;margin:6px 0;border-radius:10px;background:#f4f7fc;border:1px solid #d9e3f2}
+ol.walk li::before{content:counter(w);position:absolute;left:10px;top:9px;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+ol.walk li.hide{display:none}
+ol.walk li .why{display:block;color:var(--soft);font-size:14.5px;margin-top:2px}
+ol.walk li.final{background:var(--accent-soft);border-color:#f2c3b0;font-weight:700}
+ol.walk li.final::before{content:"\2713";background:var(--accent)}
+.btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+button.nx{font:800 14px Nunito,sans-serif;padding:8px 16px;border-radius:9px;border:1.5px solid var(--blue);background:var(--blue);color:#fff;cursor:pointer}
+button.nx.ghost{background:#fff;color:var(--blue)}
+button.nx[disabled]{opacity:.4;cursor:default}
+.trap{border:1.5px dashed var(--accent);border-radius:10px;padding:9px 13px;margin:10px 0;font-size:15px;background:#fff}
+.trap b:first-child{color:var(--accent)}
+.you-box{background:var(--green-soft);border:1.5px solid #b9dcc6;border-radius:12px;padding:12px 15px;margin-top:6px}
+.you-box p{margin:.2em 0}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:800;font-size:14px;color:var(--green);user-select:none}
+.ans{background:#fff;border:1.5px solid #b9dcc6;border-radius:10px;padding:9px 13px;margin-top:6px;font-size:15px}
+.ans p{margin:.25em 0}
+.now{display:flex;align-items:center;gap:10px;margin-top:14px;padding:10px 14px;border-radius:12px;background:#fff;border:1.5px solid var(--accent)}
+.now input{width:20px;height:20px;accent-color:var(--green);flex:none}
+.now label{font-weight:700;cursor:pointer}
+.row{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.row>div{flex:1;min-width:220px}
+svg.g{width:230px;max-width:100%;height:auto;background:#fff;border:1.5px solid var(--line);border-radius:10px;flex:none}
+.pw{display:inline-flex;align-items:center;gap:6px;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:16.5px}
+.pw .brace{font-size:46px;line-height:1;font-style:normal;color:var(--soft)}
+.pw table{border-collapse:collapse}
+.pw td{padding:1px 10px 1px 0;white-space:nowrap}
+.pw td.c{font-family:Nunito,sans-serif;font-style:normal;font-size:14.5px;color:var(--soft)}
+table.pts{border-collapse:collapse;margin:6px 0;font-size:15px}
+table.pts td,table.pts th{border:1px solid var(--line);padding:2px 9px;text-align:center;background:#fff}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Algebra 2 &middot; Ms. Howard &middot; Unit 2</div>
+  <h1>Homework Walkthrough: Systems &amp; Piecewise</h1>
+  <p class="tagline">This page does the teaching for your two sheets, the <b>Unit 2 Review</b> and <b>Practice B 6-3</b>, in the same order as the problems.</p>
+
+  <div class="big"><b>How each section works:</b> (1) read <b>The idea</b>; (2) step through the <b>example</b> one step at a time, and try to guess each step before you click; (3) do the <b>Your turn</b> problem, then check it; (4) do the problems on your sheet and tick the box. Every example uses different numbers from your sheet, so your sheet is still yours to do.</div>
+
+  <div class="toc" id="toc">
+    <a href="#s1">1. Is the point a solution? <span>Review #1</span></a>
+    <a href="#s2">2. Substitution <span>Review #2</span></a>
+    <a href="#s3">3. Elimination <span>Review #3</span></a>
+    <a href="#s4">4. Solving by graphing <span>Review #4</span></a>
+    <a href="#s5">5. Word problems <span>Review page 2</span></a>
+    <a href="#s6">6. Piecewise: evaluating <span>Practice B #1&ndash;4</span></a>
+    <a href="#s7">7. Piecewise: graphing <span>Practice B #5&ndash;6</span></a>
+    <a href="#s8">8. Piecewise from a story <span>Practice B #7</span></a>
+  </div>
+
+  <!-- ===================================================== 1 -->
+  <section id="s1">
+    <div class="sheet">Unit 2 Review &middot; #1</div>
+    <h2>1. Is the point a solution?</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>A <b>system</b> is two equations that are true at the same time. A <b>solution</b> is a point <span class="fx">(x, y)</span> that makes <b>both</b> of them true. On a graph, it's where the two graphs cross.</p>
+      <p>To check a point, plug its x and y into each equation and see whether both sides come out equal. If it works in both, it's a solution. If it fails in even one, it isn't.</p>
+    </div>
+    <div class="lbl ex">Example</div>
+    <div class="prob">Is <span class="fx">(&minus;1, 3)</span> a solution of <span class="fx">y = x + 4</span> and <span class="fx">y = x&sup2; + 1</span>?</div>
+    <ol class="walk">
+      <li>The point means <span class="fx">x = &minus;1</span> and <span class="fx">y = 3</span>.<span class="why">The first number is always x, the second is y.</span></li>
+      <li>First equation: <span class="fx">3 = (&minus;1) + 4</span> &rarr; <span class="fx">3 = 3</span> &#10003;<span class="why">Both sides match, so the first equation works.</span></li>
+      <li>Second equation: <span class="fx">3 = (&minus;1)&sup2; + 1</span> &rarr; <span class="fx">3 = 1 + 1 = 2</span> &#10007;<span class="why">(&minus;1)&sup2; means (&minus;1)(&minus;1) = +1. Without the parentheses you'd get &minus;1, which is wrong.</span></li>
+      <li class="final">It fails the second equation, so it is NOT a solution. Write "No" and show both checks.</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    <div class="trap"><b>Watch out:</b> your sheet says <b>algebraically</b>. That means show the plug-in work for both equations, not just "yes" or "no."</div>
+    <div class="lbl you">Your turn</div>
+    <div class="you-box"><p>Is <span class="fx">(2, 5)</span> a solution of <span class="fx">y = x + 3</span> and <span class="fx">y = x&sup2; + 1</span>?</p>
+      <details><summary>Check your answer</summary><div class="ans"><p><span class="fx">5 = 2 + 3</span> &#10003; and <span class="fx">5 = 2&sup2; + 1 = 5</span> &#10003;. Both work &rarr; <b>yes</b>.</p></div></details></div>
+    <div class="now"><input type="checkbox" id="c1"><label for="c1">Now do Review #1 on your sheet (both boxes).</label></div>
+  </section>
+
+  <!-- ===================================================== 2 -->
+  <section id="s2">
+    <div class="sheet">Unit 2 Review &middot; #2</div>
+    <h2>2. Substitution</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>If one equation already says what x (or y) <b>equals</b>, you can swap that expression into the other equation. That leaves <b>one equation with one letter</b>, which you already know how to solve.</p>
+      <p>Then put the number you found back in to get the other letter.</p>
+    </div>
+    <div class="lbl ex">Example</div>
+    <div class="prob"><span class="fx">x = 2y + 1</span> &nbsp;and&nbsp; <span class="fx">3x &minus; 4y = 9</span></div>
+    <ol class="walk">
+      <li>Find the equation that's already solved for a letter: <span class="fx">x = 2y + 1</span>.<span class="why">x is alone, so we know exactly what x is in terms of y.</span></li>
+      <li>In the other equation, replace x with <span class="fx">(2y + 1)</span>: <span class="fx">3(2y + 1) &minus; 4y = 9</span><span class="why">Always put it in parentheses, because the 3 has to multiply ALL of it.</span></li>
+      <li>Distribute: <span class="fx">6y + 3 &minus; 4y = 9</span><span class="why">3 &times; 2y = 6y and 3 &times; 1 = 3.</span></li>
+      <li>Combine and solve: <span class="fx">2y + 3 = 9</span> &rarr; <span class="fx">2y = 6</span> &rarr; <span class="fx">y = 3</span></li>
+      <li>Put y = 3 back into the easy equation: <span class="fx">x = 2(3) + 1 = 7</span></li>
+      <li class="final">Answer: <span class="fx">(7, 3)</span>. Check in the other equation: <span class="fx">3(7) &minus; 4(3) = 21 &minus; 12 = 9</span> &#10003;</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    <div class="lbl ex">When the letters disappear</div>
+    <div class="idea-box"><p>Sometimes after you substitute, <b>both letters cancel out</b>. That's not a mistake. It tells you something:</p></div>
+    <div class="row">
+      <div class="you-box" style="background:#f4f7fc;border-color:#d9e3f2"><p><b>Left with something TRUE</b>, like <span class="fx">2 = 2</span></p><p>The two equations are the same line &rarr; <b>infinitely many solutions</b>.</p><p style="font-size:14.5px;color:var(--soft)">Example: <span class="fx">y = 2x &minus; 1</span>, <span class="fx">4x &minus; 2y = 2</span> &rarr; <span class="fx">4x &minus; 2(2x &minus; 1) = 2</span> &rarr; <span class="fx">4x &minus; 4x + 2 = 2</span> &rarr; <span class="fx">2 = 2</span></p></div>
+      <div class="you-box" style="background:#f4f7fc;border-color:#d9e3f2"><p><b>Left with something FALSE</b>, like <span class="fx">8 = 5</span></p><p>The lines are parallel and never cross &rarr; <b>no solution</b>.</p><p style="font-size:14.5px;color:var(--soft)">Example: <span class="fx">y = &minus;3x + 4</span>, <span class="fx">6x + 2y = 5</span> &rarr; <span class="fx">6x + 2(&minus;3x + 4) = 5</span> &rarr; <span class="fx">8 = 5</span></p></div>
+    </div>
+    <div class="trap"><b>Watch out:</b> put the plugged-in number back into the <b>easy</b> equation, then check with the <b>other</b> one. Two of the three on your sheet end with the letters disappearing.</div>
+    <div class="lbl you">Your turn</div>
+    <div class="you-box"><p>Solve by substitution: <span class="fx">y = x + 2</span> and <span class="fx">3x + y = 14</span>.</p>
+      <details><summary>Check your answer</summary><div class="ans"><p><span class="fx">3x + (x + 2) = 14</span> &rarr; <span class="fx">4x = 12</span> &rarr; <span class="fx">x = 3</span>; <span class="fx">y = 3 + 2 = 5</span>. Answer <b>(3, 5)</b>.</p></div></details></div>
+    <div class="now"><input type="checkbox" id="c2"><label for="c2">Now do Review #2 (all three).</label></div>
+  </section>
+
+  <!-- ===================================================== 3 -->
+  <section id="s3">
+    <div class="sheet">Unit 2 Review &middot; #3</div>
+    <h2>3. Elimination</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>If you <b>add two true equations</b>, the result is also true. So line them up and add them. If one letter has <b>opposite</b> numbers in front (like <span class="fx">+6y</span> and <span class="fx">&minus;6y</span>), it cancels out and you're left with one letter.</p>
+      <p>If the numbers aren't opposites yet, <b>multiply a whole equation</b> by something first to make them opposites. You can do that because doing the same thing to both sides keeps an equation true.</p>
+    </div>
+    <div class="lbl ex">Example</div>
+    <div class="prob"><span class="fx">2x + 3y = 12</span> &nbsp;and&nbsp; <span class="fx">5x &minus; 6y = 3</span></div>
+    <ol class="walk">
+      <li>Pick a letter to get rid of. The y's are <span class="fx">+3y</span> and <span class="fx">&minus;6y</span>.<span class="why">If the top were +6y, it would cancel the &minus;6y.</span></li>
+      <li>Multiply the WHOLE first equation by 2: <span class="fx">4x + 6y = 24</span><span class="why">Every term, both sides: 2&times;2x, 2&times;3y, AND 2&times;12. Forgetting the right side is the most common mistake.</span></li>
+      <li>Add the two equations, column by column: <span class="fx">(4x + 5x) + (6y &minus; 6y) = 24 + 3</span> &rarr; <span class="fx">9x = 27</span></li>
+      <li>Solve: <span class="fx">x = 3</span></li>
+      <li>Put x = 3 into an original equation: <span class="fx">2(3) + 3y = 12</span> &rarr; <span class="fx">3y = 6</span> &rarr; <span class="fx">y = 2</span></li>
+      <li class="final">Answer: <span class="fx">(3, 2)</span>. Check: <span class="fx">5(3) &minus; 6(2) = 15 &minus; 12 = 3</span> &#10003;</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    <div class="trap"><b>Spot it before you start:</b> if one equation is just the other one multiplied by a number, they're the same line, so <b>infinitely many solutions</b>. Example: <span class="fx">2x + y = 5</span> and <span class="fx">8x + 4y = 20</span> (the second is 4 &times; the first). If the <b>left sides</b> match after multiplying but the <b>right sides</b> don't, the result is <b>no solution</b>. Example: <span class="fx">x &minus; y = 2</span> and <span class="fx">&minus;3x + 3y = 4</span> add up to <span class="fx">0 = 10</span>.</div>
+    <div class="lbl you">Your turn</div>
+    <div class="you-box"><p>Solve by elimination: <span class="fx">2x + 5y = 1</span> and <span class="fx">4x + 3y = 9</span>.</p>
+      <details><summary>Hint</summary><div class="ans"><p>Multiply the first by &minus;2 so the x's become &minus;4x and +4x.</p></div></details>
+      <details><summary>Check your answer</summary><div class="ans"><p><span class="fx">&minus;4x &minus; 10y = &minus;2</span>; add to <span class="fx">4x + 3y = 9</span>: <span class="fx">&minus;7y = 7</span> &rarr; <span class="fx">y = &minus;1</span>. Then <span class="fx">2x &minus; 5 = 1</span> &rarr; <span class="fx">x = 3</span>. Answer <b>(3, &minus;1)</b>.</p></div></details></div>
+    <div class="now"><input type="checkbox" id="c3"><label for="c3">Now do Review #3 (all three).</label></div>
+  </section>
+
+  <!-- ===================================================== 4 -->
+  <section id="s4">
+    <div class="sheet">Unit 2 Review &middot; #4</div>
+    <h2>4. Solving by graphing</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>Graph both equations on the same grid. Wherever they <b>cross</b> is a solution, because that point is on both graphs. Two lines cross once, or never if they're parallel. A line and a parabola can cross <b>twice</b>.</p>
+      <p>To graph a line in <span class="fx">y = mx + b</span> form: put a dot at <b>b</b> on the y-axis, then use the slope <b>m</b> as "rise over run" to step to the next dots.</p>
+    </div>
+    <div class="lbl ex">Example A: two lines</div>
+    <div class="row"><div>
+      <div class="prob"><span class="fx">y = &minus;&frac12;x + 1</span> &nbsp;and&nbsp; <span class="fx">y = 2x &minus; 4</span></div>
+      <ol class="walk">
+        <li>First line: dot at <span class="fx">(0, 1)</span>.<span class="why">b = 1, so the line crosses the y-axis at 1.</span></li>
+        <li>Slope &minus;&frac12; = <b>down 1, right 2</b>: dots at (2, 0), (4, &minus;1). Connect them.<span class="why">A negative slope goes downhill left to right.</span></li>
+        <li>Second line: dot at <span class="fx">(0, &minus;4)</span>, slope 2 = <b>up 2, right 1</b>: (1, &minus;2), (2, 0). Connect.</li>
+        <li class="final">They cross at <span class="fx">(2, 0)</span>. That's the solution. Write it in the bottom row.</li>
+      </ol>
+      <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    </div><svg class="g" id="gA" viewBox="0 0 240 240"></svg></div>
+
+    <div class="lbl ex">Example B: a parabola and a line</div>
+    <div class="row"><div>
+      <div class="prob"><span class="fx">y = (x &minus; 2)&sup2;</span> &nbsp;and&nbsp; <span class="fx">y = x + 4</span></div>
+      <ol class="walk">
+        <li>The parabola <span class="fx">y = (x &minus; h)&sup2;</span> has its bottom point (the vertex) at <span class="fx">(h, 0)</span>, here <span class="fx">(2, 0)</span>.<span class="why">The sign flips: (x &minus; 2) means h = +2, so move right 2.</span></li>
+        <li>Make a table around the vertex:
+          <table class="pts"><tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>y</th><td>4</td><td>1</td><td>0</td><td>1</td><td>4</td><td>9</td></tr></table>
+          <span class="why">Plug each x in: (0 &minus; 2)&sup2; = 4, (5 &minus; 2)&sup2; = 9, and so on. It's symmetric around x = 2.</span></li>
+        <li>Graph the line: dot at (0, 4), slope 1 = up 1, right 1.</li>
+        <li class="final">They cross TWICE: <span class="fx">(0, 4)</span> and <span class="fx">(5, 9)</span>. Write both.</li>
+      </ol>
+      <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    </div><svg class="g" id="gB" viewBox="0 0 240 240"></svg></div>
+
+    <div class="lbl ex">Example C: one equation isn't in y = form</div>
+    <div class="prob"><span class="fx">y = 2x + 1</span> &nbsp;and&nbsp; <span class="fx">4x &minus; 2y = 6</span></div>
+    <ol class="walk">
+      <li>Get the second equation into <span class="fx">y =</span> form. Subtract 4x from both sides: <span class="fx">&minus;2y = &minus;4x + 6</span></li>
+      <li>Divide EVERY term by &minus;2: <span class="fx">y = 2x &minus; 3</span><span class="why">Dividing by a negative flips the signs of both terms.</span></li>
+      <li>Compare the lines: both have slope 2, but different starting points (1 and &minus;3).</li>
+      <li class="final">They're parallel and never cross, so there's NO solution. You can say this before drawing anything.</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    <div class="lbl you">Your turn</div>
+    <div class="you-box"><p>Where do <span class="fx">y = (x &minus; 1)&sup2;</span> and <span class="fx">y = x + 1</span> cross? Make the table, then graph both.</p>
+      <details><summary>Check your answer</summary><div class="ans"><p>Vertex (1, 0); table: x = &minus;1, 0, 1, 2, 3 gives y = 4, 1, 0, 1, 4. The line passes through (0, 1) and (3, 4). They cross at <b>(0, 1) and (3, 4)</b>.</p></div></details></div>
+    <div class="now"><input type="checkbox" id="c4"><label for="c4">Now do Review #4 (all three graphs).</label></div>
+  </section>
+
+  <!-- ===================================================== 5 -->
+  <section id="s5">
+    <div class="sheet">Unit 2 Review &middot; page 2</div>
+    <h2>5. Word problems: write the system yourself</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>A word problem is a system in disguise. There are <b>two things you don't know</b> (your two letters) and the story gives you <b>two facts</b> (your two equations). Same four steps every time:</p>
+      <p><b>1.</b> Name the two unknowns in words. &nbsp;<b>2.</b> Turn each fact into an equation. &nbsp;<b>3.</b> Solve with substitution or elimination. &nbsp;<b>4.</b> Answer in a sentence, with units.</p>
+    </div>
+    <div class="lbl ex">Example A: vehicles (like the vans and buses)</div>
+    <div class="prob">One group fills 3 cars and 2 vans with 26 people. Another fills 5 cars and 4 vans with 48 people. Every car holds the same number, and so does every van. How many per car and per van?</div>
+    <ol class="walk">
+      <li>Unknowns: <b>c</b> = people per car, <b>v</b> = people per van.</li>
+      <li>Fact 1: 3 cars and 2 vans hold 26 &rarr; <span class="fx">3c + 2v = 26</span><span class="why">3 cars with c people each is 3c.</span></li>
+      <li>Fact 2: <span class="fx">5c + 4v = 48</span></li>
+      <li>Elimination: double fact 1 to get <span class="fx">6c + 4v = 52</span>, then subtract fact 2: <span class="fx">c = 4</span>.</li>
+      <li>Back in: <span class="fx">3(4) + 2v = 26</span> &rarr; <span class="fx">2v = 14</span> &rarr; <span class="fx">v = 7</span></li>
+      <li class="final">4 people per car and 7 per van. Check fact 2: 5(4) + 4(7) = 48 &#10003;</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+
+    <div class="lbl ex">Example B: the current (like the boat)</div>
+    <div class="prob">A kayak goes 36 miles downstream in 3 hours. The trip back upstream takes 9 hours. How fast is the kayak in still water, and how fast is the current?</div>
+    <ol class="walk">
+      <li>Unknowns: <b>k</b> = kayak's speed in still water, <b>c</b> = current's speed.</li>
+      <li>Downstream the current <b>pushes you along</b>, so the speeds add: <span class="fx">k + c</span>. Upstream it <b>pushes against you</b>: <span class="fx">k &minus; c</span>.<span class="why">This is the whole trick of the problem.</span></li>
+      <li>Speed = distance &divide; time. Downstream: <span class="fx">k + c = 36 &divide; 3 = 12</span></li>
+      <li>Upstream: <span class="fx">k &minus; c = 36 &divide; 9 = 4</span></li>
+      <li>Add the two equations (c cancels): <span class="fx">2k = 16</span> &rarr; <span class="fx">k = 8</span>, then <span class="fx">8 + c = 12</span> &rarr; <span class="fx">c = 4</span></li>
+      <li class="final">The kayak goes 8 mph in still water, and the current is 4 mph.</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+
+    <div class="lbl ex">Example C: count and weight (like the candy)</div>
+    <div class="prob">A jar holds 30 marbles weighing 96 grams. Big marbles weigh 5 g and small ones weigh 2 g. How many of each?</div>
+    <ol class="walk">
+      <li>Unknowns: <b>B</b> = big marbles, <b>S</b> = small marbles.</li>
+      <li>Count fact: <span class="fx">B + S = 30</span>. Weight fact: <span class="fx">5B + 2S = 96</span><span class="why">Each big one adds 5 g, so B of them weigh 5B.</span></li>
+      <li>Double the count: <span class="fx">2B + 2S = 60</span>. Subtract it from the weight: <span class="fx">3B = 36</span> &rarr; <span class="fx">B = 12</span></li>
+      <li class="final">12 big and 18 small. Check: 5(12) + 2(18) = 60 + 36 = 96 &#10003;</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    <div class="lbl you">Your turn (two of them)</div>
+    <div class="you-box"><p><b>a)</b> A bakery sells 2 muffins and 3 cookies for $13, and 4 muffins and 1 cookie for $11. Find each price. <span style="color:var(--soft)">(Same type as the ticket problem.)</span></p>
+      <details><summary>Check your answer</summary><div class="ans"><p><span class="fx">2m + 3c = 13</span>, <span class="fx">4m + c = 11</span>. From the second, <span class="fx">c = 11 &minus; 4m</span>. Substitute: <span class="fx">2m + 33 &minus; 12m = 13</span> &rarr; <span class="fx">m = 2</span>, <span class="fx">c = 3</span>. <b>Muffin $2, cookie $3.</b></p></div></details>
+      <p style="margin-top:10px"><b>b)</b> A plane flies 1200 miles with the wind in 3 hours and 1200 miles against it in 4 hours. Find the plane's speed and the wind's speed.</p>
+      <details><summary>Check your answer</summary><div class="ans"><p><span class="fx">p + w = 400</span>, <span class="fx">p &minus; w = 300</span> &rarr; <span class="fx">2p = 700</span>. <b>Plane 350 mph, wind 50 mph.</b></p></div></details></div>
+    <div class="now"><input type="checkbox" id="c5"><label for="c5">Now do the four word problems on page 2.</label></div>
+  </section>
+
+  <!-- ===================================================== 6 -->
+  <section id="s6">
+    <div class="sheet">Practice B 6-3 &middot; #1&ndash;4</div>
+    <h2>6. Piecewise functions: evaluating</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>A <b>piecewise function</b> uses <b>different rules for different x-values</b>. Think of a phone plan that charges one rate up to your data limit and a different rate after it.</p>
+      <p>It's written with a big brace. Each line has a <b>rule</b> on the left and a <b>condition</b> on the right that says when to use that rule. To evaluate, <b>check the conditions first</b>, pick the ONE that fits your x, and use only that rule.</p>
+    </div>
+    <div class="lbl ex">Example</div>
+    <div class="prob">Find <span class="fx">p(&minus;6)</span>, <span class="fx">p(&minus;2)</span>, <span class="fx">p(3)</span> and <span class="fx">p(7)</span> for:<br>
+      <div class="pw"><span>p(x) =</span><span class="brace">{</span><table>
+        <tr><td>x + 3</td><td class="c">if x &lt; &minus;2</td></tr><tr><td>x&sup2;</td><td class="c">if &minus;2 &le; x &le; 3</td></tr><tr><td>10</td><td class="c">if x &gt; 3</td></tr></table></div></div>
+    <ol class="walk">
+      <li><span class="fx">p(&minus;6)</span>: is &minus;6 &lt; &minus;2? Yes. Use the top rule: <span class="fx">&minus;6 + 3 = &minus;3</span><span class="why">Ignore the other two rules completely.</span></li>
+      <li><span class="fx">p(&minus;2)</span>: is &minus;2 &lt; &minus;2? <b>No</b> (it's equal, not less). Is &minus;2 &le; &minus;2? <b>Yes.</b> Middle rule: <span class="fx">(&minus;2)&sup2; = 4</span><span class="why">This is the edge case. &lt; does NOT include the number; &le; DOES.</span></li>
+      <li><span class="fx">p(3)</span>: is 3 &le; 3? Yes, so the middle rule: <span class="fx">3&sup2; = 9</span></li>
+      <li><span class="fx">p(7)</span>: 7 &gt; 3, so the bottom rule. It's just the number 10, so <span class="fx">p(7) = 10</span>.<span class="why">A rule with no x in it gives the same answer for every x in its range.</span></li>
+      <li class="final">p(&minus;6) = &minus;3, &nbsp;p(&minus;2) = 4, &nbsp;p(3) = 9, &nbsp;p(7) = 10</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    <div class="lbl you">Your turn</div>
+    <div class="you-box"><p>Find f(&minus;2), f(0), f(3) and f(5):</p>
+      <div class="pw"><span>f(x) =</span><span class="brace">{</span><table>
+        <tr><td>x &minus; 4</td><td class="c">if x &lt; 0</td></tr><tr><td>2x</td><td class="c">if 0 &le; x &lt; 3</td></tr><tr><td>1</td><td class="c">if x &ge; 3</td></tr></table></div>
+      <details><summary>Check your answer</summary><div class="ans"><p>f(&minus;2) = &minus;6 (top). f(0) = 0 (middle, because 0 &le; 0). f(3) = 1 (bottom, because 3 is NOT &lt; 3 but 3 &ge; 3). f(5) = 1 (bottom).</p></div></details></div>
+    <div class="now"><input type="checkbox" id="c6"><label for="c6">Now do Practice B #1&ndash;4 (each at x = &minus;8 and x = 5).</label></div>
+  </section>
+
+  <!-- ===================================================== 7 -->
+  <section id="s7">
+    <div class="sheet">Practice B 6-3 &middot; #5&ndash;6</div>
+    <h2>7. Piecewise functions: graphing</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>Graph each rule <b>only</b> on its own part of the x-axis. The <b>break point</b> is the x-value where the rule changes.</p>
+      <p>At the break point, each piece ends in a dot: a <b>closed (filled) dot &#9679;</b> if its condition uses &le; or &ge; (that point is included), or an <b>open (hollow) dot &#9675;</b> if it uses &lt; or &gt; (it gets right up to the point but stops short).</p>
+    </div>
+    <div class="lbl ex">Example</div>
+    <div class="row"><div>
+      <div class="prob">Graph <div class="pw"><span>q(x) =</span><span class="brace">{</span><table><tr><td>&minus;2</td><td class="c">if x &lt; 1</td></tr><tr><td>2x &minus; 1</td><td class="c">if x &ge; 1</td></tr></table></div></div>
+      <ol class="walk">
+        <li>The break point is <span class="fx">x = 1</span>. Draw a light dashed line there as a guide.</li>
+        <li>Left piece, <span class="fx">y = &minus;2</span>: a flat line at height &minus;2, drawn only to the LEFT of x = 1.</li>
+        <li>Its end at x = 1 is <span class="fx">(1, &minus;2)</span>. The condition is x &lt; 1, which does not include 1, so draw an <b>open dot</b> &#9675;.</li>
+        <li>Right piece: plug in the break point first: <span class="fx">2(1) &minus; 1 = 1</span>. The condition x &ge; 1 includes 1, so draw a <b>closed dot</b> &#9679; at <span class="fx">(1, 1)</span>.<span class="why">Always start a piece by plugging the break point into ITS rule.</span></li>
+        <li>More points for the right piece: (2, 3), (3, 5). Draw the line to the right.</li>
+        <li class="final">The two dots are at different heights, so the graph <b>jumps</b> at x = 1. If they were at the same height, the pieces would join.</li>
+      </ol>
+      <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    </div><svg class="g" id="gC" viewBox="0 0 240 240"></svg></div>
+    <div class="trap"><b>Watch out:</b> on your #6 the y-axis goes up by 2s and runs to 18, so count grid lines carefully when you plot.</div>
+    <div class="lbl you">Your turn</div>
+    <div class="you-box"><p>Graph <span class="fx">g(x) = x + 1</span> if <span class="fx">x &le; 2</span>, and <span class="fx">g(x) = 4</span> if <span class="fx">x &gt; 2</span>. Which dot is open and which is closed? Does it jump?</p>
+      <details><summary>Check your answer</summary><div class="ans"><div class="row"><div><p>Left piece: the line y = x + 1 up to a <b>closed</b> dot at (2, 3), because &le; includes 2.</p><p>Right piece: a flat line at y = 4 starting with an <b>open</b> dot at (2, 4), because &gt; doesn't include 2.</p><p>Different heights (3 vs 4), so <b>it jumps</b>.</p></div><svg class="g" id="gD" viewBox="0 0 240 240" style="width:180px"></svg></div></div></details></div>
+    <div class="now"><input type="checkbox" id="c7"><label for="c7">Now do Practice B #5 and #6.</label></div>
+  </section>
+
+  <!-- ===================================================== 8 -->
+  <section id="s8">
+    <div class="sheet">Practice B 6-3 &middot; #7</div>
+    <h2>8. Writing a piecewise function from a story</h2>
+    <div class="lbl idea">The idea</div>
+    <div class="idea-box">
+      <p>When a price (or rate) <b>changes partway through</b>, you need a piecewise function: one rule before the change and another after it. The second rule has to <b>include everything already paid</b> during the first stretch.</p>
+    </div>
+    <div class="lbl ex">Example</div>
+    <div class="prob">A gym charges $12 per visit for your first 5 visits in a month, then $8 per visit after that. (a) Write C(v) for v visits. (b) What do 9 visits cost? (c) How much more do 7 visits cost than 3?</div>
+    <ol class="walk">
+      <li>Where does the rule change? <b>After visit 5.</b> So the break point is v = 5, and there will be two lines.</li>
+      <li>First stretch (5 visits or fewer): every visit is $12, so <span class="fx">C(v) = 12v</span> if <span class="fx">0 &le; v &le; 5</span>.</li>
+      <li>After 5 visits, you've <b>already paid</b> 5 &times; $12 = <b>$60</b>.<span class="why">This is the part people forget.</span></li>
+      <li>Each extra visit beyond 5 costs $8, and there are <span class="fx">(v &minus; 5)</span> of them. So <span class="fx">C(v) = 60 + 8(v &minus; 5)</span> if <span class="fx">v &gt; 5</span>.<span class="why">At 9 visits, v &minus; 5 = 4 extra visits.</span></li>
+      <li>Write it with the brace:
+        <div class="pw"><span>C(v) =</span><span class="brace">{</span><table><tr><td>12v</td><td class="c">if 0 &le; v &le; 5</td></tr><tr><td>60 + 8(v &minus; 5)</td><td class="c">if v &gt; 5</td></tr></table></div></li>
+      <li>(b) 9 &gt; 5, so use the second rule: <span class="fx">60 + 8(4) = $92</span></li>
+      <li class="final">(c) 7 visits: <span class="fx">60 + 8(2) = $76</span>. 3 visits: first rule, <span class="fx">12(3) = $36</span>. Difference: <b>$40</b>.</li>
+    </ol>
+    <div class="btns"><button class="nx">Next step</button><button class="nx ghost">Show all</button></div>
+    <div class="trap"><b>The big mistake:</b> writing ONE formula, like <span class="fx">12v &minus; 8v</span>. If you catch yourself with one formula, stop: the rule <b>changes</b>, so you need two lines with two conditions. Quick check: plug the break point into both rules. Here both give $60 at v = 5, so they agree.</div>
+    <div class="lbl you">Your turn</div>
+    <div class="you-box"><p>A streaming service costs $10 a month for the first 3 months, then $15 a month after that. Write C(m) for m months. What do 6 months cost?</p>
+      <details><summary>Check your answer</summary><div class="ans"><p><span class="fx">C(m) = 10m</span> if <span class="fx">0 &le; m &le; 3</span>; <span class="fx">C(m) = 30 + 15(m &minus; 3)</span> if <span class="fx">m &gt; 3</span>.</p><p>6 months: <span class="fx">30 + 15(3) = $75</span>.</p></div></details></div>
+    <div class="now"><input type="checkbox" id="c8"><label for="c8">Now do Practice B #7 (a, b and c).</label></div>
+  </section>
+
+  <p style="color:var(--soft);font-size:14px">Want to practice more, or drag the graphs around? Open <a href="algebra-2-unit-2-test-review.html" style="color:var(--accent);font-weight:800">Unit 2 Test &mdash; Review</a>, which has interactive graphs and 10 more practice problems.</p>
+  <div class="footer">Made for you &middot; ad-free</div>
+</div>
+<script>
+"use strict";
+/* step-by-step reveal for every worked example */
+document.querySelectorAll("ol.walk").forEach(function(ol){
+  var items=[].slice.call(ol.children), shown=1, box=ol.nextElementSibling;
+  if(!box||!box.classList.contains("btns")) return;
+  var next=box.children[0], all=box.children[1];
+  function upd(){ items.forEach(function(li,i){ li.classList.toggle("hide", i>=shown); });
+    next.disabled = shown>=items.length; all.disabled = shown>=items.length;
+    next.textContent = shown>=items.length ? "All steps shown" : "Next step ("+shown+" of "+items.length+")"; }
+  next.addEventListener("click",function(){ shown=Math.min(items.length,shown+1); upd(); });
+  all.addEventListener("click",function(){ shown=items.length; upd(); });
+  upd();
+});
+/* "now do your sheet" checkboxes -- remembered on this device only */
+(function(){
+  var KEY="a2-unit2-walkthrough-v1", st={};
+  try{ st=JSON.parse(localStorage.getItem(KEY)||"{}")||{}; }catch(e){ st={}; }
+  var links=document.querySelectorAll("#toc a");
+  for(var i=1;i<=8;i++){(function(i){
+    var cb=document.getElementById("c"+i); if(!cb) return;
+    cb.checked=!!st["c"+i]; links[i-1].classList.toggle("done",cb.checked);
+    cb.addEventListener("change",function(){ st["c"+i]=cb.checked; links[i-1].classList.toggle("done",cb.checked);
+      try{ localStorage.setItem(KEY,JSON.stringify(st)); }catch(e){} });
+  })(i);}
+})();
+/* small graphs */
+(function(){
+  var N=10,S=240;
+  function X(x){return (x+N)/(2*N)*S;} function Y(y){return S-(y+N)/(2*N)*S;}
+  function grid(id){var s='<defs><clipPath id="cp'+id+'"><rect width="'+S+'" height="'+S+'"/></clipPath></defs>';
+    for(var i=-N;i<=N;i++){var c=i===0?"#5a6b83":"#eee6d4",w=i===0?1.5:0.8;
+      s+='<line x1="'+X(i)+'" y1="0" x2="'+X(i)+'" y2="'+S+'" stroke="'+c+'" stroke-width="'+w+'"/><line x1="0" y1="'+Y(i)+'" x2="'+S+'" y2="'+Y(i)+'" stroke="'+c+'" stroke-width="'+w+'"/>';}
+    [-8,-4,4,8].forEach(function(t){s+='<text x="'+X(t)+'" y="'+(Y(0)+11)+'" font-size="9" fill="#5a6b83" text-anchor="middle" font-family="Nunito,sans-serif">'+t+'</text><text x="'+(X(0)-3)+'" y="'+(Y(t)+3)+'" font-size="9" fill="#5a6b83" text-anchor="end" font-family="Nunito,sans-serif">'+t+'</text>';});
+    return s;}
+  function cur(id,f,a,b,col){var p=[];for(var i=0;i<=140;i++){var x=a+(b-a)*i/140,y=Math.max(-30,Math.min(30,f(x)));p.push(X(x).toFixed(1)+","+Y(y).toFixed(1));}
+    return '<polyline points="'+p.join(" ")+'" fill="none" stroke="'+col+'" stroke-width="2.4" stroke-linecap="round" clip-path="url(#cp'+id+')"/>';}
+  function dot(x,y,col,closed){return '<circle cx="'+X(x)+'" cy="'+Y(y)+'" r="4.5" fill="'+(closed?col:"#fff")+'" stroke="'+col+'" stroke-width="2"/>';}
+  var O="#e8623d",B="#2f6db5",K="#233047";
+  function put(id,html){var e=document.getElementById(id); if(e) e.innerHTML=html;}
+  put("gA",grid("A")+cur("A",function(x){return -0.5*x+1;},-N,N,O)+cur("A",function(x){return 2*x-4;},-N,N,B)+dot(2,0,K,true));
+  put("gB",grid("B")+cur("B",function(x){return (x-2)*(x-2);},-N,N,O)+cur("B",function(x){return x+4;},-N,N,B)+dot(0,4,K,true)+dot(5,9,K,true));
+  var dash='<line x1="'+X(1)+'" y1="0" x2="'+X(1)+'" y2="'+S+'" stroke="#c9bfa8" stroke-width="1.2" stroke-dasharray="4 4"/>';
+  put("gC",grid("C")+dash+cur("C",function(){return -2;},-N,1,O)+cur("C",function(x){return 2*x-1;},1,N,B)+dot(1,-2,O,false)+dot(1,1,B,true));
+  put("gD",grid("D")+cur("D",function(x){return x+1;},-N,2,O)+cur("D",function(){return 4;},2,N,B)+dot(2,4,B,false)+dot(2,3,O,true));
+})();
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>
