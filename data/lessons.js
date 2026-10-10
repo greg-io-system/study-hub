@@ -40,6 +40,23 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       weeks: [
         {
+          range: "Oct 12 – Oct 16",
+          theme: "Unit 2 Test review",
+          lessons: [
+            {
+              title: "Unit 2 Test — Review",
+              topic: "Systems + piecewise functions, for the Unit 2 test (date not posted yet)",
+              file: "lessons/algebra-2-unit-2-test-review.html",
+              date: "2026-10-10",
+              summary: "For the Unit 2 test. Systems refresher (check a point in both equations, what it means when the variables cancel, elimination, rewriting to y = mx + b) linked to your Systems lesson; a line-meets-parabola explorer (slide it to get two, one or no solutions); the 4-step word-problem setup with a current problem; and piecewise functions taught fresh, with a two-piece builder that shows open vs closed dots and which piece an x uses. Ends with 10 parallel self-check problems. Your actual review sheet and Practice B stay yours.",
+              tags: ["test prep", "unit 2", "systems", "piecewise", "interactive"],
+              materials: [
+                { kind: "lesson", label: "Review + explorers", file: "lessons/algebra-2-unit-2-test-review.html" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 28 – Oct 2",
           theme: "Unit 2 · Systems & Piece-wise Functions",
           lessons: [
