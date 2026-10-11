@@ -49,15 +49,19 @@ concept lesson vs test review), since Kelly's buy-in depends on the site
 feeling helpful at a glance.
 - DONE 2026-10-10: landing "How to use your Study Hub" note (renderHowTo in index.html, .howto in styles.css), under This week, collapsible + remembered per device. Its homework line names Algebra only -- generalize it once the per-class session lands.
 
-## OPEN -- exploratory: "app" vs what the current setup can deploy (Greg 2026-10-10)
-Separate exploratory session, not a build. Question: what would a real study
-"app" for Kelly look like, compared with what we can ship today (static hub on
-Vercel + self-contained lesson pages + data files + a supervised Claude tutor
-Project)? Starting points to bring:
-- What the static setup already covers: weekly panel, per-class pages,
-  step-reveal walkthroughs, interactive graphs, device-local progress ticks.
-- Where it runs out: no accounts or saved progress across devices, no tutor
-  inside the site (Claude.ai is 18+, so tutoring stays supervised on Greg's
-  account), no notifications, content updates depend on a CC sweep + push.
-- Pull together with the per-class design session above; this one is the
-  wider "what's the ceiling" question, that one is page layout per class.
+## OPEN -- exploratory: an interactive study "app" vs what the current setup can deploy (Greg 2026-10-10)
+Separate exploratory session, not a build. SCOPE: the INTERACTIVE STUDY part only
+-- how Kelly learns and practices (lessons, walkthroughs, practice, tutoring).
+NOT the tracking side: the weekly panel, sweeps and class pages are working well
+for tracking her work and supporting her (Greg), and stay as they are.
+Question: what would a real interactive study app look like, compared with the
+self-contained lesson pages we ship today? Starting points to bring:
+- What the pages already do: step-reveal walkthroughs in sheet order, draggable
+  graphs (parabola/line explorer, piecewise builder), click-to-reveal practice,
+  device-local "done" ticks. Plus the supervised Claude tutor Project for when
+  she's stuck on her own work.
+- Where they run out: practice is fixed (no fresh problems generated on demand,
+  no checking her typed or drawn answer step by step), nothing adapts to what
+  she gets wrong, no tutor inside the page (Claude.ai is 18+, so tutoring stays
+  supervised on Greg's account), progress doesn't carry across devices.
+- Pull together with the per-class design session above where they overlap.
