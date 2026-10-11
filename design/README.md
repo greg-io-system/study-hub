@@ -47,3 +47,4 @@ week-band layout for all six. Inputs gathered so far:
 Also in scope: making it obvious which page to open first (homework help vs
 concept lesson vs test review), since Kelly's buy-in depends on the site
 feeling helpful at a glance.
+- DONE 2026-10-10: landing "How to use your Study Hub" note (renderHowTo in index.html, .howto in styles.css), under This week, collapsible + remembered per device. Its homework line names Algebra only -- generalize it once the per-class session lands.
