@@ -48,3 +48,16 @@ Also in scope: making it obvious which page to open first (homework help vs
 concept lesson vs test review), since Kelly's buy-in depends on the site
 feeling helpful at a glance.
 - DONE 2026-10-10: landing "How to use your Study Hub" note (renderHowTo in index.html, .howto in styles.css), under This week, collapsible + remembered per device. Its homework line names Algebra only -- generalize it once the per-class session lands.
+
+## OPEN -- exploratory: "app" vs what the current setup can deploy (Greg 2026-10-10)
+Separate exploratory session, not a build. Question: what would a real study
+"app" for Kelly look like, compared with what we can ship today (static hub on
+Vercel + self-contained lesson pages + data files + a supervised Claude tutor
+Project)? Starting points to bring:
+- What the static setup already covers: weekly panel, per-class pages,
+  step-reveal walkthroughs, interactive graphs, device-local progress ticks.
+- Where it runs out: no accounts or saved progress across devices, no tutor
+  inside the site (Claude.ai is 18+, so tutoring stays supervised on Greg's
+  account), no notifications, content updates depend on a CC sweep + push.
+- Pull together with the per-class design session above; this one is the
+  wider "what's the ceiling" question, that one is page layout per class.
