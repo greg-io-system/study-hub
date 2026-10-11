@@ -195,6 +195,38 @@
     app.appendChild(panel);
   }
 
+  /* ---------- "How to use this site" note (landing; collapsible, remembered per device) ---------- */
+  function renderHowTo(){
+    var KEY="hub-howto-hidden", hidden=false;
+    try{ hidden = localStorage.getItem(KEY)==="1"; }catch(e){}
+    var hasPanel = !!app.querySelector(".week-panel");
+    var box=el("div");
+    function save(v){ try{ v ? localStorage.setItem(KEY,"1") : localStorage.removeItem(KEY); }catch(e){} }
+    function draw(){
+      box.innerHTML="";
+      if(hidden){
+        var tab=el("button","howto-tab","&#9432; How to use this site");
+        tab.type="button";
+        tab.onclick=function(){ hidden=false; save(false); draw(); };
+        box.appendChild(tab);
+        return;
+      }
+      var s=el("section","howto");
+      s.appendChild(el("div","howto-title","How to use your Study Hub"));
+      s.appendChild(el("p",null,"<b>What&rsquo;s due:</b> the <i>This week</i> panel"+(hasPanel?" above":"")+" lists what&rsquo;s coming in every class, plus school dates like the PSAT. If an item has a help link, tap it."));
+      s.appendChild(el("p",null,"<b>Stuck on homework?</b> Tap the class, then the top card. For Algebra, start with <b>button 1</b>. It goes in the same order as your sheet: read the idea, tap through the example, try one yourself, then do yours."));
+      s.appendChild(el("p",null,"<b>Test coming up?</b> The <b>test review</b> button has practice problems with hidden answers."));
+      s.appendChild(el("p",null,"<b>Your work stays yours.</b> Every example uses different numbers. The site shows you <i>how</i>; the sheet is still yours to do."));
+      var hide=el("button","howto-hide","Got it, hide this");
+      hide.type="button";
+      hide.onclick=function(){ hidden=true; save(true); draw(); };
+      s.appendChild(hide);
+      box.appendChild(s);
+    }
+    draw();
+    app.appendChild(box);
+  }
+
   /* ---------- landing: the class grid ---------- */
   function renderLanding(){
     app.innerHTML="";
@@ -207,6 +239,7 @@
 
     renderDaily();
     renderWeek();
+    renderHowTo();
 
     var grid=el("div","classgrid");
     subjects.forEach(function(sub){

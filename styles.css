@@ -151,3 +151,15 @@ h1 em{font-style:italic;color:var(--coral)}
 .wp-adate{font-size:12.5px;font-weight:800;white-space:nowrap}
 .wp-atext b{color:var(--ink);font-weight:800}
 .wp-awhen{white-space:nowrap}
+
+/* ---------- How to use this site (landing, collapsible) ---------- */
+.howto{background:var(--paper2);border:1.5px solid var(--line);border-left:5px solid var(--coral);
+  border-radius:16px;padding:16px 20px 12px;margin-top:16px}
+.howto-title{font-family:var(--disp);font-weight:700;font-size:18px;margin:0 0 6px}
+.howto p{margin:.45em 0;font-size:14.5px}
+.howto p b{font-weight:800}
+.howto-hide{background:none;border:0;padding:4px 0;font:800 13px var(--body);color:var(--ink-soft);cursor:pointer}
+.howto-hide:hover{color:var(--coral)}
+.howto-tab{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:var(--paper2);
+  border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font:800 13px var(--body);color:var(--ink-soft);cursor:pointer}
+.howto-tab:hover{color:var(--coral);border-color:var(--coral)}
