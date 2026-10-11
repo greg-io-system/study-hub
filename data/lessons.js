@@ -48,7 +48,7 @@ window.STUDY_HUB = {
               topic: "Everything for Unit 2 in one place, in the order to use it",
               file: "lessons/algebra-2-unit-2-walkthrough.html",
               date: "2026-10-10",
-              summary: "1) START HERE for homework: the Walkthrough teaches every problem type on your Unit 2 Review and Practice B 6-3, in the same order as the sheets. Each part gives the idea, an example you step through, a Your-turn problem, and a box to tick. 2) Before the test: Test Review has graphs you can drag and 10 practice problems with answers. 3) Need the basics of systems again? The Systems lesson from Oct 2.",
+              summary: "Doing the homework? Start with button 1: it teaches every problem type on your two sheets, step by step. Studying for the test? Use button 2. Systems feel shaky? Button 3 goes back to the basics.",
               tags: ["homework help", "test prep", "systems", "piecewise"],
               materials: [
                 { kind: "lesson",   label: "1 · Homework walkthrough (start here)", file: "lessons/algebra-2-unit-2-walkthrough.html" },

@@ -253,7 +253,7 @@
   function renderClass(sub){
     app.innerHTML="";
     var accent=sub.accent||"#e8623d";
-    setTitle((sub.name||"Class")+" &middot; "+homeTitle());
+    setTitle((sub.name||"Class")+" · "+homeTitle());
 
     var back=el("a","backlink","&larr; All classes"); back.href="#";
     app.appendChild(back);
