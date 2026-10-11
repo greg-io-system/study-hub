@@ -29,3 +29,21 @@ Each subject gains a `weeks` layer in `data/lessons.js`:
 ("Unit 0 · Functions"), a **book chapter** for history
 ("Ch. 2 · River Civilizations"). Weeks list newest-first; lessons within a
 week too.
+
+## OPEN -- per-class page setup (design session to schedule, Greg 2026-10-10)
+Greg's direction: a separate design session to give each class its own page
+setup, shaped by its teacher and how the class actually works, instead of one
+week-band layout for all six. Inputs gathered so far:
+- **Algebra 2:** the teacher doesn't teach in class (problems on the board +
+  homework), so the hub has to BE the instruction. Organize by UNIT, with a
+  clear "start here" homework walkthrough, then test prep, then concept
+  lessons. Interim fix 2026-10-10: one "Unit 2: Homework & Test Prep" card
+  with numbered material chips, in a "Since Oct 1 · Unit 2" band (manifest
+  only; renderer unchanged).
+- **AP English:** runs on Evans's daily email, not Classroom (digests +
+  TERMS Library + position-paper guide).
+- **World History:** OpenStax chapters + teacher quizzes/Blooket.
+- Others (Anatomy, Psych, French): to be characterized in the session.
+Also in scope: making it obvious which page to open first (homework help vs
+concept lesson vs test review), since Kelly's buy-in depends on the site
+feeling helpful at a glance.

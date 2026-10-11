@@ -40,29 +40,20 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       weeks: [
         {
-          range: "Oct 12 – Oct 16",
-          theme: "Unit 2 Test review",
+          range: "Since Oct 1",
+          theme: "Unit 2 · Systems & Piecewise",
           lessons: [
             {
-              title: "Unit 2 Homework Walkthrough",
-              topic: "Step-by-step teaching for the Unit 2 Review and Practice B 6-3, in the same order as the sheets",
+              title: "Unit 2: Homework & Test Prep",
+              topic: "Everything for Unit 2 in one place, in the order to use it",
               file: "lessons/algebra-2-unit-2-walkthrough.html",
               date: "2026-10-10",
-              summary: "Start here for the homework. Eight sections that follow your two sheets in order: checking a solution, substitution, elimination, graphing, word problems, then piecewise evaluating, graphing and writing one from a story. Each section has the idea in plain words, a worked example you reveal one step at a time (with why each step works), a Your-turn problem to check, and a box to tick when you've done that part of your sheet.",
-              tags: ["homework help", "unit 2", "systems", "piecewise", "step by step"],
+              summary: "1) START HERE for homework: the Walkthrough teaches every problem type on your Unit 2 Review and Practice B 6-3, in the same order as the sheets. Each part gives the idea, an example you step through, a Your-turn problem, and a box to tick. 2) Before the test: Test Review has graphs you can drag and 10 practice problems with answers. 3) Need the basics of systems again? The Systems lesson from Oct 2.",
+              tags: ["homework help", "test prep", "systems", "piecewise"],
               materials: [
-                { kind: "lesson", label: "Walkthrough", file: "lessons/algebra-2-unit-2-walkthrough.html" }
-              ]
-            },
-            {
-              title: "Unit 2 Test — Review",
-              topic: "Systems + piecewise functions, for the Unit 2 test (date not posted yet)",
-              file: "lessons/algebra-2-unit-2-test-review.html",
-              date: "2026-10-10",
-              summary: "For the Unit 2 test. Systems refresher (check a point in both equations, what it means when the variables cancel, elimination, rewriting to y = mx + b) linked to your Systems lesson; a line-meets-parabola explorer (slide it to get two, one or no solutions); the 4-step word-problem setup with a current problem; and piecewise functions taught fresh, with a two-piece builder that shows open vs closed dots and which piece an x uses. Ends with 10 parallel self-check problems. Your actual review sheet and Practice B stay yours.",
-              tags: ["test prep", "unit 2", "systems", "piecewise", "interactive"],
-              materials: [
-                { kind: "lesson", label: "Review + explorers", file: "lessons/algebra-2-unit-2-test-review.html" }
+                { kind: "lesson",   label: "1 · Homework walkthrough (start here)", file: "lessons/algebra-2-unit-2-walkthrough.html" },
+                { kind: "examples", label: "2 · Test review + practice",            file: "lessons/algebra-2-unit-2-test-review.html" },
+                { kind: "examples", label: "3 · Systems lesson (basics)",           file: "lessons/systems-of-equations.html" }
               ]
             }
           ]
