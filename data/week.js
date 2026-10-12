@@ -18,7 +18,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-10",
+  updated: "2026-10-12",
   label: "Oct 12 – Oct 16 (no school Mon–Tue)",
   items: [
     {
