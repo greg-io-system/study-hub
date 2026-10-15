@@ -18,7 +18,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-12",
+  updated: "2026-10-14",
   label: "Oct 12 – Oct 16 (no school Mon–Tue)",
   items: [
     {
@@ -46,12 +46,24 @@ window.STUDY_WEEK = {
     {
       day: "Thu", date: "2026-10-15",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Sleep Journal due (Google Doc in Classwork, Week 8). If it's a nightly log, fill it in over the long weekend."
+      what: "Sleep Journal due (Google Doc in Classwork, Week 8)."
     },
     {
       day: "Thu", date: "2026-10-15",
       subject: "world-history", subjectName: "World History",
       what: "Blooket homework \"Classical Civ, Persia, Greece HW\" due 10:32 AM: goal 300 correct answers."
+    },
+    {
+      day: "Thu", date: "2026-10-15",
+      subject: "world-history", subjectName: "World History",
+      what: "\"Intro to Rome\" worksheet due 11:59 PM (your copy of the Doc is attached in Classroom)."
+    },
+    {
+      day: "Fri", date: "2026-10-16",
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "QUIZ: piecewise functions.",
+      help: "Unit 2 review (piecewise section)",
+      helpFile: "lessons/algebra-2-unit-2-test-review.html"
     },
     {
       day: "Fri", date: "2026-10-16",
@@ -79,7 +91,7 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-10-21",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "SKELETAL EXAM: multiple choice + practical. Start reviewing over the break."
+      what: "SKELETAL EXAM: multiple choice + practical."
     },
     {
       day: "Fri", date: "2026-10-23",
