@@ -29,14 +29,9 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-10-14",
       subject: "ap-english", subjectName: "AP English",
-      what: "Submit Position Paper #1 FINAL tonight: REPLY to Mr. Evans's \"For Thursday (10/15) - Nation of Wimps Position Paper\" email with your Google Doc, and give him EDITING access. It's due before class Thursday, but the PSAT is Thursday morning.",
+      what: "Submit Position Paper #1 FINAL tonight: REPLY to Mr. Evans's \"For Thursday (10/15) - Nation of Wimps Position Paper\" email with your Google Doc, and give him EDITING access. It's due before class Thursday.",
       help: "Position Paper #1 guide",
       helpFile: "lessons/position-paper-1-guide.html"
-    },
-    {
-      day: "Thu", date: "2026-10-15",
-      subject: null, subjectName: "School",
-      what: "PSAT/NMSQT for juniors, 8:15–11:45 AM."
     },
     {
       day: "Thu", date: "2026-10-15",
