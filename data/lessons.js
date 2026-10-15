@@ -371,6 +371,24 @@ window.STUDY_HUB = {
       blurb: "Reading like a writer — what an author is doing, how they're doing it, and how to say so on paper.",
       weeks: [
         {
+          range: "Oct 12 – Oct 16",
+          theme: "Position Paper #1 final",
+          lessons: [
+            {
+              title: "MLA format, Mr. Evans's way",
+              topic: "Header, heading, title, font and spacing, and citing sources without a Works Cited",
+              file: "lessons/mla-format-guide.html",
+              date: "2026-10-15",
+              summary: "A class reference for every paper: what page 1 should look like, each piece explained (header with last name and page number, the four-line heading, the day Month year date, a title that names your paper), six steps to set it up in Google Docs, and how to introduce a source in your own sentence since this class doesn't use a Works Cited page. Ends with a before-you-send checklist that remembers your ticks.",
+              tags: ["class reference", "MLA", "formatting", "position paper"],
+              materials: [
+                { kind: "lesson", label: "MLA format guide", file: "lessons/mla-format-guide.html" },
+                { kind: "link", label: "Mr. Evans's MLA Template", url: "https://docs.google.com/document/d/1Ar1rP2aXwg_L6VtEJ6EpTLtZhxjm9IugQLqM9U3nG7c/" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 28 – Oct 2",
           theme: "Position Paper #1 build-up",
           lessons: [
