@@ -376,10 +376,10 @@ window.STUDY_HUB = {
           lessons: [
             {
               title: "MLA format, Mr. Evans's way",
-              topic: "Header, heading, title, font and spacing, and citing sources without a Works Cited",
+              topic: "Header, heading, title, font and spacing, citing sources without a Works Cited, and ethos in blue",
               file: "lessons/mla-format-guide.html",
               date: "2026-10-15",
-              summary: "A class reference for every paper: what page 1 should look like, each piece explained (header with last name and page number, the four-line heading, the day Month year date, a title that names your paper), six steps to set it up in Google Docs, and how to introduce a source in your own sentence since this class doesn't use a Works Cited page. Ends with a before-you-send checklist that remembers your ticks.",
+              summary: "A class reference for every paper: what page 1 should look like, each piece explained (header with last name and page number, the four-line heading, the day Month year date, a title that names your paper), six steps to set it up in Google Docs, and how to introduce a source in your own sentence since this class doesn't use a Works Cited page. Then how to mark ethos in blue on position papers: what counts as ethos, a made-up paragraph with its blue parts explained, and the 'As a teenager…' trap. Ends with a before-you-send checklist that remembers your ticks.",
               tags: ["class reference", "MLA", "formatting", "position paper"],
               materials: [
                 { kind: "lesson", label: "MLA format guide", file: "lessons/mla-format-guide.html" },
