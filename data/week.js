@@ -18,7 +18,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-14",
+  updated: "2026-10-15",
   label: "Oct 12 – Oct 16 (no school Mon–Tue)",
   items: [
     {
@@ -52,6 +52,13 @@ window.STUDY_WEEK = {
       day: "Thu", date: "2026-10-15",
       subject: "world-history", subjectName: "World History",
       what: "\"Intro to Rome\" worksheet due 11:59 PM (your copy of the Doc is attached in Classroom)."
+    },
+    {
+      day: "Fri", date: "2026-10-16",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read and annotate \"Anti-Intellectualism and the 'Dumbing Down' of America\" (Ray Williams, 2014). Organize your notes by Exigence, Audience and Purpose, give the other side a real voice, say what YOU think, and test his 2014 claims against 2026 with your own facts or stories. REPLY to Mr. Evans's \"For Friday (10/16)\" email with your notes.",
+      help: "Terms: Rhetorical Framework",
+      helpFile: "lessons/terms-library.html"
     },
     {
       day: "Fri", date: "2026-10-16",
