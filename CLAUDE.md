@@ -1,6 +1,7 @@
 # Study Hub -- CLAUDE.md
 # Version: 0.3
 # Created: 2026-08-28
+# Updated: 2026-10-16 (#2547: stale active-projects line removed)
 # Updated: 2026-09-12 (v0.3 -- corrected the lessons/*.html line: lessons are
 #   fully self-contained with inline CSS and do NOT link ../styles.css; that
 #   stylesheet is the hub shell only. Doc had claimed otherwise.)
@@ -81,7 +82,6 @@ Tier 3, personal, App-type (Content-Hub variant). It CONSUMES Tier 2
 standards -- it does not invent its own.
 
 DELIBERATELY OUT-OF-CADENCE (personal, not work):
-- Not in projects/CLAUDE.md active-projects list.
 - No THE REGISTRY records; no EOD / standup / batch-plan cadence.
 - No Drive mirror (git is the record; nothing fetches it via connector).
 Its whole protocol is self-contained in this repo.
