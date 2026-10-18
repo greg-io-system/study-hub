@@ -18,72 +18,27 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-15",
-  label: "Oct 12 – Oct 16 (no school Mon–Tue)",
+  updated: "2026-10-18",
+  label: "Oct 19 – Oct 23",
   items: [
-    {
-      day: "Wed", date: "2026-10-14",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 9 and Lab 10 due."
-    },
-    {
-      day: "Wed", date: "2026-10-14",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Submit Position Paper #1 FINAL tonight: REPLY to Mr. Evans's \"For Thursday (10/15) - Nation of Wimps Position Paper\" email with your Google Doc, and give him EDITING access. It's due before class Thursday.",
-      help: "Position Paper #1 guide",
-      helpFile: "lessons/position-paper-1-guide.html"
-    },
-    {
-      day: "Thu", date: "2026-10-15",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Bring your copy of Freakonomics to class."
-    },
-    {
-      day: "Thu", date: "2026-10-15",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Sleep Journal due (Google Doc in Classwork, Week 8)."
-    },
-    {
-      day: "Thu", date: "2026-10-15",
-      subject: "world-history", subjectName: "World History",
-      what: "Blooket homework \"Classical Civ, Persia, Greece HW\" due 10:32 AM: goal 300 correct answers."
-    },
-    {
-      day: "Thu", date: "2026-10-15",
-      subject: "world-history", subjectName: "World History",
-      what: "\"Intro to Rome\" worksheet due 11:59 PM (your copy of the Doc is attached in Classroom)."
-    },
-    {
-      day: "Fri", date: "2026-10-16",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class: read and annotate \"Anti-Intellectualism and the 'Dumbing Down' of America\" (Ray Williams, 2014). Organize your notes by Exigence, Audience and Purpose, give the other side a real voice, say what YOU think, and test his 2014 claims against 2026 with your own facts or stories. REPLY to Mr. Evans's \"For Friday (10/16)\" email with your notes.",
-      help: "Terms: Rhetorical Framework",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Fri", date: "2026-10-16",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "QUIZ: piecewise functions.",
-      help: "Unit 2 review (piecewise section)",
-      helpFile: "lessons/algebra-2-unit-2-test-review.html"
-    },
-    {
-      day: "Fri", date: "2026-10-16",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Fracture Investigation due."
-    },
-    {
-      day: "Fri", date: "2026-10-16",
-      subject: "ap-french", subjectName: "French",
-      what: "Weekly Reflection and Engagement Form."
-    }
-  ],
-  nextLabel: "Oct 19 – Oct 23",
-  next: [
     {
       day: "Sun", date: "2026-10-18",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Unit 1 Progress Check on AP Classroom (Biological Bases)."
+      what: "Unit 1 Progress Check on AP Classroom (Biological Bases), due tonight 11:59 PM."
+    },
+    {
+      day: "Mon", date: "2026-10-19",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read the two paragraphs from the review of Bauerlein's \"The Dumbest Generation\" (they're in the email), then read and annotate Temple Grandin, \"Against Algebra.\" Write notes on seven points, each pointing to a specific passage: central claim, purpose, argument, audience (be narrow), context, occasion, ethos. Spend extra time on context and occasion. REPLY to Mr. Evans's \"For Monday (10/19)\" email with a link or photo of your notes. Bring 50 Essays to class.",
+      help: "Terms: Context vs. Occasion",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
+      day: "Mon", date: "2026-10-19",
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "\"Unit 2 Review\" due 11:59 PM. The Unit 2 test (systems + piecewise) is probably this week; date not posted yet.",
+      help: "Unit 2 test review",
+      helpFile: "lessons/algebra-2-unit-2-test-review.html"
     },
     {
       day: "Tue", date: "2026-10-20",
@@ -106,10 +61,29 @@ window.STUDY_WEEK = {
       what: "Weekly Reflection and Engagement Form."
     }
   ],
+  nextLabel: "Oct 26 – Oct 30",
+  next: [
+    {
+      day: "~Mon", date: "2026-10-26",
+      subject: "world-history", subjectName: "World History",
+      what: "Unit 2 exam expected around here (date not posted yet). Read OpenStax 8.2 + 9.2 before it.",
+      help: "Study guide + quiz on the hub"
+    },
+    {
+      day: "Fri", date: "2026-10-30",
+      subject: null, subjectName: "School",
+      what: "AP exam PAYMENT deadline; end of the 2nd six weeks (grades close)."
+    },
+    {
+      day: "Fri", date: "2026-10-30",
+      subject: "ap-french", subjectName: "French",
+      what: "Weekly Reflection and Engagement Form."
+    }
+  ],
   ahead: [
-    { date: "~Oct 26", subject: "world-history", subjectName: "World History", what: "Unit 2 exam expected around here (date not posted yet)" },
-    { date: "2026-10-30", subjectName: "School", what: "AP exam PAYMENT deadline" },
-    { date: "2026-10-30", subjectName: "School", what: "End of the 2nd six weeks: grades close" },
-    { date: "by end of Unit 2", subject: "world-history", subjectName: "World History", what: "Read OpenStax 8.2 + 9.2 (on the Unit 2 test); study guide + quiz on the hub" }
+    { date: "2026-11-23", subjectName: "School", what: "Thanksgiving Break: no school Nov 23–27" },
+    { date: "~2026-12-16", subjectName: "School", what: "Semester finals week (Dec 14–18); winter break starts Dec 21" },
+    { date: "2027-04-14", subjectName: "SAT", what: "School-day SAT (approx.)" },
+    { date: "2027-05-06", subjectName: "AP exams", what: "AP World May 6, English Lang May 12, Psych May 14" }
   ]
 };
