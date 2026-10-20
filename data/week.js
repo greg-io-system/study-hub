@@ -61,8 +61,9 @@ window.STUDY_WEEK = {
     {
       day: "~Mon", date: "2026-10-26",
       subject: "world-history", subjectName: "World History",
-      what: "Unit 2 exam expected around here (date not posted yet). Read OpenStax 8.2 + 9.2 before it.",
-      help: "Study guide + quiz on the hub"
+      what: "Unit 2 exam expected around here (date not posted yet). Han China and Rome are the new material; know the Rome vs. Han comparison. Read OpenStax 8.2 + 9.2 too.",
+      help: "Unit 2 exam review",
+      helpFile: "lessons/unit-2-exam-review.html"
     },
     {
       day: "Fri", date: "2026-10-30",

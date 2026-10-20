@@ -137,6 +137,24 @@ window.STUDY_HUB = {
       blurb: "The story behind the chapters — causes, people, and why it mattered, not just dates to memorize.",
       weeks: [
         {
+          range: "Oct 19 – Oct 26",
+          theme: "Unit 2 Exam review · Han China & Rome",
+          lessons: [
+            {
+              title: "Unit 2 Exam — Review",
+              topic: "The whole unit, built from the class notes, with Han China and Rome in full",
+              file: "lessons/unit-2-exam-review.html",
+              date: "2026-10-20",
+              summary: "For the Unit 2 exam (expected around Mon Oct 26): a short recap of the classical era, Persia, Greece and Alexander, then Han China, the three Chinese philosophies (with a practice scenario), and Rome from Republic to fall. Includes Mr. Angelopulos's 12-question Rome vs. Han comparison as a table, the intro-paragraph method modeled on the fall of the Han, and 20 self-check questions.",
+              tags: ["test prep", "unit 2", "han china", "rome"],
+              materials: [
+                { kind: "lesson", label: "Unit 2 exam review", file: "lessons/unit-2-exam-review.html" },
+                { kind: "lesson", label: "Textbook part: 8.2 + 9.2 study guide", file: "lessons/unit-2-reading-americas-africa-study-quiz.html" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 28 – Oct 9",
           theme: "Ch. 6 · Ancient Greece",
           lessons: [
