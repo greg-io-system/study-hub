@@ -18,42 +18,42 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-19",
+  updated: "2026-10-20",
   label: "Oct 19 – Oct 23",
   items: [
     {
-      day: "Sun", date: "2026-10-18",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Unit 1 Progress Check on AP Classroom (Biological Bases), due tonight 11:59 PM."
-    },
-    {
-      day: "Mon", date: "2026-10-19",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class: read the two paragraphs from the review of Bauerlein's \"The Dumbest Generation\" (they're in the email), then read and annotate Temple Grandin, \"Against Algebra.\" Write notes on seven points, each pointing to a specific passage: central claim, purpose, argument, audience (be narrow), context, occasion, ethos. Spend extra time on context and occasion. REPLY to Mr. Evans's \"For Monday (10/19)\" email with a link or photo of your notes. Bring 50 Essays to class.",
-      help: "Terms: Context vs. Occasion",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Mon", date: "2026-10-19",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "\"Unit 2 Review\" due 11:59 PM. The Unit 2 test (systems + piecewise) is probably this week; date not posted yet.",
-      help: "Unit 2 test review",
-      helpFile: "lessons/algebra-2-unit-2-test-review.html"
+      day: "Tue", date: "2026-10-20",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Tonight 11:59 PM: Fracture Investigation Briefing (one copy per group) + the Group Evaluation. Lab 11 due today. Mrs. Kalec: get every lab and assignment in BEFORE Wednesday's exam, and fill out a Late Work Form for anything you submit in Classroom."
     },
     {
       day: "Tue", date: "2026-10-20",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 11 due. Fracture Investigation Briefing due (one copy per group) + the Group Evaluation. Exam review in class."
+      subject: "world-history", subjectName: "World History",
+      what: "Tonight 11:59 PM: \"Intro Paragraph Pt. 1\" and \"Intro Paragraph Ingredients Pt. 2\" (use the Intro Paragraph Ingredients slides)."
     },
     {
       day: "Wed", date: "2026-10-21",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "SKELETAL EXAM: multiple choice + practical."
+      what: "SKELETAL EXAM: multiple choice + practical.",
+      help: "Unit 3 study quiz",
+      helpFile: "lessons/hap-unit-3-skeletal-study-quiz.html"
     },
     {
-      day: "Fri", date: "2026-10-23",
+      day: "This wk", date: "2026-10-23",
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "Unit 2 test (systems + piecewise) is probably this week; date not posted yet.",
+      help: "Unit 2 test review",
+      helpFile: "lessons/algebra-2-unit-2-test-review.html"
+    },
+    {
+      day: "This wk", date: "2026-10-23",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "New unit: Sensation & Perception (1.5). Study material is up in Classroom (Quizlet, videos, a practice test, Gimkit). No quiz date posted yet: ask Mrs. Aschwanden."
+    },
+    {
+      day: "This wk", date: "2026-10-23",
       subject: "ap-french", subjectName: "French",
-      what: "Weekly Reflection and Engagement Form."
+      what: "\"Study this!\" Quizlet: L'Halloween contes, with sentences. Probably a quiz coming; no date yet."
     }
   ],
   nextLabel: "Oct 26 – Oct 30",
@@ -68,11 +68,6 @@ window.STUDY_WEEK = {
       day: "Fri", date: "2026-10-30",
       subject: null, subjectName: "School",
       what: "AP exam PAYMENT deadline; end of the 2nd six weeks (grades close)."
-    },
-    {
-      day: "Fri", date: "2026-10-30",
-      subject: "ap-french", subjectName: "French",
-      what: "Weekly Reflection and Engagement Form."
     }
   ],
   ahead: [
