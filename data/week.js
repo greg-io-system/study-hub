@@ -18,7 +18,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-18",
+  updated: "2026-10-19",
   label: "Oct 19 – Oct 23",
   items: [
     {
@@ -43,17 +43,12 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-10-20",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 11 due; exam review in class."
+      what: "Lab 11 due. Fracture Investigation Briefing due (one copy per group) + the Group Evaluation. Exam review in class."
     },
     {
       day: "Wed", date: "2026-10-21",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "SKELETAL EXAM: multiple choice + practical."
-    },
-    {
-      day: "Fri", date: "2026-10-23",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Case Study: Broken Leg due."
     },
     {
       day: "Fri", date: "2026-10-23",
