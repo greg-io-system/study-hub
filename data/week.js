@@ -39,16 +39,16 @@ window.STUDY_WEEK = {
       helpFile: "lessons/hap-unit-3-skeletal-study-quiz.html"
     },
     {
-      day: "This wk", date: "2026-10-23",
-      subject: "algebra-2", subjectName: "Algebra 2",
-      what: "Unit 2 test (systems + piecewise) is probably this week; date not posted yet.",
-      help: "Unit 2 test review",
-      helpFile: "lessons/algebra-2-unit-2-test-review.html"
+      day: "Thu", date: "2026-10-22",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: copy \"Arguments of Definition\" into your Lang Stuff folder and take notes on the three kinds (formal, operational, by example). Then read and annotate Klinenberg, \"Worry Less About Crumbling Roads, More About Crumbling Libraries.\" Mark where he defines \"social infrastructure\" each of the three ways, then notes on central claim, context (2018), occasion, and implications (2018 to now), plus your own spaces. REPLY to Mr. Evans's \"For Thursday (10/22)\" email with your notes.",
+      help: "Terms: the three kinds of definition",
+      helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
       day: "This wk", date: "2026-10-23",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "New unit: Sensation & Perception (1.5). Study material is up in Classroom (Quizlet, videos, a practice test, Gimkit). No quiz date posted yet: ask Mrs. Aschwanden."
+      what: "New unit: Sensation & Perception (1.5). Study material is up in Classroom (Quizlet, videos, a practice test, Gimkit). No quiz date posted yet: ask Mrs. Aschwanden for the test schedule."
     },
     {
       day: "This wk", date: "2026-10-23",
