@@ -275,7 +275,7 @@ window.STUDY_HUB = {
               topic: "Every Unit 3 review bullet: bones by region, bone tissue & types, the long bone, bone cells, joints, the 5 functions, growth & maintenance, fracture healing, fractures & disorders",
               file: "lessons/hap-unit-3-skeletal-study-quiz.html",
               date: "2026-10-02",
-              summary: "The whole Unit 3 review sheet on one page, in order. Tap-to-highlight long-bone diagram, a compare table for every joint type with real-life examples, the 4 healing stages on a timeline, x-ray-style drawings of each fracture pattern with a name-that-fracture drill (the exam has a practical), and the six disorders side by side. Ends with a 47-question practice quiz. Skeletal exam Wed Oct 21.",
+              summary: "The whole Unit 3 review sheet on one page, in order. Tap-to-highlight long-bone diagram, a compare table for every joint type, the 4 healing stages on a timeline, x-ray-style drawings of each fracture pattern with a name-that-fracture drill (the exam has a practical), and the six disorders side by side. Ends with a 46-question practice quiz. Built only from Mrs. Kalec's slides, exam review and Bone Diagram. Skeletal exam Wed Oct 21.",
               tags: ["exam prep", "study guide", "practice quiz", "interactive"],
               materials: [
                 { kind: "lesson", label: "Study guide + practice quiz", file: "lessons/hap-unit-3-skeletal-study-quiz.html" },

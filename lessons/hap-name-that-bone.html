@@ -75,44 +75,43 @@ ul{padding-left:22px}li{margin:.25em 0}
 
   <h2>Tips that trip people up</h2>
   <ul>
-    <li><b>Radius vs. ulna:</b> the <b>radius</b> is on the <b>thumb</b> side. ("Radius rides with the thumb.") The <b>ulna</b> is on the pinky side and forms the point of your elbow.</li>
-    <li><b>Tibia vs. fibula:</b> the <b>tibia</b> is the big shin bone on the inside (it carries your weight). The <b>fibula</b> is the thin one on the outside. ("The fibula is a fib: it's the little one.")</li>
+    <li><b>Radius vs. ulna:</b> the <b>radius</b> is on the <b>thumb</b> side; the <b>ulna</b> is on the pinky side.</li>
+    <li><b>Tibia vs. fibula:</b> the <b>tibia</b> is the inner (shin) bone; the <b>fibula</b> is the outer one.</li>
     <li><b>Carpals / metacarpals / phalanges</b> (wrist, palm, fingers) mirror <b>tarsals / metatarsals / phalanges</b> (ankle, foot, toes). "Meta" = the middle one. <b>Phalanges</b> is the answer for both fingers and toes.</li>
     <li><b>Sacrum vs. coccyx:</b> the sacrum is the big triangle between the hip bones. The coccyx is the tiny tailbone below it.</li>
     <li><b>Spelling counts on a practical:</b> it's <b>humerus</b> (not "humorous"), <b>phalanges</b>, <b>coccyx</b>, <b>clavicle</b>.</li>
   </ul>
 
   <h2>All the bones, by region</h2>
-  <table id="tbl"><tr><th>Bone</th><th>Everyday name</th><th>Skeleton</th><th>Bone type</th></tr></table>
-  <p class="note">Bone types use the class's four categories (long, short, flat, irregular). The patella doesn't fit neatly into those four: it's a <b>sesamoid</b> bone that sits inside a tendon.</p>
+  <table id="tbl"><tr><th>Bone</th><th>Everyday name</th><th>Skeleton</th></tr></table>
 
   <div class="footer">Made for you &middot; ad-free</div>
 </div>
 <script>
 (function(){
   var BONES={
-    skull:{n:'Skull (cranium)',c:'head',r:'Axial',t:'Flat',f:'Protects the brain. Its bones are locked together by fibrous joints (sutures) that don\'t move.'},
-    mandible:{n:'Mandible',c:'lower jaw',r:'Axial',t:'Irregular',f:'The only skull bone that moves: it\'s how you chew and talk.'},
-    clavicle:{n:'Clavicle',c:'collarbone',r:'Appendicular (shoulder girdle)',t:'Long',f:'A strut connecting the sternum to the shoulder. One of the most commonly broken bones.'},
-    scapula:{n:'Scapula',c:'shoulder blade',r:'Appendicular (shoulder girdle)',t:'Flat',f:'A flat triangle on the upper back. The humerus fits into its socket at the shoulder.'},
-    sternum:{n:'Sternum',c:'breastbone',r:'Axial',t:'Flat',f:'The ribs attach to it by cartilage. It contains red marrow, which makes blood cells.'},
-    rib:{n:'Rib',c:'ribs (12 pairs)',r:'Axial',t:'Flat',f:'The rib cage protects the heart and lungs.'},
-    vertebra:{n:'Vertebra (vertebrae)',c:'backbone',r:'Axial',t:'Irregular',f:'Stacked to form the spine around the spinal cord: cervical (7), thoracic (12), lumbar (5). Cartilage discs between them absorb shock.'},
-    sacrum:{n:'Sacrum',c:'base of the spine',r:'Axial',t:'Irregular',f:'Fused vertebrae forming the back of the pelvis, between the two hip bones.'},
-    coccyx:{n:'Coccyx',c:'tailbone',r:'Axial',t:'Irregular',f:'A few tiny fused vertebrae at the very bottom of the spine.'},
-    hip:{n:'Hip bone (coxal bone)',c:'hip / pelvis',r:'Appendicular (pelvic girdle)',t:'Irregular',f:'Two hip bones plus the sacrum form the pelvis, which protects lower abdominal and reproductive organs.'},
-    humerus:{n:'Humerus',c:'upper arm bone',r:'Appendicular',t:'Long',f:'Ball-and-socket joint at the shoulder, hinge joint at the elbow.'},
-    radius:{n:'Radius',c:'forearm, thumb side',r:'Appendicular',t:'Long',f:'Rotates around the ulna (a pivot joint), which is how you turn your palm up and down.'},
-    ulna:{n:'Ulna',c:'forearm, pinky side',r:'Appendicular',t:'Long',f:'Forms the point of the elbow and the elbow\'s hinge joint with the humerus.'},
-    carpals:{n:'Carpals',c:'wrist bones (8)',r:'Appendicular',t:'Short',f:'Small blocky bones that slide past each other (gliding joints).'},
-    metacarpals:{n:'Metacarpals',c:'palm bones (5)',r:'Appendicular',t:'Long',f:'Between the wrist and fingers. The thumb\'s joint here is the saddle joint.'},
-    phalanges:{n:'Phalanges',c:'finger and toe bones',r:'Appendicular',t:'Long',f:'Same name for fingers AND toes. Hinge joints let them bend.'},
-    femur:{n:'Femur',c:'thigh bone',r:'Appendicular',t:'Long',f:'The longest, strongest bone in the body. Ball-and-socket joint at the hip.'},
-    patella:{n:'Patella',c:'kneecap',r:'Appendicular',t:'Sesamoid (see note)',f:'Sits inside the tendon in front of the knee and protects the joint.'},
-    tibia:{n:'Tibia',c:'shin bone',r:'Appendicular',t:'Long',f:'The big, weight-bearing bone on the inner side of the lower leg.'},
-    fibula:{n:'Fibula',c:'thin outer leg bone',r:'Appendicular',t:'Long',f:'Thin bone on the outer side of the lower leg. Mostly for muscle attachment, not weight.'},
-    tarsals:{n:'Tarsals',c:'ankle bones (7)',r:'Appendicular',t:'Short',f:'Includes the heel bone. They glide against each other.'},
-    metatarsals:{n:'Metatarsals',c:'foot bones (5)',r:'Appendicular',t:'Long',f:'The long bones of the foot, between the ankle and toes.'}
+    skull:{n:'Skull',c:'head',r:'Axial',t:'',f:'Protects the brain, eyes and ears. Its joints are fibrous: no movement. Red marrow is in its spongy bone.'},
+    mandible:{n:'Mandible',c:'lower jaw',r:'Axial',t:'',f:'Part of the skull. Its joint is condyloid: many planes, no rotation.'},
+    clavicle:{n:'Clavicle',c:'collarbone',r:'Appendicular (pectoral girdle)',t:'',f:'Part of the pectoral girdle. Red marrow is in its spongy bone.'},
+    scapula:{n:'Scapula',c:'shoulder blade',r:'Appendicular (pectoral girdle)',t:'',f:'Part of the pectoral girdle. The shoulder is a ball-and-socket joint.'},
+    sternum:{n:'Sternum',c:'breastbone',r:'Axial',t:'',f:'Part of the thorax. The first rib joins it with a cartilaginous joint. Red marrow is in its spongy bone.'},
+    rib:{n:'Rib',c:'ribs',r:'Axial',t:'',f:'The rib cage protects the heart and lungs. Red marrow is in their spongy bone.'},
+    vertebra:{n:'Vertebra (vertebrae)',c:'backbone',r:'Axial',t:'',f:'Vertebrae protect the spinal cord. Cartilaginous joints between them absorb shock.'},
+    sacrum:{n:'Sacrum',c:'base of the spine',r:'Axial',t:'',f:'Part of the vertebral column, at the bottom of the spine.'},
+    coccyx:{n:'Coccyx',c:'tailbone',r:'Axial',t:'',f:'The very bottom of the vertebral column.'},
+    hip:{n:'Hip bone',c:'hip / pelvis',r:'Appendicular (pelvic girdle)',t:'',f:'The pelvis protects the lower abdominal and reproductive organs. The hip is a ball-and-socket joint.'},
+    humerus:{n:'Humerus',c:'upper arm bone',r:'Appendicular',t:'',f:'Ball-and-socket joint at the shoulder; hinge joint at the elbow.'},
+    radius:{n:'Radius',c:'forearm, thumb side',r:'Appendicular',t:'',f:'Where it meets the ulna near the elbow is a pivot joint: rotation on an axis.'},
+    ulna:{n:'Ulna',c:'forearm, pinky side',r:'Appendicular',t:'',f:'Where it meets the radius near the elbow is a pivot joint. The elbow is a hinge joint.'},
+    carpals:{n:'Carpals',c:'wrist bones',r:'Appendicular',t:'',f:'The wrist has plane (gliding) joints: flat surfaces that slide and twist.'},
+    metacarpals:{n:'Metacarpals',c:'palm bones',r:'Appendicular',t:'',f:'The thumb and its metacarpal form the saddle joint.'},
+    phalanges:{n:'Phalanges',c:'finger and toe bones',r:'Appendicular',t:'',f:'Same name for fingers AND toes. Finger and toe joints are hinge joints.'},
+    femur:{n:'Femur',c:'thigh bone',r:'Appendicular',t:'',f:'Ball-and-socket joint at the hip; hinge joint at the knee.'},
+    patella:{n:'Patella',c:'kneecap',r:'Appendicular',t:'',f:'At the front of the knee, a hinge joint.'},
+    tibia:{n:'Tibia',c:'shin bone (inner)',r:'Appendicular',t:'',f:'The inner bone of the lower leg. The knee is a hinge joint.'},
+    fibula:{n:'Fibula',c:'outer lower-leg bone',r:'Appendicular',t:'',f:'The outer bone of the lower leg, beside the tibia.'},
+    tarsals:{n:'Tarsals',c:'ankle bones',r:'Appendicular',t:'',f:'The ankle has plane (gliding) joints: flat surfaces that slide and twist.'},
+    metatarsals:{n:'Metatarsals',c:'foot bones',r:'Appendicular',t:'',f:'Between the ankle and the toes.'}
   };
   var ORDER=['skull','mandible','vertebra','sternum','rib','sacrum','coccyx','clavicle','scapula','humerus','radius','ulna','carpals','metacarpals','phalanges','hip','femur','patella','tibia','fibula','tarsals','metatarsals'];
 
@@ -198,7 +197,7 @@ ul{padding-left:22px}li{margin:.25em 0}
   ['Axial','Appendicular'].forEach(function(reg){
     ORDER.filter(function(b){return BONES[b].r.indexOf(reg)===0;}).forEach(function(b){
       var B=BONES[b], tr=document.createElement('tr');
-      tr.innerHTML='<td><b>'+B.n+'</b></td><td>'+B.c+'</td><td>'+B.r+'</td><td>'+B.t+'</td>'; tbl.appendChild(tr);
+      tr.innerHTML='<td><b>'+B.n+'</b></td><td>'+B.c+'</td><td>'+B.r+'</td>'; tbl.appendChild(tr);
     });
   });
 
@@ -213,7 +212,7 @@ ul{padding-left:22px}li{margin:.25em 0}
   function explorePanel(b){
     if(!b){ panel.innerHTML='<b>Tap any bone</b> on either view to see its name, everyday name, and one fact.'; return; }
     var B=BONES[b], v=inView(b);
-    panel.innerHTML='<h3>'+B.n+'</h3><div class="facts"><span class="pill">'+B.c+'</span><span class="pill">'+B.r+'</span><span class="pill">'+B.t+'</span>'+(!v.front?'<span class="pill">back view</span>':'')+'</div>'+B.f;
+    panel.innerHTML='<h3>'+B.n+'</h3><div class="facts"><span class="pill">'+B.c+'</span><span class="pill">'+B.r+'</span>'+(!v.front?'<span class="pill">back view</span>':'')+'</div>'+B.f;
   }
   function newFind(){ answered=false; clear(); target=pick();
     var v=inView(target);
