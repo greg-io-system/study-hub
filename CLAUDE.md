@@ -133,8 +133,9 @@ renders the hub blank (it is the JS source of truth). /study-hub-deploy does
 this automatically; if publishing by hand, do it yourself.
 
 SOURCE GATE (2026-10-21): every added/changed lessons/*.html must carry a
-SOURCES block (its teacher captures under projects/GHS/) and a dated
-fact-trace -- rule and block format in projects/GHS/CLAUDE.md "HOW THE RULE
+SOURCES block (its teacher captures under projects/GHS/ -- captures with a
+completeness header, never digests) and a fact-trace line that says what it
+checked (`additions+coverage`) -- rule and block format in projects/GHS/CLAUDE.md "HOW THE RULE
 IS ENFORCED". scripts/check_sources.py checks it; .githooks/pre-push runs it
 on every push (enable per clone: `git config core.hooksPath .githooks`), and
 deploy.ps1 runs it first. scripts/ and .githooks/ are .vercelignored.

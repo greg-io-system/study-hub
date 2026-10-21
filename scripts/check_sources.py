@@ -12,7 +12,7 @@ Every lesson page (lessons/*.html) that is added or changed must carry:
     kind: class | ap-exam
     - human-anatomy/reference/unit-2-slides-capture.md
     - human-anatomy/reference/unit-2-calendar.md
-    fact-trace: 2026-10-21
+    fact-trace: 2026-10-21 additions+coverage
     -->
 
   - kind: class  -> every listed path is a capture under projects/GHS/
@@ -20,9 +20,22 @@ Every lesson page (lessons/*.html) that is added or changed must carry:
   - kind: ap-exam -> sources are the CED / exam captures under
                     projects/GHS/ap-exams/; the page must say on screen that it
                     is AP-exam material (the words "AP exam" in a visible label)
-  - fact-trace:  the date a separate reviewer traced every fact on the page to
-                 those sources with nothing left untraced. Re-trace and re-date
-                 whenever the page's facts change.
+  - fact-trace:  date + WHAT WAS CHECKED. A separate reviewer ran both passes:
+                 ADDITIONS (every fact on the page traces to the sources) and
+                 COVERAGE (every in-scope item on the teacher's review sheet /
+                 capture is on the page, or left off with a stated reason).
+                   fact-trace: YYYY-MM-DD additions+coverage
+                   fact-trace: YYYY-MM-DD additions (coverage n/a: <reason>)
+                 The n/a form is for pages with no syllabus to cover (a skill
+                 guide, a single-topic explainer) -- never for exam prep.
+                 Re-trace and re-date whenever the page's facts change.
+
+Every cited source must be a CAPTURE, not a derivative: no digest / summary /
+course-map / index files, and the file must open with a completeness header
+(from the ActivityBox lesson "absence is not information"):
+    Captured: YYYY-MM-DD
+    Coverage: slides 1-44 of 44   (or "complete -- whole document ...")
+    Image-only: <slides whose text did not capture> | none
 
 It also fails any page whose text admits to going beyond the sources
 ("beyond the class", "verify against", ...) -- the exact tell both past slips
@@ -45,6 +58,7 @@ import sys
 HUB = pathlib.Path(__file__).resolve().parent.parent
 GHS = HUB.parent / "GHS"
 
+DERIVATIVE = re.compile(r"digest|summary|course-map|index|overview|notes-digest", re.I)
 BLOCK = re.compile(r"<!--\s*SOURCES\s*(.*?)-->", re.S | re.I)
 TELLS = [
     r"beyond the (class|slides|notes|course|material)",
@@ -98,14 +112,27 @@ def check(path):
         srcs = re.findall(r"^\s*-\s*(\S+)", body, re.M)
         if not srcs:
             problems.append("SOURCES lists no source files")
+        for s in srcs:
+            if DERIVATIVE.search(pathlib.PurePosixPath(s).name):
+                problems.append(f"source is a derivative, not a capture: {s}")
         if GHS.is_dir():
             for s in srcs:
-                if not (GHS / s).is_file():
+                f = GHS / s
+                if not f.is_file():
                     problems.append(f"source not found: GHS/{s}")
-                elif kind == "ap-exam" and not s.startswith("ap-exams/"):
+                    continue
+                if kind == "ap-exam" and not s.startswith("ap-exams/"):
                     problems.append(f"ap-exam page cites a non-ap-exams source: {s}")
-        if not re.search(r"^\s*fact-trace:\s*\d{4}-\d{2}-\d{2}", body, re.M):
-            problems.append("no 'fact-trace: YYYY-MM-DD' line (page not traced)")
+                head = "\n".join(f.read_text(encoding="utf-8", errors="replace").splitlines()[:15])
+                for field in ("Captured", "Coverage", "Image-only"):
+                    if not re.search(rf"^#?\s*{field}:\s*\S", head, re.M):
+                        problems.append(f"source has no '{field}:' header line: {s}")
+        ft = re.search(r"^\s*fact-trace:\s*(\d{4}-\d{2}-\d{2})\s*(.*)$", body, re.M)
+        if not ft:
+            problems.append("no 'fact-trace: YYYY-MM-DD <scope>' line (page not traced)")
+        elif not re.match(r"additions(\+coverage\b|\s*\(coverage n/a:\s*\S)", ft.group(2).strip()):
+            problems.append("fact-trace must say what was checked: 'additions+coverage' "
+                            "or 'additions (coverage n/a: <reason>)'")
         if kind == "ap-exam" and not re.search(r"AP exam", visible_text(html), re.I):
             problems.append("ap-exam page has no visible 'AP exam' label")
     for t in sorted({t.group(0) for t in TELL_RE.finditer(visible_text(html))}):
