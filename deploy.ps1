@@ -43,6 +43,12 @@ if ($Redeploy) {
 }
 
 # Normal path: commit + push (the push is the deploy trigger).
+# Source gate first: changed lessons must list their teacher sources and carry
+# a dated fact-trace (scripts/check_sources.py; the pre-push hook runs it too).
+$env:PYTHONUTF8 = "1"
+py scripts/check_sources.py | Out-Host
+if ($LASTEXITCODE -ne 0) { Fail "Source check failed -- fix the page(s) above before publishing (GHS/CLAUDE.md, TEACHER-SOURCED FACTS ONLY)." }
+
 git add -A
 if (-not (git status --porcelain)) {
     Write-Host "No new content to commit. (Use -Redeploy to force a rebuild.)" -ForegroundColor DarkGray

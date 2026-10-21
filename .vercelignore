@@ -9,3 +9,5 @@ session-notes/
 cw-log/
 .claude/
 design/
+scripts/
+.githooks/

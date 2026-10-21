@@ -1,0 +1,15 @@
+#!/bin/sh
+# Refuse a push that adds/changes hub lessons without sources + a fact-trace.
+# Enabled once per clone: git config core.hooksPath .githooks
+remote="$1"
+while read local_ref local_sha remote_ref remote_sha; do
+  [ "$local_sha" = "0000000000000000000000000000000000000000" ] && continue
+  if [ "$remote_sha" = "0000000000000000000000000000000000000000" ]; then
+    range="origin/main..$local_sha"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+  PYTHONUTF8=1 py scripts/check_sources.py --range "$range" || {
+    echo "pre-push: blocked by scripts/check_sources.py (see GHS/CLAUDE.md, TEACHER-SOURCED FACTS ONLY)"; exit 1; }
+done
+exit 0
