@@ -1,6 +1,8 @@
 # Study Hub -- CLAUDE.md
 # Version: 0.3
 # Created: 2026-08-28
+# Updated: 2026-10-21 (roles: CC runs the whole loop per Greg 2026-08-31;
+#   CW session section retired; source gate added)
 # Updated: 2026-10-16 (#2547: stale active-projects line removed)
 # Updated: 2026-09-12 (v0.3 -- corrected the lessons/*.html line: lessons are
 #   fully self-contained with inline CSS and do NOT link ../styles.css; that
@@ -67,8 +69,7 @@ Publish path (a workshop lesson -> the live hub):
   3. Prepend its entry to the matching subject's `lessons` array in
      data/lessons.js (newest-first). Add the subject object first if the
      class is new to the hub.
-  4. Parse-check + deploy (see Deployment). CW copies + edits the manifest;
-     CC deploys.
+  4. Parse-check + source gate + deploy (see Deployment). CC does all of it.
 
 Workshop-side detail (inputs, output stack, cadence) lives in each workshop's
 own docs -- for Algebra 2, projects/GHS/algebra-2/WORKING-APPROACH.md and
@@ -142,24 +143,26 @@ deploy.ps1 runs it first. scripts/ and .githooks/ are .vercelignored.
 
 ---
 
-## Roles (Chat / CW / CC pipeline)
+## Roles
 
-- CW   -- AUTHORS content (lesson HTML, manifest entries) in this repo.
-          Cannot push or deploy. Hands off to CC when content is confirmed.
-- CC   -- DEPLOYS (commit + push -> auto-deploy) and runs the manifest
-          parse-check safety net. Maintains this file and the deploy tooling.
-- Greg -- confirms content, triggers the deploy.
+CC runs the whole loop (Greg, 2026-08-31 -- CW handoffs had left
+uncommitted state; CW has no standing role in this project):
+- CC   -- AUTHORS lessons in the class workshops (projects/GHS/<class>/),
+          copies them here, edits data/lessons.js + data/week.js, runs the
+          source gate and parse-checks, and DEPLOYS (commit + push ->
+          auto-deploy). Maintains this file and the deploy tooling.
+- Greg -- confirms content and decides what reaches Kelly (including when
+          answer pages are released -- public once published).
 
 ---
 
-## Session Management (CW)
+## Session Management
 
-- CW session-close writes its note to this project's LOCAL session-notes/cw/
-  -- NOT the claude-ops cw-ops trail (this is a standalone personal project).
-- Optional HANDOVER.md in the repo root for cross-session continuity if a
-  task spans sessions.
-- Universal CW patterns apply: one major operation per session; a STATUS
-  flag (GREEN / YELLOW / RED) + OPEN ITEMS in every note.
+- CC session notes for hub + workshop work go to projects/GHS/session-notes/cc/
+  (or the class workshop's session-notes/), with a cc-log line in
+  projects/GHS/cc-log/cc-log.md -- see GHS/CLAUDE.md "Continuity".
+- session-notes/cw/ here is the historical CW trail (pre-2026-08-31); no new
+  notes go there.
 
 ---
 
