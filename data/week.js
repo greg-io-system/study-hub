@@ -19,6 +19,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-10-23",
+  /* refreshed again 2026-10-23 after school: English for Mon 10/26 added */
   label: "Oct 19 – Oct 23",
   items: [
     {
@@ -70,6 +71,13 @@ window.STUDY_WEEK = {
   ],
   nextLabel: "Oct 26 – Oct 30",
   next: [
+    {
+      day: "Mon", date: "2026-10-26",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: refresh your Arguments of Definition notes. Jot thinking notes \"On Voting\": what is a vote (formal, operational, by example), its purpose, responsibility and obligation, and the ideal system. Read and annotate \"Who Should I Vote For?\" (AI and voting), marking quotes that spark your curiosity. Then write a reflection on the collisions (technology and politics, time and efficiency, and your own), built from your quotes. REPLY to Mr. Evans's \"For Monday (10/26)\" email with it.",
+      help: "Terms: the three kinds of definition",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
     {
       day: "~Mon", date: "2026-10-26",
       subject: "world-history", subjectName: "World History",
