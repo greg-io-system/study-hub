@@ -28,11 +28,6 @@ ul{padding-left:22px;margin:.4em 0}li{margin:.25em 0}
 .tag{display:inline-block;font-weight:800;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 8px;margin-bottom:4px}
 b.k{color:var(--accent)}
 svg{display:block;width:100%;height:auto}
-/* signal detection */
-.sdt{display:grid;grid-template-columns:110px 1fr 1fr;gap:6px;font-size:14px}
-.sdt .h{font-weight:800;color:var(--soft);display:flex;align-items:center;justify-content:center;text-align:center}
-.cell{border:1.5px solid var(--accent-line);background:#fff;border-radius:10px;padding:12px 8px;text-align:center;font-weight:800;color:var(--accent);cursor:pointer}
-.cell.on{background:var(--accent);color:#fff}
 .info{margin-top:10px;background:var(--accent-soft);border:1.5px solid var(--accent-line);border-radius:10px;padding:11px 15px;min-height:48px}
 /* slider */
 input[type=range]{width:100%;accent-color:var(--accent)}
@@ -61,69 +56,60 @@ summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user
 .footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
 </style></head>
 <body>
+<!-- SOURCES
+kind: class
+- ap-psychology/reference/sensation-perception-slides-capture.md
+- ap-psychology/reference/sensation-perception-practice-tests-capture.md
+- ap-psychology/reference/amsco-workbook-1-6-2-1-capture.md
+fact-trace: 2026-10-23 additions+coverage
+-->
 <div class="wrap">
   <div class="eyebrow">AP Psychology &middot; Topics 1.6 + 2.1</div>
   <h1>Sensation &amp; Perception</h1>
-  <p class="tagline">For the AMSCO 1.6 and 2.1 reading (pp. 208&ndash;228 and 245&ndash;257). Read this first for the big picture, then the pages will make more sense. Use it to fill your workbook in your own words, not to copy from.</p>
+  <p class="tagline">Built from Mrs. Aschwanden's Sensation &amp; Perception slides and her practice tests, for the AMSCO 1.6 and 2.1 reading (pp. 208&ndash;228 and 245&ndash;257). Read it for the big picture, then fill your workbook in your own words.</p>
 
   <div class="big">
     <b>The one idea that ties both topics together:</b><br>
-    <b>Sensation</b> is your body <b>picking up</b> energy from the world (light, sound waves, chemicals, pressure) and turning it into nerve signals.<br>
-    <b>Perception</b> is your brain <b>making sense</b> of those signals: organizing them, interpreting them, deciding what they mean.<br>
-    Sensation is the raw data. Perception is the story your brain tells about it.
+    <b>Sensation</b> is <b>picking up</b> information from the world (light, sound, chemicals, pressure, temperature) and turning it into neural signals.<br>
+    <b>Perception</b> is <b>selecting, organizing and interpreting</b> those signals so you can tell what the stimulus is.<br>
+    Sensation says "something is there." Perception says "what it is."
   </div>
 
   <div class="toc">
-    <a href="#thresholds">Thresholds</a><a href="#sdt">Signal detection</a><a href="#adapt">Adaptation</a>
+    <a href="#thresholds">Thresholds</a><a href="#adapt">Adaptation</a>
     <a href="#vision">Vision</a><a href="#color">Color</a><a href="#hearing">Hearing</a>
     <a href="#chem">Smell &amp; taste</a><a href="#touch">Touch &amp; pain</a><a href="#body">Body senses</a>
     <a href="#updown">Top-down</a><a href="#gestalt">Gestalt</a><a href="#attention">Attention</a>
-    <a href="#depth">Depth</a><a href="#constancy">Constancy &amp; motion</a><a href="#quiz">Self-check</a>
+    <a href="#depth">Depth</a><a href="#constancy">Constancy &amp; motion</a><a href="#workbook">Workbook-only</a><a href="#quiz">Self-check</a>
   </div>
 
-  <p class="note"><b>One word you'll see everywhere: transduction</b>, which means converting one kind of energy into another. Every sense does it: the eye turns light into neural signals, the ear turns vibrations into neural signals, and so on. Each sense has its own <b>receptor cells</b> that do the converting.</p>
+  <p class="note"><b>One word you'll see everywhere: transduction</b>, which means converting the energy of a stimulus into neural activity. Stimulus (light, sound, chemicals, pressure) &rarr; sensory receptors (eyes, ears, nose, tongue, skin) &rarr; neural impulses &rarr; the brain's visual, auditory, smell areas and so on.</p>
 
   <!-- ================= SENSATION ================= -->
   <h2 id="thresholds">1.6 &middot; How much is enough to notice?</h2>
   <div class="two">
-    <div><span class="tag">Absolute threshold</span><p style="margin:.2em 0">The <b>weakest</b> stimulus you can detect <b>half the time</b> (50%). The faintest whisper, the dimmest light. Below it, the stimulus is <b>subliminal</b>: below conscious detection.</p></div>
-    <div><span class="tag">Difference threshold</span><p style="margin:.2em 0">The <b>smallest change</b> between two stimuli you can notice half the time. Also called the <b>just-noticeable difference (JND)</b>.</p></div>
+    <div><span class="tag">Absolute threshold</span><p style="margin:.2em 0">The <b>minimum</b> stimulation needed to detect a stimulus at least <b>50% of the time</b>. On a detection graph, it's the intensity at the 50% line. A <b>lower</b> threshold means you can detect fainter stimuli.</p></div>
+    <div><span class="tag">Just-noticeable difference (JND)</span><p style="margin:.2em 0">The <b>smallest change</b> in a stimulus you can detect. The absolute threshold asks "can I notice it at all?" The JND asks "can I notice it changed?"</p></div>
   </div>
-  <h3>Weber's law: the JND is a percentage, not a fixed amount</h3>
-  <p>To notice a difference, the change has to be a <b>constant proportion</b> of the original. Adding one candle to a dark room is obvious. Adding one candle to a stadium's lights is invisible. Same candle, different starting point.</p>
+  <h3>Weber's law: the bigger it is, the bigger the change you need</h3>
+  <p>The difference you can notice has to be <b>proportional</b> to the starting intensity. Turning up a quiet radio a little is noticeable; if it's already loud, you need a bigger jump to hear a difference.</p>
   <div class="box">
+    <span class="tag">Try it</span><br>
     <label for="w">You're holding a backpack that weighs <span class="out" id="wv">20</span> lb.</label>
     <input type="range" id="w" min="2" max="80" value="20">
-    <p style="margin:.4em 0 0">If the JND for weight is about <b>2%</b> (an illustration; the exact percentage depends on the sense), someone has to add about <span class="out" id="jnd">0.4</span> lb before you'd notice.</p>
+    <p style="margin:.4em 0 0">Pretend the JND is <b>2%</b> (a made-up number, just for this demo): someone has to add about <span class="out" id="jnd">0.4</span> lb before you'd notice.</p>
     <p class="note" style="margin:.3em 0 0">Slide it up: the heavier the bag, the bigger the change you need. That's Weber's law.</p>
   </div>
 
-  <h2 id="sdt">1.6 &middot; Signal detection theory</h2>
-  <p>Detecting something isn't only about how strong it is. It also depends on <b>you</b>: your expectations, motivation, alertness and what's at stake. Picture a lifeguard scanning for a swimmer in trouble. Tap each box.</p>
-  <div class="box">
-    <div class="sdt">
-      <div></div><div class="h">You say "YES, it's there"</div><div class="h">You say "NO, nothing"</div>
-      <div class="h">Signal really there</div><div class="cell" data-k="hit">Hit</div><div class="cell" data-k="miss">Miss</div>
-      <div class="h">Signal NOT there</div><div class="cell" data-k="fa">False alarm</div><div class="cell" data-k="cr">Correct rejection</div>
-    </div>
-    <div class="info" id="sdtInfo">Tap a box to see what it means.</div>
-  </div>
-  <p class="note">Why it matters: a nervous new lifeguard says "yes" to everything (more hits, but more false alarms). A tired one at hour six says "no" more (more misses). Same eyes, different person.</p>
-
   <h2 id="adapt">1.6 &middot; Adaptation, interaction, and synesthesia</h2>
   <ul>
-    <li><b class="k">Sensory adaptation:</b> your sensitivity <b>drops</b> when a stimulus stays constant. You stop smelling your own house, stop feeling your socks. <b>The point:</b> it frees your attention for <b>change</b>, which is usually what matters for survival.</li>
-    <li><b class="k">Sensory interaction:</b> one sense <b>affects</b> another. Food tastes bland with a blocked nose, because smell is a big part of "flavor." Seeing lips move changes what you think you hear.</li>
-    <li><b class="k">Synesthesia:</b> stimulating one sense <b>automatically triggers</b> an experience in another. Some people see colors when they hear music, or "taste" words. It's rare and real.</li>
+    <li><b class="k">Sensory adaptation:</b> receptors become <b>less responsive</b> to a stimulus that stays constant. A scent in a room seems to fade even though the amount in the air hasn't changed. That's the receptors, not you choosing to ignore it.</li>
+    <li><b class="k">Sensory interaction:</b> one sense <b>influences</b> another, as when smell affects taste. Eating pizza is taste, smell, texture (touch) and sight working together.</li>
+    <li><b class="k">Synesthesia:</b> stimulating one sensory pathway <b>automatically and involuntarily</b> triggers an experience in another. Two types: <b>grapheme-color</b> (letters or numbers seem colored) and <b>chromesthesia</b> (sounds bring colors).</li>
   </ul>
 
   <h2 id="vision">1.6 &middot; Vision</h2>
-  <h3>What light carries</h3>
-  <table>
-    <tr><th>Feature of the light wave</th><th>What it is</th><th>What you experience</th></tr>
-    <tr><td><b>Wavelength</b></td><td>distance from one wave peak to the next</td><td><b>Hue</b> (color). Short = blue/violet, long = red.</td></tr>
-    <tr><td><b>Amplitude / intensity</b></td><td>height of the wave: how much energy</td><td><b>Brightness</b></td></tr>
-  </table>
+  <p>Vision is considered the <b>dominant sense</b> because it gives you so much information about your surroundings. Humans see only a sliver of all light waves: visible light runs from about <b>380 to 750 nanometers</b>. Radio waves, microwaves and x-rays fall outside it, so they're beyond vision's absolute threshold.</p>
   <h3>The path of light: tap through it</h3>
   <div class="box">
     <div class="path" id="eyePath"></div>
@@ -131,107 +117,114 @@ summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user
     <div class="ctrl"><button class="btn ghost" data-dir="-1" data-p="eye">&larr; Back</button><button class="btn" data-dir="1" data-p="eye">Next &rarr;</button></div>
   </div>
   <div class="two">
-    <div><span class="tag">Rods</span><p style="margin:.2em 0">Work in <b>dim light</b>; see in <b>black, white and gray</b>; spread around the <b>edges</b> of the retina (peripheral vision). About 120 million.</p></div>
-    <div><span class="tag">Cones</span><p style="margin:.2em 0">Need <b>brighter light</b>; see <b>color and fine detail</b>; packed into the <b>fovea</b>, the retina's center. About 6 million.</p></div>
+    <div><span class="tag">Rods</span><p style="margin:.2em 0">For <b>dim light</b> and <b>detecting motion</b>. Black-and-white vision only, but very sensitive to light. (A night-lit bedroom: shapes and shadows, no colors.)</p></div>
+    <div><span class="tag">Cones</span><p style="margin:.2em 0">For <b>color and fine detail in bright light</b>. Three types (red, green, blue). Most concentrated in the <b>fovea</b>.</p></div>
   </div>
   <ul>
-    <li><b class="k">Accommodation:</b> the <b>lens changes shape</b> to focus near or far.</li>
-    <li><b class="k">Blind spot:</b> where the optic nerve leaves the eye. There are no receptors there, and your brain fills in the gap.</li>
-    <li><b class="k">Dark adaptation:</b> walking into a dark theater, you can barely see at first. Over about 20&ndash;30 minutes the rods get more sensitive.</li>
-    <li><b class="k">Optic chiasm:</b> where the optic nerves <b>cross</b>, so each side of the brain gets the opposite half of what you see.</li>
-    <li><b class="k">Nearsighted vs. farsighted:</b> nearsighted means the image focuses <b>in front of</b> the retina, so <b>far</b> things blur. Farsighted means it focuses <b>behind</b> the retina, so <b>near</b> things blur.</li>
+    <li><b class="k">Fovea:</b> the center of the retina, for sharp central vision. <b>Cones only, no rods.</b> Whatever you look straight at lands here.</li>
+    <li><b class="k">Ganglion cells:</b> retinal neurons that take signals from the bipolar cells and send them to the brain through the optic nerve. They respond to changes in light and help detect <b>movement</b>.</li>
+    <li><b class="k">Accommodation:</b> the <b>lens changes its shape</b> (its curvature) to focus near or far objects on the retina, mainly through the ciliary muscles. When accommodation goes wrong, the result is <b>nearsightedness</b> or <b>farsightedness</b>.</li>
+    <li><b class="k">Blind spot:</b> where the optic nerve leaves the eye. No rods or cones there, so no vision, and your brain fills in the gap from what's around it.</li>
   </ul>
 
-  <h2 id="color">1.6 &middot; How you see color (two theories, both right)</h2>
+  <h2 id="color">1.6 &middot; How you see color: two theories</h2>
   <div class="two">
-    <div><span class="tag">Young-Helmholtz (trichromatic)</span><p style="margin:.2em 0">The retina has <b>three kinds of cones</b>, most sensitive to <b>red, green and blue</b>. Every color is a mix of how strongly each fires. This explains color <b>at the receptors</b>.</p></div>
-    <div><span class="tag">Opponent-process</span><p style="margin:.2em 0">After the retina, cells work in <b>opposing pairs</b>: <b>red vs. green, blue vs. yellow, black vs. white</b>. When one side gets tired, the other side "wins." That explains <b>afterimages</b>.</p></div>
+    <div><span class="tag">Trichromatic theory</span><p style="margin:.2em 0"><b>Three kinds of cones</b>: short wavelength (blue), medium (green) and long (red). The brain combines how much each fires to make every color.</p></div>
+    <div><span class="tag">Opponent-process</span><p style="margin:.2em 0">Color works in <b>opposing pairs</b>: <b>red-green, blue-yellow, black-white</b>. Activating one side inhibits the other. These opposing cells are <b>ganglion cells in the retina</b>, and some neurons in the <b>thalamus</b> work the same way. That explains <b>afterimages</b>.</p></div>
   </div>
+  <p><b class="k">Afterimage:</b> a visual sensation that lasts after the stimulus is gone, from temporarily overstimulated cones. Stare at red, then look at white, and you see its opposite: green.</p>
   <div class="box ai">
-    <b>Try it:</b> stare at the black dot for 20 seconds, then watch the white box.
+    <b>Try it:</b> stare at the black dot for 30 seconds, then watch the white box.
     <div id="flag"><div class="dot"></div></div>
-    <button class="btn" id="aiBtn">Start (20 s)</button>
+    <button class="btn" id="aiBtn">Start (30 s)</button>
     <span class="note" id="aiMsg">The flag is green, black and yellow. What colors do you see after?</span>
   </div>
   <ul>
-    <li><b class="k">Color blindness:</b> <b>dichromatism</b> means one cone type is missing or weak, so you see only two-color combinations. Red-green is the most common, especially in males. <b>Monochromatism</b> means only one cone type or none, so the world looks like shades of gray. It's very rare.</li>
-    <li><b class="k">Prosopagnosia:</b> "face blindness" from brain damage. You see a face perfectly well but can't recognize <b>whose</b> it is.</li>
-    <li><b class="k">Blindsight:</b> damage to the visual cortex leaves someone consciously blind in part of their vision, yet they can still <b>react</b> to things there (point to them, dodge them) without knowing why. Seeing and being aware of seeing are separate systems.</li>
+    <li><b class="k">Color vision deficiency:</b> irregular cones or ganglion cells. <b>Dichromatism</b>: perceiving only two of the three visual pigments. Red-green is the most common. <b>Monochromatism</b>: no color at all, only shades of gray. It's rare.</li>
+    <li><b class="k">Ishihara test:</b> a number made of colored dots on a background of other dots. Normal color vision reads "74"; someone with red-green deficiency may read "21".</li>
+    <li><b class="k">Prosopagnosia (face blindness):</b> you see faces but can't recognize them as familiar. It comes from a problem in the connection among the <b>temporal lobe, occipital cortex and fusiform gyrus</b>. About 60% of people with it also struggle to recognize animals' faces. People with it learn to rely on unique features, tone of voice and context.</li>
+    <li><b class="k">Blindsight:</b> after damage to the <b>primary visual cortex</b>, a person can still detect and locate things in the "blind" part of their vision, sometimes even movement or flicker, with <b>no conscious awareness</b> of seeing them.</li>
   </ul>
 
   <h2 id="hearing">1.6 &middot; Hearing (audition)</h2>
   <table>
-    <tr><th>Feature of the sound wave</th><th>What it is</th><th>What you experience</th></tr>
-    <tr><td><b>Frequency</b></td><td>how many waves pass per second (Hz)</td><td><b>Pitch</b>. High frequency = high pitch.</td></tr>
-    <tr><td><b>Amplitude</b></td><td>height of the wave: how much energy</td><td><b>Loudness</b>, measured in decibels</td></tr>
+    <tr><th>Sound wave feature</th><th>What it is</th><th>What you hear</th></tr>
+    <tr><td><b>Frequency</b> (wavelength)</td><td>how many waves pass a point per second</td><td><b>Pitch</b>. More waves per second = higher pitch (a bird chirp); fewer = lower (a drum).</td></tr>
+    <tr><td><b>Amplitude</b></td><td>height of the wave: how much energy it carries</td><td><b>Loudness</b>, measured in decibels (dB)</td></tr>
   </table>
-  <h3>The path of sound: tap through it</h3>
-  <div class="box">
-    <div class="path" id="earPath"></div>
-    <div class="info" id="earInfo"></div>
-    <div class="ctrl"><button class="btn ghost" data-dir="-1" data-p="ear">&larr; Back</button><button class="btn" data-dir="1" data-p="ear">Next &rarr;</button></div>
-  </div>
+  <table>
+    <tr><th>Sound</th><th>dB</th><th>Hearing damage?</th></tr>
+    <tr><td>Whisper / normal conversation</td><td>30 / 60</td><td>None</td></tr>
+    <tr><td>Washing machine</td><td>70</td><td>Unlikely</td></tr>
+    <tr><td>Traffic noise</td><td>85</td><td>Possible after prolonged exposure</td></tr>
+    <tr><td>Hair dryer / lawnmower</td><td>90</td><td>Likely after prolonged exposure</td></tr>
+    <tr><td>Motorcycle</td><td>95</td><td>Likely</td></tr>
+    <tr><td>Music at full volume</td><td>100&ndash;110</td><td>Very likely</td></tr>
+    <tr><td>Chainsaw / rock concert</td><td>110&ndash;120</td><td>Very likely within minutes</td></tr>
+    <tr><td>Sirens</td><td>120</td><td>Immediate risk</td></tr>
+    <tr><td>Fireworks / gunshots</td><td>140&ndash;160</td><td>Immediate damage</td></tr>
+  </table>
   <h3>How the brain knows the pitch</h3>
   <ul>
-    <li><b class="k">Place theory:</b> different pitches make <b>different spots</b> on the basilar membrane vibrate most. This works best for <b>high</b> pitches.</li>
-    <li><b class="k">Frequency theory:</b> the auditory nerve fires at the <b>same rate</b> as the sound wave. This works for <b>low</b> pitches.</li>
-    <li><b class="k">Volley principle:</b> a single neuron can't fire fast enough for middle-high pitches, so groups of neurons <b>take turns</b>, like soldiers firing in volleys, to keep up the combined rate.</li>
-    <li><b class="k">Sound localization:</b> a sound to your right reaches your right ear <b>a split second sooner</b> and <b>slightly louder</b>. Your brain uses that difference to locate it.</li>
+    <li><b class="k">Place theory</b> (Helmholtz): different pitches activate <b>different places</b> on the cochlea's <b>basilar membrane</b>. High frequencies vibrate near the beginning of the membrane; low ones vibrate more of it. It explains <b>high</b> pitches well but not low ones.</li>
+    <li><b class="k">Frequency theory:</b> the whole membrane vibrates, and the auditory nerve fires at the <b>same rate</b> as the sound wave: 100 waves per second, 100 pulses per second. It explains <b>low</b> pitches. The catch: one neuron can't fire more than about <b>1,000 times a second</b>.</li>
+    <li><b class="k">Volley theory:</b> groups of neurons fire in <b>rapid succession</b>, taking turns like soldiers alternating shots while others reload, to encode sounds <b>above 1,000 Hz</b>. Place and frequency together cover the middle range.</li>
+    <li><b class="k">Sound localization:</b> sound reaches the <b>closer ear sooner and with more intensity</b>, and your brain reads that small difference. It's most accurate when the sound is not straight in front of or behind you.</li>
   </ul>
+  <p class="note"><b>Where things are:</b> outer and middle ear = ear canal, eardrum, middle-ear bones (ossicles). Inner ear = the cochlea (with the basilar membrane) and the semicircular canals. Then the auditory nerve carries the signal to the brain.</p>
   <div class="two">
-    <div><span class="tag">Conductive hearing loss</span><p style="margin:.2em 0">A <b>mechanical</b> problem: damage to the eardrum or ossicles, so vibrations don't get carried in. Often helped by <b>hearing aids</b> (which amplify) or surgery.</p></div>
-    <div><span class="tag">Sensorineural hearing loss</span><p style="margin:.2em 0">Damage to the <b>hair cells</b> in the cochlea or the auditory nerve, often from loud noise or aging. A <b>cochlear implant</b> can turn sound into electrical signals that stimulate the nerve directly.</p></div>
+    <div><span class="tag">Conduction deafness</span><p style="margin:.2em 0">A problem in the <b>outer or middle ear</b>: damage to the ear canal, eardrum or middle-ear bones.</p></div>
+    <div><span class="tag">Sensorineural deafness</span><p style="margin:.2em 0">Damage to the <b>inner ear or auditory nerve</b>. Soft sounds and speech get hard to hear, and it's often <b>permanent</b>.</p></div>
   </div>
 
   <h2 id="chem">1.6 &middot; Smell (olfaction) &amp; taste (gustation)</h2>
-  <p>These are the <b>chemical senses</b>: receptors respond to molecules, not energy waves.</p>
+  <p>Both senses respond to <b>chemicals</b>.</p>
   <div class="two">
     <div><span class="tag">Smell: olfaction</span>
       <ul>
-        <li>Receptors high in the <b>nasal cavity</b> send signals to the <b>olfactory bulb</b>.</li>
-        <li>Smell is the one sense that <b>skips the thalamus</b>. It runs close to the brain's <b>emotion and memory</b> areas, which is why a smell can bring back a memory instantly.</li>
-        <li><b>Survival job:</b> detect danger (smoke, spoiled food) and recognize people.</li>
-        <li><b>Pheromones:</b> chemical signals that carry messages between animals of the same species. Their role in humans is debated.</li>
+        <li>Odor molecules carried in the air dissolve into <b>nasal mucus</b> and stimulate <b>olfactory receptors</b> in the nasal cavity, which transduce them into neural messages.</li>
+        <li>Smell is routed through the <b>limbic system</b> instead of the <b>thalamus</b>. That's why scents are so strongly tied to <b>memories and emotions</b>.</li>
+        <li><b>Pheromones:</b> chemical signals released by members of a species that affect the behavior of others of the same species (attracting a mate, signaling alarm, marking territory). True pheromones in humans are <b>controversial</b>; menstrual synchrony has been suggested as one effect.</li>
+        <li>Your sense of smell <b>declines with age</b>.</li>
       </ul></div>
     <div><span class="tag">Taste: gustation</span>
       <ul>
-        <li>Receptor cells sit in <b>taste buds</b>, mostly on the tongue's bumps (papillae).</li>
-        <li>The basic tastes each flag something useful: <b>sweet</b> = energy, <b>salty</b> = sodium your body needs, <b>sour</b> and <b>bitter</b> = possible spoiled food or poison, <b>umami</b> = protein. Many texts add <b>fat</b> (oleogustus) as a sixth.</li>
-        <li><b>Supertasters</b> have many more taste buds, so flavors (especially bitter) hit them much harder.</li>
+        <li>Taste cells sit in <b>taste buds</b> on the tongue (with the papillae), in the throat and on the soft palate. They <b>renew about every week or two</b>.</li>
+        <li><b>Sweet</b> (sugars), <b>sour</b> (acids, like citrus), <b>salty</b> (salt), <b>bitter</b> (often plant foods), <b>umami</b> (savory: amino acids, protein foods like meat and cheese), and <b>oleogustus</b>, a proposed taste for fat that is still debated.</li>
+        <li><b>Supertasters</b> (about 25%): many taste buds, very sensitive to some tastes including spicy and to a particular bitter chemical. Women are more likely to be supertasters. <b>Medium tasters</b>: average. <b>Nontasters</b> (about 25%): can't taste that bitter compound.</li>
       </ul></div>
   </div>
 
   <h2 id="touch">1.6 &middot; Touch &amp; pain</h2>
-  <p>Your skin has receptors for four basic sensations: <b>pressure, warmth, cold and pain</b>. Other feelings are mixes. "Wet," for example, is cold plus pressure.</p>
+  <p><b>The touch pathway:</b> touch receptors in the skin &rarr; sensory nerves &rarr; spinal cord &rarr; <b>thalamus</b> (the relay) &rarr; <b>somatosensory cortex</b> in the <b>parietal lobe</b>, where it becomes a touch perception. Damage there can leave someone unable to feel touch or temperature on part of the body even though they can move normally.</p>
+  <p><b>Warm + cold = hot:</b> stimulating nearby warm and cold spots at once feels <b>hot</b>.</p>
   <ul>
-    <li><b class="k">Gate-control theory:</b> the spinal cord has a neural "<b>gate</b>." Pain signals on small nerve fibers open it. Signals on larger fibers (like rubbing a bumped elbow) or messages from the brain can <b>close</b> it. That's why rubbing helps, and why distraction works.</li>
-    <li><b class="k">Phantom limb sensation:</b> people who've lost a limb can still feel it, even feel pain in it. Pain is built by the <b>brain</b>, not just the body part.</li>
-    <li><b class="k">Changing pain:</b> distraction, <b>endorphins</b> (the body's natural painkillers, released during exercise or stress), <b>placebos</b>, hypnosis, and expectations all change how much it hurts.</li>
+    <li><b class="k">Pain is processed in both the body and the brain.</b> The same stimulus can hurt one person and thrill another (a tattoo). Pain tolerance, mindset and past experience all change it.</li>
+    <li><b class="k">Gate-control theory:</b> a neural "<b>gate</b>" in the <b>spinal cord</b> can open to let pain signals reach the brain or close to block them. Rubbing a stubbed toe activates larger, non-pain fibers that help <b>close the gate</b>.</li>
+    <li><b class="k">Phantom limb:</b> feeling sensation, even pain, in a limb that's gone. The brain's map of the limb stays intact and keeps signaling it. About <b>7 in 10</b> amputees feel pain there.</li>
   </ul>
 
-  <h2 id="body">1.6 &middot; The two "hidden" body senses</h2>
+  <h2 id="body">1.6 &middot; The two body senses</h2>
   <div class="two">
-    <div><span class="tag">Kinesthesis</span><p style="margin:.2em 0">Knowing where your <b>body parts are</b> and how they're moving, from receptors in muscles, tendons and joints. It's how you can touch your nose with your eyes closed.</p></div>
-    <div><span class="tag">Vestibular sense</span><p style="margin:.2em 0">Your sense of <b>balance</b> and head movement, from the fluid-filled <b>semicircular canals</b> in the inner ear. Spin around, then stop: the fluid keeps moving, and you feel dizzy.</p></div>
+    <div><span class="tag">Kinesthetic sense</span><p style="margin:.2em 0">Sensing the <b>position and movement</b> of your body parts, from receptors in <b>muscles, tendons and joints</b>. It lets you coordinate walking, talking and gestures, and touch your nose with your eyes closed. A leg "falling asleep" disrupts it.</p></div>
+    <div><span class="tag">Vestibular sense</span><p style="margin:.2em 0"><b>Balance</b>, controlled in the <b>inner ear</b> by the <b>semicircular canals</b>, whose receptors detect head motion. Spinning in circles disrupts their fluid, and that's why you get dizzy.</p></div>
   </div>
 
   <!-- ================= PERCEPTION ================= -->
   <h2 id="updown">2.1 &middot; Bottom-up vs. top-down</h2>
   <div class="two">
-    <div><span class="tag">Bottom-up processing</span><p style="margin:.2em 0">Starts with the <b>raw sensory data</b> and builds up: lines, then shapes, then "it's a letter A." It's data-driven.</p></div>
-    <div><span class="tag">Top-down processing</span><p style="margin:.2em 0">Starts with what you <b>already know or expect</b> and uses it to interpret. It's why you can rd ths sntnce.</p></div>
+    <div><span class="tag">Bottom-up processing</span><p style="margin:.2em 0"><b>Details to big picture.</b> Start with the small sensory details and build up to the whole, with no expectation guiding you. <i>Memory trick: <b>B</b>uild <b>U</b>p.</i></p></div>
+    <div><span class="tag">Top-down processing</span><p style="margin:.2em 0"><b>Big picture to details.</b> Interpret using context, prior knowledge and expectations. It's why you can rd ths sntnce. <i>Memory trick: <b>T</b>hink <b>D</b>own.</i></p></div>
   </div>
-  <p><b class="k">Perceptual set</b> is a mental "readiness" to see one thing rather than another. It's shaped by:</p>
   <ul>
-    <li><b>Context:</b> the same shape reads as "B" between A and C, and as "13" between 12 and 14.</li>
-    <li><b>Expectations:</b> tell someone a blurry photo is a lake monster and they'll see one.</li>
-    <li><b>Culture:</b> what you grew up seeing shapes what you notice and how you read images.</li>
-    <li><b>Motivation:</b> when you're hungry, food-related things jump out at you.</li>
-    <li><b>Emotion:</b> a hill looks steeper when you're sad or tired.</li>
+    <li><b class="k">Schemas:</b> mental frameworks that organize and interpret information. They shape what you expect and what you pay attention to. Your "restaurant" schema tells you what to do even in a restaurant you've never been to.</li>
+    <li><b class="k">Perceptual set:</b> a tendency to notice some parts of what you sense and ignore others, so you <b>see what you expect to see</b>. It's shaped by <b>expectations, experiences and context</b>. At dusk on a forest trail, a twisted branch looks like a snake.
+      <br><span class="note"><b>Picture this:</b> the same shape reads as "B" between A and C, and as "13" between 12 and 14. That's context at work.</span></li>
   </ul>
 
-  <h2 id="gestalt">2.1 &middot; Gestalt: the whole is more than its parts</h2>
-  <p>Gestalt psychologists showed the brain <b>organizes</b> pieces into wholes automatically. The first move is <b>figure-ground</b>: splitting what you see into an object (the figure) and its surroundings (the ground). Then it <b>groups</b>:</p>
+  <h2 id="gestalt">2.1 &middot; Gestalt: the whole is different from the sum of its parts</h2>
+  <p>Gestalt psychology says we perceive <b>whole objects</b> (gestalts), not just collections of parts. The brain is wired to find structure and pattern, like seeing a face in a painting made of fruits and vegetables.</p>
+  <p><b class="k">Figure-ground:</b> separating an object (the <b>figure</b>) from its surroundings (the <b>ground</b>), like your keys on a cluttered desk. In the Rubin vase you see either a vase or two faces, and the view can flip with attention.</p>
   <div class="box">
     <svg viewBox="0 0 660 150" role="img" aria-label="Three Gestalt grouping examples">
       <g id="prox"></g><g id="sim"></g>
@@ -245,33 +238,33 @@ summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user
     <ul style="margin-top:6px">
       <li><b class="k">Proximity:</b> things <b>close together</b> group. You see three groups of dots, not 24 separate ones.</li>
       <li><b class="k">Similarity:</b> things that <b>look alike</b> group. You see rows of color.</li>
-      <li><b class="k">Closure:</b> you <b>fill in gaps</b> to see a whole. You see a circle, not four curved lines.</li>
+      <li><b class="k">Closure:</b> you see <b>incomplete shapes as complete</b>. You see a circle, not four curved lines.</li>
+      <li><b class="k">Continuity:</b> you perceive <b>continuous patterns</b>.</li>
     </ul>
   </div>
 
   <h2 id="attention">2.1 &middot; Attention decides what you perceive</h2>
   <ul>
-    <li><b class="k">Selective attention:</b> you can only focus on a <b>small slice</b> of everything your senses pick up.</li>
-    <li><b class="k">Cocktail party effect:</b> in a noisy room you tune everyone out, until someone across the room says <b>your name</b> and you hear it instantly.</li>
-    <li><b class="k">Inattentional blindness:</b> missing something <b>in plain view</b> because your attention is elsewhere. In a famous study, people counting basketball passes missed a person in a gorilla suit walking through.</li>
-    <li><b class="k">Change blindness:</b> failing to notice a <b>change</b>, like a different person after a brief interruption, or an edit between movie shots.</li>
+    <li><b class="k">Selective attention:</b> focusing on <b>one stimulus</b> while shutting out the others.</li>
+    <li><b class="k">Cocktail party effect:</b> tuning in to <b>one voice</b> among many conversations and background noise, and catching your own <b>name</b> across a noisy room. The auditory cortex boosts some sounds so the brain can prioritize, and the <b>reticular activating system</b> is involved.</li>
+    <li><b class="k">Inattentional blindness:</b> failing to notice an <b>unexpected</b> thing in full view because your attention is on a task. Most people are sure they'd notice it; many don't.</li>
+    <li><b class="k">Change blindness:</b> failing to notice a <b>large change</b> when it happens during a visual disruption. While you're scrolling your phone at dinner, someone swaps your water for soda, and it takes you minutes to notice.</li>
   </ul>
 
-  <h2 id="depth">2.1 &middot; How you see depth in a flat image</h2>
-  <p>Your retinas are flat, yet you see in 3-D. The <b>visual cliff</b> experiment showed babies who can crawl already refuse to crawl over what <b>looks</b> like a drop (it's covered by glass). So depth perception shows up early.</p>
+  <h2 id="depth">2.1 &middot; How you see depth</h2>
   <div class="two">
     <div><span class="tag">Binocular cues (need both eyes)</span>
       <ul>
-        <li><b>Retinal disparity:</b> each eye sees a slightly different image. The <b>bigger the difference</b>, the closer the object. (Hold a finger near your nose and close each eye in turn.)</li>
-        <li><b>Convergence:</b> your eyes <b>turn inward</b> more for close objects, and your brain reads the strain.</li>
+        <li><b>Retinal disparity:</b> each eye gets a <b>slightly different image</b> because the eyes sit apart. The brain compares and fuses the two images, and the difference is a cue to depth.</li>
+        <li><b>Convergence:</b> your eyes <b>turn inward</b> to focus on a close object. The closer it is, the more they converge, and the eye muscles' sensations tell your brain the distance. <i>Try it: bring a finger slowly toward your nose.</i></li>
       </ul></div>
     <div><span class="tag">Monocular cues (one eye is enough)</span>
       <ul>
-        <li><b>Linear perspective:</b> parallel lines seem to <b>meet</b> in the distance.</li>
-        <li><b>Interposition:</b> whatever <b>blocks</b> something else is closer.</li>
-        <li><b>Relative size:</b> of two similar objects, the <b>smaller</b> one looks farther.</li>
-        <li><b>Relative clarity:</b> <b>hazy</b> things look farther (distant mountains).</li>
-        <li><b>Texture gradient:</b> texture gets <b>finer and denser</b> with distance.</li>
+        <li><b>Linear perspective:</b> parallel lines seem to <b>converge</b> in the distance, like a road meeting the horizon.</li>
+        <li><b>Interposition:</b> the object that <b>overlaps</b> another is seen as closer.</li>
+        <li><b>Relative size:</b> of objects expected to be the same size, the <b>larger</b> one looks closer.</li>
+        <li><b>Relative clarity:</b> clear, detailed objects look closer; <b>hazy</b> ones look farther, like distant mountains. There are fewer particles in the air between you and near things.</li>
+        <li><b>Texture gradient:</b> textures lose <b>detail</b> the farther away they are.</li>
       </ul></div>
   </div>
   <div class="box">
@@ -288,24 +281,29 @@ summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user
     </svg>
   </div>
 
-  <h2 id="constancy">2.1 &middot; Constancy, motion, and adapting</h2>
+  <h2 id="constancy">2.1 &middot; Constancy and motion</h2>
+  <p><b class="k">Perceptual constancy:</b> seeing objects as <b>unchanging</b> even when the image on your retina (its size, shape or color) changes.</p>
   <ul>
-    <li><b class="k">Perceptual constancy:</b> you see objects as <b>unchanging</b> even when the image on your retina changes. <b>Shape constancy:</b> a door swinging open still looks rectangular. <b>Size constancy:</b> a friend walking away doesn't seem to shrink. <b>Color/brightness constancy:</b> a red apple still looks red in dim light.</li>
-    <li><b class="k">Apparent movement:</b> seeing motion where there isn't any.
-      <ul>
-        <li><b>Stroboscopic effect:</b> a rapid series of still images looks like smooth motion. That's how flipbooks and movies work.</li>
-        <li><b>Phi phenomenon:</b> lights blinking on and off in sequence seem to <b>move</b>, like a marquee sign.</li>
-        <li><b>Autokinetic effect:</b> a single still point of light in a dark room seems to <b>drift</b>.</li>
-      </ul></li>
-    <li><b class="k">Perceptual adaptation:</b> the brain <b>adjusts</b> to a changed view. People wearing goggles that shift or flip their vision are clumsy at first, then adapt within days. The survival value is that you can keep functioning when your senses change.</li>
+    <li><b>Shape constancy:</b> a door swinging open, or a car seen from the side vs. the front, keeps its real shape in your mind.</li>
+    <li><b>Size constancy:</b> a plane overhead looks small enough to fit between your fingers, but you know it's huge.</li>
+    <li><b>Color constancy:</b> a red apple looks red in bright or dim light.</li>
+    <li><b>Brightness constancy:</b> white paper looks about as bright at dusk as in daylight, even though it reflects different amounts of light.</li>
   </ul>
+  <p><b class="k">Apparent movement:</b> seeing motion when nothing is actually moving.</p>
+  <ul>
+    <li><b>Stroboscopic movement:</b> a series of separate still images shown in quick succession looks like motion. That's how movies and animation work.</li>
+    <li><b>Phi phenomenon:</b> lights flashed in sequence a short distance apart on a sign seem to move.</li>
+  </ul>
+
+  <h2 id="workbook">In your workbook: fill these from your AMSCO reading</h2>
+  <p class="note">Your 1.6 and 2.1 workbook pages also ask for these. Use your AMSCO reading and class notes for them: signal-detection theory (the present/absent, detected/undetected chart); what sensory adaptation is <i>for</i>; the light-wave chart (wavelength, intensity, amplitude); the other name for trichromatic theory; cornea and iris; dark adaptation; optic chiasm; how near- and farsightedness happen; the ear parts and how sound becomes a neural signal; treating hearing loss; why smell and taste evolved, and what each taste is for; the four basic touch sensations; ways to alter pain; how culture, motivation and emotion shape perception; the visual cliff; the autokinetic effect; perceptual adaptation.</p>
 
   <!-- ================= QUIZ ================= -->
   <h2 id="quiz">Self-check</h2>
-  <p class="note">Answer in your head first, then reveal. These are scenario questions, the way the AP exam asks them.</p>
+  <p class="note">Answer in your head first, then reveal. Scenario questions, like the ones on Mrs. Aschwanden's practice tests.</p>
   <div id="qs"></div>
 
-  <p class="note" style="margin-top:22px">Covers AP Psychology CED Topics 1.6 (Sensation) and 2.1 (Perception), the scope of the AMSCO reading. Original explanations; no textbook or workbook text is reproduced.</p>
+  <p class="note" style="margin-top:22px">Covers Mrs. Aschwanden's Topic 1.6 (Sensation) and 2.1 (Perception) material. Original explanations; no slide, workbook or textbook text is reproduced.</p>
   <div class="footer">Made for you &middot; ad-free</div>
 </div>
 <script>
@@ -315,41 +313,23 @@ summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user
   function wu(){ var v=+w.value; document.getElementById('wv').textContent=v; document.getElementById('jnd').textContent=(v*0.02).toFixed(v*0.02<1?2:1); }
   w.addEventListener('input',wu); wu();
 
-  /* Signal detection */
-  var SDT={hit:'<b>Hit:</b> a swimmer really is struggling, and the lifeguard spots it. Correct "yes."',
-    miss:'<b>Miss:</b> a swimmer really is struggling, and the lifeguard doesn\'t notice. The dangerous mistake. More likely when tired or distracted.',
-    fa:'<b>False alarm:</b> nobody is in trouble, but the lifeguard blows the whistle anyway. More likely when on edge or expecting trouble.',
-    cr:'<b>Correct rejection:</b> nobody is in trouble, and the lifeguard correctly stays put. Correct "no."'};
-  var cells=[].slice.call(document.querySelectorAll('.cell'));
-  cells.forEach(function(c){ c.addEventListener('click',function(){ cells.forEach(function(x){x.classList.toggle('on',x===c);}); document.getElementById('sdtInfo').innerHTML=SDT[c.dataset.k]; }); });
-
-  /* Steppers */
+  /* Stepper */
   var PATHS={
-    eye:[['Cornea','The clear, curved <b>front window</b> of the eye. It bends incoming light and does most of the focusing.'],
-      ['Pupil & iris','The <b>pupil</b> is the opening; the <b>iris</b> (the colored muscle) widens or narrows it to let in more or less light.'],
-      ['Lens','Fine-tunes focus by <b>changing shape</b> (accommodation): rounder for near objects, flatter for far ones.'],
-      ['Retina','The light-sensitive layer at the back. <b>Rods and cones</b> here do the <b>transduction</b>: light in, neural signal out. (The image lands upside down; the brain sorts it out.)'],
-      ['Bipolar & ganglion cells','Signals pass from rods and cones to <b>bipolar cells</b>, then to <b>ganglion cells</b>, whose long fibers bundle together.'],
-      ['Optic nerve','The bundle of ganglion fibers carries the signal out of the eye. Where it leaves is the <b>blind spot</b>.'],
-      ['Optic chiasm','The two optic nerves <b>cross</b> here, so the left side of the brain handles the right half of what you see, and vice versa.'],
-      ['Thalamus','The brain\'s <b>relay station</b> passes the signal on.'],
-      ['Visual cortex (occipital lobe)','At the back of the brain. Specialized cells (feature detectors) pick out edges, lines and motion, and the image is assembled.']],
-    ear:[['Pinna','The outer ear you can see. It <b>funnels</b> sound waves inward.'],
-      ['Ear canal','Carries the sound waves to the eardrum.'],
-      ['Eardrum','A thin membrane that <b>vibrates</b> with the sound waves. (Start of the middle ear.)'],
-      ['Ossicles','Three tiny bones, the <b>hammer, anvil and stirrup</b> (malleus, incus, stapes), that pass on and <b>amplify</b> the vibration.'],
-      ['Oval window','The stirrup pushes on this membrane, the doorway to the <b>inner ear</b>.'],
-      ['Cochlea','A snail-shaped, <b>fluid-filled</b> tube. The vibration makes ripples in the fluid, bending <b>hair cells</b> on the basilar membrane. That bending is the <b>transduction</b>.'],
-      ['Auditory nerve','Carries the neural signal to the brain (through the thalamus).'],
-      ['Auditory cortex (temporal lobe)','Where sound is processed and recognized. (Nearby, the <b>semicircular canals</b> in the inner ear handle balance, not hearing.)']]};
-  var pos={eye:0,ear:0};
+    eye:[['Cornea','Light enters the eye through the cornea.'],
+      ['Pupil','Light passes through the pupil, which <b>regulates how much light</b> gets in.'],
+      ['Lens','The lens <b>focuses</b> the light onto the retina, changing shape to focus near or far (accommodation).'],
+      ['Retina','The light-sensitive layer at the back of the eye. <b>Rods and cones</b> here do the <b>transduction</b>: light in, neural signal out.'],
+      ['Bipolar & ganglion cells','Signals pass from the rods and cones to <b>bipolar cells</b>, then to <b>ganglion cells</b>.'],
+      ['Optic nerve','Ganglion cells send the signal to the brain through the optic nerve. Where it leaves the eye is the <b>blind spot</b>.'],
+      ['Brain','The signal reaches the brain\'s visual areas, where it is interpreted (perception).']]};
+  var pos={eye:0};
   function draw(p){
     var box=document.getElementById(p+'Path'); box.innerHTML='';
     PATHS[p].forEach(function(s,i){ var b=document.createElement('button'); b.className='stop'+(i===pos[p]?' on':(i<pos[p]?' done':'')); b.textContent=(i+1)+'. '+s[0]; b.onclick=function(){pos[p]=i;draw(p);}; box.appendChild(b); });
     document.getElementById(p+'Info').innerHTML='<b>'+PATHS[p][pos[p]][0]+':</b> '+PATHS[p][pos[p]][1];
   }
   [].slice.call(document.querySelectorAll('[data-p]')).forEach(function(b){ b.addEventListener('click',function(){ var p=b.dataset.p; pos[p]=Math.max(0,Math.min(PATHS[p].length-1,pos[p]+(+b.dataset.dir))); draw(p); }); });
-  draw('eye'); draw('ear');
+  draw('eye');
 
   /* Afterimage */
   var flag=document.getElementById('flag');
@@ -357,7 +337,7 @@ summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user
   paint(true);
   var timer=null;
   document.getElementById('aiBtn').addEventListener('click',function(){
-    if(timer) return; paint(true); var t=20, msg=document.getElementById('aiMsg');
+    if(timer) return; paint(true); var t=30, msg=document.getElementById('aiMsg');
     msg.textContent='Keep staring at the dot… '+t;
     timer=setInterval(function(){ t--; if(t>0){ msg.textContent='Keep staring at the dot… '+t; return; }
       clearInterval(timer); timer=null; paint(false);
@@ -376,20 +356,22 @@ summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user
 
   /* Quiz (original scenario questions) */
   var Q=[
-    ['You stop noticing the hum of the fridge after a few minutes. Which concept is this?','<b>Sensory adaptation.</b> Constant stimulus, lower sensitivity, so your attention is free for changes.'],
-    ['A hearing test plays tones softer and softer. The quietest tone you catch half the time marks your…','<b>Absolute threshold</b> (the 50% detection point).'],
-    ['You notice adding 1 lb to a 10-lb bag, but not adding 1 lb to a 60-lb bag. Which law explains it?','<b>Weber\'s law:</b> the just-noticeable difference is a constant proportion of the starting stimulus, not a fixed amount.'],
-    ['An airport screener, worried after a security alert, flags lots of harmless bags. In signal detection terms these are…','<b>False alarms.</b> Expectations and motivation shifted the screener toward saying "yes."'],
-    ['Which receptors would you rely on most to find your way across a dark campsite?','<b>Rods.</b> They work in dim light and dominate peripheral vision. Cones need brighter light.'],
-    ['After staring at a red square, you see a green square on a white wall. Which theory explains this?','<b>Opponent-process theory.</b> Red-sensing cells tire, so their opposite (green) dominates briefly: an afterimage.'],
-    ['A low hum and a high whistle: which theory best explains how you hear the HIGH whistle\'s pitch?','<b>Place theory.</b> High pitches peak at specific places on the basilar membrane. (Frequency theory handles low pitches.)'],
-    ['A rock concert damages Mia\'s cochlear hair cells. What type of hearing loss, and what device can help?','<b>Sensorineural</b> loss. A <b>cochlear implant</b> can stimulate the auditory nerve directly. (Conductive loss is the eardrum/ossicles problem.)'],
-    ['Why can a whiff of sunscreen instantly bring back a beach vacation?','Smell signals <b>skip the thalamus</b> and connect closely with the brain\'s <b>emotion and memory</b> areas.'],
-    ['Rubbing your shin after bumping it makes it hurt less. Which theory explains why?','<b>Gate-control theory.</b> Signals from rubbing (large fibers) help "close the gate" in the spinal cord on pain signals.'],
-    ['A gymnast knows exactly where her arms are mid-flip without looking. Which sense?','<b>Kinesthesis</b> (body-position sense from muscles, tendons and joints). Balance itself is the vestibular sense.'],
-    ['You read "THE CAT" correctly even though the H and A are drawn as the same shape. What kind of processing?','<b>Top-down processing.</b> Context and knowledge of words tell you which letter it must be.'],
+    ['You stop noticing the hum of the fridge after a few minutes, though it hasn\'t gotten quieter. Which concept is this?','<b>Sensory adaptation.</b> Your receptors became less responsive to a constant stimulus.'],
+    ['A hearing test plays tones softer and softer. The quietest tone you catch 50% of the time marks your…','<b>Absolute threshold.</b> Someone who catches an even softer tone has a <b>lower</b> threshold, so they are more sensitive.'],
+    ['You notice adding 1 lb to a 10-lb bag, but not adding 1 lb to a 60-lb bag. Which law explains it?','<b>Weber\'s law:</b> the change you can notice is proportional to the starting intensity.'],
+    ['On a colored-dot test, you read "74" and your friend reads "21". What does your friend most likely have?','<b>Red-green color vision deficiency</b> (dichromatism), the most common kind.'],
+    ['Which receptors would you rely on most to find your way across a dark campsite?','<b>Rods.</b> They work in dim light (in black and white) and detect motion. Cones need bright light.'],
+    ['After staring at a red square, you see a green square on a white wall. Which theory explains this?','<b>Opponent-process theory.</b> Red and green are an opposing pair; the red side was overstimulated, so green shows briefly as an afterimage.'],
+    ['A low hum and a high whistle: which theory best explains how you hear the HIGH whistle\'s pitch?','<b>Place theory.</b> High pitches activate specific places on the basilar membrane. (Frequency theory handles low pitches.)'],
+    ['An infection damages Mia\'s inner ear. Soft sounds and speech are now hard to hear. Which type of hearing loss?','<b>Sensorineural</b> (inner ear or auditory nerve, often permanent). <b>Conduction</b> loss is the outer or middle ear: ear canal, eardrum, middle-ear bones.'],
+    ['Why can a whiff of sunscreen instantly bring back a beach vacation?','Smell is routed through the <b>limbic system</b> instead of the thalamus, so scents are strongly tied to <b>memories and emotions</b>.'],
+    ['Rubbing your shin after bumping it makes it hurt less. Which theory explains why?','<b>Gate-control theory.</b> Signals from rubbing travel on larger, non-pain fibers that help "close the gate" in the spinal cord.'],
+    ['After a stroke, Lena moves her left hand normally but can\'t feel pressure on it. Which brain area most likely processes those touch signals?','The <b>somatosensory cortex</b> (parietal lobe), the last stop on the touch pathway after the thalamus.'],
+    ['A gymnast knows exactly where her arms are mid-flip without looking. Which sense?','<b>Kinesthetic sense</b> (position and movement, from receptors in muscles, tendons and joints). Balance itself is the vestibular sense.'],
+    ['You read "THE CAT" correctly even though the H and A are drawn as the same shape. What kind of processing?','<b>Top-down processing.</b> Context and what you already know tell you which letter it must be.'],
     ['Told a cloudy photo shows a famous face, everyone suddenly "sees" it. This is an example of…','<b>Perceptual set</b>, driven by expectations.'],
-    ['Focused on a group text, Sam walks right past a friend waving at him. What is this called?','<b>Inattentional blindness:</b> missing something visible because attention is elsewhere.'],
+    ['Focused on a group text, Sam walks right past a friend waving at him. What is this called?','<b>Inattentional blindness:</b> missing an unexpected thing in full view because attention is on a task.'],
+    ['On a noisy bus you\'re reading, but you look up the moment someone behind you says your name. Which effect?','<b>Cocktail party effect.</b>'],
     ['A row of trees fades into haze in the distance, so the hazy trees look farther. Which depth cue?','<b>Relative clarity</b> (a monocular cue).'],
     ['As a car drives away, its image on your retina shrinks, yet you don\'t think the car is shrinking. Why?','<b>Size constancy:</b> perceiving an object\'s size as stable even as the retinal image changes.']
   ];
