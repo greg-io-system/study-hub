@@ -44,12 +44,19 @@ details{margin-top:6px}summary{cursor:pointer;font-weight:800;font-size:13.5px;c
 .footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
 </style></head>
 <body>
+<!-- SOURCES
+kind: class
+- ap-psychology/reference/bio-bases-neural-slides-capture.md
+- ap-psychology/reference/bio-bases-study-guide-capture.md
+fact-trace: 2026-10-23 additions+coverage
+-->
 <div class="wrap">
-  <div class="eyebrow">AP Psychology &middot; Topic 1.3</div>
+  <div class="eyebrow">AP Psychology &middot; Bio Bases &middot; Topic 1.3</div>
   <h1>The Neuron &amp; Neural Firing</h1>
-  <p class="tagline">For Monday's quiz. Three things to own: the <b>parts of a neuron</b>, the <b>order a neuron fires in</b>, and the <b>major neurotransmitters</b>. Tap around, then test yourself.</p>
+  <p class="tagline">Three things to own: the <b>parts of a neuron</b>, the <b>order a neuron fires in</b>, and the <b>neurotransmitters</b> (plus how drugs and hormones fit in). Tap around, then test yourself.</p>
 
   <h2>1 &middot; The neuron &mdash; tap each part</h2>
+  <p><b>Neurons</b> are the nerve cells that transmit information through the body with electrical and chemical signals. <b>Neural transmission</b> is how neurons communicate with each other.</p>
   <div class="diagram">
     <svg viewBox="0 0 660 250" role="img" aria-label="Diagram of a neuron">
       <!-- axon line -->
@@ -60,12 +67,6 @@ details{margin-top:6px}summary{cursor:pointer;font-weight:800;font-size:13.5px;c
         <rect class="shape" x="345" y="112" width="70" height="26" rx="13" fill="#f3d9a6" stroke="#d9b56b" stroke-width="2"/>
         <rect class="shape" x="440" y="112" width="70" height="26" rx="13" fill="#f3d9a6" stroke="#d9b56b" stroke-width="2"/>
         <text x="380" y="160" text-anchor="middle">myelin sheath</text>
-      </g>
-      <!-- nodes of ranvier (gaps) -->
-      <g class="part" data-k="node">
-        <circle class="shape" cx="332" cy="125" r="6" fill="#b98cff"/>
-        <circle class="shape" cx="427" cy="125" r="6" fill="#b98cff"/>
-        <text x="332" y="102" text-anchor="middle">nodes</text>
       </g>
       <!-- soma -->
       <g class="part" data-k="soma">
@@ -82,7 +83,7 @@ details{margin-top:6px}summary{cursor:pointer;font-weight:800;font-size:13.5px;c
       <g class="part" data-k="terminal">
         <path class="shape" d="M560 125 L610 95 M560 125 L618 122 M560 125 L610 155 M600 100 L625 88 M600 150 L625 162" stroke="#8f7dcf" stroke-width="3" fill="none" stroke-linecap="round"/>
         <circle cx="612" cy="93" r="5" fill="#8f7dcf"/><circle cx="620" cy="122" r="5" fill="#8f7dcf"/><circle cx="612" cy="157" r="5" fill="#8f7dcf"/>
-        <text x="600" y="200" text-anchor="middle">axon terminals</text>
+        <text x="600" y="200" text-anchor="middle">terminal branches</text>
       </g>
       <!-- axon label (clickable via the line region) -->
       <g class="part" data-k="axon">
@@ -90,59 +91,71 @@ details{margin-top:6px}summary{cursor:pointer;font-weight:800;font-size:13.5px;c
         <text x="222" y="108" text-anchor="middle">axon</text>
       </g>
     </svg>
-    <div class="info" id="info"><b>Tap a part</b> of the neuron to see what it does. The message travels: <b>dendrites &rarr; soma &rarr; axon &rarr; axon terminals</b>.</div>
+    <div class="info" id="info"><b>Tap a part</b> of the neuron to see what it does. The message travels: <b>dendrites &rarr; cell body &rarr; axon &rarr; terminal branches</b>.</div>
   </div>
-  <p class="note">Also know: <b>glial cells (glia)</b> support, feed and protect neurons; <b>Schwann cells</b> build the myelin. Neuron types by job: <b>sensory</b> (in), <b>motor</b> (out), <b>interneurons</b> (in between); the <b>reflex arc</b> skips the brain for speed.</p>
+  <p class="note">Also know: <b>glial cells</b> are the support cells &mdash; structure, insulation, communication and waste transport. <b>Schwann cells</b> are glia that make the myelin sheath. Neuron types by job: <b>sensory</b> neurons carry signals from the body to the brain and spinal cord; <b>motor</b> neurons carry signals out to muscles and glands; <b>interneurons</b> (in the spinal cord) connect the two. Together they make the <b>reflex arc</b> &mdash; a fast, automatic response without conscious thought (hand off the hot stove).</p>
 
   <h2>2 &middot; How a neuron fires (in order)</h2>
-  <p>The one thing graders love: <b>the sequence</b>. Walk it top to bottom.</p>
+  <p>Learn it as <b>a sequence</b>. Walk it top to bottom.</p>
   <ol class="steps">
-    <li><b>Resting potential</b> &mdash; at rest the inside of the neuron is slightly <b>negative</b> (~&minus;70mV), charged up and ready.</li>
-    <li><b>Threshold</b> &mdash; incoming signals add up; if they pass the threshold level, the neuron fires.</li>
-    <li><b>Action potential</b> &mdash; the electrical impulse fires and shoots down the axon. <b>Depolarization</b>: positive ions rush in and flip the charge.</li>
-    <li><b>All-or-nothing principle</b> &mdash; it fires <b>fully or not at all</b>. A stronger stimulus makes it fire <em>more often</em>, not "harder."</li>
-    <li>The signal jumps node to node down the myelin (faster), reaching the <b>axon terminals</b>.</li>
-    <li><b>Neurotransmitters</b> are released across the <b>synapse (synaptic cleft)</b> to the next neuron's dendrites &mdash; <b>excitatory</b> (go) or <b>inhibitory</b> (stop).</li>
-    <li><b>Refractory period</b> &mdash; a brief pause before it can fire again. Leftover neurotransmitters are pulled back in by <b>reuptake</b>.</li>
+    <li><b>Resting potential</b> &mdash; at rest the inside of the neuron is more <b>negative</b> than the outside (about &minus;70mV).</li>
+    <li><b>Threshold</b> &mdash; the minimum level of stimulation needed to make the neuron fire.</li>
+    <li><b>Depolarization</b> &mdash; positive ions (like sodium) rush in, so the inside becomes <b>less negative</b>. That triggers the <b>action potential</b>: a brief electrical charge that travels down the axon. <i>Picture this: a dam&rsquo;s floodgate opening.</i></li>
+    <li><b>All-or-nothing principle</b> &mdash; once threshold is reached it fires at <b>full strength</b>; below threshold it doesn&rsquo;t fire at all. <i>Picture this: a light switch.</i></li>
+    <li>A <b>myelinated</b> axon conducts the signal faster, out to the terminal branches.</li>
+    <li><b>Neurotransmitters</b> carry the signal to the next neuron&rsquo;s <b>receptor sites</b> &mdash; <b>excitatory</b> ones make the next neuron <em>more likely</em> to fire, <b>inhibitory</b> ones make it <em>less likely</em> (the membrane becomes more + or more &minus;).</li>
+    <li><b>Refractory period</b> &mdash; the neuron can&rsquo;t fire again until the ions are back to the resting state. Released neurotransmitter is reabsorbed by the neuron that sent it: <b>reuptake</b>.</li>
   </ol>
 
-  <h2>3 &middot; Neurotransmitters (function &amp; malfunction)</h2>
-  <p class="note">The classic quiz table. Learn the pair: what it does, and what happens when it's off.</p>
+  <h2>3 &middot; Neurotransmitters</h2>
+  <p class="note">Neurotransmitters are the body&rsquo;s <b>internal</b> chemical messengers. Each can have several jobs, depending on where it is in the nervous system.</p>
   <table>
-    <tr><th>Neurotransmitter</th><th>Does</th><th>When it's off</th></tr>
-    <tr><td class="nt">Acetylcholine (ACh)</td><td>Muscle movement, memory</td><td>Loss &rarr; Alzheimer's; blocked &rarr; myasthenia gravis</td></tr>
-    <tr><td class="nt">Dopamine</td><td>Reward, pleasure, movement</td><td>Too little &rarr; Parkinson's; too much &rarr; schizophrenia</td></tr>
-    <tr><td class="nt">Serotonin</td><td>Mood, sleep, appetite</td><td>Low &rarr; depression</td></tr>
-    <tr><td class="nt">Norepinephrine</td><td>Alertness, arousal</td><td>Low &rarr; depression; high &rarr; anxiety</td></tr>
-    <tr><td class="nt">GABA</td><td>Main <b>inhibitory</b> &mdash; calms</td><td>Low &rarr; anxiety, seizures</td></tr>
-    <tr><td class="nt">Glutamate</td><td>Main <b>excitatory</b> &mdash; learning &amp; memory</td><td>Too much &rarr; overstimulation, migraines, seizures</td></tr>
-    <tr><td class="nt">Endorphins</td><td>Pain relief, pleasure ("natural high")</td><td>&mdash;</td></tr>
-    <tr><td class="nt">Substance P</td><td>Transmits pain signals</td><td>&mdash;</td></tr>
+    <tr><th>Neurotransmitter</th><th>What it does</th><th>Linked to</th></tr>
+    <tr><td class="nt">Acetylcholine (ACh)</td><td>Skeletal-muscle contraction, heart muscle, arousal &amp; alertness, brain&ndash;spinal cord messages (low ACh = low arousal and attention)</td><td>Depletion &rarr; Alzheimer&rsquo;s; receptors attacked (autoimmune) &rarr; myasthenia gravis (muscle weakness)</td></tr>
+    <tr><td class="nt">Dopamine (+)</td><td>Mood, reward, motivation, smooth movement, attention, learning</td><td>Death of dopamine neurons &rarr; Parkinson&rsquo;s; release in the nucleus accumbens linked to addictive drugs</td></tr>
+    <tr><td class="nt">Serotonin (&minus;)</td><td>Mood, eating, sleep&ndash;wake cycle, arousal, pain, dreaming</td><td>Most drugs that relieve depression increase serotonin activity</td></tr>
+    <tr><td class="nt">Norepinephrine</td><td>Found in the autonomic nervous system; fight or flight (activates heart and blood vessels); attention and memory for emotional events</td><td>&mdash;</td></tr>
+    <tr><td class="nt">GABA (&minus;)</td><td>Most abundant <b>inhibitory</b> neurotransmitter &mdash; calming; sleep&ndash;wake cycles</td><td>Lack &rarr; seizures, tremors, insomnia, anxiety, epilepsy, Huntington&rsquo;s</td></tr>
+    <tr><td class="nt">Glutamate (+)</td><td>Most abundant <b>excitatory</b> neurotransmitter &mdash; learning &amp; memory, sensory and motor functions</td><td>Too much &rarr; overstimulation, migraines (MSG)</td></tr>
+    <tr><td class="nt">Endorphins (&minus;)</td><td>The brain&rsquo;s own painkillers &mdash; pain or pleasure</td><td>Opioids act on this system</td></tr>
+    <tr><td class="nt">Substance P (+)</td><td>Pain signals; contracts smooth muscle and dilates blood vessels</td><td>&mdash;</td></tr>
   </table>
-  <div class="big"><b>Drugs at the synapse:</b> an <b>agonist</b> mimics/boosts a neurotransmitter; an <b>antagonist</b> blocks it; a <b>reuptake inhibitor</b> (like many antidepressants) stops reabsorption so more stays in the synapse.</div>
-  <p class="note">Also on 1.3: the <b>endocrine system</b> (hormones via the bloodstream &mdash; slower, longer-lasting than neurotransmitters: adrenaline, melatonin, oxytocin, leptin, ghrelin), the <b>fight-flight-freeze</b> response, and <b>psychoactive drugs</b> (tolerance, addiction, withdrawal; stimulants / depressants / hallucinogens / opioids).</p>
+  <p class="note">(+) = excitatory, (&minus;) = inhibitory, as marked on the class slides. Disorder of neural transmission: <b>multiple sclerosis</b> &mdash; the myelin sheath is damaged, slowing or blocking signals.</p>
+
+  <h2>Drugs and the neuron</h2>
+  <div class="big">Drugs are <b>external</b> chemicals that change how neurotransmitters work. <b>Psychoactive drugs</b> alter consciousness, mood and perception. To be psychoactive, a drug must get into the bloodstream and cross the <b>blood-brain barrier</b>. An <b>agonist</b> mimics or boosts a neurotransmitter; an <b>antagonist</b> blocks it; a <b>reuptake inhibitor</b> stops reuptake, so the neurotransmitter&rsquo;s effect is stronger.</div>
+  <table>
+    <tr><th>Type</th><th>Effect</th><th>Class examples</th></tr>
+    <tr><td class="nt">Stimulants</td><td>Increase neural activity</td><td><b>Caffeine</b> &mdash; mild; in coffee, tea, chocolate, sodas; less drowsiness, better problem-solving and physical ability; high doses &rarr; tremors, anxiety; withdrawal = headache, fatigue. <b>Cocaine</b> &mdash; powerful; euphoria; blocks dopamine reuptake; high doses can bring hallucinations and paranoia.</td></tr>
+    <tr><td class="nt">Depressants</td><td>Decrease neural activity, mostly by boosting GABA</td><td><b>Alcohol</b> &mdash; common and socially accepted but impairs reasoning and motor skills; a &ldquo;messy&rdquo; drug (many neurotransmitter systems); 0.08% BAC = legal intoxication in the US; disrupts memory and attention; lethal dose around 0.4&ndash;0.5% BAC; high dependence potential, with genetic factors; withdrawal can be severe, even lethal.</td></tr>
+    <tr><td class="nt">Hallucinogens</td><td>Distort perception and thinking</td><td><b>Marijuana</b> (THC) &mdash; well-being, relaxation, appetite; also some depressant and stimulant effects; mild memory impairment and time distortion; research on dependence is mixed.</td></tr>
+    <tr><td class="nt">Opioids</td><td>Relieve pain; euphoria; act on the endorphin system</td><td><b>Heroin</b> &mdash; from morphine but more powerful; highly addictive and dangerous (high potential for dependence).</td></tr>
+  </table>
+  <p class="note"><b>Tolerance</b> = larger doses needed for the same effect. <b>Addiction</b> = physical and/or psychological dependence. <b>Withdrawal</b> = symptoms after stopping, usually the opposite of the drug&rsquo;s effect (heroin kills pain, so withdrawal brings extra pain sensitivity).</p>
+
+  <h2>Hormones (the endocrine system)</h2>
+  <p class="note">Hormones are chemical messengers made by glands; they travel in the <b>bloodstream</b> and are <b>longer lasting</b> than neurotransmitters. <b>Adrenaline</b> &mdash; fight or flight (raises blood sugar, speeds and strengthens the heartbeat, stimulates breathing). <b>Melatonin</b> &mdash; sleep / circadian rhythm. <b>Ghrelin</b> &mdash; hunger (high when you&rsquo;re hungry). <b>Leptin</b> &mdash; fullness (high when you&rsquo;re full). <b>Oxytocin</b> &mdash; labor, lactation, love.</p>
 
   <h2>4 &middot; Quick self-check</h2>
-  <div class="q"><div class="qn">1</div><div><p>Put the neuron parts in the order a message travels.</p><details><summary>Show answer</summary><div class="ans"><b>Dendrites</b> (receive) &rarr; <b>soma</b> (integrate) &rarr; <b>axon</b> (carry) &rarr; <b>axon terminals</b> (release neurotransmitters).</div></details></div></div>
-  <div class="q"><div class="qn">2</div><div><p>What does the "all-or-nothing principle" mean?</p><details><summary>Show answer</summary><div class="ans">A neuron either fires <b>completely or not at all</b> once threshold is reached &mdash; intensity is coded by how <b>often</b> it fires, not how strongly.</div></details></div></div>
-  <div class="q"><div class="qn">3</div><div><p>What's the job of the myelin sheath, and what are the nodes of Ranvier?</p><details><summary>Show answer</summary><div class="ans">Myelin is fatty <b>insulation that speeds the signal</b>; the <b>nodes</b> are gaps where the impulse jumps, speeding it further. (Damaged myelin &rarr; multiple sclerosis.)</div></details></div></div>
-  <div class="q"><div class="qn">4</div><div><p>Match: Parkinson's, depression, Alzheimer's &mdash; to a neurotransmitter.</p><details><summary>Show answer</summary><div class="ans">Parkinson's &rarr; low <b>dopamine</b>; depression &rarr; low <b>serotonin</b> (and norepinephrine); Alzheimer's &rarr; loss of <b>acetylcholine</b>.</div></details></div></div>
+  <div class="q"><div class="qn">1</div><div><p>Put the neuron parts in the order a message travels.</p><details><summary>Show answer</summary><div class="ans"><b>Dendrites</b> (receive) &rarr; <b>cell body / soma</b> (holds the nucleus) &rarr; <b>axon</b> (carries the impulse away) &rarr; <b>terminal branches</b> (junctions with other cells).</div></details></div></div>
+  <div class="q"><div class="qn">2</div><div><p>What does the "all-or-nothing principle" mean?</p><details><summary>Show answer</summary><div class="ans">Once a neuron reaches threshold it fires at <b>full strength</b>; below threshold it doesn&rsquo;t fire at all.</div></details></div></div>
+  <div class="q"><div class="qn">3</div><div><p>What does the myelin sheath do, and what makes it?</p><details><summary>Show answer</summary><div class="ans">Myelin <b>insulates the axon and speeds the signal</b>; <b>Schwann cells</b> (glia) make it. (Damaged myelin &rarr; multiple sclerosis.)</div></details></div></div>
+  <div class="q"><div class="qn">4</div><div><p>Match: Parkinson&rsquo;s, Alzheimer&rsquo;s, myasthenia gravis &mdash; to a neurotransmitter.</p><details><summary>Show answer</summary><div class="ans">Parkinson&rsquo;s &rarr; death of <b>dopamine</b> neurons; Alzheimer&rsquo;s &rarr; depletion of <b>acetylcholine</b>; myasthenia gravis &rarr; <b>acetylcholine</b> receptors attacked.</div></details></div></div>
   <div class="q"><div class="qn">5</div><div><p>Agonist vs. antagonist?</p><details><summary>Show answer</summary><div class="ans"><b>Agonist</b> = mimics or boosts a neurotransmitter's effect; <b>antagonist</b> = blocks it.</div></details></div></div>
-  <div class="q"><div class="qn">6</div><div><p>Which is the main <em>excitatory</em> vs. main <em>inhibitory</em> neurotransmitter?</p><details><summary>Show answer</summary><div class="ans">Excitatory (go) = <b>glutamate</b>; inhibitory (calm) = <b>GABA</b>.</div></details></div></div>
+  <div class="q"><div class="qn">6</div><div><p>Which is the main <em>excitatory</em> vs. main <em>inhibitory</em> neurotransmitter?</p><details><summary>Show answer</summary><div class="ans">Most abundant excitatory = <b>glutamate</b>; most abundant inhibitory (calming) = <b>GABA</b>.</div></details></div></div>
 
-  <p class="note" style="margin-top:22px">Built from the 1.3 key terms in Kelly's AMSCO companion workbook &mdash; our own summary for studying, not a copy of the workbook.</p>
+  <p class="note" style="margin-top:22px">Built from Mrs. Aschwanden&rsquo;s Bio Bases lecture slides and study guide &mdash; our own words for studying.</p>
   <div class="footer">Made for you &middot; ad-free</div>
 </div>
 <script>
 "use strict";
 (function(){
   var FN={
-    dendrite:["Dendrites","Receive incoming messages from other neurons and carry them toward the cell body. The message starts here."],
-    soma:["Soma (cell body)","Holds the nucleus, keeps the cell alive, and adds up incoming signals to decide whether to fire."],
-    axon:["Axon","Carries the message (the action potential) away from the soma, down toward the axon terminals."],
-    myelin:["Myelin sheath","Fatty insulation wrapped around the axon that speeds the signal up. (Built by Schwann cells; damage → multiple sclerosis.)"],
-    node:["Nodes of Ranvier","The gaps between myelin segments. The impulse jumps node to node, which makes it travel even faster."],
-    terminal:["Axon terminals (terminal buttons)","The end branches that release neurotransmitters into the synapse, passing the message to the next neuron."]
+    dendrite:["Dendrites","Branch-like extensions that receive signals from other neurons or sensory receptors. The message starts here."],
+    soma:["Soma (cell body)","The central part of the neuron; it contains the nucleus &mdash; the cell&rsquo;s life-support center."],
+    axon:["Axon","A long, slender projection that carries the electrical impulse (action potential) away from the cell body toward other neurons, muscles or glands."],
+    myelin:["Myelin sheath","Covers the axon of some neurons; it insulates and speeds up the signal. (Made by Schwann cells; damage &rarr; multiple sclerosis.)"],
+    terminal:["Terminal branches of the axon","The end branches that form junctions with other cells, where the message passes on."]
   };
   var info=document.getElementById("info");
   var parts=Array.prototype.slice.call(document.querySelectorAll(".part"));
