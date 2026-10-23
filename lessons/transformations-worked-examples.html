@@ -54,6 +54,14 @@
 </style>
 </head>
 <body>
+<!-- SOURCES
+kind: class
+- algebra-2/reference/transformations-of-functions-ws-capture.md
+- algebra-2/reference/geogebra-transformations-abk-capture.md
+- algebra-2/reference/unit-1-review-sheet-capture.md
+- algebra-2/reference/classroom-stream-and-classwork-capture.md
+fact-trace: 2026-10-23 additions (coverage n/a: skill explainer)
+-->
 <div class="wrap">
 
   <header class="hero">
@@ -69,13 +77,13 @@
     <table>
       <tr><th>Knob</th><th>Does</th><th>Catch</th></tr>
       <tr><td><span class="k">a</span></td><td>stretch (|a|&gt;1) / squish (|a|&lt;1) / <b>flip if negative</b></td><td>never moves left/right</td></tr>
-      <tr><td><span class="k2">h</span></td><td>left / right</td><td><b>backwards:</b> <code>(x−3)</code> → right 3; <code>(x+4)</code> → left 4</td></tr>
+      <tr><td><span class="k2">h</span></td><td>left / right</td><td><b>backwards:</b> <code>(x−5)</code> → right 5; <code>(x+2)</code> → left 2</td></tr>
       <tr><td><span class="k3">k</span></td><td>up / down</td><td>honest — sign means what it says</td></tr>
     </table>
     <h3>Reading the blanks off</h3>
     <table>
       <tr><td>Parent</td><td>the plain shape inside: <code>x²</code>, <code>|x|</code>, <code>√x</code>, <code>x</code></td></tr>
-      <tr><td>Vertex / start</td><td><b>(h, k)</b> — remember h's sign flips. Lines: "none".</td></tr>
+      <tr><td>Vertex</td><td><b>(h, k)</b> — remember h's sign flips. A line has no vertex (your sheet's line problem has no Vertex blank).</td></tr>
       <tr><td>Domain</td><td>parabola / V / line → <code>(−∞, ∞)</code>. <b>√ → [h, ∞)</b> (can't root a negative).</td></tr>
       <tr><td>Range</td><td>anchor height is k. <b>a&gt;0</b> opens up → <code>[k, ∞)</code>. <b>a&lt;0</b> opens down → <code>(−∞, k]</code>. Line → all reals.</td></tr>
       <tr><td>y-int</td><td>plug in <code>x = 0</code>.</td></tr>
@@ -96,6 +104,7 @@
         <li><b>Domain:</b> parabola → <b>(−∞, ∞)</b>.</li>
         <li><b>Range:</b> opens down from 3 → <b>(−∞, 3]</b>.</li>
         <li><b>y-int:</b> −2(0−1)² + 3 = −2(1) + 3 = <b>1</b>.</li>
+        <li><b>x-int:</b> set −2(x−1)² + 3 = 0 → (x−1)² = 1.5 → x − 1 = ±√1.5 → <b>x ≈ 2.22 and x ≈ −0.22</b> (two crossings, because the parabola opens down from height 3).</li>
         <li><b>Graph:</b> plot (1, 3); from the vertex the stretch gives the next points — right 1 / down 2, right 2 / down 8 (that's a·1² and a·2²). Mirror on the left.</li>
       </ol>
     </div>
@@ -113,7 +122,8 @@
         <li><b>Domain:</b> (−∞, ∞).</li>
         <li><b>Range:</b> a&gt;0 → V opens up → <b>[−1, ∞)</b>.</li>
         <li><b>y-int:</b> |0 + 2| − 1 = 2 − 1 = <b>1</b>.</li>
-        <li><b>Graph:</b> plot (−2, −1); the arms go up 1 / right 1 and up 1 / left 1 (slope ±1).</li>
+        <li><b>x-int:</b> set |x + 2| − 1 = 0 → |x + 2| = 1 → x + 2 = 1 or x + 2 = −1 → <b>x = −1 and x = −3</b>.</li>
+        <li><b>Graph:</b> plot (−2, −1); the arms go up 1 / right 1 and up 1 / left 1 (up 1 for every 1 over).</li>
       </ol>
     </div>
   </section>
@@ -126,10 +136,11 @@
         <li><b>Parent:</b> <code>√x</code> → square root (half-curve).</li>
         <li><b>Knobs:</b> a = 1, <span class="k2">h = 2</span> (right 2), <span class="k3">k = 1</span> (up 1).</li>
         <li><b>Transformations:</b> right 2, up 1.</li>
-        <li><b>Start point:</b> (2, 1).</li>
+        <li><b>Vertex:</b> (2, 1).</li>
         <li><b>Domain:</b> <b>[2, ∞)</b> — the inside <code>x − 2</code> can't be negative, so x starts at 2.</li>
         <li><b>Range:</b> a&gt;0 → <b>[1, ∞)</b>.</li>
         <li><b>y-int:</b> none — x = 0 isn't allowed (the curve starts at x = 2).</li>
+        <li><b>x-int:</b> none — the lowest output is 1, so the curve never reaches 0.</li>
         <li><b>Graph:</b> start at (2, 1); the curve rises to the right, flattening as it goes.</li>
       </ol>
     </div>
@@ -141,7 +152,8 @@
     <div class="ex">
       <ol class="steps">
         <li><b>Parent:</b> <code>x</code> → line.</li>
-        <li><b>Read it:</b> slope 2, y-int −5. No vertex.</li>
+        <li><b>Read it:</b> a = 2 (up 2 for every 1 to the right), y-int −5. No vertex.</li>
+        <li><b>x-int:</b> 2x − 5 = 0 → 2x = 5 → <b>x = 2.5</b>.</li>
         <li><b>Domain &amp; Range:</b> both <b>(−∞, ∞)</b>.</li>
         <li><b>Graph:</b> from (0, −5) go up 2 / right 1, repeat.</li>
       </ol>
@@ -151,12 +163,13 @@
   <section>
     <span class="tag">Now you</span>
     <h2>Run your eight through this frame</h2>
-    <p>Use the same eight lines on every problem. Do them on paper, then have your dad check against the key — <b>don't peek first</b>, that's where the learning is.</p>
+    <p>Use the same lines on every problem. Do them on paper, then have your dad check them — <b>don't peek first</b>, that's where the learning is.</p>
+    <div class="callout"><b>Your class&rsquo;s words:</b> your sheet asks you to name the transformations and write the domain and range. Use the exact wording and notation from your class notes; the words and the <code>[ , )</code> style here are one way to write them.</div>
     <div class="frame">
       <b>Problem: f(x) = ______________</b><br>
       Parent: ____ &nbsp; a = __, h = __, k = __<br>
       Transformations: ____________<br>
-      Vertex / start: ____ &nbsp; Domain: ____ &nbsp; Range: ____<br>
+      Vertex: ____ &nbsp; Domain: ____ &nbsp; Range: ____<br>
       y-int: ____ &nbsp; x-int: ____ &nbsp; → graph from the anchor.
     </div>
     <div class="callout"><b>Check yourself:</b> after you write vertex / domain / range, open the <b>Explorer</b> lesson, set a / h / k to match, and confirm the panel agrees. If it doesn't, find which knob you read wrong. That's the whole skill.</div>

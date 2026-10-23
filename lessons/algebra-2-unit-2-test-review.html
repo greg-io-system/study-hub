@@ -70,12 +70,20 @@ summary:hover{text-decoration:underline}
 .footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
 </style></head>
 <body>
+<!-- SOURCES
+kind: class
+- algebra-2/reference/unit-2-review-sheet-capture.md
+- algebra-2/reference/practice-b-6-3-piecewise-capture.md
+- algebra-2/reference/geogebra-transformations-abk-capture.md
+- algebra-2/reference/transformations-of-functions-ws-capture.md
+fact-trace: 2026-10-23 additions+coverage
+-->
 <div class="wrap">
-  <div class="eyebrow">Algebra 2 &middot; Ms. Howard</div>
+  <div class="eyebrow">Algebra 2 &middot; Mrs. Howard</div>
   <h1>Unit 2 Test &mdash; Review</h1>
-  <p class="tagline">Systems &amp; Piecewise Functions. The test date isn't posted yet; it's probably soon after fall break. Work your real review sheet and the Practice B page yourself. Every example here uses <b>different numbers</b> on purpose.</p>
+  <p class="tagline">Systems &amp; Piecewise Functions. Work your real review sheet and the Practice B page yourself. Every example here uses <b>different numbers</b> on purpose.</p>
 
-  <div class="big"><b>What's on it:</b> checking whether a point solves a system &middot; substitution &middot; elimination &middot; graphing (including a <b>line crossing a parabola</b>) &middot; <b>word problems</b> where you write the system yourself &middot; and <b>piecewise functions</b>: evaluating, graphing, and writing one from a story. Four parts below. Do whichever feels shakiest first.</div>
+  <div class="big"><b>What your two sheets cover</b> (the Unit 2 Review and Practice B 6-3): checking whether a point solves a system &middot; substitution &middot; elimination &middot; graphing (including a <b>line crossing a parabola</b>) &middot; <b>word problems</b> where you write the system yourself &middot; and <b>piecewise functions</b>: evaluating, graphing, and writing one from a story. Four parts below. Do whichever feels shakiest first.</div>
 
   <!-- ================= PART 1 ================= -->
   <h2>Part 1 &middot; Systems refresher (you have a lesson for this)</h2>
@@ -100,7 +108,7 @@ summary:hover{text-decoration:underline}
         Parallel lines &rarr; <b>no solution</b>.<br>
         <span class="note">Twin: <span class="fx">y = &minus;3x + 4</span>, <span class="fx">6x + 2y = 5</span> &rarr; <span class="fx">6x &minus; 6x + 8 = 5</span> &rarr; <span class="fx">8 = 5</span>.</span></div>
     </div>
-    <p class="note"><b>Shortcut:</b> before solving, check whether one equation is just the other multiplied by a number. If the WHOLE equation matches, it's infinitely many. If the left sides match but the right sides don't, it's no solution.</p>
+    <p class="note"><b>What elimination will show you:</b> if one equation turns out to be just the other multiplied by a number, the letters cancel when you eliminate: if the WHOLE equation matches, it's infinitely many; if the left sides match but the right sides don't, it's no solution.</p>
 
     <h3 class="part">Elimination: multiply so one variable cancels</h3>
     <div class="worked">
@@ -112,6 +120,10 @@ summary:hover{text-decoration:underline}
 
     <h3 class="part">Graphing two lines: get both into y = mx + b first</h3>
     <p>A standard-form equation like <span class="fx">4x &minus; 2y = 6</span> hides its slope. Solve for y: <span class="fx">&minus;2y = &minus;4x + 6</span> &rarr; <span class="fx">y = 2x &minus; 3</span>. Paired with <span class="fx">y = 2x + 1</span>: same slope, different y-intercept &rarr; <b>parallel, no solution</b>. You can say that without drawing anything.</p>
+    <div class="worked"><b>Twin (two lines that cross, with a fraction slope):</b> <span class="fx">y = &minus;&frac23;x + 1</span> and <span class="fx">y = x &minus; 4</span>.<br>
+      First line: start at <span class="fx">(0, 1)</span> on the y-axis; the slope &minus;&frac23; means <b>down 2, right 3</b>, which lands on <span class="fx">(3, &minus;1)</span>.<br>
+      Second line: start at <span class="fx">(0, &minus;4)</span>; slope 1 means <b>up 1, right 1</b>: (1, &minus;3), (2, &minus;2), <span class="fx">(3, &minus;1)</span>.<br>
+      They cross at <span class="fx">(3, &minus;1)</span>. Check in both: <span class="fx">&minus;&frac23;(3) + 1 = &minus;1</span> &#10003; and <span class="fx">3 &minus; 4 = &minus;1</span> &#10003;.</div>
   </div>
 
   <!-- ================= PART 2 ================= -->
@@ -121,13 +133,13 @@ summary:hover{text-decoration:underline}
   <div class="build">
     <div class="grp o">Parabola &nbsp;y = (x &minus; h)&sup2; + k</div>
     <div class="ctrls">
-      <div class="ctrl"><label>h <span id="vH">2</span></label><input id="pH" type="range" min="-6" max="6" step="1" value="2"></div>
+      <div class="ctrl"><label>h <span id="vH">3</span></label><input id="pH" type="range" min="-6" max="6" step="1" value="3"></div>
       <div class="ctrl"><label>k <span id="vK">0</span></label><input id="pK" type="range" min="-6" max="6" step="1" value="0"></div>
     </div>
     <div class="grp b">Line &nbsp;y = mx + b</div>
     <div class="ctrls">
-      <div class="ctrl blue"><label>m (slope) <span id="vM">1</span></label><input id="pM" type="range" min="-4" max="4" step="0.5" value="1"></div>
-      <div class="ctrl blue"><label>b (intercept) <span id="vB">4</span></label><input id="pB" type="range" min="-8" max="8" step="1" value="4"></div>
+      <div class="ctrl blue"><label>m (slope) <span id="vM">-1</span></label><input id="pM" type="range" min="-4" max="4" step="0.5" value="-1"></div>
+      <div class="ctrl blue"><label>b (intercept) <span id="vB">5</span></label><input id="pB" type="range" min="-8" max="8" step="1" value="5"></div>
     </div>
     <div class="plotbox">
       <svg class="grid" id="plotP" viewBox="0 0 300 300" role="img" aria-label="Parabola and line on a grid"></svg>
@@ -136,14 +148,13 @@ summary:hover{text-decoration:underline}
     <p class="note" style="margin:10px 0 0">Try sliding b down until the line just touches the parabola (one solution), then further until it misses (no solution).</p>
   </div>
 
-  <h3 class="part">Solving it by algebra (the way to check your graph)</h3>
-  <ol class="steps">
-    <li><b>Set them equal</b>, since both equal y: <span class="fx">(x &minus; 2)&sup2; = x + 4</span>.</li>
-    <li><b>Expand and move everything to one side:</b> <span class="fx">x&sup2; &minus; 4x + 4 = x + 4</span> &rarr; <span class="fx">x&sup2; &minus; 5x = 0</span>.</li>
-    <li><b>Factor and solve:</b> <span class="fx">x(x &minus; 5) = 0</span> &rarr; <span class="fx">x = 0</span> or <span class="fx">x = 5</span>.</li>
-    <li><b>Get each y from the LINE</b> (easier): <span class="fx">y = 0 + 4 = 4</span> and <span class="fx">y = 5 + 4 = 9</span>. Solutions <span class="fx">(0, 4)</span> and <span class="fx">(5, 9)</span>.</li>
-  </ol>
-  <div class="trap"><b>Common slip:</b> <span class="fx">(x &minus; 2)&sup2;</span> is NOT <span class="fx">x&sup2; &minus; 4</span>. Write it as <span class="fx">(x &minus; 2)(x &minus; 2)</span> and multiply it out: <span class="fx">x&sup2; &minus; 4x + 4</span>. On a graphing problem, plot the vertex <span class="fx">(h, k)</span> and two points on each side, then read off where the line crosses.</div>
+  <h3 class="part">Checking your graph with a table</h3>
+  <p>Your sheet says solve <b>by graphing</b>. A small table makes the points easy to plot and shows where the two match. Twin: <span class="fx">y = (x &minus; 3)&sup2;</span> and <span class="fx">y = &minus;x + 5</span>.</p>
+  <div class="worked">x: &nbsp;0 &nbsp;1 &nbsp;2 &nbsp;3 &nbsp;4 &nbsp;5<br>
+    parabola (x &minus; 3)&sup2;: &nbsp;9 &nbsp;<b>4</b> &nbsp;1 &nbsp;0 &nbsp;<b>1</b> &nbsp;4<br>
+    line &minus;x + 5: &nbsp;5 &nbsp;<b>4</b> &nbsp;3 &nbsp;2 &nbsp;<b>1</b> &nbsp;0<br>
+    Same y at x = 1 and at x = 4, so the graphs cross at <span class="fx">(1, 4)</span> and <span class="fx">(4, 1)</span>. Two solutions.</div>
+  <div class="trap"><b>Common slip:</b> squaring a negative. At x = 0, <span class="fx">(0 &minus; 3)&sup2; = (&minus;3)&sup2; = 9</span>, not &minus;9. On a graphing problem, plot the vertex <span class="fx">(h, k)</span> and two points on each side, then read off where the line crosses.</div>
 
   <!-- ================= PART 3 ================= -->
   <h2>Part 3 &middot; Word problems: write the system yourself</h2>
@@ -219,7 +230,7 @@ summary:hover{text-decoration:underline}
       <svg class="grid" id="plotQ" viewBox="0 0 300 300" role="img" aria-label="Two-piece function on a grid"></svg>
       <div class="out" id="outQ"></div>
     </div>
-    <p class="note" style="margin:10px 0 0">Slide "Evaluate at" onto the break point and flip the toggle. The same x switches to the other piece. Then try to make the two pieces <b>meet</b> with no jump.</p>
+    <p class="note" style="margin:10px 0 0">Slide "Evaluate at" onto the break point and flip the toggle. The same x switches to the other piece. Then try to make the two pieces <b>meet</b> at the same point.</p>
   </div>
 
   <h3 class="part">Writing one from a story</h3>
@@ -231,11 +242,12 @@ summary:hover{text-decoration:underline}
       <tr><td>60 + 8(v &minus; 5)</td><td class="cond">if v &gt; 5</td></tr></table></div><br>
     9 visits: <span class="fx">60 + 8(4) = $92</span>. &nbsp;Check: both rules give $60 at v = 5, so the pieces meet. That's a good sign.
   </div>
-  <div class="trap"><b>The big mistake:</b> writing ONE formula, like <span class="fx">12v &minus; 8v</span>. A piecewise function exists because the rule <b>changes</b> at a certain point (here, visit 5). You need two lines with two conditions, and the second line has to include what was already paid in the first stretch.</div>
+  <div class="trap"><b>The big mistake:</b> writing ONE formula, like <span class="fx">12v &minus; 8v</span>. A piecewise function exists because the rule <b>changes</b> at a certain point (here, visit 5). You need two lines with two conditions, and in this setup the second line includes what was already paid in the first stretch.</div>
+  <p class="note"><b>Check with your class:</b> this is one way to set up a story like Practice B #7. Compare it with how Mrs. Howard set up #7 in class; her version is the one that counts.</p>
 
   <!-- ================= SELF-CHECK ================= -->
   <h2>Self-check (parallel problems: answer first, then reveal)</h2>
-  <p class="note">These match the test's problem types with different numbers, so your real sheets stay yours.</p>
+  <p class="note">These match your sheets' problem types with different numbers, so your real sheets stay yours.</p>
 
   <div class="q"><div class="qn">1</div><div class="qb"><p>Is <span class="fx">(1, 4)</span> a solution of <span class="fx">y = 2x + 2</span> and <span class="fx">y = x&sup2; + 3</span>?</p><details><summary>Show answer</summary><div class="ans"><p><span class="fx">2(1) + 2 = 4</span> &#10003; and <span class="fx">1&sup2; + 3 = 4</span> &#10003;. Both work &rarr; <b>yes</b>.</p></div></details></div></div>
 
@@ -243,7 +255,7 @@ summary:hover{text-decoration:underline}
 
   <div class="q"><div class="qn">3</div><div class="qb"><p>Elimination: <span class="fx">3x + 2y = 7</span> and <span class="fx">6x + 4y = 10</span>. How many solutions?</p><details><summary>Show answer</summary><div class="ans"><p>Double the first: <span class="fx">6x + 4y = 14</span>. Subtract the second: <span class="fx">0 = 4</span>, which is false &rarr; <b>no solution</b> (parallel lines). The left sides match but the right sides don't.</p></div></details></div></div>
 
-  <div class="q"><div class="qn">4</div><div class="qb"><p>Solve <span class="fx">y = (x + 1)&sup2;</span> and <span class="fx">y = x + 3</span>. (Then set them up in the explorer above to see it: h = &minus;1, k = 0, m = 1, b = 3.)</p><details><summary>Show answer</summary><div class="ans"><p><span class="fx">x&sup2; + 2x + 1 = x + 3</span> &rarr; <span class="fx">x&sup2; + x &minus; 2 = 0</span> &rarr; <span class="fx">(x + 2)(x &minus; 1) = 0</span> &rarr; <span class="fx">x = &minus;2</span> or <span class="fx">1</span>. From the line: <span class="fx">(&minus;2, 1)</span> and <span class="fx">(1, 4)</span>. <b>Two solutions.</b></p></div></details></div></div>
+  <div class="q"><div class="qn">4</div><div class="qb"><p>Solve by graphing (use a table): <span class="fx">y = (x + 1)&sup2;</span> and <span class="fx">y = x + 3</span>. (Then set them up in the explorer above to see it: h = &minus;1, k = 0, m = 1, b = 3.)</p><details><summary>Show answer</summary><div class="ans"><p>Table for x = &minus;3 to 2: parabola 4, 1, 0, 1, 4, 9; line 0, 1, 2, 3, 4, 5. They match at <span class="fx">x = &minus;2</span> (both 1) and <span class="fx">x = 1</span> (both 4). So: <span class="fx">(&minus;2, 1)</span> and <span class="fx">(1, 4)</span>. <b>Two solutions.</b></p></div></details></div></div>
 
   <div class="q"><div class="qn">5</div><div class="qb"><p>A motorboat goes 60 miles downstream in 2 hours and back upstream in 3 hours. Find the boat's speed in still water and the current's speed.</p><details><summary>Show answer</summary><div class="ans"><p><span class="fx">b + c = 60 &divide; 2 = 30</span>, <span class="fx">b &minus; c = 60 &divide; 3 = 20</span>. Add: <span class="fx">2b = 50</span> &rarr; <b>boat 25 mph</b>, <b>current 5 mph</b>.</p></div></details></div></div>
 
@@ -258,11 +270,11 @@ summary:hover{text-decoration:underline}
       <tr><td>2x &minus; 3</td><td class="cond">if x &ge; 4</td></tr></table></div>
     <details><summary>Show answer</summary><div class="ans"><p><span class="fx">r(&minus;1)</span>: &minus;1 &le; &minus;1 &#10003; &rarr; top &rarr; <span class="fx">3(&minus;1) = &minus;3</span>. (It isn't the middle rule, because that one needs &minus;1 &lt; x.)</p><p><span class="fx">r(4)</span>: 4 &ge; 4 &#10003; &rarr; bottom &rarr; <span class="fx">2(4) &minus; 3 = 5</span>.</p></div></details></div></div>
 
-  <div class="q"><div class="qn">9</div><div class="qb"><p>Graph <span class="fx">s(x) = 5</span> if <span class="fx">x &lt; 2</span>, and <span class="fx">s(x) = x + 1</span> if <span class="fx">x &ge; 2</span>. Where are the open and closed dots? Is there a jump?</p><details><summary>Show answer</summary><div class="ans"><p>Flat line at y = 5 coming from the left, ending in an <b>open</b> dot at <span class="fx">(2, 5)</span> (x &lt; 2 doesn't include 2). The line <span class="fx">y = x + 1</span> starts with a <b>closed</b> dot at <span class="fx">(2, 3)</span> and rises to the right. The y-values are different at x = 2 (5 vs 3), so <b>yes, it jumps</b>. (Check it in the builder: m&#8321;=0, b&#8321;=5, m&#8322;=1, b&#8322;=1, break at 2.)</p></div></details></div></div>
+  <div class="q"><div class="qn">9</div><div class="qb"><p>Graph <span class="fx">s(x) = 5</span> if <span class="fx">x &lt; 2</span>, and <span class="fx">s(x) = x + 1</span> if <span class="fx">x &ge; 2</span>. Where are the open and closed dots? What y-value does each piece have at x = 2?</p><details><summary>Show answer</summary><div class="ans"><p>Flat line at y = 5 coming from the left, ending in an <b>open</b> dot at <span class="fx">(2, 5)</span> (x &lt; 2 doesn't include 2). The line <span class="fx">y = x + 1</span> starts with a <b>closed</b> dot at <span class="fx">(2, 3)</span> and rises to the right. At x = 2 the first piece is heading to 5 (open dot) and the second piece is at 3 (closed dot), so the function's value at 2 is <b>3</b>. (Check it in the builder: m&#8321;=0, b&#8321;=5, m&#8322;=1, b&#8322;=1, break at 2.)</p></div></details></div></div>
 
   <div class="q"><div class="qn">10</div><div class="qb"><p>Bike rental: $15 per hour for the first 3 hours, then $10 per hour after that. (a) Write C(h). (b) Cost for 5 hours? (c) How much more is 4 hours than 2 hours?</p><details><summary>Show answer</summary><div class="ans"><p>(a) <span class="fx">C(h) = 15h</span> if <span class="fx">0 &le; h &le; 3</span>; <span class="fx">C(h) = 45 + 10(h &minus; 3)</span> if <span class="fx">h &gt; 3</span>.</p><p>(b) <span class="fx">45 + 10(2) = $65</span>. &nbsp;(c) 4 hours: <span class="fx">45 + 10 = $55</span>; 2 hours: <span class="fx">15(2) = $30</span>. The difference is <b>$25</b>. (Each time, check which piece you're in first.)</p></div></details></div></div>
 
-  <p class="note" style="margin-top:22px">Review built from Ms. Howard's Unit 2 Review and the Lesson 6-3 practice page, with our own explanations and different-number examples. Do the actual sheets yourself; they're the graded work.</p>
+  <p class="note" style="margin-top:22px">Review built from Mrs. Howard's Unit 2 Review and the Lesson 6-3 practice page, with our own explanations and different-number examples. Do the actual sheets yourself; they're the graded work.</p>
 
   <div class="footer">Made for you &middot; ad-free</div>
 </div>
@@ -357,7 +369,7 @@ function el(id){ return document.getElementById(id); }
       '<div class="eq"><span class="b">'+lin(m2,b2)+'</span> &nbsp;<span class="note">if '+c2+'</span></div>'+
       '<div class="res">x = '+fmt(x)+': '+fmt(x)+(useLeft?(mode===0?" < ":" ≤ "):(mode===0?" ≥ ":" > "))+fmt(c)+', so use <span class="'+(useLeft?"o":"b")+'">piece '+(useLeft?1:2)+'</span>.</div>'+
       '<div style="margin-top:4px">'+sub(useLeft?m1:m2,useLeft?b1:b2,x)+' = <b>'+fmt(y)+'</b></div>'+
-      '<div class="note" style="margin-top:8px">At the break: piece 1 ends at ('+fmt(c)+', '+fmt(f1(c))+') '+(leftClosed?"● closed":"○ open")+'; piece 2 starts at ('+fmt(c)+', '+fmt(f2(c))+') '+(rightClosed?"● closed":"○ open")+'. '+(meets?"<b>They meet: no jump.</b>":"Different heights, so the graph <b>jumps</b>.")+'</div>';
+      '<div class="note" style="margin-top:8px">At the break: piece 1 ends at ('+fmt(c)+', '+fmt(f1(c))+') '+(leftClosed?"● closed":"○ open")+'; piece 2 starts at ('+fmt(c)+', '+fmt(f2(c))+') '+(rightClosed?"● closed":"○ open")+'. '+(meets?"<b>They meet at the same point.</b>":"The two pieces are at <b>different heights</b> here.")+'</div>';
   }
   ["qM1","qB1","qM2","qB2","qC","qX"].forEach(function(i){ el(i).addEventListener("input",render); });
   render();

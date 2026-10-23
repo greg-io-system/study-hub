@@ -79,6 +79,13 @@
 </style>
 </head>
 <body>
+<!-- SOURCES
+kind: class
+- algebra-2/reference/ws-1-4-inputs-outputs-capture.md
+- algebra-2/reference/unit-1-review-sheet-capture.md
+- algebra-2/reference/classroom-stream-and-classwork-capture.md
+fact-trace: 2026-10-23 additions (coverage n/a: skill explainer)
+-->
 <div class="wrap">
 
   <header class="hero">
@@ -142,14 +149,14 @@
   <section>
     <span class="tag">Skill 1</span>
     <h2>Given the input &rarr; find the output</h2>
-    <p class="lead">This is Problem 3 on her sheet: <span class="mono">f(x) = -2x&sup2; - 4x + 5</span>. The trick that prevents 90% of mistakes: <b>put the input in parentheses</b>, then do it in order. Drag the input and watch every step.</p>
+    <p class="lead">This is the skill in Problem 3 on her sheet, shown on a twin function: <span class="mono">f(x) = -3x&sup2; - 2x + 6</span>. Tip: <b>put the input in parentheses</b>, then do it in order. Drag the input and watch every step.</p>
     <div class="controls">
       <label class="ctl">input x =</label>
-      <input type="range" id="ev-x" min="-5" max="7" step="1" value="3">
-      <span class="readout k" id="ev-xo" style="font-size:22px;min-width:34px;text-align:center">3</span>
+      <input type="range" id="ev-x" min="-5" max="5" step="1" value="2">
+      <span class="readout k" id="ev-xo" style="font-size:22px;min-width:34px;text-align:center">2</span>
     </div>
     <div class="steps mono" id="ev-steps"></div>
-    <div class="try">Now you try, on paper: this same function at <span class="mono">f(0)</span> and <span class="mono">f(7)</span>. Slide to check yourself after.</div>
+    <div class="try">Now you try, on paper: Problem 3 on your sheet, with its own function. Use the same steps: parentheses, square first, then multiply.</div>
     <div class="callout"><b>Sign trap:</b> a negative input must be squared <i>with</i> its parentheses. <span class="mono">(-3)&sup2; = 9</span>, but <span class="mono">-3&sup2; = -9</span>. The parentheses are what keep you safe.</div>
   </section>
 
@@ -176,23 +183,23 @@
       <div class="rep">
         <h4>Forward (Skill 1)</h4>
         <p class="mono" style="font-size:16px;line-height:2">
-          input <span class="k">5</span> &rarr;<br>
-          6(<span class="k">5</span>) + 12<br>
-          = 30 + 12<br>
-          = <span class="k2">42</span> output
+          input <span class="k">4</span> &rarr;<br>
+          5(<span class="k">4</span>) + 7<br>
+          = 20 + 7<br>
+          = <span class="k2">27</span> output
         </p>
       </div>
       <div class="rep">
         <h4>Backward (Skill 3)</h4>
         <p class="mono" style="font-size:16px;line-height:2">
-          output <span class="k2">42</span>:<br>
-          6x + 12 = <span class="k2">42</span><br>
-          6x = 30 &nbsp;<span class="muted">(undo +12)</span><br>
-          x = <span class="k">5</span> &nbsp;<span class="muted">(undo &times;6)</span>
+          output <span class="k2">27</span>:<br>
+          5x + 7 = <span class="k2">27</span><br>
+          5x = 20 &nbsp;<span class="muted">(undo +7)</span><br>
+          x = <span class="k">4</span> &nbsp;<span class="muted">(undo &times;5)</span>
         </p>
       </div>
     </div>
-    <div class="try">Your turn: <span class="mono">n(x) = 6x + 12, n(x) = 42</span> and <span class="mono">n(x) = 8x - 3, n(x) = 45</span>. Check by plugging your answer back in &mdash; it should give the target output.</div>
+    <div class="try">Your turn: the two <span class="mono">n(x)</span> problems in Problem 3 on your sheet. Check by plugging your answer back in &mdash; it should give the target output.</div>
   </section>
 
   <!-- 6. DOMAIN / RANGE + VLT -->
@@ -200,7 +207,7 @@
     <span class="tag">Skill 4</span>
     <h2>Domain, range &amp; &ldquo;is it a function?&rdquo;</h2>
     <p class="lead"><b class="k">Domain</b> = all the <b>inputs</b> (x, read left&ndash;right). <b class="k2">Range</b> = all the <b>outputs</b> (y, read bottom&ndash;top).</p>
-    <p class="lead">A relation is a <b>function</b> only if every input has <b>exactly one</b> output. Test it with a <b>vertical line</b>: slide it across &mdash; if it ever touches the graph <b>twice at once</b>, it fails. Drag the line on both.</p>
+    <p class="lead">Problem 4 also asks &ldquo;Is it a function?&rdquo; The idea: in a function, each input gives <b>one</b> output. <b>Picture this:</b> slide an up-and-down line across the graph &mdash; if it ever touches the graph <b>twice at once</b>, one input has two outputs. Drag the line on both. (Use the exact wording for this check from your class notes.)</p>
     <div class="grid4">
       <div class="rep">
         <h4>A parabola</h4>
@@ -213,7 +220,7 @@
         <div class="verdict" id="vlt-b-v"></div>
       </div>
     </div>
-    <div class="callout"><b>On a mapping diagram</b> (the ovals with arrows in Problem 4): same rule. If any single input arrow splits to <b>two</b> outputs, it&rsquo;s not a function. Two inputs sharing one output is fine.</div>
+    <div class="callout"><b>On a mapping diagram</b> (the Input &rarr; Output picture in Problem 4): same rule. If any single input arrow splits to <b>two</b> outputs, it&rsquo;s not a function. Two inputs sharing one output is fine.</div>
   </section>
 
   <div class="footer">
@@ -307,11 +314,11 @@
     var sl=document.getElementById("ev-x"), out=document.getElementById("ev-xo"), box=document.getElementById("ev-steps");
     function run(){
       var v=parseInt(sl.value,10); out.textContent=v;
-      var vp=v<0?"("+v+")":v, sq=v*v, t1=-2*sq, t2=-4*v, res=t1+t2+5;
+      var vp=v<0?"("+v+")":v, sq=v*v, t1=-3*sq, t2=-2*v, res=t1+t2+6;
       box.innerHTML=
-        '<div>f('+v+') = -2('+v+')&sup2; - 4('+v+') + 5</div>'+
-        '<div class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= -2('+sq+') - 4('+v+') + 5 <span style="opacity:.6">&larr; square first</span></div>'+
-        '<div class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= '+t1+' + ('+t2+') + 5 <span style="opacity:.6">&larr; multiply</span></div>'+
+        '<div>f('+v+') = -3('+v+')&sup2; - 2('+v+') + 6</div>'+
+        '<div class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= -3('+sq+') - 2('+v+') + 6 <span style="opacity:.6">&larr; square first</span></div>'+
+        '<div class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= '+t1+' + ('+t2+') + 6 <span style="opacity:.6">&larr; multiply</span></div>'+
         '<div class="final">f('+v+') = '+res+'</div>';
     }
     sl.oninput=run; run();

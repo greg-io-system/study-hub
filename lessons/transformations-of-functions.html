@@ -88,6 +88,14 @@
 </style>
 </head>
 <body>
+<!-- SOURCES
+kind: class
+- algebra-2/reference/transformations-of-functions-ws-capture.md
+- algebra-2/reference/geogebra-transformations-abk-capture.md
+- algebra-2/reference/unit-1-review-sheet-capture.md
+- algebra-2/reference/classroom-stream-and-classwork-capture.md
+fact-trace: 2026-10-23 additions (coverage n/a: skill explainer)
+-->
 <div class="wrap">
 
   <header class="hero">
@@ -102,14 +110,14 @@
     <h2>Everything fits this pattern</h2>
     <p class="lead">Take a <b>parent function</b> <span class="mono">P(x)</span> &mdash; the plainest version of its shape &mdash; and dress it up:</p>
     <p class="tmpl">f(x) = <span class="a">a</span>&middot;P(x &minus; <span class="h">h</span>) + <span class="kk">k</span></p>
-    <p class="muted" style="text-align:center;margin-top:0">Three knobs. That's the whole unit.</p>
+    <p class="muted" style="text-align:center;margin-top:0">Three knobs. That's the whole worksheet.</p>
     <table>
       <tr><th>Knob</th><th>What it does</th><th>The catch</th></tr>
       <tr><td><span class="k">a</span> &mdash; stretch / flip</td><td>|a| &gt; 1 stretches taller; |a| &lt; 1 squishes flatter. A <b>negative a flips it upside-down</b> (over the x-axis).</td><td>a changes steepness &amp; direction, never left/right.</td></tr>
-      <tr><td><span class="k2">h</span> &mdash; left / right</td><td>Moves the graph horizontally.</td><td><b>Backwards!</b> <code>(x&minus;3)</code> moves <b>right</b> 3; <code>(x+4)</code> moves <b>left</b> 4. The sign lies &mdash; flip it.</td></tr>
+      <tr><td><span class="k2">h</span> &mdash; left / right</td><td>Moves the graph horizontally.</td><td><b>Backwards!</b> <code>(x&minus;5)</code> moves <b>right</b> 5; <code>(x+2)</code> moves <b>left</b> 2. The sign lies &mdash; flip it.</td></tr>
       <tr><td><span class="k3">k</span> &mdash; up / down</td><td>Moves the graph vertically. <code>+k</code> up, <code>&minus;k</code> down.</td><td>This one is honest &mdash; the sign means what it says.</td></tr>
     </table>
-    <div class="callout"><b>The whole trick:</b> the point that "anchors" the shape (the <b>vertex</b> of a parabola or V, the <b>start point</b> of a square root) simply moves to <b>(h, k)</b>. Find (h, k) and you've basically graphed it.</div>
+    <div class="callout"><b>The whole trick:</b> the point that "anchors" the shape (the <b>vertex</b> of a parabola or V, the starting corner of a square root, which your sheet also calls the <b>vertex</b>) simply moves to <b>(h, k)</b>. Find (h, k) and you've basically graphed it.</div>
   </section>
 
   <!-- EXPLORER -->
@@ -142,7 +150,7 @@
         </ul>
       </div>
     </div>
-    <div class="callout"><b>Try this:</b> set the quadratic to <span class="mono">a=1, h=&minus;4, k=&minus;9</span>. That's problem&nbsp;1 on your sheet, <span class="mono">(x+4)²&minus;9</span>. Watch where the vertex lands and read the range off the panel. Now do the rest of your problems the same way &mdash; on paper.</div>
+    <div class="callout"><b>Try this:</b> set the quadratic to <span class="mono">a=1, h=2, k=&minus;5</span>, which is <span class="mono">(x&minus;2)²&minus;5</span>. Watch where the vertex lands and read the range off the panel. Then do your sheet&rsquo;s problems on paper first, and use the Explorer only to check.</div>
   </section>
 
   <!-- HOW TO READ FEATURES -->
@@ -159,8 +167,8 @@
           <tr><td><code>&radic;x</code></td><td>square root (half-curve)</td></tr>
           <tr><td><code>x</code></td><td>linear (straight line)</td></tr>
         </table>
-        <h3>Vertex / start point</h3>
-        <p>It's just <b>(h, k)</b> &mdash; remembering h flips its sign. Lines don't have a vertex; write "none."</p>
+        <h3>Vertex</h3>
+        <p>It's just <b>(h, k)</b> &mdash; remembering h flips its sign. A line has no vertex (your sheet&rsquo;s line problem has no Vertex blank).</p>
       </div>
       <div>
         <h3>Domain (allowed x's)</h3>
@@ -169,6 +177,7 @@
         <h3>Range (reachable y's)</h3>
         <p><b>Parabola &amp; V &amp; &radic;:</b> they stop at the anchor's height <b>k</b>. If <span class="k">a</span> is <b>positive</b> the graph opens up &rarr; <span class="mono">[k, &infin;)</span>. If <span class="k">a</span> is <b>negative</b> it opens down &rarr; <span class="mono">(&minus;&infin;, k]</span>.<br>
         <b>Line:</b> range is all reals.</p>
+        <div class="callout" style="margin:8px 0 12px"><b>Your class&rsquo;s words:</b> your sheet asks you to name the transformations and write the domain and range. Use the exact wording and notation from your class notes; the words and the <code>[ , )</code> style here are one way to write them.</div>
         <h3>Intercepts</h3>
         <p><b>y-int:</b> plug in <code>x = 0</code>. <b>x-int:</b> set <code>f(x)=0</code> and solve (or read where the curve crosses the x-axis).</p>
       </div>
@@ -189,15 +198,16 @@
       <li><b>Domain:</b> parabola &rarr; <b>(&minus;&infin;, &infin;)</b>.</li>
       <li><b>Range:</b> opens down from height 3 &rarr; <b>(&minus;&infin;, 3]</b>.</li>
       <li><b>y-int:</b> x=0 &rarr; &minus;2(0&minus;1)²+3 = &minus;2(1)+3 = <b>1</b>.</li>
+      <li><b>x-int:</b> set it to 0 &rarr; &minus;2(x&minus;1)²+3 = 0 &rarr; (x&minus;1)² = 1.5 &rarr; x&minus;1 = &plusmn;&radic;1.5 &rarr; <b>x &asymp; 2.22 and x &asymp; &minus;0.22</b>.</li>
       <li><b>Graph:</b> plot the vertex (1,3), then the stretch factor tells you the next points: from the vertex go right 1 / down 2, right 2 / down 8 (that's a&middot;1² and a&middot;2²). Mirror on the left.</li>
     </ol>
     <details>
       <summary>One of each other family (tap)</summary>
       <p><b>Absolute value &mdash; g(x) = |x + 2| &minus; 1:</b> parent |x|; h = &minus;2 (left 2), k = &minus;1 (down 1); vertex (&minus;2, &minus;1); domain all reals; a is positive so V opens up &rarr; range [&minus;1, &infin;).</p>
-      <p><b>Square root &mdash; g(x) = &radic;(x &minus; 2) + 1:</b> parent &radic;x; h = 2 (right 2), k = 1 (up 1); start point (2, 1); domain <b>[2, &infin;)</b> (can't root a negative); range [1, &infin;).</p>
-      <p><b>Line &mdash; g(x) = 2x &minus; 5:</b> parent x; slope 2, y-int &minus;5; no vertex; domain and range both all reals.</p>
+      <p><b>Square root &mdash; g(x) = &radic;(x &minus; 2) + 1:</b> parent &radic;x; h = 2 (right 2), k = 1 (up 1); vertex (2, 1); domain <b>[2, &infin;)</b> (can't root a negative); range [1, &infin;).</p>
+      <p><b>Line &mdash; g(x) = 2x &minus; 5:</b> parent x; a = 2 (up 2 for every 1 to the right), y-int &minus;5; x-int 2.5 (2x &minus; 5 = 0); no vertex; domain and range both all reals.</p>
     </details>
-    <div class="callout"><b>Now you:</b> take problem 1 on your sheet, write those same 8 lines, then graph from the vertex. When you've done all eight, have your dad check them against the answer key &mdash; don't peek first, that's where the learning is.</div>
+    <div class="callout"><b>Now you:</b> take problem 1 on your sheet, write those same lines, then graph from the vertex. When you've done all eight, have your dad check them &mdash; don't peek at the Explorer first, that's where the learning is.</div>
   </section>
 
   <div class="footer">Made for you &middot; Algebra 2 workshop &middot; ad-free</div>
@@ -214,7 +224,7 @@
   var parents={
     quad:{name:"Quadratic  x²", P:function(x){return x*x;}, sym:"x²", anchor:"Vertex", bounded:true, dom:"all"},
     abs:{name:"Absolute value  |x|", P:function(x){return Math.abs(x);}, sym:"|x|", anchor:"Vertex", bounded:true, dom:"all"},
-    sqrt:{name:"Square root  √x", P:function(x){return x>=0?Math.sqrt(x):NaN;}, sym:"√x", anchor:"Start point", bounded:true, dom:"sqrt"},
+    sqrt:{name:"Square root  √x", P:function(x){return x>=0?Math.sqrt(x):NaN;}, sym:"√x", anchor:"Vertex", bounded:true, dom:"sqrt"},
     lin:{name:"Linear  x", P:function(x){return x;}, sym:"x", anchor:"Vertex", bounded:false, dom:"all"}
   };
   var order=["quad","abs","sqrt","lin"];
@@ -307,9 +317,10 @@
     if(cur==="quad") body=aStr+signPart()+"²";
     else if(cur==="abs") body=aStr+"|"+ (h===0?"x":("x "+(h>0?"− "+h:"+ "+(-h)))) +"|";
     else if(cur==="sqrt") body=aStr+"√"+signPart();
-    else body=(a===1?"x":(a===-1?"−x":fmt(a)+"x")) + (h!==0? " ... " : "");
-    // linear special: a*(x-h)+k -> slope a, y-int k - a*h
-    var kStr = k===0?"":(k>0?" + "+k:" − "+(-k));
+    else body=(a===1?"x":(a===-1?"−x":fmt(a)+"x"));
+    // linear special: a*(x-h)+k simplifies to a*x + (k - a*h)
+    var kk = (cur==="lin")? Math.round((k-a*h)*100)/100 : k;
+    var kStr = kk===0?"":(kk>0?" + "+fmt(kk):" − "+fmt(-kk));
     document.getElementById("eq").innerHTML = "f(x) = "+body+kStr;
 
     // transformations text

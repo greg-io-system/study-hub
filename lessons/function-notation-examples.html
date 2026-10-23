@@ -45,6 +45,13 @@ sup{font-size:.7em}
 </style>
 </head>
 <body>
+<!-- SOURCES
+kind: class
+- algebra-2/reference/ws-1-4-inputs-outputs-capture.md
+- algebra-2/reference/unit-1-review-sheet-capture.md
+- algebra-2/reference/classroom-stream-and-classwork-capture.md
+fact-trace: 2026-10-23 additions (coverage n/a: skill explainer)
+-->
 <div class="wrap">
   <div class="eyebrow">Algebra 2 · WS#1.4</div>
   <h1>Worked Examples: <span style="color:var(--coral);font-style:italic">Inputs &amp; Outputs</span></h1>
@@ -53,7 +60,7 @@ sup{font-size:.7em}
   <div class="big">
     <h2>The one big idea</h2>
     <p>A function is an <b>input → output machine</b>. <span style="font-family:var(--mono)">f(20)</span> means: <em>put 20 into machine f, and read what comes out.</em></p>
-    <p style="margin-bottom:0">Every problem here is a version of that. Keep asking yourself two questions: <span class="ask">What's the input? What's the output?</span> Almost every mistake at this level comes from mixing those two up.</p>
+    <p style="margin-bottom:0">Every problem here is a version of that. Keep asking yourself two questions: <span class="ask">What's the input? What's the output?</span> <b>Tip:</b> mixing those two up is an easy way to lose points.</p>
   </div>
 
   <div class="card">
@@ -66,8 +73,8 @@ sup{font-size:.7em}
       <li>Go straight <b>across</b> to the side axis — that height is the output.</li>
     </ol>
     <h3>Twin example</h3>
-    <div class="worked">To find f(60): find 60 on the bottom, go up to the curve,
-read across — say it sits at 5.
+    <div class="worked">Made-up graph (not your sheet's): to find f(60), find 60 on the bottom,
+go up to the curve, read across. If the curve there is at height 5,
 <span class="cmt">→ f(60) = 5</span></div>
     <div class="turn"><b>Your turn:</b> do this for f(20) and f(140) on your graph.</div>
   </div>
@@ -89,24 +96,24 @@ read across — say it sits at 5.
     <span class="step-label">Type 3 · evaluate with algebra</span>
     <h2>Plug the input into a formula</h2>
     <p>Same “input → output,” but with a rule instead of a graph. Wherever you see <span style="font-family:var(--mono)">x</span>, substitute the input <b>in parentheses</b>, then do order of operations: exponent first, then multiply, then add.</p>
-    <h3>Twin example — f(x) = −2x<sup>2</sup> − 4x + 5, find f(3)</h3>
-    <div class="worked">f(3) = −2(3)<sup>2</sup> − 4(3) + 5
-     = −2(9) − 12 + 5      <span class="cmt">← square first: 3<sup>2</sup> = 9</span>
-     = −18 − 12 + 5
-<span class="cmt">→ f(3) = −25</span></div>
+    <h3>Twin example — f(x) = −3x<sup>2</sup> − 2x + 6, find f(2)</h3>
+    <div class="worked">f(2) = −3(2)<sup>2</sup> − 2(2) + 6
+     = −3(4) − 4 + 6       <span class="cmt">← square first: 2<sup>2</sup> = 4</span>
+     = −12 − 4 + 6
+<span class="cmt">→ f(2) = −10</span></div>
     <div class="callout"><b>The parentheses protect you.</b> A negative input must be squared inside its parentheses: (−3)<sup>2</sup> = 9, but −3<sup>2</sup> = −9. Different answers.</div>
-    <div class="turn"><b>Your turn:</b> do f(0) and f(7) the same way. Watch the signs — negatives are where points get lost. (There's a draggable version of this in your lesson.)</div>
+    <div class="turn"><b>Your turn:</b> do Problem 3 on your sheet the same way. Watch the signs — negatives are where points get lost. (There's a draggable version of this in your lesson.)</div>
   </div>
 
   <div class="card">
     <span class="step-label">Type 3b · solve for the input</span>
     <h2>Output given → undo it step by step</h2>
-    <p>e.g. <span style="font-family:var(--mono)">n(x) = 6x + 12</span> and <span style="font-family:var(--mono)">n(x) = 42</span>. The output (42) is given; find the input. Set the rule equal to the output and peel operations off — last one first.</p>
+    <p>Like the <span style="font-family:var(--mono)">n(x)</span> problems in Problem 3: the output is given; find the input. Set the rule equal to the output and peel operations off — last one first.</p>
     <h3>Twin example — m(x) = 4x + 5, when m(x) = 25</h3>
     <div class="worked">4x + 5 = 25
 4x = 20        <span class="cmt">← undo + 5 (subtract 5 both sides)</span>
 x = 5          <span class="cmt">← undo × 4 (divide both sides by 4)</span></div>
-    <div class="turn"><b>Your turn:</b> solve 6x + 12 = 42 and 8x − 3 = 45. Check by plugging your x back in — it should give the target output.</div>
+    <div class="turn"><b>Your turn:</b> the two n(x) problems on your sheet. Check by plugging your x back in — it should give the target output.</div>
   </div>
 
   <div class="card">
@@ -115,14 +122,14 @@ x = 5          <span class="cmt">← undo × 4 (divide both sides by 4)</span></
     <p><b>Domain</b> = all the inputs (x-values, read left→right). <b>Range</b> = all the outputs (y-values, read bottom→top).</p>
     <p>It's a function only if <b>each input has exactly one output.</b></p>
     <ol class="method">
-      <li><b>On a graph:</b> the vertical-line test — if any vertical line hits the curve more than once, it's not a function.</li>
-      <li><b>On a mapping diagram</b> (ovals with arrows): follow each input arrow. If one input points to two outputs, it's not a function.</li>
+      <li><b>On a graph</b> (<b>Picture this</b>): slide an up-and-down line across — if it ever hits the curve twice at once, one input has two outputs, so it's not a function. Use the wording for this check from your class notes.</li>
+      <li><b>On a mapping diagram</b> (the Input → Output picture): follow each input arrow. If one input points to two outputs, it's not a function.</li>
     </ol>
     <h3>Twin example</h3>
     <div class="worked">Inputs {1, 2, 3}, and 2 has arrows to BOTH 5 and 8
 <span class="cmt">→ not a function (input 2 gives two outputs)</span></div>
     <div class="callout">Two inputs sharing one output is fine. One input with two outputs is not.</div>
-    <div class="turn"><b>Your turn:</b> for each graph and the oval diagram — state the domain, state the range, then apply the one-output test.</div>
+    <div class="turn"><b>Your turn:</b> for each graph and the Input → Output diagram — state the domain, state the range, then apply the one-output test.</div>
   </div>
 
   <div class="card">
@@ -130,16 +137,16 @@ x = 5          <span class="cmt">← undo × 4 (divide both sides by 4)</span></
     <h2>Simplify, then undo</h2>
     <p>Same skill as “solve for the input,” just longer. Only two moves: <b>(1) simplify each side</b> (distribute, combine like terms), then <b>(2) undo</b> to isolate the variable, doing the same to both sides.</p>
     <h3>Twin example</h3>
-    <div class="worked">30 = 5(d − 2) − 5
-30 = 5d − 10 − 5     <span class="cmt">← distribute the 5</span>
-30 = 5d − 15         <span class="cmt">← combine −10 and −5</span>
-45 = 5d              <span class="cmt">← undo − 15 (add 15)</span>
-<span class="cmt">→ d = 9</span></div>
+    <div class="worked">22 = 4(k + 3) − 6
+22 = 4k + 12 − 6     <span class="cmt">← distribute the 4</span>
+22 = 4k + 6          <span class="cmt">← combine 12 and −6</span>
+16 = 4k              <span class="cmt">← undo + 6 (subtract 6)</span>
+<span class="cmt">→ k = 4</span></div>
     <h3>Another — combine like terms first</h3>
-    <div class="worked">2n − 5n + 3 = −3
-−3n + 3 = −3         <span class="cmt">← combine 2n and −5n</span>
-−3n = −6             <span class="cmt">← undo + 3</span>
-<span class="cmt">→ n = 2</span></div>
+    <div class="worked">4n − 7n + 2 = −10
+−3n + 2 = −10        <span class="cmt">← combine 4n and −7n</span>
+−3n = −12            <span class="cmt">← undo + 2</span>
+<span class="cmt">→ n = 4</span></div>
     <div class="turn"><b>Your turn:</b> for each equation, first ask “what's cluttering this side?” — distribute and combine before you undo. Then undo in reverse order of operations.</div>
   </div>
 
