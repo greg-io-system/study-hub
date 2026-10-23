@@ -18,7 +18,7 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-21",
+  updated: "2026-10-23",
   label: "Oct 19 – Oct 23",
   items: [
     {
@@ -38,7 +38,19 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-10-23",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "8:00 AM: \"How Many Muscles Article\" (20 pts, in Classroom). In class: Muscle Notes: Types, and Lab 12 starts (due Thu 10/29)."
+      what: "8:00 AM: \"How Many Muscles Article\" (20 pts, in Classroom). In class: Muscle Notes: Types, and Lab 12 starts (due Thu 10/29). The Muscular System notes slides are now in Classroom."
+    },
+    {
+      day: "Fri", date: "2026-10-23",
+      subject: "algebra-2", subjectName: "Algebra II",
+      what: "\"Quadratic Review WS\" due today (worksheet PDF in Classroom). Unit 3, Quadratics, has started."
+    },
+    {
+      day: "Fri", date: "2026-10-23",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: add to your Arguments of Definition notes. Then developed notes on two videos: Steven Johnson, \"Where Good Ideas Come From\" (his definition of a good idea, the conditions, examples, his claim) and Ken Robinson, \"Changing Education Paradigms\" (start from: Johnson says good ideas come from ___; how could school shift that way? Cover the moments at 1:57 and 3:08 and \"kept there with a story\"). REPLY to Mr. Evans's \"For Friday (10/23)\" email with notes on BOTH videos.",
+      help: "Terms: the three kinds of definition",
+      helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
       day: "This wk", date: "2026-10-23",
