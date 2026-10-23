@@ -36,7 +36,7 @@ li{margin:.25em 0}
 .strata button:hover{background:var(--accent-soft)}
 .strata .lvl{font-weight:800;font-size:12px;color:var(--soft)}
 .strata .body{padding:0 14px;max-height:0;overflow:hidden;transition:max-height .2s ease;font-size:15px}
-.strata li.open .body{max-height:260px;padding:0 14px 12px}
+.strata li.open .body{max-height:420px;padding:0 14px 12px}
 .mnem{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:12px;padding:12px 16px;margin:14px 0;font-size:15px}
 .mnem b{color:var(--accent)}
 .q{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
@@ -48,17 +48,23 @@ summary:hover{text-decoration:underline}
 .footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
 </style></head>
 <body>
+<!-- SOURCES
+kind: class
+- human-anatomy/reference/unit-2-slides-capture.md
+- human-anatomy/reference/unit-2-exam-review-capture.md
+fact-trace: 2026-10-23 additions+coverage
+-->
 <div class="wrap">
   <div class="eyebrow">Human Anatomy &middot; Unit 2: Integumentary</div>
   <h1>The Layers of Skin</h1>
-  <p class="tagline">Skin isn't one thing &mdash; it's a stack. Tap a layer in the diagram to see what it does, then ride the "escalator" up through the epidermis.</p>
+  <p class="tagline">Skin isn't one thing &mdash; it's a stack. Tap a layer in the diagram to see what's in it, then work down through the five layers of the epidermis.</p>
 
   <div class="big">
-    <b>The three main layers, top to bottom:</b>
+    <b>The three main layers, outermost first:</b>
     <ul style="margin:.4em 0 0">
-      <li><b>Epidermis</b> &mdash; the thin, tough outer sheet you can see and touch. No blood vessels.</li>
-      <li><b>Dermis</b> &mdash; the thick living layer underneath: blood vessels, nerves, glands, hair roots.</li>
-      <li><b>Hypodermis</b> (subcutaneous) &mdash; fat that cushions, insulates, and anchors skin to the body.</li>
+      <li><b>Epidermis</b> &mdash; the outer layer, made of 5 strata. About .05&nbsp;mm thick on the eyelids up to 1.5&nbsp;mm on the feet.</li>
+      <li><b>Dermis</b> &mdash; the middle layer (1&ndash;4&nbsp;mm) where "all the goodies live": glands, hair follicles, receptors, blood vessels, nerves.</li>
+      <li><b>Hypodermis</b> (subcutaneous layer) &mdash; attaches the dermis to muscle and bone; has a layer of adipose (fat) for insulation and protection.</li>
     </ul>
   </div>
 
@@ -76,108 +82,130 @@ summary:hover{text-decoration:underline}
         </g>
         <g class="band" data-layer="hypodermis">
           <rect x="10" y="238" width="280" height="110" rx="4" fill="#e0b15e"/>
-          <text x="150" y="297" text-anchor="middle" fill="#5a3d12">HYPODERMIS (fat)</text>
+          <text x="150" y="297" text-anchor="middle" fill="#5a3d12">HYPODERMIS</text>
         </g>
-        <!-- little structures, decorative -->
-        <circle cx="60" cy="150" r="7" fill="#7a2b3c"/><circle cx="60" cy="150" r="3" fill="#e0b15e"/>
-        <rect x="200" y="96" width="8" height="130" rx="4" fill="#7a2b3c"/>
-        <path d="M120 100 q6 60 -4 120" stroke="#f0c0cb" stroke-width="4" fill="none"/>
       </svg>
-      <p class="note" style="margin:.4em 6px 0">Not to scale &mdash; the epidermis is really the thinnest layer.</p>
+      <p class="note" style="margin:.4em 6px 0">Not to scale. Her thickness ranges: epidermis .05&ndash;1.5&nbsp;mm, dermis 1&ndash;4&nbsp;mm, hypodermis 1&nbsp;mm (eyelids) to 3&nbsp;cm (abdomen, buttocks).</p>
     </div>
     <div class="panel" id="panel">
       <span class="chip">Start here</span>
       <h3>Pick a layer &rarr;</h3>
-      <p>Tap <b>Epidermis</b>, <b>Dermis</b>, or <b>Hypodermis</b> in the diagram to see what each layer is made of and what job it does.</p>
+      <p>Tap <b>Epidermis</b>, <b>Dermis</b>, or <b>Hypodermis</b> in the diagram to see what each layer contains and what it does.</p>
     </div>
   </div>
 
-  <h2>Inside the epidermis: the cell escalator</h2>
-  <p>Here's the single most useful idea for this unit. The epidermis is built from <b>keratinocytes</b>
-  &mdash; cells that make the tough protein <b>keratin</b>. New cells are born at the <b>bottom</b>, and as
-  more are made they get <b>pushed up</b>. On the way up they fill with keratin, flatten, and <b>die</b>,
-  so the surface of your skin is actually a layer of <b>dead, hardened cells</b> that constantly flake
-  off and get replaced.</p>
+  <h2>Inside the epidermis: five strata</h2>
+  <p>The epidermis has <b>5 distinct strata</b> (layers). Its <b>keratinocytes</b> make <b>keratin</b>
+  proteins that give skin, hair and nails strength and structure. Read it from the surface down, the way
+  Mrs. Kalec lists it:</p>
+
+  <div class="mnem">
+    <b>Memory trick (outermost &rarr; deepest) &mdash; Mrs. Kalec's own:</b> <b>C</b>orneum &middot; <b>L</b>ucidum &middot;
+    <b>G</b>ranulosum &middot; <b>S</b>pinosum &middot; <b>B</b>asale &rarr;
+    &ldquo;<b>C</b>reamy <b>L</b>otion <b>G</b>ets <b>S</b>kin <b>B</b>eautiful.&rdquo;
+    <br><span class="note">Going the other way (deepest &rarr; outermost)? &ldquo;<b>B</b>ig <b>S</b>ophia <b>G</b>ave <b>L</b>uke <b>C</b>orn.&rdquo; But expect to be asked outermost-first.</span>
+  </div>
 
   <h3>See the five layers stacked</h3>
   <div class="diagram" style="margin:12px 0">
-    <svg viewBox="0 0 600 356" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Cross-section of the five epidermal layers, deepest to surface" font-family="Nunito, 'Segoe UI', system-ui, sans-serif">
-      <defs>
-        <marker id="up5" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 8L5 2L8 8" fill="none" stroke="#b5445a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
-      </defs>
-      <line x1="48" y1="330" x2="48" y2="46" stroke="#b5445a" stroke-width="3" marker-end="url(#up5)"/>
-      <text x="48" y="36" text-anchor="middle" font-size="12" font-weight="800" fill="#b5445a">shed</text>
-      <text x="48" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="#5a6b83">cells</text>
-      <text x="48" y="194" text-anchor="middle" font-size="11" font-weight="700" fill="#5a6b83">rise</text>
-      <text x="48" y="348" text-anchor="middle" font-size="12" font-weight="800" fill="#b5445a">born</text>
+    <svg viewBox="0 0 640 300" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="The five epidermal layers, surface at top" font-family="Nunito, 'Segoe UI', system-ui, sans-serif">
+      <text x="20" y="34" font-size="11" font-weight="800" fill="#b5445a">SURFACE</text>
+      <text x="20" y="286" font-size="11" font-weight="800" fill="#b5445a">DEEPEST</text>
 
-      <rect x="92" y="44" width="196" height="54" rx="5" fill="#c2b0b4"/>
-      <text x="190" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#3a2a2e">Stratum corneum</text>
-      <rect x="92" y="98" width="196" height="26" rx="5" fill="#e3d3d6" stroke="#b98f97" stroke-dasharray="4 3"/>
-      <text x="190" y="115" text-anchor="middle" font-size="12" font-weight="700" fill="#3a2a2e">Stratum lucidum</text>
-      <rect x="92" y="124" width="196" height="58" rx="5" fill="#cf94a2"/>
-      <text x="190" y="157" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Stratum granulosum</text>
-      <rect x="92" y="182" width="196" height="86" rx="5" fill="#c9788a"/>
-      <text x="190" y="229" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Stratum spinosum</text>
-      <rect x="92" y="268" width="196" height="68" rx="5" fill="#a94258"/>
-      <text x="190" y="306" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Stratum basale</text>
-      <rect x="86" y="336" width="208" height="8" rx="2" fill="#7a2b3c"/>
+      <rect x="92" y="20" width="196" height="50" rx="5" fill="#c2b0b4"/>
+      <text x="190" y="50" text-anchor="middle" font-size="12" font-weight="700" fill="#3a2a2e">1. Stratum corneum</text>
+      <rect x="92" y="70" width="196" height="50" rx="5" fill="#e3d3d6" stroke="#b98f97" stroke-dasharray="4 3"/>
+      <text x="190" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#3a2a2e">2. Stratum lucidum</text>
+      <rect x="92" y="120" width="196" height="50" rx="5" fill="#cf94a2"/>
+      <text x="190" y="150" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3. Stratum granulosum</text>
+      <rect x="92" y="170" width="196" height="50" rx="5" fill="#c9788a"/>
+      <text x="190" y="200" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">4. Stratum spinosum</text>
+      <rect x="92" y="220" width="196" height="50" rx="5" fill="#a94258"/>
+      <text x="190" y="250" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">5. Stratum basale</text>
 
-      <circle cx="120" cy="290" r="6" fill="#3a1f28"/><circle cx="120" cy="290" r="2.5" fill="#e0b15e"/>
+      <circle cx="120" cy="245" r="6" fill="#3a1f28"/><circle cx="120" cy="245" r="2.5" fill="#e0b15e"/>
 
-      <line x1="290" y1="71" x2="298" y2="71" stroke="#b98f97" stroke-width="1"/>
-      <text x="302" y="75" font-size="12.5" font-weight="600" fill="#5a6b83">dead &amp; tough &mdash; the barrier that flakes off</text>
-      <line x1="290" y1="111" x2="298" y2="111" stroke="#b98f97" stroke-width="1"/>
-      <text x="302" y="115" font-size="12.5" font-weight="600" fill="#5a6b83">thin &mdash; only in thick skin (palms, soles)</text>
-      <line x1="290" y1="153" x2="298" y2="153" stroke="#b98f97" stroke-width="1"/>
-      <text x="302" y="157" font-size="12.5" font-weight="600" fill="#5a6b83">cells die &amp; waterproof the skin</text>
-      <line x1="290" y1="225" x2="298" y2="225" stroke="#b98f97" stroke-width="1"/>
-      <text x="302" y="229" font-size="12.5" font-weight="600" fill="#5a6b83">strong, spiny &mdash; the thickest layer</text>
-      <line x1="290" y1="302" x2="298" y2="302" stroke="#b98f97" stroke-width="1"/>
-      <text x="302" y="306" font-size="12.5" font-weight="600" fill="#5a6b83">new cells born; melanocytes make melanin</text>
+      <line x1="290" y1="45" x2="298" y2="45" stroke="#b98f97" stroke-width="1"/>
+      <text x="302" y="49" font-size="12.5" font-weight="600" fill="#5a6b83">dead squamous cells, shed &amp; replaced</text>
+      <line x1="290" y1="95" x2="298" y2="95" stroke="#b98f97" stroke-width="1"/>
+      <text x="302" y="99" font-size="12.5" font-weight="600" fill="#5a6b83">clear; eledin; living/dead barrier</text>
+      <line x1="290" y1="145" x2="298" y2="145" stroke="#b98f97" stroke-width="1"/>
+      <text x="302" y="149" font-size="12.5" font-weight="600" fill="#5a6b83">keratinization begins; waterproof barrier</text>
+      <line x1="290" y1="195" x2="298" y2="195" stroke="#b98f97" stroke-width="1"/>
+      <text x="302" y="199" font-size="12.5" font-weight="600" fill="#5a6b83">Langerhans cells (immunity)</text>
+      <line x1="290" y1="245" x2="298" y2="245" stroke="#b98f97" stroke-width="1"/>
+      <text x="302" y="249" font-size="12.5" font-weight="600" fill="#5a6b83">melanocytes (melanin) + Merkel cells</text>
     </svg>
-    <p class="note" style="margin:.5em 6px 0">A zoom into the pink <b>epidermis</b> band above &mdash; its five sub-layers, deepest (bottom) to surface (top). The gold dot marks a <b>melanocyte</b> down in the basale. Not to scale.</p>
+    <p class="note" style="margin:.5em 6px 0">A zoom into the pink <b>epidermis</b> band above &mdash; its five strata, surface (top) to deepest (bottom). The gold dot marks a <b>melanocyte</b> in the basale. Bands drawn equal &mdash; not to scale.</p>
   </div>
 
-  <div class="mnem">
-    <b>The escalator metaphor:</b> think of a factory in the basement making cells, an escalator carrying
-    them up, and the cells "hardening into bricks" as they ride &mdash; by the top they're a dead, waterproof
-    <b>brick wall</b> that slowly crumbles off the surface. <span class="note">(Your class has an "Epidermis
-    Metaphor" assignment &mdash; this is one example. Yours can be totally different: an assembly line, a
-    conveyor of bread going stale, a snake shedding&hellip; the point is to capture <em>born&nbsp;&rarr;&nbsp;rise&nbsp;&rarr;&nbsp;harden&nbsp;&rarr;&nbsp;die&nbsp;&rarr;&nbsp;shed</em>.)</span>
-  </div>
-
-  <p class="note">Tap each layer &mdash; deepest (bottom of the escalator) to surface (top):</p>
+  <p class="note">Tap each layer &mdash; surface first:</p>
   <ul class="strata" id="strata"></ul>
 
   <div class="mnem">
-    <b>Memory trick (deep&nbsp;&rarr;&nbsp;surface):</b> <b>B</b>asale &middot; <b>S</b>pinosum &middot;
-    <b>G</b>ranulosum &middot; <b>L</b>ucidum &middot; <b>C</b>orneum &rarr;
-    &ldquo;<b>B</b>ig <b>S</b>ophia <b>G</b>ave <b>L</b>uke <b>C</b>orn.&rdquo;
-    <br><span class="note">Stratum <b>lucidum</b> only appears in <b>thick skin</b> (palms &amp; soles).</span>
+    <b>Picture this:</b> a five-floor building seen from the roof down. Roof (corneum): worn-out tiles that keep
+    getting swapped for new ones. Floor 2 (lucidum): a frosted-glass partition between the dead roof and the
+    living floors below. Floor 3 (granulosum): where the keratin work starts and the waterproofing is. Floor 4 (spinosum):
+    security guards (Langerhans cells) checking who is dangerous. Ground floor (basale): the paint shop
+    (melanocytes) and the touch sensors (Merkel cells).
+    <span class="note">(Your class has an "Epidermis Metaphor" activity &mdash; this is one example. Yours can be totally
+    different; the point is to tie each stratum to its cells and facts.)</span>
   </div>
 
-  <h2>Two quick jobs to remember</h2>
+  <h2>The four epidermis cells to know</h2>
   <ul>
-    <li><b>Melanocytes</b> sit down in the <b>stratum basale</b> and make <b>melanin</b>, the pigment that
-    colors skin and shields the deeper cells from UV.</li>
-    <li>The <b>dermis</b> holds the <b>dermal papillae</b> &mdash; the ridges that push up into the epidermis
-    and give you <b>fingerprints</b> (that's next week).</li>
+    <li><b>Keratinocytes</b> &mdash; make <b>keratin</b> proteins that give skin, hair and nails strength and structure. Keratinocytes in the stratum basale divide (her burn-healing slide: that's how first-degree burns heal).</li>
+    <li><b>Melanocytes</b> &mdash; in the <b>stratum basale</b>. <b>Melanogenesis</b>: they produce <b>melanin</b> pigments, which give skin its color.</li>
+    <li><b>Merkel cells</b> &mdash; in the <b>stratum basale</b>. Special skin receptors that sense <b>light touch, pressure and fine textures</b>.</li>
+    <li><b>Langerhans cells</b> &mdash; in the <b>stratum spinosum</b>. Important for <b>immunity</b>: they tell dangerous cells from cells that aren't dangerous. Her functions slide notes they come from bone marrow.</li>
+  </ul>
+
+  <h2>Structures of the dermis (your Skin Diagram)</h2>
+  <p>The labels on Mrs. Kalec's Skin Diagram template:</p>
+  <ul>
+    <li><b>Layers:</b> epidermis, dermis, hypodermis, adipose tissue</li>
+    <li><b>Hair:</b> hair shaft, hair root, hair follicle, arrector pili muscle</li>
+    <li><b>Glands:</b> eccrine sweat gland, pore of sweat gland, sebaceous gland</li>
+    <li><b>Sensing &amp; supply:</b> Pacinian corpuscle, sensory nerve fibre, cutaneous vascular plexus</li>
+  </ul>
+  <p class="note">One more label on the template is hard to read (it ends in "...follicle ... receptor") &mdash; check the exact name on your own Skin Diagram.</p>
+  <p>What her dermis slide says it contains: sweat glands; <b>corpuscles that feel pressure</b>; <b>pain, pleasure and itch receptors</b>; hair follicles; the <b>arrector pili muscle</b>; blood vessels and nerves. The dermis also <b>makes and secretes oils</b> that keep skin smooth and soft.</p>
+  <p class="note">For how she phrases the main function of each of the three layers, for comparing the types of glands, and for the job of each dermal structure, use your class notes and your Skin Diagram work.</p>
+
+  <h2>What skin does (her functions slide)</h2>
+  <ul>
+    <li><b>Regulates body temperature</b> &mdash; through sweat, and muscle contraction (blood vessels, arrector pili muscles).</li>
+    <li><b>Protection</b> &mdash; a physical barrier against abrasion, bacteria, dehydration and UV light.</li>
+    <li><b>Sensation</b> &mdash; pain, pressure and temperature, through receptors.</li>
+    <li><b>Excretion</b> &mdash; wastes such as ions, electrolytes, urea and amino acids.</li>
+    <li><b>Immunity</b> &mdash; Langerhans cells (from bone marrow); her slide lists them with helper-T cells and antibodies.</li>
+    <li><b>Blood reservoir</b> &mdash; with moderate exercise, blood vessels expand and heat leaves; with strenuous exercise, they contract and send blood to the muscles.</li>
+    <li><b>Vitamin D synthesis</b> &mdash; triggered by UV light; vitamin D helps the body absorb calcium to build bone and healthy tissue.</li>
   </ul>
 
   <h2>Check yourself</h2>
-  <div class="q"><p><span class="qn">1</span>Which is the correct order from the body's <b>surface inward</b>?</p>
-    <details><summary>Show answer</summary><div class="ans"><b>Epidermis &rarr; dermis &rarr; hypodermis.</b> Outer sheet, then the thick living layer, then the fat.</div></details></div>
-  <div class="q"><p><span class="qn">2</span>Why does the very surface of your skin feel dry/tough and flake off?</p>
-    <details><summary>Show answer</summary><div class="ans">The surface is the <b>stratum corneum</b> &mdash; layers of <b>dead, keratin-filled cells</b> that have ridden up the "escalator," died, and are shedding. New cells from the basale replace them.</div></details></div>
-  <div class="q"><p><span class="qn">3</span>New epidermal cells are made in which layer &mdash; and what pigment cell also lives there?</p>
-    <details><summary>Show answer</summary><div class="ans">The <b>stratum basale</b> (deepest). <b>Melanocytes</b> live there and make <b>melanin</b>.</div></details></div>
-  <div class="q"><p><span class="qn">4</span>The epidermis has no blood vessels. Which layer delivers its nutrients?</p>
-    <details><summary>Show answer</summary><div class="ans">The <b>dermis</b> &mdash; its blood vessels feed the living cells at the bottom of the epidermis by diffusion.</div></details></div>
-  <div class="q"><p><span class="qn">5</span>Put the five epidermal strata in order, deep to surface.</p>
-    <details><summary>Show answer</summary><div class="ans"><b>Basale &rarr; Spinosum &rarr; Granulosum &rarr; Lucidum (thick skin only) &rarr; Corneum.</b> ("Big Sophia Gave Luke Corn.")</div></details></div>
+  <div class="q"><p><span class="qn">1</span>Name the three main layers of skin, starting at the <b>surface</b>.</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Epidermis &rarr; dermis &rarr; hypodermis</b> (subcutaneous layer).</div></details></div>
+  <div class="q"><p><span class="qn">2</span>List the five strata of the epidermis, starting with the <b>outermost</b>.</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Corneum &rarr; Lucidum &rarr; Granulosum &rarr; Spinosum &rarr; Basale.</b> ("Creamy Lotion Gets Skin Beautiful.")</div></details></div>
+  <div class="q"><p><span class="qn">3</span>What is the stratum corneum made of, and how often is it replaced?</p>
+    <details><summary>Show answer</summary><div class="ans">Thin <b>squamous</b> cells that are <b>dead</b> &mdash; their cytoplasm has been replaced by keratin and they've lost moisture. They're shed and replaced, and the whole layer is replaced about <b>once a month</b>.</div></details></div>
+  <div class="q"><p><span class="qn">4</span>Which layer contains the arrector pili muscle, hair follicles, sweat glands and pressure-sensing corpuscles?</p>
+    <details><summary>Show answer</summary><div class="ans">The <b>dermis</b>.</div></details></div>
+  <div class="q"><p><span class="qn">5</span>In which stratum does keratinization begin &mdash; and which stratum is the waterproof barrier?</p>
+    <details><summary>Show answer</summary><div class="ans">Both: the <b>stratum granulosum</b>.</div></details></div>
+  <div class="q"><p><span class="qn">6</span>Which cells are important for immunity, and which stratum are they in?</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Langerhans cells</b>, in the <b>stratum spinosum</b>. They tell dangerous cells from not-dangerous ones.</div></details></div>
+  <div class="q"><p><span class="qn">7</span>What do Merkel cells detect, and where are they?</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Light touch, pressure and fine textures.</b> They're in the <b>stratum basale</b>.</div></details></div>
+  <div class="q"><p><span class="qn">8</span>Which stratum looks clear, is filled with eledin, and is the barrier between living and dead cells?</p>
+    <details><summary>Show answer</summary><div class="ans">The <b>stratum lucidum</b> (3&ndash;5 cells of dead keratinocytes).</div></details></div>
+  <div class="q"><p><span class="qn">9</span>Which pigment cell lives in the stratum basale, and what does melanogenesis produce?</p>
+    <details><summary>Show answer</summary><div class="ans"><b>Melanocytes</b>. Melanogenesis produces <b>melanin</b> pigments, which give skin its color.</div></details></div>
+  <div class="q"><p><span class="qn">10</span>Give two jobs of the hypodermis and two things it contains.</p>
+    <details><summary>Show answer</summary><div class="ans">It <b>attaches the dermis to muscles and bones</b>, and its adipose gives <b>insulation and protection</b>. It contains a layer of <b>adipose</b> and <b>bigger blood vessels and nerves</b>.</div></details></div>
 
-  <p class="note" style="margin-top:22px">Original study explainer for Unit 2 (Integumentary). General anatomy of the skin; no class handout text is reproduced &mdash; use it alongside your teacher's notes.</p>
+  <p class="note" style="margin-top:22px">Built from Mrs. Kalec's Integumentary System slides, her Skin Diagram template and her Unit 2 Exam Review, in our own words.</p>
 
   <div class="footer">Made for you &middot; ad-free</div>
 </div>
@@ -185,16 +213,16 @@ summary:hover{text-decoration:underline}
 "use strict";
 (function(){
   var LAYERS={
-    epidermis:{t:"Epidermis",b:"The thin, tough outer sheet — the part you see and touch. Made of dead-and-dying keratinocytes stacked in layers. <b>No blood vessels</b> up here. Its job: a waterproof, germ-proof <b>barrier</b>, and it makes the pigment that colors and UV-protects your skin."},
-    dermis:{t:"Dermis",b:"The thick <b>living</b> layer beneath the epidermis. Packed with <b>collagen &amp; elastin</b> (strength + stretch), <b>blood vessels</b>, <b>nerve endings</b> (touch, pain, temperature), <b>hair follicles</b>, and <b>sweat &amp; oil glands</b>. This is where most of the action is."},
-    hypodermis:{t:"Hypodermis (subcutaneous layer)",b:"Mostly <b>fat</b>. It <b>cushions</b> against bumps, <b>insulates</b> to keep heat in, stores energy, and <b>anchors</b> the skin to the muscle and bone underneath. Technically below the skin proper, but always studied with it."}
+    epidermis:{t:"Epidermis",b:"The outer layer: <b>5 strata</b> (corneum, lucidum, granulosum, spinosum, basale). About .05 mm thick on the eyelids up to 1.5 mm on the feet. Its cells: <b>keratinocytes</b> (keratin for strength and structure), <b>melanocytes</b> (melanin, skin color), <b>Merkel cells</b> (light touch, pressure, fine textures) and <b>Langerhans cells</b> (immunity). The stratum granulosum is the <b>waterproof barrier</b>."},
+    dermis:{t:"Dermis",b:"\"Where all the goodies live\" &mdash; 1&ndash;4 mm thick. Contains <b>sweat glands</b>, <b>corpuscles that feel pressure</b>, <b>pain, pleasure and itch receptors</b>, <b>hair follicles</b>, the <b>arrector pili muscle</b>, and <b>blood vessels and nerves</b>. It makes and secretes the <b>oils</b> that keep skin smooth and soft."},
+    hypodermis:{t:"Hypodermis (subcutaneous layer)",b:"<b>Attaches</b> the dermis to your muscles and bones. Contains <b>bigger blood vessels and nerves</b>, and a layer of <b>adipose</b> (fat) for <b>insulation and protection</b>. From about 1 mm thick on the eyelids up to 3 cm on the abdomen or buttocks."}
   };
   var STRATA=[
-    {t:"Stratum corneum",lvl:"surface (top)",b:"20–30 layers of flat, <b>dead</b>, keratin-filled cells. This is the actual barrier: waterproof and constantly <b>flaking off</b> and being replaced (a full turnover takes weeks)."},
-    {t:"Stratum lucidum",lvl:"thick skin only",b:"A thin, clear band found <b>only in thick skin</b> — palms of the hands and soles of the feet. Extra dead, flattened cells for extra wear."},
-    {t:"Stratum granulosum",lvl:"middle",b:"Cells start to <b>die here</b> and fill with granules of keratin. This is where skin becomes waterproof — the cells release a lipid \"glue\" that seals the barrier."},
-    {t:"Stratum spinosum",lvl:"upper-middle",b:"Several layers of cells held tightly together by strong junctions (they look spiny under a microscope). Gives the epidermis its <b>strength and flexibility</b>."},
-    {t:"Stratum basale",lvl:"deepest (bottom)",b:"The <b>factory floor</b>. New keratinocytes are made here by cell division and pushed upward. <b>Melanocytes</b> live here too, making the pigment <b>melanin</b>. Everything above starts here."}
+    {t:"Stratum corneum",lvl:"1st · surface",b:"The most superficial layer, 10&ndash;30 micrometers. Thin <b>squamous</b> cells that are <b>dead</b>: their cytoplasm is replaced by <b>keratin</b> and they lose moisture. Cells are <b>shed and replaced</b>; the layer is completely replaced about <b>once a month</b>. <b>Keratinization</b> is the process that forms this layer."},
+    {t:"Stratum lucidum",lvl:"2nd",b:"3&ndash;5 cells of <b>dead keratinocytes</b>, filled with <b>eledin</b> (protein-bound lipids). It looks <b>clear</b>, and it is the <b>barrier between living and dead cells</b>."},
+    {t:"Stratum granulosum",lvl:"3rd",b:"1&ndash;10 cells thick. <b>Keratinization begins here.</b> Keratinocytes make <b>keratin</b> proteins that give skin, hair and nails strength and structure. This is the <b>waterproof barrier</b>."},
+    {t:"Stratum spinosum",lvl:"4th",b:"5&ndash;10 layers of <b>irregularly shaped</b> cells. Contains <b>Langerhans cells</b>, important for <b>immunity</b>: they tell dangerous cells from cells that aren't dangerous."},
+    {t:"Stratum basale",lvl:"5th · deepest",b:"A <b>single layer of columnar cells</b>. <b>Melanocytes</b> are here: <b>melanogenesis</b> produces melanin pigments, which give skin its color. <b>Merkel cells</b> are here too: receptors for light touch, pressure and fine textures."}
   ];
 
   var panel=document.getElementById("panel");

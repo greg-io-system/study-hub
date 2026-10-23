@@ -59,10 +59,17 @@
 </style>
 </head>
 <body>
+<!-- SOURCES
+kind: class
+- human-anatomy/reference/unit-3-slides-capture.md
+- human-anatomy/reference/unit-3-exam-review-capture.md
+- human-anatomy/reference/unit-3-bone-diagram-capture.md
+fact-trace: 2026-10-23 additions+coverage
+-->
 <div class="wrap">
   <div class="eyebrow">Human Anatomy</div>
   <h1>Unit 3 Flashcards &mdash; Skeletal System</h1>
-  <p class="tagline">Tap a card to flip, then grade yourself. Your progress saves on this device. Skeletal exam Wed Oct 21.</p>
+  <p class="tagline">Tap a card to flip, then grade yourself. Your progress saves on this device. 112 cards.</p>
 
   <details class="howto" open>
     <summary>How to use</summary>
@@ -70,7 +77,7 @@
       <li><b>Flip</b> — tap the card (or press Space) to see the answer.</li>
       <li><b>✓ Got it / ↺ Review</b> — grade yourself. The tally on the right tracks both.</li>
       <li><b>Drill review only</b> — study just the cards you marked Review; as you get them right they drop out, counting down to none left.</li>
-      <li><b>Groups</b> — tap a topic (Directional, Cells…) to focus on one area.</li>
+      <li><b>Groups</b> — tap a topic (Bones, Structure, Joints, Function, Injuries) to focus on one area.</li>
       <li><b>Progress saves automatically</b> on this device — refresh or come back later and your marks are still here.</li>
       <li><b>Reset</b> — clear all your marks and start fresh.</li>
     </ul>
@@ -107,7 +114,8 @@
   </div>
 
   <p class="note">Keyboard: <b>Space</b> flip · <b>→ / ←</b> move · <b>G</b> got it · <b>R</b> review</p>
-  <div class="footer">Made for you · ad-free</div>
+  <p class="note">Study these from your class slides and your own class work: which skeleton region (axial or appendicular) each Bone Diagram bone belongs to; example bones for each bone type (slides 17–18); the joint pictures on slide 42; the fracture x-rays (slides 22–25 and the slide 27 practice); the fracture briefing sheet; and treatments for sprains, bursitis and arthritis.</p>
+  <div class="footer">Built from Mrs. Kalec's Skeletal System slides, her Bone Diagram and her Unit 3 Exam Review, in our own words. · Made for you · ad-free</div>
 </div>
 
 <script>
@@ -115,92 +123,128 @@
 /* ---- The deck: swap this array to reuse the component for any unit ---- */
 var CARDS = [
   // Bones
-  {c:"Bones", f:"Upper arm bone", b:"humerus"},
-  {c:"Bones", f:"Forearm bone on the THUMB side", b:"radius"},
-  {c:"Bones", f:"Forearm bone on the PINKY side", b:"ulna"},
-  {c:"Bones", f:"Wrist bones / palm bones / finger bones", b:"carpals · metacarpals · phalanges", h:"C = hand"},
-  {c:"Bones", f:"Ankle bones / foot bones / toe bones", b:"tarsals · metatarsals · phalanges", h:"T = foot"},
-  {c:"Bones", f:"Thigh bone", b:"femur"},
-  {c:"Bones", f:"Kneecap", b:"patella"},
-  {c:"Bones", f:"Lower leg: inner (shin) bone vs. outer bone", b:"tibia (inner) · fibula (outer)"},
-  {c:"Bones", f:"Collarbone / shoulder blade", b:"clavicle · scapula"},
-  {c:"Bones", f:"Breastbone", b:"sternum"},
-  {c:"Bones", f:"Lower jaw", b:"mandible"},
+  {c:"Bones", f:"How many bones are in the human body?", b:"206"},
+  {c:"Bones", f:"Why does each bone count as an organ?", b:"it is made of several types of tissue"},
+  {c:"Bones", f:"Three quick bone facts from the intro slide", b:"bone is 22% water · you fully replace your skeleton every 10 years · your smallest bones are in your ear"},
+  {c:"Bones", f:"Bone Diagram, ANTERIOR view: the first 7 pointers, top to bottom", b:"skull · mandible · clavicle · sternum · ribs · vertebrae · hip bone", h:"Try it: say them while pointing on your own Bone Diagram"},
+  {c:"Bones", f:"Bone Diagram, ANTERIOR view: the last 6 pointers, top to bottom", b:"carpals · metacarpals · phalanges · patella · tarsals · metatarsals"},
+  {c:"Bones", f:"Bone Diagram, POSTERIOR view: all 10 pointers, top to bottom", b:"vertebrae · scapula · humerus · ulna · radius · sacrum · coccyx · femur · tibia · fibula"},
+  {c:"Bones", f:"Which bone gets labeled on BOTH views of the Bone Diagram?", b:"vertebrae (two \"vertebrae\" labels, one per view)"},
+  {c:"Bones", f:"The three hand-region bones on the anterior Bone Diagram", b:"carpals · metacarpals · phalanges (fingers)"},
+  {c:"Bones", f:"The last two pointers on the anterior Bone Diagram", b:"tarsals, then metatarsals"},
+  {c:"Bones", f:"Posterior Bone Diagram: which three bones come right after the humerus?", b:"ulna, then radius, then sacrum"},
+  {c:"Bones", f:"Posterior Bone Diagram: which bones come after the sacrum?", b:"coccyx · femur · tibia · fibula"},
+  {c:"Bones", f:"Find on your Bone Diagram: patella. Which view?", b:"anterior (front)"},
+  {c:"Bones", f:"Find on your Bone Diagram: scapula and humerus. Which view?", b:"posterior (back)"},
+  {c:"Bones", f:"Find on your Bone Diagram: skull, sternum, ribs. Which view?", b:"anterior (front)"},
   {c:"Bones", f:"The only bone not connected to another bone", b:"hyoid"},
-  {c:"Bones", f:"Bottom of the spine, then the tailbone", b:"sacrum → coccyx"},
-  {c:"Bones", f:"The bone of the pelvic girdle", b:"hip bone"},
+  {c:"Bones", f:"The hyoid: axial or appendicular?", b:"axial (it is listed with the axial skeleton)"},
+  {c:"Bones", f:"Which joint type sits between the flat bones of the skull?", b:"fibrous (no movement)"},
+  {c:"Bones", f:"The mandible is a location of which joint type?", b:"condyloid (ellipsoid)"},
   // Structure
-  {c:"Structure", f:"Axial skeleton includes…", b:"skull, hyoid, vertebral column, thorax (sternum + ribs)"},
-  {c:"Structure", f:"Appendicular skeleton includes…", b:"pectoral girdle, arms/hands, pelvic girdle, legs/feet"},
-  {c:"Structure", f:"Axial or appendicular: clavicle?", b:"appendicular (pectoral girdle)", h:"girdles are appendicular"},
-  {c:"Structure", f:"Compact bone", b:"the dense outer wall of bone"},
-  {c:"Structure", f:"Spongy bone", b:"light and porous; absorbs impact; red marrow is here"},
+  {c:"Structure", f:"Axial skeleton includes…", b:"skull, hyoid, vertebral column, thorax (rib cage)"},
+  {c:"Structure", f:"Appendicular skeleton includes…", b:"pectoral girdle, upper limbs, pelvic girdle, lower limbs"},
+  {c:"Structure", f:"Axial or appendicular: vertebral column?", b:"axial"},
+  {c:"Structure", f:"Axial or appendicular: pectoral girdle?", b:"appendicular", h:"Memory trick: girdles and limbs are appendicular"},
+  {c:"Structure", f:"Compact bone", b:"the dense wall of the bone"},
+  {c:"Structure", f:"Spongy bone", b:"light and porous; absorbs impact"},
   {c:"Structure", f:"Osseous tissue = ?", b:"bone tissue"},
-  {c:"Structure", f:"Haversian & Volkmann canals", b:"tunnels that carry blood vessels through bone (along / across)"},
-  {c:"Structure", f:"Long bone (rule + example)", b:"longer than it is wide · femur, humerus, phalanges"},
-  {c:"Structure", f:"Short bone (rule + example)", b:"not longer than it is wide · carpals, tarsals"},
-  {c:"Structure", f:"Flat bone (rule + example)", b:"no ends, many edges · sternum, ribs, scapula"},
-  {c:"Structure", f:"Irregular bone (rule + example)", b:"fits none of the other types · vertebrae"},
-  {c:"Structure", f:"Epiphysis", b:"the ENDS of a long bone; form joints"},
+  {c:"Structure", f:"Haversian & Volkmann canals", b:"passageways for blood vessels in and out of the bone"},
+  {c:"Structure", f:"Long bone: the rule", b:"longer than it is wide"},
+  {c:"Structure", f:"Short bone: the rule", b:"NOT longer than it is wide"},
+  {c:"Structure", f:"Flat bone: the rule (+ the example from the joints slides)", b:"no ends, many edges · the flat bones of the skull"},
+  {c:"Structure", f:"Irregular bone: the rule", b:"fits none of the other types"},
+  {c:"Structure", f:"Epiphysis", b:"the ENDS of a long bone; form joints with neighboring bones"},
   {c:"Structure", f:"Diaphysis", b:"the SHAFT of a long bone"},
-  {c:"Structure", f:"Medullary cavity", b:"hollow center of the shaft; lined with endosteum, holds marrow"},
+  {c:"Structure", f:"Medullary cavity", b:"hollow space in the shaft; lined with endosteum, filled with marrow"},
   {c:"Structure", f:"Articular cartilage", b:"hyaline cartilage that pads the ends (epiphysis)"},
-  {c:"Structure", f:"Periosteum", b:"tough vascular covering; tendons + ligaments attach here"},
-  {c:"Structure", f:"Osteoblast", b:"BUILDS bone (reformation, ossification)", h:"B = build"},
-  {c:"Structure", f:"Osteoclast", b:"breaks bone DOWN (resorption)", h:"C = chew"},
-  {c:"Structure", f:"Osteocyte", b:"mature bone cell; maintains the bone around it"},
+  {c:"Structure", f:"Periosteum", b:"tough vascular covering of the bone; tendons + ligaments attach here"},
+  {c:"Structure", f:"Osteoblast", b:"BUILDS bone (reformation, ossification)", h:"Memory trick: B = build"},
+  {c:"Structure", f:"Osteoclast", b:"breaks bone DOWN (resorption)", h:"Memory trick: C = chew"},
+  {c:"Structure", f:"Osteocyte", b:"mature bone cell; maintains bone structure"},
   // Joints
-  {c:"Joints", f:"Fibrous joint: movement + where?", b:"none · skull"},
-  {c:"Joints", f:"Cartilaginous joint: movement + where?", b:"a little (bend/twist), absorbs shock · between vertebrae; 1st rib–sternum"},
-  {c:"Joints", f:"Synovial joint: what makes it special?", b:"capsule of ligaments + synovial membrane + fluid; moves freely"},
-  {c:"Joints", f:"Bursae / menisci", b:"fluid sacs / cartilage pads in some synovial joints that cushion"},
+  {c:"Joints", f:"What are joints, and what do they do?", b:"junctions between bones · bind parts of the skeleton · allow for growth · let the body move"},
+  {c:"Joints", f:"How many joints are in the body?", b:"360"},
+  {c:"Joints", f:"The three movement levels a joint can have", b:"immovable · slightly movable · freely movable"},
+  {c:"Joints", f:"Movement: fibrous vs. cartilaginous vs. synovial", b:"fibrous: none · cartilaginous: limited · synovial: free"},
+  {c:"Joints", f:"Fibrous joint: structure, movement, where?", b:"between bones in close contact · no movement · between the flat bones of the skull"},
+  {c:"Joints", f:"Cartilaginous joint: what connects the bones?", b:"hyaline cartilage or fibrocartilage"},
+  {c:"Joints", f:"Cartilaginous joint: movement + where?", b:"limited (bending or twisting) · vertebrae; 1st rib with the sternum"},
+  {c:"Joints", f:"Cartilaginous joint between vertebrae: its two jobs", b:"absorbs shock · equalizes pressure between vertebrae"},
+  {c:"Joints", f:"Synovial joint: how common, and how much movement?", b:"most joints in the skeletal system · free movement"},
+  {c:"Joints", f:"Synovial joint: what covers the bone ends, and what is the capsule made of?", b:"ends: hyaline cartilage + connective tissue · capsule: ligaments + a synovial membrane"},
+  {c:"Joints", f:"Bursae / menisci", b:"bursae = fluid-filled sacs · menisci = shock absorbers · both found in some synovial joints"},
+  {c:"Joints", f:"Ball & socket: structure", b:"one bone with a ball-shaped head + one bone with a cup-shaped cavity"},
   {c:"Joints", f:"Widest range of motion; shoulder + hip", b:"ball & socket"},
-  {c:"Joints", f:"One plane; elbow, knee, fingers, toes", b:"hinge"},
-  {c:"Joints", f:"Rotation on an axis; where the radius and ulna meet (turning a doorknob)", b:"pivot"},
-  {c:"Joints", f:"Many planes, NO rotation; base of the fingers, mandible", b:"condyloid (ellipsoid)"},
-  {c:"Joints", f:"Thumb and its metacarpal (concave meets convex)", b:"saddle"},
-  {c:"Joints", f:"Flat surfaces that slide; wrist, ankle", b:"plane (gliding)"},
+  {c:"Joints", f:"Condyloid: structure", b:"the condyle of one bone fits into an elliptical cavity of another"},
+  {c:"Joints", f:"Many planes, NO rotation; carpals with ulna/radius, base of the fingers, mandible", b:"condyloid (ellipsoid)"},
+  {c:"Joints", f:"Hinge: structure", b:"a convex surface of one bone fits into a concave surface of another"},
+  {c:"Joints", f:"One plane only; elbow, knee, fingers, toes", b:"hinge", h:"Picture this: the hinge of a door"},
+  {c:"Joints", f:"Pivot: structure", b:"a cylindrical surface of one bone rotates inside a ring of bone and ligaments"},
+  {c:"Joints", f:"Rotation around a central axis; proximal ends of the radius and ulna", b:"pivot", h:"Picture this: a rotation around a central axis, like a doorknob spinning on its axis"},
+  {c:"Joints", f:"Saddle: structure, movement, where?", b:"bones with both concave and convex regions that fit each other · a variety of movement · thumb with its metacarpal"},
+  {c:"Joints", f:"Plane (gliding): structure, movement, where?", b:"flat or slightly curved surfaces · sliding AND twisting · wrist, ankle"},
+  {c:"Joints", f:"How many bones must a muscle attach to in order to create movement?", b:"at least 2", h:"Picture this: to push a box (the bone that moves) you have to touch the box AND the floor (the bone that stays still); you are the muscle"},
+  {c:"Joints", f:"Origin vs. insertion", b:"origin = stationary end · insertion = movable end, pulled toward the origin when the muscle contracts"},
   // Function
-  {c:"Function", f:"The 5 functions of bone", b:"support · protection · movement · blood cell formation · storage"},
-  {c:"Function", f:"Hemopoiesis", b:"making blood cells (hemo = blood, poiesis = making)"},
-  {c:"Function", f:"Red marrow vs. yellow marrow", b:"red makes RBCs, WBCs, platelets · yellow stores fat"},
-  {c:"Function", f:"Minerals stored in bone", b:"calcium + phosphorus (released to the blood when needed)"},
-  {c:"Function", f:"Tendon vs. ligament", b:"tendon: muscle→bone · ligament: bone→bone"},
-  {c:"Function", f:"Resorption", b:"osteoclasts break bone down, releasing minerals"},
-  {c:"Function", f:"Reformation", b:"osteoblasts build new bone"},
-  {c:"Function", f:"Ossification", b:"making new bone; cartilage becomes bone as you grow"},
-  {c:"Function", f:"Growth plate", b:"cartilage near long-bone ends where the bone lengthens; closes when growth ends"},
-  {c:"Function", f:"Origin vs. insertion", b:"origin = still bone · insertion = moving bone (pulled toward origin)"},
+  {c:"Function", f:"The 5 functions of bone", b:"support · protection · movement · blood cell formation · nutrient storage"},
+  {c:"Function", f:"How bones help with MOVEMENT (4 points)", b:"surfaces for muscles to attach · muscles pull on bones · joints give flexibility + range of motion · the skeleton works as levers to increase force and efficiency"},
+  {c:"Function", f:"How bones give SUPPORT (5 points)", b:"framework that gives shape · holds posture upright · supports head + trunk · base for muscles + skin to attach · bears body weight"},
+  {c:"Function", f:"PROTECTION: what does the skull protect?", b:"brain, ears, eyes"},
+  {c:"Function", f:"PROTECTION: what does the rib cage (thoracic bones) protect?", b:"heart and lungs"},
+  {c:"Function", f:"PROTECTION: what do the vertebrae protect?", b:"spinal cord"},
+  {c:"Function", f:"PROTECTION: what does the pelvis protect?", b:"organs of the lower abdomen + reproductive organs"},
+  {c:"Function", f:"PROTECTION in general", b:"bones are hard barriers against outside impacts"},
+  {c:"Function", f:"Hemopoiesis", b:"blood cell formation (hemo = blood, poiesis = creating)"},
+  {c:"Function", f:"Red marrow vs. yellow marrow", b:"red forms RBCs, WBCs, platelets · yellow stores fat · both fill the medullary cavities"},
+  {c:"Function", f:"Red marrow is in the spongy bone of which bones?", b:"skull, ribs, sternum, clavicles, vertebrae, pelvis"},
+  {c:"Function", f:"What are all bones made of?", b:"calcium phosphate"},
+  {c:"Function", f:"Minerals stored in bone, and why it matters", b:"mainly calcium + phosphorus · released to the blood when needed · keeps mineral balance for nerve, muscle and cell function"},
+  {c:"Function", f:"Harmful elements bones can build up", b:"lead, radium, strontium"},
+  {c:"Function", f:"Tendon vs. ligament", b:"tendon: muscle→bone (movement) · ligament: bone→bone (stabilizes joints)"},
+  {c:"Function", f:"Bone maintenance: what is always happening, and why?", b:"bone is constantly broken down and formed again · for growth, repair, strength"},
+  {c:"Function", f:"Resorption", b:"osteoclasts break down and dissolve bone, releasing minerals"},
+  {c:"Function", f:"Reformation", b:"osteoblasts build new bone in the bone matrix"},
+  {c:"Function", f:"Ossification", b:"creating new bone during growth; cartilage turns into bone in a fetus or child · mainly osteoblasts + osteocytes"},
+  {c:"Function", f:"Growth plate", b:"cartilage near long-bone ends; new cartilage is replaced by bone so the bone gets longer · closes when growth is complete"},
   {c:"Function", f:"Fracture healing, in order", b:"hematoma → soft callus → hard callus → remodeling"},
-  {c:"Function", f:"Healing stage 1 (0–2 wk)", b:"hematoma: clot + inflammation"},
-  {c:"Function", f:"Healing stage 2 (2–3 wk)", b:"soft callus: collagen + cartilage bridge"},
-  {c:"Function", f:"Healing stage 3 (3–6 wk)", b:"hard callus: cartilage → bone"},
-  {c:"Function", f:"Healing stage 4 (8 wk+)", b:"remodeling: extra bone removed, bone reinforced"},
-  {c:"Function", f:"Factors that affect bone healing", b:"age, nutrition (Ca, vit D, protein), health, immobilization, smoking, medications"},
+  {c:"Function", f:"Healing stage 1 (0–2 wk)", b:"hematoma: a blood clot forms; inflammation brings immune cells"},
+  {c:"Function", f:"Healing stage 2 (2–3 wk)", b:"soft callus: collagen fibers + cartilage stabilize the fracture"},
+  {c:"Function", f:"Healing stage 3 (3–6 wk)", b:"hard callus: temporary cartilage replaced with real bone; strengthens"},
+  {c:"Function", f:"Healing stage 4 (8 wk+)", b:"remodeling: unnecessary bone removed, bone reinforced"},
+  {c:"Function", f:"Factors that affect bone healing", b:"age · nutrition (calcium, vitamin D, protein) · overall health + chronic conditions · proper treatment + immobilization · smoking + some medications (slow it)"},
+  {c:"Function", f:"Age and healing: who heals faster?", b:"younger people"},
   // Injuries
-  {c:"Injuries", f:"Open (compound) fracture", b:"bone pierces the skin → immediate surgery (infection risk)"},
-  {c:"Injuries", f:"Closed fracture", b:"bone breaks, skin intact"},
-  {c:"Injuries", f:"Stress fracture", b:"tiny cracks from repeated force"},
-  {c:"Injuries", f:"Avulsion fracture", b:"tendon/ligament pulls a chip of bone off"},
-  {c:"Injuries", f:"Displaced fracture", b:"broken through and ends out of line; may need pins/plates/screws"},
-  {c:"Injuries", f:"Transverse", b:"straight across the bone"},
-  {c:"Injuries", f:"Oblique", b:"diagonal across the bone"},
-  {c:"Injuries", f:"Spiral", b:"twists around the bone"},
-  {c:"Injuries", f:"Linear", b:"runs along the length of the bone"},
-  {c:"Injuries", f:"Greenstick", b:"bends + cracks, not all the way through"},
-  {c:"Injuries", f:"Comminuted", b:"3 or more pieces"},
-  {c:"Injuries", f:"Sprain", b:"ligaments/tendons stretched past their limit by a twist; slow to heal (no direct blood supply)"},
-  {c:"Injuries", f:"Bursitis", b:"fluid build-up in the bursae from repetitive motion/pressure"},
-  {c:"Injuries", f:"Arthritis", b:"painful degeneration of movable joints (immune attack or repeated cartilage damage)"},
-  {c:"Injuries", f:"Osteoporosis", b:"bone density loss: resorption > reformation; prevent with exercise + calcium young"},
-  {c:"Injuries", f:"Bone cancer", b:"usually spread from elsewhere; main symptom pain"},
-  {c:"Injuries", f:"Dislocation", b:"bone ends forced out of the joint; shoulders + fingers; reset promptly"}
+  {c:"Injuries", f:"Closed fracture", b:"bone breaks; the skin is not punctured"},
+  {c:"Injuries", f:"The three fractures listed under CLOSED", b:"stress · avulsion · displaced"},
+  {c:"Injuries", f:"Open (compound) fracture", b:"bone breaks and punctures or tears the skin → immediate surgery to prevent infection and help it realign + heal"},
+  {c:"Injuries", f:"Stress fracture", b:"tiny cracks, usually from force applied over and over"},
+  {c:"Injuries", f:"Avulsion fracture", b:"a tendon or ligament pulls off a piece of bone"},
+  {c:"Injuries", f:"Displaced fracture", b:"broken all the way through; usually needs surgery (pins, plates, screws) to realign + heal"},
+  {c:"Injuries", f:"The six types of DISPLACED fractures", b:"greenstick · spiral · oblique · linear · transverse · comminuted"},
+  {c:"Injuries", f:"Displaced type: Transverse", b:"fracture line runs straight across, horizontally"},
+  {c:"Injuries", f:"Displaced type: Oblique", b:"fracture line runs diagonally, an angled break"},
+  {c:"Injuries", f:"Displaced type: Spiral", b:"twists around the bone"},
+  {c:"Injuries", f:"Displaced type: Linear", b:"fracture line runs parallel to the bone's long axis"},
+  {c:"Injuries", f:"Displaced type: Greenstick", b:"bends + cracks, does not break completely"},
+  {c:"Injuries", f:"Displaced type: Comminuted", b:"breaks into 3 or more pieces"},
+  {c:"Injuries", f:"Sprain", b:"ligaments/tendons stretched past their limits by twisting a joint; slow to heal (no direct blood supply)"},
+  {c:"Injuries", f:"Bursitis", b:"fluid build-up in the bursae from repetitive motion or pressure"},
+  {c:"Injuries", f:"Arthritis", b:"painful degeneration of movable joints · immune cells attack the membranes, weaken cartilage, deposit bone in its place · or repeated cartilage damage"},
+  {c:"Injuries", f:"Osteoporosis: the cause", b:"loss of bone density from a decline in sex hormones"},
+  {c:"Injuries", f:"Osteoporosis: the bone-maintenance imbalance", b:"resorption faster than reformation → bone loss"},
+  {c:"Injuries", f:"Why are women more likely to get osteoporosis? (3)", b:"smaller bones can't afford to lose as much · calcium lost during the menstrual cycle · sex hormones decline at menopause"},
+  {c:"Injuries", f:"Preventing osteoporosis", b:"regular exercise + a calcium-rich diet in your teens and twenties"},
+  {c:"Injuries", f:"Bone cancer: where it usually comes from + main symptom", b:"most has spread (metastasized) from other cancers; cancer starting in bone is much rarer · most common symptom: pain"},
+  {c:"Injuries", f:"Bone cancer: treatments", b:"surgery, amputation, chemotherapy, radiation"},
+  {c:"Injuries", f:"Dislocation", b:"bone ends forced out of place in the joint · painful; temporarily immobilizes + deforms the joint · most common in shoulders + fingers"},
+  {c:"Injuries", f:"Dislocation: treatment, and why be quick?", b:"the joint is moved back into position promptly, to prevent cutting off blood flow"}
 ];
 
 /* ---- Component ---- */
 /* Bump STORAGE_KEY (or change it per deck) so different decks don't share saved
    progress. Progress persists per-browser via localStorage. */
-var STORAGE_KEY = "flashcards:hap-unit-3:v1";
+var STORAGE_KEY = "flashcards:hap-unit-3:v2";
 var cats = ["All"].concat(CARDS.map(function(c){return c.c;}).filter(function(v,i,a){return a.indexOf(v)===i;}));
 var filter="All", deck=[], pos=0, flipped=false, cardStatus={}, reviewOnly=false;
 var $=function(id){return document.getElementById(id);};

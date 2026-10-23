@@ -59,6 +59,12 @@
 </style>
 </head>
 <body>
+<!-- SOURCES
+kind: class
+- human-anatomy/reference/unit-1-slides-capture.md
+- human-anatomy/reference/unit-1-exam-review-capture.md
+fact-trace: 2026-10-23 additions+coverage
+-->
 <div class="wrap">
   <div class="eyebrow">Human Anatomy</div>
   <h1>Unit 1 Flashcards</h1>
@@ -70,7 +76,7 @@
       <li><b>Flip</b> — tap the card (or press Space) to see the answer.</li>
       <li><b>✓ Got it / ↺ Review</b> — grade yourself. The tally on the right tracks both.</li>
       <li><b>Drill review only</b> — study just the cards you marked Review; as you get them right they drop out, counting down to none left.</li>
-      <li><b>Groups</b> — tap a topic (Directional, Cells…) to focus on one area.</li>
+      <li><b>Groups</b> — tap a topic (Directional, Cells, Systems…) to focus on one area.</li>
       <li><b>Progress saves automatically</b> on this device — refresh or come back later and your marks are still here.</li>
       <li><b>Reset</b> — clear all your marks and start fresh.</li>
     </ul>
@@ -106,8 +112,9 @@
    <div class="done" id="done" hidden></div>
   </div>
 
+  <p class="note">Also on the review sheet but not on these cards: the anatomical regions, what mitochondria do, how the cell membrane is built, and where each type of epithelium is found. Study those from your class slides and notes.</p>
   <p class="note">Keyboard: <b>Space</b> flip · <b>→ / ←</b> move · <b>G</b> got it · <b>R</b> review</p>
-  <div class="footer">Made for you · ad-free</div>
+  <div class="footer">Built from Mrs. Kalec's Introduction to HAP &amp; Tissues slides and her Unit 1 Exam Review, in our own words.</div>
 </div>
 
 <script>
@@ -127,59 +134,134 @@ var CARDS = [
   {c:"Directional", f:"superior / inferior mean…", b:"toward the head / away from the head"},
   {c:"Directional", f:"medial / lateral mean…", b:"toward the midline / away from the midline"},
   {c:"Directional", f:"anterior = ___ ; posterior = ___", b:"ventral (front) ; dorsal (back)"},
-  {c:"Directional", f:"proximal / distal are used only on…", b:"limbs", h:"use superior/inferior on the trunk & head"},
+  {c:"Directional", f:"proximal / distal mean…", b:"nearer to / farther from where a limb attaches to the trunk (or from the point of origin)"},
   // Cavities & planes
+  {c:"Cavities & planes", f:"A body cavity is…", b:"a space inside the body that holds, protects, separates and supports the organs", h:"the two main ones: dorsal and ventral"},
   {c:"Cavities & planes", f:"The heart and lungs sit in the ___ cavity.", b:"Thoracic"},
   {c:"Cavities & planes", f:"The bladder sits in the ___ cavity.", b:"Pelvic", h:"lower part of the abdominopelvic cavity"},
   {c:"Cavities & planes", f:"The brain sits in the ___ cavity.", b:"Cranial", h:"a dorsal cavity"},
   {c:"Cavities & planes", f:"The two DORSAL cavities are…", b:"cranial (brain) + vertebral/spinal (spinal cord)"},
+  {c:"Cavities & planes", f:"The cranial cavity: made by what, holds what?", b:"made by the cranial bones; holds the brain and its coverings"},
+  {c:"Cavities & planes", f:"The vertebral cavity: made by what, holds what?", b:"made by the vertebral column; holds the spinal cord and the start of the spinal nerves"},
   {c:"Cavities & planes", f:"The two VENTRAL cavities are…", b:"thoracic + abdominopelvic"},
+  {c:"Cavities & planes", f:"What separates the abdominal and pelvic cavities?", b:"nothing: no wall between them", h:"abdominal = upper region, pelvic = lower region"},
+  {c:"Cavities & planes", f:"What sits in the ABDOMINAL cavity?", b:"stomach, spleen, gallbladder, liver, small intestine, most of the large intestine"},
+  {c:"Cavities & planes", f:"What sits in the PELVIC cavity?", b:"urinary bladder, part of the large intestine, internal reproductive organs"},
   {c:"Cavities & planes", f:"Sagittal plane divides the body into…", b:"left & right"},
   {c:"Cavities & planes", f:"Frontal (coronal) plane divides into…", b:"anterior & posterior (front/back)"},
   {c:"Cavities & planes", f:"Transverse plane divides into…", b:"superior & inferior (top/bottom)"},
   // Intro & homeostasis
   {c:"Intro & homeostasis", f:"Anatomy vs. physiology?", b:"structure vs. function"},
-  {c:"Intro & homeostasis", f:"Levels of organization, small → big", b:"chemical → cell → tissue → organ → organ system → organism"},
+  {c:"Intro & homeostasis", f:"How do form and function relate?", b:"structure determines function: how a part is built decides how it works", h:"Picture this: a bowl is deep so it holds liquid; a plate is flat so you can cut on it"},
+  {c:"Intro & homeostasis", f:"The 8 levels of organization, small → big", b:"chemical (atoms) → molecules → organelles → cells → tissues → organs → organ systems → organism"},
+  {c:"Intro & homeostasis", f:"Give examples: an organelle, an organ, an organ system", b:"organelles: mitochondria, nucleus, ribosome · organs: heart, stomach, brain · systems: nervous, muscular, digestive", h:"cells have specialized jobs; there are 4 tissue types"},
   {c:"Intro & homeostasis", f:"Homeostasis is…", b:"keeping internal conditions constant"},
-  {c:"Intro & homeostasis", f:"The homeostatic loop, in order", b:"stimulus → receptor → control center → effector"},
-  {c:"Intro & homeostasis", f:"Negative feedback does what to a change?", b:"reverses it → maintains homeostasis", h:"body temp, blood glucose, blood pressure"},
-  {c:"Intro & homeostasis", f:"Positive feedback does what to a change?", b:"amplifies it (not homeostatic)", h:"childbirth, blood clotting, sneezing"},
-  {c:"Intro & homeostasis", f:"Fast control vs. slow control", b:"nervous system (fast) vs. endocrine (slow)"},
-  {c:"Intro & homeostasis", f:"Which life function is NOT needed for an individual to survive?", b:"reproduction", h:"needed for the species, not the individual"},
-  {c:"Intro & homeostasis", f:"Four survival needs", b:"nutrients, oxygen, water, + normal temp/pressure"},
+  {c:"Intro & homeostasis", f:"Why does homeostasis matter?", b:"if the body can't maintain it, you die", h:"when something changes (like temperature or pH), the body responds to correct it"},
+  {c:"Intro & homeostasis", f:"The 7 factors the body keeps in balance", b:"nutrients, wastes, temperature, ions (electrolytes), water, pressure (air & blood), gases"},
+  {c:"Intro & homeostasis", f:"The homeostatic loop, in order", b:"stimulus → receptor (affector) → control center → effector"},
+  {c:"Intro & homeostasis", f:"Loop parts: what is each one?", b:"stimulus = a factor shifts · receptor/affector = detects the shift · control center = brain · effector = muscle or gland"},
+  {c:"Intro & homeostasis", f:"Negative feedback does what to a change?", b:"reverses it → maintains homeostasis", h:"body temp, blood glucose, blood pressure, pulse rate"},
+  {c:"Intro & homeostasis", f:"Positive feedback does what to a change?", b:"amplifies it: destabilizing, so no homeostasis (can be harmful)", h:"childbirth, blood clotting, sneezing"},
+  {c:"Intro & homeostasis", f:"Fast control vs. slow control", b:"nervous system (fast, nerve impulses) vs. endocrine (slow, hormones)"},
+  // Life & survival
+  {c:"Life & survival", f:"The necessary human functions (list them)", b:"maintaining boundaries, movement, responsiveness, digestion, respiration, metabolism, excretion, growth, reproduction"},
+  {c:"Life & survival", f:"Maintaining boundaries means…", b:"every part of the body has a boundary that protects it from damage (cells, skin, organs)"},
+  {c:"Life & survival", f:"Movement (as a life function) includes…", b:"skeletal muscle moving you, and also blood, urine and food/waste moving through you"},
+  {c:"Life & survival", f:"Responsiveness means…", b:"sensing a change and responding to it"},
+  {c:"Life & survival", f:"Digestion means…", b:"breaking food into simple molecules so the cardiovascular system can carry the nutrients to the cells"},
+  {c:"Life & survival", f:"Respiration (as a life function) means…", b:"taking in O₂ and getting rid of CO₂"},
+  {c:"Life & survival", f:"Metabolism means…", b:"breaking complex substances down into simple ones"},
+  {c:"Life & survival", f:"Excretion means…", b:"removing wastes from the body (urine & feces)"},
+  {c:"Life & survival", f:"Growth means…", b:"getting bigger and increasing in number"},
+  {c:"Life & survival", f:"Which life function is NOT needed for an individual to survive?", b:"reproduction", h:"needed for the species, not the individual"},
+  {c:"Life & survival", f:"The three survival needs", b:"nutrients, oxygen, water", h:"the body is always working to keep an internal balance"},
+  {c:"Life & survival", f:"Nutrients: what does each type do?", b:"carbohydrates = fuel · proteins = build cell structures · fats = cushion organs + reserve fuel"},
+  {c:"Life & survival", f:"How much of air is oxygen? How much of body weight is water?", b:"20% · 60–89%"},
   // Cells
-  {c:"Cells", f:"Mitochondria do…", b:"make ATP (energy)"},
-  {c:"Cells", f:"Ribosomes do…", b:"build proteins"},
+  {c:"Cells", f:"The four main parts of an animal cell", b:"nucleus, cytoplasm, cell membrane, proteins"},
   {c:"Cells", f:"The nucleus is…", b:"the control center — holds DNA"},
-  {c:"Cells", f:"The cell membrane is ___ permeable.", b:"selectively", h:"structure controls what passes → function"},
+  {c:"Cells", f:"Nucleolus and nuclear envelope: what do they do?", b:"nucleolus makes the ribosomes · the envelope has large pores so materials pass in and out"},
+  {c:"Cells", f:"Ribosomes do…", b:"build proteins"},
+  {c:"Cells", f:"Cytoplasm does…", b:"gives the cell structure and supports the organelles"},
+  {c:"Cells", f:"The cell membrane is ___ permeable.", b:"selectively", h:"lets necessary substances in and out"},
+  {c:"Cells", f:"Cellular respiration does…", b:"turns what you eat into energy your cells can use"},
+  {c:"Cells", f:"The 3 macromolecules the body needs, and their jobs", b:"proteins = build tissue, carry nutrients · carbohydrates = energy source · lipids = protection, energy storage"},
+  {c:"Cells", f:"Aerobic cellular respiration does…", b:"releases the energy in glucose and turns it into a more usable form: ATP"},
+  {c:"Cells", f:"Aerobic cellular respiration equation", b:"C₆H₁₂O₆ (glucose) + 6O₂ → 6CO₂ + 6H₂O + 38 ATP", h:"enzymes run the reaction"},
   {c:"Cells", f:"ATP is…", b:"the usable energy currency of the cell"},
+  {c:"Cells", f:"Cell reproduction allows…", b:"growth from a fertilized egg · replacing damaged or dead cells · passing on genetic material"},
   {c:"Cells", f:"Order of mitosis phases", b:"Prophase → Metaphase → Anaphase → Telophase (PMAT)"},
+  {c:"Cells", f:"The full list of cell-division stages, start to end", b:"Interphase → Prophase → Metaphase → Anaphase → Telophase → Cytokinesis", h:"Mrs. Kalec marks Interphase and Cytokinesis as \"not really\" division stages"},
+  {c:"Cells", f:"During interphase the cell…", b:"grows, as the DNA gives instructions for making proteins and other key molecules"},
+  {c:"Cells", f:"Why does a growing cell divide?", b:"it gets too big for nutrients to move through easily, so it splits into two smaller daughter cells"},
+  {c:"Cells", f:"In controlled growth, cells divide until…", b:"they touch other cells", h:"this is essential for growth & tissue repair"},
   {c:"Cells", f:"Mitosis vs. meiosis", b:"body cells (growth/repair) vs. sex cells"},
-  {c:"Cells", f:"Cancer is…", b:"loss of control over cell growth/division"},
+  {c:"Cells", f:"Cancer is…", b:"loss of control over cell growth/division", h:"cancer cells don't stop when they touch other cells; they divide until nutrients run out"},
   {c:"Cells", f:'"Genetic information" means…', b:"the DNA code that determines a cell's proteins & identity"},
+  {c:"Cells", f:"Genes do…", b:"give an organism its characteristics", h:"when cells divide, the genetic code is copied into the new cells"},
+  {c:"Cells", f:"Protein synthesis is…", b:"using the DNA code to build proteins, at the ribosomes"},
+  {c:"Cells", f:"Building blocks of proteins", b:"amino acids, which link into long chains called polypeptides"},
+  {c:"Cells", f:"What can affect DNA and protein synthesis?", b:"radiation and chemicals can affect DNA · hormones change protein synthesis"},
   // Tissues
+  {c:"Tissues", f:"Histology is…", b:"the study of tissues"},
+  {c:"Tissues", f:"A tissue is…", b:"a group of similar cells with like structures and functions"},
   {c:"Tissues", f:"The four tissue types", b:"epithelial · connective · muscle · nervous"},
   {c:"Tissues", f:"Epithelial tissue: blood supply?", b:"avascular (no vessels); ~90% of cancers start here"},
-  {c:"Tissues", f:"Blood is which tissue type?", b:"connective", h:"the classic trick question"},
-  {c:"Tissues", f:"Examples of connective tissue", b:"bone, blood, adipose (fat), cartilage, tendons"},
-  {c:"Tissues", f:"The three muscle types", b:"skeletal (voluntary) · cardiac (heart) · smooth (hollow organs)"},
-  {c:"Tissues", f:"Cardiac & smooth muscle are…", b:"involuntary", h:"skeletal is voluntary"},
-  {c:"Tissues", f:"Nervous tissue is made of…", b:"neurons + glial (support) cells"},
+  {c:"Tissues", f:"Epithelial tissue: what are its jobs?", b:"protects what's underneath, acts as a barrier, lets substances pass, secretes/absorbs, filters"},
+  {c:"Tissues", f:"Epithelial tissue: where is it, and how are its cells packed?", b:"covers surfaces and lines cavities and organs; cells tightly packed"},
+  {c:"Tissues", f:"Epithelial tissue: regeneration & special feature", b:"high regeneration; forms glands and barriers"},
   {c:"Tissues", f:"Epithelium is named by…", b:"shape (squamous/cuboidal/columnar) × layers (simple/stratified)"},
-  {c:"Tissues", f:'"Stratified squamous" means…', b:"many layers of flat cells", h:"like your skin surface"},
+  {c:"Tissues", f:"squamous / cuboidal / columnar mean…", b:"squished (flat) / cube-shaped / tall columns"},
+  {c:"Tissues", f:"simple / stratified mean…", b:"one layer / many layers"},
+  {c:"Tissues", f:'"Stratified squamous" means…', b:"many layers of flat cells"},
+  {c:"Tissues", f:"Connective tissue: where is it, and how are its cells spaced?", b:"throughout the body (under the skin, around organs); cells widely spaced"},
+  {c:"Tissues", f:"Connective tissue: blood supply & regeneration", b:"both vary: most is vascular but cartilage isn't · regeneration high in bone, low in cartilage"},
+  {c:"Tissues", f:"Connective tissue: what are its jobs?", b:"support, binding, protection, transport, energy storage", h:"gives the body structural and metabolic support"},
+  {c:"Tissues", f:"The 7 connective tissue types on Mrs. Kalec's list", b:"embryonic, loose, fibrous, blood, adipose, cartilage, bone"},
+  {c:"Tissues", f:"Embryonic connective tissue =", b:"stem cells"},
+  {c:"Tissues", f:"Loose connective tissue =", b:"padding around structures"},
+  {c:"Tissues", f:"Fibrous connective tissue =", b:"elastic but dense (tendons)"},
+  {c:"Tissues", f:"Blood (as a connective tissue) is made of…", b:"red cells, white cells, platelets"},
+  {c:"Tissues", f:"Adipose tissue =", b:"fat"},
+  {c:"Tissues", f:"Cartilage =", b:"dense padding between bones"},
+  {c:"Tissues", f:"Bone tissue comes in two forms:", b:"dense and spongy"},
+  {c:"Tissues", f:"Blood is which tissue type?", b:"connective", h:"Heads up: the classic trick question"},
+  {c:"Tissues", f:"Voluntary vs. involuntary muscle", b:"conscious control vs. unconscious"},
+  {c:"Tissues", f:"The three muscle types", b:"skeletal (attached to bone, mostly voluntary) · cardiac (heart, involuntary) · smooth (in hollow organs, mostly involuntary)"},
+  {c:"Tissues", f:"Cardiac & smooth muscle are…", b:"cardiac = involuntary; smooth = mostly involuntary", h:"skeletal is mostly voluntary"},
+  {c:"Tissues", f:"Muscle tissue: cells, blood supply, regeneration, job", b:"long contractile fibers · highly vascular · moderate regeneration (high in smooth, low in cardiac) · movement"},
+  {c:"Tissues", f:"Nervous tissue is made of…", b:"neurons + glial cells", h:"glial cells support, protect and nourish the neurons"},
+  {c:"Tissues", f:"Nervous tissue makes up…", b:"the brain, spinal cord and peripheral nerves"},
+  {c:"Tissues", f:"Nervous tissue talks to other tissues through…", b:"action potentials"},
+  {c:"Tissues", f:"The four main parts of a neuron", b:"dendrites, cell body, nucleus, axon"},
+  {c:"Tissues", f:"Nervous tissue: job & regeneration", b:"control and communication · very low regeneration (neurons rarely regenerate)"},
   {c:"Tissues", f:"The three germ layers → what they form", b:"endoderm→digestive lining · mesoderm→muscle/bone/vessels · ectoderm→skin+nervous"},
   // Systems
-  {c:"Systems", f:"Integumentary system: main job?", b:"protect, regulate temp, make vitamin D (skin/hair/nails)"},
+  {c:"Systems", f:"The 11 organ systems", b:"integumentary, skeletal, muscular, nervous, endocrine, cardiovascular, lymphatic/immune, respiratory, digestive, urinary, reproductive"},
+  {c:"Systems", f:"Integumentary system: main jobs?", b:"protects, regulates temperature, prevents water loss, sensation, makes vitamin D", h:"organs: skin, hair, nails, sweat glands, oil (sebaceous) glands"},
+  {c:"Systems", f:"Skeletal system: main jobs?", b:"supports & protects, allows movement, makes blood cells, stores minerals, stores fat", h:"organs: bones, cartilage, ligaments, joints, bone marrow"},
   {c:"Systems", f:"Which system makes blood cells & stores minerals?", b:"skeletal"},
-  {c:"Systems", f:"Cardiovascular system: main job?", b:"transport O₂, nutrients, wastes (heart/blood/vessels)"},
-  {c:"Systems", f:"Endocrine system: main job?", b:"regulate the body with hormones (slow control)"},
-  {c:"Systems", f:"Nervous system: main job?", b:"detect & control — fast (brain, spinal cord, nerves)"}
+  {c:"Systems", f:"Muscular system: main jobs?", b:"movement, posture, heat, moving substances through organs, pumping blood", h:"organs: skeletal, smooth and cardiac muscle, tendons"},
+  {c:"Systems", f:"Nervous system: main jobs?", b:"detects stimuli, processes information, controls & coordinates responses, maintains homeostasis (fast control)", h:"organs: brain, spinal cord, nerves, sensory organs/receptors"},
+  {c:"Systems", f:"Endocrine system: main job?", b:"makes hormones that regulate growth, metabolism, reproduction, stress, blood glucose & homeostasis (slow control)"},
+  {c:"Systems", f:"Endocrine system: major organs?", b:"pituitary, thyroid, parathyroid, adrenals, pancreas, pineal gland, ovaries/testes, hypothalamus"},
+  {c:"Systems", f:"Cardiovascular system: main jobs?", b:"pumps & transports blood: delivers O₂, nutrients and hormones, removes wastes, helps regulate temperature & pH", h:"organs: heart, blood, arteries, veins, capillaries"},
+  {c:"Systems", f:"Lymphatic/immune system: main jobs?", b:"returns extra fluid to the blood, absorbs fats, protects against pathogens and disease"},
+  {c:"Systems", f:"Lymphatic/immune system: major organs?", b:"lymph, lymph vessels, lymph nodes, spleen, thymus, tonsils, white blood cells"},
+  {c:"Systems", f:"Respiratory system: main jobs?", b:"gas exchange: brings in O₂, removes CO₂, helps regulate blood pH, helps with speech"},
+  {c:"Systems", f:"Respiratory system: major organs?", b:"nose/nasal cavity, pharynx, larynx, trachea, bronchi, lungs, alveoli, diaphragm"},
+  {c:"Systems", f:"Digestive system: main jobs?", b:"breaks down food, absorbs nutrients and water, gets rid of solid waste"},
+  {c:"Systems", f:"Digestive system: major organs?", b:"mouth, teeth, tongue, salivary glands, pharynx, esophagus, stomach, small & large intestine, liver, gallbladder, pancreas, rectum, anus"},
+  {c:"Systems", f:"Urinary system: main jobs?", b:"removes wastes from the blood; regulates water, electrolytes, pH & blood pressure; makes urine"},
+  {c:"Systems", f:"Urinary system: major organs?", b:"kidneys, ureters, urinary bladder, urethra"},
+  {c:"Systems", f:"Reproductive system: main jobs?", b:"makes gametes and sex hormones, allows reproduction; in females also supports fertilization, pregnancy & childbirth"},
+  {c:"Systems", f:"Reproductive system: major organs?", b:"male: testes, epididymis, vas deferens, prostate, penis · female: ovaries, uterine tubes, uterus, cervix, vagina"}
 ];
 
 /* ---- Component ---- */
 /* Bump STORAGE_KEY (or change it per deck) so different decks don't share saved
    progress. Progress persists per-browser via localStorage. */
-var STORAGE_KEY = "flashcards:hap-unit-1:v1";
+var STORAGE_KEY = "flashcards:hap-unit-1:v2";
 var cats = ["All"].concat(CARDS.map(function(c){return c.c;}).filter(function(v,i,a){return a.indexOf(v)===i;}));
 var filter="All", deck=[], pos=0, flipped=false, cardStatus={}, reviewOnly=false;
 var $=function(id){return document.getElementById(id);};

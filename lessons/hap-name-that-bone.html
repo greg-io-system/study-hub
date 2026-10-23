@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Name That Bone &middot; Skeletal Practical Drill &middot; Human Anatomy</title>
+<title>Name That Bone &middot; Bone Diagram Drill &middot; Human Anatomy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -53,10 +53,18 @@ ul{padding-left:22px}li{margin:.25em 0}
 .footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
 </style></head>
 <body>
+<!-- SOURCES
+kind: class
+- human-anatomy/reference/unit-3-bone-diagram-capture.md
+- human-anatomy/reference/unit-3-slides-capture.md
+- human-anatomy/reference/unit-3-exam-review-capture.md
+- human-anatomy/reference/unit-3-calendar.md
+fact-trace: 2026-10-23 additions+coverage
+-->
 <div class="wrap">
-  <div class="eyebrow">Human Anatomy &middot; Unit 3 &middot; Skeletal exam Wed Oct 21</div>
-  <h1>Name That Bone: Practical Drill</h1>
-  <p class="tagline">The skeletal exam has a <b>practical</b>, which means pointing at bones and naming them. This drill uses the same bones as Mrs. Kalec's Bone Diagram (front and back views). Pairs with the <b>Unit 3 Exam Prep</b> page, which covers everything else.</p>
+  <div class="eyebrow">Human Anatomy &middot; Unit 3 &middot; Skeletal System</div>
+  <h1>Name That Bone: Bone Diagram Drill</h1>
+  <p class="tagline">Find and name the 22 bones on Mrs. Kalec's <b>Bone Diagram</b> (front and back views). The Unit 3 Skeletal Exam (MC &amp; Practical) was Wed Oct 21. Pairs with the <b>Unit 3 Exam Prep</b> page, which covers everything else.</p>
 
   <div class="big"><b>How to use it:</b> start in <b>Explore</b> and tap around. Then do <b>Find it</b> until you can find all of them without thinking, then <b>Name it</b>. Bones you miss come back more often.</div>
 
@@ -71,49 +79,56 @@ ul{padding-left:22px}li{margin:.25em 0}
     <div class="fig"><div class="cap">Front (anterior)</div><svg id="front" viewBox="0 0 300 668" aria-label="Skeleton, front view"></svg></div>
     <div class="fig"><div class="cap">Back (posterior)</div><svg id="back" viewBox="0 0 300 668" aria-label="Skeleton, back view"></svg></div>
   </div>
-  <p class="note">A simplified drawing, not to scale. It's shown in <b>anatomical position</b>: standing, palms facing forward. In the front view, the skeleton's right side is on <b>your left</b>.</p>
+  <p class="note">A simplified drawing, not to scale. The toes are drawn for shape only and aren't part of the drill: on her diagram the phalanges pointer is at the fingers.</p>
 
   <h2>Tips that trip people up</h2>
   <ul>
-    <li><b>Radius vs. ulna:</b> the <b>radius</b> is on the <b>thumb</b> side; the <b>ulna</b> is on the pinky side.</li>
-    <li><b>Tibia vs. fibula:</b> the <b>tibia</b> is the inner (shin) bone; the <b>fibula</b> is the outer one.</li>
-    <li><b>Carpals / metacarpals / phalanges</b> (wrist, palm, fingers) mirror <b>tarsals / metatarsals / phalanges</b> (ankle, foot, toes). "Meta" = the middle one. <b>Phalanges</b> is the answer for both fingers and toes.</li>
-    <li><b>Sacrum vs. coccyx:</b> the sacrum is the big triangle between the hip bones. The coccyx is the tiny tailbone below it.</li>
-    <li><b>Spelling counts on a practical:</b> it's <b>humerus</b> (not "humorous"), <b>phalanges</b>, <b>coccyx</b>, <b>clavicle</b>.</li>
+    <li><b>Memory trick:</b> learn these names as matching pairs: <b>carpals / metacarpals</b> and <b>tarsals / metatarsals</b>. Same endings, different starts.</li>
+    <li><b>Sacrum vs. coccyx:</b> on the back view, the sacrum pointer comes just above the coccyx pointer.</li>
+    <li><b>Watch the spelling:</b> <b>humerus</b> (not "humorous" -- no joke), <b>phalanges</b>, <b>coccyx</b>, <b>clavicle</b>.</li>
   </ul>
 
-  <h2>All the bones, by region</h2>
-  <table id="tbl"><tr><th>Bone</th><th>Everyday name</th><th>Skeleton</th></tr></table>
+  <h2>The 22 bones on the diagram</h2>
+  <table id="tbl"><tr><th>Bone</th><th>Her pointer (view, numbered top to bottom)</th></tr></table>
 
-  <div class="footer">Made for you &middot; ad-free</div>
+  <h2>Axial vs. appendicular (slide 14)</h2>
+  <ul>
+    <li><b>Axial skeleton:</b> the skull, the hyoid bone, the vertebral column and the thorax.</li>
+    <li><b>Appendicular skeleton:</b> the pectoral girdle, the upper limbs, the pelvic girdle and the lower limbs.</li>
+  </ul>
+  <p class="note">The hyoid isn't on the Bone Diagram, so it isn't in the drill.</p>
+
+  <div class="footer">Built from Mrs. Kalec's Bone Diagram and her Unit 3 Skeletal System slides, in our own words.</div>
 </div>
 <script>
 (function(){
   var BONES={
-    skull:{n:'Skull',c:'head',r:'Axial',t:'',f:'Protects the brain, eyes and ears. Its joints are fibrous: no movement. Red marrow is in its spongy bone.'},
-    mandible:{n:'Mandible',c:'lower jaw',r:'Axial',t:'',f:'Part of the skull. Its joint is condyloid: many planes, no rotation.'},
-    clavicle:{n:'Clavicle',c:'collarbone',r:'Appendicular (pectoral girdle)',t:'',f:'Part of the pectoral girdle. Red marrow is in its spongy bone.'},
-    scapula:{n:'Scapula',c:'shoulder blade',r:'Appendicular (pectoral girdle)',t:'',f:'Part of the pectoral girdle. The shoulder is a ball-and-socket joint.'},
-    sternum:{n:'Sternum',c:'breastbone',r:'Axial',t:'',f:'Part of the thorax. The first rib joins it with a cartilaginous joint. Red marrow is in its spongy bone.'},
-    rib:{n:'Rib',c:'ribs',r:'Axial',t:'',f:'The rib cage protects the heart and lungs. Red marrow is in their spongy bone.'},
-    vertebra:{n:'Vertebra (vertebrae)',c:'backbone',r:'Axial',t:'',f:'Vertebrae protect the spinal cord. Cartilaginous joints between them absorb shock.'},
-    sacrum:{n:'Sacrum',c:'base of the spine',r:'Axial',t:'',f:'Part of the vertebral column, at the bottom of the spine.'},
-    coccyx:{n:'Coccyx',c:'tailbone',r:'Axial',t:'',f:'The very bottom of the vertebral column.'},
-    hip:{n:'Hip bone',c:'hip / pelvis',r:'Appendicular (pelvic girdle)',t:'',f:'The pelvis protects the lower abdominal and reproductive organs. The hip is a ball-and-socket joint.'},
-    humerus:{n:'Humerus',c:'upper arm bone',r:'Appendicular',t:'',f:'Ball-and-socket joint at the shoulder; hinge joint at the elbow.'},
-    radius:{n:'Radius',c:'forearm, thumb side',r:'Appendicular',t:'',f:'Where it meets the ulna near the elbow is a pivot joint: rotation on an axis.'},
-    ulna:{n:'Ulna',c:'forearm, pinky side',r:'Appendicular',t:'',f:'Where it meets the radius near the elbow is a pivot joint. The elbow is a hinge joint.'},
-    carpals:{n:'Carpals',c:'wrist bones',r:'Appendicular',t:'',f:'The wrist has plane (gliding) joints: flat surfaces that slide and twist.'},
-    metacarpals:{n:'Metacarpals',c:'palm bones',r:'Appendicular',t:'',f:'The thumb and its metacarpal form the saddle joint.'},
-    phalanges:{n:'Phalanges',c:'finger and toe bones',r:'Appendicular',t:'',f:'Same name for fingers AND toes. Finger and toe joints are hinge joints.'},
-    femur:{n:'Femur',c:'thigh bone',r:'Appendicular',t:'',f:'Ball-and-socket joint at the hip; hinge joint at the knee.'},
-    patella:{n:'Patella',c:'kneecap',r:'Appendicular',t:'',f:'At the front of the knee, a hinge joint.'},
-    tibia:{n:'Tibia',c:'shin bone (inner)',r:'Appendicular',t:'',f:'The inner bone of the lower leg. The knee is a hinge joint.'},
-    fibula:{n:'Fibula',c:'outer lower-leg bone',r:'Appendicular',t:'',f:'The outer bone of the lower leg, beside the tibia.'},
-    tarsals:{n:'Tarsals',c:'ankle bones',r:'Appendicular',t:'',f:'The ankle has plane (gliding) joints: flat surfaces that slide and twist.'},
-    metatarsals:{n:'Metatarsals',c:'foot bones',r:'Appendicular',t:'',f:'Between the ankle and the toes.'}
+    skull:{n:'Skull',f:'Protects the brain, eyes and ears. Its joints are fibrous: no movement. Red marrow is in its spongy bone.'},
+    mandible:{n:'Mandible',f:'Its joint is condyloid: movement in many planes, but no rotation.'},
+    clavicle:{n:'Clavicle',f:'Red marrow is in the spongy bone of the clavicles.'},
+    scapula:{n:'Scapula',f:''},
+    sternum:{n:'Sternum',f:'The first rib joins it with a cartilaginous joint. Red marrow is in its spongy bone.'},
+    rib:{n:'Rib',f:'The rib cage shields the heart and lungs. Red marrow is in the spongy bone of the ribs.'},
+    vertebra:{n:'Vertebra (vertebrae)',f:'Vertebrae protect the spinal cord. Cartilaginous joints between them absorb shock. Red marrow is in their spongy bone. Her diagram points at vertebrae twice, once on each view.'},
+    sacrum:{n:'Sacrum',f:'On the back view, its pointer comes just above the coccyx pointer.'},
+    coccyx:{n:'Coccyx',f:'On the back view, its pointer comes just below the sacrum pointer.'},
+    hip:{n:'Hip bone',f:''},
+    humerus:{n:'Humerus',f:''},
+    radius:{n:'Radius',f:'The proximal ends of the radius and ulna form a pivot joint: rotation around a central axis.'},
+    ulna:{n:'Ulna',f:'The proximal ends of the radius and ulna form a pivot joint. The carpals meet the ulna/radius at a condyloid joint.'},
+    carpals:{n:'Carpals',f:'They meet the ulna/radius at a condyloid joint: movement in many planes, no rotation.'},
+    metacarpals:{n:'Metacarpals',f:'A saddle joint sits between the thumb and the metacarpal bones. Metacarpals meet the phalanges at a condyloid joint (base of the fingers).'},
+    phalanges:{n:'Phalanges',f:'On her diagram: the fingers. The fingers have hinge joints (and a condyloid joint at their base).'},
+    femur:{n:'Femur',f:''},
+    patella:{n:'Patella',f:''},
+    tibia:{n:'Tibia',f:''},
+    fibula:{n:'Fibula',f:''},
+    tarsals:{n:'Tarsals',f:''},
+    metatarsals:{n:'Metatarsals',f:''}
   };
-  var ORDER=['skull','mandible','vertebra','sternum','rib','sacrum','coccyx','clavicle','scapula','humerus','radius','ulna','carpals','metacarpals','phalanges','hip','femur','patella','tibia','fibula','tarsals','metatarsals'];
+  /* where the teacher's pointer for each bone is (Bone Diagram: 13 front, 10 back) */
+  var PTR={skull:'Front 1',mandible:'Front 2',clavicle:'Front 3',sternum:'Front 4',rib:'Front 5',vertebra:'Front 6 + Back 1',hip:'Front 7',carpals:'Front 8',metacarpals:'Front 9',phalanges:'Front 10 (fingers)',patella:'Front 11',tarsals:'Front 12',metatarsals:'Front 13',scapula:'Back 2',humerus:'Back 3',ulna:'Back 4',radius:'Back 5',sacrum:'Back 6',coccyx:'Back 7',femur:'Back 8',tibia:'Back 9',fibula:'Back 10'};
+  var ORDER=['skull','mandible','clavicle','sternum','rib','vertebra','hip','carpals','metacarpals','phalanges','patella','tarsals','metatarsals','scapula','humerus','ulna','radius','sacrum','coccyx','femur','tibia','fibula'];
 
   /* ---- drawing specs: [bone, kind, data, width] ; kind: L=line, E=ellipse, P=path, C=circle. M = mirror too ---- */
   function S(b,k,d,w,m){return {b:b,k:k,d:d,w:w||0,m:!!m};}
@@ -139,7 +154,7 @@ ul{padding-left:22px}li{margin:.25em 0}
   FRONT.push(S('fibula','L',[112,496,114,596],5,1));
   [[118,608],[126,606],[134,609],[121,616],[131,617]].forEach(function(p){FRONT.push(S('tarsals','C',[p[0],p[1],5],0,1));});
   [[114,623,108,643],[121,624,118,647],[128,624,128,648],[135,623,138,646]].forEach(function(p){FRONT.push(S('metatarsals','L',p,3.5,1));});
-  [[107,647,104,658],[117,651,116,662],[128,652,128,663],[139,650,141,660]].forEach(function(p){FRONT.push(S('phalanges','L',p,3,1));});
+  [[107,647,104,658],[117,651,116,662],[128,652,128,663],[139,650,141,660]].forEach(function(p){FRONT.push(S('','L',p,3,1));}); // toes: shape only, not a drill target
   // ---- BACK ----
   BACK.push(S('skull','E',[150,52,34,40]));
   for(i=0;i<8;i++){ y=146+i*11; BACK.push(S('rib','Q','M146 '+y+' C 114 '+(y-4)+', 96 '+(y+8)+', '+(104+i)+' '+(y+24),3,1)); }
@@ -179,6 +194,7 @@ ul{padding-left:22px}li{margin:.25em 0}
         else { var x1=flip?mx(d[0]):d[0], x2=flip?mx(d[2]):d[2];
           svg.appendChild(mk('line',{x1:x1,y1:d[1],x2:x2,y2:d[3],'class':'lo','stroke-width':s.w+2.4}));
           el=mk('line',{x1:x1,y1:d[1],x2:x2,y2:d[3],'class':'b l','stroke-width':s.w}); }
+        if(!s.b){ el.setAttribute('class',el.getAttribute('class').replace('b ','')); el.style.pointerEvents='none'; svg.appendChild(el); return; }
         el.setAttribute('data-b',s.b);
         var t=mk('title',{}); t.textContent='bone'; el.appendChild(t);
         svg.appendChild(el);
@@ -194,11 +210,9 @@ ul{padding-left:22px}li{margin:.25em 0}
 
   /* table */
   var tbl=document.getElementById('tbl');
-  ['Axial','Appendicular'].forEach(function(reg){
-    ORDER.filter(function(b){return BONES[b].r.indexOf(reg)===0;}).forEach(function(b){
-      var B=BONES[b], tr=document.createElement('tr');
-      tr.innerHTML='<td><b>'+B.n+'</b></td><td>'+B.c+'</td><td>'+B.r+'</td>'; tbl.appendChild(tr);
-    });
+  ORDER.forEach(function(b){
+    var B=BONES[b], tr=document.createElement('tr');
+    tr.innerHTML='<td><b>'+B.n+'</b></td><td>'+PTR[b]+'</td>'; tbl.appendChild(tr);
   });
 
   /* modes */
@@ -210,9 +224,9 @@ ul{padding-left:22px}li{margin:.25em 0}
   }
   function sc(){ return '<span class="score">'+score+' / '+tries+'</span>'; }
   function explorePanel(b){
-    if(!b){ panel.innerHTML='<b>Tap any bone</b> on either view to see its name, everyday name, and one fact.'; return; }
+    if(!b){ panel.innerHTML='<b>Tap any bone</b> on either view to see its name, where her pointer is, and what the slides say about it.'; return; }
     var B=BONES[b], v=inView(b);
-    panel.innerHTML='<h3>'+B.n+'</h3><div class="facts"><span class="pill">'+B.c+'</span><span class="pill">'+B.r+'</span>'+(!v.front?'<span class="pill">back view</span>':'')+'</div>'+B.f;
+    panel.innerHTML='<h3>'+B.n+'</h3><div class="facts"><span class="pill">Pointer: '+PTR[b]+'</span>'+(!v.front?'<span class="pill">back view</span>':'')+'</div>'+B.f;
   }
   function newFind(){ answered=false; clear(); target=pick();
     var v=inView(target);
@@ -234,7 +248,7 @@ ul{padding-left:22px}li{margin:.25em 0}
   function finish(ok){
     var fb=document.getElementById('fb'), B=BONES[target];
     fb.className='fb '+(ok?'good':'bad');
-    fb.innerHTML=(ok?'Yes! ':'Not quite. That\'s the ')+B.n+' ('+B.c+'). <span style="font-weight:600;color:#5a6b83">'+B.f+'</span>';
+    fb.innerHTML=(ok?'Yes! ':'Not quite. That\'s the ')+B.n+'. <span style="font-weight:600;color:#5a6b83">'+B.f+'</span>';
     var s=panel.querySelector('.score'); if(s) s.textContent=score+' / '+tries;
     var n=document.createElement('button'); n.className='next'; n.textContent='Next →'; n.onclick=function(){ mode==='find'?newFind():newName(); }; panel.appendChild(n);
   }
