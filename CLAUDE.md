@@ -14,6 +14,7 @@
 # Location: projects/study-hub/CLAUDE.md
 # Loads in: CC (traversal) and CW (harness injection). Self-contained --
 #   CW loads this file and nothing above it at session start.
+Profile: .claude/profile.md (archetype: Content Hub)
 
 ---
 
