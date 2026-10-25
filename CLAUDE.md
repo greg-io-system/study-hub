@@ -1,6 +1,8 @@
 # Study Hub -- CLAUDE.md
-# Version: 0.3
+# Version: 0.4
 # Created: 2026-08-28
+# Updated: 2026-10-25 (v0.4 -- greg-io-v2 batch 5: retired-surface lines removed; Content Hub
+#   pointer to RULING #2319)
 # Updated: 2026-10-21 (roles: CC runs the whole loop per Greg 2026-08-31;
 #   CW session section retired; source gate added)
 # Updated: 2026-10-16 (#2547: stale active-projects line removed)
@@ -12,8 +14,7 @@
 #   each lesson's source of truth is its workshop repo, not this one.)
 # Owner: Greg Stockdale
 # Location: projects/study-hub/CLAUDE.md
-# Loads in: CC (traversal) and CW (harness injection). Self-contained --
-#   CW loads this file and nothing above it at session start.
+# Loads in: CC (traversal). Self-contained.
 Profile: .claude/profile.md (archetype: Content Hub)
 
 ---
@@ -28,10 +29,9 @@ regularly. Live at https://kelly-study-hub.vercel.app.
 Personal project -- NOT work. It is the PILOT / reference instance of an
 emerging "Content Hub" project shape (static HTML front-end for user
 interaction, regularly-added content, a rebuildable index/TOC, lite
-push-to-deploy automation). That shape is routed to Claude Ops
-Architecture for formalization -- see claude-ops/register/routing-notes/
-2026-08-28-architecture-routing-content-hub-project-shape.md. Until it is
-ruled on, this project's protocol lives entirely in this file.
+push-to-deploy automation). The shape is the Tier 2 Content Hub
+pattern, RULING #2319 (claude-ops/reference/architecture-core.md, CONTENT HUB
+-- TIER 2 REUSABLE PATTERN).
 
 ---
 
@@ -100,7 +100,7 @@ Its whole protocol is self-contained in this repo.
   reassigns the live alias. The push IS the deploy. (Wired 2026-08-28;
   differs from Villa, which deploys via CLI.)
 
-Publish a change (CC only -- CW cannot push):
+Publish a change:
 - From a CC session:  /study-hub-deploy "message"   (previews the change,
   parse-checks the manifest, confirms, commits + pushes)
 - From a terminal:    .\deploy.ps1 "message"         (commit + push -> auto-deploy)
@@ -146,8 +146,7 @@ deploy.ps1 runs it first. scripts/ and .githooks/ are .vercelignored.
 
 ## Roles
 
-CC runs the whole loop (Greg, 2026-08-31 -- CW handoffs had left
-uncommitted state; CW has no standing role in this project):
+CC runs the whole loop (Greg, 2026-08-31):
 - CC   -- AUTHORS lessons in the class workshops (projects/GHS/<class>/),
           copies them here, edits data/lessons.js + data/week.js, runs the
           source gate and parse-checks, and DEPLOYS (commit + push ->
@@ -162,8 +161,8 @@ uncommitted state; CW has no standing role in this project):
 - CC session notes for hub + workshop work go to projects/GHS/session-notes/cc/
   (or the class workshop's session-notes/), with a cc-log line in
   projects/GHS/cc-log/cc-log.md -- see GHS/CLAUDE.md "Continuity".
-- session-notes/cw/ here is the historical CW trail (pre-2026-08-31); no new
-  notes go there.
+- session-notes/cw/ is the historical pre-2026-08-31 trail; no new notes go
+  there.
 
 ---
 
@@ -179,7 +178,7 @@ uncommitted state; CW has no standing role in this project):
   directory) and the hub is noindexed; it is a style/consistency matter, not a
   privacy gate. Only the STUDENT's data is the privacy line (above). Do not
   re-abbreviate teacher names.
-- Commit prefixes: `cc:` (CC), `cw:` (CW), per the system-wide convention.
+- Commit prefix: `cc:`, per the system-wide convention.
 - CC-Git standing rule: pull at session start, commit + push at close.
 - Non-site files (this CLAUDE.md, DEPLOY.md, deploy.ps1, session-notes/) are
   kept out of the public deploy via .vercelignore -- only the site ships.
