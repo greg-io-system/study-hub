@@ -18,8 +18,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-25",
-  /* 2026-10-25 Sun: WH One-Pager due Mon 10/26 (from Kelly via Greg) */
+  updated: "2026-10-26",
+  /* 2026-10-26 Mon: WH Unit 2 test Tue 11/3 (stream post); Psych 3 items; Anatomy LCC due Thu 11/5 */
   label: "Oct 26 – Oct 30",
   items: [
     {
@@ -30,11 +30,9 @@ window.STUDY_WEEK = {
       helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
-      day: "~Mon", date: "2026-10-26",
-      subject: "world-history", subjectName: "World History",
-      what: "Unit 2 exam expected around here (date not posted yet). Han China and Rome are the new material; know the Rome vs. Han comparison. Read OpenStax 8.2 + 9.2 too.",
-      help: "Unit 2 exam review",
-      helpFile: "lessons/unit-2-exam-review.html"
+      day: "Mon", date: "2026-10-26",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "DUE today: AMSCO reading pp. 263-288, and the Olfactory Diary (10 pts): your weekend smells diary, your reactions and memories, plus the reflection in the Google Doc."
     },
     {
       day: "Mon", date: "2026-10-26",
@@ -49,12 +47,17 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-10-27",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Notes: Muscle Contraction. Intro to the \"Lights, Camera, Contraction!\" project (due Fri 11/6)."
+      what: "Notes: Muscle Contraction. Intro to the \"Lights, Camera, Contraction!\" project (40 pts; turn in by Thu 11/5, 11:59 PM)."
     },
     {
       day: "Wed", date: "2026-10-28",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Chicken wing dissection (block day). Lab 14 handed out (due Tue 11/3)."
+    },
+    {
+      day: "Wed", date: "2026-10-28",
+      subject: "world-history", subjectName: "World History",
+      what: "Mr. Angelopulos posts the Unit 2 study guide in Classroom today. New topic this week: India (India Notes + the Mauryan and Gupta Empires reading)."
     },
     {
       day: "Thu", date: "2026-10-29",
@@ -74,7 +77,7 @@ window.STUDY_WEEK = {
     {
       day: "This wk", date: "2026-10-30",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Sensation & Perception (1.5). Study material is up in Classroom (Quizlet, videos, a practice test, Gimkit). No quiz date posted yet: ask Mrs. Aschwanden for the test schedule."
+      what: "Sensation & Perception continues (Week 11). Study material is up in Classroom (Quizlet, videos, a practice test, Gimkit). No test date posted yet: ask Mrs. Aschwanden for the test schedule."
     },
     {
       day: "This wk", date: "2026-10-30",
@@ -84,6 +87,18 @@ window.STUDY_WEEK = {
   ],
   nextLabel: "Nov 2 – Nov 6",
   next: [
+    {
+      day: "Mon", date: "2026-11-02",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "DUE: AMSCO 2.4 and 2.5 (pp. 292-313) and workbook pp. 47-48."
+    },
+    {
+      day: "Tue", date: "2026-11-03",
+      subject: "world-history", subjectName: "World History",
+      what: "UNIT 2 TEST: all multiple choice. You may use HANDWRITTEN notes, and Mr. Angelopulos checks them on test day. Read OpenStax 8.2 (Americas) and 9.2 (Farming and the Bantu Migrations) first: there are test questions on them, but no worksheet.",
+      help: "Unit 2 exam review",
+      helpFile: "lessons/unit-2-exam-review.html"
+    },
     {
       day: "Tue", date: "2026-11-03",
       subject: "human-anatomy", subjectName: "Human Anatomy",
@@ -97,7 +112,7 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-11-06",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "\"Lights, Camera, Contraction!\" project due: gallery walk in class."
+      what: "\"Lights, Camera, Contraction!\" gallery walk in class. The project (40 pts) is due in Classroom the night before: Thu 11/5, 11:59 PM."
     }
   ],
   ahead: [
