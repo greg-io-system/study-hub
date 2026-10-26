@@ -141,7 +141,15 @@
       var prevDay="";
       items.forEach(function(it){
         var row=el("div","wp-row");
-        row.appendChild(el("span","wp-day", it.day===prevDay ? "" : esc(it.day||"")));
+        var dayHtml="";
+        if(it.day!==prevDay){
+          dayHtml=esc(it.day||"");
+          // small M/D under a real weekday label (not "This wk")
+          var md=/^\d{4}-(\d{2})-(\d{2})$/.exec(it.date||"");
+          if(md && /^~?(Mon|Tue|Wed|Thu|Fri|Sat|Sun)$/.test(it.day||""))
+            dayHtml+='<span class="wp-date">'+(+md[1])+"/"+(+md[2])+"</span>";
+        }
+        row.appendChild(el("span","wp-day", dayHtml));
         prevDay=it.day;
         var dot=el("span","wp-dot"); dot.style.background=accentOf(it.subject);
         row.appendChild(dot);
