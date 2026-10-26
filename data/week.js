@@ -77,7 +77,9 @@ window.STUDY_WEEK = {
     {
       day: "This wk", date: "2026-10-30",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Sensation & Perception continues (Week 11). Study material is up in Classroom (Quizlet, videos, a practice test, Gimkit). No test date posted yet: ask Mrs. Aschwanden for the test schedule."
+      what: "Sensation & Perception continues (Week 11). Test is Tue 11/3, so start reviewing now: the study material in Classroom has a Quizlet, videos, a practice test and a Gimkit.",
+      help: "Sensation & Perception",
+      helpFile: "lessons/sensation-perception.html"
     },
     {
       day: "This wk", date: "2026-10-30",
@@ -98,6 +100,13 @@ window.STUDY_WEEK = {
       what: "UNIT 2 TEST: all multiple choice. You may use HANDWRITTEN notes, and Mr. Angelopulos checks them on test day. Read OpenStax 8.2 (Americas) and 9.2 (Farming and the Bantu Migrations) first: there are test questions on them, but no worksheet.",
       help: "Unit 2 exam review",
       helpFile: "lessons/unit-2-exam-review.html"
+    },
+    {
+      day: "Tue", date: "2026-11-03",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "SENSATION & PERCEPTION TEST. Covers the AMSCO readings (pp. 263-288 and 2.4-2.5, pp. 292-313) and the S&P study material in Classroom. More details coming.",
+      help: "Sensation & Perception",
+      helpFile: "lessons/sensation-perception.html"
     },
     {
       day: "Tue", date: "2026-11-03",
