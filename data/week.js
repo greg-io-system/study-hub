@@ -18,8 +18,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-24",
-  /* 2026-10-24 Sat sweep: nothing new; window rolled to Oct 26 – Oct 30 */
+  updated: "2026-10-25",
+  /* 2026-10-25 Sun: WH One-Pager due Mon 10/26 (from Kelly via Greg) */
   label: "Oct 26 – Oct 30",
   items: [
     {
@@ -40,6 +40,11 @@ window.STUDY_WEEK = {
       day: "Mon", date: "2026-10-26",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Notes: Muscle Activity. Finish Lab 12."
+    },
+    {
+      day: "Mon", date: "2026-10-26",
+      subject: "world-history", subjectName: "World History",
+      what: "DUE: Han China vs. Rome One-Pager (25 pts): title, context on both empires (who, what, when, where), 5 vocab words, 3 similarities + 3 differences in full sentences, 2+ captioned images, and a thesis: more similar or more different? Use your class notes."
     },
     {
       day: "Tue", date: "2026-10-27",
@@ -65,11 +70,6 @@ window.STUDY_WEEK = {
       day: "Fri", date: "2026-10-30",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Notes: Naming Skeletal Muscles. Facial Muscle Expression Lab (due Tue 11/3)."
-    },
-    {
-      day: "This wk", date: "2026-10-30",
-      subject: "world-history", subjectName: "World History",
-      what: "Han China vs. Rome One-Pager (25 pts): title, context on both empires, 5 vocab words, 3 similarities + 3 differences in full sentences, 2+ captioned images, and a thesis: more similar or more different? Use your class notes. No due date posted yet: check with Mr. Angelopulos."
     },
     {
       day: "This wk", date: "2026-10-30",
