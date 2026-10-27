@@ -18,8 +18,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-26",
-  /* 2026-10-26 Mon: WH Unit 2 test Tue 11/3 (stream post); Psych 3 items; Anatomy LCC due Thu 11/5 */
+  updated: "2026-10-27",
+  /* 2026-10-27 Tue: English "What is a Burrito?" (Tue); WH "Caste and Class" due Thu 10/29 */
   label: "Oct 26 – Oct 30",
   items: [
     {
@@ -46,6 +46,13 @@ window.STUDY_WEEK = {
     },
     {
       day: "Tue", date: "2026-10-27",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read and annotate Jonathan Gold's \"What is a Burrito? A Primer\": mark where he uses each kind of definition (formal, operational, by example) and the choices he makes, like the anaphora in paragraph 4 (what it does, and why). Then write your own \"What is ___?\" about a food you know, modeled on Gold: borrow his anaphora, make it about the food but really about something else. No sources needed. REPLY to Mr. Evans's \"For Tuesday (10/27)\" email with it.",
+      help: "Terms: anaphora and the three kinds of definition",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
+      day: "Tue", date: "2026-10-27",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Notes: Muscle Contraction. Intro to the \"Lights, Camera, Contraction!\" project (40 pts; turn in by Thu 11/5, 11:59 PM)."
     },
@@ -63,6 +70,11 @@ window.STUDY_WEEK = {
       day: "Thu", date: "2026-10-29",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Lab 12 due."
+    },
+    {
+      day: "Thu", date: "2026-10-29",
+      subject: "world-history", subjectName: "World History",
+      what: "DUE 11:59 PM: \"Caste and Class\" (10 pts), in your own Doc. Compare caste in ancient India with class in the modern U.S., at least 2 bullets per cell: inequality examples, basis of status, social mobility, segregation, philosophical justification. Highlight rows where the similarities stand out more than the differences. Cite your sources and do the exit ticket."
     },
     {
       day: "Fri", date: "2026-10-30",
