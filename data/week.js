@@ -9,8 +9,13 @@
        items: [ ROW ],               // this week
        nextLabel: "Oct 5 – Oct 9",   // NEXT WEEK range
        next:  [ ROW ],               // next week
-       ahead: [ { date:"YYYY-MM-DD" or free text, subject?, subjectName, what } ]
+       ahead: [ { date:"YYYY-MM-DD" or free text, subject?, subjectName, what } ],
+       ask:   [ { q, subject?, subjectName } ]  // "Quick questions" for Kelly
      }
+   ask = the sweep report's "What to ask Kelly", forward-looking only (dates,
+   tests, scope -- never "did you turn in"). The hub adds one standing
+   question ("anything announced in class?") itself. Answers post to Greg's
+   Google Form "Study Hub - Notes from Kelly" -> its response Sheet.
      ROW = { day, date:"YYYY-MM-DD", subject:<id from lessons.js or null>,
              subjectName, what, help?, helpFile? }
    Rows/ahead items whose date has fully passed drop out on the page by
@@ -148,5 +153,9 @@ window.STUDY_WEEK = {
     { date: "2026-11-23", subjectName: "School", what: "Thanksgiving Break: no school Nov 23–27" },
     { date: "~2026-12-16", subjectName: "School", what: "Semester finals week (Dec 14–18); winter break starts Dec 21" },
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
+  ],
+  ask: [
+    { q: "Is there a quiz on the Halloween / Loup Garou vocab? When?", subject: "ap-french", subjectName: "French" },
+    { q: "The Sensation & Perception test on Tue 11/3: what did Mrs. Aschwanden say it covers, and what format (multiple choice, AAQ)?", subject: "ap-psychology", subjectName: "AP Psychology" }
   ]
 };

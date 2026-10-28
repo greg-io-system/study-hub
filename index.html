@@ -203,6 +203,55 @@
     app.appendChild(panel);
   }
 
+  /* ---------- "Quick questions" box (data/week.js `ask`; answers -> Greg's Google Form) ----------
+     Questions come from each sweep; one standing question always shows.
+     Each answer is posted to the form as Question / Answer / Class, and
+     lands as a row in the form's Sheet. no-cors: the reply is opaque, so a
+     network failure is the only error we can see. */
+  var ASK_FORM="https://docs.google.com/forms/d/e/1FAIpQLSfDb4Q4DlL2j6oI8XJsw4C7YXtd_jb643NH9e6Th1nBpJvmTw/formResponse";
+  var ASK_FIELDS={q:"entry.2048637464", a:"entry.1962241278", c:"entry.1832553781"};
+  var ASK_STANDING={q:"Anything announced in class or written on the board? Tests, quizzes, due dates, anything new.", subjectName:"Any class"};
+  function renderAsk(){
+    var wk=window.STUDY_WEEK||{};
+    var qs=(wk.ask||[]).filter(function(x){ return x && x.q; }).concat([ASK_STANDING]);
+    var sec=el("section","ask-panel");
+    var h=el("div","wp-head");
+    h.appendChild(el("span","wp-title","Quick questions"));
+    h.appendChild(el("span","wp-range","Things Classroom doesn't show"));
+    sec.appendChild(h);
+    qs.forEach(function(item){
+      var KEY="hub-ask-sent:"+item.q, sent=false;
+      try{ sent = localStorage.getItem(KEY)==="1"; }catch(e){}
+      var box=el("div","ask-item");
+      var dot=el("span","wp-dot"); var s=item.subject?findSubject(item.subject):null;
+      dot.style.background=(s&&s.accent)||"var(--ink-soft)";
+      var qline=el("div","ask-q"); qline.appendChild(dot);
+      qline.appendChild(el("span",null,"<b>"+esc(item.subjectName||"")+"</b> &middot; "+esc(item.q)));
+      box.appendChild(qline);
+      var ta=el("textarea","ask-input"); ta.rows=2; ta.placeholder="Type your answer";
+      ta.setAttribute("aria-label",item.q);
+      var row=el("div","ask-row");
+      var btn=el("button","ask-send","Send"); btn.type="button";
+      var note=el("span","ask-note", sent ? "Sent &#10003; (you can send more)" : "");
+      btn.onclick=function(){
+        var txt=ta.value.trim(); if(!txt){ ta.focus(); return; }
+        btn.disabled=true; note.innerHTML="Sending&hellip;";
+        var body=new URLSearchParams();
+        body.append(ASK_FIELDS.q,item.q); body.append(ASK_FIELDS.a,txt); body.append(ASK_FIELDS.c,item.subjectName||"");
+        fetch(ASK_FORM,{method:"POST",mode:"no-cors",body:body}).then(function(){
+          ta.value=""; note.innerHTML="Sent &#10003; Thanks!";
+          try{ localStorage.setItem(KEY,"1"); }catch(e){}
+        }).catch(function(){
+          note.innerHTML="Didn&rsquo;t send. Check your connection and try again.";
+        }).then(function(){ btn.disabled=false; });
+      };
+      row.appendChild(btn); row.appendChild(note);
+      box.appendChild(ta); box.appendChild(row);
+      sec.appendChild(box);
+    });
+    app.appendChild(sec);
+  }
+
   /* ---------- "How to use this site" note (landing; collapsible, remembered per device) ---------- */
   function renderHowTo(){
     var KEY="hub-howto-hidden", hidden=false;
@@ -247,6 +296,7 @@
 
     renderDaily();
     renderWeek();
+    renderAsk();
     renderHowTo();
 
     var grid=el("div","classgrid");
