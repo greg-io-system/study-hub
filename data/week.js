@@ -18,8 +18,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-27",
-  /* 2026-10-27 Tue: English "What is a Burrito?" (Tue) + Johnson "GAMES" (Thu); WH "Caste and Class" due Thu 10/29 */
+  updated: "2026-10-28",
+  /* 2026-10-28 Wed: WH Unit 2 study guide posted (test details); Anatomy Unit 4 Exam Review + Chicken Limb Dissection (Thu); French Halloween vocab to study */
   label: "Oct 26 – Oct 30",
   items: [
     {
@@ -59,17 +59,22 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-10-28",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Chicken wing dissection (block day). Lab 14 handed out (due Tue 11/3)."
+      what: "Chicken wing dissection (block day). Lab 14 handed out (due Tue 11/3). Mrs. Kalec also posted the Unit 4 Exam Review: the 11/16 exam is multiple choice plus 2 of 6 FRQs picked at random, so prepare all six."
     },
     {
       day: "Wed", date: "2026-10-28",
       subject: "world-history", subjectName: "World History",
-      what: "Mr. Angelopulos posts the Unit 2 study guide in Classroom today. New topic this week: India (India Notes + the Mauryan and Gupta Empires reading)."
+      what: "The Unit 2 Exam Study Guide is in Classroom: the full list of what the 11/3 test can cover, and India (Mauryan and Gupta) is on it. Build your handwritten notes from it."
+    },
+    {
+      day: "Wed", date: "2026-10-28",
+      subject: "ap-french", subjectName: "French",
+      what: "Study the \"Loup Garou / Halloween Vocab\" doc in Classroom: nouns, places, verbs, adjectives and the French definitions. No date given yet; ask Mr. Keirns if there's a quiz."
     },
     {
       day: "Thu", date: "2026-10-29",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 12 due."
+      what: "Lab 12 due. \"Chicken Limb Dissection\" (20 pts, Google Doc in Classroom) also due: the write-up for Wednesday's dissection."
     },
     {
       day: "Thu", date: "2026-10-29",
@@ -111,7 +116,7 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-11-03",
       subject: "world-history", subjectName: "World History",
-      what: "UNIT 2 TEST: all multiple choice. You may use HANDWRITTEN notes, and Mr. Angelopulos checks them on test day. Read OpenStax 8.2 (Americas) and 9.2 (Farming and the Bantu Migrations) first: there are test questions on them, but no worksheet.",
+      what: "UNIT 2 TEST: 35 multiple choice (about 12 are synthesis questions). Only notes in your own handwriting, and you hand them in. Bring a district Chromebook. Read OpenStax 8.2 (Americas) and 9.2 (Farming and the Bantu Migrations) first: there are test questions on them. Scope: the Unit 2 Exam Study Guide in Classroom.",
       help: "Unit 2 exam review",
       helpFile: "lessons/unit-2-exam-review.html"
     },
