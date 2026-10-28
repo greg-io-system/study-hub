@@ -19,7 +19,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-10-27",
-  /* 2026-10-27 Tue: English "What is a Burrito?" (Tue); WH "Caste and Class" due Thu 10/29 */
+  /* 2026-10-27 Tue: English "What is a Burrito?" (Tue) + Johnson "GAMES" (Thu); WH "Caste and Class" due Thu 10/29 */
   label: "Oct 26 – Oct 30",
   items: [
     {
@@ -70,6 +70,13 @@ window.STUDY_WEEK = {
       day: "Thu", date: "2026-10-29",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Lab 12 due."
+    },
+    {
+      day: "Thu", date: "2026-10-29",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: talking points on whether video games are more or less valuable than other pastimes (value, not fun), your own pastimes, and the James Gee passage. Read and annotate Steven Johnson's \"GAMES\", with notes on all EIGHT points: central claim (and where you stand), purpose, audience, argument, ethos, logos (his line of reasoning), the Argument Continuum, the Rogerian model. REPLY to Mr. Evans's \"For Thursday (10/29)\" email with a photo or link of your notes. Your food essay gets shared Monday.",
+      help: "Terms: central claim, Argument Continuum, Rogerian",
+      helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
       day: "Thu", date: "2026-10-29",
