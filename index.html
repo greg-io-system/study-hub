@@ -210,7 +210,7 @@
      network failure is the only error we can see. */
   var ASK_FORM="https://docs.google.com/forms/d/e/1FAIpQLSfDb4Q4DlL2j6oI8XJsw4C7YXtd_jb643NH9e6Th1nBpJvmTw/formResponse";
   var ASK_FIELDS={q:"entry.2048637464", a:"entry.1962241278", c:"entry.1832553781"};
-  var ASK_STANDING={q:"Anything announced in class or written on the board? Tests, quizzes, due dates, anything new.", subjectName:"Any class"};
+  var ASK_STANDING={q:"Anything announced in class or written on the board? Tests, quizzes, due dates, anything new.", subjectName:"Any class", pick:true};
   function renderAsk(){
     var wk=window.STUDY_WEEK||{};
     var qs=(wk.ask||[]).filter(function(x){ return x && x.q; }).concat([ASK_STANDING]);
@@ -228,6 +228,17 @@
       var qline=el("div","ask-q"); qline.appendChild(dot);
       qline.appendChild(el("span",null,"<b>"+esc(item.subjectName||"")+"</b> &middot; "+esc(item.q)));
       box.appendChild(qline);
+      // standing question: she picks the class, so each note arrives tagged
+      var pick=null;
+      if(item.pick){
+        pick=el("select","ask-pick"); pick.setAttribute("aria-label","Which class?");
+        pick.appendChild(el("option",null,"Which class?")).value="";
+        subjects.filter(function(s){ return !isPlanned(s); }).forEach(function(s){
+          pick.appendChild(el("option",null,esc(s.name))).value=s.name;
+        });
+        pick.appendChild(el("option",null,"School-wide / other")).value="School-wide / other";
+        box.appendChild(pick);
+      }
       var ta=el("textarea","ask-input"); ta.rows=2; ta.placeholder="Type your answer";
       ta.setAttribute("aria-label",item.q);
       var row=el("div","ask-row");
@@ -235,11 +246,12 @@
       var note=el("span","ask-note", sent ? "Sent &#10003; (you can send more)" : "");
       btn.onclick=function(){
         var txt=ta.value.trim(); if(!txt){ ta.focus(); return; }
+        if(pick && !pick.value){ note.innerHTML="Pick the class first."; pick.focus(); return; }
         btn.disabled=true; note.innerHTML="Sending&hellip;";
         var body=new URLSearchParams();
-        body.append(ASK_FIELDS.q,item.q); body.append(ASK_FIELDS.a,txt); body.append(ASK_FIELDS.c,item.subjectName||"");
+        body.append(ASK_FIELDS.q,item.q); body.append(ASK_FIELDS.a,txt); body.append(ASK_FIELDS.c,pick ? pick.value : (item.subjectName||""));
         fetch(ASK_FORM,{method:"POST",mode:"no-cors",body:body}).then(function(){
-          ta.value=""; note.innerHTML="Sent &#10003; Thanks!";
+          ta.value=""; if(pick) pick.value=""; note.innerHTML="Sent &#10003; Thanks!";
           try{ localStorage.setItem(KEY,"1"); }catch(e){}
         }).catch(function(){
           note.innerHTML="Didn&rsquo;t send. Check your connection and try again.";
