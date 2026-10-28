@@ -99,11 +99,6 @@ window.STUDY_WEEK = {
       what: "Sensation & Perception continues (Week 11). Test is Tue 11/3, so start reviewing now: the study material in Classroom has a Quizlet, videos, a practice test and a Gimkit.",
       help: "Sensation & Perception",
       helpFile: "lessons/sensation-perception.html"
-    },
-    {
-      day: "This wk", date: "2026-10-30",
-      subject: "ap-french", subjectName: "French",
-      what: "\"Study this!\" Quizlet: L'Halloween contes, with sentences. Probably a quiz coming; no date yet."
     }
   ],
   nextLabel: "Nov 2 – Nov 6",
