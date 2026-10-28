@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-10-28",
+  /* 2026-10-28 Wed after school: WH "Religions Research" (100 pts, Fri 11:59 PM) + Blooket review link */
   /* 2026-10-28 Wed: WH Unit 2 study guide posted (test details); Anatomy Unit 4 Exam Review + Chicken Limb Dissection (Thu); French Halloween vocab to study */
   label: "Oct 26 – Oct 30",
   items: [
@@ -69,7 +70,7 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-10-28",
       subject: "world-history", subjectName: "World History",
-      what: "The Unit 2 Exam Study Guide is in Classroom: the full list of what the 11/3 test can cover, and India (Mauryan and Gupta) is on it. Build your handwritten notes from it."
+      what: "The Unit 2 Exam Study Guide is in Classroom: the full list of what the 11/3 test can cover, and India (Mauryan and Gupta) is on it. Build your handwritten notes from it. Mr. Angelopulos also posted a Blooket review link."
     },
     {
       day: "Wed", date: "2026-10-28",
@@ -97,6 +98,11 @@ window.STUDY_WEEK = {
       day: "Fri", date: "2026-10-30",
       subject: null, subjectName: "School",
       what: "AP exam PAYMENT deadline; end of the 2nd six weeks (grades close)."
+    },
+    {
+      day: "Fri", date: "2026-10-30",
+      subject: "world-history", subjectName: "World History",
+      what: "DUE 11:59 PM: \"Religions Research\" (100 pts), the \"World Religions Research\" Doc in Classroom. Explain the central tenets and practices of your religion: up to 3 symbols and their meaning, followers and where they live, brief history, beliefs, ethics, quotes from sacred texts, customs, rituals and holidays, two main ideas of your choice, a higher-level question, and at least 3 sources. End with a four-sentence summary in your religion's voice: creation, the meaning of life, how to treat others, what happens when we die."
     },
     {
       day: "Fri", date: "2026-10-30",
@@ -155,6 +161,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
+    { q: "World History \"Religions Research\" (due Fri): which religion are you researching? Did Mr. Angelopulos give any other instructions in class?", subject: "world-history", subjectName: "World History" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "The Sensation & Perception test on Tue 11/3: what did Mrs. Aschwanden say it covers, and what format (multiple choice, AAQ)?", subject: "ap-psychology", subjectName: "AP Psychology" }
   ]
