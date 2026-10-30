@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-28",
+  updated: "2026-10-29",
+  /* 2026-10-29 Thu after school: Psych "Depth Perception Scavenger Hunt" (15 pts, Fri); English For Friday "The Creativity Crisis" */
   /* 2026-10-28 Wed after school: WH "Religions Research" (100 pts, Fri 11:59 PM) + Blooket review link */
   /* 2026-10-28 Wed: WH Unit 2 study guide posted (test details); Anatomy Unit 4 Exam Review + Chicken Limb Dissection (Thu); French Halloween vocab to study */
   label: "Oct 26 – Oct 30",
@@ -103,6 +104,20 @@ window.STUDY_WEEK = {
       day: "Fri", date: "2026-10-30",
       subject: "world-history", subjectName: "World History",
       what: "DUE 11:59 PM: \"Religions Research\" (100 pts), the \"World Religions Research\" Doc in Classroom. Explain the central tenets and practices of your religion: up to 3 symbols and their meaning, followers and where they live, brief history, beliefs, ethics, quotes from sacred texts, customs, rituals and holidays, two main ideas of your choice, a higher-level question, and at least 3 sources. End with a four-sentence summary in your religion's voice: creation, the meaning of life, how to treat others, what happens when we die."
+    },
+    {
+      day: "Fri", date: "2026-10-30",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read and annotate \"The Creativity Crisis\" (the PDF on Mr. Evans's email): find your own voice in the notes, your \"; however,\" clauses, evidence that supports your claims, and the layers of the rhetorical situation. Then write ruminating notes on four questions: how do we define creativity? Can it be defined? What does the definition do to the term? Is the term flexible? REPLY to \"For Friday (10/30)\" with both.",
+      help: "Terms: rhetorical situation, Rhetorical Precis",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
+      day: "Fri", date: "2026-10-30",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "DUE: Depth Perception Scavenger Hunt (15 pts, your Slides copy in Classroom). Take a photo or short video on campus for each concept and explain how it shows the principle: binocular cues (retinal disparity, convergence), monocular cues (linear perspective, texture gradient, relative clarity, relative size, interposition), constancies (color, shape, size) and Gestalt grouping (figure-ground, closure, proximity, similarity). For the depth cues, say why one thing looks near and another far. No photos of people without their permission.",
+      help: "Sensation & Perception",
+      helpFile: "lessons/sensation-perception.html"
     },
     {
       day: "Fri", date: "2026-10-30",
