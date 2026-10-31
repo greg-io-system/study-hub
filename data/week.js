@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-10-29",
+  updated: "2026-10-30",
+  /* 2026-10-30 Fri after school: Anatomy "Facial Expression Lab" (25 pts, Classroom due Sun 11/1) + Innerbody muscle guide; English For Monday Q3 creativity paragraphs */
   /* 2026-10-29 Thu after school: Psych "Depth Perception Scavenger Hunt" (15 pts, Fri); English For Friday "The Creativity Crisis" */
   /* 2026-10-28 Wed after school: WH "Religions Research" (100 pts, Fri 11:59 PM) + Blooket review link */
   /* 2026-10-28 Wed: WH Unit 2 study guide posted (test details); Anatomy Unit 4 Exam Review + Chicken Limb Dissection (Thu); French Halloween vocab to study */
@@ -122,7 +123,7 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-10-30",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Notes: Naming Skeletal Muscles. Facial Muscle Expression Lab (due Tue 11/3)."
+      what: "Notes: Naming Skeletal Muscles. Facial Expression Lab (25 pts, your Google Doc copy in Classroom): Classroom says due Sun 11/1, the Unit 4 Calendar says Tue 11/3, so check with Mrs. Kalec and plan for Sunday to be safe."
     },
     {
       day: "This wk", date: "2026-10-30",
@@ -134,6 +135,18 @@ window.STUDY_WEEK = {
   ],
   nextLabel: "Nov 2 – Nov 6",
   next: [
+    {
+      day: "Sun", date: "2026-11-01",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Facial Expression Lab (25 pts) due in Classroom (no time set). The Unit 4 Calendar says Tue 11/3; Classroom's date is the earlier one."
+    },
+    {
+      day: "Mon", date: "2026-11-02",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: think through the three points in Mr. Evans's email (were the Chicago River, Volkswagen, bridge-under-a-bridge and Taiwan trash solutions creative? who decides what counts as creative?). Review your definitions document (formal, operational, by example). Then, in a GOOGLE DOC, write a series of developed paragraphs on the 2014 Q3 prompt: argue FOR or AGAINST creating a class in creativity. Use evidence from your library (not personal experience), define \"creativity\" in your position, and use the Rogerian writing stems. 45-50 minutes max. REPLY to \"For Monday (11/2)\" with the link to your Doc.",
+      help: "Terms: the three kinds of definition, Rogerian",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
     {
       day: "Mon", date: "2026-11-02",
       subject: "ap-psychology", subjectName: "AP Psychology",
@@ -156,12 +169,12 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-11-03",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 14 and the Facial Muscle Expression Lab due."
+      what: "Lab 14 due (and the Facial Expression Lab, if it isn't already in by Sunday)."
     },
     {
       day: "Wed", date: "2026-11-04",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "FACIAL MUSCLE QUIZ. Notes: Disorders; Lab 15 (due Tue 11/10)."
+      what: "FACIAL MUSCLE QUIZ. Notes: Disorders; Lab 15 (due Tue 11/10). To study, Mrs. Kalec posted the \"Great Muscle Resource\": Innerbody's interactive muscle guide (link in Classroom)."
     },
     {
       day: "Fri", date: "2026-11-06",
@@ -176,7 +189,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "World History \"Religions Research\" (due Fri): which religion are you researching? Did Mr. Angelopulos give any other instructions in class?", subject: "world-history", subjectName: "World History" },
+    { q: "Facial Expression Lab: Classroom says due Sun 11/1, the Unit 4 Calendar says Tue 11/3. Which one did Mrs. Kalec say?", subject: "human-anatomy", subjectName: "Human Anatomy" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "The Sensation & Perception test on Tue 11/3: what did Mrs. Aschwanden say it covers, and what format (multiple choice, AAQ)?", subject: "ap-psychology", subjectName: "AP Psychology" }
   ]
