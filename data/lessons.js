@@ -149,6 +149,7 @@ window.STUDY_HUB = {
               tags: ["test prep", "unit 2", "han china", "rome"],
               materials: [
                 { kind: "lesson", label: "Unit 2 exam review", file: "lessons/unit-2-exam-review.html" },
+                { kind: "lesson", label: "Make your one-page notes", file: "lessons/unit-2-one-page-notes.html" },
                 { kind: "lesson", label: "Textbook part: 8.2 + 9.2 study guide", file: "lessons/unit-2-reading-americas-africa-study-quiz.html" }
               ]
             }

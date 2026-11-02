@@ -56,7 +56,8 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-02",
       subject: "world-history", subjectName: "World History",
-      what: "Test tomorrow: get your handwritten notes ready (Mr. Angelopulos may read or collect them; your own handwriting only, no sharing notes with another class) and read OpenStax 8.2 and 9.2."
+      what: "Test tomorrow: get your handwritten notes ready (Mr. Angelopulos may read or collect them; your own handwriting only, no sharing notes with another class) and read OpenStax 8.2 and 9.2.",
+      help: "Make your one-page notes", helpFile: "lessons/unit-2-one-page-notes.html"
     },
     {
       day: "Tue", date: "2026-11-03",
