@@ -60,18 +60,28 @@ window.STUDY_WEEK = {
       help: "Make your one-page notes", helpFile: "lessons/unit-2-one-page-notes.html"
     },
     {
-      day: "Tue", date: "2026-11-03",
+      day: "Mon", date: "2026-11-02",
       subject: "world-history", subjectName: "World History",
-      what: "UNIT 2 TEST: 35 multiple choice (about 12 are synthesis questions). Only notes in your own handwriting, and you hand them in. Bring a district Chromebook and be on time: you have to finish before you leave class. Read OpenStax 8.2 (Americas) and 9.2 (Farming and the Bantu Migrations) first: there are test questions on them. Scope: the Unit 2 Exam Study Guide in Classroom.",
+      what: "Test tomorrow, if you have time after your notes sheet: check yourself on the Unit 2 review (Persia, Greece, China, Rome).",
       help: "Unit 2 exam review",
       helpFile: "lessons/unit-2-exam-review.html"
     },
     {
-      day: "Tue", date: "2026-11-03",
+      day: "Mon", date: "2026-11-02",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "SENSATION & PERCEPTION TEST. Covers the AMSCO readings (pp. 263-288 and 2.4-2.5, pp. 292-313) and the S&P study material in Classroom. More details coming.",
+      what: "Test tomorrow: review Sensation & Perception.",
       help: "Sensation & Perception",
       helpFile: "lessons/sensation-perception.html"
+    },
+    {
+      day: "Tue", date: "2026-11-03",
+      subject: "world-history", subjectName: "World History",
+      what: "UNIT 2 TEST: 35 multiple choice (about 12 are synthesis questions). Only notes in your own handwriting, and you hand them in. Bring a district Chromebook and be on time: you have to finish before you leave class. Read OpenStax 8.2 (Americas) and 9.2 (Farming and the Bantu Migrations) first: there are test questions on them. Scope: the Unit 2 Exam Study Guide in Classroom."
+    },
+    {
+      day: "Tue", date: "2026-11-03",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "SENSATION & PERCEPTION TEST. Covers the AMSCO readings (pp. 263-288 and 2.4-2.5, pp. 292-313) and the S&P study material in Classroom. More details coming."
     },
     {
       day: "Tue", date: "2026-11-03",
