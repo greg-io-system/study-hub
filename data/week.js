@@ -155,7 +155,6 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "The Body Muscles Quiz: the Unit 4 Calendar puts it on block day, Wed 11/11. Is that the day Mrs. Kalec said?", subject: "human-anatomy", subjectName: "Human Anatomy" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
   ]
