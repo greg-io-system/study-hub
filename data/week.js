@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-02",
+  /* 2026-11-02 Mon after school: English For Tuesday (Chau, line of reasoning); Psych S&P study guide + Cognition reading (11/9); Anatomy muscle list; Body Muscles Quiz moved to Wed 11/11 (calendar re-read) */
   /* 2026-11-02 Mon morning: window rolled to Nov 2-6 / Nov 9-13; French "Rejoindre les 2 Padlets" (5 pts, today); WH test-day reminders; Anatomy Wed quiz = Head & Neck Muscle Quiz */
   /* 2026-10-30 Fri after school: Anatomy "Facial Expression Lab" (25 pts, Classroom due Sun 11/1) + Innerbody muscle guide; English For Monday Q3 creativity paragraphs */
   /* 2026-10-29 Thu after school: Psych "Depth Perception Scavenger Hunt" (15 pts, Fri); English For Friday "The Creativity Crisis" */
@@ -69,7 +70,7 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-02",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Test tomorrow: review Sensation & Perception.",
+      what: "Test tomorrow: review Sensation & Perception. Mrs. Aschwanden added a \"Study Guide Sensation/Perception\" to the S&P Study Material in Classroom today: go down its term list, and test yourself with practice questions (her advice) rather than just re-reading.",
       help: "Sensation & Perception",
       helpFile: "lessons/sensation-perception.html"
     },
@@ -81,17 +82,24 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-11-03",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "SENSATION & PERCEPTION TEST. Covers the AMSCO readings (pp. 263-288 and 2.4-2.5, pp. 292-313) and the S&P study material in Classroom. More details coming."
+      what: "SENSATION & PERCEPTION TEST. Covers the AMSCO readings (pp. 263-288 and 2.4-2.5, pp. 292-313) and the S&P study material in Classroom, including the new study guide."
+    },
+    {
+      day: "Tue", date: "2026-11-03",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: review and re-take your Line of Reasoning notes (Mr. Evans's linked doc; make your own copy). Read and annotate Danny Chau, \"The Burning Desire for Hot Chicken\" in 50 Essays (it's not really about chicken: what is it about?). For each paragraph, or a run of up to three, mark its main idea and purpose and how it connects to the paragraphs around it, plus claim, purpose, audience(s) and appeals. REPLY to \"For Tuesday (11/3)\" with a photo of your notes linking paragraphs 61, 62 and 63, plus one more run of your choice. Bring 50 Essays to class.",
+      help: "Terms: line of reasoning",
+      helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
       day: "Tue", date: "2026-11-03",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 14 due, and the Facial Expression Lab if it isn't in yet (Classroom had it due Sunday). Lab 14 gets graded in class; more \"Lights, Camera, Contraction!\" work time."
+      what: "Lab 14 due; it gets graded in class. More \"Lights, Camera, Contraction!\" work time."
     },
     {
       day: "Wed", date: "2026-11-04",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "HEAD & NECK MUSCLE QUIZ. Notes: Disorders; Lab 15 (due Tue 11/10). To study, Mrs. Kalec posted the \"Great Muscle Resource\": Innerbody's interactive muscle guide (link in Classroom)."
+      what: "HEAD & NECK MUSCLE QUIZ. Know the 10 \"Facial Muscles\" on Mrs. Kalec's \"Naming Muscles List\" (posted Monday in Classroom). To study, use her \"Great Muscle Resource\": Innerbody's interactive muscle guide (link in Classroom). Then Notes: Disorders; Lab 15 (due Tue 11/10)."
     },
     {
       day: "Fri", date: "2026-11-06",
@@ -104,7 +112,12 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-09",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "BODY MUSCLES QUIZ. Lab 16 handed out (due Fri 11/13)."
+      what: "Lab 16 (due Fri 11/13)."
+    },
+    {
+      day: "Mon", date: "2026-11-09",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52."
     },
     {
       day: "Tue", date: "2026-11-10",
@@ -114,7 +127,7 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-11-11",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Ambient Temperature Lab (due Tue 11/17)."
+      what: "BODY MUSCLES QUIZ: the 15 \"Body Muscles\" on the Naming Muscles List. Ambient Temperature Lab (due Tue 11/17)."
     },
     {
       day: "Fri", date: "2026-11-13",
@@ -129,7 +142,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Facial Expression Lab: Classroom says due Sun 11/1, the Unit 4 Calendar says Tue 11/3. Which one did Mrs. Kalec say?", subject: "human-anatomy", subjectName: "Human Anatomy" },
+    { q: "The Body Muscles Quiz: the Unit 4 Calendar puts it on block day, Wed 11/11. Is that the day Mrs. Kalec said?", subject: "human-anatomy", subjectName: "Human Anatomy" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "The Sensation & Perception test on Tue 11/3: what did Mrs. Aschwanden say it covers, and what format (multiple choice, AAQ)?", subject: "ap-psychology", subjectName: "AP Psychology" }
   ]
