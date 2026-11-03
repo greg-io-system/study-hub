@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-02",
+  updated: "2026-11-03",
+  /* 2026-11-03 Tue after school: English For Thursday (Staples, five developed responses); French extra credit Wed 5-7 PM; ask list refreshed */
   /* 2026-11-02 Mon after school: English For Tuesday (Chau, line of reasoning); Psych S&P study guide + Cognition reading (11/9); Anatomy muscle list; Body Muscles Quiz moved to Wed 11/11 (calendar re-read) */
   /* 2026-11-02 Mon morning: window rolled to Nov 2-6 / Nov 9-13; French "Rejoindre les 2 Padlets" (5 pts, today); WH test-day reminders; Anatomy Wed quiz = Head & Neck Muscle Quiz */
   /* 2026-10-30 Fri after school: Anatomy "Facial Expression Lab" (25 pts, Classroom due Sun 11/1) + Innerbody muscle guide; English For Monday Q3 creativity paragraphs */
@@ -102,6 +103,18 @@ window.STUDY_WEEK = {
       what: "HEAD & NECK MUSCLE QUIZ. Know the 10 \"Facial Muscles\" on Mrs. Kalec's \"Naming Muscles List\" (posted Monday in Classroom). To study, use her \"Great Muscle Resource\": Innerbody's interactive muscle guide (link in Classroom). Then Notes: Disorders; Lab 15 (due Tue 11/10)."
     },
     {
+      day: "Wed", date: "2026-11-04",
+      subject: "ap-french", subjectName: "French",
+      what: "Optional extra credit: help at 8th-grade parent night, 5-7 PM, for as much of it as you can, promoting the French program (posted in Classroom today)."
+    },
+    {
+      day: "Thu", date: "2026-11-05",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read the Questions on Rhetoric and Style in Mr. Evans's email FIRST, then read and annotate Brent Staples, \"Just Walk on By: Black Men and Public Space\" in 50 Essays to those questions. REPLY to \"For Thursday (11/5)\" with developed responses to all five, with evidence and explanation in your own voice, not mere answers: the opening paragraph's effect on his audience; why so many personal experiences; the \"not a hallucination\" line in paragraph 5; the final cowbell sentence and \"hunter and hunted\"; the ironies in the essay.",
+      help: "Terms: line of reasoning, appeals",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
       day: "Fri", date: "2026-11-06",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "\"Lights, Camera, Contraction!\" gallery walk in class. The project (40 pts) is due in Classroom the night before: Thu 11/5, 11:59 PM."
@@ -144,6 +157,6 @@ window.STUDY_WEEK = {
   ask: [
     { q: "The Body Muscles Quiz: the Unit 4 Calendar puts it on block day, Wed 11/11. Is that the day Mrs. Kalec said?", subject: "human-anatomy", subjectName: "Human Anatomy" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
-    { q: "The Sensation & Perception test on Tue 11/3: what did Mrs. Aschwanden say it covers, and what format (multiple choice, AAQ)?", subject: "ap-psychology", subjectName: "AP Psychology" }
+    { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
   ]
 };
