@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-03",
+  updated: "2026-11-04",
+  /* 2026-11-04 Wed midday: French sub-day work (Edpuzzle 100 pts tonight, PC vs Imparfait 10 pts today); Anatomy quiz 20 pts; Psych Cognition Study Materials posted; ask list adds the Cognition test date */
   /* 2026-11-03 Tue after school: English For Thursday (Staples, five developed responses); French extra credit Wed 5-7 PM; ask list refreshed */
   /* 2026-11-02 Mon after school: English For Tuesday (Chau, line of reasoning); Psych S&P study guide + Cognition reading (11/9); Anatomy muscle list; Body Muscles Quiz moved to Wed 11/11 (calendar re-read) */
   /* 2026-11-02 Mon morning: window rolled to Nov 2-6 / Nov 9-13; French "Rejoindre les 2 Padlets" (5 pts, today); WH test-day reminders; Anatomy Wed quiz = Head & Neck Muscle Quiz */
@@ -100,12 +101,22 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-11-04",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "HEAD & NECK MUSCLE QUIZ. Know the 10 \"Facial Muscles\" on Mrs. Kalec's \"Naming Muscles List\" (posted Monday in Classroom). To study, use her \"Great Muscle Resource\": Innerbody's interactive muscle guide (link in Classroom). Then Notes: Disorders; Lab 15 (due Tue 11/10)."
+      what: "HEAD & NECK MUSCLE QUIZ (20 pts, Google Form in Classroom). Know the 10 \"Facial Muscles\" on Mrs. Kalec's \"Naming Muscles List\" (posted Monday in Classroom). To study, use her \"Great Muscle Resource\": Innerbody's interactive muscle guide (link in Classroom). Then Notes: Disorders; Lab 15 (due Tue 11/10)."
     },
     {
       day: "Wed", date: "2026-11-04",
       subject: "ap-french", subjectName: "French",
-      what: "Optional extra credit: help at 8th-grade parent night, 5-7 PM, for as much of it as you can, promoting the French program (posted in Classroom today)."
+      what: "Mr. Keirns is out today. His plan: do the 3 Edpuzzles, do the exercise below, then independent reading in French. DUE tonight, 11:59 PM: \"Edpuzzle - PASSE COMPOSE OU IMPARFAIT\" (100 pts)."
+    },
+    {
+      day: "Wed", date: "2026-11-04",
+      subject: "ap-french", subjectName: "French",
+      what: "DUE today: \"PC vs. Imparfait exercise practice\" (10 pts, Google Doc in Classroom). Make your own copy if you need to and add your version."
+    },
+    {
+      day: "Wed", date: "2026-11-04",
+      subject: "ap-french", subjectName: "French",
+      what: "Optional extra credit: help at 8th-grade parent night, 5-7 PM, for as much of it as you can, promoting the French program. Meet at Mr. Keirns's classroom at 5."
     },
     {
       day: "Thu", date: "2026-11-05",
@@ -130,7 +141,7 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-09",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52."
+      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52. New in Classroom: \"Cognition Study Materials\" has the study guide, the lecture slides and two sets of practice questions."
     },
     {
       day: "Tue", date: "2026-11-10",
@@ -155,6 +166,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
+    { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
   ]
