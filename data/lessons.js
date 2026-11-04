@@ -276,7 +276,7 @@ window.STUDY_HUB = {
               topic: "The 10 muscles on Mrs. Kalec's Facial Muscles list: where each one is and what it does",
               file: "lessons/hap-head-neck-muscle-flashcards.html",
               date: "2026-11-03",
-              summary: "27 cards for the Head & Neck Muscle Quiz on Wed 11/4. Where each muscle is and its job, name-it drills, and the big picture. Mark the ones you miss and drill just those.",
+              summary: "42 cards for the Head & Neck Muscle Quiz on Wed 11/4. Where each muscle is and its job, name-it drills, the big picture, and the Innerbody head and neck list. Mark the ones you miss and drill just those.",
               tags: ["quiz prep", "flashcards", "muscles"],
               materials: [
                 { kind: "practice", label: "Flashcards", file: "lessons/hap-head-neck-muscle-flashcards.html" },
