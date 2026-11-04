@@ -268,6 +268,25 @@ window.STUDY_HUB = {
       blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
       weeks: [
         {
+          range: "Nov 2 – Nov 6",
+          theme: "Unit 4 · Muscular System",
+          lessons: [
+            {
+              title: "Head & Neck Muscle Flashcards",
+              topic: "The 10 muscles on Mrs. Kalec's Facial Muscles list: where each one is and what it does",
+              file: "lessons/hap-head-neck-muscle-flashcards.html",
+              date: "2026-11-03",
+              summary: "27 cards for the Head & Neck Muscle Quiz on Wed 11/4. Where each muscle is and its job, name-it drills, and the big picture. Mark the ones you miss and drill just those.",
+              tags: ["quiz prep", "flashcards", "muscles"],
+              materials: [
+                { kind: "practice", label: "Flashcards", file: "lessons/hap-head-neck-muscle-flashcards.html" },
+                { kind: "link", label: "Mrs. Kalec's Naming Muscles List", url: "https://docs.google.com/document/d/1RBU_UQp_RYoNCC5Fbmi1oCjJGLQj3ATdAJftzk14fx0/" },
+                { kind: "link", label: "Great Muscle Resource (Innerbody)", url: "https://www.innerbody.com/image/musfov.html" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Sep 28 – Oct 2",
           theme: "Unit 3 · Skeletal System",
           lessons: [

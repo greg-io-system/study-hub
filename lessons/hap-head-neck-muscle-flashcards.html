@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Head &amp; Neck Muscles · Human Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf6ec; --paper2:#fffdf7; --ink:#233047; --soft:#5a6b83;
+    --line:#e4dcc8; --accent:#b5445a; --accent-soft:#f8e7ec;
+    --good:#178a68; --good-soft:#d8efe6; --warn:#d98324; --warn-soft:#f8ecd6;
+    --shadow:0 10px 30px rgba(60,50,25,.10);
+    --disp:'Fraunces',Georgia,serif; --body:'Nunito','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6}
+  .wrap{max-width:780px;margin:0 auto;padding:26px 18px 60px}
+  .eyebrow{font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  h1{font-family:var(--disp);font-weight:700;font-size:30px;margin:.15em 0 .1em}
+  .tagline{color:var(--soft);margin:.2em 0 0}
+  .groups{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
+  .gchip{font-weight:800;font-size:13px;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer;transition:.15s}
+  .gchip:hover{border-color:var(--accent)}
+  .gchip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .meta{display:flex;justify-content:space-between;align-items:center;color:var(--soft);font-size:13.5px;font-weight:700;margin:10px 2px 6px}
+  .tallies span{margin-left:12px}
+  .tallies .g{color:var(--good)} .tallies .r{color:var(--warn)}
+  .card{position:relative;background:var(--paper2);border:1.5px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:28px 26px;cursor:pointer;user-select:none;transition:border-color .15s}
+  .card:hover{border-color:var(--accent)}
+  .side-label{position:absolute;top:12px;left:16px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+  .cat-label{position:absolute;top:12px;right:16px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--soft)}
+  .front-txt{font-family:var(--disp);font-weight:600;font-size:24px;line-height:1.25}
+  .back-txt{font-size:20px;font-weight:700}
+  .back-txt .hint{display:block;font-size:14.5px;font-weight:600;color:var(--soft);margin-top:10px}
+  .tap{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:12.5px;font-weight:700;color:var(--soft)}
+  .row{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+  button.act{font-family:var(--body);font-weight:800;font-size:15px;border:none;border-radius:12px;padding:11px 18px;cursor:pointer;transition:.12s;flex:1;min-width:120px}
+  .b-flip{background:var(--accent);color:#fff}
+  .b-got{background:var(--good-soft);color:#0d5c42}
+  .b-rev{background:var(--warn-soft);color:#8a5210}
+  button.act:active{transform:translateY(1px)}
+  .nav{display:flex;gap:9px;margin-top:9px;justify-content:center;flex-wrap:wrap}
+  button.small{font-weight:800;font-size:13.5px;border:2px solid var(--line);background:#fff;color:var(--soft);border-radius:10px;padding:8px 14px;cursor:pointer}
+  button.small:hover{border-color:var(--accent);color:var(--ink)}
+  button.small:disabled{opacity:.4;cursor:default}
+  .done{text-align:center;padding:30px 18px}
+  .done h2{font-family:var(--disp);font-size:26px;margin:.2em 0}
+  .note{color:var(--soft);font-size:13px;text-align:center;margin-top:18px}
+  .howto{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:2px 16px;margin:12px 0 2px}
+  .howto summary{cursor:pointer;font-weight:800;color:var(--accent);padding:9px 0;font-size:14px}
+  .howto ul{margin:.2em 0 .7em;padding-left:20px;font-size:14px}
+  .howto li{margin:.3em 0}
+  .footer{margin-top:34px;color:var(--soft);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<!-- SOURCES
+kind: class
+- human-anatomy/reference/unit-4-naming-muscles-list-capture.md
+- human-anatomy/reference/unit-4-muscular-system-slides-capture.md
+- human-anatomy/reference/unit-4-innerbody-head-neck-capture.md
+- human-anatomy/reference/unit-4-facial-expression-lab-capture.md
+- human-anatomy/reference/unit-4-openstax-buccinator-nasalis-capture.md
+fact-trace: 2026-11-03 additions+coverage
+-->
+<div class="wrap">
+  <div class="eyebrow">Human Anatomy</div>
+  <h1>Head &amp; Neck Muscle Flashcards</h1>
+  <p class="tagline">Tap a card to flip, then grade yourself. Your progress saves on this device. 27 cards.</p>
+
+  <details class="howto" open>
+    <summary>How to use</summary>
+    <ul>
+      <li><b>Flip</b> — tap the card (or press Space) to see the answer.</li>
+      <li><b>✓ Got it / ↺ Review</b> — grade yourself. The tally on the right tracks both.</li>
+      <li><b>Drill review only</b> — study just the cards you marked Review; as you get them right they drop out, counting down to none left.</li>
+      <li><b>Groups</b> — tap a topic (Where + job, Name it, Big picture) to focus on one area.</li>
+      <li><b>Progress saves automatically</b> on this device — refresh or come back later and your marks are still here.</li>
+      <li><b>Reset</b> — clear all your marks and start fresh.</li>
+    </ul>
+  </details>
+
+  <div class="groups" id="groups"></div>
+  <div class="meta">
+    <span id="counter">–</span>
+    <span class="tallies"><span class="g" id="tg">✓ 0</span><span class="r" id="tr">↺ 0</span></span>
+  </div>
+
+  <div id="stage">
+   <div id="play">
+    <div class="card" id="card">
+      <span class="side-label" id="side">Prompt</span>
+      <span class="cat-label" id="cat"></span>
+      <div id="face" class="front-txt"></div>
+      <div class="tap" id="tap">tap to flip · or press Space</div>
+    </div>
+    <div class="row">
+      <button class="act b-flip" id="flip">Flip</button>
+      <button class="act b-got" id="got">✓ Got it</button>
+      <button class="act b-rev" id="rev">↺ Review</button>
+    </div>
+    <div class="nav">
+      <button class="small" id="prev">← Prev</button>
+      <button class="small" id="shuffle">Shuffle</button>
+      <button class="small" id="drill">Drill review only</button>
+      <button class="small" id="restart">Reset</button>
+      <button class="small" id="next">Next →</button>
+    </div>
+   </div>
+   <div class="done" id="done" hidden></div>
+  </div>
+
+  <p class="note">Keyboard: <b>Space</b> flip · <b>→ / ←</b> move · <b>G</b> got it · <b>R</b> review</p>
+  <p class="note">The quiz is on identifying these muscles, so also practice pointing to each one: use your lab photos and the Innerbody guide (Mrs. Kalec's "Great Muscle Resource"). The buccinator card and part of the nasalis card come from the OpenStax anatomy textbook, because your class sources say little about them. Each says so on the card.</p>
+  <div class="footer">Built from Mrs. Kalec's Naming Muscles List, her Muscular System slides and her Great Muscle Resource (Innerbody), with OpenStax Anatomy and Physiology 2e (CC BY-NC-SA) for the buccinator and nasalis, in our own words. · Made for you · ad-free</div>
+</div>
+
+<script>
+"use strict";
+/* ---- The deck: swap this array to reuse the component for any unit ---- */
+var CARDS = [
+  // Where + job
+  {c:"Where + job", f:"Masseter", b:"thick, four-sided muscle in the cheek · lifts the lower jaw to close it so you can chew, and helps push it forward · its name means the chewer", h:"Try it: clench your teeth and feel your cheek harden."},
+  {c:"Where + job", f:"Frontalis", b:"the front part of the epicranius, the layer over the skull; the occipitalis is the other part · with help from the occipitalis, pulls the scalp back, lifting the eyebrows and wrinkling the forehead", h:"Try it: raise your eyebrows, as Mrs. Kalec had the class do."},
+  {c:"Where + job", f:"Nasalis", b:"on the nose, running from the upper jaw (maxilla) to the nasal bone · pulls down the cartilage part of the nose, which flares the nostrils", h:"Try it: flare your nostrils. Where it sits and the flaring: From the OpenStax anatomy textbook, not Mrs. Kalec's materials. If your lab manual differs, go with the manual."},
+  {c:"Where + job", f:"Orbicularis oculi", b:"ring of muscle around the eye, in the eyelid · closes the eye and blinks · squeezes the tear gland so tears flow over the eye · makes crow's feet", h:"Memory trick: oculi sounds like ocular, the eye."},
+  {c:"Where + job", f:"Orbicularis oris", b:"ring of muscle around the mouth, reaching up to the nose and down to between the lower lip and chin · closes and puckers the lips · nicknamed the kissing muscle", h:"Memory trick: oris sounds like oral, the mouth."},
+  {c:"Where + job", f:"Zygomaticus", b:"two muscles in the cheek · the major is larger, reaches down to the mouth, and pulls the corner of the mouth up and back when you laugh · the minor is a small bundle that helps form the crease from the side of the nose to the upper lip, which deepens when you look sad"},
+  {c:"Where + job", f:"Buccinator", b:"makes up a large part of the face at the cheek, and joins into the orbicularis oris · compresses the cheek · lets you whistle, blow and suck, and helps with chewing", h:"Try it: whistle, or suck on a straw. From the OpenStax anatomy textbook, not Mrs. Kalec's materials. If your lab manual differs, go with the manual."},
+  {c:"Where + job", f:"Platysma", b:"broad sheet from the chest and shoulder, up over the collarbone and along the sides of the neck · pulls the lower lip and mouth corner sideways and down, partly opening the mouth, as in surprise or fright · at full effort it widens the neck, as in a sprinter breathing hard"},
+  {c:"Where + job", f:"Sternocleidomastoid (SCM)", b:"large surface muscle of the neck, running from the mastoid process of the skull, behind the ear, down to the sternum and clavicle (two heads) · one side turns the face to the opposite side · both together bend the head toward the chest · can also lift the ribcage for deep breathing", h:"Try it: turn your head left and feel the right side of your neck."},
+  {c:"Where + job", f:"Trapezius", b:"wide, flat muscle over most of the upper back and the back of the neck, a left and a right that meet at the spine · moves, rotates and steadies the shoulder blade, and tips the head back", h:"Try it: shrug. Memory trick: it is named for its trapezoid shape."},
+  // Name it
+  {c:"Name it", f:"Which muscle closes your jaw to chew?", b:"masseter"},
+  {c:"Name it", f:"Which muscle lifts your eyebrows and wrinkles your forehead?", b:"frontalis"},
+  {c:"Name it", f:"Which muscle closes your eye when you blink?", b:"orbicularis oculi"},
+  {c:"Name it", f:"Which muscle puckers your lips?", b:"orbicularis oris"},
+  {c:"Name it", f:"Which muscle pulls the corner of your mouth up when you laugh?", b:"zygomaticus (major)"},
+  {c:"Name it", f:"Which muscle pulls your lower lip and mouth corner down in fright?", b:"platysma"},
+  {c:"Name it", f:"Which muscle pulls down the cartilage of your nose?", b:"nasalis"},
+  {c:"Name it", f:"Which muscle compresses your cheek so you can whistle or blow?", b:"buccinator"},
+  {c:"Name it", f:"Which muscle turns your face toward the opposite side?", b:"sternocleidomastoid"},
+  {c:"Name it", f:"Which muscle lifts your shoulder blade when you shrug?", b:"trapezius"},
+  {c:"Name it", f:"The two ring-shaped muscles on the list", b:"orbicularis oculi (eye) · orbicularis oris (mouth)", h:"The formal word for a ring muscle like these is sphincter."},
+  {c:"Name it", f:"The two neck muscles on the list that move the head", b:"sternocleidomastoid · trapezius"},
+  // Big picture
+  {c:"Big picture", f:"All 10 muscles on Mrs. Kalec's \"Facial Muscles\" list", b:"masseter · frontalis · nasalis · orbicularis oculi · orbicularis oris · zygomaticus · buccinator · platysma · sternocleidomastoid · trapezius"},
+  {c:"Big picture", f:"The four things facial muscles are important for", b:"non-verbal communication (showing emotion) · social life in groups (trust, avoiding conflict) · eating and speaking · protective reflexes (closing the eyes fast)"},
+  {c:"Big picture", f:"Most muscles connect to bones. What do facial muscles mostly connect?", b:"bones to skin, so they pull on the skin to make expressions"},
+  {c:"Big picture", f:"What happens to a muscle's fibers when it contracts?", b:"they SHORTEN"},
+  {c:"Big picture", f:"Which muscle on the list is the chewing muscle?", b:"masseter"}
+];
+
+/* ---- Component ---- */
+/* Bump STORAGE_KEY (or change it per deck) so different decks don't share saved
+   progress. Progress persists per-browser via localStorage. */
+var STORAGE_KEY = "flashcards:hap-head-neck:v1";
+var cats = ["All"].concat(CARDS.map(function(c){return c.c;}).filter(function(v,i,a){return a.indexOf(v)===i;}));
+var filter="All", deck=[], pos=0, flipped=false, cardStatus={}, reviewOnly=false;
+var $=function(id){return document.getElementById(id);};
+
+function loadStatus(){ try{ var s=localStorage.getItem(STORAGE_KEY); if(s) cardStatus=JSON.parse(s)||{}; }catch(e){} }
+function saveStatus(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(cardStatus)); }catch(e){} }
+
+function baseIndices(){
+  var arr=[];
+  CARDS.forEach(function(c,i){ if(filter==="All"||c.c===filter){ if(!reviewOnly||cardStatus[i]==="review") arr.push(i); }});
+  return arr;
+}
+function buildGroups(){
+  var g=$("groups"); g.innerHTML="";
+  cats.forEach(function(cat){
+    var b=document.createElement("button");
+    b.className="gchip"+(cat===filter?" on":""); b.textContent=cat;
+    b.onclick=function(){ filter=cat; reviewOnly=false; rebuild(); };
+    g.appendChild(b);
+  });
+}
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+function rebuild(){ deck=baseIndices(); pos=0; flipped=false; buildGroups(); render(); }
+
+function tallies(){
+  var scope=baseIndicesAll(), g=0,r=0;
+  scope.forEach(function(i){ if(cardStatus[i]==="got")g++; else if(cardStatus[i]==="review")r++; });
+  $("tg").textContent="✓ "+g; $("tr").textContent="↺ "+r;
+}
+function baseIndicesAll(){ // ignores reviewOnly, for tallies within current filter
+  var arr=[]; CARDS.forEach(function(c,i){ if(filter==="All"||c.c===filter) arr.push(i); }); return arr;
+}
+
+function render(){
+  tallies();
+  if(deck.length===0){
+    $("play").hidden=true;
+    var d=$("done"); d.hidden=false;
+    d.innerHTML='<h2>'+(reviewOnly?"Nothing left to review — nice.":"No cards in this set.")+'</h2>'
+      +'<p class="note">'+(reviewOnly?"Every card here is marked ✓. Pick a group above or hit Restart.":"")+'</p>';
+    $("counter").textContent="0 / 0";
+    return;
+  }
+  $("done").hidden=true; $("play").hidden=false;
+  var i=deck[pos], card=CARDS[i];
+  $("counter").textContent=(pos+1)+" / "+deck.length;
+  $("cat").textContent=card.c;
+  $("side").textContent=flipped?"Answer":"Prompt";
+  $("face").className=flipped?"back-txt":"front-txt";
+  $("face").innerHTML=flipped ? (card.b + (card.h?'<span class="hint">'+card.h+'</span>':'')) : card.f;
+  $("tap").textContent=flipped?"tap to flip back":"tap to flip · or press Space";
+  $("prev").disabled=(pos===0); $("next").disabled=(pos===deck.length-1);
+}
+function flip(){ flipped=!flipped; render(); }
+function mark(s){
+  cardStatus[deck[pos]]=s; saveStatus();
+  if(reviewOnly && s==="got"){
+    // live-shrink the drill set: the just-cleared card leaves the pool now
+    deck=baseIndices();
+    if(pos>=deck.length) pos=Math.max(0,deck.length-1);
+    flipped=false; render(); return;
+  }
+  if(pos<deck.length-1){pos++;} flipped=false; render();
+}
+function move(d){ var n=pos+d; if(n>=0&&n<deck.length){pos=n;flipped=false;render();} }
+
+document.addEventListener("DOMContentLoaded",function(){
+  // (elements are static; wire directly)
+});
+$("card").onclick=flip;
+$("flip").onclick=flip;
+$("got").onclick=function(){mark("got");};
+$("rev").onclick=function(){mark("review");};
+$("prev").onclick=function(){move(-1);};
+$("next").onclick=function(){move(1);};
+$("shuffle").onclick=function(){shuffle(deck);pos=0;flipped=false;render();};
+$("restart").onclick=function(){cardStatus={};saveStatus();reviewOnly=false;rebuild();};
+$("drill").onclick=function(){reviewOnly=true;rebuild();};
+document.addEventListener("keydown",function(e){
+  if(e.code==="Space"){e.preventDefault();flip();}
+  else if(e.key==="ArrowRight"){move(1);}
+  else if(e.key==="ArrowLeft"){move(-1);}
+  else if(e.key==="g"||e.key==="G"){mark("got");}
+  else if(e.key==="r"||e.key==="R"){mark("review");}
+});
+loadStatus();
+rebuild();
+</script>
+
+<script>
+/* Guarded hub back-link (renders only with ?back=<classId>). */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
