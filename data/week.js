@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-04",
+  /* 2026-11-04 Wed after school: WH "Universal Museums Debate" (100 pts, Thu 11:59 PM); ask list adds the exit ticket/debate question */
   /* 2026-11-04 Wed midday: French sub-day work (Edpuzzle 100 pts tonight, PC vs Imparfait 10 pts today); Anatomy quiz 20 pts; Psych Cognition Study Materials posted; ask list adds the Cognition test date */
   /* 2026-11-03 Tue after school: English For Thursday (Staples, five developed responses); French extra credit Wed 5-7 PM; ask list refreshed */
   /* 2026-11-02 Mon after school: English For Tuesday (Chau, line of reasoning); Psych S&P study guide + Cognition reading (11/9); Anatomy muscle list; Body Muscles Quiz moved to Wed 11/11 (calendar re-read) */
@@ -126,6 +127,11 @@ window.STUDY_WEEK = {
       helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
+      day: "Thu", date: "2026-11-05",
+      subject: "world-history", subjectName: "World History",
+      what: "DUE 11:59 PM: \"Universal Museums Debate\" (100 pts, your Doc in Classroom). Your side is FOR universal museums. Finish the evidence for your side, the opposing arguments and the source check, using the PDFs in Classroom. Also do the \"Universal Museums Exit Ticket\" form: its prompt is on the board in class."
+    },
+    {
       day: "Fri", date: "2026-11-06",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "\"Lights, Camera, Contraction!\" gallery walk in class. The project (40 pts) is due in Classroom the night before: Thu 11/5, 11:59 PM."
@@ -166,6 +172,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
+    { q: "Universal Museums Debate: is there more debate in class, or was it today? What is the exit ticket prompt on the board?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
