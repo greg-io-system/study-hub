@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-04",
+  updated: "2026-11-05",
+  /* 2026-11-05 Thu after school: English For Friday (Haile "Going It Alone", developed response + reverse outline); ask list drops "today" from the debate question */
   /* 2026-11-04 Wed after school: WH "Universal Museums Debate" (100 pts, Thu 11:59 PM); ask list adds the exit ticket/debate question */
   /* 2026-11-04 Wed midday: French sub-day work (Edpuzzle 100 pts tonight, PC vs Imparfait 10 pts today); Anatomy quiz 20 pts; Psych Cognition Study Materials posted; ask list adds the Cognition test date */
   /* 2026-11-03 Tue after school: English For Thursday (Staples, five developed responses); French extra credit Wed 5-7 PM; ask list refreshed */
@@ -133,6 +134,13 @@ window.STUDY_WEEK = {
     },
     {
       day: "Fri", date: "2026-11-06",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read and annotate the first SIX paragraphs of Rahawa Haile, \"Going It Alone\" in 50 Essays (stop after \"don't emerge for hours\"), then watch the 2-minute video in Mr. Evans's email. REPLY to \"For Friday (11/6)\" with a developed response of more than one paragraph, no summary: what is each source's attitude toward its subject or audience, which is more effective, and what do you make of \"To him\"? Then annotate the rest of the essay with a reverse outline, using Question 2 on p. 210 (how is it structured, and why?). Bring 50 Essays.",
+      help: "Terms: reverse outline, developed response",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
+      day: "Fri", date: "2026-11-06",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "\"Lights, Camera, Contraction!\" gallery walk in class. The project (40 pts) is due in Classroom the night before: Thu 11/5, 11:59 PM."
     }
@@ -172,7 +180,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Universal Museums Debate: is there more debate in class, or was it today? What is the exit ticket prompt on the board?", subject: "world-history", subjectName: "World History" },
+    { q: "Universal Museums Debate: did the debate happen already, or is there more in class? What is the exit ticket prompt on the board?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
