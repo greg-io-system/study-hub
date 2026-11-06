@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-05",
+  updated: "2026-11-06",
+  /* 2026-11-06 Fri midday: French Weekly Engagement Reflection (12 pts, today); WH "The World in 820 Readings" + self assessment form; ask list swaps the past debate question for the 820 readings */
   /* 2026-11-05 Thu after school: English For Friday (Haile "Going It Alone", developed response + reverse outline); ask list drops "today" from the debate question */
   /* 2026-11-04 Wed after school: WH "Universal Museums Debate" (100 pts, Thu 11:59 PM); ask list adds the exit ticket/debate question */
   /* 2026-11-04 Wed midday: French sub-day work (Edpuzzle 100 pts tonight, PC vs Imparfait 10 pts today); Anatomy quiz 20 pts; Psych Cognition Study Materials posted; ask list adds the Cognition test date */
@@ -143,6 +144,16 @@ window.STUDY_WEEK = {
       day: "Fri", date: "2026-11-06",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "\"Lights, Camera, Contraction!\" gallery walk in class. The project (40 pts) is due in Classroom the night before: Thu 11/5, 11:59 PM."
+    },
+    {
+      day: "Fri", date: "2026-11-06",
+      subject: "ap-french", subjectName: "French",
+      what: "Fill out today: \"Weekly Engagement Reflection\" (12 pts, Google Form in Classroom)."
+    },
+    {
+      day: "Fri", date: "2026-11-06",
+      subject: "world-history", subjectName: "World History",
+      what: "New in Classroom, no due date posted: \"The World in 820 Readings\" (a Doc covering five regions of the world) and a \"Reflection/Self Assessment Form\" on your engagement in the previous unit."
     }
   ],
   nextLabel: "Nov 9 – Nov 13",
@@ -180,7 +191,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Universal Museums Debate: did the debate happen already, or is there more in class? What is the exit ticket prompt on the board?", subject: "world-history", subjectName: "World History" },
+    { q: "Mr. Angelopulos posted \"The World in 820 Readings\" and a self assessment form today. What are the readings for, and when is each one due?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
