@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-06",
+  updated: "2026-11-07",
+  /* 2026-11-07 Sat: window rolled to Nov 9-13 / Nov 16-20; English For Monday ("What is a city?" argument of definition); Anatomy exam moves from ahead into next week */
   /* 2026-11-06 Fri midday: French Weekly Engagement Reflection (12 pts, today); WH "The World in 820 Readings" + self assessment form; ask list swaps the past debate question for the 820 readings */
   /* 2026-11-05 Thu after school: English For Friday (Haile "Going It Alone", developed response + reverse outline); ask list drops "today" from the debate question */
   /* 2026-11-04 Wed after school: WH "Universal Museums Debate" (100 pts, Thu 11:59 PM); ask list adds the exit ticket/debate question */
@@ -35,148 +36,34 @@ window.STUDY_WEEK = {
   /* 2026-10-29 Thu after school: Psych "Depth Perception Scavenger Hunt" (15 pts, Fri); English For Friday "The Creativity Crisis" */
   /* 2026-10-28 Wed after school: WH "Religions Research" (100 pts, Fri 11:59 PM) + Blooket review link */
   /* 2026-10-28 Wed: WH Unit 2 study guide posted (test details); Anatomy Unit 4 Exam Review + Chicken Limb Dissection (Thu); French Halloween vocab to study */
-  label: "Nov 2 – Nov 6",
+  label: "Nov 9 – Nov 13",
   items: [
     {
-      day: "Mon", date: "2026-11-02",
+      day: "Mon", date: "2026-11-09",
       subject: "ap-english", subjectName: "AP English",
-      what: "Before class: think through the three points in Mr. Evans's email (were the Chicago River, Volkswagen, bridge-under-a-bridge and Taiwan trash solutions creative? who decides what counts as creative?). Review your definitions document (formal, operational, by example). Then, in a GOOGLE DOC, write a series of developed paragraphs on the 2014 Q3 prompt: argue FOR or AGAINST creating a class in creativity. Use evidence from your library (not personal experience), define \"creativity\" in your position, and use the Rogerian writing stems. 45-50 minutes max. REPLY to \"For Monday (11/2)\" with the link to your Doc.",
-      help: "Terms: the three kinds of definition, Rogerian",
+      what: "Before class, in its OWN Google Doc: an argument of definition answering \"What is a city?\" Re-watch the \"What is a City?\" video, go back to your notes, and use the Everything's an Argument definitions document. Not a formal, then an operational, then an example definition: ONE layered definition where your F, O and E build on and change each other, drawing on the last two weeks of sources (and creativity). Models you can borrow: Staples's personal experience, Chau, Bronson and Merryman, Gold, \"Can a trail be a city?\" A metaphor is not a definition, but it can be your way in. REPLY to \"For Monday (11/9)\" with your Doc. From now on, context, specific evidence and explanation count in the gradebook.",
+      help: "Terms: the three kinds of definition, extended metaphor",
       helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
-      day: "Mon", date: "2026-11-02",
+      day: "Mon", date: "2026-11-09",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "DUE: AMSCO 2.4 and 2.5 (pp. 292-313) and workbook pp. 47-48."
+      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52. \"Cognition Study Materials\" in Classroom has the study guide, the lecture slides and two sets of practice questions."
     },
-    {
-      day: "Mon", date: "2026-11-02",
-      subject: "ap-french", subjectName: "French",
-      what: "DUE today: \"Rejoindre les 2 Padlets\" (5 pts). Join BOTH Padlets linked in Classroom (the Golden / Jules Verne collaboration, one in English, one in French) and introduce yourself in both."
-    },
-    {
-      day: "Mon", date: "2026-11-02",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "\"Lights, Camera, Contraction!\" work day: read the instructions, make your visuals and describe a muscle contraction in your own voice. Gallery walk is Friday."
-    },
-    {
-      day: "Mon", date: "2026-11-02",
-      subject: "world-history", subjectName: "World History",
-      what: "Test tomorrow: get your handwritten notes ready (Mr. Angelopulos may read or collect them; your own handwriting only, no sharing notes with another class) and read OpenStax 8.2 and 9.2.",
-      help: "Make your one-page notes", helpFile: "lessons/unit-2-one-page-notes.html"
-    },
-    {
-      day: "Mon", date: "2026-11-02",
-      subject: "world-history", subjectName: "World History",
-      what: "Test tomorrow, if you have time after your notes sheet: check yourself on the Unit 2 review (Persia, Greece, China, Rome).",
-      help: "Unit 2 exam review",
-      helpFile: "lessons/unit-2-exam-review.html"
-    },
-    {
-      day: "Mon", date: "2026-11-02",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "Test tomorrow: review Sensation & Perception. Mrs. Aschwanden added a \"Study Guide Sensation/Perception\" to the S&P Study Material in Classroom today: go down its term list, and test yourself with practice questions (her advice) rather than just re-reading.",
-      help: "Sensation & Perception",
-      helpFile: "lessons/sensation-perception.html"
-    },
-    {
-      day: "Tue", date: "2026-11-03",
-      subject: "world-history", subjectName: "World History",
-      what: "UNIT 2 TEST: 35 multiple choice (about 12 are synthesis questions). Only notes in your own handwriting, and you hand them in. Bring a district Chromebook and be on time: you have to finish before you leave class. Read OpenStax 8.2 (Americas) and 9.2 (Farming and the Bantu Migrations) first: there are test questions on them. Scope: the Unit 2 Exam Study Guide in Classroom."
-    },
-    {
-      day: "Tue", date: "2026-11-03",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "SENSATION & PERCEPTION TEST. Covers the AMSCO readings (pp. 263-288 and 2.4-2.5, pp. 292-313) and the S&P study material in Classroom, including the new study guide."
-    },
-    {
-      day: "Tue", date: "2026-11-03",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class: review and re-take your Line of Reasoning notes (Mr. Evans's linked doc; make your own copy). Read and annotate Danny Chau, \"The Burning Desire for Hot Chicken\" in 50 Essays (it's not really about chicken: what is it about?). For each paragraph, or a run of up to three, mark its main idea and purpose and how it connects to the paragraphs around it, plus claim, purpose, audience(s) and appeals. REPLY to \"For Tuesday (11/3)\" with a photo of your notes linking paragraphs 61, 62 and 63, plus one more run of your choice. Bring 50 Essays to class.",
-      help: "Terms: line of reasoning",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Tue", date: "2026-11-03",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 14 due; it gets graded in class. More \"Lights, Camera, Contraction!\" work time."
-    },
-    {
-      day: "Wed", date: "2026-11-04",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "HEAD & NECK MUSCLE QUIZ (20 pts, Google Form in Classroom). Know the 10 \"Facial Muscles\" on Mrs. Kalec's \"Naming Muscles List\" (posted Monday in Classroom). To study, use her \"Great Muscle Resource\": Innerbody's interactive muscle guide (link in Classroom). Then Notes: Disorders; Lab 15 (due Tue 11/10)."
-    },
-    {
-      day: "Wed", date: "2026-11-04",
-      subject: "ap-french", subjectName: "French",
-      what: "Mr. Keirns is out today. His plan: do the 3 Edpuzzles, do the exercise below, then independent reading in French. DUE tonight, 11:59 PM: \"Edpuzzle - PASSE COMPOSE OU IMPARFAIT\" (100 pts)."
-    },
-    {
-      day: "Wed", date: "2026-11-04",
-      subject: "ap-french", subjectName: "French",
-      what: "DUE today: \"PC vs. Imparfait exercise practice\" (10 pts, Google Doc in Classroom). Make your own copy if you need to and add your version."
-    },
-    {
-      day: "Wed", date: "2026-11-04",
-      subject: "ap-french", subjectName: "French",
-      what: "Optional extra credit: help at 8th-grade parent night, 5-7 PM, for as much of it as you can, promoting the French program. Meet at Mr. Keirns's classroom at 5."
-    },
-    {
-      day: "Thu", date: "2026-11-05",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class: read the Questions on Rhetoric and Style in Mr. Evans's email FIRST, then read and annotate Brent Staples, \"Just Walk on By: Black Men and Public Space\" in 50 Essays to those questions. REPLY to \"For Thursday (11/5)\" with developed responses to all five, with evidence and explanation in your own voice, not mere answers: the opening paragraph's effect on his audience; why so many personal experiences; the \"not a hallucination\" line in paragraph 5; the final cowbell sentence and \"hunter and hunted\"; the ironies in the essay.",
-      help: "Terms: line of reasoning, appeals",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Thu", date: "2026-11-05",
-      subject: "world-history", subjectName: "World History",
-      what: "DUE 11:59 PM: \"Universal Museums Debate\" (100 pts, your Doc in Classroom). Your side is FOR universal museums. Finish the evidence for your side, the opposing arguments and the source check, using the PDFs in Classroom. Also do the \"Universal Museums Exit Ticket\" form: its prompt is on the board in class."
-    },
-    {
-      day: "Fri", date: "2026-11-06",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class: read and annotate the first SIX paragraphs of Rahawa Haile, \"Going It Alone\" in 50 Essays (stop after \"don't emerge for hours\"), then watch the 2-minute video in Mr. Evans's email. REPLY to \"For Friday (11/6)\" with a developed response of more than one paragraph, no summary: what is each source's attitude toward its subject or audience, which is more effective, and what do you make of \"To him\"? Then annotate the rest of the essay with a reverse outline, using Question 2 on p. 210 (how is it structured, and why?). Bring 50 Essays.",
-      help: "Terms: reverse outline, developed response",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Fri", date: "2026-11-06",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "\"Lights, Camera, Contraction!\" gallery walk in class. The project (40 pts) is due in Classroom the night before: Thu 11/5, 11:59 PM."
-    },
-    {
-      day: "Fri", date: "2026-11-06",
-      subject: "ap-french", subjectName: "French",
-      what: "Fill out today: \"Weekly Engagement Reflection\" (12 pts, Google Form in Classroom)."
-    },
-    {
-      day: "Fri", date: "2026-11-06",
-      subject: "world-history", subjectName: "World History",
-      what: "New in Classroom, no due date posted: \"The World in 820 Readings\" (a Doc covering five regions of the world) and a \"Reflection/Self Assessment Form\" on your engagement in the previous unit."
-    }
-  ],
-  nextLabel: "Nov 9 – Nov 13",
-  next: [
     {
       day: "Mon", date: "2026-11-09",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Lab 16 (due Fri 11/13)."
     },
     {
-      day: "Mon", date: "2026-11-09",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52. New in Classroom: \"Cognition Study Materials\" has the study guide, the lecture slides and two sets of practice questions."
-    },
-    {
       day: "Tue", date: "2026-11-10",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 15 due. Lab 13 (due Mon 11/16)."
+      what: "Lab 15 due; it gets graded in class. Lab 13 (due Mon 11/16)."
     },
     {
       day: "Wed", date: "2026-11-11",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "BODY MUSCLES QUIZ: the 15 \"Body Muscles\" on the Naming Muscles List. Ambient Temperature Lab (due Tue 11/17)."
+      what: "BODY MUSCLES QUIZ: the 15 \"Body Muscles\" on Mrs. Kalec's Naming Muscles List. To study, use her \"Great Muscle Resource\" (Innerbody's interactive muscle guide, link in Classroom). Then the Ambient Temperature Lab (due Tue 11/17)."
     },
     {
       day: "Fri", date: "2026-11-13",
@@ -184,14 +71,26 @@ window.STUDY_WEEK = {
       what: "Lab 16 due; graded in class, then review for Monday's Muscular System Exam."
     }
   ],
+  nextLabel: "Nov 16 – Nov 20",
+  next: [
+    {
+      day: "Mon", date: "2026-11-16",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "MUSCULAR SYSTEM EXAM: multiple choice plus 2 of the 6 FRQs on the Unit 4 Exam Review, picked at random (prepare all six). No labeling. Lab 13 due."
+    },
+    {
+      day: "Tue", date: "2026-11-17",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Nervous System starts. Ambient Temperature Lab due."
+    }
+  ],
   ahead: [
-    { date: "2026-11-16", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Muscular System EXAM Mon 11/16 (MC + 2 of 6 FRQs, no labeling); Lab 13 due" },
     { date: "2026-11-23", subjectName: "School", what: "Thanksgiving Break: no school Nov 23–27" },
     { date: "~2026-12-16", subjectName: "School", what: "Semester finals week (Dec 14–18); winter break starts Dec 21" },
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Mr. Angelopulos posted \"The World in 820 Readings\" and a self assessment form today. What are the readings for, and when is each one due?", subject: "world-history", subjectName: "World History" },
+    { q: "Mr. Angelopulos posted \"The World in 820 Readings\" and a self assessment form on Friday. What are the readings for, and when is each one due?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
     { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
