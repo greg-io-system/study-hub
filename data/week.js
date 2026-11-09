@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-08",
+  updated: "2026-11-09",
+  /* 2026-11-09 Mon after school: English For Tuesday ("What is money?" three F/O/E charts); Psych 2.7-2.8 quiz; WH Commerce & Culture notes; Anatomy Exam Study Helper app added to the exam row */
   /* 2026-11-08 Sun: Anatomy "Body Muscle Quizzer" study app (posted Sat) added to Wednesday's quiz row */
   /* 2026-11-07 Sat: window rolled to Nov 9-13 / Nov 16-20; English For Monday ("What is a city?" argument of definition); Anatomy exam moves from ahead into next week */
   /* 2026-11-06 Fri midday: French Weekly Engagement Reflection (12 pts, today); WH "The World in 820 Readings" + self assessment form; ask list swaps the past debate question for the 820 readings */
@@ -49,7 +50,19 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-09",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52. \"Cognition Study Materials\" in Classroom has the study guide, the lecture slides and two sets of practice questions."
+      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52, plus the \"2.7 and 2.8 Quiz\" (7 pts, Google Form, due today). \"Cognition Study Materials\" in Classroom has the study guide, the lecture slides and two sets of practice questions."
+    },
+    {
+      day: "Mon", date: "2026-11-09",
+      subject: "world-history", subjectName: "World History",
+      what: "New topic: Commerce & Culture in the Third Wave (600-1500): the Silk Roads, the Sea Roads of the Indian Ocean, the Sand Roads across the Sahara and trade in the Americas. Mr. Angelopulos's \"Commerce and Culture Notes\" slides are in Classroom."
+    },
+    {
+      day: "Tue", date: "2026-11-10",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: three F/O/E charts on \"What is money?\" (1) Your own first definition, formal, operational and by example, with an explanation for each. (2) and (3) Listen to ONLY the Prologue and \"The Lie That Saved Brazil\" from \"The Invention of Money\" (link in the email) and sort specific details from each story into F, O and E. Show where the stories' definitions collide or split, and go back and change chart 1 as your view shifts. REPLY to \"For Tuesday (11/10)\" with all three charts. Writing tip from Monday: beware the \"Mega-graph\" (one giant paragraph).",
+      help: "Terms: the three kinds of definition",
+      helpFile: "lessons/ap-lang-terms-library.html"
     },
     {
       day: "Mon", date: "2026-11-09",
@@ -77,7 +90,7 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-16",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "MUSCULAR SYSTEM EXAM: multiple choice plus 2 of the 6 FRQs on the Unit 4 Exam Review, picked at random (prepare all six). No labeling. Lab 13 due."
+      what: "MUSCULAR SYSTEM EXAM: multiple choice plus 2 of the 6 FRQs on the Unit 4 Exam Review, picked at random (prepare all six). No labeling. Lab 13 due. To study, Mrs. Kalec's \"Exam Study Helper\" app (posted Monday, link in Classroom) has a practice quiz, all six FRQs with her scoring points, flashcards and a tissue-types matrix. Her FRQ rule: \"The more details, the better!\""
     },
     {
       day: "Tue", date: "2026-11-17",
