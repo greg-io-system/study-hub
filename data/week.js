@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-09",
+  updated: "2026-11-10",
+  /* 2026-11-10 Tue after school: Algebra Unit 3 test Mon 11/16 (postponed) + review sheet; French Wayground practice (Wed 11 AM); English For Thursday ("What is time?" + Zadeh); Psych AMSCO pp. 361-381 (Mon 11/16); ask list drops the Algebra question */
   /* 2026-11-09 Mon after school: English For Tuesday ("What is money?" three F/O/E charts); Psych 2.7-2.8 quiz; WH Commerce & Culture notes; Anatomy Exam Study Helper app added to the exam row */
   /* 2026-11-08 Sun: Anatomy "Body Muscle Quizzer" study app (posted Sat) added to Wednesday's quiz row */
   /* 2026-11-07 Sat: window rolled to Nov 9-13 / Nov 16-20; English For Monday ("What is a city?" argument of definition); Anatomy exam moves from ahead into next week */
@@ -80,6 +81,18 @@ window.STUDY_WEEK = {
       what: "BODY MUSCLES QUIZ: the 15 \"Body Muscles\" on Mrs. Kalec's Naming Muscles List. To study, use her \"Body Muscle Quizzer\" app (posted Saturday, link in Classroom: \"Use the app to help you study for the quiz!\") and her \"Great Muscle Resource\" (Innerbody's interactive muscle guide, link in Classroom). Then the Ambient Temperature Lab (due Tue 11/17)."
     },
     {
+      day: "Wed", date: "2026-11-11",
+      subject: "ap-french", subjectName: "French",
+      what: "DUE 11:00 AM: \"Passé composé vs. Imparfait practice\" (100 pts), a Wayground (formerly Quizizz) game. Start it from the link in Classroom."
+    },
+    {
+      day: "Thu", date: "2026-11-12",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class (block day): a new F/O/E chart, \"What is time?\", with an explanation for each section. Start with notes on time as currency (we SPEND time; what is the exchange rate? can time inflate? is it valued differently in different places?) and on two quotes: Annie Dillard, \"How we spend our days is how we spend our life,\" and Jenny Odell, \"time is money\" doesn't work in reverse. Then read and annotate Joe Zadeh, \"The Tyranny of Time\" (50 Essays): mark F, O and E, and follow the cause (the invention of clock time) to its effects, their implications, and what YOU think. Update your chart, then REPLY to \"For Thursday (11/12)\" with your F/O/E notes on time. Tuesday's feedback: direct evidence plus explanation is 4 of the 6 points.",
+      help: "Terms: the three kinds of definition",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
       day: "Fri", date: "2026-11-13",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Lab 16 due; graded in class, then review for Monday's Muscular System Exam."
@@ -93,6 +106,16 @@ window.STUDY_WEEK = {
       what: "MUSCULAR SYSTEM EXAM: multiple choice plus 2 of the 6 FRQs on the Unit 4 Exam Review, picked at random (prepare all six). No labeling. Lab 13 due. To study, Mrs. Kalec's \"Exam Study Helper\" app (posted Monday, link in Classroom) has a practice quiz, all six FRQs with her scoring points, flashcards and a tissue-types matrix. Her FRQ rule: \"The more details, the better!\""
     },
     {
+      day: "Mon", date: "2026-11-16",
+      subject: "algebra-2", subjectName: "Algebra 2",
+      what: "UNIT 3 TEST (moved to today; 100 pts). Mrs. Howard's \"A2: Unit 3 Review\" in Classroom is the study sheet: solving by factoring, completing the square and the quadratic formula; graphing a parabola and its key features; standard, intercept and vertex forms; projectile word problems; complex numbers and powers of i; square roots of negatives. Also on the item: the \"Converting Forms of Quadratics\" worksheet and five practice PDFs."
+    },
+    {
+      day: "Mon", date: "2026-11-16",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "DUE: \"AMSCo Pages 361-381\" (Cognition), with the companion workbook in Classroom."
+    },
+    {
       day: "Tue", date: "2026-11-17",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Nervous System starts. Ambient Temperature Lab due."
@@ -104,9 +127,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Mr. Angelopulos posted \"The World in 820 Readings\" and a self assessment form on Friday. What are the readings for, and when is each one due?", subject: "world-history", subjectName: "World History" },
+    { q: "Mr. Angelopulos updated \"The World in 820 Readings\" on Tuesday. What are the readings for, and is anything due on them? When?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
-    { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" },
-    { q: "Algebra has posted nothing since the Quadratic Review WS (10/22). Is a quadratics quiz or test coming? When?", subject: "algebra-2", subjectName: "Algebra 2" }
-  ]
+    { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" }  ]
 };
