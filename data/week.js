@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-10",
+  updated: "2026-11-11",
+  /* 2026-11-11 Wed after school: Anatomy quiz (22 pts) + Ambient Temperature Lab (30 pts, Classroom due today vs calendar 11/17); WH State of the World 820 question sheet + Silk Roads exit ticket; ask list refreshed */
   /* 2026-11-10 Tue evening: Body Muscle Flashcards help chip added to Wednesday's Anatomy quiz row */
   /* 2026-11-10 Tue after school: Algebra Unit 3 test Mon 11/16 (postponed) + review sheet; French Wayground practice (Wed 11 AM); English For Thursday ("What is time?" + Zadeh); Psych AMSCO pp. 361-381 (Mon 11/16); ask list drops the Algebra question */
   /* 2026-11-09 Mon after school: English For Tuesday ("What is money?" three F/O/E charts); Psych 2.7-2.8 quiz; WH Commerce & Culture notes; Anatomy Exam Study Helper app added to the exam row */
@@ -79,7 +80,7 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-11-11",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "BODY MUSCLES QUIZ: the 15 \"Body Muscles\" on Mrs. Kalec's Naming Muscles List. To study, use her \"Body Muscle Quizzer\" app (posted Saturday, link in Classroom: \"Use the app to help you study for the quiz!\") and her \"Great Muscle Resource\" (Innerbody's interactive muscle guide, link in Classroom). Then the Ambient Temperature Lab (due Tue 11/17).",
+      what: "BODY MUSCLES QUIZ: the 15 \"Body Muscles\" on Mrs. Kalec's Naming Muscles List. To study, use her \"Body Muscle Quizzer\" app (posted Saturday, link in Classroom: \"Use the app to help you study for the quiz!\") and her \"Great Muscle Resource\" (Innerbody's interactive muscle guide, link in Classroom). The quiz is a 22-point Google Form in Classroom. Also posted today: the \"Ambient Temperature Lab\" (30 pts): the fist-clench test at room temperature, after warm water and after ice water, then five analysis questions. Classroom says due today; Mrs. Kalec's Unit 4 Calendar says Tue 11/17.",
       help: "Flashcards: the 15 body muscles",
       helpFile: "lessons/hap-body-muscle-flashcards.html"
     },
@@ -87,6 +88,11 @@ window.STUDY_WEEK = {
       day: "Wed", date: "2026-11-11",
       subject: "ap-french", subjectName: "French",
       what: "DUE 11:00 AM: \"Passé composé vs. Imparfait practice\" (100 pts), a Wayground (formerly Quizizz) game. Start it from the link in Classroom."
+    },
+    {
+      day: "Wed", date: "2026-11-11",
+      subject: "world-history", subjectName: "World History",
+      what: "\"Silk Roads Simulation Exit Ticket\" (Google Form in Classroom): pick 2 goods traded on the Silk Road that shaped modern society most and say why, then compare how goods were exchanged then and now. Also new: \"The World in 820 Readings\" now has a question sheet, \"State of the World 820\": for each of the 5 regions, the main religion, the government, trade (goods and ideas), and a labeled map. No due date posted yet."
     },
     {
       day: "Thu", date: "2026-11-12",
@@ -121,7 +127,7 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-11-17",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Nervous System starts. Ambient Temperature Lab due."
+      what: "Nervous System starts. Ambient Temperature Lab due (Unit 4 Calendar date; Classroom shows 11/11)."
     }
   ],
   ahead: [
@@ -130,7 +136,8 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Mr. Angelopulos updated \"The World in 820 Readings\" on Tuesday. What are the readings for, and is anything due on them? When?", subject: "world-history", subjectName: "World History" },
+    { q: "The \"State of the World 820\" question sheet (5 regions) is now in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
+    { q: "The Ambient Temperature Lab says due today in Classroom, but the Unit 4 Calendar says Tue 11/17. Which date did Mrs. Kalec give?", subject: "human-anatomy", subjectName: "Human Anatomy" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" }  ]
 };
