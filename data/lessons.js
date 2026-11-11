@@ -268,6 +268,25 @@ window.STUDY_HUB = {
       blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
       weeks: [
         {
+          range: "Nov 9 – Nov 13",
+          theme: "Unit 4 · Muscular System",
+          lessons: [
+            {
+              title: "Body Muscle Flashcards",
+              topic: "The 15 muscles on Mrs. Kalec's Body Muscles list: where each one is and what it does",
+              file: "lessons/hap-body-muscle-flashcards.html",
+              date: "2026-11-10",
+              summary: "39 cards for the Body Muscles Quiz on Wed 11/11. Where each muscle is and its job, name-it drills, muscles by body region, and the big picture. Mark the ones you miss and drill just those.",
+              tags: ["quiz prep", "flashcards", "muscles"],
+              materials: [
+                { kind: "practice", label: "Flashcards", file: "lessons/hap-body-muscle-flashcards.html" },
+                { kind: "link", label: "Mrs. Kalec's Naming Muscles List", url: "https://docs.google.com/document/d/1RBU_UQp_RYoNCC5Fbmi1oCjJGLQj3ATdAJftzk14fx0/" },
+                { kind: "link", label: "Great Muscle Resource (Innerbody)", url: "https://www.innerbody.com/image/musfov.html" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Nov 2 – Nov 6",
           theme: "Unit 4 · Muscular System",
           lessons: [
