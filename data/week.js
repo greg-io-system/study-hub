@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-11",
+  updated: "2026-11-12",
+  /* 2026-11-12 Thu after school: English For Friday (Gilb "Pride", argument of definition of "Time"); French Wayground practice due date moved to Thu 11/19 2:30 PM; ask list adds the English definitional essay */
   /* 2026-11-11 Wed after school: Anatomy quiz (22 pts) + Ambient Temperature Lab (30 pts, Classroom due today vs calendar 11/17); WH State of the World 820 question sheet + Silk Roads exit ticket; ask list refreshed */
   /* 2026-11-10 Tue evening: Body Muscle Flashcards help chip added to Wednesday's Anatomy quiz row */
   /* 2026-11-10 Tue after school: Algebra Unit 3 test Mon 11/16 (postponed) + review sheet; French Wayground practice (Wed 11 AM); English For Thursday ("What is time?" + Zadeh); Psych AMSCO pp. 361-381 (Mon 11/16); ask list drops the Algebra question */
@@ -87,7 +88,7 @@ window.STUDY_WEEK = {
     {
       day: "Wed", date: "2026-11-11",
       subject: "ap-french", subjectName: "French",
-      what: "DUE 11:00 AM: \"Passé composé vs. Imparfait practice\" (100 pts), a Wayground (formerly Quizizz) game. Start it from the link in Classroom."
+      what: "\"Passé composé vs. Imparfait practice\" (100 pts), a Wayground (formerly Quizizz) game. Start it from the link in Classroom. Its due date has moved: Classroom now says Thu Nov 19, 2:30 PM."
     },
     {
       day: "Wed", date: "2026-11-11",
@@ -98,6 +99,13 @@ window.STUDY_WEEK = {
       day: "Thu", date: "2026-11-12",
       subject: "ap-english", subjectName: "AP English",
       what: "Before class (block day): a new F/O/E chart, \"What is time?\", with an explanation for each section. Start with notes on time as currency (we SPEND time; what is the exchange rate? can time inflate? is it valued differently in different places?) and on two quotes: Annie Dillard, \"How we spend our days is how we spend our life,\" and Jenny Odell, \"time is money\" doesn't work in reverse. Then read and annotate Joe Zadeh, \"The Tyranny of Time\" (50 Essays): mark F, O and E, and follow the cause (the invention of clock time) to its effects, their implications, and what YOU think. Update your chart, then REPLY to \"For Thursday (11/12)\" with your F/O/E notes on time. Tuesday's feedback: direct evidence plus explanation is 4 of the 6 points.",
+      help: "Terms: the three kinds of definition",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
+      day: "Fri", date: "2026-11-13",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: (1) Read, then re-read, Dagoberto Gilb's \"Pride\" (linked in the email). It is an argument of definition: Gilb defines pride through a series of stories that build and then circle back. (2) Write your own argument of definition of \"Time\" in Gilb's style, about 1/2 to 3/4 of a page single spaced (longer if you find some exigence). Make the series of stories YOUR stories: it is your definition. Submit it before class. Thursday's point: an answered question gets \"nice to meet you\"; a developed response shows HOW you think.",
       help: "Terms: the three kinds of definition",
       helpFile: "lessons/ap-lang-terms-library.html"
     },
@@ -128,6 +136,11 @@ window.STUDY_WEEK = {
       day: "Tue", date: "2026-11-17",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Nervous System starts. Ambient Temperature Lab due (Unit 4 Calendar date; Classroom shows 11/11)."
+    },
+    {
+      day: "Thu", date: "2026-11-19",
+      subject: "ap-french", subjectName: "French",
+      what: "DUE 2:30 PM: \"Passé composé vs. Imparfait practice\" (100 pts), the Wayground game in Classroom (moved from Wed 11/11)."
     }
   ],
   ahead: [
@@ -136,6 +149,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
+    { q: "Mr. Evans says a longer argument of definition on a single term is coming. Has he said when it is due, or which term?", subject: "ap-english", subjectName: "AP English" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is now in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
     { q: "The Ambient Temperature Lab says due today in Classroom, but the Unit 4 Calendar says Tue 11/17. Which date did Mrs. Kalec give?", subject: "human-anatomy", subjectName: "Human Anatomy" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
