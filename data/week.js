@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-12",
+  updated: "2026-11-13",
+  /* 2026-11-13 Fri after school: English For Monday (Sontag on beauty) + the Fri 11/20 definition essay; Psych memory items (Loftus TED, Memory Types); French Padlet + weekly form; WH Trade Routes compare/contrast; Anatomy late-work-before-Monday; ask list refreshed */
   /* 2026-11-12 Thu after school: English For Friday (Gilb "Pride", argument of definition of "Time"); French Wayground practice due date moved to Thu 11/19 2:30 PM; ask list adds the English definitional essay */
   /* 2026-11-11 Wed after school: Anatomy quiz (22 pts) + Ambient Temperature Lab (30 pts, Classroom due today vs calendar 11/17); WH State of the World 820 question sheet + Silk Roads exit ticket; ask list refreshed */
   /* 2026-11-10 Tue evening: Body Muscle Flashcards help chip added to Wednesday's Anatomy quiz row */
@@ -112,11 +113,33 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-11-13",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 16 due; graded in class, then review for Monday's Muscular System Exam."
+      what: "Lab 16 due; graded in class, then review for Monday's Muscular System Exam. Mrs. Kalec's reminder today: any late work has to be turned in BEFORE Monday to get credit."
+    },
+    {
+      day: "Fri", date: "2026-11-13",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "New memory work (Cognition): \"How Reliable is your Memory Ted Talk\" (10 pts, due today): watch Elizabeth Loftus's 17-minute TED talk (link in Classroom) and see Mrs. Aschwanden for the worksheet. Also posted today: \"Understanding Memory Types\" (10 pts)."
+    },
+    {
+      day: "Fri", date: "2026-11-13",
+      subject: "ap-french", subjectName: "French",
+      what: "Due today: \"Padlet - Souvenirs d'enfance / croyances\" (5 pts): reply to Mr. Keirns's questions in the Padlet of that name. And this week's \"Weekly Engagement Reflection\" form (12 pts)."
+    },
+    {
+      day: "Fri", date: "2026-11-13",
+      subject: "world-history", subjectName: "World History",
+      what: "\"Trade Routes Compare and Contrast\" (in Classroom): choose ONE of the 8 groups on the Guided Questions sheet and answer its 3 questions in complete sentences, using the three readings attached: the Silk Road, Indian Ocean Trade Routes and Trans-Saharan Trade Routes. No due date posted yet."
     }
   ],
   nextLabel: "Nov 16 – Nov 20",
   next: [
+    {
+      day: "Mon", date: "2026-11-16",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read Susan Sontag's \"A Woman's Beauty--A Put Down or Power Source\" (1975, linked in the email) through two lenses: (1) her rhetorical situation, found IN the text; (2) her argument of definition: her formal definition, the conditions it holds under (operational), and the examples linking her O to her F. Then write a SERIES of paragraphs that enter a conversation with her about beauty. Not \"I agree / I disagree\", not a summary: since 1975, has our definition of beauty changed (has it?), and where does yours collide with or differ from hers? Let your own exigence, audience, purpose and F/O/E show through the writing. Use evidence plus explanation and the precis sentences. REPLY to \"For Monday (11/16)\" before class.",
+      help: "Terms: the three kinds of definition, kairos and chronos",
+      helpFile: "lessons/ap-lang-terms-library.html"
+    },
     {
       day: "Mon", date: "2026-11-16",
       subject: "human-anatomy", subjectName: "Human Anatomy",
@@ -141,6 +164,13 @@ window.STUDY_WEEK = {
       day: "Thu", date: "2026-11-19",
       subject: "ap-french", subjectName: "French",
       what: "DUE 2:30 PM: \"Passé composé vs. Imparfait practice\" (100 pts), the Wayground game in Classroom (moved from Wed 11/11)."
+    },
+    {
+      day: "Fri", date: "2026-11-20",
+      subject: "ap-english", subjectName: "AP English",
+      what: "DUE BEFORE CLASS: the topical writing \"Define ___\", your own argument-of-definition ESSAY. Pick ONE term you know well: fun, risk, wealth, pleasure, intelligence, athletic, work, fear or guilt. Your position is your F; your O's are the conditions where your F holds (and where it doesn't); your E's are examples of your F under those O's. Mr. Evans's challenge: use a trap door, so the essay slowly reveals rather than merely defines. Models: Chau, Pitts Jr., Staples, Haile, \"What is a City\", Zadeh, Gold, Bronson and Merryman.",
+      help: "Terms: the three kinds of definition, trap door",
+      helpFile: "lessons/ap-lang-terms-library.html"
     }
   ],
   ahead: [
@@ -149,9 +179,9 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Mr. Evans says a longer argument of definition on a single term is coming. Has he said when it is due, or which term?", subject: "ap-english", subjectName: "AP English" },
-    { q: "The \"State of the World 820\" question sheet (5 regions) is now in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
-    { q: "The Ambient Temperature Lab says due today in Classroom, but the Unit 4 Calendar says Tue 11/17. Which date did Mrs. Kalec give?", subject: "human-anatomy", subjectName: "Human Anatomy" },
+    { q: "For the Fri 11/20 \"Define ___\" essay, which term are you thinking of, and has Mr. Evans said how to hand it in (reply or a Doc)?", subject: "ap-english", subjectName: "AP English" },
+    { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
+    { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" }  ]
 };
