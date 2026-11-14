@@ -294,7 +294,7 @@ window.STUDY_HUB = {
               topic: "All six free-response questions on Mrs. Kalec's Unit 4 Exam Review, plus every multiple-choice topic on it",
               file: "lessons/hap-unit-4-muscular-exam-prep.html",
               date: "2026-11-14",
-              summary: "For the Muscular System Exam on Mon 11/16: 2 of the 6 FRQs are picked at random, so all six are here, each with a checklist of what a full answer includes. Tap-in-order drills for the contraction sequence, a muscle-types table, the four disorders side by side, rigor mortis, and a 42-question practice quiz. Built only from Mrs. Kalec's slides, exam review and Exam Study Helper app.",
+              summary: "For the Muscular System Exam on Mon 11/16: 2 of the 6 FRQs are picked at random, so all six are here, each with a checklist of what a full answer includes. Tap-in-order drills for the contraction sequence, a muscle-types table, the four disorders side by side, rigor mortis, and a 46-question practice quiz. Built only from Mrs. Kalec's slides, exam review and Exam Study Helper app.",
               tags: ["exam prep", "FRQ", "practice quiz", "interactive"],
               materials: [
                 { kind: "lesson", label: "FRQs + practice quiz", file: "lessons/hap-unit-4-muscular-exam-prep.html" },
