@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-13",
+  updated: "2026-11-14",
+  /* 2026-11-14 Sat: nothing new in any source; window rolled to Nov 16-20 / Nov 23-27 (Thanksgiving Break moves from ahead into next); ask list unchanged (no answers) */
   /* 2026-11-13 Fri after school: English For Monday (Sontag on beauty) + the Fri 11/20 definition essay; Psych memory items (Loftus TED, Memory Types); French Padlet + weekly form; WH Trade Routes compare/contrast; Anatomy late-work-before-Monday; ask list refreshed */
   /* 2026-11-12 Thu after school: English For Friday (Gilb "Pride", argument of definition of "Time"); French Wayground practice due date moved to Thu 11/19 2:30 PM; ask list adds the English definitional essay */
   /* 2026-11-11 Wed after school: Anatomy quiz (22 pts) + Ambient Temperature Lab (30 pts, Classroom due today vs calendar 11/17); WH State of the World 820 question sheet + Silk Roads exit ticket; ask list refreshed */
@@ -43,96 +44,8 @@ window.STUDY_WEEK = {
   /* 2026-10-29 Thu after school: Psych "Depth Perception Scavenger Hunt" (15 pts, Fri); English For Friday "The Creativity Crisis" */
   /* 2026-10-28 Wed after school: WH "Religions Research" (100 pts, Fri 11:59 PM) + Blooket review link */
   /* 2026-10-28 Wed: WH Unit 2 study guide posted (test details); Anatomy Unit 4 Exam Review + Chicken Limb Dissection (Thu); French Halloween vocab to study */
-  label: "Nov 9 – Nov 13",
+  label: "Nov 16 – Nov 20",
   items: [
-    {
-      day: "Mon", date: "2026-11-09",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class, in its OWN Google Doc: an argument of definition answering \"What is a city?\" Re-watch the \"What is a City?\" video, go back to your notes, and use the Everything's an Argument definitions document. Not a formal, then an operational, then an example definition: ONE layered definition where your F, O and E build on and change each other, drawing on the last two weeks of sources (and creativity). Models you can borrow: Staples's personal experience, Chau, Bronson and Merryman, Gold, \"Can a trail be a city?\" A metaphor is not a definition, but it can be your way in. REPLY to \"For Monday (11/9)\" with your Doc. From now on, context, specific evidence and explanation count in the gradebook.",
-      help: "Terms: the three kinds of definition, extended metaphor",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Mon", date: "2026-11-09",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "DUE: \"ASMO 2.7 and 2.8\", the first Cognition reading: AMSCO pp. 317-345 and workbook pp. 49-52, plus the \"2.7 and 2.8 Quiz\" (7 pts, Google Form, due today). \"Cognition Study Materials\" in Classroom has the study guide, the lecture slides and two sets of practice questions."
-    },
-    {
-      day: "Mon", date: "2026-11-09",
-      subject: "world-history", subjectName: "World History",
-      what: "New topic: Commerce & Culture in the Third Wave (600-1500): the Silk Roads, the Sea Roads of the Indian Ocean, the Sand Roads across the Sahara and trade in the Americas. Mr. Angelopulos's \"Commerce and Culture Notes\" slides are in Classroom."
-    },
-    {
-      day: "Tue", date: "2026-11-10",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class: three F/O/E charts on \"What is money?\" (1) Your own first definition, formal, operational and by example, with an explanation for each. (2) and (3) Listen to ONLY the Prologue and \"The Lie That Saved Brazil\" from \"The Invention of Money\" (link in the email) and sort specific details from each story into F, O and E. Show where the stories' definitions collide or split, and go back and change chart 1 as your view shifts. REPLY to \"For Tuesday (11/10)\" with all three charts. Writing tip from Monday: beware the \"Mega-graph\" (one giant paragraph).",
-      help: "Terms: the three kinds of definition",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Mon", date: "2026-11-09",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 16 (due Fri 11/13)."
-    },
-    {
-      day: "Tue", date: "2026-11-10",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 15 due; it gets graded in class. Lab 13 (due Mon 11/16)."
-    },
-    {
-      day: "Wed", date: "2026-11-11",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "BODY MUSCLES QUIZ: the 15 \"Body Muscles\" on Mrs. Kalec's Naming Muscles List. To study, use her \"Body Muscle Quizzer\" app (posted Saturday, link in Classroom: \"Use the app to help you study for the quiz!\") and her \"Great Muscle Resource\" (Innerbody's interactive muscle guide, link in Classroom). The quiz is a 22-point Google Form in Classroom. Also posted today: the \"Ambient Temperature Lab\" (30 pts): the fist-clench test at room temperature, after warm water and after ice water, then five analysis questions. Classroom says due today; Mrs. Kalec's Unit 4 Calendar says Tue 11/17.",
-      help: "Flashcards: the 15 body muscles",
-      helpFile: "lessons/hap-body-muscle-flashcards.html"
-    },
-    {
-      day: "Wed", date: "2026-11-11",
-      subject: "ap-french", subjectName: "French",
-      what: "\"Passé composé vs. Imparfait practice\" (100 pts), a Wayground (formerly Quizizz) game. Start it from the link in Classroom. Its due date has moved: Classroom now says Thu Nov 19, 2:30 PM."
-    },
-    {
-      day: "Wed", date: "2026-11-11",
-      subject: "world-history", subjectName: "World History",
-      what: "\"Silk Roads Simulation Exit Ticket\" (Google Form in Classroom): pick 2 goods traded on the Silk Road that shaped modern society most and say why, then compare how goods were exchanged then and now. Also new: \"The World in 820 Readings\" now has a question sheet, \"State of the World 820\": for each of the 5 regions, the main religion, the government, trade (goods and ideas), and a labeled map. No due date posted yet."
-    },
-    {
-      day: "Thu", date: "2026-11-12",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class (block day): a new F/O/E chart, \"What is time?\", with an explanation for each section. Start with notes on time as currency (we SPEND time; what is the exchange rate? can time inflate? is it valued differently in different places?) and on two quotes: Annie Dillard, \"How we spend our days is how we spend our life,\" and Jenny Odell, \"time is money\" doesn't work in reverse. Then read and annotate Joe Zadeh, \"The Tyranny of Time\" (50 Essays): mark F, O and E, and follow the cause (the invention of clock time) to its effects, their implications, and what YOU think. Update your chart, then REPLY to \"For Thursday (11/12)\" with your F/O/E notes on time. Tuesday's feedback: direct evidence plus explanation is 4 of the 6 points.",
-      help: "Terms: the three kinds of definition",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Fri", date: "2026-11-13",
-      subject: "ap-english", subjectName: "AP English",
-      what: "Before class: (1) Read, then re-read, Dagoberto Gilb's \"Pride\" (linked in the email). It is an argument of definition: Gilb defines pride through a series of stories that build and then circle back. (2) Write your own argument of definition of \"Time\" in Gilb's style, about 1/2 to 3/4 of a page single spaced (longer if you find some exigence). Make the series of stories YOUR stories: it is your definition. Submit it before class. Thursday's point: an answered question gets \"nice to meet you\"; a developed response shows HOW you think.",
-      help: "Terms: the three kinds of definition",
-      helpFile: "lessons/ap-lang-terms-library.html"
-    },
-    {
-      day: "Fri", date: "2026-11-13",
-      subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Lab 16 due; graded in class, then review for Monday's Muscular System Exam. Mrs. Kalec's reminder today: any late work has to be turned in BEFORE Monday to get credit."
-    },
-    {
-      day: "Fri", date: "2026-11-13",
-      subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "New memory work (Cognition): \"How Reliable is your Memory Ted Talk\" (10 pts, due today): watch Elizabeth Loftus's 17-minute TED talk (link in Classroom) and see Mrs. Aschwanden for the worksheet. Also posted today: \"Understanding Memory Types\" (10 pts)."
-    },
-    {
-      day: "Fri", date: "2026-11-13",
-      subject: "ap-french", subjectName: "French",
-      what: "Due today: \"Padlet - Souvenirs d'enfance / croyances\" (5 pts): reply to Mr. Keirns's questions in the Padlet of that name. And this week's \"Weekly Engagement Reflection\" form (12 pts)."
-    },
-    {
-      day: "Fri", date: "2026-11-13",
-      subject: "world-history", subjectName: "World History",
-      what: "\"Trade Routes Compare and Contrast\" (in Classroom): choose ONE of the 8 groups on the Guided Questions sheet and answer its 3 questions in complete sentences, using the three readings attached: the Silk Road, Indian Ocean Trade Routes and Trans-Saharan Trade Routes. No due date posted yet."
-    }
-  ],
-  nextLabel: "Nov 16 – Nov 20",
-  next: [
     {
       day: "Mon", date: "2026-11-16",
       subject: "ap-english", subjectName: "AP English",
@@ -173,8 +86,15 @@ window.STUDY_WEEK = {
       helpFile: "lessons/ap-lang-terms-library.html"
     }
   ],
+  nextLabel: "Nov 23 – Nov 27",
+  next: [
+    {
+      day: "Mon", date: "2026-11-23",
+      subject: null, subjectName: "School",
+      what: "Thanksgiving Break: no school all week, Nov 23–27."
+    }
+  ],
   ahead: [
-    { date: "2026-11-23", subjectName: "School", what: "Thanksgiving Break: no school Nov 23–27" },
     { date: "~2026-12-16", subjectName: "School", what: "Semester finals week (Dec 14–18); winter break starts Dec 21" },
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
