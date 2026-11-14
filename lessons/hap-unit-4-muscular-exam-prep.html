@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 4 Exam Prep &middot; Human Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#b5445a;--accent-soft:#f6e3e7;--good:#2f7d5b;--good-soft:#e2f2ea}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.8em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.3em 0 .3em}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul,ol{padding-left:22px;margin:.4em 0}
+li{margin:.25em 0}
+a{color:var(--accent);font-weight:700}
+.big{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:14px;padding:14px 18px;margin:16px 0}
+.big b{color:var(--accent)}
+.note{color:var(--soft);font-size:14px}
+.toc{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:12px 16px;margin:16px 0;font-size:15px}
+.toc ol{margin:.3em 0 0}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0;background:var(--paper2)}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);font-weight:800}
+.mnem{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:12px;padding:12px 16px;margin:14px 0;font-size:15px}
+.mnem b{color:var(--accent)}
+.frq{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px 18px;margin:14px 0}
+.frq h3{margin:.1em 0 .3em;color:var(--accent)}
+.frq .prompt{font-style:italic;margin:0 0 .5em}
+.frq .must{font-size:15px}
+.frq label{display:flex;gap:8px;align-items:flex-start;margin:4px 0;cursor:pointer}
+.frq label input{margin-top:5px}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+@media (max-width:600px){.plan{grid-template-columns:1fr}}
+.plan div{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14.5px}
+.plan b{display:block;color:var(--accent)}
+.order{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chips button{font:700 14px Nunito,"Segoe UI",system-ui,sans-serif;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:12px;padding:6px 12px;cursor:pointer;text-align:left}
+.chips button:hover{background:var(--accent-soft)}
+.chips button.done{background:var(--good-soft);border-color:var(--good);color:var(--good);cursor:default}
+.chips button.wrong{background:var(--accent-soft);border-color:var(--accent)}
+.built{margin:6px 0 0;padding-left:22px;font-size:14.5px}
+.fb{min-height:22px;font-size:14.5px;margin-top:6px}
+.q{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.q p{margin:0}
+.qn{font-weight:800;color:var(--accent);margin-right:6px}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user-select:none}
+summary:hover{text-decoration:underline}
+.ans{background:var(--accent-soft);border:1.5px solid #ecc7cf;border-radius:10px;padding:10px 14px;margin-top:8px;font-size:15px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tools button{font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;border:1.5px solid var(--line);background:var(--paper2);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.sec{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:18px 0 4px}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<!-- SOURCES
+kind: class
+- human-anatomy/reference/unit-4-exam-review-capture.md
+- human-anatomy/reference/unit-4-muscular-system-slides-capture.md
+- human-anatomy/reference/unit-4-exam-study-helper-app-capture.md
+- human-anatomy/reference/unit-3-slides-capture.md
+fact-trace: 2026-11-14 additions+coverage
+-->
+<div class="wrap">
+  <div class="eyebrow">Human Anatomy &middot; Unit 4: Muscular System &middot; Exam Mon Nov 16</div>
+  <h1>Unit 4 Exam Prep &mdash; the 6 FRQs &amp; Practice Quiz</h1>
+  <p class="tagline">Built on Mrs. Kalec's Unit 4 Exam Review. The exam is multiple choice plus <b>2 of the 6 free-response questions, picked at random</b>, so you need all six ready. No labeling. Her rule: <b>"The more details, the better!"</b></p>
+
+  <div class="toc"><b>On this page</b>
+    <ol>
+      <li><a href="#plan">A weekend plan</a></li>
+      <li><a href="#frq">The 6 FRQs</a> &mdash; what each answer has to include, with a checklist</li>
+      <li><a href="#order">Put it in order</a> &mdash; drills for the contraction sequence</li>
+      <li><a href="#mc">Multiple-choice topics</a> &mdash; the rest of her review list</li>
+      <li><a href="#quiz">Practice quiz</a></li>
+    </ol>
+  </div>
+
+  <!-- ================= PLAN ================= -->
+  <h2 id="plan">1. A weekend plan</h2>
+  <div class="plan">
+    <div><b>Step 1 &middot; Learn (Sat)</b>Read the six FRQ boxes below. For each one, say the answer out loud from the checklist, then do the two order drills until they're clean.</div>
+    <div><b>Step 2 &middot; Write (Sat/Sun)</b>Write each FRQ from memory, a few minutes each, without looking. Then tick the checklist: anything you left out goes in next time. Mrs. Kalec's <b>Exam Study Helper</b> app (Classroom) has an FRQ Studio that checks your detail.</div>
+    <div><b>Step 3 &middot; Test (Sun)</b>Do the practice quiz below cold, plus her app's Adaptive Quiz. Re-write the two FRQs you feel weakest on.</div>
+  </div>
+  <div class="mnem"><b>Detail tip, from her app:</b> name the proteins (<b>actin, myosin, troponin, tropomyosin</b>), the ions (<b>Ca&sup2;&#8314;, Na&#8314;</b>) and the structures (<b>sarcoplasmic reticulum, T-tubules</b>) every time they fit.</div>
+
+  <!-- ================= FRQs ================= -->
+  <h2 id="frq">2. The 6 FRQs</h2>
+  <p class="note">Each box: her prompt, then what a full answer covers, in our words, from her slides and her study app. Write your own answer first, then tick what you included.</p>
+
+  <div class="frq" id="frq1">
+    <h3>FRQ 1 &middot; Hypertrophy vs. atrophy</h3>
+    <p class="prompt">Describe the physiology of muscle hypertrophy and atrophy. Compare and contrast both processes.</p>
+    <div class="must">
+      <label><input type="checkbox"> <span><b>Hypertrophy</b> = muscle growth. It happens when a muscle is <b>challenged by resistance or load</b>.</span></label>
+      <label><input type="checkbox"> <span>The fibers get <b>bigger (thicker), not more numerous</b>: the number of fibers is <b>fixed at birth</b>.</span></label>
+      <label><input type="checkbox"> <span>Exercise makes <b>microtears</b> in the fibers; during <b>rest</b> the body <b>repairs</b> them (building new protein), so the muscle comes back larger and stronger.</span></label>
+      <label><input type="checkbox"> <span><b>Atrophy</b> = loss of muscle mass and strength; the fibers <b>shrink</b>.</span></label>
+      <label><input type="checkbox"> <span>Causes of atrophy: <b>disuse</b> (inactivity, bed rest, surgery, immobilization), <b>neurological conditions</b> (stroke, spinal cord injury), <b>metabolic disorders</b> (malnutrition, hormonal imbalances, cancer), <b>medications</b> (corticosteroids, chemotherapy drugs), <b>aging</b>.</span></label>
+      <label><input type="checkbox"> <span><b>Compare / contrast:</b> both change the <b>size</b> of the fibers, never their number. Hypertrophy builds tissue under stress; atrophy loses tissue with disuse.</span></label>
+    </div>
+    <p class="note">Related: strength depends on <b>fiber thickness</b> and <b>how many fibers contract at one time</b>. Anabolic steroids act like testosterone and fool the body into building muscle, with irreversible side effects.</p>
+  </div>
+
+  <div class="frq" id="frq2">
+    <h3>FRQ 2 &middot; When oxygen runs short</h3>
+    <p class="prompt">During intense exercise, muscle cells may not receive enough oxygen to meet their energy demands. Explain how muscle cells respond to limited oxygen availability and describe the products of this process.</p>
+    <div class="must">
+      <label><input type="checkbox"> <span>Strenuous activity <b>uses up O&#8322;</b> faster than the blood can supply it.</span></label>
+      <label><input type="checkbox"> <span>The cells switch from <b>aerobic respiration</b> (in the mitochondria) to <b>anaerobic lactic acid fermentation</b> (in the cytoplasm).</span></label>
+      <label><input type="checkbox"> <span><b>Glycolysis</b> breaks glucose into <b>pyruvate</b>, for a yield of only <b>2 ATP</b>.</span></label>
+      <label><input type="checkbox"> <span>With no oxygen, the pyruvate becomes <b>lactic acid</b>. The products: <b>2 ATP + lactic acid</b>.</span></label>
+      <label><input type="checkbox"> <span>Lactic acid build-up <b>lowers the pH</b> in the cell, which adds to <b>muscle fatigue</b> (the burn).</span></label>
+      <label><input type="checkbox"> <span>Afterwards you <b>breathe heavily</b> to pay back the <b>oxygen debt</b>: the oxygen lets the <b>liver</b> turn the lactic acid back into glucose.</span></label>
+    </div>
+    <div class="mnem"><b>Memory trick:</b> "no O&#8322;, low dough": without oxygen the cell only earns <b>2 ATP</b>, and the bill (lactic acid) gets paid later by heavy breathing.</div>
+  </div>
+
+  <div class="frq" id="frq3">
+    <h3>FRQ 3 &middot; Cardiac vs. smooth vs. skeletal</h3>
+    <p class="prompt">Identify and describe the major differences between cardiac, smooth, and skeletal muscle. Be sure to include location, structural characteristics, and functions.</p>
+    <p class="note">The big idea: each muscle type has its fibers lined up differently so it can do its own job. Structure explains function.</p>
+    <div class="tbl"><table>
+      <tr><th></th><th>Skeletal</th><th>Cardiac</th><th>Smooth</th></tr>
+      <tr><td><b>Location</b></td><td>Attached to bone (by tendons)</td><td>Only in the heart</td><td>Walls of internal organs and blood vessels (intestines, stomach, bladder)</td></tr>
+      <tr><td><b>Control</b></td><td>Voluntary</td><td>Involuntary</td><td>Involuntary</td></tr>
+      <tr><td><b>Striated?</b></td><td>Yes: repeating sarcomeres</td><td>Yes: has sarcomeres</td><td>No</td></tr>
+      <tr><td><b>Structure</b></td><td>Long, parallel, cylindrical fibers in bundles, running the length of the muscle; multinucleated</td><td>Branched fibers joined end to end by <b>intercalated discs</b>, forming a network</td><td>Spindle-shaped fibers, one central nucleus, in layers (often a circular and a longitudinal layer)</td></tr>
+      <tr><td><b>How it works</b></td><td>Powerful, fast, directional contractions; precise control because individual motor units can be activated</td><td>Intercalated discs pass electrical signals quickly between cells, so the heart contracts <b>as one unit</b>; rhythmic, built for endurance ("never" tires)</td><td>Slow, sustained squeezing, twisting and wave-like contractions (<b>peristalsis</b>). The circular layer narrows the lumen; the longitudinal layer shortens the tube</td></tr>
+      <tr><td><b>Function</b></td><td>Voluntary movement (walking, running, lifting), which gives a survival advantage (hunting, escaping danger); posture and balance through constant small contractions, supporting upright movement on two legs; <b>heat</b> production</td><td>Pumping blood</td><td>Moving food through the digestive system; controlling blood vessel diameter</td></tr>
+    </table></div>
+    <div class="must">
+      <label><input type="checkbox"> <span>All three <b>locations</b></span></label>
+      <label><input type="checkbox"> <span>Voluntary vs. involuntary for each</span></label>
+      <label><input type="checkbox"> <span>Striated or not, and the <b>shape of the fibers</b> (long/parallel, branched + intercalated discs, spindle)</span></label>
+      <label><input type="checkbox"> <span>A <b>function</b> for each, tied to its structure (e.g. intercalated discs &rarr; the heart beats as one unit)</span></label>
+    </div>
+  </div>
+
+  <div class="frq" id="frq4">
+    <h3>FRQ 4 &middot; The Sliding Filament Theory</h3>
+    <p class="prompt">Describe the Sliding Filament Theory. Include the structure of the muscle cell, the proteins involved, and the resulting actions.</p>
+    <div class="must">
+      <label><input type="checkbox"> <span><b>Structure, big to small:</b> muscle &rarr; fascicles &rarr; muscle fiber (the cell) &rarr; myofibrils &rarr; myofilaments (actin and myosin).</span></label>
+      <label><input type="checkbox"> <span>Each myofibril has <b>thin filaments (actin)</b> and <b>thick filaments (myosin)</b>, organized into <b>sarcomeres</b>, the repeating units that make muscle striated.</span></label>
+      <label><input type="checkbox"> <span>The theory (1950s): contraction = <b>shortening</b>, caused by <b>actin filaments sliding along myosin</b>.</span></label>
+      <label><input type="checkbox"> <span><b>Calcium (Ca&sup2;&#8314;)</b> binds to <b>troponin</b>, which moves <b>tropomyosin</b> and exposes the myosin-binding sites on actin.</span></label>
+      <label><input type="checkbox"> <span>The <b>myosin heads split ATP</b> and become <b>energized</b> (re-cocked), ready to grab.</span></label>
+      <label><input type="checkbox"> <span><b>Myosin heads</b> bind actin, forming <b>cross-bridges</b>, then pull the actin toward the <b>center of the sarcomere</b>: the <b>power stroke</b>, which shortens the muscle.</span></label>
+      <label><input type="checkbox"> <span><b>ATP:</b> myosin has <b>ATPase</b> enzymes that split ATP into ADP + phosphate for the power stroke's energy; each power stroke uses <b>one ATP</b>. ATP binding also lets the cross-bridge <b>detach</b>. ATP is needed for contraction <b>and</b> relaxation; mitochondria make it.</span></label>
+      <label><input type="checkbox"> <span>The cycle keeps going only while <b>ATP is available and calcium is high</b>.</span></label>
+    </div>
+    <div class="mnem"><b>Picture this:</b> Mrs. Kalec calls the myosin heads molecular <b>"rowers"</b>. The rowers (myosin heads) dip their oars into the water (actin), pull, lift out, reach forward and dip again. In a muscle, the "water" is what moves: the actin is pulled toward the middle of the sarcomere.</div>
+  </div>
+
+  <div class="frq" id="frq5">
+    <h3>FRQ 5 &middot; Muscles work in pairs</h3>
+    <p class="prompt">Why do muscles need to work in pairs? What role do prime movers, synergists, and antagonists play in muscle movement?</p>
+    <div class="must">
+      <label><input type="checkbox"> <span>A contracting muscle <b>shortens</b>: it pulls its movable end (<b>insertion</b>) toward its stationary end (<b>origin</b>), causing movement at a joint.</span></label>
+      <label><input type="checkbox"> <span>A muscle has to be attached to <b>at least 2 bones</b> to create movement.</span></label>
+      <label><input type="checkbox"> <span><b>Muscles work in pairs:</b> a <b>flexor bends</b> the joint and an <b>extensor straightens</b> it.</span></label>
+      <label><input type="checkbox"> <span><b>Agonist / prime mover:</b> the main muscle that contracts to make a movement. Example: the <b>biceps</b> when you bend your elbow.</span></label>
+      <label><input type="checkbox"> <span><b>Synergist:</b> assists and stabilizes the agonist. Example: the <b>forearm muscles</b> in a bicep curl.</span></label>
+      <label><input type="checkbox"> <span><b>Antagonist:</b> opposes the agonist's action and <b>relaxes</b> to let it shorten. Example: the <b>triceps</b>, on the back of the upper arm, in a curl.</span></label>
+    </div>
+    <div class="mnem"><b>Link it:</b> muscles <b>pull</b> on bones (Unit 3), and a contraction pulls the insertion toward the origin. One muscle pulls the joint one way, so it takes its partner to pull it back: that's why they work in pairs.</div>
+    <p class="note">Try it: do a slow curl with your hand on your upper arm. Feel the biceps bunch up on the way up while the back of your arm stays soft.</p>
+  </div>
+
+  <div class="frq" id="frq6">
+    <h3>FRQ 6 &middot; Contraction, starting from the nerve</h3>
+    <p class="prompt">Explain the process of muscle contraction beginning with nervous stimulation.</p>
+    <div class="must">
+      <label><input type="checkbox"> <span>1. A <b>nerve impulse</b> arrives at the motor neuron's <b>axon terminal</b>.</span></label>
+      <label><input type="checkbox"> <span>2. <b>Acetylcholine (ACh)</b> is released into the <b>synaptic cleft</b>.</span></label>
+      <label><input type="checkbox"> <span>3. ACh binds to <b>receptors</b> on the muscle fiber's membrane.</span></label>
+      <label><input type="checkbox"> <span>4. <b>Na&#8314;</b> enters the fiber: <b>depolarization</b>, which triggers a muscle <b>action potential</b>.</span></label>
+      <label><input type="checkbox"> <span>5. The action potential travels along the <b>sarcolemma</b> and down the <b>T-tubules</b>.</span></label>
+      <label><input type="checkbox"> <span>6. <b>Ca&sup2;&#8314;</b> is released from the <b>sarcoplasmic reticulum</b>.</span></label>
+      <label><input type="checkbox"> <span>7. Then the FRQ 4 steps: Ca&sup2;&#8314; binds troponin &rarr; tropomyosin moves &rarr; binding sites exposed &rarr; cross-bridges &rarr; power stroke (1 ATP each) &rarr; the muscle shortens.</span></label>
+      <label><input type="checkbox"> <span>Big picture: <b>ACh starts</b> the chain of events, but <b>calcium enables</b> the actin&ndash;myosin interaction that produces contraction.</span></label>
+    </div>
+    <div class="mnem"><b>Memory trick for the order:</b> "<b>N</b>ever <b>A</b>sk <b>R</b>ude <b>S</b>odium <b>T</b>o <b>C</b>arry": <b>N</b>erve &rarr; <b>A</b>Ch &rarr; <b>R</b>eceptors &rarr; <b>S</b>odium (Na&#8314;) &rarr; <b>T</b>-tubules &rarr; <b>C</b>alcium.</div>
+  </div>
+
+  <!-- ================= ORDER DRILLS ================= -->
+  <h2 id="order">3. Put it in order</h2>
+  <p class="note">Tap the steps in the right order. A wrong tap flashes; keep going until the list is complete. These two sequences are the spine of FRQ 4 and FRQ 6.</p>
+  <div class="order" data-set="nerve"><b>From nerve to calcium (FRQ 6)</b><div class="chips"></div><ol class="built"></ol><div class="fb"></div><div class="tools"><button class="reset">Shuffle &amp; restart</button></div></div>
+  <div class="order" data-set="cycle"><b>From calcium to a shorter muscle (FRQ 4)</b><div class="chips"></div><ol class="built"></ol><div class="fb"></div><div class="tools"><button class="reset">Shuffle &amp; restart</button></div></div>
+  <div class="order" data-set="hier"><b>Muscle structure, biggest to smallest</b><div class="chips"></div><ol class="built"></ol><div class="fb"></div><div class="tools"><button class="reset">Shuffle &amp; restart</button></div></div>
+
+  <!-- ================= MC TOPICS ================= -->
+  <h2 id="mc">4. Multiple-choice topics</h2>
+  <p class="note">The rest of her review list. Hypertrophy/atrophy, lactic acid, the hierarchy, contraction and the movement roles are covered in the FRQ boxes above.</p>
+
+  <h3>Function, types and number of muscles</h3>
+  <ul>
+    <li><b>Functions:</b> locomotion, moving food through the digestive system, pumping blood. Skeletal muscle also holds <b>posture and balance</b> and makes <b>heat</b>, which helps keep body temperature steady (homeostasis).</li>
+    <li><b>Muscle tone:</b> muscles are always <b>slightly contracted</b>.</li>
+    <li><b>Number:</b> between <b>640 and 850</b> muscles, depending on the source. Muscles are <b>40&ndash;50%</b> of total body mass.</li>
+    <li><b>Largest:</b> the <b>gluteus maximus</b>. The <b>heart</b> is a muscle. The <b>fingers have no muscles</b>: forearm muscles move them by pulling long tendons.</li>
+    <li><b>3 types:</b> smooth (organs and blood vessels, involuntary), cardiac (only the heart, involuntary), skeletal (attached to bone, voluntary).</li>
+  </ul>
+
+  <h3>Origin vs. insertion &middot; Tendons vs. ligaments</h3>
+  <div class="tbl"><table>
+    <tr><th>Origin</th><th>Insertion</th></tr>
+    <tr><td>The <b>stationary</b> end of the muscle</td><td>The <b>movable</b> end; contraction pulls it <b>toward</b> the origin</td></tr>
+    <tr><th>Tendon</th><th>Ligament</th></tr>
+    <tr><td>Attaches <b>muscle to bone</b>, to help it move</td><td>Attaches <b>bone to bone</b>, to stabilize joints</td></tr>
+  </table></div>
+  <p>A muscle must be attached to <b>at least 2 bones</b> to create movement.</p>
+  <div class="mnem"><b>Picture this</b> (Mrs. Kalec's): pushing a box. The box is the bone that moves, the floor is the stationary bone, and you are the muscle. You can't move the box by sitting on it or without touching it; you have to touch the box <b>and</b> the floor.</div>
+  <div class="mnem"><b>Memory trick:</b> <b>I</b>nsertion = the end that <b>I</b> move. <b>L</b>igament <b>L</b>inks bone to bone.</div>
+
+  <h3>How muscles are named</h3>
+  <p>By fiber direction, relative size, location, number of origins, where the origin and insertion are, shape, and action. Example from her slides: <b>biceps femoris</b> = a two-headed muscle attached to the femur.</p>
+
+  <h3>Muscle disorders</h3>
+  <div class="tbl"><table>
+    <tr><th>Disorder</th><th>What it is</th><th>Signs</th><th>Cause</th><th>Treatment</th></tr>
+    <tr><td><b>Muscle strain</b> (pulled muscle)</td><td>Fibers overstretched or torn</td><td>Sudden sharp pain; swelling or bruising; weakness or stiffness</td><td>Overexertion; fatigue or poor posture during movement</td><td><b>R.I.C.E.</b> (Rest, Ice, Compression, Elevation); stretching and strengthening after it heals</td></tr>
+    <tr><td><b>Myasthenia gravis</b></td><td>Autoimmune: the receptors for the contraction neurotransmitter are attacked</td><td>Weakness that worsens with activity; drooping eyelids; trouble swallowing or speaking</td><td>Antibodies block or destroy the <b>acetylcholine receptors</b> in the synapse</td><td>Medications to improve nerve signals; immunosuppressants</td></tr>
+    <tr><td><b>Muscular dystrophy</b> (MD)</td><td>Genetic: muscle mass is lost as <b>fat and scar tissue</b> replace muscle</td><td>Weakness (hips/legs); trouble walking, standing, lifting; breathing or heart issues in some types</td><td>Gene mutations affecting muscle proteins, like <b>dystrophin</b></td><td>No cure; physical therapy and medications manage symptoms</td></tr>
+    <tr><td><b>Polymyositis</b></td><td>Rare inflammatory disease: weakness in the muscles <b>closest to the trunk</b></td><td>Trouble rising from a chair or climbing stairs; muscle pain and tenderness; sometimes trouble swallowing</td><td>Thought to be autoimmune: the body attacks healthy muscle</td><td>Corticosteroids, immunosuppressants, physical therapy</td></tr>
+  </table></div>
+  <div class="mnem"><b>Memory trick:</b> myasthenia gravis hits the <b>signal</b> (ACh receptors); muscular dystrophy is in the <b>genes</b>; polymyositis is <b>inflammation</b> ("poly-my-o-<b>itis</b>").</div>
+
+  <h3>Rigor mortis</h3>
+  <ul>
+    <li>Stiffening of the muscles after death, due to chemical changes. Both voluntary and involuntary muscles stiffen.</li>
+    <li><b>Why:</b> after death, cellular respiration stops and <b>ATP runs out</b>. Without ATP the myosin heads <b>can't detach</b> from actin, so the muscles lock.</li>
+    <li><b>Timeline:</b> begins <b>1&ndash;2 hours</b> after death &rarr; full at <b>10&ndash;12 hours</b> &rarr; gone after <b>24&ndash;36 hours</b>. Usually starts in the upper body and moves down.</li>
+    <li>Used to <b>estimate time of death</b>.</li>
+  </ul>
+  <div class="mnem"><b>Link it:</b> rigor mortis is the FRQ 4 rule in reverse. ATP is what lets a cross-bridge let go, so no ATP = stuck.</div>
+
+  <!-- ================= QUIZ ================= -->
+  <h2 id="quiz">5. Practice quiz</h2>
+  <p class="note">Answer in your head (or out loud) before you open each one.</p>
+  <div class="tools"><button id="openAll">Show all answers</button><button id="closeAll">Hide all answers</button></div>
+  <div id="quizbox"></div>
+
+  <p class="footer">Original study guide for Mrs. Kalec's Unit 4 Exam Review. Every fact comes from her slides, her exam review, her Exam Study Helper app, and (origin/insertion, tendons/ligaments) her Unit 3 slides. Written in our own words; use her app for her model answers.</p>
+</div>
+<script>
+(function(){
+  /* ---------- order drills ---------- */
+  var SETS={
+    nerve:['Nerve impulse reaches the axon terminal','ACh released into the synaptic cleft','ACh binds receptors on the muscle fiber','Na⁺ enters: depolarization, action potential','Action potential runs along the sarcolemma and down the T-tubules','Ca²⁺ released from the sarcoplasmic reticulum'],
+    cycle:['Ca²⁺ binds to troponin','Tropomyosin moves','Myosin-binding sites on actin exposed','Myosin heads bind actin (cross-bridges)','Power stroke: actin pulled toward the sarcomere center, the muscle shortens','ATP binds and the cross-bridge detaches (the cycle repeats while ATP and Ca²⁺ last)'],
+    hier:['Muscle','Fascicles','Muscle fiber','Myofibrils','Myofilaments (actin / myosin)']
+  };
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+  document.querySelectorAll('.order').forEach(function(box){
+    var steps=SETS[box.dataset.set],chips=box.querySelector('.chips'),built=box.querySelector('.built'),fb=box.querySelector('.fb'),nxt=0,miss=0;
+    function start(){
+      nxt=0;miss=0;chips.innerHTML='';built.innerHTML='';fb.textContent='Tap the first step.';
+      shuffle(steps).forEach(function(s){
+        var b=document.createElement('button');b.textContent=s;
+        b.onclick=function(){
+          if(b.className==='done')return;
+          if(s===steps[nxt]){b.className='done';var li=document.createElement('li');li.textContent=s;built.appendChild(li);nxt++;
+            fb.textContent=nxt===steps.length?('Done! '+(miss===0?'No misses.':miss+' miss'+(miss>1?'es':'')+'. Try it again for a clean run.')):'Good. Next step?';}
+          else{miss++;b.className='wrong';setTimeout(function(){if(b.className==='wrong')b.className=''},600);fb.textContent='Not yet. What comes after "'+(nxt?steps[nxt-1]:'the start')+'"?';}
+        };
+        chips.appendChild(b);
+      });
+    }
+    box.querySelector('.reset').onclick=start;start();
+  });
+
+  /* ---------- quiz ---------- */
+  var Q=[
+    ['Types, function and number'],
+    ['Name the 3 types of muscle, where each is found, and whether it is voluntary.','<b>Smooth</b>: internal organs and blood vessels, involuntary. <b>Cardiac</b>: only the heart, involuntary. <b>Skeletal</b>: attached to bone, voluntary.'],
+    ['Which two muscle types are striated, and what makes them striated?','<b>Skeletal and cardiac.</b> The repeating <b>sarcomeres</b>. Smooth muscle is not striated.'],
+    ['What do intercalated discs do, and in which muscle type are they found?','<b>Cardiac</b> muscle. They join the branched fibers end to end and pass electrical signals quickly between cells, so the heart contracts <b>as one unit</b>.'],
+    ['What is peristalsis, and which muscle type does it?','Wave-like contractions; <b>smooth</b> muscle (its spindle-shaped fibers in layers allow squeezing, twisting and wave-like contractions).'],
+    ['Smooth muscle often has two layers. What does each do?','The <b>circular</b> layer narrows the lumen; the <b>longitudinal</b> layer shortens the tube.'],
+    ['Give three functions of muscles.','<b>Locomotion</b>, moving <b>food</b> through the digestive system, <b>pumping blood</b>. (Skeletal muscle also: posture and balance, heat production.)'],
+    ['About how many muscles are in the body, and what share of body mass are they?','<b>640&ndash;850</b> (depending on the source); <b>40&ndash;50%</b> of total body mass.'],
+    ['Largest muscle? And how do fingers move with no muscles in them?','The <b>gluteus maximus</b>. Forearm muscles pull on long <b>tendons</b>.'],
+    ['What is muscle tone?','Muscles are always <b>slightly contracted</b>.'],
+    ['Structure'],
+    ['Put in order, biggest to smallest: myofibrils, muscle fiber, fascicles, myofilaments, muscle.','<b>Muscle &rarr; fascicles &rarr; muscle fiber &rarr; myofibrils &rarr; myofilaments</b> (actin and myosin).'],
+    ['Thin filament vs. thick filament: which protein is each?','<b>Thin = actin. Thick = myosin.</b>'],
+    ['What do the ATPase enzymes on myosin do?','Break <b>ATP into ADP + phosphate</b>, giving the energy for the <b>power stroke</b>.'],
+    ['Contraction'],
+    ['State the Sliding Filament Theory in one sentence.','Contraction is <b>shortening</b>, caused by <b>actin filaments sliding along myosin</b> as myosin heads pull them toward the center of the sarcomere.'],
+    ['When Ca²⁺ binds to troponin, what happens next?','<b>Tropomyosin moves</b>, exposing the <b>myosin-binding sites on actin</b>.'],
+    ['What is a cross-bridge?','The link formed when a <b>myosin head binds to actin</b>.'],
+    ['How much ATP does one power stroke use?','<b>One ATP.</b>'],
+    ['ATP is needed for contraction and for what else?','<b>Relaxation</b>: ATP binding lets the cross-bridge detach. Mitochondria make ATP by cellular respiration. No ATP = no muscle movement.'],
+    ['Which neurotransmitter starts a contraction, and where is it released?','<b>Acetylcholine (ACh)</b>, into the <b>synaptic cleft</b> from the motor neuron&rsquo;s axon terminal.'],
+    ['Which ion enters the muscle fiber to cause depolarization?','<b>Na&#8314;</b> (sodium).'],
+    ['The action potential travels along the ___ and down the ___.','The <b>sarcolemma</b>; the <b>T-tubules</b>.'],
+    ['Where is Ca²⁺ released from?','The <b>sarcoplasmic reticulum</b>.'],
+    ['"ACh starts it, but ___ enables it." Fill in the blank and explain.','<b>Calcium.</b> ACh starts the chain of events, but calcium enables the actin&ndash;myosin interaction that produces contraction.'],
+    ['The contraction cycle continues as long as which two things hold?','<b>ATP is available</b> and the <b>Ca²⁺ level is high</b>.'],
+    ['Growth, energy and strength'],
+    ['Hypertrophy: do muscles gain fibers or bigger fibers?','<b>Bigger (thicker) fibers.</b> The number of fibers is fixed at birth.'],
+    ['What do microtears have to do with muscle growth?','Exercise makes microtears in the fibers; during <b>rest</b> the body repairs them, making the muscle larger and stronger.'],
+    ['Name four causes of atrophy.','Any four: <b>disuse</b> (bed rest, surgery, immobilization), <b>neurological conditions</b> (stroke, spinal cord injury), <b>metabolic disorders</b> (malnutrition, hormonal imbalance, cancer), <b>medications</b> (corticosteroids, chemo drugs), <b>aging</b>.'],
+    ['Muscle strength depends on what two things?','<b>Fiber thickness</b> and <b>how many fibers contract at one time</b>.'],
+    ['How do anabolic steroids work, and what is the catch?','They act like <b>testosterone</b> and fool the body into building muscle; the side effects are <b>irreversible</b>.'],
+    ['What happens in a muscle when strenuous exercise uses up its oxygen?','It switches to <b>lactic acid fermentation</b>: glucose &rarr; <b>2 ATP + lactic acid</b>.'],
+    ['Why do you keep breathing hard after a sprint?','To repay the <b>oxygen debt</b>: the oxygen is used to clear the lactic acid (the liver turns it back into glucose).'],
+    ['Movement and attachments'],
+    ['Origin vs. insertion?','<b>Origin</b> = the stationary end. <b>Insertion</b> = the movable end, pulled toward the origin when the muscle contracts.'],
+    ['Tendon vs. ligament?','<b>Tendon</b>: muscle to bone. <b>Ligament</b>: bone to bone (stabilizes joints).'],
+    ['Flexor vs. extensor?','A <b>flexor bends</b> the joint; an <b>extensor straightens</b> it.'],
+    ['In a bicep curl, name the agonist, a synergist and the antagonist.','Agonist: <b>biceps</b>. Synergist: the <b>forearm muscles</b>. Antagonist: the <b>triceps</b> (it relaxes).'],
+    ['What is a synergist&rsquo;s job?','To <b>assist and stabilize</b> the agonist&rsquo;s movement.'],
+    ['Name four things muscle names can come from.','Any four: fiber <b>direction</b>, relative <b>size</b>, <b>location</b>, <b>number of origins</b>, where the <b>origin and insertion</b> are, <b>shape</b>, <b>action</b>.'],
+    ['Disorders and rigor mortis'],
+    ['Overstretched or torn muscle fibers. Name it and its treatment.','<b>Muscle strain</b> (pulled muscle). <b>R.I.C.E.</b>: Rest, Ice, Compression, Elevation; then stretching and strengthening.'],
+    ['Antibodies destroy acetylcholine receptors. Which disorder, and two symptoms?','<b>Myasthenia gravis.</b> Any two: weakness that worsens with activity, drooping eyelids, trouble swallowing or speaking.'],
+    ['Genetic; fat and scar tissue replace muscle; dystrophin. Which disorder?','<b>Muscular dystrophy.</b> No cure; physical therapy and medications manage symptoms.'],
+    ['Weakness in the muscles closest to the trunk; trouble rising from a chair. Which disorder?','<b>Polymyositis</b>, thought to be autoimmune.'],
+    ['What causes rigor mortis?','<b>No ATP</b> after death, so the myosin heads can&rsquo;t detach from actin and the muscles lock.'],
+    ['Give the rigor mortis timeline.','Starts <b>1&ndash;2 h</b> after death, full at <b>10&ndash;12 h</b>, gone after <b>24&ndash;36 h</b>. Used to estimate time of death.']
+  ];
+  var qb=document.getElementById('quizbox'),n=0;
+  Q.forEach(function(q){
+    if(q.length===1){var h=document.createElement('div');h.className='sec';h.textContent=q[0];qb.appendChild(h);return}
+    n++;var d=document.createElement('div');d.className='q';
+    d.innerHTML='<p><span class="qn">'+n+'</span>'+q[0]+'</p><details><summary>Show answer</summary><div class="ans">'+q[1]+'</div></details>';
+    qb.appendChild(d);
+  });
+  document.getElementById('openAll').onclick=function(){document.querySelectorAll('#quizbox details').forEach(function(d){d.open=true})};
+  document.getElementById('closeAll').onclick=function(){document.querySelectorAll('#quizbox details').forEach(function(d){d.open=false})};
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>

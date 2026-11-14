@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 3 Test - Review &middot; Algebra 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ec;--paper2:#fffdf7;--ink:#233047;--soft:#5a6b83;--line:#e4dcc8;--accent:#e8623d;--accent-soft:#fbe3d8;--blue:#2f6db5;--blue-soft:#dde9f7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+h1{font-family:Fraunces,Georgia,serif;font-size:30px;margin:.2em 0 .1em}
+h2{font-family:Fraunces,Georgia,serif;font-size:22px;margin:1.7em 0 .4em;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:17px;margin:1.2em 0 .3em}
+h3.part{color:var(--accent);margin-top:1.4em}
+.eyebrow{font-weight:800;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.tagline{color:var(--soft);margin:.3em 0 0}
+ul,ol{padding-left:22px;margin:.4em 0}li{margin:.25em 0}
+a{color:var(--accent);font-weight:700}
+.big{background:var(--accent-soft);border:1.5px solid #f2c3b0;border-radius:14px;padding:15px 19px;margin:16px 0}
+.big b{color:var(--accent)}
+.card{background:var(--paper2);border:1.5px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:14px}
+.note{color:var(--soft);font-size:14px}
+.fx{font-family:"Fraunces",Georgia,serif;font-style:italic;white-space:nowrap}
+.worked{background:var(--accent-soft);border:1.5px solid #f2c3b0;border-radius:10px;padding:11px 15px;margin:10px 0;font-size:15px}
+.trap{background:#fff;border:1.5px dashed var(--accent);border-radius:10px;padding:11px 15px;margin:10px 0;font-size:15px}
+.trap b:first-child{color:var(--accent)}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0;background:var(--paper2)}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);font-weight:800}
+.plotbox{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:16px;align-items:start;margin-top:10px}
+@media(max-width:620px){.plotbox{grid-template-columns:1fr}}
+svg.grid{width:100%;max-width:300px;height:auto;background:#fff;border:1.5px solid var(--line);border-radius:10px;display:block}
+.toc{background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:12px 16px;margin:16px 0;font-size:15px}
+.toc ol{margin:.3em 0 0}
+.q{display:grid;grid-template-columns:34px 1fr;gap:8px;background:var(--paper2);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.qn{font-weight:800;color:var(--accent)}
+.q p{margin:0 0 4px}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:800;font-size:13.5px;color:var(--accent);user-select:none}
+summary:hover{text-decoration:underline}
+.ans{background:var(--accent-soft);border:1.5px solid #f2c3b0;border-radius:10px;padding:10px 14px;margin-top:8px;font-size:15px}
+.ans p{margin:.3em 0}
+.footer{margin-top:40px;color:var(--soft);font-size:13px;text-align:center}
+</style></head>
+<body>
+<!-- SOURCES
+kind: class
+- algebra-2/reference/unit-3-review-sheet-capture.md
+- algebra-2/reference/converting-forms-of-quadratics-ws-capture.md
+fact-trace: 2026-11-14 additions+coverage
+-->
+<div class="wrap">
+  <div class="eyebrow">Algebra 2 &middot; Mrs. Howard &middot; Test Mon Nov 16</div>
+  <h1>Unit 3 Test &mdash; Review</h1>
+  <p class="tagline">Quadratics &amp; complex numbers. Every example here uses <b>different numbers</b> from your review sheet on purpose: learn the move here, then do your real sheet yourself.</p>
+
+  <div class="big"><b>What Mrs. Howard's "A2: Unit 3 Review" covers</b>, in her order: solving by <b>factoring</b> &middot; <b>completing the square</b> &middot; the <b>quadratic formula</b> (round to the hundredth) &middot; <b>graphing</b> a parabola and its key features &middot; switching between <b>standard, intercept (factored) and vertex form</b> &middot; <b>thrown-object word problems</b> &middot; <b>complex-number arithmetic</b> and powers of <i>i</i> &middot; <b>square roots of negatives</b>. The "Converting Forms of Quadratics" worksheet on the same assignment is extra practice for the forms.</div>
+
+  <div class="toc"><b>On this page</b>
+    <ol>
+      <li><a href="#solve">Three ways to solve</a> &mdash; factoring, completing the square, the formula</li>
+      <li><a href="#graph">Graphing &amp; the three forms</a></li>
+      <li><a href="#word">Thrown-object word problems</a></li>
+      <li><a href="#complex">Complex numbers &amp; <i>i</i></a></li>
+      <li><a href="#practice">Practice set</a> (answers hidden)</li>
+    </ol>
+  </div>
+
+  <div class="trap"><b>Plan for tonight and tomorrow:</b> read one part, try its practice problems below without looking, then do the matching problems on your real review sheet. Mark anything you get wrong and come back to it Sunday.</div>
+
+  <!-- ================= SOLVE ================= -->
+  <h2 id="solve">1 &middot; Three ways to solve <span class="fx">ax&sup2; + bx + c = 0</span></h2>
+  <p>All three methods find the same thing: the <b>x-values that make the quadratic equal zero</b> (the x-intercepts, if they're real). Your review sheet asks for a specific method on each problem, so know all three.</p>
+
+  <div class="card">
+    <h3 class="part">Factoring (problem 1 type)</h3>
+    <p><b>When a = 1:</b> find two numbers that <b>multiply to c</b> and <b>add to b</b>.</p>
+    <div class="worked"><b>Twin:</b> <span class="fx">x&sup2; + 3x &minus; 28 = 0</span>. Multiply to &minus;28, add to +3: <b>+7 and &minus;4</b>.<br>
+      <span class="fx">(x + 7)(x &minus; 4) = 0</span> &rarr; set each factor to zero &rarr; <span class="fx">x = &minus;7</span> or <span class="fx">x = 4</span>.</div>
+    <p><b>When a isn't 1 (the "ac method"):</b> multiply a&middot;c, find two numbers that multiply to ac and add to b, split the middle term, then group.</p>
+    <div class="worked"><b>Twin:</b> <span class="fx">6x&sup2; &minus; x &minus; 2 = 0</span>. &nbsp;ac = 6&middot;(&minus;2) = &minus;12. Multiply to &minus;12, add to &minus;1: <b>&minus;4 and +3</b>.<br>
+      Split: <span class="fx">6x&sup2; + 3x &minus; 4x &minus; 2 = 0</span><br>
+      Group: <span class="fx">3x(2x + 1) &minus; 2(2x + 1) = 0</span> &rarr; <span class="fx">(3x &minus; 2)(2x + 1) = 0</span><br>
+      So <span class="fx">x = 2/3</span> or <span class="fx">x = &minus;1/2</span>.</div>
+    <p class="note">If Mrs. Howard showed a different way in class, use the one in your notes; the answers come out the same.</p>
+    <div class="trap"><b>Trap:</b> the equation must equal <b>zero</b> before you factor. And check your factors by multiplying them back out.</div>
+  </div>
+
+  <div class="card">
+    <h3 class="part">Completing the square (problem 2 type)</h3>
+    <ol>
+      <li>Move c to the other side.</li>
+      <li>Take <b>half of b, square it</b>, and add it to <b>both</b> sides.</li>
+      <li>The left side is now a perfect square: <span class="fx">(x + b/2)&sup2;</span>.</li>
+      <li>Square-root both sides (<b>&plusmn;</b>!), then solve.</li>
+    </ol>
+    <div class="worked"><b>Twin:</b> <span class="fx">x&sup2; + 6x + 5 = 0</span><br>
+      <span class="fx">x&sup2; + 6x = &minus;5</span> &rarr; half of 6 is 3, 3&sup2; = 9 &rarr; <span class="fx">x&sup2; + 6x + 9 = &minus;5 + 9</span><br>
+      <span class="fx">(x + 3)&sup2; = 4</span> &rarr; <span class="fx">x + 3 = &plusmn;2</span> &rarr; <span class="fx">x = &minus;1</span> or <span class="fx">x = &minus;5</span>.</div>
+    <div class="worked"><b>Twin where the answer is complex:</b> <span class="fx">x&sup2; + 6x + 13 = 0</span><br>
+      <span class="fx">x&sup2; + 6x + 9 = &minus;13 + 9</span> &rarr; <span class="fx">(x + 3)&sup2; = &minus;4</span><br>
+      <span class="fx">x + 3 = &plusmn;&radic;&minus;4 = &plusmn;2i</span> &rarr; <span class="fx">x = &minus;3 &plusmn; 2i</span>.<br>
+      <span class="note">A negative under the square root means <b>no x-intercepts</b>: the answers are complex numbers. That's the link between this unit's two halves (the review sheet's subtitle: "Understanding Complex Numbers Through Quadratics").</span></div>
+  </div>
+
+  <div class="card">
+    <h3 class="part">The quadratic formula (problem 3 type)</h3>
+    <p class="fx" style="font-size:20px;text-align:center;white-space:normal">x = ( &minus;b &plusmn; &radic;(b&sup2; &minus; 4ac) ) / 2a</p>
+    <div class="worked"><b>Twin:</b> <span class="fx">3x&sup2; &minus; 5x &minus; 1 = 0</span>. a = 3, b = &minus;5, c = &minus;1.<br>
+      b&sup2; &minus; 4ac = 25 &minus; 4(3)(&minus;1) = 25 + 12 = <b>37</b><br>
+      <span class="fx">x = (5 &plusmn; &radic;37) / 6</span>. &radic;37 &asymp; 6.0828<br>
+      <span class="fx">x &asymp; 11.0828/6 &asymp; <b>1.85</b></span> &nbsp;or&nbsp; <span class="fx">x &asymp; &minus;1.0828/6 &asymp; <b>&minus;0.18</b></span></div>
+    <div class="worked"><b>Twin:</b> <span class="fx">x&sup2; + 4x &minus; 9 = 0</span>. b&sup2; &minus; 4ac = 16 + 36 = 52.<br>
+      <span class="fx">x = (&minus;4 &plusmn; &radic;52) / 2</span>, &radic;52 &asymp; 7.2111 &rarr; <span class="fx">x &asymp; <b>1.61</b></span> or <span class="fx">x &asymp; <b>&minus;5.61</b></span>.</div>
+    <div class="trap"><b>Traps:</b> &minus;b flips the sign of b (here b = &minus;5, so &minus;b = <b>+5</b>). With a negative c, &minus;4ac turns <b>positive</b>. Divide the <b>whole</b> top by 2a, not just the square root. Round only at the end.</div>
+  </div>
+
+  <!-- ================= GRAPH ================= -->
+  <h2 id="graph">2 &middot; Graphing &amp; the three forms (problems 4&ndash;5 + the Converting Forms WS)</h2>
+  <div class="tbl"><table>
+    <tr><th>Form</th><th>Looks like</th><th>What it shows you right away</th></tr>
+    <tr><td><b>Standard</b></td><td class="fx">y = ax&sup2; + bx + c</td><td>The <b>y-intercept</b> is c. Axis of symmetry: <span class="fx">x = &minus;b / 2a</span></td></tr>
+    <tr><td><b>Intercept (factored)</b></td><td class="fx">y = a(x &minus; p)(x &minus; q)</td><td>The <b>x-intercepts</b> are p and q (flip the signs!). The axis is halfway between them</td></tr>
+    <tr><td><b>Vertex</b></td><td class="fx">y = a(x &minus; h)&sup2; + k</td><td>The <b>vertex</b> is (h, k) (flip the sign of h). The axis is x = h</td></tr>
+  </table></div>
+  <p class="note">In every form, <b>a</b> is the same number: if a is positive the parabola opens up (vertex = lowest point); if negative it opens down (vertex = highest point).</p>
+
+  <div class="card">
+    <h3 class="part">Starting from standard form</h3>
+    <div class="plotbox">
+      <svg class="grid" id="plot1" viewBox="0 0 300 300" role="img" aria-label="Graph of y equals x squared minus 2x minus 8"></svg>
+      <div class="worked" style="margin:0"><b>Twin:</b> <span class="fx">f(x) = x&sup2; &minus; 2x &minus; 8</span><br>
+        <b>y-intercept:</b> c = &minus;8 &rarr; (0, &minus;8)<br>
+        <b>Axis:</b> x = &minus;(&minus;2)/(2&middot;1) = <b>1</b><br>
+        <b>Vertex:</b> plug in x = 1: 1 &minus; 2 &minus; 8 = &minus;9 &rarr; <b>(1, &minus;9)</b><br>
+        <b>x-intercepts:</b> factor: multiply to &minus;8, add to &minus;2 &rarr; &minus;4, +2 &rarr; <b>(4, 0) and (&minus;2, 0)</b><br>
+        <b>Factored form:</b> <span class="fx">(x &minus; 4)(x + 2)</span><br>
+        <b>Vertex form:</b> <span class="fx">(x &minus; 1)&sup2; &minus; 9</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="part">Starting from intercept form</h3>
+    <div class="plotbox">
+      <svg class="grid" id="plot2" viewBox="0 0 300 300" role="img" aria-label="Graph of y equals x plus 2 times x plus 6"></svg>
+      <div class="worked" style="margin:0"><b>Twin:</b> <span class="fx">f(x) = (x + 2)(x + 6)</span><br>
+        <b>x-intercepts:</b> flip the signs &rarr; <b>(&minus;2, 0) and (&minus;6, 0)</b><br>
+        <b>Axis:</b> halfway: (&minus;2 + &minus;6)/2 = <b>&minus;4</b><br>
+        <b>Vertex:</b> f(&minus;4) = (&minus;2)(2) = &minus;4 &rarr; <b>(&minus;4, &minus;4)</b><br>
+        <b>y-intercept:</b> f(0) = 2&middot;6 = 12 &rarr; (0, 12)<br>
+        <b>Standard form:</b> FOIL &rarr; <span class="fx">x&sup2; + 8x + 12</span><br>
+        <b>Vertex form:</b> <span class="fx">(x + 4)&sup2; &minus; 4</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="part">Converting: the moves</h3>
+    <ul>
+      <li><b>Vertex or intercept &rarr; standard:</b> multiply it out. <span class="note">Twin: <span class="fx">y = 2(x + 1)&sup2; &minus; 8 = 2(x&sup2; + 2x + 1) &minus; 8 = 2x&sup2; + 4x &minus; 6</span>. And <span class="fx">y = 3(x &minus; 2)(x + 4) = 3(x&sup2; + 2x &minus; 8) = 3x&sup2; + 6x &minus; 24</span>.</span></li>
+      <li><b>Standard &rarr; intercept:</b> factor (take out a first if a isn't 1). <span class="note">Twin: <span class="fx">2x&sup2; + 4x &minus; 6 = 2(x&sup2; + 2x &minus; 3) = 2(x + 3)(x &minus; 1)</span>.</span></li>
+      <li><b>Standard &rarr; vertex:</b> find the vertex (h = &minus;b/2a, then k = f(h)) and write <span class="fx">a(x &minus; h)&sup2; + k</span> with the <b>same a</b>.</li>
+      <li><b>From a graph:</b> read the vertex for vertex form and the x-intercepts for intercept form; find <b>a</b> by plugging in one more point (the y-intercept is easiest). Then multiply out for standard form.</li>
+    </ul>
+    <div class="trap"><b>Trap:</b> when you multiply out, keep a <b>outside</b> until the very end, then multiply it through every term: <span class="fx">2(x&sup2; + 2x + 1) &minus; 8</span>, not <span class="fx">(2x + 2)&sup2; &minus; 8</span>.</div>
+  </div>
+
+  <!-- ================= WORD ================= -->
+  <h2 id="word">3 &middot; Thrown-object word problems (problems 6&ndash;7)</h2>
+  <p>In <span class="fx">y = &minus;16x&sup2; + bx + c</span>, y is the <b>height</b> and x is the <b>time</b> in seconds. Each question is one of the graph features in disguise:</p>
+  <div class="tbl"><table>
+    <tr><th>The question asks</th><th>It really means</th><th>How</th></tr>
+    <tr><td>Initial height (where it was thrown from)?</td><td>The <b>y-intercept</b> (x = 0)</td><td>It's c</td></tr>
+    <tr><td>Maximum height?</td><td>The <b>vertex</b>'s y-value</td><td>x = &minus;b/2a, then plug that x in</td></tr>
+    <tr><td>When does it hit the ground / water?</td><td>The positive <b>x-intercept</b> (y = 0)</td><td>Set y = 0; factor or use the formula; keep the positive answer</td></tr>
+    <tr><td>When is it at height H?</td><td>Solve <span class="fx">y = H</span></td><td>Subtract H to get = 0, then solve. Often <b>two</b> answers: once going up, once coming down</td></tr>
+  </table></div>
+  <p class="note">"Don't be afraid to make a sketch" (her tip on the sheet): a quick hump with the start height, the top and the landing point keeps the answers straight.</p>
+
+  <div class="worked"><b>Twin 1:</b> a ball is thrown from a roof: <span class="fx">y = &minus;16x&sup2; + 48x + 64</span>.<br>
+    <b>Initial height:</b> 64 ft.<br>
+    <b>Max:</b> x = &minus;48/(2&middot;&minus;16) = 1.5 s; y = &minus;16(2.25) + 48(1.5) + 64 = &minus;36 + 72 + 64 = <b>100 ft</b>.<br>
+    <b>Hits the ground:</b> &minus;16x&sup2; + 48x + 64 = 0 &rarr; divide by &minus;16: x&sup2; &minus; 3x &minus; 4 = 0 &rarr; (x &minus; 4)(x + 1) = 0 &rarr; <b>4 s</b> (&minus;1 makes no sense for time).<br>
+    <b>When at 96 ft?</b> &minus;16x&sup2; + 48x + 64 = 96 &rarr; &minus;16x&sup2; + 48x &minus; 32 = 0 &rarr; x&sup2; &minus; 3x + 2 = 0 &rarr; <b>1 s and 2 s</b> (up, then down).</div>
+  <div class="worked"><b>Twin 2 (needs the formula and rounding):</b> <span class="fx">y = &minus;16x&sup2; + 96x + 40</span>.<br>
+    <b>Initial height:</b> 40 ft. &nbsp;<b>Max:</b> x = 3 s, y = &minus;144 + 288 + 40 = <b>184 ft</b>.<br>
+    <b>Hits the ground:</b> x = (&minus;96 &plusmn; &radic;(96&sup2; &minus; 4(&minus;16)(40))) / (2&middot;&minus;16) = (&minus;96 &plusmn; &radic;11776) / &minus;32. &radic;11776 &asymp; 108.52 &rarr; <b>x &asymp; 6.39 s</b> (the other root, &asymp; &minus;0.39, is before the throw).<br>
+    <b>When at 100 ft?</b> &minus;16x&sup2; + 96x &minus; 60 = 0 &rarr; x &asymp; <b>0.71 s and 5.29 s</b>.</div>
+
+  <!-- ================= COMPLEX ================= -->
+  <h2 id="complex">4 &middot; Complex numbers &amp; <i>i</i> (problems 8&ndash;9)</h2>
+  <div class="big"><b>The one rule:</b> <span class="fx">i = &radic;&minus;1</span>, so <span class="fx">i&sup2; = &minus;1</span>. A complex number is written <span class="fx">a + bi</span> (real part first).</div>
+
+  <div class="card">
+    <h3 class="part">Add, subtract, multiply</h3>
+    <ul>
+      <li><b>Add/subtract:</b> combine real with real, <i>i</i> with <i>i</i>. Distribute a minus sign to <b>both</b> parts.</li>
+      <li><b>Multiply:</b> FOIL (or distribute), then replace every <span class="fx">i&sup2;</span> with <b>&minus;1</b> and combine.</li>
+    </ul>
+    <div class="worked"><b>Twin:</b> <span class="fx">(3 &minus; 2i)(5 &minus; 4i)</span> = 15 &minus; 12i &minus; 10i + 8i&sup2; = 15 &minus; 22i + 8(&minus;1) = <b>7 &minus; 22i</b>.</div>
+    <div class="worked"><b>Twin:</b> <span class="fx">4i(2 &minus; 3i) &minus; (1 &minus; 5i)</span> = 8i &minus; 12i&sup2; &minus; 1 + 5i = 8i + 12 &minus; 1 + 5i = <b>11 + 13i</b>.</div>
+    <div class="trap"><b>Trap:</b> <span class="fx">&minus;12i&sup2;</span> becomes <b>+12</b> (minus times minus). And <span class="fx">&minus;(1 &minus; 5i) = &minus;1 + 5i</span>.</div>
+  </div>
+
+  <div class="card">
+    <h3 class="part">Powers of <i>i</i>: they repeat every 4</h3>
+    <div class="tbl"><table>
+      <tr><th>i&sup1;</th><th>i&sup2;</th><th>i&sup3;</th><th>i&#8308;</th></tr>
+      <tr><td class="fx">i</td><td class="fx">&minus;1</td><td class="fx">&minus;i</td><td class="fx">1</td></tr>
+    </table></div>
+    <p>Divide the exponent by 4 and use the <b>remainder</b>: remainder 1 &rarr; i, 2 &rarr; &minus;1, 3 &rarr; &minus;i, 0 &rarr; 1.</p>
+    <div class="worked"><b>Twins:</b> <span class="fx">i&sup1;&#8312;</span>: 18 &divide; 4 = 4 r <b>2</b> &rarr; <b>&minus;1</b>. &nbsp; <span class="fx">i&sup3;&sup1;</span>: 31 &divide; 4 = 7 r <b>3</b> &rarr; <b>&minus;i</b>.</div>
+  </div>
+
+  <div class="card">
+    <h3 class="part">Square roots of negatives</h3>
+    <p>Pull out the <i>i</i> <b>first</b>: <span class="fx">&radic;&minus;n = i&radic;n</span>. Then simplify the radical: look for the biggest perfect square that divides n.</p>
+    <div class="worked"><b>Twins:</b><br>
+      <span class="fx">&radic;&minus;98 = i&radic;98 = i&radic;(49&middot;2) = 7i&radic;2</span><br>
+      <span class="fx">3&radic;&minus;48 = 3&middot;i&radic;(16&middot;3) = 3&middot;4i&radic;3 = 12i&radic;3</span><br>
+      <span class="fx">(3&radic;&minus;25)(&radic;8) = (3&middot;5i)(2&radic;2) = 30i&radic;2</span><br>
+      <span class="fx">&radic;49 + &radic;&minus;16 &minus; &radic;25 &minus; &radic;&minus;1 = 7 + 4i &minus; 5 &minus; i = 2 + 3i</span></div>
+    <div class="trap"><b>Trap:</b> write the <i>i</i> <b>outside</b> the radical (<span class="fx">7i&radic;2</span>, not <span class="fx">7&radic;2i</span>), so it can't be misread as being under the root.</div>
+  </div>
+
+  <!-- ================= PRACTICE ================= -->
+  <h2 id="practice">5 &middot; Practice set</h2>
+  <p class="note">New problems, one per type on your review sheet. Do each on paper, then open the answer.</p>
+
+  <div class="q"><div class="qn">1</div><div><p>Solve by factoring: <span class="fx">x&sup2; &minus; 5x &minus; 24 = 0</span></p><details><summary>Show answer</summary><div class="ans">Multiply to &minus;24, add to &minus;5: &minus;8 and +3. <span class="fx">(x &minus; 8)(x + 3) = 0</span> &rarr; <b>x = 8 or x = &minus;3</b>.</div></details></div></div>
+  <div class="q"><div class="qn">2</div><div><p>Solve by factoring: <span class="fx">4x&sup2; + 4x &minus; 15 = 0</span></p><details><summary>Show answer</summary><div class="ans">ac = &minus;60; multiply to &minus;60, add to 4: +10 and &minus;6. <span class="fx">4x&sup2; + 10x &minus; 6x &minus; 15 = 2x(2x + 5) &minus; 3(2x + 5) = (2x &minus; 3)(2x + 5)</span> &rarr; <b>x = 3/2 or x = &minus;5/2</b>.</div></details></div></div>
+  <div class="q"><div class="qn">3</div><div><p>Solve by completing the square: <span class="fx">x&sup2; &minus; 10x + 21 = 0</span></p><details><summary>Show answer</summary><div class="ans"><span class="fx">x&sup2; &minus; 10x + 25 = &minus;21 + 25</span> &rarr; <span class="fx">(x &minus; 5)&sup2; = 4</span> &rarr; <span class="fx">x &minus; 5 = &plusmn;2</span> &rarr; <b>x = 7 or x = 3</b>.</div></details></div></div>
+  <div class="q"><div class="qn">4</div><div><p>Solve by completing the square: <span class="fx">x&sup2; &minus; 4x + 29 = 0</span></p><details><summary>Show answer</summary><div class="ans"><span class="fx">x&sup2; &minus; 4x + 4 = &minus;29 + 4</span> &rarr; <span class="fx">(x &minus; 2)&sup2; = &minus;25</span> &rarr; <span class="fx">x &minus; 2 = &plusmn;5i</span> &rarr; <b>x = 2 &plusmn; 5i</b>.</div></details></div></div>
+  <div class="q"><div class="qn">5</div><div><p>Quadratic formula, round to the hundredth: <span class="fx">2x&sup2; + 7x &minus; 3 = 0</span></p><details><summary>Show answer</summary><div class="ans">b&sup2; &minus; 4ac = 49 + 24 = 73. <span class="fx">x = (&minus;7 &plusmn; &radic;73)/4</span>, &radic;73 &asymp; 8.544 &rarr; <b>x &asymp; 0.39 or x &asymp; &minus;3.89</b>.</div></details></div></div>
+  <div class="q"><div class="qn">6</div><div><p>Quadratic formula, round to the hundredth: <span class="fx">x&sup2; &minus; 6x + 2 = 0</span></p><details><summary>Show answer</summary><div class="ans">b&sup2; &minus; 4ac = 36 &minus; 8 = 28. <span class="fx">x = (6 &plusmn; &radic;28)/2 = 3 &plusmn; &radic;7</span>, &radic;7 &asymp; 2.6458 &rarr; <b>x &asymp; 5.65 or x &asymp; 0.35</b>.</div></details></div></div>
+  <div class="q"><div class="qn">7</div><div><p>For <span class="fx">f(x) = x&sup2; + 2x &minus; 15</span>, find the y-intercept, axis of symmetry, x-intercepts, vertex, factored form and vertex form.</p><details><summary>Show answer</summary><div class="ans">y-intercept <b>(0, &minus;15)</b> &middot; axis <b>x = &minus;1</b> &middot; x-intercepts <b>(3, 0), (&minus;5, 0)</b> &middot; vertex <b>(&minus;1, &minus;16)</b> &middot; factored <b>(x + 5)(x &minus; 3)</b> &middot; vertex form <b>(x + 1)&sup2; &minus; 16</b>.</div></details></div></div>
+  <div class="q"><div class="qn">8</div><div><p>For <span class="fx">f(x) = (x &minus; 2)(x + 4)</span>, find the x-intercepts, axis of symmetry, vertex, y-intercept, standard form and vertex form.</p><details><summary>Show answer</summary><div class="ans">x-intercepts <b>(2, 0), (&minus;4, 0)</b> &middot; axis halfway: (2 + &minus;4)/2 = <b>x = &minus;1</b> &middot; vertex f(&minus;1) = (&minus;3)(3) = &minus;9 &rarr; <b>(&minus;1, &minus;9)</b> &middot; y-intercept f(0) = (&minus;2)(4) &rarr; <b>(0, &minus;8)</b> &middot; standard <b>x&sup2; + 2x &minus; 8</b> &middot; vertex form <b>(x + 1)&sup2; &minus; 9</b>.</div></details></div></div>
+  <div class="q"><div class="qn">9</div><div><p>Convert <span class="fx">y = 2(x &minus; 1)&sup2; &minus; 18</span> to standard form, then to intercept form.</p><details><summary>Show answer</summary><div class="ans">Standard: <span class="fx">2(x&sup2; &minus; 2x + 1) &minus; 18 = 2x&sup2; &minus; 4x + 2 &minus; 18 = </span><b>2x&sup2; &minus; 4x &minus; 16</b>. Intercept: take out the 2: <span class="fx">2(x&sup2; &minus; 2x &minus; 8) = </span><b>2(x &minus; 4)(x + 2)</b>.</div></details></div></div>
+  <div class="q"><div class="qn">10</div><div><p>A parabola has its vertex at <b>(3, &minus;2)</b> and crosses the y-axis at <b>(0, 16)</b>. Write it in all three forms.</p><details><summary>Show answer</summary><div class="ans">Vertex form starts <span class="fx">y = a(x &minus; 3)&sup2; &minus; 2</span>. Plug in (0, 16): 16 = 9a &minus; 2 &rarr; a = 2.<br>Vertex: <b>y = 2(x &minus; 3)&sup2; &minus; 2</b> &middot; Standard: 2(x&sup2; &minus; 6x + 9) &minus; 2 = <b>2x&sup2; &minus; 12x + 16</b> &middot; Intercept: 2(x&sup2; &minus; 6x + 8) = <b>2(x &minus; 2)(x &minus; 4)</b>.</div></details></div></div>
+  <div class="q"><div class="qn">11</div><div><p>A rock is launched from a platform: <span class="fx">y = &minus;16x&sup2; + 80x + 96</span>. (a) Initial height? (b) Max height? (c) When does it hit the ground? (d) When is it 150 ft up? Round to the hundredth.</p><details><summary>Show answer</summary><div class="ans">(a) <b>96 ft</b>. (b) x = &minus;80/(&minus;32) = 2.5 s; y = &minus;16(6.25) + 80(2.5) + 96 = &minus;100 + 200 + 96 = <b>196 ft</b>. (c) &divide; &minus;16: x&sup2; &minus; 5x &minus; 6 = 0 &rarr; (x &minus; 6)(x + 1) = 0 &rarr; <b>6 s</b>. (d) &minus;16x&sup2; + 80x &minus; 54 = 0 &rarr; formula: x = (&minus;80 &plusmn; &radic;2944)/(&minus;32), &radic;2944 &asymp; 54.26 &rarr; <b>x &asymp; 0.80 s and 4.20 s</b>.</div></details></div></div>
+  <div class="q"><div class="qn">12</div><div><p>Simplify: (a) <span class="fx">(2 + i)(3 &minus; 4i)</span> &nbsp;(b) <span class="fx">2i(4 + i) &minus; (6 &minus; 2i)</span> &nbsp;(c) <span class="fx">(4 + 2i) &minus; 3i(2 &minus; 5i)</span> &nbsp;(d) <span class="fx">i&sup2;&sup2;</span> &nbsp;(e) <span class="fx">i&#8308;&sup1;</span></p><details><summary>Show answer</summary><div class="ans">(a) 6 &minus; 8i + 3i &minus; 4i&sup2; = <b>10 &minus; 5i</b>. (b) 8i + 2i&sup2; &minus; 6 + 2i = 8i &minus; 2 &minus; 6 + 2i = <b>&minus;8 + 10i</b>. (c) 4 + 2i &minus; 6i + 15i&sup2; = 4 + 2i &minus; 6i &minus; 15 = <b>&minus;11 &minus; 4i</b>. (d) remainder 2 &rarr; <b>&minus;1</b>. (e) remainder 1 &rarr; <b>i</b>.</div></details></div></div>
+  <div class="q"><div class="qn">13</div><div><p>Simplify in terms of <i>i</i>: (a) <span class="fx">&radic;&minus;18</span> &nbsp;(b) <span class="fx">2&radic;&minus;75</span> &nbsp;(c) <span class="fx">(2&radic;&minus;9)(&radic;12)</span> &nbsp;(d) <span class="fx">&radic;&minus;36 + &radic;81 &minus; &radic;&minus;9</span></p><details><summary>Show answer</summary><div class="ans">(a) <b>3i&radic;2</b>. (b) 2&middot;5i&radic;3 = <b>10i&radic;3</b>. (c) (2&middot;3i)(2&radic;3) = <b>12i&radic;3</b>. (d) 6i + 9 &minus; 3i = <b>9 + 3i</b>.</div></details></div></div>
+
+  <p class="footer">Original review for Mrs. Howard's "A2: Unit 3 Review" and "Converting Forms of Quadratics" worksheet. All examples and practice use new numbers; do your real sheets yourself.</p>
+</div>
+<script>
+(function(){
+  /* small static parabola plots */
+  function plot(id,f,xmin,xmax,ymin,ymax,pts){
+    var s=document.getElementById(id);if(!s)return;
+    var W=300,H=300,X=function(x){return (x-xmin)/(xmax-xmin)*W},Y=function(y){return H-(y-ymin)/(ymax-ymin)*H};
+    var g='';
+    for(var x=Math.ceil(xmin);x<=xmax;x++)g+='<line x1="'+X(x)+'" y1="0" x2="'+X(x)+'" y2="'+H+'" stroke="#eee"/>';
+    for(var y=Math.ceil(ymin/2)*2;y<=ymax;y+=2)g+='<line x1="0" y1="'+Y(y)+'" x2="'+W+'" y2="'+Y(y)+'" stroke="#eee"/>';
+    g+='<line x1="'+X(0)+'" y1="0" x2="'+X(0)+'" y2="'+H+'" stroke="#888"/><line x1="0" y1="'+Y(0)+'" x2="'+W+'" y2="'+Y(0)+'" stroke="#888"/>';
+    var d='';for(var i=0;i<=200;i++){var xx=xmin+(xmax-xmin)*i/200,yy=f(xx);d+=(i?'L':'M')+X(xx).toFixed(1)+' '+Y(yy).toFixed(1)}
+    g+='<path d="'+d+'" fill="none" stroke="#e8623d" stroke-width="2.5"/>';
+    pts.forEach(function(p){g+='<circle cx="'+X(p[0])+'" cy="'+Y(p[1])+'" r="4.5" fill="#2f6db5"/><text x="'+(X(p[0])+6)+'" y="'+(Y(p[1])-6)+'" font-size="12" font-family="Nunito,sans-serif" fill="#233047">('+p[0]+', '+p[1]+')</text>'});
+    s.innerHTML=g;
+  }
+  plot('plot1',function(x){return x*x-2*x-8},-5,6,-11,9,[[1,-9],[4,0],[-2,0],[0,-8]]);
+  plot('plot2',function(x){return (x+2)*(x+6)},-9,2,-6,14,[[-4,-4],[-2,0],[-6,0],[0,12]]);
+})();
+/* Guarded hub back-link (portability rule: renders ONLY with ?back=<classId>) */
+(function(){
+  try{
+    var id=new URLSearchParams(location.search).get('back');
+    if(!id) return;
+    var a=document.createElement('a');
+    a.href='../index.html#'+encodeURIComponent(id);
+    a.textContent='← Back to Study Hub';
+    a.style.cssText='display:inline-block;margin:0 0 14px;font:800 13.5px Nunito,"Segoe UI",system-ui,sans-serif;color:#5a6b83;text-decoration:none';
+    var wrap=document.querySelector('.wrap')||document.body; wrap.insertBefore(a,wrap.firstChild);
+  }catch(e){}
+})();
+</script>
+</body></html>

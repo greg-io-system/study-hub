@@ -40,6 +40,24 @@ window.STUDY_HUB = {
       blurb: "Concept-first lessons you can poke at. Drag the graphs — they show how the math actually works.",
       weeks: [
         {
+          range: "Since Oct 22",
+          theme: "Unit 3 · Quadratics & Complex Numbers",
+          lessons: [
+            {
+              title: "Unit 3 Test — Review",
+              topic: "Every problem type on Mrs. Howard's Unit 3 Review, taught on new numbers",
+              file: "lessons/algebra-2-unit-3-test-review.html",
+              date: "2026-11-14",
+              summary: "For the Unit 3 test on Mon 11/16: factoring, completing the square and the quadratic formula; graphing a parabola and switching between standard, intercept and vertex form; thrown-object word problems; complex numbers, powers of i and square roots of negatives. Worked examples with different numbers, then 13 practice problems with hidden answers. Do your real review sheet yourself.",
+              tags: ["test prep", "quadratics", "complex numbers", "practice"],
+              materials: [
+                { kind: "examples", label: "Test review + practice", file: "lessons/algebra-2-unit-3-test-review.html" },
+                { kind: "link", label: "Mrs. Howard's A2: Unit 3 Review", url: "https://docs.google.com/document/d/14ptw2LDhjTekby3L0PkwhR-7yazL04p96IXhFVJmKWY/" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Since Oct 1",
           theme: "Unit 2 · Systems & Piecewise",
           lessons: [
@@ -267,6 +285,25 @@ window.STUDY_HUB = {
       accent: "#b5445a",
       blurb: "How the body is built and how it keeps itself in balance — structures, tissues, and the feedback loops that run the show.",
       weeks: [
+        {
+          range: "Nov 16 – Nov 20",
+          theme: "Unit 4 · Muscular System exam",
+          lessons: [
+            {
+              title: "Unit 4 Exam Prep — the 6 FRQs & Practice Quiz",
+              topic: "All six free-response questions on Mrs. Kalec's Unit 4 Exam Review, plus every multiple-choice topic on it",
+              file: "lessons/hap-unit-4-muscular-exam-prep.html",
+              date: "2026-11-14",
+              summary: "For the Muscular System Exam on Mon 11/16: 2 of the 6 FRQs are picked at random, so all six are here, each with a checklist of what a full answer includes. Tap-in-order drills for the contraction sequence, a muscle-types table, the four disorders side by side, rigor mortis, and a 42-question practice quiz. Built only from Mrs. Kalec's slides, exam review and Exam Study Helper app.",
+              tags: ["exam prep", "FRQ", "practice quiz", "interactive"],
+              materials: [
+                { kind: "lesson", label: "FRQs + practice quiz", file: "lessons/hap-unit-4-muscular-exam-prep.html" },
+                { kind: "link", label: "Mrs. Kalec's Unit 4 Exam Review", url: "https://docs.google.com/document/d/1C6816owaQ3MKzed9k_1wKszZkI87TZ8gGJQSLs3aNAs/" },
+                { kind: "link", label: "Mrs. Kalec's Exam Study Helper app", url: "https://sites.google.com/jeffcoschools.us/muscularsystemexamprep/full-page-embed" }
+              ]
+            }
+          ]
+        },
         {
           range: "Nov 9 – Nov 13",
           theme: "Unit 4 · Muscular System",

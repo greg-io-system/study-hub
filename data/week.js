@@ -56,12 +56,16 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-16",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "MUSCULAR SYSTEM EXAM: multiple choice plus 2 of the 6 FRQs on the Unit 4 Exam Review, picked at random (prepare all six). No labeling. Lab 13 due. To study, Mrs. Kalec's \"Exam Study Helper\" app (posted Monday, link in Classroom) has a practice quiz, all six FRQs with her scoring points, flashcards and a tissue-types matrix. Her FRQ rule: \"The more details, the better!\""
+      what: "MUSCULAR SYSTEM EXAM: multiple choice plus 2 of the 6 FRQs on the Unit 4 Exam Review, picked at random (prepare all six). No labeling. Lab 13 due. To study, Mrs. Kalec's \"Exam Study Helper\" app (posted Monday, link in Classroom) has a practice quiz, all six FRQs with her scoring points, flashcards and a tissue-types matrix. Her FRQ rule: \"The more details, the better!\"",
+      help: "Exam prep: the 6 FRQs + practice quiz",
+      helpFile: "lessons/hap-unit-4-muscular-exam-prep.html"
     },
     {
       day: "Mon", date: "2026-11-16",
       subject: "algebra-2", subjectName: "Algebra 2",
-      what: "UNIT 3 TEST (moved to today; 100 pts). Mrs. Howard's \"A2: Unit 3 Review\" in Classroom is the study sheet: solving by factoring, completing the square and the quadratic formula; graphing a parabola and its key features; standard, intercept and vertex forms; projectile word problems; complex numbers and powers of i; square roots of negatives. Also on the item: the \"Converting Forms of Quadratics\" worksheet and five practice PDFs."
+      what: "UNIT 3 TEST (moved to today; 100 pts). Mrs. Howard's \"A2: Unit 3 Review\" in Classroom is the study sheet: solving by factoring, completing the square and the quadratic formula; graphing a parabola and its key features; standard, intercept and vertex forms; projectile word problems; complex numbers and powers of i; square roots of negatives. Also on the item: the \"Converting Forms of Quadratics\" worksheet and five practice PDFs.",
+      help: "Test review: every problem type + practice",
+      helpFile: "lessons/algebra-2-unit-3-test-review.html"
     },
     {
       day: "Mon", date: "2026-11-16",
