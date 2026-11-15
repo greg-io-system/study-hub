@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-15",
+  /* 2026-11-15 Sun evening: Algebra test row's help chip now points to the problem-by-problem review page */
   /* 2026-11-15 Sun: nothing new in any source; ask list unchanged (no answers) */
   /* 2026-11-14 Sat: nothing new in any source; window rolled to Nov 16-20 / Nov 23-27 (Thanksgiving Break moves from ahead into next); ask list unchanged (no answers) */
   /* 2026-11-13 Fri after school: English For Monday (Sontag on beauty) + the Fri 11/20 definition essay; Psych memory items (Loftus TED, Memory Types); French Padlet + weekly form; WH Trade Routes compare/contrast; Anatomy late-work-before-Monday; ask list refreshed */
@@ -65,8 +66,8 @@ window.STUDY_WEEK = {
       day: "Mon", date: "2026-11-16",
       subject: "algebra-2", subjectName: "Algebra 2",
       what: "UNIT 3 TEST (moved to today; 100 pts). Mrs. Howard's \"A2: Unit 3 Review\" in Classroom is the study sheet: solving by factoring, completing the square and the quadratic formula; graphing a parabola and its key features; standard, intercept and vertex forms; projectile word problems; complex numbers and powers of i; square roots of negatives. Also on the item: the \"Converting Forms of Quadratics\" worksheet and five practice PDFs.",
-      help: "Test review: every problem type + practice",
-      helpFile: "lessons/algebra-2-unit-3-test-review.html"
+      help: "Review sheet, problem by problem",
+      helpFile: "lessons/algebra-2-unit-3-review-problem-by-problem.html"
     },
     {
       day: "Mon", date: "2026-11-16",

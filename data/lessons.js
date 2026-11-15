@@ -44,6 +44,18 @@ window.STUDY_HUB = {
           theme: "Unit 3 · Quadratics & Complex Numbers",
           lessons: [
             {
+              title: "Unit 3 Review — Problem by Problem",
+              topic: "Mrs. Howard's Unit 3 Review sheet in its own order, problems 1-9, step by step",
+              file: "lessons/algebra-2-unit-3-review-problem-by-problem.html",
+              date: "2026-11-15",
+              summary: "Follows your review sheet problem by problem. For each one: exactly what to do, a worked twin with every line explained, then a try-it with the answer hidden. Includes how to read and draw the graphs in problems 4 and 5. Do the try-it, then the real problem on your sheet.",
+              tags: ["test prep", "quadratics", "complex numbers", "graphing"],
+              materials: [
+                { kind: "examples", label: "Problem by problem", file: "lessons/algebra-2-unit-3-review-problem-by-problem.html" },
+                { kind: "link", label: "Mrs. Howard's A2: Unit 3 Review", url: "https://docs.google.com/document/d/14ptw2LDhjTekby3L0PkwhR-7yazL04p96IXhFVJmKWY/" }
+              ]
+            },
+            {
               title: "Unit 3 Test — Review",
               topic: "Every problem type on Mrs. Howard's Unit 3 Review, taught on new numbers",
               file: "lessons/algebra-2-unit-3-test-review.html",
