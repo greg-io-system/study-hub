@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-15",
+  /* 2026-11-15 Sun late: Monday's English row's help chip now points to the Sontag method guide (was the Terms Library) */
   /* 2026-11-15 Sun night: ask list adds the Algebra calculator question (GHS ledger GH-15) */
   /* 2026-11-15 Sun evening: Algebra test row's help chip now points to the problem-by-problem review page */
   /* 2026-11-15 Sun: nothing new in any source; ask list unchanged (no answers) */
@@ -53,8 +54,8 @@ window.STUDY_WEEK = {
       day: "Mon", date: "2026-11-16",
       subject: "ap-english", subjectName: "AP English",
       what: "Before class: read Susan Sontag's \"A Woman's Beauty--A Put Down or Power Source\" (1975, linked in the email) through two lenses: (1) her rhetorical situation, found IN the text; (2) her argument of definition: her formal definition, the conditions it holds under (operational), and the examples linking her O to her F. Then write a SERIES of paragraphs that enter a conversation with her about beauty. Not \"I agree / I disagree\", not a summary: since 1975, has our definition of beauty changed (has it?), and where does yours collide with or differ from hers? Let your own exigence, audience, purpose and F/O/E show through the writing. Use evidence plus explanation and the precis sentences. REPLY to \"For Monday (11/16)\" before class.",
-      help: "Terms: the three kinds of definition, kairos and chronos",
-      helpFile: "lessons/ap-lang-terms-library.html"
+      help: "Method guide: from the reading to your paragraphs",
+      helpFile: "lessons/sontag-beauty-method-guide.html"
     },
     {
       day: "Mon", date: "2026-11-16",

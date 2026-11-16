@@ -478,6 +478,24 @@ window.STUDY_HUB = {
       blurb: "Reading like a writer — what an author is doing, how they're doing it, and how to say so on paper.",
       weeks: [
         {
+          range: "Nov 16 – Nov 20",
+          theme: "Arguments of definition",
+          lessons: [
+            {
+              title: "Into the parlor with Sontag — a method guide",
+              topic: "From the reading to the paragraphs: six margin tags, her claims as a chain, a three-line response list, then the writing",
+              file: "lessons/sontag-beauty-method-guide.html",
+              date: "2026-11-15",
+              summary: "For Monday 11/16: how to read Sontag through Mr. Evans's two lenses (exigence, audience, purpose and F, O, E) and turn your notes into a series of paragraphs that answer his two \"has it's\". Every step is modeled on a made-up essay about a different word, so your reading and your paragraphs stay yours. Ends with a before-you-reply check and how the same F, O, E carry into Friday's \"Define ___\" essay.",
+              tags: ["assignment help", "argument of definition", "F O E", "rhetorical situation"],
+              materials: [
+                { kind: "lesson", label: "Sontag method guide", file: "lessons/sontag-beauty-method-guide.html" },
+                { kind: "link", label: "Reading: A Woman's Beauty (Sontag)", url: "https://docs.google.com/document/d/1Q1EVJQ3hdM_xKVEDzLs-607aRzLKPb7ZLit_cJMaC-I/" }
+              ]
+            }
+          ]
+        },
+        {
           range: "Oct 12 – Oct 16",
           theme: "Position Paper #1 final",
           lessons: [
