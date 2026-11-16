@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-15",
+  updated: "2026-11-16",
+  /* 2026-11-16 Mon: French sub week (Mr. Keirns out: Edpuzzle tonight, pronunciation practice Tue, presentation instructions Tue); Psych Larry P podcast worksheet (today) + Unit 2 Progress Check (Wed 1:30 PM, 3 pts back on the test); WH Empires Presentation Project (25 pts, Fri); ask list refreshed */
   /* 2026-11-15 Sun late: Monday's English row's help chip now points to the Sontag method guide (was the Terms Library) */
   /* 2026-11-15 Sun night: ask list adds the Algebra calculator question (GHS ledger GH-15) */
   /* 2026-11-15 Sun evening: Algebra test row's help chip now points to the problem-by-problem review page */
@@ -74,12 +75,27 @@ window.STUDY_WEEK = {
     {
       day: "Mon", date: "2026-11-16",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "DUE: \"AMSCo Pages 361-381\" (Cognition), with the companion workbook in Classroom."
+      what: "DUE: \"AMSCo Pages 361-381\" (Cognition), with the companion workbook in Classroom. In class: \"The Miseducation of Larry P\" -- listen to the podcast and fill in the paper worksheet (on the front table under the board)."
+    },
+    {
+      day: "Mon", date: "2026-11-16",
+      subject: "ap-french", subjectName: "French",
+      what: "Mr. Keirns is out most of this week (his baby came early). Do the work in his order: (1) TONIGHT 11:59 PM: \"Edpuzzle - La Terrible Sorcière\"; (2) the pronunciation practice (Tue); (3) a presentation -- instructions and an example post Tuesday morning. If you finish early Wednesday, quietly read and do \"Lecture Indépendante\"."
+    },
+    {
+      day: "Tue", date: "2026-11-17",
+      subject: "ap-french", subjectName: "French",
+      what: "DUE: \"Terrible Sorcière Pronunciation Practice\" (10 pts). Turn on Voice Typing (Tools > Voice Typing, language Français), read the story lines aloud and note what the microphone heard; then write your own ending to the story, at least seven more sentences, and read those aloud too."
     },
     {
       day: "Tue", date: "2026-11-17",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Nervous System starts. Ambient Temperature Lab due (Unit 4 Calendar date; Classroom shows 11/11)."
+    },
+    {
+      day: "Wed", date: "2026-11-18",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "BEFORE 1:30 PM: the AP Classroom Unit 2 Progress Check. Mrs. Aschwanden gives 3 points back on the test (extra credit) for finishing it in time. Unlimited attempts, so use them to get the answers right."
     },
     {
       day: "Thu", date: "2026-11-19",
@@ -92,6 +108,11 @@ window.STUDY_WEEK = {
       what: "DUE BEFORE CLASS: the topical writing \"Define ___\", your own argument-of-definition ESSAY. Pick ONE term you know well: fun, risk, wealth, pleasure, intelligence, athletic, work, fear or guilt. Your position is your F; your O's are the conditions where your F holds (and where it doesn't); your E's are examples of your F under those O's. Mr. Evans's challenge: use a trap door, so the essay slowly reveals rather than merely defines. Models: Chau, Pitts Jr., Staples, Haile, \"What is a City\", Zadeh, Gold, Bronson and Merryman.",
       help: "Terms: the three kinds of definition, trap door",
       helpFile: "lessons/ap-lang-terms-library.html"
+    },
+    {
+      day: "Fri", date: "2026-11-20",
+      subject: "world-history", subjectName: "World History",
+      what: "DUE: \"Empires Presentation Project\" (25 pts), a group slideshow of about 8 slides on one Third-Wave empire: title; historical context and rise; the five SPICE themes (social, political, interactions, cultural, economic); the fall and conclusion; and 5+ reliable sources in Chicago style. Short bullets and visuals on the slides, the detail in the speaker notes. Check the \"Must Haves\" doc for your empire's required points and use the research guide, guided questions and rubric in Classroom. AI only to help find sources."
     }
   ],
   nextLabel: "Nov 23 – Nov 27",
@@ -111,6 +132,7 @@ window.STUDY_WEEK = {
     { q: "For the Fri 11/20 \"Define ___\" essay, which term are you thinking of, and has Mr. Evans said how to hand it in (reply or a Doc)?", subject: "ap-english", subjectName: "AP English" },
     { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
-    { q: "Mrs. Aschwanden just posted the Cognition study materials. When is the Cognition test?", subject: "ap-psychology", subjectName: "AP Psychology" },
-    { q: "The \"Loup Garou / Halloween Vocab to study\" doc went up Wednesday, after Monday's Halloween quiz. Is there a new quiz or activity on it? When?", subject: "ap-french", subjectName: "French" }  ]
+    { q: "The Unit 2 Progress Check gives 3 points back \"on the test\". Which test is that -- the Cognition test? When is it?", subject: "ap-psychology", subjectName: "AP Psychology" },
+    { q: "Empires Presentation: which empire is your group doing, and who is in your group? Is Friday the day you present, or just the day the slides are due?", subject: "world-history", subjectName: "World History" },
+    { q: "French presentation (instructions post Tuesday): when is it due, and do you present it in class?", subject: "ap-french", subjectName: "French" }  ]
 };
