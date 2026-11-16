@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-15",
+  /* 2026-11-15 Sun night: ask list adds the Algebra calculator question (GHS ledger GH-15) */
   /* 2026-11-15 Sun evening: Algebra test row's help chip now points to the problem-by-problem review page */
   /* 2026-11-15 Sun: nothing new in any source; ask list unchanged (no answers) */
   /* 2026-11-14 Sat: nothing new in any source; window rolled to Nov 16-20 / Nov 23-27 (Thanksgiving Break moves from ahead into next); ask list unchanged (no answers) */
@@ -105,6 +106,7 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
+    { q: "Calculator for Algebra: can you ask Mrs. Howard (1) does the school lend or rent calculators, (2) is a TI-84 Plus fine or does it need to be the CE, and (3) is Desmos allowed for homework and on tests?", subject: "algebra-2", subjectName: "Algebra 2" },
     { q: "For the Fri 11/20 \"Define ___\" essay, which term are you thinking of, and has Mr. Evans said how to hand it in (reply or a Doc)?", subject: "ap-english", subjectName: "AP English" },
     { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
