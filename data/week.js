@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-16",
+  /* 2026-11-16 Mon after school: English For Tuesday (Mairs + Sontag, two academic paragraphs); ask list drops the calculator question (settled, GH-15) */
   /* 2026-11-16 Mon: French sub week (Mr. Keirns out: Edpuzzle tonight, pronunciation practice Tue, presentation instructions Tue); Psych Larry P podcast worksheet (today) + Unit 2 Progress Check (Wed 1:30 PM, 3 pts back on the test); WH Empires Presentation Project (25 pts, Fri); ask list refreshed */
   /* 2026-11-15 Sun late: Monday's English row's help chip now points to the Sontag method guide (was the Terms Library) */
   /* 2026-11-15 Sun night: ask list adds the Algebra calculator question (GHS ledger GH-15) */
@@ -84,6 +85,11 @@ window.STUDY_WEEK = {
     },
     {
       day: "Tue", date: "2026-11-17",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: read and annotate Nancy Mairs, \"On Being a Cripple\" (your copy of 50 Essays) -- read the two questions first. Then write TWO academic paragraphs, each bringing Mairs and Sontag into the room with YOUR voice as the third: (1) what Mairs means by a \"gap between word and reality\" (paragraph 3), and would Sontag find a similar gap in her word? (2) Sontag's and Mairs's reflections on \"the ideal\" (Mairs, paragraphs 20-21). Evidence and commentary from BOTH essays in each paragraph; introduce each with the first sentence of a rhetorical precis. You may reuse your Sontag writing from Monday. Mr. Evans's \"They Say / I Say\" templates doc helps join two voices. REPLY to \"For Tuesday (11/17)\" with both paragraphs."
+    },
+    {
+      day: "Tue", date: "2026-11-17",
       subject: "ap-french", subjectName: "French",
       what: "DUE: \"Terrible Sorcière Pronunciation Practice\" (10 pts). Turn on Voice Typing (Tools > Voice Typing, language Français), read the story lines aloud and note what the microphone heard; then write your own ending to the story, at least seven more sentences, and read those aloud too."
     },
@@ -128,7 +134,6 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "Calculator for Algebra: can you ask Mrs. Howard (1) does the school lend or rent calculators, (2) is a TI-84 Plus fine or does it need to be the CE, and (3) is Desmos allowed for homework and on tests, including the Desmos Test Mode app on your phone or on the school Chromebook?", subject: "algebra-2", subjectName: "Algebra 2" },
     { q: "For the Fri 11/20 \"Define ___\" essay, which term are you thinking of, and has Mr. Evans said how to hand it in (reply or a Doc)?", subject: "ap-english", subjectName: "AP English" },
     { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
