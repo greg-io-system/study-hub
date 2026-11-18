@@ -639,6 +639,20 @@ window.STUDY_HUB = {
       blurb: "Why people think and act the way they do — the approaches, the research methods, and the big ideas behind them.",
       weeks: [
         {
+          range: "Nov 16 – Nov 20",
+          theme: "Unit 2 · Cognition",
+          lessons: [
+            {
+              title: "Cognition Test Prep",
+              topic: "Every term on Mrs. Aschwanden's Cognition study guide, plus a practice quiz",
+              file: "lessons/cognition-test-prep.html",
+              date: "2026-11-18",
+              summary: "Built on her study guide, slides and practice sets: perception and attention, thinking and problem solving, memory systems, encoding, retrieval and forgetting, intelligence and testing, with side-by-side tables of the terms people mix up. AAQ statistics with her answer frame. Then a practice quiz with new scenarios, filter by topic, click to reveal.",
+              tags: ["test prep", "cognition", "memory", "intelligence"]
+            }
+          ]
+        },
+        {
           range: "Oct 5 – Oct 9",
           theme: "Topics 1.6 + 2.1 · Sensation & Perception",
           lessons: [
