@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-17",
+  /* 2026-11-17 Tue evening: Psych Cognition test Fri 11/20 (from Greg, not in Classroom); WH presentation is presented in class Fri; ask list asks the Psych test scope */
   /* 2026-11-17 Tue after school: English For Thursday ("What is funny?", three layers of humor notes); French video project (40 pts, Fri); Anatomy Unit 5 Nervous System opened (Neuron Diagram Thu; exam Fri 12/11, final Wed 12/16 into ahead); ask list drops the French presentation question, adds the Psych jail field trip date */
   /* 2026-11-16 Mon after school: English For Tuesday (Mairs + Sontag, two academic paragraphs); ask list drops the calculator question (settled, GH-15) */
   /* 2026-11-16 Mon: French sub week (Mr. Keirns out: Edpuzzle tonight, pronunciation practice Tue, presentation instructions Tue); Psych Larry P podcast worksheet (today) + Unit 2 Progress Check (Wed 1:30 PM, 3 pts back on the test); WH Empires Presentation Project (25 pts, Fri); ask list refreshed */
@@ -139,7 +140,12 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-11-20",
       subject: "world-history", subjectName: "World History",
-      what: "DUE: \"Empires Presentation Project\" (25 pts), a group slideshow of about 8 slides on one Third-Wave empire: title; historical context and rise; the five SPICE themes (social, political, interactions, cultural, economic); the fall and conclusion; and 5+ reliable sources in Chicago style. Short bullets and visuals on the slides, the detail in the speaker notes. Check the \"Must Haves\" doc for your empire's required points and use the research guide, guided questions and rubric in Classroom. AI only to help find sources. Your group also fills in the \"Empires Project Check-In\" form in Classroom: members, empire, and who owns each part."
+      what: "PRESENT IN CLASS: \"Empires Presentation Project\" (25 pts), a group slideshow of about 8 slides on one Third-Wave empire: title; historical context and rise; the five SPICE themes (social, political, interactions, cultural, economic); the fall and conclusion; and 5+ reliable sources in Chicago style. Short bullets and visuals on the slides, the detail in the speaker notes. Check the \"Must Haves\" doc for your empire's required points and use the research guide, guided questions and rubric in Classroom. AI only to help find sources. Your group also fills in the \"Empires Project Check-In\" form in Classroom: members, empire, and who owns each part."
+    },
+    {
+      day: "Fri", date: "2026-11-20",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "PSYCH TEST (Cognition) -- told to us, not posted in Classroom. Mrs. Aschwanden's \"Cognition Study Materials\" in Classroom (study guide, practice test, multiple-choice practice) are the place to start. Wednesday's Progress Check earns 3 points back on this test."
     },
     {
       day: "Fri", date: "2026-11-20",
@@ -170,7 +176,7 @@ window.STUDY_WEEK = {
     { q: "For the Fri 11/20 \"Define ___\" essay, which term are you thinking of, and has Mr. Evans said how to hand it in (reply or a Doc)?", subject: "ap-english", subjectName: "AP English" },
     { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
-    { q: "The Unit 2 Progress Check gives 3 points back \"on the test\". Which test is that -- the Cognition test? When is it?", subject: "ap-psychology", subjectName: "AP Psychology" },
-    { q: "Empires Presentation: which empire is your group doing, and who is in your group? Is Friday the day you present, or just the day the slides are due?", subject: "world-history", subjectName: "World History" },
+    { q: "Friday's Psych test: which topics does it cover -- 2.2 through 2.8, or something else? Is it multiple choice, FRQ, or both?", subject: "ap-psychology", subjectName: "AP Psychology" },
+    { q: "Empires Presentation: which empire is your group doing, and who is in your group?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden posted meeting times for the field trip to the jail. Are you going, and what day is it?", subject: "ap-psychology", subjectName: "AP Psychology" }  ]
 };
