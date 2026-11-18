@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-16",
+  updated: "2026-11-17",
+  /* 2026-11-17 Tue after school: English For Thursday ("What is funny?", three layers of humor notes); French video project (40 pts, Fri); Anatomy Unit 5 Nervous System opened (Neuron Diagram Thu; exam Fri 12/11, final Wed 12/16 into ahead); ask list drops the French presentation question, adds the Psych jail field trip date */
   /* 2026-11-16 Mon after school: English For Tuesday (Mairs + Sontag, two academic paragraphs); ask list drops the calculator question (settled, GH-15) */
   /* 2026-11-16 Mon: French sub week (Mr. Keirns out: Edpuzzle tonight, pronunciation practice Tue, presentation instructions Tue); Psych Larry P podcast worksheet (today) + Unit 2 Progress Check (Wed 1:30 PM, 3 pts back on the test); WH Empires Presentation Project (25 pts, Fri); ask list refreshed */
   /* 2026-11-15 Sun late: Monday's English row's help chip now points to the Sontag method guide (was the Terms Library) */
@@ -96,12 +97,32 @@ window.STUDY_WEEK = {
     {
       day: "Tue", date: "2026-11-17",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "Nervous System starts. Ambient Temperature Lab due (Unit 4 Calendar date; Classroom shows 11/11)."
+      what: "Unit 5 Nervous System starts: Mrs. Kalec's \"Unit 5 Calendar\" and \"Nervous System Notes\" slides are in Classroom. Ambient Temperature Lab due (Unit 4 Calendar date; Classroom shows 11/11)."
+    },
+    {
+      day: "Tue", date: "2026-11-17",
+      subject: "ap-psychology", subjectName: "AP Psychology",
+      what: "\"3.1 and 3.2 Quiz\" (Google Form in Classroom, due today)."
     },
     {
       day: "Wed", date: "2026-11-18",
       subject: "ap-psychology", subjectName: "AP Psychology",
       what: "BEFORE 1:30 PM: the AP Classroom Unit 2 Progress Check. Mrs. Aschwanden gives 3 points back on the test (extra credit) for finishing it in time. Unlimited attempts, so use them to get the answers right."
+    },
+    {
+      day: "Wed", date: "2026-11-18",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "Neurotransmission notes; Lab 17 and Lab 18 start (both due Dec 1)."
+    },
+    {
+      day: "Thu", date: "2026-11-19",
+      subject: "ap-english", subjectName: "AP English",
+      what: "Before class: \"What is funny?\" -- three layers of notes that blend your sources (your notes ARE Thursday's graded conversation). (1) What humor, or a \"sense of humor\", can do in writing and talk (Mairs opens with humor; see her paragraph 7), then explore Mary Hirsch's line \"Humor is a rubber sword\" from many angles. (2) Jon Stewart on CNN's Crossfire, the first 8:45 only; pause for notes at 3:00, 3:40, 4:16, 5:05, 6:00, 6:20, 7:17 and 7:55 -- posture, stance, wit, and the serious message under the humor. (3) Michael Jr.'s TED talk \"More than funny\": he uses humor in order to ___, and his act as a metaphor in order to ___ -- toward defining \"humorist\". REPLY to \"For Thursday (11/19)\" with your notes. Mr. Evans plans some class time Thursday for Friday's essay."
+    },
+    {
+      day: "Thu", date: "2026-11-19",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "DUE: \"Neuron Diagram\" (Google Drawing in Classroom): label all the parts of a nerve cell with text boxes. The \"Nervous System Notes\" slides on neurons and the myelin sheath have the parts."
     },
     {
       day: "Thu", date: "2026-11-19",
@@ -118,7 +139,17 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-11-20",
       subject: "world-history", subjectName: "World History",
-      what: "DUE: \"Empires Presentation Project\" (25 pts), a group slideshow of about 8 slides on one Third-Wave empire: title; historical context and rise; the five SPICE themes (social, political, interactions, cultural, economic); the fall and conclusion; and 5+ reliable sources in Chicago style. Short bullets and visuals on the slides, the detail in the speaker notes. Check the \"Must Haves\" doc for your empire's required points and use the research guide, guided questions and rubric in Classroom. AI only to help find sources."
+      what: "DUE: \"Empires Presentation Project\" (25 pts), a group slideshow of about 8 slides on one Third-Wave empire: title; historical context and rise; the five SPICE themes (social, political, interactions, cultural, economic); the fall and conclusion; and 5+ reliable sources in Chicago style. Short bullets and visuals on the slides, the detail in the speaker notes. Check the \"Must Haves\" doc for your empire's required points and use the research guide, guided questions and rubric in Classroom. AI only to help find sources. Your group also fills in the \"Empires Project Check-In\" form in Classroom: members, empire, and who owns each part."
+    },
+    {
+      day: "Fri", date: "2026-11-20",
+      subject: "ap-french", subjectName: "French",
+      what: "DUE: \"La fin de l'histoire - video project\" (40 pts). Turn the ending you wrote for Mr. Keirns's story into your own video presentation, like his example video in Classroom. Google Slides, Canva, TikTok or any video or screen-recording app is fine. Alone or in a group of 2 at most."
+    },
+    {
+      day: "Fri", date: "2026-11-20",
+      subject: "human-anatomy", subjectName: "Human Anatomy",
+      what: "In class: Candy Neuron and the Action Potential video (Unit 5 Calendar)."
     }
   ],
   nextLabel: "Nov 23 – Nov 27",
@@ -130,6 +161,8 @@ window.STUDY_WEEK = {
     }
   ],
   ahead: [
+    { date: "2026-12-11", subject: "human-anatomy", subjectName: "Human Anatomy", what: "NERVOUS SYSTEM EXAM (Unit 5 Calendar); labs 17-19 due Nov 30-Dec 4 before it" },
+    { date: "2026-12-16", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Anatomy FINAL EXAM (Wednesday block, Unit 5 Calendar)" },
     { date: "~2026-12-16", subjectName: "School", what: "Semester finals week (Dec 14–18); winter break starts Dec 21" },
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
@@ -139,5 +172,5 @@ window.STUDY_WEEK = {
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
     { q: "The Unit 2 Progress Check gives 3 points back \"on the test\". Which test is that -- the Cognition test? When is it?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "Empires Presentation: which empire is your group doing, and who is in your group? Is Friday the day you present, or just the day the slides are due?", subject: "world-history", subjectName: "World History" },
-    { q: "French presentation (instructions post Tuesday): when is it due, and do you present it in class?", subject: "ap-french", subjectName: "French" }  ]
+    { q: "Mrs. Aschwanden posted meeting times for the field trip to the jail. Are you going, and what day is it?", subject: "ap-psychology", subjectName: "AP Psychology" }  ]
 };
