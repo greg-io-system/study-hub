@@ -24,6 +24,7 @@
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
   updated: "2026-11-18",
+  /* 2026-11-18 Wed night: Psych test scope from Greg -- 2.2 through 2.8, all multiple choice; row says which prep-page sections; scope question dropped from the ask list */
   /* 2026-11-18 Wed evening: Psych Cognition test moved to THU 11/19 (from Greg); help chip to the new Cognition test prep page; ask list says Thursday */
   /* 2026-11-18 Wed midday: French Wed row (finish the week's work by end of class; Mr. Keirns back Thu for DA and Fri for class, retakes; Padlet reminder); ask list unchanged (no answers) */
   /* 2026-11-17 Tue evening: Psych Cognition test Fri 11/20 (from Greg, not in Classroom); WH Empires project is class work, not homework; ask list asks the Psych test scope */
@@ -140,7 +141,7 @@ window.STUDY_WEEK = {
     {
       day: "Thu", date: "2026-11-19",
       subject: "ap-psychology", subjectName: "AP Psychology",
-      what: "PSYCH TEST (Cognition) -- moved up to TODAY (we heard Wednesday; not posted in Classroom). Start with the prep page below, then Mrs. Aschwanden's \"Cognition Study Materials\" in Classroom (study guide, practice test, multiple-choice practice). Wednesday's Progress Check earns 3 points back on this test.",
+      what: "PSYCH TEST (Cognition) -- moved up to TODAY from Friday. Topics 2.2 through 2.8, ALL MULTIPLE CHOICE. On the prep page that is sections 2-6 plus the quiz (Perception, topic 2.1, is last priority; section 7's AAQ write-up isn't needed, but know what SD, r and percentile mean). Start with the prep page below, then Mrs. Aschwanden's \"Cognition Study Materials\" in Classroom (study guide, practice test, multiple-choice practice). Wednesday's Progress Check earns 3 points back on this test.",
       help: "Cognition test prep: every study-guide term + practice quiz",
       helpFile: "lessons/cognition-test-prep.html"
     },
@@ -185,7 +186,6 @@ window.STUDY_WEEK = {
     { q: "For the Fri 11/20 \"Define ___\" essay, which term are you thinking of, and has Mr. Evans said how to hand it in (reply or a Doc)?", subject: "ap-english", subjectName: "AP English" },
     { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
-    { q: "Thursday's Psych test: which topics does it cover -- 2.2 through 2.8, or something else? Is it multiple choice, FRQ, or both?", subject: "ap-psychology", subjectName: "AP Psychology" },
     { q: "Empires Presentation: which empire is your group doing, and who is in your group? Do you present it Friday, or just turn in the slides?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden posted meeting times for the field trip to the jail. Are you going, and what day is it?", subject: "ap-psychology", subjectName: "AP Psychology" }  ]
 };
