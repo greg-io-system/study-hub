@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-17",
+  updated: "2026-11-18",
+  /* 2026-11-18 Wed midday: French Wed row (finish the week's work by end of class; Mr. Keirns back Thu for DA and Fri for class, retakes; Padlet reminder); ask list unchanged (no answers) */
   /* 2026-11-17 Tue evening: Psych Cognition test Fri 11/20 (from Greg, not in Classroom); WH Empires project is class work, not homework; ask list asks the Psych test scope */
   /* 2026-11-17 Tue after school: English For Thursday ("What is funny?", three layers of humor notes); French video project (40 pts, Fri); Anatomy Unit 5 Nervous System opened (Neuron Diagram Thu; exam Fri 12/11, final Wed 12/16 into ahead); ask list drops the French presentation question, adds the Psych jail field trip date */
   /* 2026-11-16 Mon after school: English For Tuesday (Mairs + Sontag, two academic paragraphs); ask list drops the calculator question (settled, GH-15) */
@@ -114,6 +115,11 @@ window.STUDY_WEEK = {
       day: "Wed", date: "2026-11-18",
       subject: "human-anatomy", subjectName: "Human Anatomy",
       what: "Neurotransmission notes; Lab 17 and Lab 18 start (both due Dec 1)."
+    },
+    {
+      day: "Wed", date: "2026-11-18",
+      subject: "ap-french", subjectName: "French",
+      what: "Mr. Keirns: finish what his instructions earlier this week list by the end of class today. He is at school Thursday for DA and back Friday for class, if you want to meet him or retake an assignment. Also do the Padlet about what you did when you were young (\"Souvenirs d'enfance\")."
     },
     {
       day: "Thu", date: "2026-11-19",
