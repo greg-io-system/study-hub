@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-18",
+  updated: "2026-11-19",
+  /* 2026-11-19 Thu after school: English Friday essay row adds the hand-in (REPLY with its own Google Doc; read aloud to your Constitution) and Thursday's notes; ask list drops the essay question (answered by the email) */
   /* 2026-11-18 Wed night: Psych test scope from Greg -- 2.2 through 2.8, all multiple choice; row says which prep-page sections; scope question dropped from the ask list */
   /* 2026-11-18 Wed evening: Psych Cognition test moved to THU 11/19 (from Greg); help chip to the new Cognition test prep page; ask list says Thursday */
   /* 2026-11-18 Wed midday: French Wed row (finish the week's work by end of class; Mr. Keirns back Thu for DA and Fri for class, retakes; Padlet reminder); ask list unchanged (no answers) */
@@ -148,7 +149,7 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-11-20",
       subject: "ap-english", subjectName: "AP English",
-      what: "DUE BEFORE CLASS: the topical writing \"Define ___\", your own argument-of-definition ESSAY. Pick ONE term you know well: fun, risk, wealth, pleasure, intelligence, athletic, work, fear or guilt. Your position is your F; your O's are the conditions where your F holds (and where it doesn't); your E's are examples of your F under those O's. Mr. Evans's challenge: use a trap door, so the essay slowly reveals rather than merely defines. Models: Chau, Pitts Jr., Staples, Haile, \"What is a City\", Zadeh, Gold, Bronson and Merryman.",
+      what: "DUE BEFORE CLASS: the topical writing \"Define ___\", your own argument-of-definition ESSAY. Pick ONE term you know well: fun, risk, wealth, pleasure, intelligence, athletic, work, fear or guilt. Your position is your F; your O's are the conditions where your F holds (and where it doesn't); your E's are examples of your F under those O's. Mr. Evans's challenge: use a trap door, so the essay slowly reveals rather than merely defines. Models: Chau, Pitts Jr., Staples, Haile, \"What is a City\", Zadeh, Gold, Bronson and Merryman, Sontag. From Thursday's emails: \"Just WRITE\" -- the F, O and E will take care of themselves; it is a personal essay, not fiction, so the examples must be YOUR OWN. HAND IN: REPLY to \"For Friday (11/20)\" with the essay in ITS OWN Google Doc before class. In class you read it to and with your Constitution.",
       help: "Terms: the three kinds of definition, trap door",
       helpFile: "lessons/ap-lang-terms-library.html"
     },
@@ -183,7 +184,6 @@ window.STUDY_WEEK = {
     { date: "2027-04-14", subjectName: "SAT + AP", what: "School-day SAT ~Apr 14; AP World May 6, English Lang May 12, Psych May 14" }
   ],
   ask: [
-    { q: "For the Fri 11/20 \"Define ___\" essay, which term are you thinking of, and has Mr. Evans said how to hand it in (reply or a Doc)?", subject: "ap-english", subjectName: "AP English" },
     { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
     { q: "Empires Presentation: which empire is your group doing, and who is in your group? Do you present it Friday, or just turn in the slides?", subject: "world-history", subjectName: "World History" },
