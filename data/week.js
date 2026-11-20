@@ -23,7 +23,8 @@
    Tone rule: forward-looking help only. No "missing"/"late" items ever --
    that list stays in Greg's week-view, not here. */
 window.STUDY_WEEK = {
-  updated: "2026-11-19",
+  updated: "2026-11-20",
+  /* 2026-11-20 Fri midday: WH presentations continue Tue 12/1 (Kelly's group presents then), review activity Mon 11/30, OPEN-NOTE QUIZ ~Dec 4 on the presentations; Anatomy Candy Neuron is a Classroom item due today; ask list narrows the Empires question to which empire */
   /* 2026-11-19 Thu after school: English Friday essay row adds the hand-in (REPLY with its own Google Doc; read aloud to your Constitution) and Thursday's notes; ask list drops the essay question (answered by the email) */
   /* 2026-11-18 Wed night: Psych test scope from Greg -- 2.2 through 2.8, all multiple choice; row says which prep-page sections; scope question dropped from the ask list */
   /* 2026-11-18 Wed evening: Psych Cognition test moved to THU 11/19 (from Greg); help chip to the new Cognition test prep page; ask list says Thursday */
@@ -156,7 +157,7 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-11-20",
       subject: "world-history", subjectName: "World History",
-      what: "DUE: \"Empires Presentation Project\" (25 pts; your group works on it in class), a group slideshow of about 8 slides on one Third-Wave empire: title; historical context and rise; the five SPICE themes (social, political, interactions, cultural, economic); the fall and conclusion; and 5+ reliable sources in Chicago style. Short bullets and visuals on the slides, the detail in the speaker notes. Check the \"Must Haves\" doc for your empire's required points and use the research guide, guided questions and rubric in Classroom. AI only to help find sources. Your group also fills in the \"Empires Project Check-In\" form in Classroom: members, empire, and who owns each part."
+      what: "DUE: \"Empires Presentation Project\" (25 pts; your group works on it in class), a group slideshow of about 8 slides on one Third-Wave empire: title; historical context and rise; the five SPICE themes (social, political, interactions, cultural, economic); the fall and conclusion; and 5+ reliable sources in Chicago style. Short bullets and visuals on the slides, the detail in the speaker notes. Check the \"Must Haves\" doc for your empire's required points and use the research guide, guided questions and rubric in Classroom. AI only to help find sources. Your group also fills in the \"Empires Project Check-In\" form in Classroom: members, empire, and who owns each part. UPDATE (Mr. Angelopulos, Friday): not every group presented today -- yours is one of the groups presenting TUESDAY DEC 1, after the break."
     },
     {
       day: "Fri", date: "2026-11-20",
@@ -166,7 +167,7 @@ window.STUDY_WEEK = {
     {
       day: "Fri", date: "2026-11-20",
       subject: "human-anatomy", subjectName: "Human Anatomy",
-      what: "In class: Candy Neuron and the Action Potential video (Unit 5 Calendar)."
+      what: "DUE TODAY: \"Candy Neuron\" (team activity, in Classroom): plan with 16 candy tokens, build a neuron on paper and label it, then judge the other teams' models in a gallery walk. Fill in the requisition sheet for the axon, dendrites, axon terminal, cell body, nucleus, Schwann cell / myelin and nodes of Ranvier: which candy, and why it fits. Also in class: the Action Potential video."
     }
   ],
   nextLabel: "Nov 23 – Nov 27",
@@ -178,6 +179,8 @@ window.STUDY_WEEK = {
     }
   ],
   ahead: [
+    { date: "2026-12-01", subject: "world-history", subjectName: "World History", what: "Your group's Empires presentation (presentations continue Tue Dec 1); Mon Nov 30 is a review activity" },
+    { date: "2026-12-04", subject: "world-history", subjectName: "World History", what: "OPEN-NOTE QUIZ on the Empires presentations (\"roughly around December 4\"); take notes on every group's slides" },
     { date: "2026-12-11", subject: "human-anatomy", subjectName: "Human Anatomy", what: "NERVOUS SYSTEM EXAM (Unit 5 Calendar); labs 17-19 due Nov 30-Dec 4 before it" },
     { date: "2026-12-16", subject: "human-anatomy", subjectName: "Human Anatomy", what: "Anatomy FINAL EXAM (Wednesday block, Unit 5 Calendar)" },
     { date: "~2026-12-16", subjectName: "School", what: "Semester finals week (Dec 14–18); winter break starts Dec 21" },
@@ -186,6 +189,6 @@ window.STUDY_WEEK = {
   ask: [
     { q: "\"Trade Routes Compare and Contrast\": which of the 8 groups are you answering, and when is it due?", subject: "world-history", subjectName: "World History" },
     { q: "The \"State of the World 820\" question sheet (5 regions) is in Classroom. When is it due, and is it for a grade?", subject: "world-history", subjectName: "World History" },
-    { q: "Empires Presentation: which empire is your group doing, and who is in your group? Do you present it Friday, or just turn in the slides?", subject: "world-history", subjectName: "World History" },
+    { q: "Empires Presentation: which empire is your group presenting on Tue Dec 1?", subject: "world-history", subjectName: "World History" },
     { q: "Mrs. Aschwanden posted meeting times for the field trip to the jail. Are you going, and what day is it?", subject: "ap-psychology", subjectName: "AP Psychology" }  ]
 };
